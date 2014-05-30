@@ -18,21 +18,24 @@ public class Database extends SQLiteOpenHelper {
 
     private static final String DATABASE_NAME="HappyTalk";
 
-    private static final String TABLE_CONVERSATION = "conversation";
-    private static final String TABLE_THING = "thing";
-    private static final String TABLE_PLACE = "place";
-    private static final String TABLE_EMERGENCY= "emergency";
-    private static final String TABLE_LOGISTIC = "logistic";
+    public static final String TABLE_CONVERSATION = "conversation";
+    public static final String TABLE_THING = "thing";
+    public static final String TABLE_PLACE = "place";
+    public static final String TABLE_EMERGENCY= "emergency";
+    public static final String TABLE_LOGISTIC = "logistic";
 
 
-    private static final String COLUMN_ID = "id";
-    private static final String COLUMN_LANGFROM ="langFrom";
-    private static final String COLUMN_LANGTO ="langTo";
-    private static final String COLUMN_WORDFROM = "wordFrom";
-    private static final String COLUMN_WORDTO ="wordTo";
-    private static final String COLUMN_KARAOKETH="karaokeTH";
-    private static final String COLUMN_KARAOKEEN = "karaokeEN";
-    private static final String COLUMN_SOUND ="sound";
+    public static final String COLUMN_ID = "id";
+    public static final String COLUMN_LANGFROM ="langFrom";
+    public static final String COLUMN_LANGTO ="langTo";
+    public static final String COLUMN_WORDFROM = "wordFrom";
+    public static final String COLUMN_WORDTO ="wordTo";
+    public static final String COLUMN_KARAOKETH="karaokeTH";
+    public static final String COLUMN_KARAOKEEN = "karaokeEN";
+    public static final String COLUMN_SOUND ="sound";
+
+    private SQLiteDatabase db;
+
 
     public Database(Context context){
        super(context,DATABASE_NAME,null,DATABASE_VERSION);
@@ -151,6 +154,18 @@ public class Database extends SQLiteOpenHelper {
         }
         return conversationList;
     }
+    //Get all list
+    public Cursor readAllConversation(){
+
+        String selectQry ="SELECT * FROM " + TABLE_CONVERSATION;
+        Cursor cursor = db.rawQuery(selectQry,null);
+        if(cursor !=null){
+            cursor.moveToFirst();
+        }
+        return cursor;
+
+    }
+
     //Show parentlist
     public List<Conversation> getConversationParentList(){
         List<Conversation> conversationList = new ArrayList<Conversation>();
@@ -555,6 +570,7 @@ public class Database extends SQLiteOpenHelper {
 
         return cursor.getCount();
     }
+
 
 
 

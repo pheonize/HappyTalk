@@ -67,12 +67,12 @@ public class MainActivity extends Activity {
         Database db = new Database(this);
 
         Log.d("Insert : ","Inserting ..");
-        db.addConversation(new Conversation("Thai","Brunei","สวัสดี","Halo","ฮาโล","Ha-lo"," "));
-        db.addThing(new Thing("Thai","Brunei","ฉันรู้สึกหิว","Saya lapar","ซายา ลาปัร","sar-yar-lar-par",""));
-        db.addPlace(new Place("Thai","Brunei","ห้องน้ำไปทางไหน","Di mana kamar kecil (toilet) ?" ," ดีมานา กามัร เกอจีล(ตอยเลต)","dee-mar-nar-gar-mar-geu-jeel(toi-let)",""));
-        db.addEmergency(new Emergency("Thai","Brunei","ช่วยด้วย  ฉันโดนปล้น","Tolong, Saya baru saja dirampok",
-                "โตโลง, ซายา บารู ซาจา ดีรัมปก","to-long-sar-yar-bar-ru-sar-jar-dee-ram-pok",""));
-        db.addLogistic(new Logistic("Thai","Brunei","ด่านศุลกากร","Kantor bea cukai","กันโตร เบยา จูไก","gan-tor- ber-ya-ju-gai",""));
+//        db.addConversation(new Conversation("Thai","Brunei","สวัสดี","Halo","ฮาโล","Ha-lo"," "));
+//        db.addThing(new Thing("Thai","Brunei","ฉันรู้สึกหิว","Saya lapar","ซายา ลาปัร","sar-yar-lar-par",""));
+//        db.addPlace(new Place("Thai","Brunei","ห้องน้ำไปทางไหน","Di mana kamar kecil (toilet) ?" ," ดีมานา กามัร เกอจีล(ตอยเลต)","dee-mar-nar-gar-mar-geu-jeel(toi-let)",""));
+//        db.addEmergency(new Emergency("Thai","Brunei","ช่วยด้วย  ฉันโดนปล้น","Tolong, Saya baru saja dirampok",
+//                "โตโลง, ซายา บารู ซาจา ดีรัมปก","to-long-sar-yar-bar-ru-sar-jar-dee-ram-pok",""));
+//        db.addLogistic(new Logistic("Thai","Brunei","ด่านศุลกากร","Kantor bea cukai","กันโตร เบยา จูไก","gan-tor- ber-ya-ju-gai",""));
 
 
         Log.d("Reading: ", "Reading all conversation..");

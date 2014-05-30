@@ -113,6 +113,10 @@ public class SettingActivity extends PreferenceActivity implements SharedPrefere
                 Intent i = new Intent(this,SettingActivity.class);
                 startActivity(i);
                 return true;
+//            case R.id.action_aboutus:
+//                Intent j = new Intent(this,AboutActivity.class);
+//                startActivity(j);
+//                return true;
 
             default:
                 return super.onOptionsItemSelected(item);

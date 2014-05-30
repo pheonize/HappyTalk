@@ -18,6 +18,9 @@
     <PreferenceScreen
         android:key="About"
         android:title="About">
+        <PreferenceCategory android:title="About Us">
+
+        </PreferenceCategory>
         
         </PreferenceScreen>
 </PreferenceScreen>
