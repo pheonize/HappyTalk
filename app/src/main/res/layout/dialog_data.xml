@@ -2,32 +2,62 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical"
     android:background="@color/white"
-    android:gravity="center">
+    android:gravity="center"
+    android:orientation="vertical">
 
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
         android:layout_margin="30dp"
+        android:orientation="vertical"
         >
-        <TextView
-            android:id="@+id/txtWordFrom"
+
+        <LinearLayout
             android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+        <TextView
+            android:id="@+id/txtLangFrom"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
-            android:text="Word From"
+            android:layout_marginRight="10dp"
+            android:text="Lang From "
             android:textSize="18sp"
             />
         <TextView
-            android:id="@+id/txtWordTo"
-            android:layout_width="fill_parent"
+            android:id="@+id/txtWordFrom"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_toRightOf="@id/txtLangFrom"
+            android:text="Word From"
+            android:textSize="18sp"
+            />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+            <TextView
+                android:id="@+id/txtLangTo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginRight="10dp"
+                android:text="Lang To"
+                android:textSize="18sp"
+                />
+        <TextView
+            android:id="@+id/txtWordTo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/txtLangTo"
             android:layout_marginBottom="10dp"
             android:text="Word To"
             android:textSize="18sp"
             />
+        </LinearLayout>
         <TextView
             android:id="@+id/txtKaraokeTH"
             android:layout_width="fill_parent"
@@ -49,30 +79,31 @@
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:layout_gravity="center_horizontal"
-            android:layout_marginLeft="40dp">
+           >
+        <!--<Button-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:id="@+id/btnBack"-->
+            <!--android:text="Back"-->
+            <!--android:layout_gravity="center_horizontal"/>-->
         <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/btnBack"
-            android:text="Back"
-            android:layout_gravity="center_horizontal"/>
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:id="@+id/btnSound"
-            android:text="Sound"
-            android:layout_gravity="center_horizontal"/>
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="Sound"/>
         <Button
+                android:id="@+id/btnFavorite"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/btnFavorite"
-                android:text="Favorite"
-                android:layout_gravity="center_horizontal"/>
+                android:layout_gravity="center_horizontal"
+                android:text="Favorite"/>
 
 
         </LinearLayout>
 
-        </LinearLayout>
+
+    </LinearLayout>
 
 
 </RelativeLayout>

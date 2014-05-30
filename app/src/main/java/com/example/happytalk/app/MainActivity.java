@@ -32,7 +32,7 @@ public class MainActivity extends Activity {
 
 
 
-    private Button btnSearch;
+
     private Spinner countryFrom,countryTo;
 
 
@@ -91,16 +91,6 @@ public class MainActivity extends Activity {
 
 
         initWidget();
-//        btnSearch.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                strCountryFrom = String.valueOf(countryFrom.getSelectedItem());
-//                strCountryTo = String.valueOf(countryTo.getSelectedItem());
-//
-//                goToTranslate();
-//
-//            }
-//        });
 
 
 
@@ -297,18 +287,6 @@ public class MainActivity extends Activity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-//        int id = item.getItemId();
-//        if (id == R.id.action_settings) {
-//            Intent intent;
-//            intent = new Intent(getApplicationContext(),SettingActivity.class);
-//            startActivity(intent);
-            //return true;
-
-
-
 
         switch (item.getItemId()){
             case R.id.action_search :
