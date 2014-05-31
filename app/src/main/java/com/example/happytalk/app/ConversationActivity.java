@@ -64,7 +64,7 @@ public class ConversationActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.conversation);
 
-        //initWidget();
+        initWidget();
 
         Bundle extras = getIntent().getExtras();
         if (extras == null) {
@@ -145,20 +145,25 @@ public class ConversationActivity extends Activity {
                     txtLangFrom.setText(cursor.getString(cursor.getColumnIndex(Database.COLUMN_LANGFROM)));
 
                     TextView txtWordFrom = (TextView) dialog.findViewById(R.id.txtWordFrom);
-                    txtWordFrom.setText(cursor.getString(cursor.getColumnIndex(Database.COLUMN_WORDFROM)));
+                    txtWordFrom.setText(":"+cursor.getString(cursor.getColumnIndex(Database.COLUMN_WORDFROM)));
 
                     TextView txtLangTo = (TextView) dialog.findViewById(R.id.txtLangTo);
                     txtLangTo.setText(cursor.getString(cursor.getColumnIndex(Database.COLUMN_LANGTO)));
 
 
                     TextView txtWordTo = (TextView) dialog.findViewById(R.id.txtWordTo);
-                    txtWordTo.setText(cursor.getString(cursor.getColumnIndex(Database.COLUMN_WORDTO)));
+                    txtWordTo.setText(":"+cursor.getString(cursor.getColumnIndex(Database.COLUMN_WORDTO)));
+
+
+
 
                     TextView txtKaraokeTH = (TextView) dialog.findViewById(R.id.txtKaraokeTH);
-                    txtKaraokeTH.setText("Th-pronunciation :"+cursor.getString(cursor.getColumnIndex(Database.COLUMN_KARAOKETH)));
+                    txtKaraokeTH.setText(":"+cursor.getString(cursor.getColumnIndex(Database.COLUMN_KARAOKETH)));
+
+
 
                     TextView txtKaraokeEN = (TextView) dialog.findViewById(R.id.txtKaraokeEN);
-                    txtKaraokeEN.setText("EN-pronunciation :"+cursor.getString(cursor.getColumnIndex(Database.COLUMN_KARAOKEEN)));
+                    txtKaraokeEN.setText(":"+cursor.getString(cursor.getColumnIndex(Database.COLUMN_KARAOKEEN)));
 
 
                     //Back btn
@@ -189,7 +194,7 @@ public class ConversationActivity extends Activity {
         countryFrom = (Spinner) findViewById(R.id.spinner_show);
 
         countryTo = (Spinner) findViewById(R.id.spinner2_show);
-        // btnSearch = (Button) findViewById(R.id.btn_go);
+
     }
 
     public void onPause() {
@@ -296,33 +301,17 @@ public class ConversationActivity extends Activity {
 
         public void onItemSelected(AdapterView<?> parent, View view, int pos, long id) {
 
-            Bundle extras = getIntent().getExtras();
-            if (extras == null) {
-                return;
-            }
 
-            String lang_from = extras.getString("strCountryFrom", "");
-            if (lang_from != null) {
-                //Do something
-                Log.d("--Conservation_FROM", lang_from);
-
-            }
-
-            String lang_to = extras.getString("strCountryTo", "");
-            if (lang_to != null) {
-                //Do something
-                Log.d("--Conservation_TO", lang_to);
-            }
 
             switch (parent.getId()) {
                 case R.id.spinner_show:
 
-                    strCountryFrom = String.valueOf(lang_from);
+                    strCountryFrom = String.valueOf(countryFrom.getSelectedItem());
 
                     break;
 
                 case R.id.spinner2_show:
-                    strCountryTo = String.valueOf(lang_to);
+                    strCountryTo = String.valueOf(countryTo.getSelectedItem());
 
                     break;
 

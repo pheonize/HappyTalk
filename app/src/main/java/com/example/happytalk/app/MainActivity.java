@@ -3,6 +3,7 @@ package com.example.happytalk.app;
 import android.app.Activity;
 import android.app.SearchManager;
 import android.content.Context;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -62,6 +63,7 @@ public class MainActivity extends Activity {
 
 
 
+
         //Test DB //
         //Database
         Database db = new Database(this);
@@ -96,6 +98,8 @@ public class MainActivity extends Activity {
 
 
         Spinner countryFrom = (Spinner)findViewById(R.id.spinner_show);
+
+        int selectedIntemPosittion = countryFrom.getSelectedItemPosition();
         countryFrom.setAdapter(new MyCustomAdapter(MainActivity.this,R.layout.spinner_row,country_list,img));
         countryFrom.setOnItemSelectedListener(new MyOnItemSelectedListener());
 
@@ -171,6 +175,7 @@ public class MainActivity extends Activity {
 
     private void initWidget() {
         countryFrom = (Spinner) findViewById(R.id.spinner_show);
+
         countryTo = (Spinner) findViewById(R.id.spinner2_show);
        // btnSearch = (Button) findViewById(R.id.btn_go);
     }

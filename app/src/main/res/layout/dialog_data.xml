@@ -13,6 +13,22 @@
         android:orientation="vertical"
         >
 
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/Title"
+            android:text="Detail"
+            android:textSize="18dp"
+
+            />
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/Underline"
+            android:text="--------------------------------------"
+            android:textSize="18dp"
+
+            />
         <LinearLayout
             android:layout_width="fill_parent"
             android:layout_height="fill_parent">
@@ -23,7 +39,7 @@
             android:layout_marginBottom="10dp"
             android:layout_marginRight="10dp"
             android:text="Lang From "
-            android:textSize="18sp"
+            android:textSize="14sp"
             />
         <TextView
             android:id="@+id/txtWordFrom"
@@ -46,35 +62,58 @@
                 android:layout_marginBottom="10dp"
                 android:layout_marginRight="10dp"
                 android:text="Lang To"
-                android:textSize="18sp"
+                android:textSize="14sp"
                 />
         <TextView
             android:id="@+id/txtWordTo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_toRightOf="@id/txtLangTo"
             android:layout_marginBottom="10dp"
+            android:layout_toRightOf="@id/txtLangTo"
             android:text="Word To"
             android:textSize="18sp"
             />
         </LinearLayout>
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+            <TextView
+                android:id="@+id/title1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="karaoke TH :"
+                android:layout_marginRight="10dp"
+                android:textSize="14sp"/>
         <TextView
             android:id="@+id/txtKaraokeTH"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/title1"
             android:layout_marginBottom="10dp"
             android:text="Karaoke TH"
             android:textSize="18sp"
             />
+        </LinearLayout>
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+        <TextView
+            android:id="@+id/title2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="karaoke EN :"
+            android:layout_marginRight="10dp"
+            android:textSize="14sp"/>
         <TextView
             android:id="@+id/txtKaraokeEN"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/title2"
             android:layout_marginBottom="10dp"
             android:text="Karaoke EN"
             android:textSize="18sp"
             />
-
+</LinearLayout>
         <LinearLayout
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
