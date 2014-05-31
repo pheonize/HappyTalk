@@ -61,7 +61,10 @@ public class MainActivity extends Activity {
         //requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_main);
 
-
+//        Typeface tf=Typeface.createFromAsset(getAssets(),"font/THSarabun.ttf");
+//        TextView tv = (TextView) findViewById(R.id.spinner_show);
+//        TextView tv2 = (TextView)findViewById(R.id.spinner2_show);
+//        tv.setTypeface(tf);
 
 
         //Test DB //
@@ -98,8 +101,6 @@ public class MainActivity extends Activity {
 
 
         Spinner countryFrom = (Spinner)findViewById(R.id.spinner_show);
-
-        int selectedIntemPosittion = countryFrom.getSelectedItemPosition();
         countryFrom.setAdapter(new MyCustomAdapter(MainActivity.this,R.layout.spinner_row,country_list,img));
         countryFrom.setOnItemSelectedListener(new MyOnItemSelectedListener());
 

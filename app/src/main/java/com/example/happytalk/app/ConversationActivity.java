@@ -30,6 +30,7 @@ import android.widget.ImageView;
 import android.widget.ListView;
 
 import android.widget.SearchView;
+import android.widget.SimpleCursorAdapter;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.TwoLineListItem;
@@ -46,6 +47,9 @@ public class ConversationActivity extends Activity {
     Database db;
     SQLiteDatabase sqLiteDatabase;
     Cursor cursor;
+    private SimpleCursorAdapter dbAdapter;
+
+
     String[] country_list = {"Brunei", "Cambodia", "China", "Indonesia",
             "Laos", "Malaysia", "Myanmar", "Philippines", "Singapore",
             "Thai", "Vietnam"};
@@ -109,8 +113,15 @@ public class ConversationActivity extends Activity {
         cursor = sqLiteDatabase.rawQuery("SELECT * FROM " + Database.TABLE_CONVERSATION, null);
 
 
+
+
+
         ArrayList<String> dirArray = new ArrayList<String>();
       //  ArrayList<String> arrayList = new ArrayList<String>();
+        String[] from =new String[]{Database.COLUMN_LANGFROM,Database.COLUMN_LANGTO,Database.COLUMN_WORDFROM,
+        Database.COLUMN_WORDTO,Database.COLUMN_KARAOKETH,Database.COLUMN_KARAOKEEN,Database.COLUMN_SOUND};
+        int[] showList = new int[] {R.id.mainWord,R.id.subWord};
+
 
 
 
@@ -125,7 +136,9 @@ public class ConversationActivity extends Activity {
         if (lang_from.equals("Thai") && lang_to.equals("Brunei")) {
 
             ListView listView = (ListView) findViewById(R.id.listViewInfo);
-            listView.setAdapter(new ArrayAdapter(this, android.R.layout.simple_list_item_1, dirArray));
+//            dbAdapter = new SimpleCursorAdapter(this,R.layout.showitemdb_custom,cursor,from,showList);
+//            setListAdapter(dbAdapter);
+           listView.setAdapter(new ArrayAdapter(this, android.R.layout.simple_list_item_1, dirArray));
             //listView.setAdapter(new ArrayAdapter(this, android.R.layout.simple_list_item_1,arrayList));
 
 
@@ -263,6 +276,8 @@ public class ConversationActivity extends Activity {
         intent = new Intent(getApplicationContext(), SettingActivity.class);
         startActivity(intent);
     }
+
+
 
     //spinner
     public class MyCustomAdapter extends ArrayAdapter<String> {
