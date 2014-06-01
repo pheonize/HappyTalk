@@ -5,6 +5,7 @@ package com.example.happytalk.app;
  */
 
 import android.app.Dialog;
+
 import android.app.ListActivity;
 import android.app.SearchManager;
 import android.content.Context;
@@ -15,7 +16,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.app.Activity;
 import android.util.Log;
-import android.util.SparseArray;
+
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -29,7 +30,9 @@ import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ImageView;
 import android.widget.ListView;
 
+import android.widget.ResourceCursorAdapter;
 import android.widget.SearchView;
+import android.widget.SimpleAdapter;
 import android.widget.SimpleCursorAdapter;
 import android.widget.Spinner;
 import android.widget.TextView;
@@ -38,16 +41,18 @@ import android.widget.TwoLineListItem;
 
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
+
 
 public class ConversationActivity extends Activity {
 
 
     //DB
-    Database db;
+    private static Database db;
     SQLiteDatabase sqLiteDatabase;
-    Cursor cursor;
-    private SimpleCursorAdapter dbAdapter;
+    private Cursor cursor;
+
+//    String[] from = new String[]{Database.COLUMN_WORDFROM,Database.COLUMN_WORDTO};
+//    int[] to =new int[]{R.id.mainWord,R.id.subWord};
 
 
     String[] country_list = {"Brunei", "Cambodia", "China", "Indonesia",
@@ -59,8 +64,10 @@ public class ConversationActivity extends Activity {
             R.drawable.myanmar_flag, R.drawable.philippines_flag,
             R.drawable.singapore_flag, R.drawable.thailand_flag,
             R.drawable.vietnam_flag};
+
     private Spinner countryFrom, countryTo;
     private String strCountryFrom, strCountryTo;
+
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -99,52 +106,67 @@ public class ConversationActivity extends Activity {
         countryTo.setOnItemSelectedListener(new MyOnItemSelectedListener());
 
 
-        //custom icon
-        int[] array_res = getImageArray(R.array.image_array
-                , R.drawable.ic_launcher);
-        String[] array_string = getStringArray(R.array.string_array);
-        //
+//        //custom icon
+//        int[] array_res = getImageArray(R.array.image_array
+//                , R.drawable.ic_launcher);
+//        String[] array_string = getStringArray(R.array.string_array);
+//        //
+
 
         //DB
+
         db = new Database(this);
+
         sqLiteDatabase = db.getWritableDatabase();
 
 
+
         cursor = sqLiteDatabase.rawQuery("SELECT * FROM " + Database.TABLE_CONVERSATION, null);
+//
+//
+//        ArrayList<String> dirArray = new ArrayList<String>();
 
+//        cursor = sqLiteDatabase.rawQuery("SELECT " + Database.COLUMN_WORDFROM + "," + Database.COLUMN_WORDTO
+//                + " FROM " +Database.TABLE_CONVERSATION , null);
 
-
-
-
-        ArrayList<String> dirArray = new ArrayList<String>();
-      //  ArrayList<String> arrayList = new ArrayList<String>();
-        String[] from =new String[]{Database.COLUMN_LANGFROM,Database.COLUMN_LANGTO,Database.COLUMN_WORDFROM,
-        Database.COLUMN_WORDTO,Database.COLUMN_KARAOKETH,Database.COLUMN_KARAOKEEN,Database.COLUMN_SOUND};
-        int[] showList = new int[] {R.id.mainWord,R.id.subWord};
-
-
-
+        ArrayList<String> dataArray = new ArrayList<String>();
 
         cursor.moveToFirst();
-        while (!cursor.isAfterLast()) {
-            dirArray.add(cursor.getString(cursor.getColumnIndex(Database.COLUMN_WORDFROM)));
-           // dirArray.add(cursor.getString(cursor.getColumnIndex(Database.COLUMN_WORDTO)));
+        while ( !cursor.isAfterLast() ){
+            dataArray.add(cursor.getString(cursor.getColumnIndex(Database.COLUMN_WORDFROM)) + "\n"
+                    + "" + cursor.getString(cursor.getColumnIndex(Database.COLUMN_WORDTO)));
             cursor.moveToNext();
         }
 
 
+
+
+
+//        cursor.moveToFirst();
+//        while (!cursor.isAfterLast()) {
+//            dirArray.add(cursor.getString(cursor.getColumnIndex(Database.COLUMN_WORDFROM)));
+//            //dirArray.add(cursor.getString(cursor.getColumnIndex(Database.COLUMN_WORDTO)));
+//            cursor.moveToNext();
+//        }
+
+
+
+
         if (lang_from.equals("Thai") && lang_to.equals("Brunei")) {
-
-            ListView listView = (ListView) findViewById(R.id.listViewInfo);
-//            dbAdapter = new SimpleCursorAdapter(this,R.layout.showitemdb_custom,cursor,from,showList);
-//            setListAdapter(dbAdapter);
-           listView.setAdapter(new ArrayAdapter(this, android.R.layout.simple_list_item_1, dirArray));
-            //listView.setAdapter(new ArrayAdapter(this, android.R.layout.simple_list_item_1,arrayList));
+//        final ListView lv = getListView();
+//            lv.setAdapter(listAdapter);
 
 
+//           ListView listView = (ListView) findViewById(R.id.listViewInfo);
+//           listView.setAdapter(new ArrayAdapter(this, android.R.layout.simple_list_item_1, dirArray));
+
+            ListView dataList = (ListView) findViewById(R.id.listViewInfo);
+            ArrayAdapter<String> adapterDir = new ArrayAdapter<String>(getApplicationContext()
+                    , android.R.layout.simple_list_item_1, dataArray);
+            dataList.setAdapter(adapterDir);
 
 
-            listView.setOnItemClickListener(new OnItemClickListener() {
+            dataList.setOnItemClickListener(new OnItemClickListener() {
                 @Override
                 public void onItemClick(AdapterView<?> arg0, View arg1, int arg2, long arg3) {
                     cursor.moveToPosition(arg2);
@@ -158,25 +180,22 @@ public class ConversationActivity extends Activity {
                     txtLangFrom.setText(cursor.getString(cursor.getColumnIndex(Database.COLUMN_LANGFROM)));
 
                     TextView txtWordFrom = (TextView) dialog.findViewById(R.id.txtWordFrom);
-                    txtWordFrom.setText(":"+cursor.getString(cursor.getColumnIndex(Database.COLUMN_WORDFROM)));
+                    txtWordFrom.setText(":" + cursor.getString(cursor.getColumnIndex(Database.COLUMN_WORDFROM)));
 
                     TextView txtLangTo = (TextView) dialog.findViewById(R.id.txtLangTo);
                     txtLangTo.setText(cursor.getString(cursor.getColumnIndex(Database.COLUMN_LANGTO)));
 
 
                     TextView txtWordTo = (TextView) dialog.findViewById(R.id.txtWordTo);
-                    txtWordTo.setText(":"+cursor.getString(cursor.getColumnIndex(Database.COLUMN_WORDTO)));
-
-
+                    txtWordTo.setText(":" + cursor.getString(cursor.getColumnIndex(Database.COLUMN_WORDTO)));
 
 
                     TextView txtKaraokeTH = (TextView) dialog.findViewById(R.id.txtKaraokeTH);
-                    txtKaraokeTH.setText(":"+cursor.getString(cursor.getColumnIndex(Database.COLUMN_KARAOKETH)));
-
+                    txtKaraokeTH.setText(":" + cursor.getString(cursor.getColumnIndex(Database.COLUMN_KARAOKETH)));
 
 
                     TextView txtKaraokeEN = (TextView) dialog.findViewById(R.id.txtKaraokeEN);
-                    txtKaraokeEN.setText(":"+cursor.getString(cursor.getColumnIndex(Database.COLUMN_KARAOKEEN)));
+                    txtKaraokeEN.setText(":" + cursor.getString(cursor.getColumnIndex(Database.COLUMN_KARAOKEEN)));
 
 
                     //Back btn
@@ -202,6 +221,8 @@ public class ConversationActivity extends Activity {
 
 
     }
+
+
 
     private void initWidget() {
         countryFrom = (Spinner) findViewById(R.id.spinner_show);
@@ -233,6 +254,25 @@ public class ConversationActivity extends Activity {
         my_string_array.recycle();
         return array_string;
     }
+
+
+
+    //custom listview
+//    private class MyListAdapter extends ResourceCursorAdapter{
+//        public MyListAdapter(Context context,int layout,Cursor cursor){
+//            super(context,layout,cursor);
+//        }
+//
+//        @Override
+//        public void bindView(View view,Context context,Cursor cursor){
+//            TextView mainWord = (TextView) view.findViewById(R.id.mainWord);
+//            mainWord.setText(cursor.getString(cursor.getColumnIndexOrThrow(Database.COLUMN_WORDFROM)));
+//
+//            TextView subWord = (TextView) view.findViewById(R.id.mainWord);
+//            subWord.setText(cursor.getString(cursor.getColumnIndexOrThrow(Database.COLUMN_WORDTO)));
+//
+//        }
+//    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

@@ -159,9 +159,9 @@ public class Database extends SQLiteOpenHelper {
 
         String selectQry ="SELECT * FROM " + TABLE_CONVERSATION;
         Cursor cursor = db.rawQuery(selectQry,null);
-        if(cursor !=null){
-            cursor.moveToFirst();
-        }
+//        if(cursor !=null){
+//            cursor.moveToFirst();
+//        }
         return cursor;
 
     }

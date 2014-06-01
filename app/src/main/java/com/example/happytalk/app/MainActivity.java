@@ -42,16 +42,28 @@ public class MainActivity extends Activity {
 
 
 
-    String[] country_list ={"Brunei","Cambodia","China","Indonesia",
+    String[] country_list1 ={"Thai","Brunei","Cambodia","China","Indonesia",
             "Laos","Malaysia","Myanmar","Philippines","Singapore",
-            "Thai","Vietnam"};
+            "Vietnam"};
 
-    Integer[] img ={R.drawable.brunei_flag,R.drawable.cambodia_flag,
+    Integer[] img1 ={R.drawable.thailand_flag,R.drawable.brunei_flag,R.drawable.cambodia_flag,
             R.drawable.china_flag,R.drawable.indonesia_flag,
             R.drawable.laos_flag,R.drawable.malaysia,
             R.drawable.myanmar_flag,R.drawable.philippines_flag,
-            R.drawable.singapore_flag,R.drawable.thailand_flag,
+            R.drawable.singapore_flag,
             R.drawable.vietnam_flag};
+
+    String[] country_list2 ={"China","Thai","Brunei","Cambodia","Indonesia",
+            "Laos","Malaysia","Myanmar","Philippines","Singapore",
+            "Vietnam"};
+
+    Integer[] img2 ={R.drawable.china_flag,R.drawable.thailand_flag,R.drawable.brunei_flag,R.drawable.cambodia_flag,
+            R.drawable.indonesia_flag,
+            R.drawable.laos_flag,R.drawable.malaysia,
+            R.drawable.myanmar_flag,R.drawable.philippines_flag,
+            R.drawable.singapore_flag,
+            R.drawable.vietnam_flag};
+
 
 
 
@@ -61,37 +73,12 @@ public class MainActivity extends Activity {
         //requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_main);
 
-//        Typeface tf=Typeface.createFromAsset(getAssets(),"font/THSarabun.ttf");
-//        TextView tv = (TextView) findViewById(R.id.spinner_show);
-//        TextView tv2 = (TextView)findViewById(R.id.spinner2_show);
-//        tv.setTypeface(tf);
 
 
         //Test DB //
         //Database
         Database db = new Database(this);
 
-        Log.d("Insert : ","Inserting ..");
-//        db.addConversation(new Conversation("Thai","Brunei","สวัสดี","Halo","ฮาโล","Ha-lo"," "));
-//        db.addThing(new Thing("Thai","Brunei","ฉันรู้สึกหิว","Saya lapar","ซายา ลาปัร","sar-yar-lar-par",""));
-//        db.addPlace(new Place("Thai","Brunei","ห้องน้ำไปทางไหน","Di mana kamar kecil (toilet) ?" ," ดีมานา กามัร เกอจีล(ตอยเลต)","dee-mar-nar-gar-mar-geu-jeel(toi-let)",""));
-//        db.addEmergency(new Emergency("Thai","Brunei","ช่วยด้วย  ฉันโดนปล้น","Tolong, Saya baru saja dirampok",
-//                "โตโลง, ซายา บารู ซาจา ดีรัมปก","to-long-sar-yar-bar-ru-sar-jar-dee-ram-pok",""));
-//        db.addLogistic(new Logistic("Thai","Brunei","ด่านศุลกากร","Kantor bea cukai","กันโตร เบยา จูไก","gan-tor- ber-ya-ju-gai",""));
-
-
-        Log.d("Reading: ", "Reading all conversation..");
-        List<Conversation> conversations = db.getAllConversation();
-
-        for(Conversation con:conversations ){
-            String log ="Id: "+con.getId()+" ,LangFrom :" +con.getLangFrom()+",LangTo :"+con.getLangTo()+
-                    ",Word TH: " + con.getWordFrom()+ ",Word To: " + con.getWordTo() + ",Karaoke TH:" + con.getKaraokeTH()+
-                    ",Karaoke EN:" + con.getKaraokeEN() + "Sound :" +con.getSound();
-            Log.d("Language :",log);
-        }
-
-
-        //---End Test -----//
 
 
 
@@ -101,11 +88,11 @@ public class MainActivity extends Activity {
 
 
         Spinner countryFrom = (Spinner)findViewById(R.id.spinner_show);
-        countryFrom.setAdapter(new MyCustomAdapter(MainActivity.this,R.layout.spinner_row,country_list,img));
+        countryFrom.setAdapter(new MyCustomAdapter(MainActivity.this,R.layout.spinner_row,country_list1,img1));
         countryFrom.setOnItemSelectedListener(new MyOnItemSelectedListener());
 
         Spinner countryTo = (Spinner)findViewById(R.id.spinner2_show);
-        countryTo.setAdapter(new MyCustomAdapter(MainActivity.this,R.layout.spinner_row,country_list,img));
+        countryTo.setAdapter(new MyCustomAdapter2(MainActivity.this,R.layout.spinner_row,country_list2,img2));
         countryTo.setOnItemSelectedListener(new MyOnItemSelectedListener());
 
 
@@ -177,6 +164,8 @@ public class MainActivity extends Activity {
     private void initWidget() {
         countryFrom = (Spinner) findViewById(R.id.spinner_show);
 
+
+
         countryTo = (Spinner) findViewById(R.id.spinner2_show);
        // btnSearch = (Button) findViewById(R.id.btn_go);
     }
@@ -204,10 +193,43 @@ public class MainActivity extends Activity {
             LayoutInflater inflater = getLayoutInflater();
             View row = inflater.inflate(R.layout.spinner_row,parent,false);
             TextView label = (TextView)row.findViewById(R.id.country);
-            label.setText(country_list[position]);
+            label.setText(country_list1[position]);
+
 
             ImageView icon = (ImageView)row.findViewById(R.id.flag);
-            icon.setImageResource(img[position]);
+            icon.setImageResource(img1[position]);
+
+            return row;
+        }
+
+    }
+    public class MyCustomAdapter2 extends ArrayAdapter<String>{
+
+        public MyCustomAdapter2(Context context,int textViewResourceId,String[] objects,Integer[] img){
+            super(context,textViewResourceId,objects);
+        }
+        @Override
+        public View getDropDownView(int position,View convertView,ViewGroup parent){
+            return getCustomView(position,convertView,parent);
+        }
+
+        @Override
+        public View getView(int position,View convertView,ViewGroup parent){
+            return getCustomView(position,convertView,parent);
+        }
+
+        public View getCustomView(int position,View convertView,ViewGroup parent){
+            //return super.getView(position,convertView,parent);
+
+            LayoutInflater inflater = getLayoutInflater();
+            View row = inflater.inflate(R.layout.spinner_row,parent,false);
+            TextView label = (TextView)row.findViewById(R.id.country);
+            label.setText(country_list2[position]);
+
+
+            ImageView icon = (ImageView)row.findViewById(R.id.flag);
+            icon.setImageResource(img2[position]);
+
             return row;
         }
 
@@ -223,6 +245,7 @@ public class MainActivity extends Activity {
 
                 strCountryFrom = String.valueOf(countryFrom.getSelectedItem());
 
+
             break;
 
             case R.id.spinner2_show:
@@ -231,6 +254,8 @@ public class MainActivity extends Activity {
             break;
 
             default:
+//                strCountryFrom = String.valueOf(1);
+//                strCountryTo = String.valueOf(2);
             break;
 
         }
@@ -239,6 +264,7 @@ public class MainActivity extends Activity {
         }
         public void onNothingSelected(AdapterView parent) {
             // Do nothing.
+
         }
 
     }
@@ -272,7 +298,7 @@ public class MainActivity extends Activity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        
+
         // Inflate the menu; this adds items to the action bar if it is present.
         //getMenuInflater().inflate(R.menu.activity_main_actions, menu);
 
