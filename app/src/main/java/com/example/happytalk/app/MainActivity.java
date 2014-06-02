@@ -3,7 +3,6 @@ package com.example.happytalk.app;
 import android.app.Activity;
 import android.app.SearchManager;
 import android.content.Context;
-import android.graphics.Typeface;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -14,7 +13,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.content.res.TypedArray;
@@ -26,7 +24,7 @@ import android.widget.TextView;
 import android.widget.AdapterView.OnItemSelectedListener;
 
 
-import java.util.List;
+import com.example.happytalk.app.Database.Database;
 
 
 public class MainActivity extends Activity {
@@ -296,47 +294,76 @@ public class MainActivity extends Activity {
 
 
 
+//    @Override
+//    public boolean onCreateOptionsMenu(Menu menu) {
+//
+//        // Inflate the menu; this adds items to the action bar if it is present.
+//        //getMenuInflater().inflate(R.menu.activity_main_actions, menu);
+//
+//        MenuInflater inflater = getMenuInflater();
+//        inflater.inflate(R.menu.activity_main_actions, menu);
+//
+//
+//        // Associate searchable configuration with the SearchView
+//        SearchManager searchManager = (SearchManager) getSystemService(Context.SEARCH_SERVICE);
+//        SearchView searchView = (SearchView) menu.findItem(R.id.action_search)
+//                .getActionView();
+//        searchView.setSearchableInfo(searchManager
+//                .getSearchableInfo(getComponentName()));
+//
+//        return super.onCreateOptionsMenu(menu);
+//
+//    }
+//
+//    @Override
+//    public boolean onOptionsItemSelected(MenuItem item) {
+//
+//        switch (item.getItemId()){
+//            case R.id.action_search :
+//                //Search();
+//                return true;
+//            case R.id.action_settings:
+//                Setting();
+//                return true;
+//            default:
+//                return super.onOptionsItemSelected(item);
+//        }
+//
+//    }
+//    private void Setting(){
+//        Intent intent ;
+//        intent= new Intent(getApplicationContext(), SettingActivity.class);
+//        startActivity(intent);
+//    }
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-
         // Inflate the menu; this adds items to the action bar if it is present.
-        //getMenuInflater().inflate(R.menu.activity_main_actions, menu);
-
-        MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.activity_main_actions, menu);
-
-
-        // Associate searchable configuration with the SearchView
-        SearchManager searchManager = (SearchManager) getSystemService(Context.SEARCH_SERVICE);
-        SearchView searchView = (SearchView) menu.findItem(R.id.action_search)
-                .getActionView();
-        searchView.setSearchableInfo(searchManager
-                .getSearchableInfo(getComponentName()));
-
-        return super.onCreateOptionsMenu(menu);
-
+        getMenuInflater().inflate(R.menu.main, menu);
+        return true;
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-
-        switch (item.getItemId()){
-            case R.id.action_search :
-                //Search();
-                return true;
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+        switch (item.getItemId()) {
             case R.id.action_settings:
-                Setting();
-                return true;
+                Intent intent ;
+                intent= new Intent(getApplicationContext(), SettingActivity.class);
+                startActivity(intent);
+               break;
             default:
-                return super.onOptionsItemSelected(item);
+                break;
+
         }
-
-    }
-    private void Setting(){
-        Intent intent ;
-        intent= new Intent(getApplicationContext(), SettingActivity.class);
-        startActivity(intent);
+        return super.onOptionsItemSelected(item);
     }
 
+    private void Setting() {
+
+
+    }
 
 }

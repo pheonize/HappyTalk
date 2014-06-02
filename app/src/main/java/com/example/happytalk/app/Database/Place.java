@@ -1,9 +1,9 @@
-package com.example.happytalk.app;
+package com.example.happytalk.app.Database;
 
 /**
  * Created by oVANILLAz on 5/29/14 AD.
  */
-public class Emergency {
+public class Place {
     int id;
     String langFrom;
     String langTo;
@@ -12,31 +12,7 @@ public class Emergency {
     String karaokeTH;
     String karaokeEN;
     String sound;
-
-    public Emergency(){
-
-    }
-
-    public Emergency(int id, String langFrom, String langTo, String wordFrom, String wordTo, String karaokeTH, String karaokeEN, String sound) {
-        this.id = id;
-        this.langFrom = langFrom;
-        this.langTo = langTo;
-        this.wordFrom = wordFrom;
-        this.wordTo = wordTo;
-        this.karaokeTH = karaokeTH;
-        this.karaokeEN = karaokeEN;
-        this.sound = sound;
-    }
-
-    public Emergency(String langFrom, String langTo, String wordFrom, String wordTo, String karaokeTH, String karaokeEN, String sound) {
-        this.langFrom = langFrom;
-        this.langTo = langTo;
-        this.wordFrom = wordFrom;
-        this.wordTo = wordTo;
-        this.karaokeTH = karaokeTH;
-        this.karaokeEN = karaokeEN;
-        this.sound = sound;
-    }
+    String wordEN;
 
     public int getId() {
         return id;
@@ -101,5 +77,43 @@ public class Emergency {
     public void setSound(String sound) {
         this.sound = sound;
     }
-}
 
+    public String getWordEN() {
+        return wordEN;
+    }
+
+    public void setWordEN(String wordEN) {
+        this.wordEN = wordEN;
+    }
+
+    public Place(String langFrom, String langTo, String wordFrom, String wordTo, String karaokeTH, String karaokeEN, String sound, String wordEN) {
+
+        this.langFrom = langFrom;
+        this.langTo = langTo;
+        this.wordFrom = wordFrom;
+        this.wordTo = wordTo;
+        this.karaokeTH = karaokeTH;
+        this.karaokeEN = karaokeEN;
+        this.sound = sound;
+        this.wordEN = wordEN;
+    }
+
+    public Place(int id, String langFrom, String langTo, String wordFrom, String wordTo, String karaokeTH, String karaokeEN, String sound, String wordEN) {
+
+        this.id = id;
+        this.langFrom = langFrom;
+        this.langTo = langTo;
+        this.wordFrom = wordFrom;
+        this.wordTo = wordTo;
+        this.karaokeTH = karaokeTH;
+        this.karaokeEN = karaokeEN;
+        this.sound = sound;
+        this.wordEN = wordEN;
+    }
+
+    public Place(){
+
+    }
+
+
+}

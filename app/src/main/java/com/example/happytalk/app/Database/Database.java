@@ -1,4 +1,4 @@
-package com.example.happytalk.app;
+package com.example.happytalk.app.Database;
 
 import android.content.ContentValues;
 import android.content.Context;
@@ -28,6 +28,7 @@ public class Database extends SQLiteOpenHelper {
     public static final String COLUMN_ID = "id";
     public static final String COLUMN_LANGFROM ="langFrom";
     public static final String COLUMN_LANGTO ="langTo";
+    public static final String COLUMN_WORDEN ="wordEN";
     public static final String COLUMN_WORDFROM = "wordFrom";
     public static final String COLUMN_WORDTO ="wordTo";
     public static final String COLUMN_KARAOKETH="karaokeTH";
@@ -51,31 +52,31 @@ public class Database extends SQLiteOpenHelper {
 
         String CREATE_CONVERSATION_TABLE = "CREATE TABLE "+ TABLE_CONVERSATION + "("
                 + COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " + COLUMN_LANGFROM +
-                " TEXT, " + COLUMN_LANGTO + " TEXT, " + COLUMN_WORDFROM + " TEXT, " +
+                " TEXT, " + COLUMN_LANGTO + " TEXT, " + COLUMN_WORDEN + " TEXT, " + COLUMN_WORDFROM + " TEXT, " +
                 COLUMN_WORDTO + " TEXT, " + COLUMN_KARAOKETH + " TEXT, " + COLUMN_KARAOKEEN +
                 " TEXT, " + COLUMN_SOUND + " TEXT " + ")";
 
         String CREATE_THING_TABLE = "CREATE TABLE "+ TABLE_THING + "("
                 + COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " + COLUMN_LANGFROM +
-                " TEXT, " + COLUMN_LANGTO + " TEXT, " + COLUMN_WORDFROM + " TEXT, " +
+                " TEXT, " + COLUMN_LANGTO + " TEXT, " + COLUMN_WORDEN + " TEXT, "+ COLUMN_WORDFROM + " TEXT, " +
                 COLUMN_WORDTO + " TEXT, " + COLUMN_KARAOKETH + " TEXT, " + COLUMN_KARAOKEEN +
                 " TEXT, " + COLUMN_SOUND + " TEXT " + ")";
 
         String CREATE_PLACE_TABLE = "CREATE TABLE "+ TABLE_PLACE + "("
                 + COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " + COLUMN_LANGFROM +
-                " TEXT, " + COLUMN_LANGTO + " TEXT, " + COLUMN_WORDFROM + " TEXT, " +
+                " TEXT, " + COLUMN_LANGTO + " TEXT, " + COLUMN_WORDEN + " TEXT, " + COLUMN_WORDFROM + " TEXT, " +
                 COLUMN_WORDTO + " TEXT, " + COLUMN_KARAOKETH + " TEXT, " + COLUMN_KARAOKEEN +
                 " TEXT, " + COLUMN_SOUND + " TEXT " + ")";
 
         String CREATE_EMERGENCY_TABLE = "CREATE TABLE "+ TABLE_EMERGENCY + "("
                 + COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " + COLUMN_LANGFROM +
-                " TEXT, " + COLUMN_LANGTO + " TEXT, " + COLUMN_WORDFROM + " TEXT, " +
+                " TEXT, " + COLUMN_LANGTO + " TEXT, " + COLUMN_WORDEN + " TEXT, " + COLUMN_WORDFROM + " TEXT, " +
                 COLUMN_WORDTO + " TEXT, " + COLUMN_KARAOKETH + " TEXT, " + COLUMN_KARAOKEEN +
                 " TEXT, " + COLUMN_SOUND + " TEXT " + ")";
 
         String CREATE_LOGISTIC_TABLE = "CREATE TABLE "+ TABLE_LOGISTIC + "("
                 + COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " + COLUMN_LANGFROM +
-                " TEXT, " + COLUMN_LANGTO + " TEXT, " + COLUMN_WORDFROM + " TEXT, " +
+                " TEXT, " + COLUMN_LANGTO + " TEXT, " + COLUMN_WORDEN + " TEXT, "+  COLUMN_WORDFROM + " TEXT, " +
                 COLUMN_WORDTO + " TEXT, " + COLUMN_KARAOKETH + " TEXT, " + COLUMN_KARAOKEEN +
                 " TEXT, " + COLUMN_SOUND + " TEXT " + ")";
 
@@ -98,6 +99,7 @@ public class Database extends SQLiteOpenHelper {
         ContentValues values = new ContentValues();
         values.put(COLUMN_LANGFROM,conversation.getLangFrom());
         values.put(COLUMN_LANGTO,conversation.getLangTo());
+        values.put(COLUMN_WORDEN,conversation.getWordEN());
         values.put(COLUMN_WORDFROM,conversation.getWordFrom());
         values.put(COLUMN_WORDTO,conversation.getWordTo());
         values.put(COLUMN_KARAOKETH,conversation.getKaraokeTH());
@@ -122,7 +124,7 @@ public class Database extends SQLiteOpenHelper {
 
         Conversation conversation = new Conversation(Integer.parseInt(cursor.getString(0)),
                 cursor.getString(1),cursor.getString(2),cursor.getString(3),cursor.getString(4),
-                cursor.getString(5),cursor.getString(6),cursor.getString(7));
+                cursor.getString(5),cursor.getString(6),cursor.getString(7),cursor.getString(8));
         return conversation;
 
     }
@@ -147,6 +149,7 @@ public class Database extends SQLiteOpenHelper {
                 conversation.setKaraokeTH(cursor.getString(5));
                 conversation.setKaraokeEN(cursor.getString(6));
                 conversation.setSound(cursor.getString(7));
+                conversation.setWordEN(cursor.getString(8));
 
                 conversationList.add(conversation);
 
@@ -200,7 +203,7 @@ public class Database extends SQLiteOpenHelper {
     public List<Conversation> getConversationList(){
         List<Conversation> conversationList = new ArrayList<Conversation>();
 
-        String selectQry ="SELECT wordFrom , wordTO , karaokeTH , karaokeEN  FROM " + TABLE_CONVERSATION;
+        String selectQry ="SELECT wordFrom , wordTO , karaokeTH , karaokeEN , wordEN FROM " + TABLE_CONVERSATION;
 
         SQLiteDatabase db = this.getWritableDatabase();
         Cursor cursor = db.rawQuery(selectQry,null);
@@ -216,6 +219,7 @@ public class Database extends SQLiteOpenHelper {
                 conversation.setKaraokeTH(cursor.getString(5));
                 conversation.setKaraokeEN(cursor.getString(6));
                 conversation.setSound(cursor.getString(7));
+                conversation.setWordEN(cursor.getString(8));
 
                 conversationList.add(conversation);
 
@@ -252,6 +256,7 @@ public class Database extends SQLiteOpenHelper {
         ContentValues values = new ContentValues();
         values.put(COLUMN_LANGFROM,thing.getLangFrom());
         values.put(COLUMN_LANGTO,thing.getLangTo());
+        values.put(COLUMN_WORDEN,thing.getWordEN());
         values.put(COLUMN_WORDFROM,thing.getWordFrom());
         values.put(COLUMN_WORDTO,thing.getWordTo());
         values.put(COLUMN_KARAOKETH,thing.getKaraokeTH());
@@ -275,7 +280,7 @@ public class Database extends SQLiteOpenHelper {
 
         Thing thing = new Thing(Integer.parseInt(cursor.getString(0)),
                 cursor.getString(1),cursor.getString(2),cursor.getString(3),cursor.getString(4),
-                cursor.getString(5),cursor.getString(6),cursor.getString(7));
+                cursor.getString(5),cursor.getString(6),cursor.getString(7),cursor.getString(8));
         return thing;
 
     }
@@ -300,6 +305,7 @@ public class Database extends SQLiteOpenHelper {
                 thing.setKaraokeTH(cursor.getString(5));
                 thing.setKaraokeEN(cursor.getString(6));
                 thing.setSound(cursor.getString(7));
+                thing.setWordEN(cursor.getString(8));
 
                 thingList.add(thing);
 
@@ -334,6 +340,7 @@ public class Database extends SQLiteOpenHelper {
         ContentValues values = new ContentValues();
         values.put(COLUMN_LANGFROM,place.getLangFrom());
         values.put(COLUMN_LANGTO,place.getLangTo());
+        values.put(COLUMN_WORDEN,place.getWordEN());
         values.put(COLUMN_WORDFROM,place.getWordFrom());
         values.put(COLUMN_WORDTO,place.getWordTo());
         values.put(COLUMN_KARAOKETH,place.getKaraokeTH());
@@ -356,7 +363,7 @@ public class Database extends SQLiteOpenHelper {
 
         Place place = new Place(Integer.parseInt(cursor.getString(0)),
                 cursor.getString(1),cursor.getString(2),cursor.getString(3),cursor.getString(4),
-                cursor.getString(5),cursor.getString(6),cursor.getString(7));
+                cursor.getString(5),cursor.getString(6),cursor.getString(7),cursor.getString(8));
         return place;
 
     }
@@ -381,6 +388,7 @@ public class Database extends SQLiteOpenHelper {
                 place.setKaraokeTH(cursor.getString(5));
                 place.setKaraokeEN(cursor.getString(6));
                 place.setSound(cursor.getString(7));
+                place.setWordEN(cursor.getString(8));
 
                 placeList.add(place);
 
@@ -416,6 +424,7 @@ public class Database extends SQLiteOpenHelper {
         ContentValues values = new ContentValues();
         values.put(COLUMN_LANGFROM,emergency.getLangFrom());
         values.put(COLUMN_LANGTO,emergency.getLangTo());
+        values.put(COLUMN_WORDEN,emergency.getWordEN());
         values.put(COLUMN_WORDFROM,emergency.getWordFrom());
         values.put(COLUMN_WORDTO,emergency.getWordTo());
         values.put(COLUMN_KARAOKETH,emergency.getKaraokeTH());
@@ -438,7 +447,7 @@ public class Database extends SQLiteOpenHelper {
 
         Emergency emergency = new Emergency(Integer.parseInt(cursor.getString(0)),
                 cursor.getString(1),cursor.getString(2),cursor.getString(3),cursor.getString(4),
-                cursor.getString(5),cursor.getString(6),cursor.getString(7));
+                cursor.getString(5),cursor.getString(6),cursor.getString(7),cursor.getString(8));
         return emergency;
 
     }
@@ -463,6 +472,7 @@ public class Database extends SQLiteOpenHelper {
                 emergency.setKaraokeTH(cursor.getString(5));
                 emergency.setKaraokeEN(cursor.getString(6));
                 emergency.setSound(cursor.getString(7));
+                emergency.setWordEN(cursor.getString(8));
 
                 emergencyList.add(emergency);
 
@@ -498,6 +508,7 @@ public class Database extends SQLiteOpenHelper {
         ContentValues values = new ContentValues();
         values.put(COLUMN_LANGFROM,logistic.getLangFrom());
         values.put(COLUMN_LANGTO,logistic.getLangTo());
+        values.put(COLUMN_WORDEN,logistic.getWordEN());
         values.put(COLUMN_WORDFROM,logistic.getWordFrom());
         values.put(COLUMN_WORDTO,logistic.getWordTo());
         values.put(COLUMN_KARAOKETH,logistic.getKaraokeTH());
@@ -520,7 +531,7 @@ public class Database extends SQLiteOpenHelper {
 
         Logistic logistic = new Logistic(Integer.parseInt(cursor.getString(0)),
                 cursor.getString(1),cursor.getString(2),cursor.getString(3),cursor.getString(4),
-                cursor.getString(5),cursor.getString(6),cursor.getString(7));
+                cursor.getString(5),cursor.getString(6),cursor.getString(7),cursor.getString(8));
         return logistic;
 
     }
@@ -545,6 +556,7 @@ public class Database extends SQLiteOpenHelper {
                 logistic.setKaraokeTH(cursor.getString(5));
                 logistic.setKaraokeEN(cursor.getString(6));
                 logistic.setSound(cursor.getString(7));
+                logistic.setWordEN(cursor.getString(8));
 
                 logisticList.add(logistic);
 

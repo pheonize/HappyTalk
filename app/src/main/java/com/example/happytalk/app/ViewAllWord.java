@@ -1,10 +1,10 @@
 package com.example.happytalk.app;
 
-import android.app.Activity;
 import android.app.ListActivity;
-import android.database.Cursor;
 import android.os.Bundle;
 import android.widget.SimpleCursorAdapter;
+
+import com.example.happytalk.app.Database.Database;
 
 
 /**
