@@ -267,11 +267,6 @@ public class MainActivity extends Activity {
 
     }
 
-
-
-
-
-
     public int[] getImageArray(int resId, int defResId) {
         TypedArray my_image_array = getResources().obtainTypedArray(resId);
         int[] array_res = new int[my_image_array.length()];
@@ -340,7 +335,7 @@ public class MainActivity extends Activity {
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.main, menu);
-        return true;
+        return super.onCreateOptionsMenu(menu);
     }
 
     @Override

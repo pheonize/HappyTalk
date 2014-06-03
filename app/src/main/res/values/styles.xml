@@ -5,5 +5,7 @@
         <!-- Customize your theme here. -->
     </style>
 
+    <style name="color"></style>
+
     <item name="CustomFontText" type="id" />
 </resources>

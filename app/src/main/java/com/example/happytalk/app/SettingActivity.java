@@ -15,7 +15,7 @@ import android.widget.TextView;
  */
 public class SettingActivity extends Activity {
 
-    static final String[] setting =new String[] {"Language","About"};
+    String[] setting =new String[] {"Language","About"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,8 +27,8 @@ public class SettingActivity extends Activity {
 
     private void initSettingListView() {
 
-        ListView listView = (ListView) findViewById(R.id.settingList);
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,setting);
+        ListView listView = (ListView) findViewById(R.id.listView);
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,android.R.id.text1,setting);
         listView.setAdapter(adapter);
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {

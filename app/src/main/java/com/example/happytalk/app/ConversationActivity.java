@@ -4,8 +4,11 @@ package com.example.happytalk.app;
  * Created by oVANILLAz on 5/21/14 AD.
  */
 
+import android.app.AlertDialog;
 import android.app.Dialog;
 
+import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
@@ -32,14 +35,14 @@ import com.example.happytalk.app.Database.Database;
 import java.util.ArrayList;
 
 
-public class ConversationActivity extends Activity {
+public class ConversationActivity extends Activity implements MediaPlayer.OnCompletionListener{
 
 
     //DB
     private static Database db;
     SQLiteDatabase sqLiteDatabase;
     private Cursor cursor;
-
+    Context context;
     private MediaPlayer mediaPlayer;
 
     Button btnSound;
@@ -100,28 +103,25 @@ public class ConversationActivity extends Activity {
 
         sqLiteDatabase = db.getWritableDatabase();
 
-
         cursor = sqLiteDatabase.rawQuery("SELECT * FROM " + Database.TABLE_CONVERSATION, null);
 
         ArrayList<String> dirArray = new ArrayList<String>();
 
-
         //ArrayList<String> dataArray = new ArrayList<String>();
-
-//        cursor.moveToFirst();
-//        while (!cursor.isAfterLast()) {
-//            dataArray.add(cursor.getString(cursor.getColumnIndex(Database.COLUMN_WORDFROM)) + "\n"
-//                    + "" + cursor.getString(cursor.getColumnIndex(Database.COLUMN_WORDTO)));
-//            cursor.moveToNext();
-//        }
-
 
         cursor.moveToFirst();
         while (!cursor.isAfterLast()) {
-            dirArray.add(cursor.getString(cursor.getColumnIndex(Database.COLUMN_WORDEN)));
-
+            dirArray.add(cursor.getString(cursor.getColumnIndex(Database.COLUMN_WORDEN)) +
+                     System.getProperty("line.separator") + "" + cursor.getString(cursor.getColumnIndex(Database.COLUMN_WORDTO)));
             cursor.moveToNext();
         }
+
+//        cursor.moveToFirst();
+//        while (!cursor.isAfterLast()) {
+//            dirArray.add(cursor.getString(cursor.getColumnIndex(Database.COLUMN_WORDEN)));
+//
+//            cursor.moveToNext();
+//        }
 
 
         if (lang_from.equals("Thai") && lang_to.equals("Brunei")) {
@@ -129,10 +129,11 @@ public class ConversationActivity extends Activity {
 
 
            ListView listView = (ListView) findViewById(R.id.listViewInfo);
-           listView.setAdapter(new ArrayAdapter(this, android.R.layout.simple_list_item_1, dirArray));
+//           listView.setAdapter(new ArrayAdapter(this, android.R.layout.simple_list_item_1, dirArray));
+            ArrayAdapter<String> adapter = new ArrayAdapter<String>(getApplicationContext(),
+                    android.R.layout.simple_list_item_1,dirArray);
 
-
-
+            listView.setAdapter(adapter);
 
             listView.setOnItemClickListener(new OnItemClickListener() {
                 @Override
@@ -141,7 +142,19 @@ public class ConversationActivity extends Activity {
 
                     final Dialog dialog;
                     dialog = new Dialog(ConversationActivity.this);
-                    dialog.requestWindowFeature(dialog.getWindow().FEATURE_NO_TITLE);
+
+                   // AlertDialog dialog = new AlertDialog.Builder(context).create();
+                    dialog.setTitle("Detail");
+//                    dialog.setButton(DialogInterface.BUTTON_POSITIVE, "OK",
+//                            new DialogInterface.OnClickListener() {
+//                                public void onClick(DialogInterface dialog, int which) {
+//
+//                                    dialog.dismiss();
+//                                    return;
+//                                }
+//                            }
+//                    );
+
                     dialog.setContentView(R.layout.dialog_data);
 
                     TextView txtLangFrom = (TextView) dialog.findViewById(R.id.txtLangFrom);
@@ -166,14 +179,15 @@ public class ConversationActivity extends Activity {
                     txtKaraokeEN.setText(":" + cursor.getString(cursor.getColumnIndex(Database.COLUMN_KARAOKEEN)));
 
 
+
                     //Back btn
-//                    Button btnBack = (Button) dialog.findViewById(R.id.btnBack);
-//                    btnBack.setOnClickListener(new View.OnClickListener() {
-//                        @Override
-//                        public void onClick(View v) {
-//                            dialog.cancel();
-//                        }
-//                    });
+                    Button btnBack = (Button) dialog.findViewById(R.id.btnSound);
+                    btnBack.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            dialog.cancel();
+                        }
+                    });
 //                    Button btnSound = (Button) findViewById(R.id.btnSound);
 //                    btnSound.setOnClickListener(new View.OnClickListener() {
 //                        @Override
@@ -206,27 +220,6 @@ public class ConversationActivity extends Activity {
             startActivity(intent);
         }
     }
-
-//    @Override
-//    public void onCompletion(MediaPlayer mp){
-//        mediaPlayer.release();
-//        mediaPlayer = null;
-//        btnSound.setText("Play");
-//    }
-//
-//    @Override
-//    public void onDestroy(){
-//        super.onDestroy();
-//        if(mediaPlayer !=null){
-//            mediaPlayer.release();
-//            mediaPlayer =null;
-//        }
-//    }
-
-
-
-
-
 
     private void initWidget() {
         countryFrom = (Spinner) findViewById(R.id.spinner_show);
@@ -269,6 +262,24 @@ public class ConversationActivity extends Activity {
 
     }
 
+
+    //Play sound
+
+    @Override
+    public void onCompletion(MediaPlayer mp) {
+        mediaPlayer.release();
+        mediaPlayer = null;
+       btnSound.setText("Play");
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        if (mediaPlayer != null) {
+            mediaPlayer.release();
+            mediaPlayer = null;
+        }
+    }
 }
 
 
