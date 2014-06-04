@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="from">จาก</string>
+    <string name="from">แปลจาก</string>
     <string name="to">เป็น</string>
     <string name="conversation">คำสนทนาทั่วไป</string>
     <string name="thing">ต้องการสิ่งของ</string>
@@ -21,4 +21,5 @@
         ซึ่งประโยชน์อย่างยิ่งสำหรับบุคลากรและผู้ประกอบการที่ต้องการยกระดับมาตรฐานฝีมือแรงงานและพัฒนาบุคลากรที่
         เกี่ยวข้องกับกลุ่มงานด้านโลจิสติกส์ให้มีประสิทธิภาพ และเตรียมความพร้อมในการพัฒนาองค์กรสู่ประชาคมเศรษฐกิจอาเซียน (AEC) ต่อไป
     </string>
+    <string name="about">เกี่ยวกับเรา</string>
 </resources>

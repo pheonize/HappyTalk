@@ -7,6 +7,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 /**
@@ -586,6 +587,9 @@ public class Database extends SQLiteOpenHelper {
 
 
 
+
+
+
     //Upgrade---------------------------------------------------------------------------------------
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
@@ -597,5 +601,40 @@ public class Database extends SQLiteOpenHelper {
         onCreate(db);
     }
 
+
+
+    public ArrayList<HashMap<String,String>> ShowAllData(){
+        try{
+            ArrayList<HashMap<String,String>> arr = new ArrayList<HashMap<String, String>>();
+            HashMap<String,String> map;
+            SQLiteDatabase db = this.getReadableDatabase();
+            String sql = "SELECT * FROM " + TABLE_CONVERSATION;
+            Cursor cur = db.rawQuery(sql,null);
+
+            if(cur != null){
+                if(cur.moveToFirst()){
+                    do{
+                        map = new HashMap<String, String>();
+                        map.put("langFrom",cur.getString(1));
+                        map.put("langTo",cur.getString(2));
+                        map.put("wordEN",cur.getString(3));
+                        map.put("wordFrom",cur.getString(4));
+                        map.put("wordTo",cur.getString(5));
+                        map.put("karaokeTH",cur.getString(6));
+                        map.put("karaokeEN",cur.getString(7));
+
+                        arr.add(map);
+                    }
+                    while (cur.moveToNext());
+                }
+            }
+            cur.close();
+            db.close();
+            return arr;
+
+        }catch (Exception e){
+            return null;
+        }
+    }
 
 }
