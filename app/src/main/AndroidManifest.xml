@@ -33,14 +33,13 @@
             android:screenOrientation="portrait"/>
         <activity android:name=".AboutActivity"
             android:screenOrientation="portrait"/>
-        <activity android:name=".SettingActivity"
-            android:screenOrientation="portrait"/>
+
         <activity android:name=".ShowDataActivity"/>
-        <!--setting-->
-        <!--<activity android:name=".SettingActivity_old"-->
-            <!--android:label="@string/action_settings"-->
-            <!--android:parentActivityName=".MainActivity"-->
-            <!--android:screenOrientation="portrait" />-->
+        setting
+        <activity android:name=".SettingActivity"
+            android:label="@string/action_settings"
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait" />
 
         <!-- Search results activity -->
         <activity android:name=".SearchResultsActivity"

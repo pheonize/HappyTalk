@@ -4,9 +4,9 @@ package com.example.happytalk.app;
  * Created by oVANILLAz on 5/21/14 AD.
  */
 
-import android.app.SearchManager;
 import android.content.Context;
 import android.content.Intent;
+import android.content.res.Configuration;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.media.MediaPlayer;
@@ -15,14 +15,11 @@ import android.app.Activity;
 import android.util.Log;
 
 import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.AdapterView;
 import android.widget.Button;
-import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
 
-import android.widget.SearchView;
 import android.widget.SimpleAdapter;
 import android.widget.Spinner;
 import android.widget.TextView;
@@ -40,27 +37,20 @@ public class ConversationActivity extends Activity {
     //DB
     private static Database db;
     SQLiteDatabase sqLiteDatabase;
-    private Cursor cursor;
     Context context;
-    private MediaPlayer mediaPlayer;
-
     Button btnSound;
-
     String langTo,langFrom;
-
-
     String[] country_list = {"Brunei", "Cambodia", "China", "Indonesia",
             "Laos", "Malaysia", "Myanmar", "Philippines", "Singapore",
             "Thai", "Vietnam"};
-
     Integer[] img = {R.drawable.brunei_flag, R.drawable.cambodia_flag,
             R.drawable.china_flag, R.drawable.indonesia_flag,
             R.drawable.laos_flag, R.drawable.malaysia,
             R.drawable.myanmar_flag, R.drawable.philippines_flag,
             R.drawable.singapore_flag, R.drawable.thailand_flag,
             R.drawable.vietnam_flag};
-
-
+    private Cursor cursor;
+    private MediaPlayer mediaPlayer;
     private Spinner countryFrom, countryTo;
     private String strCountryFrom, strCountryTo;
 
@@ -70,6 +60,11 @@ public class ConversationActivity extends Activity {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.conversation);
+
+
+        Configuration configuration = new Configuration();
+
+        getResources().updateConfiguration(configuration,null);
 
         initWidget();
 
@@ -118,13 +113,14 @@ public class ConversationActivity extends Activity {
 
 
 
-        if (lang_from.equals("Thai") && lang_to.equals("Brunei")) {
+        if (lang_from.equals("Thai") && lang_to.equals("Brunei") || lang_from.equals("ไทย") && lang_to.equals("บรูไน")) {
 //
 //           ListView listView = (ListView) findViewById(R.id.listViewInfo);
 //            ArrayAdapter<String> adapter = new ArrayAdapter<String>(getApplicationContext(),
 //                    android.R.layout.simple_list_item_1,dirArray);
 //
 //            listView.setAdapter(adapter);
+
             final ArrayList<HashMap<String,String>> dataList = db.ShowAllData();
             ListView listView = (ListView)findViewById(R.id.listViewInfo);
             SimpleAdapter adt = new SimpleAdapter(ConversationActivity.this,dataList,R.layout.showitemdb_custom,
@@ -345,32 +341,24 @@ public class ConversationActivity extends Activity {
 //    }
 @Override
 public boolean onCreateOptionsMenu(Menu menu) {
-    // Inflate the menu; this adds items to the action bar if it is present.
-    getMenuInflater().inflate(R.menu.main, menu);
-    return super.onCreateOptionsMenu(menu);
+    MenuInflater inflater = getMenuInflater();
+    inflater.inflate(R.menu.activity_main_actions, menu);
+    return true;
 }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-        if(id== R.id.action_settings){
-            Intent i = new Intent(getApplicationContext(),SettingActivity.class);
-            startActivity(i);
-//        switch (item.getItemId()) {
-//            case R.id.action_settings:
-//                Intent intent;
-//                intent = new Intent(getApplicationContext(), SettingActivity.class);
-//                startActivity(intent);
-//                break;
-//            default:
-//                break;
 
-        } return super.onOptionsItemSelected(item);
-
-
+        switch (item.getItemId()) {
+            case R.id.action_settings:
+                Intent i;
+                i = new Intent(getApplicationContext(), SettingActivity.class);
+                startActivity(i);
+                return true;
+            //break;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
     }
 }
 

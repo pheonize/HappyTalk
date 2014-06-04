@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <string name="th">ภาษาไทย</string>
+    <string name="en">ภาษาอังกฤษ</string>
     <string name="from">แปลจาก</string>
     <string name="to">เป็น</string>
     <string name="conversation">คำสนทนาทั่วไป</string>
@@ -9,6 +11,7 @@
     <string name="help">ขอความช่วยเหลือ</string>
     <string name="logistic">โลจิสติกส์</string>
     <string name="favorite">รายการโปรด</string>
+
     <string name="about1">
         สมาพันธ์โลจิสติกส์ไทย โดยการสนับสนุนของสำนักงานกองทุนสนับสนุนการสร้างเสริมสุขภาพ (สสส.)
         ดำเนินโครงการสร้างเสริมสุขภาวะในองค์กร (Happy Workplace) ภายใต้โครงการ
