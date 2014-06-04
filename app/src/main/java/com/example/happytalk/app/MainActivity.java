@@ -94,12 +94,12 @@ public class MainActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
-        //updateLanguage(this);
-        super.onCreate(savedInstanceState);
-        //requestWindowFeature(Window.FEATURE_NO_TITLE);
-        setContentView(R.layout.activity_main);
-        //updateLocale(this);
 
+        super.onCreate(savedInstanceState);
+
+        setContentView(R.layout.activity_main);
+
+        //reload value from preference screen
         PreferenceManager.setDefaultValues(this,R.xml.setting,false);
         final SharedPreferences setting = PreferenceManager.getDefaultSharedPreferences(this);
 
@@ -520,35 +520,7 @@ public class MainActivity extends Activity {
     }
 
 
-//    @Override
-//    public boolean onCreateOptionsMenu(Menu menu) {
-//        // Inflate the menu; this adds items to the action bar if it is present.
-//        getMenuInflater().inflate(R.menu.main, menu);
-//        return super.onCreateOptionsMenu(menu);
-//    }
-//
-//    @Override
-//    public boolean onOptionsItemSelected(MenuItem item) {
-//        // Handle action bar item clicks here. The action bar will
-//        // automatically handle clicks on the Home/Up button, so long
-//        // as you specify a parent activity in AndroidManifest.xml.
-//        int id = item.getItemId();
-//        if(id== R.id.action_settings){
-//            Intent i = new Intent(getApplicationContext(),SettingActivity_1.class);
-//            startActivity(i);
-////        switch (item.getItemId()) {
-////            case R.id.action_settings:
-////                Intent intent;
-////                intent = new Intent(getApplicationContext(), SettingActivity.class);
-////                startActivity(intent);
-////                break;
-////            default:
-////                break;
-//
-//        } return super.onOptionsItemSelected(item);
-//
-//
-//    }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
