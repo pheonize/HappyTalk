@@ -13,14 +13,14 @@
     <string name="action_search">Search</string>
     <string name="search_hint">search_hint</string>
 
-    <string name="from">from</string>
-    <string name="to">to</string>
-    <!--<string name="conversation">Conversation</string>-->
-    <!--<string name="thing">ต้องการสิ่งของ</string>-->
-    <!--<string name="place">สอบถามสถานที่ต่างๆ</string>-->
-    <!--<string name="help">ขอความช่วยเหลือ</string>-->
-    <!--<string name="logistic">โลจิสติกส์</string>-->
-    <!--<string name="favorite">รายการโปรด</string>-->
+    <string name="from">From</string>
+    <string name="to">To</string>
+    <string name="conversation">Basic Conversation</string>
+    <string name="thing">I would like to...</string>
+    <string name="place">Where is the...  </string>
+    <string name="help">Assistance/Emergency</string>
+    <string name="logistic">Logistics </string>
+    <string name="favorite">Favorite</string>
     <string name="about1">
         Thai Federation on Logistics has been operate the Happy Workplace scheme which supported by Thai Health Promotion Foundation
         under a project name “New dimensional of happy workplace to increase wellbeing for land logistics staffs”.
