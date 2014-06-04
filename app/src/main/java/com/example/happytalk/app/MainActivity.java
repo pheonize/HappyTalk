@@ -2,8 +2,13 @@ package com.example.happytalk.app;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.content.res.Configuration;
+import android.content.res.Resources;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
+import android.text.TextUtils;
+import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -20,7 +25,9 @@ import android.content.Intent;
 import android.widget.Spinner;
 import android.widget.TextView;
 
+
 import android.widget.AdapterView.OnItemSelectedListener;
+import android.widget.Toast;
 
 
 import com.example.happytalk.app.Database.Database;
@@ -86,9 +93,28 @@ public class MainActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+        //updateLanguage(this);
         super.onCreate(savedInstanceState);
         //requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_main);
+        //updateLocale(this);
+
+        PreferenceManager.setDefaultValues(this,R.xml.setting,false);
+        final SharedPreferences setting = PreferenceManager.getDefaultSharedPreferences(this);
+
+        String value = setting.getString("langPref","");
+
+
+        Locale locale = new Locale(value);
+        Locale.setDefault(locale);
+        Configuration config = new Configuration();
+        config.locale = locale;
+        getBaseContext().getResources().updateConfiguration(config,
+                getBaseContext().getResources().getDisplayMetrics());
+        this.setContentView(R.layout.activity_main);
+
+
 
 
         //Test DB //
@@ -97,7 +123,8 @@ public class MainActivity extends Activity {
 
 
         Configuration configuration = new Configuration();
-        //configuration.locale = Locale.getDefault();
+
+
         if (configuration.locale == null || configuration.locale.equals(Locale.ENGLISH)) {
             getResources().updateConfiguration(configuration, null);
             initWidget();
@@ -241,6 +268,13 @@ public class MainActivity extends Activity {
 
         }
     }
+
+
+
+
+
+
+
 
 
     private void initWidget() {

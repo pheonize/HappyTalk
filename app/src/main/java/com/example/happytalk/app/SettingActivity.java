@@ -4,10 +4,12 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.OnSharedPreferenceChangeListener;
 import android.content.res.Configuration;
+import android.content.res.Resources;
 import android.os.Bundle;
 import android.preference.Preference;
 import android.preference.PreferenceActivity;
 import android.preference.PreferenceManager;
+import android.util.DisplayMetrics;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
@@ -18,7 +20,7 @@ import java.util.Locale;
  * Created by oVANILLAz on 6/4/14 AD.
  */
 public class SettingActivity extends PreferenceActivity implements OnSharedPreferenceChangeListener  {
-    private static final int REQUEST_CHANGE_LANGUAGE =1;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -75,17 +77,79 @@ public class SettingActivity extends PreferenceActivity implements OnSharedPrefe
         if (value.equals("Thai")) {
             Configuration configuration = new Configuration();
             configuration.locale = new Locale("Th");
-            getResources().updateConfiguration(configuration, null);
-            startActivityForResult(new Intent(SettingActivity.this, SettingActivity.class),REQUEST_CHANGE_LANGUAGE);
 
+            String newConfig = String.valueOf(configuration.locale);
+
+              Locale newLocale = new Locale(newConfig);
+            Locale.setDefault(newLocale);
+                Configuration config = getBaseContext().getResources().getConfiguration();
+            if(!config.locale.equals(newLocale)){
+                config.locale = newLocale;
+                getBaseContext().getResources().updateConfiguration(config,null);
+            }
+
+//
+//            Configuration newConf = new Configuration();
+//            newConf.locale = newLocale;
+//
+//            //update locale
+//            getResources().updateConfiguration(newConf,null);
+
+            //getResources().updateConfiguration(configuration,null);
+           // onConfigurationChanged(configuration);
             //onCreate(null);
+            //setConfig(newConfig);
+
         } else {
             Configuration configuration = new Configuration();
             configuration.locale = Locale.ENGLISH;
-            getResources().updateConfiguration(configuration, null);
+
+            String newConfig = String.valueOf(configuration.locale);
+
+
+
+            Locale newLocale = new Locale(newConfig);
+            Locale.setDefault(newLocale);
+            Configuration config = getBaseContext().getResources().getConfiguration();
+            if(!config.locale.equals(newLocale)){
+                config.locale = newLocale;
+                getBaseContext().getResources().updateConfiguration(config,null);
+            }
+            //getResources().updateConfiguration(configuration, null);
 
             //onCreate(null);
         }
         langPref.setSummary(msg);
     }
+
+//    private void setConfig(String newConfig) {
+//        Locale newLocale = new Locale(newConfig);
+//        Resources res = getResources();
+//        DisplayMetrics dm = res.getDisplayMetrics();
+//        Configuration conf = res.getConfiguration();
+//        conf.locale = newLocale;
+//        res.updateConfiguration(conf,dm);
+//
+//        onConfigurationChanged(conf);
+//    }
+
+
+
+//    @Override
+//    public void onConfigurationChanged(Configuration newConfig) {
+//        super.onConfigurationChanged(newConfig);
+//
+//        getBaseContext().getResources().updateConfiguration(newConfig, getBaseContext().getResources().getDisplayMetrics());
+//        addPreferencesFromResource(R.xml.setting);
+//       // setTitle(R.string.app_name);
+//
+//        // Checks the active language
+//        if (newConfig.locale.equals(Locale.ENGLISH)) {
+//            Toast.makeText(this, "English", Toast.LENGTH_SHORT).show();
+////        } else if (newConfig.locale.equals("th")) {
+//        }else{
+//            Toast.makeText(this, "Th", Toast.LENGTH_SHORT).show();
+//        }
+//    }
+
 }

@@ -19,6 +19,11 @@
         android:key="About "
         android:title="About Us">
         <PreferenceCategory android:title="About Us">
+            <intent android:action="android.intent.action.VIEW"
+                android:targetClass="@string/about"></intent>
+
+
+
 
 
 
