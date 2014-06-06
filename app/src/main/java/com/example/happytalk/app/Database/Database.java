@@ -637,4 +637,21 @@ public class Database extends SQLiteOpenHelper {
         }
     }
 
+
+
+
+
+    //EXP list
+
+    public Cursor fetchGroup(){
+        String qry = "SELECT * FROM " + TABLE_CONVERSATION;
+        return db.rawQuery(qry,null);
+    }
+
+
+    public Cursor fetchChildren(String id){
+        String qry = "SELECT * FROM " + TABLE_CONVERSATION + " WHERE id = '" + id + "'" ;
+        return db.rawQuery(qry,null);
+    }
+
 }

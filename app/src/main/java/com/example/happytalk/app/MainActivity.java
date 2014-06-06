@@ -122,11 +122,11 @@ public class MainActivity extends Activity {
         Database db = new Database(this);
 
 
-        Configuration configuration = new Configuration();
+        //Configuration configuration = new Configuration();
 
 
-        if (configuration.locale == null || configuration.locale.equals(Locale.ENGLISH)) {
-            getResources().updateConfiguration(configuration, null);
+        if (value.equals("English(United States)")) {
+           // getResources().updateConfiguration(config, null);
             initWidget();
             Spinner countryFrom = (Spinner) findViewById(R.id.spinner_show);
             countryFrom.setAdapter(new MyCustomAdapter(MainActivity.this, R.layout.spinner_row, country_list1, img1));
@@ -195,7 +195,7 @@ public class MainActivity extends Activity {
 
 
             });
-        } else {
+        }else if(value.equals(("Thai"))) {
             initWidgetTH();
 
             Spinner countryFrom = (Spinner) findViewById(R.id.spinner_show);

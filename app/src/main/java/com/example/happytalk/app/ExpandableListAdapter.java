@@ -22,7 +22,7 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter {
     private Map<String, List<String>> groupList;
     private List<String> childList;
 
-    public ExpandableListAdapter(Activity context,List<String> childList,Map<String, List<String>> groupList){
+    public ExpandableListAdapter(Activity context, List<String> childList, Map<String, List<String>> groupList){
         this.context = context;
         this.groupList = groupList;
         this.childList = childList;
@@ -44,7 +44,12 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter {
         if(convertView ==null){
             convertView = inflater.inflate(R.layout.child_item,null);
         }
-        TextView item = (TextView) convertView.findViewById(R.id.txtChild_list);
+
+        TextView wordFrom = (TextView) convertView.findViewById(R.id.txtWordFrom);
+        TextView wordEN = (TextView) convertView.findViewById(R.id.txtWordEN);
+        TextView karaokeTH = (TextView) convertView.findViewById(R.id.txtKaraokeTH);
+        TextView karaokeEN = (TextView) convertView.findViewById(R.id.txtKaraokeEN);
+
 
         ImageView soundImg = (ImageView) convertView.findViewById(R.id.sound);
         soundImg.setOnClickListener(new View.OnClickListener() {
@@ -53,9 +58,22 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter {
 
             }
         });
-        item.setText(childList);
+
+        ImageView favoriteImg = (ImageView) convertView.findViewById(R.id.favorite);
+        favoriteImg.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+
+        wordFrom.setText(childList);
+        wordEN.setText(childList);
+        karaokeEN.setText(childList);
+        karaokeTH.setText(childList);
         return convertView;
     }
+
 
 
 
@@ -76,18 +94,23 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter {
         return groupPosition;
     }
 
+
     public View getGroupView(int groupPosition, boolean isExpanded,
                              View convertView, ViewGroup parent) {
-        String laptopName = (String) getGroup(groupPosition);
+        String groupName = (String) getGroup(groupPosition);
         if (convertView == null) {
             LayoutInflater inflater = (LayoutInflater) context
                     .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             convertView = inflater.inflate(R.layout.group_listview,
                     null);
         }
-        TextView item = (TextView) convertView.findViewById(R.id.txtChild_list);
-        item.setTypeface(null, Typeface.BOLD);
-        item.setText(laptopName);
+        TextView wordFrom = (TextView) convertView.findViewById(R.id.wordFrom);
+        TextView wordEN = (TextView) convertView.findViewById(R.id.wordEN);
+
+
+        wordFrom.setTypeface(null, Typeface.BOLD);
+        wordFrom.setText(groupName);
+        wordEN.setText(groupName);
         return convertView;
     }
 

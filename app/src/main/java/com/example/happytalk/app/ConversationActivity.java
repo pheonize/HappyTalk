@@ -12,23 +12,30 @@ import android.database.sqlite.SQLiteDatabase;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.app.Activity;
+import android.util.DisplayMetrics;
 import android.util.Log;
 
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Button;
+import android.widget.ExpandableListView;
 import android.widget.ListView;
 
 import android.widget.SimpleAdapter;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 
 import com.example.happytalk.app.Database.Database;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.LinkedHashMap;
+import java.util.List;
+import java.util.Map;
 
 
 public class ConversationActivity extends Activity {
@@ -54,6 +61,11 @@ public class ConversationActivity extends Activity {
     private Spinner countryFrom, countryTo;
     private String strCountryFrom, strCountryTo;
 
+    Map<String, List<String>> listMap;
+    List<String> groupList;
+    List<String> childList;
+
+    ExpandableListView expListView;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -114,6 +126,24 @@ public class ConversationActivity extends Activity {
 
 
         if (lang_from.equals("Thai") && lang_to.equals("Brunei") || lang_from.equals("ไทย") && lang_to.equals("บรูไน")) {
+
+            createGroupList();
+            createCollection();
+
+            expListView = (ExpandableListView) findViewById(R.id.groupListview);
+            final ExpandableListAdapter expandableListAdapter = new ExpandableListAdapter(this,groupList,listMap);
+            expListView.setAdapter(expandableListAdapter);
+            expListView.setOnChildClickListener(new ExpandableListView.OnChildClickListener() {
+                @Override
+                public boolean onChildClick(ExpandableListView parent, View v, int groupPosition, int childPosition, long id) {
+
+                    final String selected = (String) expandableListAdapter.getChild(groupPosition, childPosition);
+
+                    Toast.makeText(getBaseContext(),selected,Toast.LENGTH_LONG).show();
+                    return true;
+                }
+            });
+
 //
 //           ListView listView = (ListView) findViewById(R.id.listViewInfo);
 //            ArrayAdapter<String> adapter = new ArrayAdapter<String>(getApplicationContext(),
@@ -121,11 +151,18 @@ public class ConversationActivity extends Activity {
 //
 //            listView.setAdapter(adapter);
 
-            final ArrayList<HashMap<String,String>> dataList = db.ShowAllData();
-            ListView listView = (ListView)findViewById(R.id.listViewInfo);
-            SimpleAdapter adt = new SimpleAdapter(ConversationActivity.this,dataList,R.layout.showitemdb_custom,
-                    new String[]{"wordFrom","wordEN"},new int[]{R.id.mainWord,R.id.subWord});
-            listView.setAdapter(adt);
+
+
+
+            //work
+//            final ArrayList<HashMap<String,String>> dataList = db.ShowAllData();
+//            ListView listView = (ListView)findViewById(R.id.listViewInfo);
+//            SimpleAdapter adt = new SimpleAdapter(ConversationActivity.this,dataList,R.layout.showitemdb_custom,
+//                    new String[]{"wordFrom","wordEN"},new int[]{R.id.mainWord,R.id.subWord});
+//            listView.setAdapter(adt);
+
+
+            /////
 
 //            listView.setOnItemClickListener(new OnItemClickListener() {
 //                @Override
@@ -267,8 +304,72 @@ public class ConversationActivity extends Activity {
         }
     }
 
-    private void showDetail() {
+
+
+
+
+
+
+
+
+
+
+    //pass
+
+    private void createGroupList() {
+        groupList = new ArrayList<String>();
+        groupList.add("TEST");
+
+//        final ArrayList<HashMap<String,String>> dataList = db.ShowAllData();
+//            ListView listView = (ListView)findViewById(R.id.groupListview);
+//            SimpleAdapter adt = new SimpleAdapter(ConversationActivity.this,dataList,R.layout.showitemdb_custom,
+//                    new String[]{"wordFrom","wordEN"},new int[]{R.id.mainWord,R.id.subWord});
+//            listView.setAdapter(adt);
     }
+
+    //How to?
+    private void createCollection() {
+
+//        final ArrayList<HashMap<String,String>> dataList = db.ShowAllData();
+//        listMap = new LinkedHashMap<String, List<String>>();
+//        TextView wordFrom = (TextView) findViewById(R.id.wordFrom);
+//        TextView wordTo = (TextView) findViewById(R.id.wordEN);
+       String[] testModel = {"test1","test2","test3"};
+        listMap = new LinkedHashMap<String, List<String>>();
+        for(String group: groupList){
+            if(group.equals("TEST")){
+                loadChild(testModel);
+            }
+            else {
+            }
+
+            listMap.put(group,childList);
+        }
+    }
+    private void loadChild(String[] groupModel){
+        childList = new ArrayList<String>();
+        for(String model: groupModel)
+            childList.add(model);
+    }
+    private void setGroupIndicatorToRight() {
+        /* Get the screen width */
+        DisplayMetrics dm = new DisplayMetrics();
+        getWindowManager().getDefaultDisplay().getMetrics(dm);
+        int width = dm.widthPixels;
+
+        expListView.setIndicatorBounds(width - getDipsFromPixel(60), width
+                - getDipsFromPixel(5));
+    }
+
+    // Convert pixel to dip
+    public int getDipsFromPixel(float pixels) {
+        // Get the screen's density scale
+        final float scale = getResources().getDisplayMetrics().density;
+        // Convert the dps to pixels, based on density scale
+        return (int) (pixels * scale + 0.5f);
+    }
+
+
 
     private void initWidget() {
         countryFrom = (Spinner) findViewById(R.id.spinner_show);
@@ -283,62 +384,7 @@ public class ConversationActivity extends Activity {
         sqLiteDatabase.close();
     }
 
-//    @Override
-//    public boolean onCreateOptionsMenu(Menu menu) {
-//        // Inflate the menu; this adds items to the action bar if it is present.
-//        getMenuInflater().inflate(R.menu.main, menu);
-//        // Associate searchable configuration with the SearchView
-//
-//        SearchManager searchManager = (SearchManager) getSystemService(Context.SEARCH_SERVICE);
-//        SearchView searchView = (SearchView) menu.findItem(R.id.action_search)
-//                .getActionView();
-//        searchView.setSearchableInfo(searchManager
-//                .getSearchableInfo(getComponentName()));
-//
-//        return super.onCreateOptionsMenu(menu);
-//
-//
-//    }
-//
-//    @Override
-//    public boolean onOptionsItemSelected(MenuItem item) {
-//        // Handle action bar item clicks here. The action bar will
-//        // automatically handle clicks on the Home/Up button, so long
-//        // as you specify a parent activity in AndroidManifest.xml.
-//        switch (item.getItemId()) {
-//            case R.id.action_settings:
-//                Setting();
-//                return true;
-//
-//        }
-//        return super.onOptionsItemSelected(item);
-//    }
-//
-//    private void Setting() {
-//        Intent intent ;
-//        intent= new Intent(getApplicationContext(), SettingActivity.class);
-//        startActivity(intent);
-//
-//    }
 
-
-    //Play sound
-
-//    @Override
-//    public void onCompletion(MediaPlayer mp) {
-//        mediaPlayer.release();
-//        mediaPlayer = null;
-//       btnSound.setText("Play");
-//    }
-//
-//    @Override
-//    public void onDestroy() {
-//        super.onDestroy();
-//        if (mediaPlayer != null) {
-//            mediaPlayer.release();
-//            mediaPlayer = null;
-//        }
-//    }
 @Override
 public boolean onCreateOptionsMenu(Menu menu) {
     MenuInflater inflater = getMenuInflater();
@@ -360,6 +406,7 @@ public boolean onCreateOptionsMenu(Menu menu) {
                 return super.onOptionsItemSelected(item);
         }
     }
+
 }
 
 

@@ -5,9 +5,24 @@
     android:orientation="vertical"
     android:padding="10dp">
 
+    <!---->
     <TextView
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:id="@+id/txtGroup_list"/>
+        android:id="@+id/wordFrom"
+        android:paddingLeft="20dp"/>
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/wordEN"
+        android:paddingLeft="20dp"/>
+
+    <!--<ListView-->
+    <!--android:layout_width="fill_parent"-->
+    <!--android:layout_height="fill_parent"-->
+    <!--android:layout_marginTop="20dp"-->
+    <!--android:id="@+id/listViewInfo"-->
+
+    <!--android:layout_weight="1" />-->
 
 </LinearLayout>
