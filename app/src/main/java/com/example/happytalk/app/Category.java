@@ -10,8 +10,7 @@ import java.util.List;
 public class Category implements Serializable {
     private long id;
     private String wordFrom , wordEN;
-    private List<ItemDetail> itemList = new ArrayList<ItemDetail>();
-
+    public List<ItemDetail> itemList = new ArrayList<ItemDetail>();
 
     public Category(long id, String wordFrom, String wordEN) {
         this.id = id;
@@ -19,10 +18,17 @@ public class Category implements Serializable {
         this.wordEN = wordEN;
     }
 
-
     public Category(String wordFrom, String wordEN) {
         this.wordFrom = wordFrom;
         this.wordEN = wordEN;
+    }
+
+    public List<ItemDetail> getItemList() {
+        return itemList;
+    }
+
+    public void setItemList(List<ItemDetail> itemList) {
+        this.itemList = itemList;
     }
 
     public long getId() {

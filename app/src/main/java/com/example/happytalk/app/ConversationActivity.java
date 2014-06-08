@@ -19,11 +19,10 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.app.ExpandableListActivity;
 import android.widget.Button;
 import android.widget.ExpandableListView;
-import android.widget.ListView;
 
-import android.widget.SimpleAdapter;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -33,9 +32,7 @@ import com.example.happytalk.app.Database.Database;
 
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.LinkedHashMap;
 import java.util.List;
-import java.util.Map;
 
 
 public class ConversationActivity extends Activity {
@@ -56,22 +53,27 @@ public class ConversationActivity extends Activity {
             R.drawable.myanmar_flag, R.drawable.philippines_flag,
             R.drawable.singapore_flag, R.drawable.thailand_flag,
             R.drawable.vietnam_flag};
+
+    ExpandableListAdapter_test listAdapter;
+    ExpandableListView expandableListView;
+    List<String> listDataHeader;
+    HashMap<String,List<String>> listDataChild;
+
     private Cursor cursor;
     private MediaPlayer mediaPlayer;
     private Spinner countryFrom, countryTo;
     private String strCountryFrom, strCountryTo;
+    private  ArrayList<Parent> parents;
 
-    Map<String, List<String>> listMap;
-    List<String> groupList;
-    List<String> childList;
-
-    ExpandableListView expListView;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.conversation);
+
+
+
 
 
         Configuration configuration = new Configuration();
@@ -127,22 +129,58 @@ public class ConversationActivity extends Activity {
 
         if (lang_from.equals("Thai") && lang_to.equals("Brunei") || lang_from.equals("ไทย") && lang_to.equals("บรูไน")) {
 
-            createGroupList();
-            createCollection();
+            //get the listview
 
-            expListView = (ExpandableListView) findViewById(R.id.groupListview);
-            final ExpandableListAdapter expandableListAdapter = new ExpandableListAdapter(this,groupList,listMap);
-            expListView.setAdapter(expandableListAdapter);
-            expListView.setOnChildClickListener(new ExpandableListView.OnChildClickListener() {
+            expandableListView =(ExpandableListView) findViewById(R.id.groupListview);
+
+            //preparing list data
+            prepareListData();
+
+            listAdapter = new ExpandableListAdapter_test(this,listDataHeader,listDataChild);
+
+            //setting list adapter
+            expandableListView.setAdapter(listAdapter);
+
+            expandableListView.setOnGroupClickListener(new ExpandableListView.OnGroupClickListener() {
                 @Override
-                public boolean onChildClick(ExpandableListView parent, View v, int groupPosition, int childPosition, long id) {
-
-                    final String selected = (String) expandableListAdapter.getChild(groupPosition, childPosition);
-
-                    Toast.makeText(getBaseContext(),selected,Toast.LENGTH_LONG).show();
-                    return true;
+                public boolean onGroupClick(ExpandableListView parent, View v, int groupPosition, long id) {
+                    return false;
                 }
             });
+
+            expandableListView.setOnGroupExpandListener(new ExpandableListActivity() {
+                @Override
+                public void onGroupExpand(int groupPosition) {
+                    Toast.makeText(getApplicationContext(), listDataHeader.get(groupPosition) + "Expanded", Toast.LENGTH_SHORT).show();
+                }
+            });
+
+            expandableListView.setOnChildClickListener(new ExpandableListView.OnChildClickListener() {
+                @Override
+                public boolean onChildClick(ExpandableListView parent, View v, int groupPosition, int childPosition, long id) {
+                    Toast.makeText(getApplicationContext(),listDataHeader.get(groupPosition)+ " : " + listDataChild.get(groupPosition).get(childPosition),Toast.LENGTH_SHORT).show();
+                    return false;
+                }
+            });
+
+
+
+//            createGroupList();
+//            createCollection();
+//
+//            expListView = (ExpandableListView) findViewById(R.id.groupListview);
+//            final ExpandableListAdapter expandableListAdapter = new ExpandableListAdapter(this,groupList,listMap);
+//            expListView.setAdapter(expandableListAdapter);
+//            expListView.setOnChildClickListener(new ExpandableListView.OnChildClickListener() {
+//                @Override
+//                public boolean onChildClick(ExpandableListView parent, View v, int groupPosition, int childPosition, long id) {
+//
+//                    final String selected = (String) expandableListAdapter.getChild(groupPosition, childPosition);
+//
+//                    Toast.makeText(getBaseContext(),selected,Toast.LENGTH_LONG).show();
+//                    return true;
+//                }
+//            });
 
 //
 //           ListView listView = (ListView) findViewById(R.id.listViewInfo);
@@ -304,60 +342,77 @@ public class ConversationActivity extends Activity {
         }
     }
 
+    private void prepareListData() {
+        listDataHeader = new ArrayList<String>();
+        listDataChild = new HashMap<String, List<String>>();
 
+        //Adding child data
+        listDataHeader.add("สวัสดี");
+        listDataHeader.add("สวัสดีตอนกลางวัน");
 
+        //Adding child data
+        List<String> hello = new ArrayList<String>();
+        hello.add("Hello");
+        hello.add("Halo");
+        hello.add("Ha-lo");
 
+        List<String> hello2 = new ArrayList<String>();
+        hello2.add("test1");
+        hello2.add("test2");
 
+        listDataChild.put(listDataHeader.get(0),hello);
+        listDataChild.put(listDataHeader.get(1),hello2);
 
-
-
-
-
-
-    //pass
-
-    private void createGroupList() {
-        groupList = new ArrayList<String>();
-        groupList.add("TEST");
-
-//        final ArrayList<HashMap<String,String>> dataList = db.ShowAllData();
-//            ListView listView = (ListView)findViewById(R.id.groupListview);
-//            SimpleAdapter adt = new SimpleAdapter(ConversationActivity.this,dataList,R.layout.showitemdb_custom,
-//                    new String[]{"wordFrom","wordEN"},new int[]{R.id.mainWord,R.id.subWord});
-//            listView.setAdapter(adt);
     }
 
-    //How to?
-    private void createCollection() {
 
-//        final ArrayList<HashMap<String,String>> dataList = db.ShowAllData();
+//    private void createGroupList() {
+//        groupList = new ArrayList<String>();
+//        groupList.add("สวัสดี");
+//
+////        final ArrayList<HashMap<String,String>> dataList = db.ShowAllData();
+////            ListView listView = (ListView)findViewById(R.id.groupListview);
+////            SimpleAdapter adt = new SimpleAdapter(ConversationActivity.this,dataList,R.layout.showitemdb_custom,
+////                    new String[]{"wordFrom","wordEN"},new int[]{R.id.mainWord,R.id.subWord});
+////            listView.setAdapter(adt);
+//    }
+//
+//
+//    //pass
+//
+//    //How to?
+//    private void createCollection() {
+//
+////        final ArrayList<HashMap<String,String>> dataList = db.ShowAllData();
+////        listMap = new LinkedHashMap<String, List<String>>();
+////        TextView wordFrom = (TextView) findViewById(R.id.wordFrom);
+////        TextView wordTo = (TextView) findViewById(R.id.wordEN);
+//       String[] testModel = {"test1","test2","test3"};
 //        listMap = new LinkedHashMap<String, List<String>>();
-//        TextView wordFrom = (TextView) findViewById(R.id.wordFrom);
-//        TextView wordTo = (TextView) findViewById(R.id.wordEN);
-       String[] testModel = {"test1","test2","test3"};
-        listMap = new LinkedHashMap<String, List<String>>();
-        for(String group: groupList){
-            if(group.equals("TEST")){
-                loadChild(testModel);
-            }
-            else {
-            }
+//        for(String group: groupList){
+//            if(group.equals("TEST")){
+//                loadChild(testModel);
+//            }
+//            else {
+//            }
+//
+//            listMap.put(group,childList);
+//        }
+//    }
+//
+//    private void loadChild(String[] groupModel){
+//        childList = new ArrayList<String>();
+//        for(String model: groupModel)
+//            childList.add(model);
+//    }
 
-            listMap.put(group,childList);
-        }
-    }
-    private void loadChild(String[] groupModel){
-        childList = new ArrayList<String>();
-        for(String model: groupModel)
-            childList.add(model);
-    }
     private void setGroupIndicatorToRight() {
         /* Get the screen width */
         DisplayMetrics dm = new DisplayMetrics();
         getWindowManager().getDefaultDisplay().getMetrics(dm);
         int width = dm.widthPixels;
 
-        expListView.setIndicatorBounds(width - getDipsFromPixel(60), width
+        expandableListView.setIndicatorBounds(width - getDipsFromPixel(60), width
                 - getDipsFromPixel(5));
     }
 
@@ -368,8 +423,6 @@ public class ConversationActivity extends Activity {
         // Convert the dps to pixels, based on density scale
         return (int) (pixels * scale + 0.5f);
     }
-
-
 
     private void initWidget() {
         countryFrom = (Spinner) findViewById(R.id.spinner_show);
@@ -383,7 +436,6 @@ public class ConversationActivity extends Activity {
         db.close();
         sqLiteDatabase.close();
     }
-
 
 @Override
 public boolean onCreateOptionsMenu(Menu menu) {
@@ -407,7 +459,11 @@ public boolean onCreateOptionsMenu(Menu menu) {
         }
     }
 
-}
+
+
+    }
+
+
 
 
 

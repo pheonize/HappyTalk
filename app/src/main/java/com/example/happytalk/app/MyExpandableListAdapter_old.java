@@ -11,14 +11,14 @@ import com.example.happytalk.app.Database.Database;
 /**
  * Created by oVANILLAz on 6/6/14 AD.
  */
-public class MyExpandableListAdapter extends SimpleCursorTreeAdapter {
+public class MyExpandableListAdapter_old extends SimpleCursorTreeAdapter {
 
     Database db;
     SQLiteOpenHelper mdb;
 
-    public MyExpandableListAdapter(Cursor cursor, Context context, int groupLayout,
-                                   int childLayout, String[] groupFrom, int[] groupTo, String[] childrenFrom,
-                                   int[] childrenTo) {
+    public MyExpandableListAdapter_old(Cursor cursor, Context context, int groupLayout,
+                                       int childLayout, String[] groupFrom, int[] groupTo, String[] childrenFrom,
+                                       int[] childrenTo) {
         super(context, cursor, groupLayout, groupFrom, groupTo,
                 childLayout, childrenFrom, childrenTo);
     }
