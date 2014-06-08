@@ -32,7 +32,9 @@ import com.example.happytalk.app.Database.Database;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.List;
+import java.util.Map;
 
 
 public class ConversationActivity extends Activity {
@@ -54,10 +56,11 @@ public class ConversationActivity extends Activity {
             R.drawable.singapore_flag, R.drawable.thailand_flag,
             R.drawable.vietnam_flag};
 
-    ExpandableListAdapter_test listAdapter;
+
     ExpandableListView expandableListView;
-    List<String> listDataHeader;
-    HashMap<String,List<String>> listDataChild;
+    List<String> groupList;
+    List<String> childList;
+    Map<String,List<String>> group;
 
     private Cursor cursor;
     private MediaPlayer mediaPlayer;
@@ -129,44 +132,22 @@ public class ConversationActivity extends Activity {
 
         if (lang_from.equals("Thai") && lang_to.equals("Brunei") || lang_from.equals("ไทย") && lang_to.equals("บรูไน")) {
 
-            //get the listview
+
+            createGroupList();
+            createCollection();
 
             expandableListView =(ExpandableListView) findViewById(R.id.groupListview);
-
-            //preparing list data
-            prepareListData();
-
-            listAdapter = new ExpandableListAdapter_test(this,listDataHeader,listDataChild);
-
-            //setting list adapter
-            expandableListView.setAdapter(listAdapter);
-
-            expandableListView.setOnGroupClickListener(new ExpandableListView.OnGroupClickListener() {
-                @Override
-                public boolean onGroupClick(ExpandableListView parent, View v, int groupPosition, long id) {
-                    return false;
-                }
-            });
-
-            expandableListView.setOnGroupExpandListener(new ExpandableListActivity() {
-                @Override
-                public void onGroupExpand(int groupPosition) {
-                    Toast.makeText(getApplicationContext(), listDataHeader.get(groupPosition) + "Expanded", Toast.LENGTH_SHORT).show();
-                }
-            });
-
+            final ExpandableListAdapter expandableListAdapter = new ExpandableListAdapter(this,groupList,group);
+            expandableListView.setAdapter(expandableListAdapter);
+           // setGroupIndicatorToRight();
             expandableListView.setOnChildClickListener(new ExpandableListView.OnChildClickListener() {
                 @Override
                 public boolean onChildClick(ExpandableListView parent, View v, int groupPosition, int childPosition, long id) {
-                    Toast.makeText(getApplicationContext(),listDataHeader.get(groupPosition)+ " : " + listDataChild.get(groupPosition).get(childPosition),Toast.LENGTH_SHORT).show();
-                    return false;
+                    final String selected = (String) expandableListAdapter.getChild(groupPosition,childPosition);
+                    Toast.makeText(getBaseContext(),selected,Toast.LENGTH_LONG).show();
+                    return true;
                 }
             });
-
-
-
-//            createGroupList();
-//            createCollection();
 //
 //            expListView = (ExpandableListView) findViewById(R.id.groupListview);
 //            final ExpandableListAdapter expandableListAdapter = new ExpandableListAdapter(this,groupList,listMap);
@@ -342,28 +323,71 @@ public class ConversationActivity extends Activity {
         }
     }
 
-    private void prepareListData() {
-        listDataHeader = new ArrayList<String>();
-        listDataChild = new HashMap<String, List<String>>();
-
-        //Adding child data
-        listDataHeader.add("สวัสดี");
-        listDataHeader.add("สวัสดีตอนกลางวัน");
-
-        //Adding child data
-        List<String> hello = new ArrayList<String>();
-        hello.add("Hello");
-        hello.add("Halo");
-        hello.add("Ha-lo");
-
-        List<String> hello2 = new ArrayList<String>();
-        hello2.add("test1");
-        hello2.add("test2");
-
-        listDataChild.put(listDataHeader.get(0),hello);
-        listDataChild.put(listDataHeader.get(1),hello2);
-
+    private void createGroupList() {
+        groupList = new ArrayList<String>();
+        groupList.add("สวัสดี");
     }
+
+    private void createCollection(){
+        String[] hello = {"Hello"};
+
+        group = new LinkedHashMap<String, List<String>>();
+        for(String child:groupList){
+            if(child.equals("สวัสดี")){
+                loadChild(hello);
+            }
+        }
+    }
+
+    private void loadChild(String[] Model) {
+        childList = new ArrayList<String>();
+        for (String model:Model){
+            childList.add(model);
+        }
+    }
+    private void setGroupIndicatorToRight() {
+        /* Get the screen width */
+        DisplayMetrics dm = new DisplayMetrics();
+        getWindowManager().getDefaultDisplay().getMetrics(dm);
+        int width = dm.widthPixels;
+
+        expandableListView.setIndicatorBounds(width - getDipsFromPixel(60), width
+                - getDipsFromPixel(5));
+    }
+
+    // Convert pixel to dip
+    public int getDipsFromPixel(float pixels) {
+        // Get the screen's density scale
+        final float scale = getResources().getDisplayMetrics().density;
+        // Convert the dps to pixels, based on density scale
+        return (int) (pixels * scale + 0.5f);
+    }
+
+
+//    private void prepareListData() {
+//        listDataHeader = new ArrayList<String>();
+//        listDataChild = new HashMap<String, List<String>>();
+//
+//        //Adding child data
+//        listDataHeader.add("สวัสดี");
+//        listDataHeader.add("สวัสดีตอนกลางวัน");
+//
+//        //Adding child data
+//        List<String> hello = new ArrayList<String>();
+//        hello.add("Hello");
+//        hello.add("Halo");
+//        hello.add("Ha-lo");
+//
+//        List<String> hello2 = new ArrayList<String>();
+//        hello2.add("test1");
+//        hello2.add("test2");
+//
+//        listDataChild.put(listDataHeader.get(0),hello);
+//        listDataChild.put(listDataHeader.get(1),hello2);
+//
+//    }
+
+
 
 
 //    private void createGroupList() {
@@ -406,23 +430,7 @@ public class ConversationActivity extends Activity {
 //            childList.add(model);
 //    }
 
-    private void setGroupIndicatorToRight() {
-        /* Get the screen width */
-        DisplayMetrics dm = new DisplayMetrics();
-        getWindowManager().getDefaultDisplay().getMetrics(dm);
-        int width = dm.widthPixels;
 
-        expandableListView.setIndicatorBounds(width - getDipsFromPixel(60), width
-                - getDipsFromPixel(5));
-    }
-
-    // Convert pixel to dip
-    public int getDipsFromPixel(float pixels) {
-        // Get the screen's density scale
-        final float scale = getResources().getDisplayMetrics().density;
-        // Convert the dps to pixels, based on density scale
-        return (int) (pixels * scale + 0.5f);
-    }
 
     private void initWidget() {
         countryFrom = (Spinner) findViewById(R.id.spinner_show);
