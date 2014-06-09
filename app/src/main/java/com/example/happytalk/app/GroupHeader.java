@@ -38,7 +38,7 @@ public class GroupHeader {
         this.childList = childList;
     }
 
-    public GroupHeader(String wordFrom, ArrayList<Child> childList) {
+    public GroupHeader(String wordFrom,String wordEN, ArrayList<Child> childList) {
         super();
 
         this.wordFrom = wordFrom;
