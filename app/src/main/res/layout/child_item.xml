@@ -9,19 +9,19 @@
         android:layout_height="wrap_content"
         android:paddingLeft="30dp"/>
     <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:id="@+id/sound"
-        android:src="@drawable/help"
-        android:layout_marginTop="10dp"
-        android:contentDescription="@string/app_name"/>
-    <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/help"/>
+    <ImageView
         android:id="@+id/favorite"
-        android:src="@drawable/favorite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_below="@+id/sound"
         android:paddingTop="5dp"
+        android:src="@drawable/favorite"
         />
     <LinearLayout
         android:layout_width="wrap_content"
@@ -29,40 +29,49 @@
         android:orientation="vertical"
         android:paddingLeft="20dp">
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:id="@+id/txtWordFrom"
-        android:text="test1"
-        android:layout_alignParentLeft="true"
-        android:layout_centerVertical="true"
-        android:paddingLeft="25dp"/>
-    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:paddingLeft="25dp"
+        android:text="test1"/>
+    <TextView
         android:id="@+id/txtWordEN"
-        android:text="test2"
-        android:layout_below="@id/txtWordFrom"
-        android:layout_alignParentLeft="true"
-        android:layout_centerVertical="true"
-        android:paddingLeft="25dp"/>
-    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/txtKaraokeEN"
-        android:text="test3"
         android:layout_alignParentLeft="true"
+        android:layout_below="@id/txtWordFrom"
         android:layout_centerVertical="true"
-        android:layout_below="@id/txtWordEN"
-        android:paddingLeft="25dp"/>
+        android:paddingLeft="25dp"
+        android:text="test2"/>
         <TextView
+            android:id="@+id/txtWordTo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/txtKaraokeTH"
-            android:text="test4"
             android:layout_alignParentLeft="true"
+            android:layout_below="@id/txtWordFrom"
             android:layout_centerVertical="true"
+            android:paddingLeft="25dp"
+            android:text="test3"/>
+    <TextView
+        android:id="@+id/txtKaraokeEN"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/txtWordEN"
+        android:layout_centerVertical="true"
+        android:paddingLeft="25dp"
+        android:text="test4"/>
+        <TextView
+            android:id="@+id/txtKaraokeTH"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
             android:layout_below="@id/txtKaraokeEN"
-            android:paddingLeft="25dp"/>
+            android:layout_centerVertical="true"
+            android:paddingLeft="25dp"
+            android:text="test5"/>
     </LinearLayout>
 
 

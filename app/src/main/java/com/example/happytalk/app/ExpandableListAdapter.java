@@ -14,6 +14,8 @@ import android.view.ViewGroup;
 import android.widget.BaseExpandableListAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
@@ -25,6 +27,10 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter {
     private Activity context;
     private Map<String, List<String>> group;
     private List<String> child;
+    private ArrayList<Object> mChild = new ArrayList<Object>();
+    private ArrayList<String> mGroupItem;
+
+    int group_position,childposition;
 
     public ExpandableListAdapter(Activity context, List<String> child,
                                  Map<String, List<String>> group) {
@@ -83,9 +89,10 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter {
 
 
     }
-
+    @Override
     public int getChildrenCount(int groupPosition) {
-        return group.get(child.get(groupPosition)).size();
+       return group.get(child.get(groupPosition)).size();
+
     }
 
     public Object getGroup(int groupPosition) {

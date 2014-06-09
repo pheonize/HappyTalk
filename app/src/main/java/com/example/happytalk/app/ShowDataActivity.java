@@ -27,17 +27,17 @@ public class ShowDataActivity extends Activity{
 
     public void onCreate(Bundle saveInstanceState){
         super.onCreate(saveInstanceState);
-        setContentView(R.layout.dialog_data);
-
-        langFrom = (TextView)findViewById(R.id.txtLangFrom);
-        langTo = (TextView)findViewById(R.id.txtLangTo);
-        wordFrom = (TextView)findViewById(R.id.txtWordFrom);
-        wordTo = (TextView)findViewById(R.id.txtWordTo);
-        wordEN = (TextView)findViewById(R.id.txtWordEN);
-        karaokeEN=(TextView)findViewById(R.id.txtKaraokeEN);
-        karaokeTH=(TextView)findViewById(R.id.txtKaraokeTH);
-        sound =(Button)findViewById(R.id.btnSound);
-        favorite=(Button)findViewById(R.id.btnFavorite);
+//        setContentView(R.layout.dialog_data);
+//
+//        langFrom = (TextView)findViewById(R.id.txtLangFrom);
+//        langTo = (TextView)findViewById(R.id.txtLangTo);
+//        wordFrom = (TextView)findViewById(R.id.txtWordFrom);
+//        wordTo = (TextView)findViewById(R.id.txtWordTo);
+//        wordEN = (TextView)findViewById(R.id.txtWordEN);
+//        karaokeEN=(TextView)findViewById(R.id.txtKaraokeEN);
+//        karaokeTH=(TextView)findViewById(R.id.txtKaraokeTH);
+//        sound =(Button)findViewById(R.id.btnSound);
+//        favorite=(Button)findViewById(R.id.btnFavorite);
 
         sound.setOnClickListener(new Button.OnClickListener() {
             @Override

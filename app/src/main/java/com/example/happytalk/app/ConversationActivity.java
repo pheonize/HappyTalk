@@ -142,10 +142,21 @@ public class ConversationActivity extends Activity {
            // setGroupIndicatorToRight();
             expandableListView.setOnChildClickListener(new ExpandableListView.OnChildClickListener() {
                 @Override
-                public boolean onChildClick(ExpandableListView parent, View v, int groupPosition, int childPosition, long id) {
-                    final String selected = (String) expandableListAdapter.getChild(groupPosition,childPosition);
-                    Toast.makeText(getBaseContext(),selected,Toast.LENGTH_LONG).show();
-                    return true;
+//                public boolean onChildClick(ExpandableListView parent, View v, int groupPosition, int childPosition, long id) {
+////                    String selected ;
+////                    selected = expandableListAdapter.getChild(groupPosition,childPosition).toString();
+////                    Toast.makeText(getBaseContext(),selected,Toast.LENGTH_LONG).show();
+//                    return true;
+//                }
+//            });
+                public boolean onChildClick(ExpandableListView parent, View v,
+                                            int groupPosition, int childPosition, long id) {
+                    String string = "Child Click";
+                    int duration = Toast.LENGTH_SHORT;
+                    Toast toast = Toast.makeText(getApplicationContext(), string,
+                            duration);
+                    toast.show();
+                    return false;
                 }
             });
 //
