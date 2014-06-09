@@ -96,7 +96,7 @@ public class MyListAdapter extends BaseExpandableListAdapter {
         TextView wordEN = (TextView)view.findViewById(R.id.wordEN);
 
         wordFrom.setText(groupHeader.getWordFrom().trim());
-        wordEN.setText(groupHeader.getWordEN().trim());
+        //wordEN.setText(groupHeader.getWordEN().trim());
 
         return view;
 
