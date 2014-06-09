@@ -4,6 +4,8 @@ package com.example.happytalk.app;
  * Created by oVANILLAz on 5/21/14 AD.
  */
 
+import android.app.Fragment;
+import android.app.SearchManager;
 import android.content.Context;
 import android.content.Intent;
 import android.content.res.Configuration;
@@ -15,14 +17,17 @@ import android.app.Activity;
 import android.util.DisplayMetrics;
 import android.util.Log;
 
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
-import android.app.ExpandableListActivity;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ExpandableListView;
 
+import android.widget.ListView;
+import android.widget.SearchView;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -37,7 +42,7 @@ import java.util.List;
 import java.util.Map;
 
 
-public class ConversationActivity extends Activity {
+public class ConversationActivity extends Activity implements SearchView.OnQueryTextListener,SearchView.OnCloseListener {
 
 
     //DB
@@ -57,10 +62,12 @@ public class ConversationActivity extends Activity {
             R.drawable.vietnam_flag};
 
 
-    ExpandableListView expandableListView;
-    List<String> groupList;
-    List<String> childList;
-    Map<String,List<String>> group;
+//    ExpandableListAdapter listAdapter;
+//    ExpandableListView expandableListView;
+//    List<String> listDataHeader;
+//    HashMap<String,List<String>> listDataChild;
+
+
 
     private Cursor cursor;
     private MediaPlayer mediaPlayer;
@@ -68,6 +75,11 @@ public class ConversationActivity extends Activity {
     private String strCountryFrom, strCountryTo;
     private  ArrayList<Parent> parents;
 
+    //Last version
+    private SearchView search;
+    private MyListAdapter listAdapter;
+    private ExpandableListView myList;
+    private ArrayList<GroupHeader> groupHeaderList = new ArrayList<GroupHeader>();
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -84,6 +96,10 @@ public class ConversationActivity extends Activity {
         getResources().updateConfiguration(configuration,null);
 
         initWidget();
+        search();
+
+
+
 
         Bundle extras = getIntent().getExtras();
         if (extras == null) {
@@ -132,33 +148,84 @@ public class ConversationActivity extends Activity {
 
         if (lang_from.equals("Thai") && lang_to.equals("Brunei") || lang_from.equals("ไทย") && lang_to.equals("บรูไน")) {
 
+            //display list
+            displayList();
+            //expand all group
+            expandAll();
 
-            createGroupList();
-            createCollection();
 
-            expandableListView =(ExpandableListView) findViewById(R.id.groupListview);
-            final ExpandableListAdapter expandableListAdapter = new ExpandableListAdapter(this,groupList,group);
-            expandableListView.setAdapter(expandableListAdapter);
-           // setGroupIndicatorToRight();
-            expandableListView.setOnChildClickListener(new ExpandableListView.OnChildClickListener() {
-                @Override
-//                public boolean onChildClick(ExpandableListView parent, View v, int groupPosition, int childPosition, long id) {
-////                    String selected ;
-////                    selected = expandableListAdapter.getChild(groupPosition,childPosition).toString();
-////                    Toast.makeText(getBaseContext(),selected,Toast.LENGTH_LONG).show();
-//                    return true;
+//          //  ListView listView = (ListView) findViewById(R.id.groupListview);
+//            expandableListView = (ExpandableListView) findViewById(R.id.groupListview);
+//
+//            prepareListData();
+//
+//            listAdapter = new ExpandableListAdapter(this,listDataHeader,listDataChild);
+//
+//            expandableListView.setAdapter(listAdapter);
+//
+//            //Listview Group clcik listener
+//            expandableListView.setOnGroupClickListener(new ExpandableListView.OnGroupClickListener() {
+//                @Override
+//                public boolean onGroupClick(ExpandableListView parent, View v, int groupPosition, long id) {
+//
+//                    return false;
 //                }
 //            });
-                public boolean onChildClick(ExpandableListView parent, View v,
-                                            int groupPosition, int childPosition, long id) {
-                    String string = "Child Click";
-                    int duration = Toast.LENGTH_SHORT;
-                    Toast toast = Toast.makeText(getApplicationContext(), string,
-                            duration);
-                    toast.show();
-                    return false;
-                }
-            });
+//
+//            //listview group extend
+//            expandableListView.setOnGroupExpandListener(new ExpandableListView.OnGroupExpandListener() {
+//                @Override
+//                public void onGroupExpand(int groupPosition) {
+//
+//                }
+//            });
+//
+//            //Listview group collasped listener
+//            expandableListView.setOnGroupCollapseListener(new ExpandableListView.OnGroupCollapseListener() {
+//                @Override
+//                public void onGroupCollapse(int groupPosition) {
+//
+//                }
+//            });
+//
+//            expandableListView.setOnChildClickListener(new ExpandableListView.OnChildClickListener() {
+//                @Override
+//                public boolean onChildClick(ExpandableListView parent, View v, int groupPosition, int childPosition, long id) {
+//                    final String selected = (String) listAdapter.getChild(groupPosition, childPosition);
+//
+//                    Toast.makeText(getBaseContext(),selected,Toast.LENGTH_LONG).show();
+//                    return false;
+//                }
+//            });
+
+
+
+//            createGroupList();
+//            createCollection();
+
+//            expandableListView =(ExpandableListView) findViewById(R.id.groupListview);
+//            final ExpandableListAdapter_on expandableListAdapter = new ExpandableListAdapter_on(this,groupList,group);
+//            expandableListView.setAdapter(expandableListAdapter);
+//           // setGroupIndicatorToRight();
+//            expandableListView.setOnChildClickListener(new ExpandableListView.OnChildClickListener() {
+//                @Override
+////                public boolean onChildClick(ExpandableListView parent, View v, int groupPosition, int childPosition, long id) {
+//////                    String selected ;
+//////                    selected = expandableListAdapter.getChild(groupPosition,childPosition).toString();
+//////                    Toast.makeText(getBaseContext(),selected,Toast.LENGTH_LONG).show();
+////                    return true;
+////                }
+////            });
+//                public boolean onChildClick(ExpandableListView parent, View v,
+//                                            int groupPosition, int childPosition, long id) {
+//                    String string = "Child Click";
+//                    int duration = Toast.LENGTH_SHORT;
+//                    Toast toast = Toast.makeText(getApplicationContext(), string,
+//                            duration);
+//                    toast.show();
+//                    return false;
+//                }
+//            });
 //
 //            expListView = (ExpandableListView) findViewById(R.id.groupListview);
 //            final ExpandableListAdapter expandableListAdapter = new ExpandableListAdapter(this,groupList,listMap);
@@ -334,45 +401,133 @@ public class ConversationActivity extends Activity {
         }
     }
 
-    private void createGroupList() {
-        groupList = new ArrayList<String>();
-        groupList.add("สวัสดี");
+    //method to expand all group
+    private void displayList() {
+        //display the list
+        loadSomeData();
+
+        //get ref to the expandableListView
+        myList = (ExpandableListView)findViewById(R.id.groupListview);
+        //create the adapter by passing your ArrayList data
+        listAdapter = new MyListAdapter(ConversationActivity.this,groupHeaderList);
+        //attach the adapter to the list
+        myList.setAdapter(listAdapter);
     }
 
-    private void createCollection(){
-        String[] hello = {"Hello"};
-
-        group = new LinkedHashMap<String, List<String>>();
-        for(String child:groupList){
-            if(child.equals("สวัสดี")){
-                loadChild(hello);
-            }
+    //method expand all groups
+    private void expandAll(){
+        int count = listAdapter.getGroupCount();
+        for (int i = 0 ;i< count;i++){
+            myList.expandGroup(i);
         }
     }
 
-    private void loadChild(String[] Model) {
-        childList = new ArrayList<String>();
-        for (String model:Model){
-            childList.add(model);
-        }
-    }
-    private void setGroupIndicatorToRight() {
-        /* Get the screen width */
-        DisplayMetrics dm = new DisplayMetrics();
-        getWindowManager().getDefaultDisplay().getMetrics(dm);
-        int width = dm.widthPixels;
+    private void loadSomeData() {
+        ArrayList<Child> childList = new ArrayList<Child>();
+        Child child = new Child("Test1","Test2","Test3","Test4","Test5",null,null);
+        childList.add(child);
 
-        expandableListView.setIndicatorBounds(width - getDipsFromPixel(60), width
-                - getDipsFromPixel(5));
+        GroupHeader groupHeader = new GroupHeader("TEST",childList);
+        groupHeaderList.add(groupHeader);
+
+
     }
 
-    // Convert pixel to dip
-    public int getDipsFromPixel(float pixels) {
-        // Get the screen's density scale
-        final float scale = getResources().getDisplayMetrics().density;
-        // Convert the dps to pixels, based on density scale
-        return (int) (pixels * scale + 0.5f);
+    @Override
+    public boolean onClose(){
+        listAdapter.filterData("");
+        expandAll();
+        return false;
     }
+
+    @Override
+    public boolean onQueryTextChange(String qry) {
+        listAdapter.filterData(qry);
+        expandAll();
+        return false;
+    }
+
+    @Override
+    public boolean onQueryTextSubmit(String qry) {
+        listAdapter.filterData(qry);
+        expandAll();
+        return false;
+    }
+
+    private void search() {
+        SearchManager searchManager = (SearchManager) getSystemService(Context.SEARCH_SERVICE);
+        search = (SearchView) findViewById(R.id.search);
+        search.setSearchableInfo(searchManager.getSearchableInfo(getComponentName()));
+        search.setIconifiedByDefault(false);
+        search.setOnQueryTextListener(this);
+        search.setOnCloseListener(this);
+
+    }
+
+//    private void prepareListData() {
+//        listDataHeader = new ArrayList<String>();
+//        listDataChild = new HashMap<String, List<String>>();
+//
+//        //Add header data
+//        listDataHeader.add("Test 1");
+//        listDataHeader.add("Test 2");
+//
+//        //Add child
+//        List<String> test1= new ArrayList<String>();
+//        test1.add("a");
+//        test1.add("b");
+//        test1.add("c");
+//        test1.add("d");
+//
+//        List<String> test2 = new ArrayList<String>();
+//        test2.add("e");
+//        test2.add("f");
+//        test2.add("g");
+//        test2.add("h");
+//
+//        listDataChild.put(listDataHeader.get(0),test1);
+//        listDataChild.put(listDataHeader.get(1),test2);
+//    }
+
+//    private void createGroupList() {
+//        groupList = new ArrayList<String>();
+//        groupList.add("สวัสดี");
+//    }
+//
+//    private void createCollection(){
+//        String[] hello = {"Hello"};
+//
+//        group = new LinkedHashMap<String, List<String>>();
+//        for(String child:groupList){
+//            if(child.equals("สวัสดี")){
+//                loadChild(hello);
+//            }
+//        }
+//    }
+//
+//    private void loadChild(String[] Model) {
+//        childList = new ArrayList<String>();
+//        for (String model:Model){
+//            childList.add(model);
+//        }
+//    }
+//    private void setGroupIndicatorToRight() {
+//        /* Get the screen width */
+//        DisplayMetrics dm = new DisplayMetrics();
+//        getWindowManager().getDefaultDisplay().getMetrics(dm);
+//        int width = dm.widthPixels;
+//
+//        expandableListView.setIndicatorBounds(width - getDipsFromPixel(60), width
+//                - getDipsFromPixel(5));
+//    }
+//
+//    // Convert pixel to dip
+//    public int getDipsFromPixel(float pixels) {
+//        // Get the screen's density scale
+//        final float scale = getResources().getDisplayMetrics().density;
+//        // Convert the dps to pixels, based on density scale
+//        return (int) (pixels * scale + 0.5f);
+//    }
 
 
 //    private void prepareListData() {

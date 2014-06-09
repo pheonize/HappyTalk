@@ -1,136 +1,148 @@
 package com.example.happytalk.app;
 
-import android.widget.BaseExpandableListAdapter;
-import android.app.Activity;
-import android.app.AlertDialog;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.graphics.Typeface;
-import android.util.Log;
+import android.media.Image;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.BaseExpandableListAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
+import org.w3c.dom.Text;
 
+import java.util.HashMap;
+import java.util.List;
 
 /**
  * Created by oVANILLAz on 6/9/14 AD.
  */
 public class ExpandableListAdapter extends BaseExpandableListAdapter {
-    private Activity context;
-    private Map<String, List<String>> group;
-    private List<String> child;
-    private ArrayList<Object> mChild = new ArrayList<Object>();
-    private ArrayList<String> mGroupItem;
+    private Context _context;
+    private List<String> _listDataHeader; // header titles
+    // child data in format of header title, child title
+    private HashMap<String, List<String>> _listDataChild;
 
-    int group_position,childposition;
-
-    public ExpandableListAdapter(Activity context, List<String> child,
-                                 Map<String, List<String>> group) {
-        this.context = context;
-        this.group = group;
-        this.child = child;
+    public ExpandableListAdapter(Context context, List<String> listDataHeader,
+                                 HashMap<String, List<String>> listChildData) {
+        this._context = context;
+        this._listDataHeader = listDataHeader;
+        this._listDataChild = listChildData;
     }
 
-    public Object getChild(int groupPosition, int childPosition) {
-        return group.get(child.get(groupPosition)).get(childPosition);
+    @Override
+    public Object getChild(int groupPosition, int childPosititon) {
+        return this._listDataChild.get(this._listDataHeader.get(groupPosition))
+                .get(childPosititon);
     }
 
+    @Override
     public long getChildId(int groupPosition, int childPosition) {
         return childPosition;
     }
 
-
-    public View getChildView(final int groupPosition, final int childPosition,
+    @Override
+    public View getChildView(int groupPosition, final int childPosition,
                              boolean isLastChild, View convertView, ViewGroup parent) {
-        final String wordFrom = (String) getChild(groupPosition, childPosition);
-        final String wordTo = (String) getChild(groupPosition, childPosition);
-        final String karaokeTH = (String) getChild(groupPosition, childPosition);
-        final String karaokeEN = (String) getChild(groupPosition, childPosition);
 
-        LayoutInflater inflater = context.getLayoutInflater();
+        final String wordFrom = (String) getChild(groupPosition, childPosition);
+        final String wordTo = (String) getChild(groupPosition,childPosition);
+        final String karaokeEN = (String) getChild(groupPosition,childPosition);
+        final String karaokeTH = (String) getChild(groupPosition,childPosition);
+        final ImageView sound = (ImageView)getChild(groupPosition,childPosition);
+        final ImageView favorite = (ImageView) getChild(groupPosition,childPosition);
+
 
         if (convertView == null) {
+            LayoutInflater inflater = (LayoutInflater) this._context
+                    .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             convertView = inflater.inflate(R.layout.child_item, null);
         }
 
-        TextView txtwordFrom = (TextView) convertView.findViewById(R.id.txtWordFrom);
-        TextView txtwordTo = (TextView) convertView.findViewById(R.id.txtWordTo);
+        TextView txtwordFrom = (TextView) convertView
+                .findViewById(R.id.txtWordFrom);
+        TextView txtwordTo =(TextView) convertView.findViewById(R.id.txtWordTo);
         TextView txtkaraokeTH = (TextView) convertView.findViewById(R.id.txtKaraokeTH);
         TextView txtkaraokeEN = (TextView) convertView.findViewById(R.id.txtKaraokeEN);
-        ImageView imgSound = (ImageView) convertView.findViewById(R.id.sound);
-        imgSound.setOnClickListener(new OnClickListener() {
-            @Override
-            public void onClick(View v) {
+        ImageView btnSound = (ImageView) convertView.findViewById(R.id.sound);
+        ImageView btnFavorite = (ImageView) convertView.findViewById(R.id.favorite);
 
-            }
-        });
-
-        ImageView imgFavorite = (ImageView)convertView.findViewById(R.id.favorite);
-        imgFavorite.setOnClickListener(new OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-            }
-        });
 
         txtwordFrom.setText(wordFrom);
         txtwordTo.setText(wordTo);
         txtkaraokeTH.setText(karaokeTH);
         txtkaraokeEN.setText(karaokeEN);
+        btnSound.setTag(sound);
+        btnFavorite.setTag(favorite);
+
         return convertView;
-
-
     }
+
     @Override
     public int getChildrenCount(int groupPosition) {
-       return group.get(child.get(groupPosition)).size();
-
+        return this._listDataChild.get(this._listDataHeader.get(groupPosition))
+                .size();
     }
 
+    @Override
     public Object getGroup(int groupPosition) {
-        return child.get(groupPosition);
+        return this._listDataHeader.get(groupPosition);
     }
 
+    @Override
     public int getGroupCount() {
-        return child.size();
+        return this._listDataHeader.size();
     }
 
+    @Override
     public long getGroupId(int groupPosition) {
         return groupPosition;
     }
 
+    @Override
     public View getGroupView(int groupPosition, boolean isExpanded,
                              View convertView, ViewGroup parent) {
         String wordFrom = (String) getGroup(groupPosition);
         String wordEN = (String) getGroup(groupPosition);
         if (convertView == null) {
-            LayoutInflater inflater = (LayoutInflater) context
+            LayoutInflater inflater = (LayoutInflater) this._context
                     .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            convertView = inflater.inflate(R.layout.group_listview,
-                    null);
+            convertView = inflater.inflate(R.layout.group_listview, null);
         }
+
         TextView txtwordFrom = (TextView) convertView.findViewById(R.id.wordFrom);
         TextView txtwordEN = (TextView) convertView.findViewById(R.id.wordEN);
 
         txtwordFrom.setTypeface(null, Typeface.BOLD);
         txtwordFrom.setText(wordFrom);
         txtwordEN.setText(wordEN);
+
         return convertView;
     }
 
+    @Override
     public boolean hasStableIds() {
+        return false;
+    }
+
+    @Override
+    public boolean isChildSelectable(int groupPosition, int childPosition) {
         return true;
     }
 
-    public boolean isChildSelectable(int groupPosition, int childPosition) {
-        return true;
+    @Override
+    public int getChildTypeCount() {
+        return 2;
+    }
+
+    @Override
+    public int getChildType(int groupPosition, int childPosition) {
+        if (getChildId(groupPosition, childPosition)==3)
+            return 0;
+
+            //Not free
+        else
+            return 1;
     }
 }

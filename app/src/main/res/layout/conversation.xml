@@ -10,14 +10,13 @@
     android:configChanges="locale"
     android:text="black">
 
-
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
+        android:layout_below="@+id/searchLayout"
         android:id="@+id/linearLayoutSearch">
         <TextView
             android:layout_width="wrap_content"
@@ -89,6 +88,24 @@
             android:layout_height="match_parent"
             android:id="@+id/groupListview"/>
 
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/searchLayout"
+
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        >
+
+
+        <SearchView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/search" />
     </LinearLayout>
 
 </RelativeLayout>

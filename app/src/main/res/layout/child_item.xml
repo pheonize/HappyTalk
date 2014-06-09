@@ -36,15 +36,15 @@
         android:layout_centerVertical="true"
         android:paddingLeft="25dp"
         android:text="test1"/>
-    <TextView
-        android:id="@+id/txtWordEN"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@id/txtWordFrom"
-        android:layout_centerVertical="true"
-        android:paddingLeft="25dp"
-        android:text="test2"/>
+    <!--<TextView-->
+        <!--android:id="@+id/txtWordEN"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignParentLeft="true"-->
+        <!--android:layout_below="@id/txtWordFrom"-->
+        <!--android:layout_centerVertical="true"-->
+        <!--android:paddingLeft="25dp"-->
+        <!--android:text="test2"/>-->
         <TextView
             android:id="@+id/txtWordTo"
             android:layout_width="wrap_content"
@@ -59,7 +59,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
-        android:layout_below="@id/txtWordEN"
+        android:layout_below="@id/txtWordTo"
         android:layout_centerVertical="true"
         android:paddingLeft="25dp"
         android:text="test4"/>

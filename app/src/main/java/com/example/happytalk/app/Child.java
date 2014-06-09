@@ -7,11 +7,29 @@ import android.widget.ImageView;
  * Created by oVANILLAz on 6/8/14 AD.
  */
 public class Child {
-    private String karaokeEN;
-    private String karaokeTH;
-    private String wordFrom;
-    private String wordEN;
-    private String wordTo;
+    private String karaokeEN = " ";
+    private String karaokeTH = " ";
+    private String wordFrom = " ";
+    private String wordEN =" ";
+    private String wordTo =" ";
+    private ImageView sound ;
+    private ImageView favorite;
+
+    public String getKaraokeEN() {
+        return karaokeEN;
+    }
+
+    public void setKaraokeEN(String karaokeEN) {
+        this.karaokeEN = karaokeEN;
+    }
+
+    public String getKaraokeTH() {
+        return karaokeTH;
+    }
+
+    public void setKaraokeTH(String karaokeTH) {
+        this.karaokeTH = karaokeTH;
+    }
 
     public String getWordFrom() {
         return wordFrom;
@@ -37,39 +55,30 @@ public class Child {
         this.wordTo = wordTo;
     }
 
-    public Image getSound() {
+    public ImageView getSound() {
         return sound;
     }
 
-    public void setSound(Image sound) {
+    public void setSound(ImageView sound) {
         this.sound = sound;
     }
 
-    public Image getFavorite() {
+    public ImageView getFavorite() {
         return favorite;
     }
 
-    public void setFavorite(Image favorite) {
+    public void setFavorite(ImageView favorite) {
         this.favorite = favorite;
     }
 
-    private Image sound;
-    private Image favorite;
-
-    public String getKaraokeEN(){
-        return karaokeEN;
-    }
-    public void setKaraokeEN(String karaokeEN){
+    public Child(String karaokeEN, String karaokeTH, String wordFrom, String wordEN, String wordTo, ImageView sound, ImageView favorite) {
+        super();
         this.karaokeEN = karaokeEN;
-    }
-    public String getKaraokeTH(){
-        return karaokeTH;
-    }
-    public void setKaraokeTH(String karaokeTH){
         this.karaokeTH = karaokeTH;
+        this.wordFrom = wordFrom;
+        this.wordEN = wordEN;
+        this.wordTo = wordTo;
+        this.sound = sound;
+        this.favorite = favorite;
     }
-
-
-
-
 }
