@@ -33,8 +33,9 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 
-import com.example.happytalk.app.Database.Database;
 
+import com.example.happytalk.app.Database.Database;
+import com.example.happytalk.app.Database.DAL;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
@@ -62,13 +63,6 @@ public class ConversationActivity extends Activity implements SearchView.OnQuery
             R.drawable.vietnam_flag};
 
 
-//    ExpandableListAdapter listAdapter;
-//    ExpandableListView expandableListView;
-//    List<String> listDataHeader;
-//    HashMap<String,List<String>> listDataChild;
-
-
-
     private Cursor cursor;
     private MediaPlayer mediaPlayer;
     private Spinner countryFrom, countryTo;
@@ -80,6 +74,11 @@ public class ConversationActivity extends Activity implements SearchView.OnQuery
     private MyListAdapter listAdapter;
     private ExpandableListView myList;
     private ArrayList<GroupHeader> groupHeaderList = new ArrayList<GroupHeader>();
+
+    private DAL loadWording;
+
+
+
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -98,31 +97,7 @@ public class ConversationActivity extends Activity implements SearchView.OnQuery
         initWidget();
         search();
 
-
-
-
-        Bundle extras = getIntent().getExtras();
-        if (extras == null) {
-            return;
-        }
-
-        final String lang_from = extras.getString("strCountryFrom", "");
-        if (lang_from != null) {
-            //Do something
-
-            Log.d("--Conservation_FROM", lang_from);
-            TextView langFrom = (TextView) findViewById(R.id.txtLangFrom);
-            langFrom.setText(lang_from);
-
-        }
-
-        final String lang_to = extras.getString("strCountryTo", "");
-        if (lang_to != null) {
-            //Do something
-            Log.d("--Conservation_TO", lang_to);
-            TextView langTo = (TextView) findViewById(R.id.txtLangTo);
-            langTo.setText(lang_to);
-        }
+        checkLanguage();
 
         //DB
 
@@ -146,12 +121,13 @@ public class ConversationActivity extends Activity implements SearchView.OnQuery
 
 
 
-        if (lang_from.equals("Thai") && lang_to.equals("Brunei") || lang_from.equals("ไทย") && lang_to.equals("บรูไน")) {
+       // if (lang_from.equals("Thai") && lang_to.equals("Brunei") || lang_from.equals("ไทย") && lang_to.equals("บรูไน")) {
 
             //display list
-            displayList();
+           // displayList();
             //expand all group
             //expandAll();
+
 
 
             //work
@@ -245,77 +221,104 @@ public class ConversationActivity extends Activity implements SearchView.OnQuery
 //            });
 
 
-//            listView.setOnItemClickListener(new OnItemClickListener() {
-//                @Override
-//                public void onItemClick(AdapterView<?> arg0, View arg1, int arg2, long arg3) {
-//                    String strWordFrom = dataList.get(arg2).get("wordFrom").toString();
-//                    String strWordEN = dataList.get(arg2).get("wordEN").toString();
-//                    cursor.moveToPosition(arg2);
-//                    final Dialog dialog;
-//                    dialog = new Dialog(ConversationActivity.this);
-//
-//                   // AlertDialog dialog = new AlertDialog.Builder(context).create();
-//                    dialog.setTitle("Detail");
-//
-//                    dialog.setContentView(R.layout.dialog_data);
-//
-//                    TextView txtLangFrom = (TextView) dialog.findViewById(R.id.txtLangFrom);
-//                    txtLangFrom.setText(cursor.getString(cursor.getColumnIndex(Database.COLUMN_LANGFROM)));
-//
-//                    TextView txtWordFrom = (TextView) dialog.findViewById(R.id.txtWordFrom);
-//                    txtWordFrom.setText(":" + cursor.getString(cursor.getColumnIndex(Database.COLUMN_WORDFROM)));
-//
-//                    TextView txtLangTo = (TextView) dialog.findViewById(R.id.txtLangTo);
-//                    txtLangTo.setText(cursor.getString(cursor.getColumnIndex(Database.COLUMN_LANGTO)));
-//
-//
-//                    TextView txtWordTo = (TextView) dialog.findViewById(R.id.txtWordTo);
-//                    txtWordTo.setText(":" + cursor.getString(cursor.getColumnIndex(Database.COLUMN_WORDTO)));
-//
-//
-//                    TextView txtKaraokeTH = (TextView) dialog.findViewById(R.id.txtKaraokeTH);
-//                    txtKaraokeTH.setText(":" + cursor.getString(cursor.getColumnIndex(Database.COLUMN_KARAOKETH)));
-//
-//
-//                    TextView txtKaraokeEN = (TextView) dialog.findViewById(R.id.txtKaraokeEN);
-//                    txtKaraokeEN.setText(":" + cursor.getString(cursor.getColumnIndex(Database.COLUMN_KARAOKEEN)));
-//
-//
-//
-//                    //Back btn
-//                    Button btnBack = (Button) dialog.findViewById(R.id.btnSound);
-//                    btnBack.setOnClickListener(new View.OnClickListener() {
-//                        @Override
-//                        public void onClick(View v) {
-//                            dialog.cancel();
-//                        }
-//                    });
-//
-//
-//                    dialog.show();
-//                }
-//            });
 
 
-        } else {
-            Intent intent;
-            intent = new Intent(getApplicationContext(), MainActivity.class);
-            startActivity(intent);
-        }
+
+//        } else {
+//            Intent intent;
+//            intent = new Intent(getApplicationContext(), MainActivity.class);
+//            startActivity(intent);
+//        }
     }
+
+    private void checkLanguage() {
+        Bundle extras = getIntent().getExtras();
+        if (extras == null) {
+            return;
+        }
+
+        String lang_from = extras.getString("strCountryFrom", "");
+        if (lang_from != null) {
+            //Do something
+
+            Log.d("--Conservation_FROM", lang_from);
+            TextView langFrom = (TextView) findViewById(R.id.txtLangFrom);
+            langFrom.setText(lang_from);
+
+
+
+        }
+
+        String lang_to = extras.getString("strCountryTo", "");
+        if (lang_to != null) {
+            //Do something
+            Log.d("--Conservation_TO", lang_to);
+            TextView langTo = (TextView) findViewById(R.id.txtLangTo);
+            langTo.setText(lang_to);
+
+        }
+        displayList(lang_from,lang_to);
+    }
+
 
     //method to expand all group
-    private void displayList() {
-        //display the list
-        loadSomeData();
+    public void displayList(String lang_from,String lang_to) {
 
-        //get ref to the expandableListView
-        myList = (ExpandableListView)findViewById(R.id.groupListview);
-        //create the adapter by passing your ArrayList data
-        listAdapter = new MyListAdapter(ConversationActivity.this,groupHeaderList);
-        //attach the adapter to the list
-        myList.setAdapter(listAdapter);
+
+
+
+
+        if (lang_from.equals("Thai") && lang_to.equals("Brunei") || lang_from.equals("ไทย") && lang_to.equals("บรูไน")) {
+
+            //display the list
+           // loadThaiToBrunei();
+            loadWording = new DAL();
+            loadWording.loadThaiToBrunei();
+            //get ref to the expandableListView
+            myList = (ExpandableListView) findViewById(R.id.groupListview);
+            //create the adapter by passing your ArrayList data
+            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList());
+            //attach the adapter to the list
+            myList.setAdapter(listAdapter);
+
+
+        }
+
+        if(lang_from.equals("Thai") && lang_to.equals("China") || lang_from.equals("ไทย")&&lang_to.equals("จีน")){
+            loadWording = new DAL();
+            loadWording.loadThaiToChina();
+            //get ref to the expandableListView
+            myList = (ExpandableListView) findViewById(R.id.groupListview);
+            //create the adapter by passing your ArrayList data
+            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList());
+            //attach the adapter to the list
+            myList.setAdapter(listAdapter);
+
+        }
+        if(lang_from.equals("Thai") && lang_to.equals("Thai") || lang_from.equals("ไทย") && lang_to.equals("ไทย")){
+            loadWording = new DAL();
+            loadWording.loadThaiToThai();
+
+            myList = (ExpandableListView) findViewById(R.id.groupListview);
+            //create the adapter by passing your ArrayList data
+            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList());
+            //attach the adapter to the list
+            myList.setAdapter(listAdapter);
+        }
+
+        if(lang_from.equals("Thai") && lang_to.equals("Cambodia") || lang_from.equals("ไทย") && lang_to.equals("กัมพูชา") ){
+            loadWording = new DAL();
+            loadWording.loadThaiToCambodia();
+
+            myList = (ExpandableListView) findViewById(R.id.groupListview);
+            //create the adapter by passing your ArrayList data
+            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList());
+            //attach the adapter to the list
+            myList.setAdapter(listAdapter);
+        }
+
     }
+
 
     //method expand all groups
     private void expandAll(){
@@ -325,13 +328,14 @@ public class ConversationActivity extends Activity implements SearchView.OnQuery
         }
     }
 
-    private void loadSomeData() {
-        ArrayList<Child> childList = new ArrayList<Child>();
-        Child child = new Child("Test1","Test2","Test3","Test4","Test5",null,null);
-        childList.add(child);
+    private void loadThaiToBrunei() {
 
-        GroupHeader groupHeader = new GroupHeader("TEST","SUB",childList);
-        groupHeaderList.add(groupHeader);
+            ArrayList<Child> childList = new ArrayList<Child>();
+            Child child = new Child("Test1", "Test2", "Test3", "Test4", "Test5", null, null);
+            childList.add(child);
+
+            GroupHeader groupHeader = new GroupHeader("TEST", "SUB", childList);
+            groupHeaderList.add(groupHeader);
 
 
     }

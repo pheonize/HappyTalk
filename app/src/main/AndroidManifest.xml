@@ -49,6 +49,9 @@
         <activity android:name=".ShowDataActivity"
             android:configChanges="locale|layoutDirection"/>
 
+        <activity android:name=".Database.DAL"
+            android:screenOrientation="portrait"/>
+
         <activity android:name=".SettingActivity"
             android:label="@string/action_settings"
             android:parentActivityName=".MainActivity"
