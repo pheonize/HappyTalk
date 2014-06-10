@@ -1,23 +1,14 @@
 package com.example.happytalk.app.Database;
 
-import android.app.Activity;
-import android.widget.ExpandableListView;
-import android.widget.SearchView;
-
 import com.example.happytalk.app.Child;
 import com.example.happytalk.app.GroupHeader;
-import com.example.happytalk.app.MyListAdapter;
-import com.example.happytalk.app.R;
 
 import java.util.ArrayList;
 
 /**
  * Created by oVANILLAz on 6/10/14 AD.
  */
-public class ConversationDAL {
-
-
-
+public class ThingDAL {
     private ArrayList<GroupHeader> groupHeaderList = new ArrayList<GroupHeader>();
 
     public void loadThaiToBrunei(){
@@ -1120,3 +1111,4 @@ public class ConversationDAL {
         return groupHeaderList;
     }
 }
+

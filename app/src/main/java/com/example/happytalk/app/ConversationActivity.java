@@ -44,6 +44,7 @@ public class ConversationActivity extends Activity implements SearchView.OnQuery
     String[] country_list = {"Brunei", "Cambodia", "China", "Indonesia",
             "Laos", "Malaysia", "Myanmar", "Philippines", "Singapore",
             "Thai", "Vietnam"};
+
     Integer[] img = {R.drawable.brunei_flag, R.drawable.cambodia_flag,
             R.drawable.china_flag, R.drawable.indonesia_flag,
             R.drawable.laos_flag, R.drawable.malaysia,
@@ -84,7 +85,7 @@ public class ConversationActivity extends Activity implements SearchView.OnQuery
         getResources().updateConfiguration(configuration,null);
 
         initWidget();
-        search();
+//        search();
 
         checkLanguage();
 
@@ -1386,61 +1387,250 @@ public class ConversationActivity extends Activity implements SearchView.OnQuery
             myList.setAdapter(listAdapter);
         }
 
+        if(lang_from.equals("Singapore") && lang_to.equals("China") || lang_from.equals("สิงคโปร์") && lang_to.equals("จีน")){
+            loadWording = new ConversationDAL();
+            loadWording.loadSingaporeToChina();
+
+            myList = (ExpandableListView) findViewById(R.id.groupListview);
+            //create the adapter by passing your ArrayList data
+            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList());
+            //attach the adapter to the list
+            myList.setAdapter(listAdapter);
+        }
 
 
+        if(lang_from.equals("Singapore") && lang_to.equals("Thai") || lang_from.equals("สิงคโปร์") && lang_to.equals("ไทย")){
+            loadWording = new ConversationDAL();
+            loadWording.loadSingaporeToThai();
+
+            myList = (ExpandableListView) findViewById(R.id.groupListview);
+            //create the adapter by passing your ArrayList data
+            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList());
+            //attach the adapter to the list
+            myList.setAdapter(listAdapter);
+        }
 
 
+        if(lang_from.equals("Singapore") && lang_to.equals("Brunei") || lang_from.equals("สิงคโปร์") && lang_to.equals("บรูไน")){
+            loadWording = new ConversationDAL();
+            loadWording.loadSingaporeToBrunei();
+
+            myList = (ExpandableListView) findViewById(R.id.groupListview);
+            //create the adapter by passing your ArrayList data
+            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList());
+            //attach the adapter to the list
+            myList.setAdapter(listAdapter);
+        }
+
+        if(lang_from.equals("Singapore") && lang_to.equals("Cambodia") || lang_from.equals("สิงคโปร์") && lang_to.equals("กัมพูชา")){
+            loadWording = new ConversationDAL();
+            loadWording.loadSingaporeToCambodia();
+
+            myList = (ExpandableListView) findViewById(R.id.groupListview);
+            //create the adapter by passing your ArrayList data
+            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList());
+            //attach the adapter to the list
+            myList.setAdapter(listAdapter);
+        }
+
+        if(lang_from.equals("Singapore") && lang_to.equals("Indonesia") || lang_from.equals("สิงคโปร์") && lang_to.equals("อินโดนีเซีย")){
+            loadWording = new ConversationDAL();
+            loadWording.loadSingaporeToIndonesia();
+
+            myList = (ExpandableListView) findViewById(R.id.groupListview);
+            //create the adapter by passing your ArrayList data
+            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList());
+            //attach the adapter to the list
+            myList.setAdapter(listAdapter);
+        }
+
+        if(lang_from.equals("Singapore") && lang_to.equals("Laos") || lang_from.equals("สิงคโปร์") && lang_to.equals("ลาว")){
+            loadWording = new ConversationDAL();
+            loadWording.loadSingaporeToLaos();
+
+            myList = (ExpandableListView) findViewById(R.id.groupListview);
+            //create the adapter by passing your ArrayList data
+            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList());
+            //attach the adapter to the list
+            myList.setAdapter(listAdapter);
+        }
+
+        if(lang_from.equals("Singapore") && lang_to.equals("Malaysia") || lang_from.equals("สิงคโปร์") && lang_to.equals("มาเลเซีย")){
+            loadWording = new ConversationDAL();
+            loadWording.loadSingaporeToMalaysia();
+
+            myList = (ExpandableListView) findViewById(R.id.groupListview);
+            //create the adapter by passing your ArrayList data
+            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList());
+            //attach the adapter to the list
+            myList.setAdapter(listAdapter);
+        }
+
+        if(lang_from.equals("Singapore") && lang_to.equals("Myanmar") || lang_from.equals("สิงคโปร์") && lang_to.equals("พม่า")){
+            loadWording = new ConversationDAL();
+            loadWording.loadSingaporeToMyanmar();
+
+            myList = (ExpandableListView) findViewById(R.id.groupListview);
+            //create the adapter by passing your ArrayList data
+            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList());
+            //attach the adapter to the list
+            myList.setAdapter(listAdapter);
+        }
+
+        if(lang_from.equals("Singapore") && lang_to.equals("Philippines") || lang_from.equals("สิงคโปร์") && lang_to.equals("ฟิลิปปินส์")){
+            loadWording = new ConversationDAL();
+            loadWording.loadSingaporeToPhilippines();
+
+            myList = (ExpandableListView) findViewById(R.id.groupListview);
+            //create the adapter by passing your ArrayList data
+            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList());
+            //attach the adapter to the list
+            myList.setAdapter(listAdapter);
+        }
+
+        if(lang_from.equals("Singapore") && lang_to.equals("Singapore") || lang_from.equals("สิงคโปร์") && lang_to.equals("สิงคโปร์")){
+            loadWording = new ConversationDAL();
+            loadWording.loadSingaporeToSingapore();
+
+            myList = (ExpandableListView) findViewById(R.id.groupListview);
+            //create the adapter by passing your ArrayList data
+            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList());
+            //attach the adapter to the list
+            myList.setAdapter(listAdapter);
+        }
+
+        if(lang_from.equals("Singapore") && lang_to.equals("Vietnam") || lang_from.equals("สิงคโปร์") && lang_to.equals("เวียดนาม")){
+            loadWording = new ConversationDAL();
+            loadWording.loadSingaporeToVietnam();
+
+            myList = (ExpandableListView) findViewById(R.id.groupListview);
+            //create the adapter by passing your ArrayList data
+            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList());
+            //attach the adapter to the list
+            myList.setAdapter(listAdapter);
+        }
+
+        if(lang_from.equals("Vietnam") && lang_to.equals("China") || lang_from.equals("เวียดนาม") && lang_to.equals("จีน")){
+            loadWording = new ConversationDAL();
+            loadWording.loadVietnamToChina();
+
+            myList = (ExpandableListView) findViewById(R.id.groupListview);
+            //create the adapter by passing your ArrayList data
+            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList());
+            //attach the adapter to the list
+            myList.setAdapter(listAdapter);
+        }
+
+        if(lang_from.equals("Vietnam") && lang_to.equals("Thai") || lang_from.equals("เวียดนาม") && lang_to.equals("ไทย")){
+            loadWording = new ConversationDAL();
+            loadWording.loadVietnamToThai();
+
+            myList = (ExpandableListView) findViewById(R.id.groupListview);
+            //create the adapter by passing your ArrayList data
+            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList());
+            //attach the adapter to the list
+            myList.setAdapter(listAdapter);
+        }
+
+        if(lang_from.equals("Vietnam") && lang_to.equals("Brunei") || lang_from.equals("เวียดนาม") && lang_to.equals("บรูไน")){
+            loadWording = new ConversationDAL();
+            loadWording.loadVietnamToBrunei();
+
+            myList = (ExpandableListView) findViewById(R.id.groupListview);
+            //create the adapter by passing your ArrayList data
+            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList());
+            //attach the adapter to the list
+            myList.setAdapter(listAdapter);
+        }
+
+        if(lang_from.equals("Vietnam") && lang_to.equals("Cambodia") || lang_from.equals("เวียดนาม") && lang_to.equals("กัมพูชา")){
+            loadWording = new ConversationDAL();
+            loadWording.loadVietnamToCambodia();
+
+            myList = (ExpandableListView) findViewById(R.id.groupListview);
+            //create the adapter by passing your ArrayList data
+            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList());
+            //attach the adapter to the list
+            myList.setAdapter(listAdapter);
+        }
+
+        if(lang_from.equals("Vietnam") && lang_to.equals("Indonesia") || lang_from.equals("เวียดนาม") && lang_to.equals("อินโดนีเซีย")){
+            loadWording = new ConversationDAL();
+            loadWording.loadVietnamToIndonesia();
+
+            myList = (ExpandableListView) findViewById(R.id.groupListview);
+            //create the adapter by passing your ArrayList data
+            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList());
+            //attach the adapter to the list
+            myList.setAdapter(listAdapter);
+        }
 
 
+        if(lang_from.equals("Vietnam") && lang_to.equals("Laos") || lang_from.equals("เวียดนาม") && lang_to.equals("ลาว")){
+            loadWording = new ConversationDAL();
+            loadWording.loadVietnamToLaos();
 
+            myList = (ExpandableListView) findViewById(R.id.groupListview);
+            //create the adapter by passing your ArrayList data
+            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList());
+            //attach the adapter to the list
+            myList.setAdapter(listAdapter);
+        }
 
+        if(lang_from.equals("Vietnam") && lang_to.equals("Malaysia") || lang_from.equals("เวียดนาม") && lang_to.equals("มาเลเซีย")){
+            loadWording = new ConversationDAL();
+            loadWording.loadVietnamToMalaysia();
 
+            myList = (ExpandableListView) findViewById(R.id.groupListview);
+            //create the adapter by passing your ArrayList data
+            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList());
+            //attach the adapter to the list
+            myList.setAdapter(listAdapter);
+        }
 
+        if(lang_from.equals("Vietnam") && lang_to.equals("Myanmar") || lang_from.equals("เวียดนาม") && lang_to.equals("พม่า")){
+            loadWording = new ConversationDAL();
+            loadWording.loadVietnamToMyanmar();
 
+            myList = (ExpandableListView) findViewById(R.id.groupListview);
+            //create the adapter by passing your ArrayList data
+            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList());
+            //attach the adapter to the list
+            myList.setAdapter(listAdapter);
+        }
 
+        if(lang_from.equals("Vietnam") && lang_to.equals("Philippines") || lang_from.equals("เวียดนาม") && lang_to.equals("ฟิลิปปินส์")){
+            loadWording = new ConversationDAL();
+            loadWording.loadVietnamToPhilippines();
 
+            myList = (ExpandableListView) findViewById(R.id.groupListview);
+            //create the adapter by passing your ArrayList data
+            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList());
+            //attach the adapter to the list
+            myList.setAdapter(listAdapter);
+        }
 
+        if(lang_from.equals("Vietnam") && lang_to.equals("Singapore") || lang_from.equals("เวียดนาม") && lang_to.equals("สิงคโปร์")){
+            loadWording = new ConversationDAL();
+            loadWording.loadVietnamToSingapore();
 
+            myList = (ExpandableListView) findViewById(R.id.groupListview);
+            //create the adapter by passing your ArrayList data
+            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList());
+            //attach the adapter to the list
+            myList.setAdapter(listAdapter);
+        }
 
+        if(lang_from.equals("Vietnam") && lang_to.equals("Vietnam") || lang_from.equals("เวียดนาม") && lang_to.equals("เวียดนาม")){
+            loadWording = new ConversationDAL();
+            loadWording.loadVietnamToVietnam();
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+            myList = (ExpandableListView) findViewById(R.id.groupListview);
+            //create the adapter by passing your ArrayList data
+            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList());
+            //attach the adapter to the list
+            myList.setAdapter(listAdapter);
+        }
 
 
     }
@@ -1489,17 +1679,13 @@ public class ConversationActivity extends Activity implements SearchView.OnQuery
 
     private void search() {
         SearchManager searchManager = (SearchManager) getSystemService(Context.SEARCH_SERVICE);
-        search = (SearchView) findViewById(R.id.search);
+        search = (SearchView) findViewById(R.id.action_search);
         search.setSearchableInfo(searchManager.getSearchableInfo(getComponentName()));
         search.setIconifiedByDefault(false);
         search.setOnQueryTextListener(this);
         search.setOnCloseListener(this);
 
     }
-
-
-
-
 
     private void initWidget() {
         countryFrom = (Spinner) findViewById(R.id.spinner_show);
