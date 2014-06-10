@@ -848,6 +848,68 @@ public class ConversationDAL {
         groupHeaderList.add(groupHeader);
     }
 
+    public void loadPhilippinesToIndonesia(){
+        ArrayList<Child> childList = new ArrayList<Child>();
+        Child child = new Child("ไทย","ไทย","ไทย","ไทย","ไทย",null,null);
+        childList.add(child);
+
+        GroupHeader groupHeader = new GroupHeader("Philippines","Indonesia",childList);
+        groupHeaderList.add(groupHeader);
+    }
+
+    public void loadPhilippinesToLaos(){
+        ArrayList<Child> childList = new ArrayList<Child>();
+        Child child = new Child("ไทย","ไทย","ไทย","ไทย","ไทย",null,null);
+        childList.add(child);
+
+        GroupHeader groupHeader = new GroupHeader("Philippines","Laos",childList);
+        groupHeaderList.add(groupHeader);
+    }
+
+    public void loadPhilippinesToMalaysia(){
+        ArrayList<Child> childList = new ArrayList<Child>();
+        Child child = new Child("ไทย","ไทย","ไทย","ไทย","ไทย",null,null);
+        childList.add(child);
+
+        GroupHeader groupHeader = new GroupHeader("Philippines","Malaysia",childList);
+        groupHeaderList.add(groupHeader);
+    }
+    public void loadPhilippinesToMyanmar(){
+        ArrayList<Child> childList = new ArrayList<Child>();
+        Child child = new Child("ไทย","ไทย","ไทย","ไทย","ไทย",null,null);
+        childList.add(child);
+
+        GroupHeader groupHeader = new GroupHeader("Philippines","Myanmar",childList);
+        groupHeaderList.add(groupHeader);
+    }
+
+    public void loadPhilippinesToPhilippines(){
+        ArrayList<Child> childList = new ArrayList<Child>();
+        Child child = new Child("ไทย","ไทย","ไทย","ไทย","ไทย",null,null);
+        childList.add(child);
+
+        GroupHeader groupHeader = new GroupHeader("Philippines","Philippines",childList);
+        groupHeaderList.add(groupHeader);
+    }
+
+    public void loadPhilippinesToSingapore(){
+        ArrayList<Child> childList = new ArrayList<Child>();
+        Child child = new Child("ไทย","ไทย","ไทย","ไทย","ไทย",null,null);
+        childList.add(child);
+
+        GroupHeader groupHeader = new GroupHeader("Philippines","Singapore",childList);
+        groupHeaderList.add(groupHeader);
+    }
+
+    public void loadPhilippinesToVietnam(){
+        ArrayList<Child> childList = new ArrayList<Child>();
+        Child child = new Child("ไทย","ไทย","ไทย","ไทย","ไทย",null,null);
+        childList.add(child);
+
+        GroupHeader groupHeader = new GroupHeader("Philippines","Vietnam",childList);
+        groupHeaderList.add(groupHeader);
+    }
+
 
 
 
