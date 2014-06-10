@@ -49,7 +49,7 @@
         <activity android:name=".ShowDataActivity"
             android:configChanges="locale|layoutDirection"/>
 
-        <activity android:name=".Database.DAL"
+        <activity android:name=".Database.ConversationDAL"
             android:screenOrientation="portrait"/>
 
         <activity android:name=".SettingActivity"
