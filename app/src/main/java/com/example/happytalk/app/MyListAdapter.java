@@ -1,6 +1,7 @@
 package com.example.happytalk.app;
 
 import android.content.Context;
+import android.media.MediaPlayer;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -8,6 +9,7 @@ import android.view.ViewGroup;
 import android.widget.BaseExpandableListAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.text.TextUtils;
 
 import java.util.ArrayList;
 
@@ -47,12 +49,27 @@ public class MyListAdapter extends BaseExpandableListAdapter {
            LayoutInflater layoutInflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             view = layoutInflater.inflate(R.layout.child_item,null);
        }
+
         TextView txtwordFrom = (TextView) view.findViewById(R.id.txtWordFrom);
         TextView txtwordTo =(TextView) view.findViewById(R.id.txtWordTo);
         TextView txtkaraokeTH = (TextView) view.findViewById(R.id.txtKaraokeTH);
         TextView txtkaraokeEN = (TextView) view.findViewById(R.id.txtKaraokeEN);
         ImageView btnSound = (ImageView) view.findViewById(R.id.sound);
         ImageView btnFavorite = (ImageView) view.findViewById(R.id.favorite);
+
+        btnSound.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+
+        btnFavorite.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
 
 
         txtwordFrom.setText(child.getWordFrom().trim());
@@ -122,12 +139,12 @@ public class MyListAdapter extends BaseExpandableListAdapter {
 
         if(qry.isEmpty()){
             groupHeadersList.addAll(originalList);
+            //groupHeadersList.clear();
         }
         else{
             for(GroupHeader groupHeader:originalList){
                 ArrayList<Child> groupHeaders = groupHeader.getChildList();
                 ArrayList<Child> newList = new ArrayList<Child>();
-
                 for(Child child : groupHeaders){
                     if(child.getWordFrom().toLowerCase().contains(qry) || child.getWordTo().toLowerCase().contains(qry)){
                         newList.add(child);
@@ -138,8 +155,10 @@ public class MyListAdapter extends BaseExpandableListAdapter {
                     groupHeadersList.add(nGroupHeader);
                 }
 
+
             }
         }
+
 
         Log.v("MyListAdapter" ,String.valueOf(groupHeadersList.size()));
         notifyDataSetChanged();

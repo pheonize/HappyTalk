@@ -4,6 +4,7 @@ package com.example.happytalk.app;
  * Created by oVANILLAz on 5/21/14 AD.
  */
 
+import android.app.ActionBar;
 import android.app.SearchManager;
 import android.content.Context;
 import android.content.Intent;
@@ -11,19 +12,23 @@ import android.content.res.Configuration;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.media.MediaPlayer;
+import android.net.Uri;
 import android.os.Bundle;
 import android.app.Activity;
+import android.provider.SearchRecentSuggestions;
 import android.util.Log;
-
+import android.text.TextUtils;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.ExpandableListView;
 
+import android.widget.MediaController;
 import android.widget.SearchView;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.VideoView;
 
 
 import com.example.happytalk.app.Database.ConversationDAL;
@@ -32,7 +37,7 @@ import com.example.happytalk.app.Database.Database;
 import java.util.ArrayList;
 
 
-public class ConversationActivity extends Activity implements SearchView.OnQueryTextListener,SearchView.OnCloseListener {
+public class ConversationActivity extends Activity {
 
 
     //DB
@@ -40,7 +45,7 @@ public class ConversationActivity extends Activity implements SearchView.OnQuery
     SQLiteDatabase sqLiteDatabase;
     Context context;
     Button btnSound;
-    String langTo,langFrom;
+    String langTo, langFrom;
     String[] country_list = {"Brunei", "Cambodia", "China", "Indonesia",
             "Laos", "Malaysia", "Myanmar", "Philippines", "Singapore",
             "Thai", "Vietnam"};
@@ -54,10 +59,10 @@ public class ConversationActivity extends Activity implements SearchView.OnQuery
 
 
     private Cursor cursor;
-    private MediaPlayer mediaPlayer;
+
     private Spinner countryFrom, countryTo;
     private String strCountryFrom, strCountryTo;
-    private  ArrayList<Parent> parents;
+    private ArrayList<Parent> parents;
 
     //Last version
     private SearchView search;
@@ -67,7 +72,8 @@ public class ConversationActivity extends Activity implements SearchView.OnQuery
 
     private ConversationDAL loadWording;
 
-
+    private VideoView videoView;
+    private MediaController mediaPlayer;
 
 
     @Override
@@ -77,15 +83,13 @@ public class ConversationActivity extends Activity implements SearchView.OnQuery
         setContentView(R.layout.conversation);
 
 
-
-
-
         Configuration configuration = new Configuration();
 
-        getResources().updateConfiguration(configuration,null);
+        getResources().updateConfiguration(configuration, null);
 
         initWidget();
 //        search();
+        //searchWidget();
 
         checkLanguage();
 
@@ -107,20 +111,15 @@ public class ConversationActivity extends Activity implements SearchView.OnQuery
 //        }
 
 
+        // if (lang_from.equals("Thai") && lang_to.equals("Brunei") || lang_from.equals("ไทย") && lang_to.equals("บรูไน")) {
+
+        //display list
+        // displayList();
+        //expand all group
+        //expandAll();
 
 
-
-
-       // if (lang_from.equals("Thai") && lang_to.equals("Brunei") || lang_from.equals("ไทย") && lang_to.equals("บรูไน")) {
-
-            //display list
-           // displayList();
-            //expand all group
-            //expandAll();
-
-
-
-            //work
+        //work
 //            final ArrayList<HashMap<String,String>> dataList = db.ShowAllData();
 //            ListView listView = (ListView)findViewById(R.id.listViewInfo);
 //            SimpleAdapter adt = new SimpleAdapter(ConversationActivity.this,dataList,R.layout.showitemdb_custom,
@@ -128,7 +127,7 @@ public class ConversationActivity extends Activity implements SearchView.OnQuery
 //            listView.setAdapter(adt);
 
 
-            /////
+        /////
 
 //            listView.setOnItemClickListener(new OnItemClickListener() {
 //                @Override
@@ -211,15 +210,13 @@ public class ConversationActivity extends Activity implements SearchView.OnQuery
 //            });
 
 
-
-
-
 //        } else {
 //            Intent intent;
 //            intent = new Intent(getApplicationContext(), MainActivity.class);
 //            startActivity(intent);
 //        }
     }
+
 
     private void checkLanguage() {
         Bundle extras = getIntent().getExtras();
@@ -236,7 +233,6 @@ public class ConversationActivity extends Activity implements SearchView.OnQuery
             langFrom.setText(lang_from);
 
 
-
         }
 
         String lang_to = extras.getString("strCountryTo", "");
@@ -247,23 +243,22 @@ public class ConversationActivity extends Activity implements SearchView.OnQuery
             langTo.setText(lang_to);
 
         }
-        displayList(lang_from,lang_to);
+        displayList(lang_from, lang_to);
     }
 
 
     //method to expand all group
-    public void displayList(String lang_from,String lang_to) {
-
-
-
+    public void displayList(String lang_from, String lang_to) {
 
 
         if (lang_from.equals("Thai") && lang_to.equals("Brunei") || lang_from.equals("ไทย") && lang_to.equals("บรูไน")) {
 
             //display the list
-           // loadThaiToBrunei();
+            // loadThaiToBrunei();
             loadWording = new ConversationDAL();
             loadWording.loadThaiToBrunei();
+
+
             //get ref to the expandableListView
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
@@ -274,7 +269,7 @@ public class ConversationActivity extends Activity implements SearchView.OnQuery
 
         }
 
-        if(lang_from.equals("Thai") && lang_to.equals("China") || lang_from.equals("ไทย")&&lang_to.equals("จีน")){
+        if (lang_from.equals("Thai") && lang_to.equals("China") || lang_from.equals("ไทย") && lang_to.equals("จีน")) {
             loadWording = new ConversationDAL();
             loadWording.loadThaiToChina();
             //get ref to the expandableListView
@@ -284,8 +279,18 @@ public class ConversationActivity extends Activity implements SearchView.OnQuery
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
 
+
+//            videoView =(VideoView)findViewById(R.id.sound);
+//            Uri uri = Uri.parse("android.resource://" + getPackageName() + "/" +R.raw.sound);
+//
+//            mediaPlayer = new MediaController(this);
+//            videoView.setMediaController(mediaPlayer);
+//            videoView.setVideoURI(uri);
+//            videoView.start();
+
+
         }
-        if(lang_from.equals("Thai") && lang_to.equals("Thai") || lang_from.equals("ไทย") && lang_to.equals("ไทย")){
+        if (lang_from.equals("Thai") && lang_to.equals("Thai") || lang_from.equals("ไทย") && lang_to.equals("ไทย")) {
             loadWording = new ConversationDAL();
             loadWording.loadThaiToThai();
 
@@ -296,7 +301,7 @@ public class ConversationActivity extends Activity implements SearchView.OnQuery
             myList.setAdapter(listAdapter);
         }
 
-        if(lang_from.equals("Thai") && lang_to.equals("Cambodia") || lang_from.equals("ไทย") && lang_to.equals("กัมพูชา") ){
+        if (lang_from.equals("Thai") && lang_to.equals("Cambodia") || lang_from.equals("ไทย") && lang_to.equals("กัมพูชา")) {
             loadWording = new ConversationDAL();
             loadWording.loadThaiToCambodia();
 
@@ -306,7 +311,7 @@ public class ConversationActivity extends Activity implements SearchView.OnQuery
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
-        if(lang_from.equals("Thai")&& lang_to.equals("Indonesia") || lang_from.equals("ไทย") && lang_to.equals("อินโดนีเซีย")){
+        if (lang_from.equals("Thai") && lang_to.equals("Indonesia") || lang_from.equals("ไทย") && lang_to.equals("อินโดนีเซีย")) {
             loadWording = new ConversationDAL();
             loadWording.loadThaiToIndonesia();
 
@@ -316,7 +321,7 @@ public class ConversationActivity extends Activity implements SearchView.OnQuery
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
-        if(lang_from.equals("Thai")&& lang_to.equals("Laos") || lang_from.equals("ไทย") && lang_to.equals("ลาว")){
+        if (lang_from.equals("Thai") && lang_to.equals("Laos") || lang_from.equals("ไทย") && lang_to.equals("ลาว")) {
             loadWording = new ConversationDAL();
             loadWording.loadThaiToLaos();
 
@@ -327,7 +332,7 @@ public class ConversationActivity extends Activity implements SearchView.OnQuery
             myList.setAdapter(listAdapter);
         }
 
-        if(lang_from.equals("Thai")&& lang_to.equals("Malaysia") || lang_from.equals("ไทย") && lang_to.equals("มาเลเซีย")){
+        if (lang_from.equals("Thai") && lang_to.equals("Malaysia") || lang_from.equals("ไทย") && lang_to.equals("มาเลเซีย")) {
             loadWording = new ConversationDAL();
             loadWording.loadThaiToMalaysia();
 
@@ -337,7 +342,7 @@ public class ConversationActivity extends Activity implements SearchView.OnQuery
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
-        if(lang_from.equals("Thai")&& lang_to.equals("Myanmar") || lang_from.equals("ไทย") && lang_to.equals("พม่า")){
+        if (lang_from.equals("Thai") && lang_to.equals("Myanmar") || lang_from.equals("ไทย") && lang_to.equals("พม่า")) {
             loadWording = new ConversationDAL();
             loadWording.loadThaiToMalaysia();
 
@@ -348,7 +353,7 @@ public class ConversationActivity extends Activity implements SearchView.OnQuery
             myList.setAdapter(listAdapter);
         }
 
-        if(lang_from.equals("Thai")&& lang_to.equals("Philippines") || lang_from.equals("ไทย") && lang_to.equals("ฟิลิปปินส์")){
+        if (lang_from.equals("Thai") && lang_to.equals("Philippines") || lang_from.equals("ไทย") && lang_to.equals("ฟิลิปปินส์")) {
             loadWording = new ConversationDAL();
             loadWording.loadThaiToPhilippines();
 
@@ -359,7 +364,7 @@ public class ConversationActivity extends Activity implements SearchView.OnQuery
             myList.setAdapter(listAdapter);
         }
 
-        if(lang_from.equals("Thai")&& lang_to.equals("Singapore") || lang_from.equals("ไทย") && lang_to.equals("สิงคโปร์")){
+        if (lang_from.equals("Thai") && lang_to.equals("Singapore") || lang_from.equals("ไทย") && lang_to.equals("สิงคโปร์")) {
             loadWording = new ConversationDAL();
             loadWording.loadThaiToSingapore();
 
@@ -370,7 +375,7 @@ public class ConversationActivity extends Activity implements SearchView.OnQuery
             myList.setAdapter(listAdapter);
         }
 
-        if(lang_from.equals("Thai")&& lang_to.equals("Vietnam") || lang_from.equals("ไทย") && lang_to.equals("เวียดนาม")){
+        if (lang_from.equals("Thai") && lang_to.equals("Vietnam") || lang_from.equals("ไทย") && lang_to.equals("เวียดนาม")) {
             loadWording = new ConversationDAL();
             loadWording.loadThaiToVietnam();
 
@@ -381,7 +386,7 @@ public class ConversationActivity extends Activity implements SearchView.OnQuery
             myList.setAdapter(listAdapter);
         }
 
-        if(lang_from.equals("Brunei")&& lang_to.equals("China") || lang_from.equals("บรูไน") && lang_to.equals("จีน")){
+        if (lang_from.equals("Brunei") && lang_to.equals("China") || lang_from.equals("บรูไน") && lang_to.equals("จีน")) {
             loadWording = new ConversationDAL();
             loadWording.loadBruneiToChina();
 
@@ -392,7 +397,7 @@ public class ConversationActivity extends Activity implements SearchView.OnQuery
             myList.setAdapter(listAdapter);
         }
 
-        if(lang_from.equals("Brunei") && lang_to.equals("Thai") || lang_from.equals("บรูไน") && lang_to.equals("ไทย")){
+        if (lang_from.equals("Brunei") && lang_to.equals("Thai") || lang_from.equals("บรูไน") && lang_to.equals("ไทย")) {
             loadWording = new ConversationDAL();
             loadWording.loadBruneiToThai();
 
@@ -403,7 +408,7 @@ public class ConversationActivity extends Activity implements SearchView.OnQuery
             myList.setAdapter(listAdapter);
         }
 
-        if(lang_from.equals("Brunei") && lang_to.equals("Brunei") || lang_from.equals("บรูไน") && lang_to.equals("บรูไน")){
+        if (lang_from.equals("Brunei") && lang_to.equals("Brunei") || lang_from.equals("บรูไน") && lang_to.equals("บรูไน")) {
             loadWording = new ConversationDAL();
             loadWording.loadBruneiToBrunei();
 
@@ -414,7 +419,7 @@ public class ConversationActivity extends Activity implements SearchView.OnQuery
             myList.setAdapter(listAdapter);
         }
 
-        if(lang_from.equals("Brunei") && lang_to.equals("Cambodia") || lang_from.equals("บรูไน") && lang_to.equals("กัมพูชา")){
+        if (lang_from.equals("Brunei") && lang_to.equals("Cambodia") || lang_from.equals("บรูไน") && lang_to.equals("กัมพูชา")) {
             loadWording = new ConversationDAL();
             loadWording.loadBruneiToCambodia();
 
@@ -425,7 +430,7 @@ public class ConversationActivity extends Activity implements SearchView.OnQuery
             myList.setAdapter(listAdapter);
         }
 
-        if(lang_from.equals("Brunei") && lang_to.equals("Indonesia") || lang_from.equals("บรูไน") && lang_to.equals("อินโดนีเซีย")){
+        if (lang_from.equals("Brunei") && lang_to.equals("Indonesia") || lang_from.equals("บรูไน") && lang_to.equals("อินโดนีเซีย")) {
             loadWording = new ConversationDAL();
             loadWording.loadBruneiToIndonesia();
 
@@ -436,7 +441,7 @@ public class ConversationActivity extends Activity implements SearchView.OnQuery
             myList.setAdapter(listAdapter);
         }
 
-        if(lang_from.equals("Brunei") && lang_to.equals("Laos") || lang_from.equals("บรูไน") && lang_to.equals("ลาว")){
+        if (lang_from.equals("Brunei") && lang_to.equals("Laos") || lang_from.equals("บรูไน") && lang_to.equals("ลาว")) {
             loadWording = new ConversationDAL();
             loadWording.loadBruneiToLaos();
 
@@ -448,7 +453,7 @@ public class ConversationActivity extends Activity implements SearchView.OnQuery
         }
 
 
-        if(lang_from.equals("Brunei") && lang_to.equals("Malaysia") || lang_from.equals("บรูไน") && lang_to.equals("มาเลเซีย")){
+        if (lang_from.equals("Brunei") && lang_to.equals("Malaysia") || lang_from.equals("บรูไน") && lang_to.equals("มาเลเซีย")) {
             loadWording = new ConversationDAL();
             loadWording.loadBruneiToMalaysia();
 
@@ -459,7 +464,7 @@ public class ConversationActivity extends Activity implements SearchView.OnQuery
             myList.setAdapter(listAdapter);
         }
 
-        if(lang_from.equals("Brunei") && lang_to.equals("Myanmar") || lang_from.equals("บรูไน") && lang_to.equals("พม่า")){
+        if (lang_from.equals("Brunei") && lang_to.equals("Myanmar") || lang_from.equals("บรูไน") && lang_to.equals("พม่า")) {
             loadWording = new ConversationDAL();
             loadWording.loadBruneiToMyanmar();
 
@@ -470,7 +475,7 @@ public class ConversationActivity extends Activity implements SearchView.OnQuery
             myList.setAdapter(listAdapter);
         }
 
-        if(lang_from.equals("Brunei") && lang_to.equals("Philippines") || lang_from.equals("บรูไน") && lang_to.equals("ฟิลิปปินส์")){
+        if (lang_from.equals("Brunei") && lang_to.equals("Philippines") || lang_from.equals("บรูไน") && lang_to.equals("ฟิลิปปินส์")) {
             loadWording = new ConversationDAL();
             loadWording.loadBruneiToPhilippines();
 
@@ -481,7 +486,7 @@ public class ConversationActivity extends Activity implements SearchView.OnQuery
             myList.setAdapter(listAdapter);
         }
 
-        if(lang_from.equals("Brunei") && lang_to.equals("Singapore") || lang_from.equals("บรูไน") && lang_to.equals("สิงคโปร์")){
+        if (lang_from.equals("Brunei") && lang_to.equals("Singapore") || lang_from.equals("บรูไน") && lang_to.equals("สิงคโปร์")) {
             loadWording = new ConversationDAL();
             loadWording.loadBruneiToSingapore();
 
@@ -492,7 +497,7 @@ public class ConversationActivity extends Activity implements SearchView.OnQuery
             myList.setAdapter(listAdapter);
         }
 
-        if(lang_from.equals("Brunei") && lang_to.equals("Vietnam") || lang_from.equals("บรูไน") && lang_to.equals("เวียดนาม")){
+        if (lang_from.equals("Brunei") && lang_to.equals("Vietnam") || lang_from.equals("บรูไน") && lang_to.equals("เวียดนาม")) {
             loadWording = new ConversationDAL();
             loadWording.loadBruneiToVietnam();
 
@@ -503,7 +508,7 @@ public class ConversationActivity extends Activity implements SearchView.OnQuery
             myList.setAdapter(listAdapter);
         }
 
-        if(lang_from.equals("Cambodia") && lang_to.equals("China") || lang_from.equals("กัมพูชา") && lang_to.equals("จีน")){
+        if (lang_from.equals("Cambodia") && lang_to.equals("China") || lang_from.equals("กัมพูชา") && lang_to.equals("จีน")) {
             loadWording = new ConversationDAL();
             loadWording.loadCambodiaToChina();
 
@@ -514,7 +519,7 @@ public class ConversationActivity extends Activity implements SearchView.OnQuery
             myList.setAdapter(listAdapter);
         }
 
-        if(lang_from.equals("Cambodia") && lang_to.equals("Thai") || lang_from.equals("กัมพูชา") && lang_to.equals("ไทย")){
+        if (lang_from.equals("Cambodia") && lang_to.equals("Thai") || lang_from.equals("กัมพูชา") && lang_to.equals("ไทย")) {
             loadWording = new ConversationDAL();
             loadWording.loadCambodiaToThai();
 
@@ -525,7 +530,7 @@ public class ConversationActivity extends Activity implements SearchView.OnQuery
             myList.setAdapter(listAdapter);
         }
 
-        if(lang_from.equals("Cambodia") && lang_to.equals("Brunei") || lang_from.equals("กัมพูชา") && lang_to.equals("บรูไน")){
+        if (lang_from.equals("Cambodia") && lang_to.equals("Brunei") || lang_from.equals("กัมพูชา") && lang_to.equals("บรูไน")) {
             loadWording = new ConversationDAL();
             loadWording.loadCambodiaToBrunei();
 
@@ -536,7 +541,7 @@ public class ConversationActivity extends Activity implements SearchView.OnQuery
             myList.setAdapter(listAdapter);
         }
 
-        if(lang_from.equals("Cambodia") && lang_to.equals("Cambodia") || lang_from.equals("กัมพูชา") && lang_to.equals("กัมพูชา")){
+        if (lang_from.equals("Cambodia") && lang_to.equals("Cambodia") || lang_from.equals("กัมพูชา") && lang_to.equals("กัมพูชา")) {
             loadWording = new ConversationDAL();
             loadWording.loadCambodiaToCambodia();
 
@@ -547,7 +552,7 @@ public class ConversationActivity extends Activity implements SearchView.OnQuery
             myList.setAdapter(listAdapter);
         }
 
-        if(lang_from.equals("Cambodia") && lang_to.equals("Indonesia") || lang_from.equals("กัมพูชา") && lang_to.equals("อินโดนีเซีย")){
+        if (lang_from.equals("Cambodia") && lang_to.equals("Indonesia") || lang_from.equals("กัมพูชา") && lang_to.equals("อินโดนีเซีย")) {
             loadWording = new ConversationDAL();
             loadWording.loadCambodiaToIndonesia();
 
@@ -558,7 +563,7 @@ public class ConversationActivity extends Activity implements SearchView.OnQuery
             myList.setAdapter(listAdapter);
         }
 
-        if(lang_from.equals("Cambodia") && lang_to.equals("Indonesia") || lang_from.equals("กัมพูชา") && lang_to.equals("อินโดนีเซีย")){
+        if (lang_from.equals("Cambodia") && lang_to.equals("Indonesia") || lang_from.equals("กัมพูชา") && lang_to.equals("อินโดนีเซีย")) {
             loadWording = new ConversationDAL();
             loadWording.loadCambodiaToIndonesia();
 
@@ -569,7 +574,7 @@ public class ConversationActivity extends Activity implements SearchView.OnQuery
             myList.setAdapter(listAdapter);
         }
 
-        if(lang_from.equals("Cambodia") && lang_to.equals("Laos") || lang_from.equals("กัมพูชา") && lang_to.equals("ลาว")){
+        if (lang_from.equals("Cambodia") && lang_to.equals("Laos") || lang_from.equals("กัมพูชา") && lang_to.equals("ลาว")) {
             loadWording = new ConversationDAL();
             loadWording.loadCambodiaToLaos();
 
@@ -580,7 +585,7 @@ public class ConversationActivity extends Activity implements SearchView.OnQuery
             myList.setAdapter(listAdapter);
         }
 
-        if(lang_from.equals("Cambodia") && lang_to.equals("Malaysia") || lang_from.equals("กัมพูชา") && lang_to.equals("มาเลเซีย")){
+        if (lang_from.equals("Cambodia") && lang_to.equals("Malaysia") || lang_from.equals("กัมพูชา") && lang_to.equals("มาเลเซีย")) {
             loadWording = new ConversationDAL();
             loadWording.loadCambodiaToMalaysia();
 
@@ -591,7 +596,7 @@ public class ConversationActivity extends Activity implements SearchView.OnQuery
             myList.setAdapter(listAdapter);
         }
 
-        if(lang_from.equals("Cambodia") && lang_to.equals("Myanmar") || lang_from.equals("กัมพูชา") && lang_to.equals("พม่า")){
+        if (lang_from.equals("Cambodia") && lang_to.equals("Myanmar") || lang_from.equals("กัมพูชา") && lang_to.equals("พม่า")) {
             loadWording = new ConversationDAL();
             loadWording.loadCambodiaToMyanmar();
 
@@ -603,7 +608,7 @@ public class ConversationActivity extends Activity implements SearchView.OnQuery
         }
 
 
-        if(lang_from.equals("Cambodia") && lang_to.equals("Philippines") || lang_from.equals("กัมพูชา") && lang_to.equals("ฟิลิปปินส์")){
+        if (lang_from.equals("Cambodia") && lang_to.equals("Philippines") || lang_from.equals("กัมพูชา") && lang_to.equals("ฟิลิปปินส์")) {
             loadWording = new ConversationDAL();
             loadWording.loadCambodiaToPhilippines();
 
@@ -614,7 +619,7 @@ public class ConversationActivity extends Activity implements SearchView.OnQuery
             myList.setAdapter(listAdapter);
         }
 
-        if(lang_from.equals("Cambodia") && lang_to.equals("Singapore") || lang_from.equals("กัมพูชา") && lang_to.equals("สิงคโปร์")){
+        if (lang_from.equals("Cambodia") && lang_to.equals("Singapore") || lang_from.equals("กัมพูชา") && lang_to.equals("สิงคโปร์")) {
             loadWording = new ConversationDAL();
             loadWording.loadCambodiaToSingapore();
 
@@ -625,7 +630,7 @@ public class ConversationActivity extends Activity implements SearchView.OnQuery
             myList.setAdapter(listAdapter);
         }
 
-        if(lang_from.equals("Cambodia") && lang_to.equals("Vietnam") || lang_from.equals("กัมพูชา") && lang_to.equals("เวียดนาม")){
+        if (lang_from.equals("Cambodia") && lang_to.equals("Vietnam") || lang_from.equals("กัมพูชา") && lang_to.equals("เวียดนาม")) {
             loadWording = new ConversationDAL();
             loadWording.loadCambodiaToVietnam();
 
@@ -636,7 +641,7 @@ public class ConversationActivity extends Activity implements SearchView.OnQuery
             myList.setAdapter(listAdapter);
         }
 
-        if(lang_from.equals("China") && lang_to.equals("China") || lang_from.equals("จีน") && lang_to.equals("จีน")){
+        if (lang_from.equals("China") && lang_to.equals("China") || lang_from.equals("จีน") && lang_to.equals("จีน")) {
             loadWording = new ConversationDAL();
             loadWording.loadChinaToChina();
 
@@ -647,7 +652,7 @@ public class ConversationActivity extends Activity implements SearchView.OnQuery
             myList.setAdapter(listAdapter);
         }
 
-        if(lang_from.equals("China") && lang_to.equals("Thai") || lang_from.equals("จีน") && lang_to.equals("ไทย")){
+        if (lang_from.equals("China") && lang_to.equals("Thai") || lang_from.equals("จีน") && lang_to.equals("ไทย")) {
             loadWording = new ConversationDAL();
             loadWording.loadChinaToThai();
 
@@ -658,7 +663,7 @@ public class ConversationActivity extends Activity implements SearchView.OnQuery
             myList.setAdapter(listAdapter);
         }
 
-        if(lang_from.equals("China") && lang_to.equals("Brunei") || lang_from.equals("จีน") && lang_to.equals("บรูไน")){
+        if (lang_from.equals("China") && lang_to.equals("Brunei") || lang_from.equals("จีน") && lang_to.equals("บรูไน")) {
             loadWording = new ConversationDAL();
             loadWording.loadChinaToBrunei();
 
@@ -669,7 +674,7 @@ public class ConversationActivity extends Activity implements SearchView.OnQuery
             myList.setAdapter(listAdapter);
         }
 
-        if(lang_from.equals("China") && lang_to.equals("Cambodia") || lang_from.equals("จีน") && lang_to.equals("กัมพูชา")){
+        if (lang_from.equals("China") && lang_to.equals("Cambodia") || lang_from.equals("จีน") && lang_to.equals("กัมพูชา")) {
             loadWording = new ConversationDAL();
             loadWording.loadChinaToCambodia();
 
@@ -680,7 +685,7 @@ public class ConversationActivity extends Activity implements SearchView.OnQuery
             myList.setAdapter(listAdapter);
         }
 
-        if(lang_from.equals("China") && lang_to.equals("Indonesia") || lang_from.equals("จีน") && lang_to.equals("อินโดเซีย")){
+        if (lang_from.equals("China") && lang_to.equals("Indonesia") || lang_from.equals("จีน") && lang_to.equals("อินโดเซีย")) {
             loadWording = new ConversationDAL();
             loadWording.loadChinaToIndonesia();
 
@@ -691,7 +696,7 @@ public class ConversationActivity extends Activity implements SearchView.OnQuery
             myList.setAdapter(listAdapter);
         }
 
-        if(lang_from.equals("China") && lang_to.equals("Laos") || lang_from.equals("จีน") && lang_to.equals("ลาว")){
+        if (lang_from.equals("China") && lang_to.equals("Laos") || lang_from.equals("จีน") && lang_to.equals("ลาว")) {
             loadWording = new ConversationDAL();
             loadWording.loadChinaToLaos();
 
@@ -702,7 +707,7 @@ public class ConversationActivity extends Activity implements SearchView.OnQuery
             myList.setAdapter(listAdapter);
         }
 
-        if(lang_from.equals("China") && lang_to.equals("Malaysia") || lang_from.equals("จีน") && lang_to.equals("มาเลเซีย")){
+        if (lang_from.equals("China") && lang_to.equals("Malaysia") || lang_from.equals("จีน") && lang_to.equals("มาเลเซีย")) {
             loadWording = new ConversationDAL();
             loadWording.loadChinaToMalaysia();
 
@@ -713,7 +718,7 @@ public class ConversationActivity extends Activity implements SearchView.OnQuery
             myList.setAdapter(listAdapter);
         }
 
-        if(lang_from.equals("China") && lang_to.equals("Myanmar") || lang_from.equals("จีน") && lang_to.equals("พม่า")){
+        if (lang_from.equals("China") && lang_to.equals("Myanmar") || lang_from.equals("จีน") && lang_to.equals("พม่า")) {
             loadWording = new ConversationDAL();
             loadWording.loadChinaToMyanmar();
 
@@ -724,7 +729,7 @@ public class ConversationActivity extends Activity implements SearchView.OnQuery
             myList.setAdapter(listAdapter);
         }
 
-        if(lang_from.equals("China") && lang_to.equals("Philippines") || lang_from.equals("จีน") && lang_to.equals("ฟิลิปปินส์")){
+        if (lang_from.equals("China") && lang_to.equals("Philippines") || lang_from.equals("จีน") && lang_to.equals("ฟิลิปปินส์")) {
             loadWording = new ConversationDAL();
             loadWording.loadChinaToPhilippines();
 
@@ -735,7 +740,7 @@ public class ConversationActivity extends Activity implements SearchView.OnQuery
             myList.setAdapter(listAdapter);
         }
 
-        if(lang_from.equals("China") && lang_to.equals("Singapore") || lang_from.equals("จีน") && lang_to.equals("สิงคโปร์")){
+        if (lang_from.equals("China") && lang_to.equals("Singapore") || lang_from.equals("จีน") && lang_to.equals("สิงคโปร์")) {
             loadWording = new ConversationDAL();
             loadWording.loadChinaToSingapore();
 
@@ -746,7 +751,7 @@ public class ConversationActivity extends Activity implements SearchView.OnQuery
             myList.setAdapter(listAdapter);
         }
 
-        if(lang_from.equals("China") && lang_to.equals("Vietnam") || lang_from.equals("จีน") && lang_to.equals("เวียดนาม")){
+        if (lang_from.equals("China") && lang_to.equals("Vietnam") || lang_from.equals("จีน") && lang_to.equals("เวียดนาม")) {
             loadWording = new ConversationDAL();
             loadWording.loadChinaToVietnam();
 
@@ -757,7 +762,7 @@ public class ConversationActivity extends Activity implements SearchView.OnQuery
             myList.setAdapter(listAdapter);
         }
 
-        if(lang_from.equals("Indonesia") && lang_to.equals("China") || lang_from.equals("อินโดนีเซีย") && lang_to.equals("จีน")){
+        if (lang_from.equals("Indonesia") && lang_to.equals("China") || lang_from.equals("อินโดนีเซีย") && lang_to.equals("จีน")) {
             loadWording = new ConversationDAL();
             loadWording.loadIndonesiaToChina();
 
@@ -768,7 +773,7 @@ public class ConversationActivity extends Activity implements SearchView.OnQuery
             myList.setAdapter(listAdapter);
         }
 
-        if(lang_from.equals("Indonesia") && lang_to.equals("Thai") || lang_from.equals("อินโดนีเซีย") && lang_to.equals("ไทย")){
+        if (lang_from.equals("Indonesia") && lang_to.equals("Thai") || lang_from.equals("อินโดนีเซีย") && lang_to.equals("ไทย")) {
             loadWording = new ConversationDAL();
             loadWording.loadIndonesiaToChina();
 
@@ -779,7 +784,7 @@ public class ConversationActivity extends Activity implements SearchView.OnQuery
             myList.setAdapter(listAdapter);
         }
 
-        if(lang_from.equals("Indonesia") && lang_to.equals("Thai") || lang_from.equals("อินโดนีเซีย") && lang_to.equals("ไทย")){
+        if (lang_from.equals("Indonesia") && lang_to.equals("Thai") || lang_from.equals("อินโดนีเซีย") && lang_to.equals("ไทย")) {
             loadWording = new ConversationDAL();
             loadWording.loadIndonesiaToThai();
 
@@ -790,7 +795,7 @@ public class ConversationActivity extends Activity implements SearchView.OnQuery
             myList.setAdapter(listAdapter);
         }
 
-        if(lang_from.equals("Indonesia") && lang_to.equals("Brunei") || lang_from.equals("อินโดนีเซีย") && lang_to.equals("บรูไน")){
+        if (lang_from.equals("Indonesia") && lang_to.equals("Brunei") || lang_from.equals("อินโดนีเซีย") && lang_to.equals("บรูไน")) {
             loadWording = new ConversationDAL();
             loadWording.loadIndonesiaToBrunei();
 
@@ -801,7 +806,7 @@ public class ConversationActivity extends Activity implements SearchView.OnQuery
             myList.setAdapter(listAdapter);
         }
 
-        if(lang_from.equals("Indonesia") && lang_to.equals("Cambodia") || lang_from.equals("อินโดนีเซีย") && lang_to.equals("กัมพูชา")){
+        if (lang_from.equals("Indonesia") && lang_to.equals("Cambodia") || lang_from.equals("อินโดนีเซีย") && lang_to.equals("กัมพูชา")) {
             loadWording = new ConversationDAL();
             loadWording.loadIndonesiaToCambodia();
 
@@ -812,7 +817,7 @@ public class ConversationActivity extends Activity implements SearchView.OnQuery
             myList.setAdapter(listAdapter);
         }
 
-        if(lang_from.equals("Indonesia") && lang_to.equals("Indonesia") || lang_from.equals("อินโดนีเซีย") && lang_to.equals("อินโดนีเซีย")){
+        if (lang_from.equals("Indonesia") && lang_to.equals("Indonesia") || lang_from.equals("อินโดนีเซีย") && lang_to.equals("อินโดนีเซีย")) {
             loadWording = new ConversationDAL();
             loadWording.loadIndonesiaToIndonesia();
 
@@ -823,7 +828,7 @@ public class ConversationActivity extends Activity implements SearchView.OnQuery
             myList.setAdapter(listAdapter);
         }
 
-        if(lang_from.equals("Indonesia") && lang_to.equals("Laos") || lang_from.equals("อินโดนีเซีย") && lang_to.equals("ลาว")){
+        if (lang_from.equals("Indonesia") && lang_to.equals("Laos") || lang_from.equals("อินโดนีเซีย") && lang_to.equals("ลาว")) {
             loadWording = new ConversationDAL();
             loadWording.loadIndonesiaToLaos();
 
@@ -834,7 +839,7 @@ public class ConversationActivity extends Activity implements SearchView.OnQuery
             myList.setAdapter(listAdapter);
         }
 
-        if(lang_from.equals("Indonesia") && lang_to.equals("Malaysia") || lang_from.equals("อินโดนีเซีย") && lang_to.equals("มาเลเซีย")){
+        if (lang_from.equals("Indonesia") && lang_to.equals("Malaysia") || lang_from.equals("อินโดนีเซีย") && lang_to.equals("มาเลเซีย")) {
             loadWording = new ConversationDAL();
             loadWording.loadIndonesiaToMalaysia();
 
@@ -845,7 +850,7 @@ public class ConversationActivity extends Activity implements SearchView.OnQuery
             myList.setAdapter(listAdapter);
         }
 
-        if(lang_from.equals("Indonesia") && lang_to.equals("Myanmar") || lang_from.equals("อินโดนีเซีย") && lang_to.equals("พม่า")){
+        if (lang_from.equals("Indonesia") && lang_to.equals("Myanmar") || lang_from.equals("อินโดนีเซีย") && lang_to.equals("พม่า")) {
             loadWording = new ConversationDAL();
             loadWording.loadIndonesiaToMyanmar();
 
@@ -856,7 +861,7 @@ public class ConversationActivity extends Activity implements SearchView.OnQuery
             myList.setAdapter(listAdapter);
         }
 
-        if(lang_from.equals("Indonesia") && lang_to.equals("Philippines") || lang_from.equals("อินโดนีเซีย") && lang_to.equals("ฟิลิปปินส์")){
+        if (lang_from.equals("Indonesia") && lang_to.equals("Philippines") || lang_from.equals("อินโดนีเซีย") && lang_to.equals("ฟิลิปปินส์")) {
             loadWording = new ConversationDAL();
             loadWording.loadIndonesiaToPhilippines();
 
@@ -867,7 +872,7 @@ public class ConversationActivity extends Activity implements SearchView.OnQuery
             myList.setAdapter(listAdapter);
         }
 
-        if(lang_from.equals("Indonesia") && lang_to.equals("Singapore") || lang_from.equals("อินโดนีเซีย") && lang_to.equals("สิงคโปร")){
+        if (lang_from.equals("Indonesia") && lang_to.equals("Singapore") || lang_from.equals("อินโดนีเซีย") && lang_to.equals("สิงคโปร")) {
             loadWording = new ConversationDAL();
             loadWording.loadIndonesiaToSingapore();
 
@@ -878,7 +883,7 @@ public class ConversationActivity extends Activity implements SearchView.OnQuery
             myList.setAdapter(listAdapter);
         }
 
-        if(lang_from.equals("Indonesia") && lang_to.equals("Vietnam") || lang_from.equals("อินโดนีเซีย") && lang_to.equals("เวียดนาม")){
+        if (lang_from.equals("Indonesia") && lang_to.equals("Vietnam") || lang_from.equals("อินโดนีเซีย") && lang_to.equals("เวียดนาม")) {
             loadWording = new ConversationDAL();
             loadWording.loadIndonesiaToVietnam();
 
@@ -889,7 +894,7 @@ public class ConversationActivity extends Activity implements SearchView.OnQuery
             myList.setAdapter(listAdapter);
         }
 
-        if(lang_from.equals("Laos") && lang_to.equals("China") || lang_from.equals("ลาว") && lang_to.equals("จีน")){
+        if (lang_from.equals("Laos") && lang_to.equals("China") || lang_from.equals("ลาว") && lang_to.equals("จีน")) {
             loadWording = new ConversationDAL();
             loadWording.loadLaosToChina();
 
@@ -900,7 +905,7 @@ public class ConversationActivity extends Activity implements SearchView.OnQuery
             myList.setAdapter(listAdapter);
         }
 
-        if(lang_from.equals("Laos") && lang_to.equals("Thai") || lang_from.equals("ลาว") && lang_to.equals("ไทย")){
+        if (lang_from.equals("Laos") && lang_to.equals("Thai") || lang_from.equals("ลาว") && lang_to.equals("ไทย")) {
             loadWording = new ConversationDAL();
             loadWording.loadLaosToThai();
 
@@ -911,7 +916,7 @@ public class ConversationActivity extends Activity implements SearchView.OnQuery
             myList.setAdapter(listAdapter);
         }
 
-        if(lang_from.equals("Laos") && lang_to.equals("Brunei") || lang_from.equals("ลาว") && lang_to.equals("บรูไน")){
+        if (lang_from.equals("Laos") && lang_to.equals("Brunei") || lang_from.equals("ลาว") && lang_to.equals("บรูไน")) {
             loadWording = new ConversationDAL();
             loadWording.loadLaosToBrunei();
 
@@ -922,7 +927,7 @@ public class ConversationActivity extends Activity implements SearchView.OnQuery
             myList.setAdapter(listAdapter);
         }
 
-        if(lang_from.equals("Laos") && lang_to.equals("Cambodia") || lang_from.equals("ลาว") && lang_to.equals("กัมพูชา")){
+        if (lang_from.equals("Laos") && lang_to.equals("Cambodia") || lang_from.equals("ลาว") && lang_to.equals("กัมพูชา")) {
             loadWording = new ConversationDAL();
             loadWording.loadLaosToCambodia();
 
@@ -933,7 +938,7 @@ public class ConversationActivity extends Activity implements SearchView.OnQuery
             myList.setAdapter(listAdapter);
         }
 
-        if(lang_from.equals("Laos") && lang_to.equals("Indonesia") || lang_from.equals("ลาว") && lang_to.equals("อินโดนีเซีย")){
+        if (lang_from.equals("Laos") && lang_to.equals("Indonesia") || lang_from.equals("ลาว") && lang_to.equals("อินโดนีเซีย")) {
             loadWording = new ConversationDAL();
             loadWording.loadLaosToIndonesia();
 
@@ -944,7 +949,7 @@ public class ConversationActivity extends Activity implements SearchView.OnQuery
             myList.setAdapter(listAdapter);
         }
 
-        if(lang_from.equals("Laos") && lang_to.equals("Laos") || lang_from.equals("ลาว") && lang_to.equals("ลาว")){
+        if (lang_from.equals("Laos") && lang_to.equals("Laos") || lang_from.equals("ลาว") && lang_to.equals("ลาว")) {
             loadWording = new ConversationDAL();
             loadWording.loadLaosToLaos();
 
@@ -955,7 +960,7 @@ public class ConversationActivity extends Activity implements SearchView.OnQuery
             myList.setAdapter(listAdapter);
         }
 
-        if(lang_from.equals("Laos") && lang_to.equals("Malaysia") || lang_from.equals("ลาว") && lang_to.equals("มาเลเซีย")){
+        if (lang_from.equals("Laos") && lang_to.equals("Malaysia") || lang_from.equals("ลาว") && lang_to.equals("มาเลเซีย")) {
             loadWording = new ConversationDAL();
             loadWording.loadLaosToMalaysia();
 
@@ -966,7 +971,7 @@ public class ConversationActivity extends Activity implements SearchView.OnQuery
             myList.setAdapter(listAdapter);
         }
 
-        if(lang_from.equals("Laos") && lang_to.equals("Myanmar") || lang_from.equals("ลาว") && lang_to.equals("พม่า")){
+        if (lang_from.equals("Laos") && lang_to.equals("Myanmar") || lang_from.equals("ลาว") && lang_to.equals("พม่า")) {
             loadWording = new ConversationDAL();
             loadWording.loadLaosToMyanmar();
 
@@ -978,7 +983,7 @@ public class ConversationActivity extends Activity implements SearchView.OnQuery
         }
 
 
-        if(lang_from.equals("Laos") && lang_to.equals("Philippines") || lang_from.equals("ลาว") && lang_to.equals("ฟิลิปปินส์")){
+        if (lang_from.equals("Laos") && lang_to.equals("Philippines") || lang_from.equals("ลาว") && lang_to.equals("ฟิลิปปินส์")) {
             loadWording = new ConversationDAL();
             loadWording.loadLaosToPhilippines();
 
@@ -989,7 +994,7 @@ public class ConversationActivity extends Activity implements SearchView.OnQuery
             myList.setAdapter(listAdapter);
         }
 
-        if(lang_from.equals("Laos") && lang_to.equals("Singapore") || lang_from.equals("ลาว") && lang_to.equals("สิงคโปร์")){
+        if (lang_from.equals("Laos") && lang_to.equals("Singapore") || lang_from.equals("ลาว") && lang_to.equals("สิงคโปร์")) {
             loadWording = new ConversationDAL();
             loadWording.loadLaosToSingapore();
 
@@ -1000,7 +1005,7 @@ public class ConversationActivity extends Activity implements SearchView.OnQuery
             myList.setAdapter(listAdapter);
         }
 
-        if(lang_from.equals("Laos") && lang_to.equals("Vietnam") || lang_from.equals("ลาว") && lang_to.equals("เวียดนาม")){
+        if (lang_from.equals("Laos") && lang_to.equals("Vietnam") || lang_from.equals("ลาว") && lang_to.equals("เวียดนาม")) {
             loadWording = new ConversationDAL();
             loadWording.loadLaosToVietnam();
 
@@ -1011,7 +1016,7 @@ public class ConversationActivity extends Activity implements SearchView.OnQuery
             myList.setAdapter(listAdapter);
         }
 
-        if(lang_from.equals("Malaysia") && lang_to.equals("China") || lang_from.equals("มาเลเซีย") && lang_to.equals("จีน")){
+        if (lang_from.equals("Malaysia") && lang_to.equals("China") || lang_from.equals("มาเลเซีย") && lang_to.equals("จีน")) {
             loadWording = new ConversationDAL();
             loadWording.loadMalaysiaToChina();
 
@@ -1022,7 +1027,7 @@ public class ConversationActivity extends Activity implements SearchView.OnQuery
             myList.setAdapter(listAdapter);
         }
 
-        if(lang_from.equals("Malaysia") && lang_to.equals("Thai") || lang_from.equals("มาเลเซีย") && lang_to.equals("ไทย")){
+        if (lang_from.equals("Malaysia") && lang_to.equals("Thai") || lang_from.equals("มาเลเซีย") && lang_to.equals("ไทย")) {
             loadWording = new ConversationDAL();
             loadWording.loadMalaysiaToThai();
 
@@ -1033,7 +1038,7 @@ public class ConversationActivity extends Activity implements SearchView.OnQuery
             myList.setAdapter(listAdapter);
         }
 
-        if(lang_from.equals("Malaysia") && lang_to.equals("Brunei") || lang_from.equals("มาเลเซีย") && lang_to.equals("บรูไน")){
+        if (lang_from.equals("Malaysia") && lang_to.equals("Brunei") || lang_from.equals("มาเลเซีย") && lang_to.equals("บรูไน")) {
             loadWording = new ConversationDAL();
             loadWording.loadMalaysiaToBrunei();
 
@@ -1044,7 +1049,7 @@ public class ConversationActivity extends Activity implements SearchView.OnQuery
             myList.setAdapter(listAdapter);
         }
 
-        if(lang_from.equals("Malaysia") && lang_to.equals("Cambodia") || lang_from.equals("มาเลเซีย") && lang_to.equals("กัมพูชา")){
+        if (lang_from.equals("Malaysia") && lang_to.equals("Cambodia") || lang_from.equals("มาเลเซีย") && lang_to.equals("กัมพูชา")) {
             loadWording = new ConversationDAL();
             loadWording.loadMalaysiaToCambodia();
 
@@ -1055,7 +1060,7 @@ public class ConversationActivity extends Activity implements SearchView.OnQuery
             myList.setAdapter(listAdapter);
         }
 
-        if(lang_from.equals("Malaysia") && lang_to.equals("Indonesia") || lang_from.equals("มาเลเซีย") && lang_to.equals("อินโดนีเซีย")){
+        if (lang_from.equals("Malaysia") && lang_to.equals("Indonesia") || lang_from.equals("มาเลเซีย") && lang_to.equals("อินโดนีเซีย")) {
             loadWording = new ConversationDAL();
             loadWording.loadMalaysiaToIndonesia();
 
@@ -1066,7 +1071,7 @@ public class ConversationActivity extends Activity implements SearchView.OnQuery
             myList.setAdapter(listAdapter);
         }
 
-        if(lang_from.equals("Malaysia") && lang_to.equals("Laos") || lang_from.equals("มาเลเซีย") && lang_to.equals("ลาว")){
+        if (lang_from.equals("Malaysia") && lang_to.equals("Laos") || lang_from.equals("มาเลเซีย") && lang_to.equals("ลาว")) {
             loadWording = new ConversationDAL();
             loadWording.loadMalaysiaToLaos();
 
@@ -1077,7 +1082,7 @@ public class ConversationActivity extends Activity implements SearchView.OnQuery
             myList.setAdapter(listAdapter);
         }
 
-        if(lang_from.equals("Malaysia") && lang_to.equals("Malaysia") || lang_from.equals("มาเลเซีย") && lang_to.equals("มาเลเซีย")){
+        if (lang_from.equals("Malaysia") && lang_to.equals("Malaysia") || lang_from.equals("มาเลเซีย") && lang_to.equals("มาเลเซีย")) {
             loadWording = new ConversationDAL();
             loadWording.loadMalaysiaToMalaysia();
 
@@ -1088,7 +1093,7 @@ public class ConversationActivity extends Activity implements SearchView.OnQuery
             myList.setAdapter(listAdapter);
         }
 
-        if(lang_from.equals("Malaysia") && lang_to.equals("Myanmar") || lang_from.equals("มาเลเซีย") && lang_to.equals("พม่า")){
+        if (lang_from.equals("Malaysia") && lang_to.equals("Myanmar") || lang_from.equals("มาเลเซีย") && lang_to.equals("พม่า")) {
             loadWording = new ConversationDAL();
             loadWording.loadMalaysiaToMyanmar();
 
@@ -1099,7 +1104,7 @@ public class ConversationActivity extends Activity implements SearchView.OnQuery
             myList.setAdapter(listAdapter);
         }
 
-        if(lang_from.equals("Malaysia") && lang_to.equals("Philippines") || lang_from.equals("มาเลเซีย") && lang_to.equals("ฟิลิปปินส์")){
+        if (lang_from.equals("Malaysia") && lang_to.equals("Philippines") || lang_from.equals("มาเลเซีย") && lang_to.equals("ฟิลิปปินส์")) {
             loadWording = new ConversationDAL();
             loadWording.loadMalaysiaToPhilippines();
 
@@ -1110,7 +1115,7 @@ public class ConversationActivity extends Activity implements SearchView.OnQuery
             myList.setAdapter(listAdapter);
         }
 
-        if(lang_from.equals("Malaysia") && lang_to.equals("Singapore") || lang_from.equals("มาเลเซีย") && lang_to.equals("สิงคโปร์")){
+        if (lang_from.equals("Malaysia") && lang_to.equals("Singapore") || lang_from.equals("มาเลเซีย") && lang_to.equals("สิงคโปร์")) {
             loadWording = new ConversationDAL();
             loadWording.loadMalaysiaToPhilippines();
 
@@ -1121,7 +1126,7 @@ public class ConversationActivity extends Activity implements SearchView.OnQuery
             myList.setAdapter(listAdapter);
         }
 
-        if(lang_from.equals("Malaysia") && lang_to.equals("Vietnam") || lang_from.equals("มาเลเซีย") && lang_to.equals("เวียดนาม")){
+        if (lang_from.equals("Malaysia") && lang_to.equals("Vietnam") || lang_from.equals("มาเลเซีย") && lang_to.equals("เวียดนาม")) {
             loadWording = new ConversationDAL();
             loadWording.loadMalaysiaToVietnam();
 
@@ -1132,7 +1137,7 @@ public class ConversationActivity extends Activity implements SearchView.OnQuery
             myList.setAdapter(listAdapter);
         }
 
-        if(lang_from.equals("Myanmar") && lang_to.equals("China") || lang_from.equals("พม่า") && lang_to.equals("จีน")){
+        if (lang_from.equals("Myanmar") && lang_to.equals("China") || lang_from.equals("พม่า") && lang_to.equals("จีน")) {
             loadWording = new ConversationDAL();
             loadWording.loadMyanmarToChina();
 
@@ -1143,7 +1148,7 @@ public class ConversationActivity extends Activity implements SearchView.OnQuery
             myList.setAdapter(listAdapter);
         }
 
-        if(lang_from.equals("Myanmar") && lang_to.equals("Thai") || lang_from.equals("พม่า") && lang_to.equals("ไทย")){
+        if (lang_from.equals("Myanmar") && lang_to.equals("Thai") || lang_from.equals("พม่า") && lang_to.equals("ไทย")) {
             loadWording = new ConversationDAL();
             loadWording.loadMyanmarToThai();
 
@@ -1154,7 +1159,7 @@ public class ConversationActivity extends Activity implements SearchView.OnQuery
             myList.setAdapter(listAdapter);
         }
 
-        if(lang_from.equals("Myanmar") && lang_to.equals("Brunei") || lang_from.equals("พม่า") && lang_to.equals("บรูไน")){
+        if (lang_from.equals("Myanmar") && lang_to.equals("Brunei") || lang_from.equals("พม่า") && lang_to.equals("บรูไน")) {
             loadWording = new ConversationDAL();
             loadWording.loadMyanmarToBrunei();
 
@@ -1165,7 +1170,7 @@ public class ConversationActivity extends Activity implements SearchView.OnQuery
             myList.setAdapter(listAdapter);
         }
 
-        if(lang_from.equals("Myanmar") && lang_to.equals("Brunei") || lang_from.equals("พม่า") && lang_to.equals("บรูไน")){
+        if (lang_from.equals("Myanmar") && lang_to.equals("Brunei") || lang_from.equals("พม่า") && lang_to.equals("บรูไน")) {
             loadWording = new ConversationDAL();
             loadWording.loadMyanmarToBrunei();
 
@@ -1176,7 +1181,7 @@ public class ConversationActivity extends Activity implements SearchView.OnQuery
             myList.setAdapter(listAdapter);
         }
 
-        if(lang_from.equals("Myanmar") && lang_to.equals("Cambodia") || lang_from.equals("พม่า") && lang_to.equals("กัมพูชา")){
+        if (lang_from.equals("Myanmar") && lang_to.equals("Cambodia") || lang_from.equals("พม่า") && lang_to.equals("กัมพูชา")) {
             loadWording = new ConversationDAL();
             loadWording.loadMyanmarToCambodia();
 
@@ -1188,7 +1193,7 @@ public class ConversationActivity extends Activity implements SearchView.OnQuery
         }
 
 
-        if(lang_from.equals("Myanmar") && lang_to.equals("Indonesia") || lang_from.equals("พม่า") && lang_to.equals("อินโดนีเซีย")){
+        if (lang_from.equals("Myanmar") && lang_to.equals("Indonesia") || lang_from.equals("พม่า") && lang_to.equals("อินโดนีเซีย")) {
             loadWording = new ConversationDAL();
             loadWording.loadMyanmarToIndonesia();
 
@@ -1199,7 +1204,7 @@ public class ConversationActivity extends Activity implements SearchView.OnQuery
             myList.setAdapter(listAdapter);
         }
 
-        if(lang_from.equals("Myanmar") && lang_to.equals("Laos") || lang_from.equals("พม่า") && lang_to.equals("ลาว")){
+        if (lang_from.equals("Myanmar") && lang_to.equals("Laos") || lang_from.equals("พม่า") && lang_to.equals("ลาว")) {
             loadWording = new ConversationDAL();
             loadWording.loadMyanmarToIndonesia();
 
@@ -1210,7 +1215,7 @@ public class ConversationActivity extends Activity implements SearchView.OnQuery
             myList.setAdapter(listAdapter);
         }
 
-        if(lang_from.equals("Myanmar") && lang_to.equals("Malaysia") || lang_from.equals("พม่า") && lang_to.equals("มาเลเซีย")){
+        if (lang_from.equals("Myanmar") && lang_to.equals("Malaysia") || lang_from.equals("พม่า") && lang_to.equals("มาเลเซีย")) {
             loadWording = new ConversationDAL();
             loadWording.loadMyanmarToMalaysia();
 
@@ -1221,7 +1226,7 @@ public class ConversationActivity extends Activity implements SearchView.OnQuery
             myList.setAdapter(listAdapter);
         }
 
-        if(lang_from.equals("Myanmar") && lang_to.equals("Myanmar") || lang_from.equals("พม่า") && lang_to.equals("พม่า")){
+        if (lang_from.equals("Myanmar") && lang_to.equals("Myanmar") || lang_from.equals("พม่า") && lang_to.equals("พม่า")) {
             loadWording = new ConversationDAL();
             loadWording.loadMyanmarToMyanmar();
 
@@ -1232,7 +1237,7 @@ public class ConversationActivity extends Activity implements SearchView.OnQuery
             myList.setAdapter(listAdapter);
         }
 
-        if(lang_from.equals("Myanmar") && lang_to.equals("Philippines") || lang_from.equals("พม่า") && lang_to.equals("ฟิลิปปินส์")){
+        if (lang_from.equals("Myanmar") && lang_to.equals("Philippines") || lang_from.equals("พม่า") && lang_to.equals("ฟิลิปปินส์")) {
             loadWording = new ConversationDAL();
             loadWording.loadMyanmarToPhilippines();
 
@@ -1244,7 +1249,7 @@ public class ConversationActivity extends Activity implements SearchView.OnQuery
         }
 
 
-        if(lang_from.equals("Myanmar") && lang_to.equals("Singapore") || lang_from.equals("พม่า") && lang_to.equals("สิงคโปร์")){
+        if (lang_from.equals("Myanmar") && lang_to.equals("Singapore") || lang_from.equals("พม่า") && lang_to.equals("สิงคโปร์")) {
             loadWording = new ConversationDAL();
             loadWording.loadMyanmarToSingapore();
 
@@ -1255,7 +1260,7 @@ public class ConversationActivity extends Activity implements SearchView.OnQuery
             myList.setAdapter(listAdapter);
         }
 
-        if(lang_from.equals("Myanmar") && lang_to.equals("Vietnam") || lang_from.equals("พม่า") && lang_to.equals("เวียดนาม")){
+        if (lang_from.equals("Myanmar") && lang_to.equals("Vietnam") || lang_from.equals("พม่า") && lang_to.equals("เวียดนาม")) {
             loadWording = new ConversationDAL();
             loadWording.loadMyanmarToVietnam();
 
@@ -1266,7 +1271,7 @@ public class ConversationActivity extends Activity implements SearchView.OnQuery
             myList.setAdapter(listAdapter);
         }
 
-        if(lang_from.equals("Philippines") && lang_to.equals("China") || lang_from.equals("ฟิลิปปินส์") && lang_to.equals("จีน")){
+        if (lang_from.equals("Philippines") && lang_to.equals("China") || lang_from.equals("ฟิลิปปินส์") && lang_to.equals("จีน")) {
             loadWording = new ConversationDAL();
             loadWording.loadPhilippinesToChina();
 
@@ -1277,7 +1282,7 @@ public class ConversationActivity extends Activity implements SearchView.OnQuery
             myList.setAdapter(listAdapter);
         }
 
-        if(lang_from.equals("Philippines") && lang_to.equals("Thai") || lang_from.equals("ฟิลิปปินส์") && lang_to.equals("ไทย")){
+        if (lang_from.equals("Philippines") && lang_to.equals("Thai") || lang_from.equals("ฟิลิปปินส์") && lang_to.equals("ไทย")) {
             loadWording = new ConversationDAL();
             loadWording.loadPhilippinesToThai();
 
@@ -1288,7 +1293,7 @@ public class ConversationActivity extends Activity implements SearchView.OnQuery
             myList.setAdapter(listAdapter);
         }
 
-        if(lang_from.equals("Philippines") && lang_to.equals("Brunei") || lang_from.equals("ฟิลิปปินส์") && lang_to.equals("บรูไน")){
+        if (lang_from.equals("Philippines") && lang_to.equals("Brunei") || lang_from.equals("ฟิลิปปินส์") && lang_to.equals("บรูไน")) {
             loadWording = new ConversationDAL();
             loadWording.loadPhilippinesToBrunei();
 
@@ -1299,7 +1304,7 @@ public class ConversationActivity extends Activity implements SearchView.OnQuery
             myList.setAdapter(listAdapter);
         }
 
-        if(lang_from.equals("Philippines") && lang_to.equals("Cambodia") || lang_from.equals("ฟิลิปปินส์") && lang_to.equals("กัมพูชา")){
+        if (lang_from.equals("Philippines") && lang_to.equals("Cambodia") || lang_from.equals("ฟิลิปปินส์") && lang_to.equals("กัมพูชา")) {
             loadWording = new ConversationDAL();
             loadWording.loadPhilippinesToCambodia();
 
@@ -1310,7 +1315,7 @@ public class ConversationActivity extends Activity implements SearchView.OnQuery
             myList.setAdapter(listAdapter);
         }
 
-        if(lang_from.equals("Philippines") && lang_to.equals("Indonesia") || lang_from.equals("ฟิลิปปินส์") && lang_to.equals("อินโดนีเซีย")){
+        if (lang_from.equals("Philippines") && lang_to.equals("Indonesia") || lang_from.equals("ฟิลิปปินส์") && lang_to.equals("อินโดนีเซีย")) {
             loadWording = new ConversationDAL();
             loadWording.loadPhilippinesToIndonesia();
 
@@ -1321,7 +1326,7 @@ public class ConversationActivity extends Activity implements SearchView.OnQuery
             myList.setAdapter(listAdapter);
         }
 
-        if(lang_from.equals("Philippines") && lang_to.equals("Laos") || lang_from.equals("ฟิลิปปินส์") && lang_to.equals("ลาว")){
+        if (lang_from.equals("Philippines") && lang_to.equals("Laos") || lang_from.equals("ฟิลิปปินส์") && lang_to.equals("ลาว")) {
             loadWording = new ConversationDAL();
             loadWording.loadPhilippinesToLaos();
 
@@ -1332,7 +1337,7 @@ public class ConversationActivity extends Activity implements SearchView.OnQuery
             myList.setAdapter(listAdapter);
         }
 
-        if(lang_from.equals("Philippines") && lang_to.equals("Malaysia") || lang_from.equals("ฟิลิปปินส์") && lang_to.equals("มาเลเซีย")){
+        if (lang_from.equals("Philippines") && lang_to.equals("Malaysia") || lang_from.equals("ฟิลิปปินส์") && lang_to.equals("มาเลเซีย")) {
             loadWording = new ConversationDAL();
             loadWording.loadPhilippinesToMalaysia();
 
@@ -1343,7 +1348,7 @@ public class ConversationActivity extends Activity implements SearchView.OnQuery
             myList.setAdapter(listAdapter);
         }
 
-        if(lang_from.equals("Philippines") && lang_to.equals("Myanmar") || lang_from.equals("ฟิลิปปินส์") && lang_to.equals("พม่า")){
+        if (lang_from.equals("Philippines") && lang_to.equals("Myanmar") || lang_from.equals("ฟิลิปปินส์") && lang_to.equals("พม่า")) {
             loadWording = new ConversationDAL();
             loadWording.loadPhilippinesToMyanmar();
 
@@ -1354,7 +1359,7 @@ public class ConversationActivity extends Activity implements SearchView.OnQuery
             myList.setAdapter(listAdapter);
         }
 
-        if(lang_from.equals("Philippines") && lang_to.equals("Philippines") || lang_from.equals("ฟิลิปปินส์") && lang_to.equals("ฟิลิปปินส์")){
+        if (lang_from.equals("Philippines") && lang_to.equals("Philippines") || lang_from.equals("ฟิลิปปินส์") && lang_to.equals("ฟิลิปปินส์")) {
             loadWording = new ConversationDAL();
             loadWording.loadPhilippinesToPhilippines();
 
@@ -1365,7 +1370,7 @@ public class ConversationActivity extends Activity implements SearchView.OnQuery
             myList.setAdapter(listAdapter);
         }
 
-        if(lang_from.equals("Philippines") && lang_to.equals("Singapore") || lang_from.equals("ฟิลิปปินส์") && lang_to.equals("สิงคโปร์")){
+        if (lang_from.equals("Philippines") && lang_to.equals("Singapore") || lang_from.equals("ฟิลิปปินส์") && lang_to.equals("สิงคโปร์")) {
             loadWording = new ConversationDAL();
             loadWording.loadPhilippinesToSingapore();
 
@@ -1376,7 +1381,7 @@ public class ConversationActivity extends Activity implements SearchView.OnQuery
             myList.setAdapter(listAdapter);
         }
 
-        if(lang_from.equals("Philippines") && lang_to.equals("Vietnam") || lang_from.equals("ฟิลิปปินส์") && lang_to.equals("เวียดนาม")){
+        if (lang_from.equals("Philippines") && lang_to.equals("Vietnam") || lang_from.equals("ฟิลิปปินส์") && lang_to.equals("เวียดนาม")) {
             loadWording = new ConversationDAL();
             loadWording.loadPhilippinesToVietnam();
 
@@ -1387,7 +1392,7 @@ public class ConversationActivity extends Activity implements SearchView.OnQuery
             myList.setAdapter(listAdapter);
         }
 
-        if(lang_from.equals("Singapore") && lang_to.equals("China") || lang_from.equals("สิงคโปร์") && lang_to.equals("จีน")){
+        if (lang_from.equals("Singapore") && lang_to.equals("China") || lang_from.equals("สิงคโปร์") && lang_to.equals("จีน")) {
             loadWording = new ConversationDAL();
             loadWording.loadSingaporeToChina();
 
@@ -1399,7 +1404,7 @@ public class ConversationActivity extends Activity implements SearchView.OnQuery
         }
 
 
-        if(lang_from.equals("Singapore") && lang_to.equals("Thai") || lang_from.equals("สิงคโปร์") && lang_to.equals("ไทย")){
+        if (lang_from.equals("Singapore") && lang_to.equals("Thai") || lang_from.equals("สิงคโปร์") && lang_to.equals("ไทย")) {
             loadWording = new ConversationDAL();
             loadWording.loadSingaporeToThai();
 
@@ -1411,7 +1416,7 @@ public class ConversationActivity extends Activity implements SearchView.OnQuery
         }
 
 
-        if(lang_from.equals("Singapore") && lang_to.equals("Brunei") || lang_from.equals("สิงคโปร์") && lang_to.equals("บรูไน")){
+        if (lang_from.equals("Singapore") && lang_to.equals("Brunei") || lang_from.equals("สิงคโปร์") && lang_to.equals("บรูไน")) {
             loadWording = new ConversationDAL();
             loadWording.loadSingaporeToBrunei();
 
@@ -1422,7 +1427,7 @@ public class ConversationActivity extends Activity implements SearchView.OnQuery
             myList.setAdapter(listAdapter);
         }
 
-        if(lang_from.equals("Singapore") && lang_to.equals("Cambodia") || lang_from.equals("สิงคโปร์") && lang_to.equals("กัมพูชา")){
+        if (lang_from.equals("Singapore") && lang_to.equals("Cambodia") || lang_from.equals("สิงคโปร์") && lang_to.equals("กัมพูชา")) {
             loadWording = new ConversationDAL();
             loadWording.loadSingaporeToCambodia();
 
@@ -1433,7 +1438,7 @@ public class ConversationActivity extends Activity implements SearchView.OnQuery
             myList.setAdapter(listAdapter);
         }
 
-        if(lang_from.equals("Singapore") && lang_to.equals("Indonesia") || lang_from.equals("สิงคโปร์") && lang_to.equals("อินโดนีเซีย")){
+        if (lang_from.equals("Singapore") && lang_to.equals("Indonesia") || lang_from.equals("สิงคโปร์") && lang_to.equals("อินโดนีเซีย")) {
             loadWording = new ConversationDAL();
             loadWording.loadSingaporeToIndonesia();
 
@@ -1444,7 +1449,7 @@ public class ConversationActivity extends Activity implements SearchView.OnQuery
             myList.setAdapter(listAdapter);
         }
 
-        if(lang_from.equals("Singapore") && lang_to.equals("Laos") || lang_from.equals("สิงคโปร์") && lang_to.equals("ลาว")){
+        if (lang_from.equals("Singapore") && lang_to.equals("Laos") || lang_from.equals("สิงคโปร์") && lang_to.equals("ลาว")) {
             loadWording = new ConversationDAL();
             loadWording.loadSingaporeToLaos();
 
@@ -1455,7 +1460,7 @@ public class ConversationActivity extends Activity implements SearchView.OnQuery
             myList.setAdapter(listAdapter);
         }
 
-        if(lang_from.equals("Singapore") && lang_to.equals("Malaysia") || lang_from.equals("สิงคโปร์") && lang_to.equals("มาเลเซีย")){
+        if (lang_from.equals("Singapore") && lang_to.equals("Malaysia") || lang_from.equals("สิงคโปร์") && lang_to.equals("มาเลเซีย")) {
             loadWording = new ConversationDAL();
             loadWording.loadSingaporeToMalaysia();
 
@@ -1466,7 +1471,7 @@ public class ConversationActivity extends Activity implements SearchView.OnQuery
             myList.setAdapter(listAdapter);
         }
 
-        if(lang_from.equals("Singapore") && lang_to.equals("Myanmar") || lang_from.equals("สิงคโปร์") && lang_to.equals("พม่า")){
+        if (lang_from.equals("Singapore") && lang_to.equals("Myanmar") || lang_from.equals("สิงคโปร์") && lang_to.equals("พม่า")) {
             loadWording = new ConversationDAL();
             loadWording.loadSingaporeToMyanmar();
 
@@ -1477,7 +1482,7 @@ public class ConversationActivity extends Activity implements SearchView.OnQuery
             myList.setAdapter(listAdapter);
         }
 
-        if(lang_from.equals("Singapore") && lang_to.equals("Philippines") || lang_from.equals("สิงคโปร์") && lang_to.equals("ฟิลิปปินส์")){
+        if (lang_from.equals("Singapore") && lang_to.equals("Philippines") || lang_from.equals("สิงคโปร์") && lang_to.equals("ฟิลิปปินส์")) {
             loadWording = new ConversationDAL();
             loadWording.loadSingaporeToPhilippines();
 
@@ -1488,7 +1493,7 @@ public class ConversationActivity extends Activity implements SearchView.OnQuery
             myList.setAdapter(listAdapter);
         }
 
-        if(lang_from.equals("Singapore") && lang_to.equals("Singapore") || lang_from.equals("สิงคโปร์") && lang_to.equals("สิงคโปร์")){
+        if (lang_from.equals("Singapore") && lang_to.equals("Singapore") || lang_from.equals("สิงคโปร์") && lang_to.equals("สิงคโปร์")) {
             loadWording = new ConversationDAL();
             loadWording.loadSingaporeToSingapore();
 
@@ -1499,7 +1504,7 @@ public class ConversationActivity extends Activity implements SearchView.OnQuery
             myList.setAdapter(listAdapter);
         }
 
-        if(lang_from.equals("Singapore") && lang_to.equals("Vietnam") || lang_from.equals("สิงคโปร์") && lang_to.equals("เวียดนาม")){
+        if (lang_from.equals("Singapore") && lang_to.equals("Vietnam") || lang_from.equals("สิงคโปร์") && lang_to.equals("เวียดนาม")) {
             loadWording = new ConversationDAL();
             loadWording.loadSingaporeToVietnam();
 
@@ -1510,7 +1515,7 @@ public class ConversationActivity extends Activity implements SearchView.OnQuery
             myList.setAdapter(listAdapter);
         }
 
-        if(lang_from.equals("Vietnam") && lang_to.equals("China") || lang_from.equals("เวียดนาม") && lang_to.equals("จีน")){
+        if (lang_from.equals("Vietnam") && lang_to.equals("China") || lang_from.equals("เวียดนาม") && lang_to.equals("จีน")) {
             loadWording = new ConversationDAL();
             loadWording.loadVietnamToChina();
 
@@ -1521,7 +1526,7 @@ public class ConversationActivity extends Activity implements SearchView.OnQuery
             myList.setAdapter(listAdapter);
         }
 
-        if(lang_from.equals("Vietnam") && lang_to.equals("Thai") || lang_from.equals("เวียดนาม") && lang_to.equals("ไทย")){
+        if (lang_from.equals("Vietnam") && lang_to.equals("Thai") || lang_from.equals("เวียดนาม") && lang_to.equals("ไทย")) {
             loadWording = new ConversationDAL();
             loadWording.loadVietnamToThai();
 
@@ -1532,7 +1537,7 @@ public class ConversationActivity extends Activity implements SearchView.OnQuery
             myList.setAdapter(listAdapter);
         }
 
-        if(lang_from.equals("Vietnam") && lang_to.equals("Brunei") || lang_from.equals("เวียดนาม") && lang_to.equals("บรูไน")){
+        if (lang_from.equals("Vietnam") && lang_to.equals("Brunei") || lang_from.equals("เวียดนาม") && lang_to.equals("บรูไน")) {
             loadWording = new ConversationDAL();
             loadWording.loadVietnamToBrunei();
 
@@ -1543,7 +1548,7 @@ public class ConversationActivity extends Activity implements SearchView.OnQuery
             myList.setAdapter(listAdapter);
         }
 
-        if(lang_from.equals("Vietnam") && lang_to.equals("Cambodia") || lang_from.equals("เวียดนาม") && lang_to.equals("กัมพูชา")){
+        if (lang_from.equals("Vietnam") && lang_to.equals("Cambodia") || lang_from.equals("เวียดนาม") && lang_to.equals("กัมพูชา")) {
             loadWording = new ConversationDAL();
             loadWording.loadVietnamToCambodia();
 
@@ -1554,7 +1559,7 @@ public class ConversationActivity extends Activity implements SearchView.OnQuery
             myList.setAdapter(listAdapter);
         }
 
-        if(lang_from.equals("Vietnam") && lang_to.equals("Indonesia") || lang_from.equals("เวียดนาม") && lang_to.equals("อินโดนีเซีย")){
+        if (lang_from.equals("Vietnam") && lang_to.equals("Indonesia") || lang_from.equals("เวียดนาม") && lang_to.equals("อินโดนีเซีย")) {
             loadWording = new ConversationDAL();
             loadWording.loadVietnamToIndonesia();
 
@@ -1566,7 +1571,7 @@ public class ConversationActivity extends Activity implements SearchView.OnQuery
         }
 
 
-        if(lang_from.equals("Vietnam") && lang_to.equals("Laos") || lang_from.equals("เวียดนาม") && lang_to.equals("ลาว")){
+        if (lang_from.equals("Vietnam") && lang_to.equals("Laos") || lang_from.equals("เวียดนาม") && lang_to.equals("ลาว")) {
             loadWording = new ConversationDAL();
             loadWording.loadVietnamToLaos();
 
@@ -1577,7 +1582,7 @@ public class ConversationActivity extends Activity implements SearchView.OnQuery
             myList.setAdapter(listAdapter);
         }
 
-        if(lang_from.equals("Vietnam") && lang_to.equals("Malaysia") || lang_from.equals("เวียดนาม") && lang_to.equals("มาเลเซีย")){
+        if (lang_from.equals("Vietnam") && lang_to.equals("Malaysia") || lang_from.equals("เวียดนาม") && lang_to.equals("มาเลเซีย")) {
             loadWording = new ConversationDAL();
             loadWording.loadVietnamToMalaysia();
 
@@ -1588,7 +1593,7 @@ public class ConversationActivity extends Activity implements SearchView.OnQuery
             myList.setAdapter(listAdapter);
         }
 
-        if(lang_from.equals("Vietnam") && lang_to.equals("Myanmar") || lang_from.equals("เวียดนาม") && lang_to.equals("พม่า")){
+        if (lang_from.equals("Vietnam") && lang_to.equals("Myanmar") || lang_from.equals("เวียดนาม") && lang_to.equals("พม่า")) {
             loadWording = new ConversationDAL();
             loadWording.loadVietnamToMyanmar();
 
@@ -1599,7 +1604,7 @@ public class ConversationActivity extends Activity implements SearchView.OnQuery
             myList.setAdapter(listAdapter);
         }
 
-        if(lang_from.equals("Vietnam") && lang_to.equals("Philippines") || lang_from.equals("เวียดนาม") && lang_to.equals("ฟิลิปปินส์")){
+        if (lang_from.equals("Vietnam") && lang_to.equals("Philippines") || lang_from.equals("เวียดนาม") && lang_to.equals("ฟิลิปปินส์")) {
             loadWording = new ConversationDAL();
             loadWording.loadVietnamToPhilippines();
 
@@ -1610,7 +1615,7 @@ public class ConversationActivity extends Activity implements SearchView.OnQuery
             myList.setAdapter(listAdapter);
         }
 
-        if(lang_from.equals("Vietnam") && lang_to.equals("Singapore") || lang_from.equals("เวียดนาม") && lang_to.equals("สิงคโปร์")){
+        if (lang_from.equals("Vietnam") && lang_to.equals("Singapore") || lang_from.equals("เวียดนาม") && lang_to.equals("สิงคโปร์")) {
             loadWording = new ConversationDAL();
             loadWording.loadVietnamToSingapore();
 
@@ -1621,7 +1626,7 @@ public class ConversationActivity extends Activity implements SearchView.OnQuery
             myList.setAdapter(listAdapter);
         }
 
-        if(lang_from.equals("Vietnam") && lang_to.equals("Vietnam") || lang_from.equals("เวียดนาม") && lang_to.equals("เวียดนาม")){
+        if (lang_from.equals("Vietnam") && lang_to.equals("Vietnam") || lang_from.equals("เวียดนาม") && lang_to.equals("เวียดนาม")) {
             loadWording = new ConversationDAL();
             loadWording.loadVietnamToVietnam();
 
@@ -1636,56 +1641,25 @@ public class ConversationActivity extends Activity implements SearchView.OnQuery
     }
 
 
+    public boolean onQueryTextChange(String newText) {
+        myList.setTextFilterEnabled(true);
+        if (TextUtils.isEmpty(newText)) {
+            myList.clearTextFilter();
+        } else {
+            myList.setFilterText(newText.toString());
+        }
+        return true;
+    }
+
+
     //method expand all groups
-    private void expandAll(){
+    private void expandAll() {
         int count = listAdapter.getGroupCount();
-        for (int i = 0 ;i< count;i++){
+        for (int i = 0; i < count; i++) {
             myList.expandGroup(i);
         }
     }
 
-    private void loadThaiToBrunei() {
-
-            ArrayList<Child> childList = new ArrayList<Child>();
-            Child child = new Child("Test1", "Test2", "Test3", "Test4", "Test5", null, null);
-            childList.add(child);
-
-            GroupHeader groupHeader = new GroupHeader("TEST", "SUB", childList);
-            groupHeaderList.add(groupHeader);
-
-
-    }
-
-    @Override
-    public boolean onClose(){
-        listAdapter.filterData("");
-        expandAll();
-        return false;
-    }
-
-    @Override
-    public boolean onQueryTextChange(String qry) {
-        listAdapter.filterData(qry);
-        expandAll();
-        return false;
-    }
-
-    @Override
-    public boolean onQueryTextSubmit(String qry) {
-        listAdapter.filterData(qry);
-        expandAll();
-        return false;
-    }
-
-    private void search() {
-        SearchManager searchManager = (SearchManager) getSystemService(Context.SEARCH_SERVICE);
-        search = (SearchView) findViewById(R.id.action_search);
-        search.setSearchableInfo(searchManager.getSearchableInfo(getComponentName()));
-        search.setIconifiedByDefault(false);
-        search.setOnQueryTextListener(this);
-        search.setOnCloseListener(this);
-
-    }
 
     private void initWidget() {
         countryFrom = (Spinner) findViewById(R.id.spinner_show);
@@ -1700,12 +1674,16 @@ public class ConversationActivity extends Activity implements SearchView.OnQuery
         sqLiteDatabase.close();
     }
 
-@Override
-public boolean onCreateOptionsMenu(Menu menu) {
-    MenuInflater inflater = getMenuInflater();
-    inflater.inflate(R.menu.activity_main_actions, menu);
-    return true;
-}
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.activity_main_actions, menu);
+
+
+
+        return super.onCreateOptionsMenu(menu);
+
+    }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
@@ -1717,14 +1695,16 @@ public boolean onCreateOptionsMenu(Menu menu) {
                 startActivity(i);
                 return true;
             //break;
+            case R.id.action_search:
+                // search action
+                return true;
             default:
                 return super.onOptionsItemSelected(item);
         }
     }
 
 
-
-    }
+}
 
 
 

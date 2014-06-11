@@ -49,26 +49,29 @@
         <activity android:name=".ShowDataActivity"
             android:configChanges="locale|layoutDirection"/>
 
-        <activity android:name=".Database.ConversationDAL"
-            android:screenOrientation="portrait"/>
+        <provider
+            android:authorities="com.example.happytalk.app"
+            android:name=".MySuggestionProvider"/>
 
         <activity android:name=".SettingActivity"
             android:label="@string/action_settings"
             android:parentActivityName=".MainActivity"
             android:screenOrientation="portrait"
             android:configChanges="locale|layoutDirection"/>
+        <activity android:name=".SearchActivity"
+            android:screenOrientation="portrait"/>
 
-        <!-- Search results activity -->
-        <activity android:name=".SearchResultsActivity"
-            android:parentActivityName=".MainActivity" >
-            <intent-filter>
-                <action android:name="android.intent.action.SEARCH" />
-            </intent-filter>
+        <!--&lt;!&ndash; Search results activity &ndash;&gt;-->
+        <!--<activity android:name=".SearchResultsActivity"-->
+            <!--android:parentActivityName=".MainActivity" >-->
+            <!--<intent-filter>-->
+                <!--<action android:name="android.intent.action.SEARCH" />-->
+            <!--</intent-filter>-->
 
-            <meta-data
-                android:name="android.app.searchable"
-                android:resource="@xml/searchable" />
-        </activity>
+            <!--<meta-data-->
+                <!--android:name="android.app.searchable"-->
+                <!--android:resource="@xml/searchable" />-->
+        <!--</activity>-->
 
 
     </application>

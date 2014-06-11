@@ -29,6 +29,7 @@ public class ConversationDAL {
         groupHeaderList.add(groupHeader);
 
 
+
     }
 
     public void loadThaiToChina(){
@@ -37,6 +38,15 @@ public class ConversationDAL {
         childList.add(child);
 
         GroupHeader groupHeader = new GroupHeader("Thai","China",childList);
+        groupHeaderList.add(groupHeader);
+
+        //------------------------------------//
+
+        childList = new ArrayList<Child>();
+        child = new Child("ไทย1","ไทย2","ไทย3","ไทย4","ไทย5",null,null);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("ไทยครัช","Thai",childList);
         groupHeaderList.add(groupHeader);
 
 
