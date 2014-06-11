@@ -12,6 +12,8 @@ import android.widget.TextView;
 import android.text.TextUtils;
 
 import java.util.ArrayList;
+import java.util.List;
+import java.util.Locale;
 
 /**
  * Created by oVANILLAz on 6/9/14 AD.
@@ -19,6 +21,7 @@ import java.util.ArrayList;
 public class MyListAdapter extends BaseExpandableListAdapter {
 
     private Context context;
+
     private ArrayList<GroupHeader> groupHeadersList;
     private ArrayList<GroupHeader> originalList;
 
@@ -27,7 +30,7 @@ public class MyListAdapter extends BaseExpandableListAdapter {
         this.groupHeadersList = new ArrayList<GroupHeader>();
         this.groupHeadersList.addAll(groupHeadersList);
         this.originalList = new ArrayList<GroupHeader>();
-        this.originalList = new ArrayList<GroupHeader>();
+        this.originalList.addAll(groupHeadersList);
 
     }
 
@@ -38,7 +41,7 @@ public class MyListAdapter extends BaseExpandableListAdapter {
     }
 
     @Override
-    public long getChildId(int groupPosiion,int childPosition){
+    public long getChildId(int groupPosition,int childPosition){
         return childPosition;
     }
 
@@ -131,22 +134,22 @@ public class MyListAdapter extends BaseExpandableListAdapter {
     }
 
 
-    public void filterData(String qry){
-        qry =qry.toLowerCase();
+    public void filterData(String query){
+        query =query.toLowerCase();
 
         Log.v("MyListAdapter",String.valueOf(groupHeadersList.size()));
         groupHeadersList.clear();
 
-        if(qry.isEmpty()){
+        if(query.isEmpty()){
             groupHeadersList.addAll(originalList);
-            //groupHeadersList.clear();
+
         }
         else{
             for(GroupHeader groupHeader:originalList){
                 ArrayList<Child> groupHeaders = groupHeader.getChildList();
                 ArrayList<Child> newList = new ArrayList<Child>();
                 for(Child child : groupHeaders){
-                    if(child.getWordFrom().toLowerCase().contains(qry) || child.getWordTo().toLowerCase().contains(qry)){
+                    if(child.getWordFrom().toLowerCase().contains(query) || child.getWordTo().toLowerCase().contains(query)){
                         newList.add(child);
                     }
                 }
@@ -164,6 +167,37 @@ public class MyListAdapter extends BaseExpandableListAdapter {
         notifyDataSetChanged();
     }
 
+    // Filter Class
+    public void filter(String charText) {
+        charText = charText.toLowerCase(Locale.getDefault());
+        groupHeadersList.clear();
+
+        if(charText.length()==0){
+            groupHeadersList.addAll(originalList);
+            //groupHeadersList.clear();
+        }
+        else{
+            for(GroupHeader groupHeader:originalList){
+                ArrayList<Child> groupHeaders = groupHeader.getChildList();
+                ArrayList<Child> newList = new ArrayList<Child>();
+                for(Child child : groupHeaders){
+                    if(child.getWordFrom().toLowerCase().contains(charText) || child.getWordTo().toLowerCase().contains(charText)){
+                        newList.add(child);
+                    }
+                }
+                if(newList.size()>0){
+                    GroupHeader nGroupHeader = new GroupHeader(groupHeader.getWordFrom(),groupHeader.getWordEN(),newList);
+                    groupHeadersList.add(nGroupHeader);
+                }
+
+
+            }
+        }
+
+
+        Log.v("MyListAdapter" ,String.valueOf(groupHeadersList.size()));
+        notifyDataSetChanged();
+    }
 
 
 }

@@ -1,8 +1,12 @@
 package com.example.happytalk.app;
 
 import android.app.Activity;
+import android.app.SearchManager;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -20,11 +24,12 @@ import com.example.happytalk.app.Database.PlaceDAL;
 import com.example.happytalk.app.Database.ThingDAL;
 
 import java.util.ArrayList;
+import java.util.Locale;
 
 /**
  * Created by oVANILLAz on 6/11/14 AD.
  */
-public class SearchActivity extends Activity implements SearchView.OnQueryTextListener {
+public class SearchActivity extends Activity implements SearchView.OnQueryTextListener, SearchView.OnCloseListener {
 
     private ConversationDAL loadConversation;
     private ThingDAL loadThing;
@@ -38,7 +43,8 @@ public class SearchActivity extends Activity implements SearchView.OnQueryTextLi
     private ArrayList<GroupHeader> groupHeaderList = new ArrayList<GroupHeader>();
     private String strCountryFrom, strCountryTo;
 
-    EditText editSerch;
+    EditText editSearch;
+    private SearchView search;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -51,9 +57,28 @@ public class SearchActivity extends Activity implements SearchView.OnQueryTextLi
 
     }
 
-    private void initSearch() {
+//    private void initSearch() {
+//        editSearch = (EditText)findViewById(R.id.searchText);
+//        editSearch.addTextChangedListener(new TextWatcher() {
+//            @Override
+//            public void beforeTextChanged(CharSequence arg0, int arg1, int arg2, int arg3) {
+//
+//            }
+//
+//            @Override
+//            public void onTextChanged(CharSequence s, int start, int before, int count) {
+//
+//            }
+//
+//            @Override
+//            public void afterTextChanged(Editable arg0) {
+//                String text = editSearch.getText().toString().toLowerCase();
+//                listAdapter.filter(text);
+//            }
+//        });
+//
+//    }
 
-    }
 
     private void checkLanguage() {
         Bundle extras = getIntent().getExtras();
@@ -114,18 +139,37 @@ public class SearchActivity extends Activity implements SearchView.OnQueryTextLi
 
 
     }
+    private void initSearch(){
+        SearchManager searchManager = (SearchManager) getSystemService(Context.SEARCH_SERVICE);
+        search = (SearchView)findViewById(R.id.searchText);
+        search.setSearchableInfo(searchManager.getSearchableInfo(getComponentName()));
+        search.setIconifiedByDefault(false);
+        search.setOnQueryTextListener(this);
+        search.setOnCloseListener((SearchView.OnCloseListener) this);
+    }
 
 
+    public boolean onClose() {
+        listAdapter.filterData("");
+
+        return false;
+    }
+
+    @Override
+    public boolean onQueryTextChange(String query) {
+        listAdapter.filterData(query);
+
+        return false;
+    }
 
     @Override
     public boolean onQueryTextSubmit(String query) {
+        listAdapter.filterData(query);
+
         return false;
     }
 
-    @Override
-    public boolean onQueryTextChange(String newText) {
-        return false;
-    }
+
 
 
 
