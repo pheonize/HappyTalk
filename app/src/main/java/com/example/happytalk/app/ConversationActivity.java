@@ -1678,11 +1678,7 @@ public class ConversationActivity extends Activity {
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.activity_main_actions, menu);
-
-
-
-        return super.onCreateOptionsMenu(menu);
-
+        return true;
     }
 
     @Override
@@ -1696,7 +1692,11 @@ public class ConversationActivity extends Activity {
                 return true;
             //break;
             case R.id.action_search:
-                // search action
+                Intent intent;
+                intent = new Intent(getApplicationContext(),SearchActivity.class);
+                intent.putExtra("strCountryFrom", strCountryFrom);
+                intent.putExtra("strCountryTo", strCountryTo);
+                startActivity(intent);
                 return true;
             default:
                 return super.onOptionsItemSelected(item);

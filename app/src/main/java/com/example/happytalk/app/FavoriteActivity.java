@@ -11,4 +11,7 @@ public class FavoriteActivity extends Activity{
         super.onCreate(saveInstanceState);
         setContentView(R.layout.favorite);
     }
+
+
+
 }

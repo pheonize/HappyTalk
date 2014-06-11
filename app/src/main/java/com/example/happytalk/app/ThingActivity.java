@@ -1591,6 +1591,13 @@ public class ThingActivity extends Activity implements SearchView.OnQueryTextLis
                 startActivity(i);
                 return true;
             //break;
+            case R.id.action_search:
+                Intent intent;
+                intent = new Intent(getApplicationContext(),SearchActivity.class);
+                intent.putExtra("strCountryFrom", strCountryFrom);
+                intent.putExtra("strCountryTo", strCountryTo);
+                startActivity(intent);
+                return true;
             default:
                 return super.onOptionsItemSelected(item);
         }

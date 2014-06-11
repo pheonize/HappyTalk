@@ -54,6 +54,7 @@ public class MyListAdapter extends BaseExpandableListAdapter {
        }
 
         TextView txtwordFrom = (TextView) view.findViewById(R.id.txtWordFrom);
+        TextView txtwordEN = (TextView) view.findViewById(R.id.txtWordEN);
         TextView txtwordTo =(TextView) view.findViewById(R.id.txtWordTo);
         TextView txtkaraokeTH = (TextView) view.findViewById(R.id.txtKaraokeTH);
         TextView txtkaraokeEN = (TextView) view.findViewById(R.id.txtKaraokeEN);
@@ -74,8 +75,8 @@ public class MyListAdapter extends BaseExpandableListAdapter {
             }
         });
 
-
         txtwordFrom.setText(child.getWordFrom().trim());
+        txtwordEN.setText(child.getWordEN().trim());
         txtwordTo.setText(child.getWordTo().trim());
         txtkaraokeEN.setText(child.getKaraokeEN().trim());
         txtkaraokeTH.setText(child.getKaraokeTH().trim());
