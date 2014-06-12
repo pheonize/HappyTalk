@@ -1,6 +1,8 @@
 package com.example.happytalk.app.Database;
 
 import android.app.Activity;
+import android.content.res.Resources;
+import android.media.MediaPlayer;
 import android.widget.ExpandableListView;
 import android.widget.SearchView;
 
@@ -14,7 +16,7 @@ import java.util.ArrayList;
 /**
  * Created by oVANILLAz on 6/10/14 AD.
  */
-public class ConversationDAL {
+public class ConversationDAL  {
 
 
 
@@ -1129,4 +1131,6 @@ public class ConversationDAL {
     {
         return groupHeaderList;
     }
+
+
 }

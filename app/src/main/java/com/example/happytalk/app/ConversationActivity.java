@@ -76,6 +76,7 @@ public class ConversationActivity extends Activity implements MediaPlayer.OnComp
     private ArrayList<GroupHeader> groupHeaderList = new ArrayList<GroupHeader>();
 
     private ConversationDAL loadWording;
+    private SoundClass soundLoad;
 
     private MediaPlayer mediaPlayer;
     Button btnSound;
@@ -301,13 +302,21 @@ public class ConversationActivity extends Activity implements MediaPlayer.OnComp
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
 
-            ImageButton btnSound = listAdapter.btnSound;
-            btnSound.setOnClickListener(new View.OnClickListener() {
+
+
+
+            listAdapter.btnSound.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Toast.makeText(context,"Test",Toast.LENGTH_LONG).show();
+            //        Toast.makeText(context,"Test",Toast.LENGTH_LONG).show();
+                    MediaPlayer mp = MediaPlayer.create(getApplicationContext(),R.raw.th);
+                    mp.start();
                 }
             });
+
+
+
+
 
 
 

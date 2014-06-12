@@ -22,15 +22,18 @@ import java.util.Locale;
 /**
  * Created by oVANILLAz on 6/9/14 AD.
  */
-public class MyListAdapter extends BaseExpandableListAdapter implements View.OnClickListener {
+public class MyListAdapter extends BaseExpandableListAdapter {
 
     private Context context;
 
     private ArrayList<GroupHeader> groupHeadersList;
     private ArrayList<GroupHeader> originalList;
     private MediaPlayer mediaPlayer;
-    ImageButton btnSound;
-    ImageButton btnFavorite;
+    Button btnSound;
+    Button btnFavorite;
+
+    private SoundClass soundClass;
+
 
     public MyListAdapter(Context context,ArrayList<GroupHeader> groupHeadersList){
         this.context = context;
@@ -67,13 +70,21 @@ public class MyListAdapter extends BaseExpandableListAdapter implements View.OnC
         TextView txtkaraokeEN = (TextView) view.findViewById(R.id.txtKaraokeEN);
 
 
-        ImageButton btnSound = (ImageButton) view.findViewById(R.id.sounds);
-        ImageButton btnFavorite = (ImageButton) view.findViewById(R.id.favorite);
+        Button btnSound = (Button) view.findViewById(R.id.sounds);
+        Button btnFavorite = (Button) view.findViewById(R.id.favorite);
 
+       // soundClass = new SoundClass();
+        //soundClass.loadSound();
+
+
+//
 //        btnSound.setOnClickListener(new View.OnClickListener() {
 //            @Override
 //            public void onClick(View v) {
-//                Toast.makeText(context,"Test",Toast.LENGTH_LONG).show();
+//
+//
+//                //Toast.makeText(context,"Test",Toast.LENGTH_LONG).show();
+//
 //            }
 //        });
 
@@ -207,8 +218,21 @@ public class MyListAdapter extends BaseExpandableListAdapter implements View.OnC
     }
 
 
-    @Override
-    public void onClick(View v) {
 
+
+    //LoadSound
+
+
+    public void loadSound(){
+
+
+        btnSound.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(context,"Test",Toast.LENGTH_LONG).show();
+            }
+        });
     }
+
+
 }

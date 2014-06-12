@@ -50,6 +50,8 @@
         <activity android:name=".ShowDataActivity"
             android:configChanges="locale|layoutDirection"/>
 
+        <activity android:name=".SoundClass"/>
+
         <provider
             android:authorities="com.example.happytalk.app"
             android:name=".MySuggestionProvider"/>
