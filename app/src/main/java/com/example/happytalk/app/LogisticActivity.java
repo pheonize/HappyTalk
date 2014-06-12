@@ -64,6 +64,10 @@ public class LogisticActivity extends Activity implements SearchView.OnQueryText
 
     private LogisticDAL loadWording;
 
+    //Set value
+    String lang_from,lang_to;
+
+
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -116,8 +120,14 @@ public class LogisticActivity extends Activity implements SearchView.OnQueryText
 
         }
         displayList(lang_from, lang_to);
+        saveValue(lang_from,lang_to);
     }
 
+    public void saveValue(String lang_from, String lang_to) {
+        this.lang_from = lang_from;
+        this.lang_to = lang_to;
+
+    }
 
     //method to expand all group
     public void displayList(String lang_from, String lang_to) {
@@ -1565,6 +1575,7 @@ public class LogisticActivity extends Activity implements SearchView.OnQueryText
         sqLiteDatabase.close();
     }
 
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
@@ -1575,6 +1586,7 @@ public class LogisticActivity extends Activity implements SearchView.OnQueryText
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
 
+
         switch (item.getItemId()) {
             case R.id.action_settings:
                 Intent i;
@@ -1582,8 +1594,21 @@ public class LogisticActivity extends Activity implements SearchView.OnQueryText
                 startActivity(i);
                 return true;
             //break;
+            case R.id.action_search:
+                Intent intent;
+                intent = new Intent(getApplicationContext(),SearchActivity.class);
+
+
+                saveValue(lang_from,lang_to);
+                intent.putExtra("strCountryFrom", lang_from);
+                intent.putExtra("strCountryTo", lang_to);
+                startActivity(intent);
+
+
+                return true;
             default:
                 return super.onOptionsItemSelected(item);
         }
     }
+
 }

@@ -62,6 +62,7 @@ public class PlaceActivity extends Activity implements SearchView.OnQueryTextLis
     private ArrayList<GroupHeader> groupHeaderList = new ArrayList<GroupHeader>();
 
     private PlaceDAL loadWording;
+    String lang_from,lang_to;
 
 
     @Override
@@ -115,6 +116,13 @@ public class PlaceActivity extends Activity implements SearchView.OnQueryTextLis
 
         }
         displayList(lang_from, lang_to);
+        saveValue(lang_from,lang_to);
+    }
+
+    public void saveValue(String lang_from, String lang_to) {
+        this.lang_from = lang_from;
+        this.lang_to = lang_to;
+
     }
 
 
@@ -1574,6 +1582,7 @@ public class PlaceActivity extends Activity implements SearchView.OnQueryTextLis
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
 
+
         switch (item.getItemId()) {
             case R.id.action_settings:
                 Intent i;
@@ -1581,6 +1590,18 @@ public class PlaceActivity extends Activity implements SearchView.OnQueryTextLis
                 startActivity(i);
                 return true;
             //break;
+            case R.id.action_search:
+                Intent intent;
+                intent = new Intent(getApplicationContext(),SearchActivity.class);
+
+
+                saveValue(lang_from,lang_to);
+                intent.putExtra("strCountryFrom", lang_from);
+                intent.putExtra("strCountryTo", lang_to);
+                startActivity(intent);
+
+
+                return true;
             default:
                 return super.onOptionsItemSelected(item);
         }

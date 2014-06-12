@@ -21,6 +21,8 @@ import android.text.TextUtils;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ExpandableListView;
 
@@ -58,6 +60,7 @@ public class ConversationActivity extends Activity implements MediaPlayer.OnComp
             R.drawable.vietnam_flag};
 
 
+    String lang_from,lang_to;
     private Cursor cursor;
 
     private Spinner countryFrom, countryTo;
@@ -76,6 +79,7 @@ public class ConversationActivity extends Activity implements MediaPlayer.OnComp
     Button btnSound;
 
 
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
 
@@ -92,6 +96,8 @@ public class ConversationActivity extends Activity implements MediaPlayer.OnComp
         //searchWidget();
 
         checkLanguage();
+
+
 
         //DB
 
@@ -218,7 +224,7 @@ public class ConversationActivity extends Activity implements MediaPlayer.OnComp
     }
 
 
-    private void checkLanguage() {
+    public void checkLanguage() {
         Bundle extras = getIntent().getExtras();
         if (extras == null) {
             return;
@@ -244,7 +250,19 @@ public class ConversationActivity extends Activity implements MediaPlayer.OnComp
 
         }
         displayList(lang_from, lang_to);
+
+        saveValue(lang_from,lang_to);
+
     }
+
+
+
+    public void saveValue(String lang_from, String lang_to) {
+        this.lang_from = lang_from;
+        this.lang_to = lang_to;
+
+    }
+
 
 
     //method to expand all group
@@ -1637,8 +1655,13 @@ public class ConversationActivity extends Activity implements MediaPlayer.OnComp
             myList.setAdapter(listAdapter);
         }
 
+//        else{
+//            onOptionsItemSelected()
+//
+//        }
 
     }
+
 
 
     public boolean onQueryTextChange(String newText) {
@@ -1650,6 +1673,7 @@ public class ConversationActivity extends Activity implements MediaPlayer.OnComp
         }
         return true;
     }
+
 
 
     //method expand all groups
@@ -1674,6 +1698,8 @@ public class ConversationActivity extends Activity implements MediaPlayer.OnComp
         sqLiteDatabase.close();
     }
 
+
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
@@ -1683,6 +1709,7 @@ public class ConversationActivity extends Activity implements MediaPlayer.OnComp
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
+
 
         switch (item.getItemId()) {
             case R.id.action_settings:
@@ -1694,14 +1721,22 @@ public class ConversationActivity extends Activity implements MediaPlayer.OnComp
             case R.id.action_search:
                 Intent intent;
                 intent = new Intent(getApplicationContext(),SearchActivity.class);
-                intent.putExtra("strCountryFrom", strCountryFrom);
-                intent.putExtra("strCountryTo", strCountryTo);
+
+
+                saveValue(lang_from,lang_to);
+                intent.putExtra("strCountryFrom", lang_from);
+                intent.putExtra("strCountryTo", lang_to);
                 startActivity(intent);
+
+
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
         }
     }
+
+
+
 
 
     @Override
