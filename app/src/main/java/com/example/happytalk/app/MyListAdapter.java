@@ -1,5 +1,6 @@
 package com.example.happytalk.app;
 
+import android.app.Activity;
 import android.content.Context;
 import android.media.MediaPlayer;
 import android.util.Log;
@@ -7,10 +8,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseExpandableListAdapter;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.text.TextUtils;
 import android.widget.Button;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -19,14 +22,15 @@ import java.util.Locale;
 /**
  * Created by oVANILLAz on 6/9/14 AD.
  */
-public class MyListAdapter extends BaseExpandableListAdapter implements MediaPlayer.OnCompletionListener {
+public class MyListAdapter extends BaseExpandableListAdapter implements View.OnClickListener {
 
     private Context context;
 
     private ArrayList<GroupHeader> groupHeadersList;
     private ArrayList<GroupHeader> originalList;
     private MediaPlayer mediaPlayer;
-    Button btnSound;
+    ImageButton btnSound;
+    ImageButton btnFavorite;
 
     public MyListAdapter(Context context,ArrayList<GroupHeader> groupHeadersList){
         this.context = context;
@@ -61,32 +65,27 @@ public class MyListAdapter extends BaseExpandableListAdapter implements MediaPla
         TextView txtwordTo =(TextView) view.findViewById(R.id.txtWordTo);
         TextView txtkaraokeTH = (TextView) view.findViewById(R.id.txtKaraokeTH);
         TextView txtkaraokeEN = (TextView) view.findViewById(R.id.txtKaraokeEN);
-        final ImageView btnSound = (ImageView) view.findViewById(R.id.sound);
-        ImageView btnFavorite = (ImageView) view.findViewById(R.id.favorite);
 
-        btnSound.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if(mediaPlayer == null){
-                  // mediaPlayer = MediaPlayer.create(MyListAdapter.this,R.raw.sound);
 
-                    mediaPlayer.setOnCompletionListener(MyListAdapter.this);
-                }
-            }
-        });
+        ImageButton btnSound = (ImageButton) view.findViewById(R.id.sounds);
+        ImageButton btnFavorite = (ImageButton) view.findViewById(R.id.favorite);
 
-        btnFavorite.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+//        btnSound.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Toast.makeText(context,"Test",Toast.LENGTH_LONG).show();
+//            }
+//        });
 
-            }
-        });
+
+
 
         txtwordFrom.setText(child.getWordFrom().trim());
         txtwordEN.setText(child.getWordEN().trim());
         txtwordTo.setText(child.getWordTo().trim());
         txtkaraokeEN.setText(child.getKaraokeEN().trim());
         txtkaraokeTH.setText(child.getKaraokeTH().trim());
+
         return view;
     }
 
@@ -209,7 +208,7 @@ public class MyListAdapter extends BaseExpandableListAdapter implements MediaPla
 
 
     @Override
-    public void onCompletion(MediaPlayer mp) {
-        return;
+    public void onClick(View v) {
+
     }
 }

@@ -18,9 +18,10 @@
     <PreferenceScreen
         android:key="About "
         android:title="@string/about">
-        <PreferenceCategory android:title="@string/about">
+        <PreferenceCategory android:title="@string/about"></PreferenceCategory>
             <PreferenceScreen
-                android:layout="@layout/about">
+                android:layout="@layout/about"
+               >
 
                 </PreferenceScreen>
 
@@ -32,7 +33,7 @@
 
 
 
-        </PreferenceCategory>
+
         
         </PreferenceScreen>
 </PreferenceScreen>

@@ -26,10 +26,12 @@ import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ExpandableListView;
 
+import android.widget.ImageButton;
 import android.widget.MediaController;
 import android.widget.SearchView;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 import android.widget.VideoView;
 
 
@@ -77,6 +79,7 @@ public class ConversationActivity extends Activity implements MediaPlayer.OnComp
 
     private MediaPlayer mediaPlayer;
     Button btnSound;
+    Button btnFavorite;
 
 
 
@@ -92,8 +95,7 @@ public class ConversationActivity extends Activity implements MediaPlayer.OnComp
         getResources().updateConfiguration(configuration, null);
 
         initWidget();
-//        search();
-        //searchWidget();
+
 
         checkLanguage();
 
@@ -285,6 +287,8 @@ public class ConversationActivity extends Activity implements MediaPlayer.OnComp
             myList.setAdapter(listAdapter);
 
 
+
+
         }
 
         if (lang_from.equals("Thai") && lang_to.equals("China") || lang_from.equals("ไทย") && lang_to.equals("จีน")) {
@@ -297,14 +301,14 @@ public class ConversationActivity extends Activity implements MediaPlayer.OnComp
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
 
+            ImageButton btnSound = listAdapter.btnSound;
+            btnSound.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Toast.makeText(context,"Test",Toast.LENGTH_LONG).show();
+                }
+            });
 
-//            videoView =(VideoView)findViewById(R.id.sound);
-//            Uri uri = Uri.parse("android.resource://" + getPackageName() + "/" +R.raw.sound);
-//
-//            mediaPlayer = new MediaController(this);
-//            videoView.setMediaController(mediaPlayer);
-//            videoView.setVideoURI(uri);
-//            videoView.start();
 
 
         }
