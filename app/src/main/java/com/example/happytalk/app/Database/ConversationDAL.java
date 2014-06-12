@@ -24,6 +24,7 @@ public class ConversationDAL  {
 
     public void loadThaiToBrunei(){
         ArrayList<Child> childList = new ArrayList<Child>();
+        //karaokeEN, karaokeTH,wordFrom,wordEN,wordTo,sound,favorite
         Child child = new Child("Test1","Test2","Test3","Test4","Test5",null,null);
         childList.add(child);
 
@@ -41,6 +42,8 @@ public class ConversationDAL  {
 
         GroupHeader groupHeader = new GroupHeader("Thai","China",childList);
         groupHeaderList.add(groupHeader);
+
+
 
         //------------------------------------//
 

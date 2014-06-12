@@ -7,11 +7,12 @@ import android.widget.ImageView;
  * Created by oVANILLAz on 6/8/14 AD.
  */
 public class Child {
-    private String karaokeEN = " ";
-    private String karaokeTH = " ";
+
     private String wordFrom = " ";
     private String wordEN =" ";
     private String wordTo =" ";
+    private String karaokeTH = " ";
+    private String karaokeEN = " ";
     private ImageView sound ;
     private ImageView favorite;
 

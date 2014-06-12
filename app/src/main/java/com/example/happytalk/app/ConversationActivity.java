@@ -76,7 +76,6 @@ public class ConversationActivity extends Activity implements MediaPlayer.OnComp
     private ArrayList<GroupHeader> groupHeaderList = new ArrayList<GroupHeader>();
 
     private ConversationDAL loadWording;
-    private SoundClass soundLoad;
 
     private MediaPlayer mediaPlayer;
     Button btnSound;
@@ -108,122 +107,7 @@ public class ConversationActivity extends Activity implements MediaPlayer.OnComp
 
         sqLiteDatabase = db.getWritableDatabase();
 
-//        cursor = sqLiteDatabase.rawQuery("SELECT * FROM " + Database.TABLE_CONVERSATION, null);
-//
-//        ArrayList<String> dirArray = new ArrayList<String>();
-//
-//        cursor.moveToFirst();
-//        while (!cursor.isAfterLast()) {
-//            dirArray.add(cursor.getString(cursor.getColumnIndex(Database.COLUMN_WORDEN)) +
-//                     System.getProperty("line.separator") + "" + cursor.getString(cursor.getColumnIndex(Database.COLUMN_WORDTO)));
-//            cursor.moveToNext();
-//        }
 
-
-        // if (lang_from.equals("Thai") && lang_to.equals("Brunei") || lang_from.equals("ไทย") && lang_to.equals("บรูไน")) {
-
-        //display list
-        // displayList();
-        //expand all group
-        //expandAll();
-
-
-        //work
-//            final ArrayList<HashMap<String,String>> dataList = db.ShowAllData();
-//            ListView listView = (ListView)findViewById(R.id.listViewInfo);
-//            SimpleAdapter adt = new SimpleAdapter(ConversationActivity.this,dataList,R.layout.showitemdb_custom,
-//                    new String[]{"wordFrom","wordEN"},new int[]{R.id.mainWord,R.id.subWord});
-//            listView.setAdapter(adt);
-
-
-        /////
-
-//            listView.setOnItemClickListener(new OnItemClickListener() {
-//                @Override
-//                public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-//                    Intent intent;
-//                    intent = new Intent(getApplicationContext(),ShowDataActivity.class);
-//
-//                    //Send data
-//
-//                    intent.putExtra("strLangFrom",lang_from);
-//                    intent.putExtra("strLangTo",lang_to);
-//
-//                    String wordFrom = ((TextView)view.findViewById(R.id.txtWordFrom)).getText().toString();
-//                    intent.putExtra("wordFrom",wordFrom);
-//                    String wordTo = ((TextView)view.findViewById(R.id.txtWordTo)).getText().toString();
-//                    intent.putExtra("wordTo",wordTo);
-//                    String wordEN =((TextView)view.findViewById(R.id.txtWordEN)).getText().toString();
-//                    intent.putExtra("wordEN",wordEN);
-//                    String karaokeEN = ((TextView)view.findViewById(R.id.txtKaraokeEN)).getText().toString();
-//                    intent.putExtra("karaokeEN",karaokeEN);
-//                    String karaokeTH =((TextView)view.findViewById(R.id.txtKaraokeTH)).getText().toString();
-//                    intent.putExtra("karaokeTH",karaokeTH);
-//
-//
-//                    startActivity(intent);
-//
-//                }
-//            });listView.setOnItemClickListener(new OnItemClickListener() {
-//                @Override
-//                public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-//                    Intent intent;
-//                    intent = new Intent(getApplicationContext(),ShowDataActivity.class);
-//
-//                    //Send data
-//
-//                    intent.putExtra("strLangFrom",lang_from);
-//                    intent.putExtra("strLangTo",lang_to);
-//
-//                    String wordFrom = ((TextView)view.findViewById(R.id.txtWordFrom)).getText().toString();
-//                    intent.putExtra("wordFrom",wordFrom);
-//                    String wordTo = ((TextView)view.findViewById(R.id.txtWordTo)).getText().toString();
-//                    intent.putExtra("wordTo",wordTo);
-//                    String wordEN =((TextView)view.findViewById(R.id.txtWordEN)).getText().toString();
-//                    intent.putExtra("wordEN",wordEN);
-//                    String karaokeEN = ((TextView)view.findViewById(R.id.txtKaraokeEN)).getText().toString();
-//                    intent.putExtra("karaokeEN",karaokeEN);
-//                    String karaokeTH =((TextView)view.findViewById(R.id.txtKaraokeTH)).getText().toString();
-//                    intent.putExtra("karaokeTH",karaokeTH);
-//
-//
-//                    startActivity(intent);
-//
-//                }
-//            });listView.setOnItemClickListener(new OnItemClickListener() {
-//                @Override
-//                public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-//                    Intent intent;
-//                    intent = new Intent(getApplicationContext(),ShowDataActivity.class);
-//
-//                    //Send data
-//
-//                    intent.putExtra("strLangFrom",lang_from);
-//                    intent.putExtra("strLangTo",lang_to);
-//
-//                    String wordFrom = ((TextView)view.findViewById(R.id.txtWordFrom)).getText().toString();
-//                    intent.putExtra("wordFrom",wordFrom);
-//                    String wordTo = ((TextView)view.findViewById(R.id.txtWordTo)).getText().toString();
-//                    intent.putExtra("wordTo",wordTo);
-//                    String wordEN =((TextView)view.findViewById(R.id.txtWordEN)).getText().toString();
-//                    intent.putExtra("wordEN",wordEN);
-//                    String karaokeEN = ((TextView)view.findViewById(R.id.txtKaraokeEN)).getText().toString();
-//                    intent.putExtra("karaokeEN",karaokeEN);
-//                    String karaokeTH =((TextView)view.findViewById(R.id.txtKaraokeTH)).getText().toString();
-//                    intent.putExtra("karaokeTH",karaokeTH);
-//
-//
-//                    startActivity(intent);
-//
-//                }
-//            });
-
-
-//        } else {
-//            Intent intent;
-//            intent = new Intent(getApplicationContext(), MainActivity.class);
-//            startActivity(intent);
-//        }
     }
 
 

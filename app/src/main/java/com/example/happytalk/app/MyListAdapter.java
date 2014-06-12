@@ -31,9 +31,13 @@ public class MyListAdapter extends BaseExpandableListAdapter {
     private MediaPlayer mediaPlayer;
     Button btnSound;
     Button btnFavorite;
-    private String lang_from,lang_to;
+    private String lang_from,lang_to ;
 
-    private SoundClass soundClass;
+    private ArrayList<GroupHeader> groupHeader = new ArrayList<GroupHeader>();
+
+    private Child child;
+
+
 
 
     public MyListAdapter(Context context,ArrayList<GroupHeader> groupHeadersList,String lang_from,String lang_To){
@@ -44,6 +48,7 @@ public class MyListAdapter extends BaseExpandableListAdapter {
         this.originalList.addAll(groupHeadersList);
         this.lang_from = lang_from;
         this.lang_to = lang_To;
+
 
 
     }
@@ -61,7 +66,7 @@ public class MyListAdapter extends BaseExpandableListAdapter {
 
     @Override
     public View getChildView(int groupPosition,int childPosition,boolean isLastChild,View view ,ViewGroup parent){
-       Child child = (Child) getChild(groupPosition, childPosition);
+       child = (Child) getChild(groupPosition, childPosition);
         if(view==null){
            LayoutInflater layoutInflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             view = layoutInflater.inflate(R.layout.child_item,null);
@@ -87,9 +92,6 @@ public class MyListAdapter extends BaseExpandableListAdapter {
             public void onClick(View v) {
 
                 loadSound(lang_from,lang_to);
-
-
-              //  Toast.makeText(context,"Test",Toast.LENGTH_LONG).show();
 
 
             }
@@ -232,15 +234,22 @@ public class MyListAdapter extends BaseExpandableListAdapter {
 
     public void loadSound(String lang_from,String lang_to){
 
-
-        btnSound.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                //Toast.makeText(context,"Test",Toast.LENGTH_LONG).show();
-                MediaPlayer mp = MediaPlayer.create(context,R.raw.th);
+    //Th-ch
+            if(child.getWordFrom().contains("Test8")) {
+                MediaPlayer mp = MediaPlayer.create(context, R.raw.hello_th);
                 mp.start();
             }
-        });
+
+    //Th-Br
+        if(child.getWordFrom().contains("Test3")){
+            MediaPlayer mp = MediaPlayer.create(context, R.raw.hello_br);
+            mp.start();
+        }
+
+
+
+
+
     }
 
 
