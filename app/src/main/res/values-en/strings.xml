@@ -16,6 +16,7 @@
     <string name="action_search">Search</string>
     <string name="search_hint">search_hint</string>
 
+    <string name="language">Language</string>
 
     <string name="from">From</string>
     <string name="to">To</string>
@@ -25,6 +26,7 @@
     <string name="help">Assistance/Emergency</string>
     <string name="logistic">Logistics </string>
     <string name="favorite">Favorite</string>
+    <string name="aboutThai">About Thai Health</string>
     <string name="about1">
         Thai Federation on Logistics has been operate the Happy Workplace scheme which supported by Thai Health Promotion Foundation
         under a project name “New dimensional of happy workplace to increase wellbeing for land logistics staffs”.

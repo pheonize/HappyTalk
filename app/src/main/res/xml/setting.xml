@@ -3,8 +3,8 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
     <PreferenceScreen
         android:key="language"
-        android:title="Language">
-    <PreferenceCategory android:title="Language">
+        android:title="@string/language">
+    <PreferenceCategory android:title="@string/language">
         <ListPreference
             android:key="langPref"
             android:defaultValue="ENG"
@@ -17,10 +17,15 @@
     </PreferenceScreen>
     <PreferenceScreen
         android:key="About "
-        android:title="About Us">
-        <PreferenceCategory android:title="About Us">
-            <intent android:action="android.intent.action.VIEW"
-                android:targetClass="@string/about"></intent>
+        android:title="@string/about">
+        <PreferenceCategory android:title="@string/about">
+            <PreferenceScreen
+                android:layout="@layout/about">
+
+                </PreferenceScreen>
+
+            <!--<intent android:action="android.intent.action.VIEW"-->
+                <!--android:targetClass="@string/about"></intent>-->
 
 
 
