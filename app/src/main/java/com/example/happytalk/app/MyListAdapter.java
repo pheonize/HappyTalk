@@ -31,16 +31,20 @@ public class MyListAdapter extends BaseExpandableListAdapter {
     private MediaPlayer mediaPlayer;
     Button btnSound;
     Button btnFavorite;
+    private String lang_from,lang_to;
 
     private SoundClass soundClass;
 
 
-    public MyListAdapter(Context context,ArrayList<GroupHeader> groupHeadersList){
+    public MyListAdapter(Context context,ArrayList<GroupHeader> groupHeadersList,String lang_from,String lang_To){
         this.context = context;
         this.groupHeadersList = new ArrayList<GroupHeader>();
         this.groupHeadersList.addAll(groupHeadersList);
         this.originalList = new ArrayList<GroupHeader>();
         this.originalList.addAll(groupHeadersList);
+        this.lang_from = lang_from;
+        this.lang_to = lang_To;
+
 
     }
 
@@ -70,8 +74,8 @@ public class MyListAdapter extends BaseExpandableListAdapter {
         TextView txtkaraokeEN = (TextView) view.findViewById(R.id.txtKaraokeEN);
 
 
-        Button btnSound = (Button) view.findViewById(R.id.sounds);
-        Button btnFavorite = (Button) view.findViewById(R.id.favorite);
+        btnSound = (Button) view.findViewById(R.id.sounds);
+        btnFavorite = (Button) view.findViewById(R.id.favorite);
 
        // soundClass = new SoundClass();
         //soundClass.loadSound();
@@ -82,8 +86,11 @@ public class MyListAdapter extends BaseExpandableListAdapter {
             @Override
             public void onClick(View v) {
 
+                loadSound(lang_from,lang_to);
 
-                Toast.makeText(context,"Test",Toast.LENGTH_LONG).show();
+
+              //  Toast.makeText(context,"Test",Toast.LENGTH_LONG).show();
+
 
             }
         });
@@ -223,13 +230,15 @@ public class MyListAdapter extends BaseExpandableListAdapter {
     //LoadSound
 
 
-    public void loadSound(){
+    public void loadSound(String lang_from,String lang_to){
 
 
         btnSound.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(context,"Test",Toast.LENGTH_LONG).show();
+                //Toast.makeText(context,"Test",Toast.LENGTH_LONG).show();
+                MediaPlayer mp = MediaPlayer.create(context,R.raw.th);
+                mp.start();
             }
         });
     }

@@ -156,7 +156,7 @@ public class HelpActivity extends Activity implements SearchView.OnQueryTextList
             //get ref to the expandableListView
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
 
@@ -169,7 +169,7 @@ public class HelpActivity extends Activity implements SearchView.OnQueryTextList
             //get ref to the expandableListView
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
 
@@ -180,7 +180,7 @@ public class HelpActivity extends Activity implements SearchView.OnQueryTextList
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -191,7 +191,7 @@ public class HelpActivity extends Activity implements SearchView.OnQueryTextList
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -201,7 +201,7 @@ public class HelpActivity extends Activity implements SearchView.OnQueryTextList
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -211,7 +211,7 @@ public class HelpActivity extends Activity implements SearchView.OnQueryTextList
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -222,7 +222,7 @@ public class HelpActivity extends Activity implements SearchView.OnQueryTextList
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -232,7 +232,7 @@ public class HelpActivity extends Activity implements SearchView.OnQueryTextList
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -243,7 +243,7 @@ public class HelpActivity extends Activity implements SearchView.OnQueryTextList
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -254,7 +254,7 @@ public class HelpActivity extends Activity implements SearchView.OnQueryTextList
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -265,7 +265,7 @@ public class HelpActivity extends Activity implements SearchView.OnQueryTextList
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -276,7 +276,7 @@ public class HelpActivity extends Activity implements SearchView.OnQueryTextList
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -287,7 +287,7 @@ public class HelpActivity extends Activity implements SearchView.OnQueryTextList
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -298,7 +298,7 @@ public class HelpActivity extends Activity implements SearchView.OnQueryTextList
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -309,7 +309,7 @@ public class HelpActivity extends Activity implements SearchView.OnQueryTextList
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -320,7 +320,7 @@ public class HelpActivity extends Activity implements SearchView.OnQueryTextList
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -331,7 +331,7 @@ public class HelpActivity extends Activity implements SearchView.OnQueryTextList
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -343,7 +343,7 @@ public class HelpActivity extends Activity implements SearchView.OnQueryTextList
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -354,7 +354,7 @@ public class HelpActivity extends Activity implements SearchView.OnQueryTextList
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -365,7 +365,7 @@ public class HelpActivity extends Activity implements SearchView.OnQueryTextList
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -376,7 +376,7 @@ public class HelpActivity extends Activity implements SearchView.OnQueryTextList
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -387,7 +387,7 @@ public class HelpActivity extends Activity implements SearchView.OnQueryTextList
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -398,7 +398,7 @@ public class HelpActivity extends Activity implements SearchView.OnQueryTextList
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -409,7 +409,7 @@ public class HelpActivity extends Activity implements SearchView.OnQueryTextList
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -420,7 +420,7 @@ public class HelpActivity extends Activity implements SearchView.OnQueryTextList
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -431,7 +431,7 @@ public class HelpActivity extends Activity implements SearchView.OnQueryTextList
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -442,7 +442,7 @@ public class HelpActivity extends Activity implements SearchView.OnQueryTextList
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -453,7 +453,7 @@ public class HelpActivity extends Activity implements SearchView.OnQueryTextList
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -464,7 +464,7 @@ public class HelpActivity extends Activity implements SearchView.OnQueryTextList
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -475,7 +475,7 @@ public class HelpActivity extends Activity implements SearchView.OnQueryTextList
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -486,7 +486,7 @@ public class HelpActivity extends Activity implements SearchView.OnQueryTextList
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -498,7 +498,7 @@ public class HelpActivity extends Activity implements SearchView.OnQueryTextList
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -509,7 +509,7 @@ public class HelpActivity extends Activity implements SearchView.OnQueryTextList
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -520,7 +520,7 @@ public class HelpActivity extends Activity implements SearchView.OnQueryTextList
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -531,7 +531,7 @@ public class HelpActivity extends Activity implements SearchView.OnQueryTextList
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -542,7 +542,7 @@ public class HelpActivity extends Activity implements SearchView.OnQueryTextList
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -553,7 +553,7 @@ public class HelpActivity extends Activity implements SearchView.OnQueryTextList
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -564,7 +564,7 @@ public class HelpActivity extends Activity implements SearchView.OnQueryTextList
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -575,7 +575,7 @@ public class HelpActivity extends Activity implements SearchView.OnQueryTextList
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -586,7 +586,7 @@ public class HelpActivity extends Activity implements SearchView.OnQueryTextList
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -597,7 +597,7 @@ public class HelpActivity extends Activity implements SearchView.OnQueryTextList
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -608,7 +608,7 @@ public class HelpActivity extends Activity implements SearchView.OnQueryTextList
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -619,7 +619,7 @@ public class HelpActivity extends Activity implements SearchView.OnQueryTextList
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -630,7 +630,7 @@ public class HelpActivity extends Activity implements SearchView.OnQueryTextList
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -641,7 +641,7 @@ public class HelpActivity extends Activity implements SearchView.OnQueryTextList
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -652,7 +652,7 @@ public class HelpActivity extends Activity implements SearchView.OnQueryTextList
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -663,7 +663,7 @@ public class HelpActivity extends Activity implements SearchView.OnQueryTextList
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -674,7 +674,7 @@ public class HelpActivity extends Activity implements SearchView.OnQueryTextList
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -685,7 +685,7 @@ public class HelpActivity extends Activity implements SearchView.OnQueryTextList
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -696,7 +696,7 @@ public class HelpActivity extends Activity implements SearchView.OnQueryTextList
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -707,7 +707,7 @@ public class HelpActivity extends Activity implements SearchView.OnQueryTextList
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -718,7 +718,7 @@ public class HelpActivity extends Activity implements SearchView.OnQueryTextList
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -729,7 +729,7 @@ public class HelpActivity extends Activity implements SearchView.OnQueryTextList
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -740,7 +740,7 @@ public class HelpActivity extends Activity implements SearchView.OnQueryTextList
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -751,7 +751,7 @@ public class HelpActivity extends Activity implements SearchView.OnQueryTextList
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -762,7 +762,7 @@ public class HelpActivity extends Activity implements SearchView.OnQueryTextList
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -773,7 +773,7 @@ public class HelpActivity extends Activity implements SearchView.OnQueryTextList
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -784,7 +784,7 @@ public class HelpActivity extends Activity implements SearchView.OnQueryTextList
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -795,7 +795,7 @@ public class HelpActivity extends Activity implements SearchView.OnQueryTextList
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -806,7 +806,7 @@ public class HelpActivity extends Activity implements SearchView.OnQueryTextList
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -817,7 +817,7 @@ public class HelpActivity extends Activity implements SearchView.OnQueryTextList
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -828,7 +828,7 @@ public class HelpActivity extends Activity implements SearchView.OnQueryTextList
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -839,7 +839,7 @@ public class HelpActivity extends Activity implements SearchView.OnQueryTextList
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -850,7 +850,7 @@ public class HelpActivity extends Activity implements SearchView.OnQueryTextList
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -861,7 +861,7 @@ public class HelpActivity extends Activity implements SearchView.OnQueryTextList
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -873,7 +873,7 @@ public class HelpActivity extends Activity implements SearchView.OnQueryTextList
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -884,7 +884,7 @@ public class HelpActivity extends Activity implements SearchView.OnQueryTextList
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -895,7 +895,7 @@ public class HelpActivity extends Activity implements SearchView.OnQueryTextList
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -906,7 +906,7 @@ public class HelpActivity extends Activity implements SearchView.OnQueryTextList
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -917,7 +917,7 @@ public class HelpActivity extends Activity implements SearchView.OnQueryTextList
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -928,7 +928,7 @@ public class HelpActivity extends Activity implements SearchView.OnQueryTextList
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -939,7 +939,7 @@ public class HelpActivity extends Activity implements SearchView.OnQueryTextList
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -950,7 +950,7 @@ public class HelpActivity extends Activity implements SearchView.OnQueryTextList
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -961,7 +961,7 @@ public class HelpActivity extends Activity implements SearchView.OnQueryTextList
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -972,7 +972,7 @@ public class HelpActivity extends Activity implements SearchView.OnQueryTextList
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -983,7 +983,7 @@ public class HelpActivity extends Activity implements SearchView.OnQueryTextList
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -994,7 +994,7 @@ public class HelpActivity extends Activity implements SearchView.OnQueryTextList
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -1005,7 +1005,7 @@ public class HelpActivity extends Activity implements SearchView.OnQueryTextList
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -1016,7 +1016,7 @@ public class HelpActivity extends Activity implements SearchView.OnQueryTextList
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -1027,7 +1027,7 @@ public class HelpActivity extends Activity implements SearchView.OnQueryTextList
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -1038,7 +1038,7 @@ public class HelpActivity extends Activity implements SearchView.OnQueryTextList
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -1049,7 +1049,7 @@ public class HelpActivity extends Activity implements SearchView.OnQueryTextList
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -1060,7 +1060,7 @@ public class HelpActivity extends Activity implements SearchView.OnQueryTextList
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -1071,7 +1071,7 @@ public class HelpActivity extends Activity implements SearchView.OnQueryTextList
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -1083,7 +1083,7 @@ public class HelpActivity extends Activity implements SearchView.OnQueryTextList
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -1094,7 +1094,7 @@ public class HelpActivity extends Activity implements SearchView.OnQueryTextList
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -1105,7 +1105,7 @@ public class HelpActivity extends Activity implements SearchView.OnQueryTextList
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -1116,7 +1116,7 @@ public class HelpActivity extends Activity implements SearchView.OnQueryTextList
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -1127,7 +1127,7 @@ public class HelpActivity extends Activity implements SearchView.OnQueryTextList
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -1139,7 +1139,7 @@ public class HelpActivity extends Activity implements SearchView.OnQueryTextList
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -1150,7 +1150,7 @@ public class HelpActivity extends Activity implements SearchView.OnQueryTextList
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -1161,7 +1161,7 @@ public class HelpActivity extends Activity implements SearchView.OnQueryTextList
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -1172,7 +1172,7 @@ public class HelpActivity extends Activity implements SearchView.OnQueryTextList
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -1183,7 +1183,7 @@ public class HelpActivity extends Activity implements SearchView.OnQueryTextList
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -1194,7 +1194,7 @@ public class HelpActivity extends Activity implements SearchView.OnQueryTextList
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -1205,7 +1205,7 @@ public class HelpActivity extends Activity implements SearchView.OnQueryTextList
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -1216,7 +1216,7 @@ public class HelpActivity extends Activity implements SearchView.OnQueryTextList
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -1227,7 +1227,7 @@ public class HelpActivity extends Activity implements SearchView.OnQueryTextList
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -1238,7 +1238,7 @@ public class HelpActivity extends Activity implements SearchView.OnQueryTextList
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -1249,7 +1249,7 @@ public class HelpActivity extends Activity implements SearchView.OnQueryTextList
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -1260,7 +1260,7 @@ public class HelpActivity extends Activity implements SearchView.OnQueryTextList
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -1271,7 +1271,7 @@ public class HelpActivity extends Activity implements SearchView.OnQueryTextList
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -1282,7 +1282,7 @@ public class HelpActivity extends Activity implements SearchView.OnQueryTextList
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -1294,7 +1294,7 @@ public class HelpActivity extends Activity implements SearchView.OnQueryTextList
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -1306,7 +1306,7 @@ public class HelpActivity extends Activity implements SearchView.OnQueryTextList
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -1317,7 +1317,7 @@ public class HelpActivity extends Activity implements SearchView.OnQueryTextList
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -1328,7 +1328,7 @@ public class HelpActivity extends Activity implements SearchView.OnQueryTextList
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -1339,7 +1339,7 @@ public class HelpActivity extends Activity implements SearchView.OnQueryTextList
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -1350,7 +1350,7 @@ public class HelpActivity extends Activity implements SearchView.OnQueryTextList
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -1361,7 +1361,7 @@ public class HelpActivity extends Activity implements SearchView.OnQueryTextList
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -1372,7 +1372,7 @@ public class HelpActivity extends Activity implements SearchView.OnQueryTextList
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -1383,7 +1383,7 @@ public class HelpActivity extends Activity implements SearchView.OnQueryTextList
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -1394,7 +1394,7 @@ public class HelpActivity extends Activity implements SearchView.OnQueryTextList
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -1405,7 +1405,7 @@ public class HelpActivity extends Activity implements SearchView.OnQueryTextList
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -1416,7 +1416,7 @@ public class HelpActivity extends Activity implements SearchView.OnQueryTextList
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -1427,7 +1427,7 @@ public class HelpActivity extends Activity implements SearchView.OnQueryTextList
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -1438,7 +1438,7 @@ public class HelpActivity extends Activity implements SearchView.OnQueryTextList
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -1449,7 +1449,7 @@ public class HelpActivity extends Activity implements SearchView.OnQueryTextList
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -1461,7 +1461,7 @@ public class HelpActivity extends Activity implements SearchView.OnQueryTextList
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -1472,7 +1472,7 @@ public class HelpActivity extends Activity implements SearchView.OnQueryTextList
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -1483,7 +1483,7 @@ public class HelpActivity extends Activity implements SearchView.OnQueryTextList
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -1494,7 +1494,7 @@ public class HelpActivity extends Activity implements SearchView.OnQueryTextList
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -1505,7 +1505,7 @@ public class HelpActivity extends Activity implements SearchView.OnQueryTextList
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -1516,7 +1516,7 @@ public class HelpActivity extends Activity implements SearchView.OnQueryTextList
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }

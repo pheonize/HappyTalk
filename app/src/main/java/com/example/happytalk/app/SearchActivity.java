@@ -116,7 +116,7 @@ public class SearchActivity extends Activity implements SearchView.OnQueryTextLi
             //get ref to the expandableListView
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(SearchActivity.this, daLconnection.getGroupHeaderList());
+            listAdapter = new MyListAdapter(SearchActivity.this, daLconnection.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -130,7 +130,7 @@ public class SearchActivity extends Activity implements SearchView.OnQueryTextLi
             //get ref to the expandableListView
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(SearchActivity.this, daLconnection.getGroupHeaderList());
+            listAdapter = new MyListAdapter(SearchActivity.this, daLconnection.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
 

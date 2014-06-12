@@ -26,6 +26,7 @@ public class Database extends SQLiteOpenHelper {
     public static final String TABLE_LOGISTIC = "logistic";
 
 
+
     public static final String COLUMN_ID = "id";
     public static final String COLUMN_LANGFROM ="langFrom";
     public static final String COLUMN_LANGTO ="langTo";
@@ -44,8 +45,6 @@ public class Database extends SQLiteOpenHelper {
 
 
     }
-
-
 
     //Create Table
     @Override
@@ -89,10 +88,7 @@ public class Database extends SQLiteOpenHelper {
         db.execSQL(CREATE_LOGISTIC_TABLE);
 
     }
-
-
     //Conversation
-
 
     void addConversation(Conversation conversation){
         SQLiteDatabase db =this.getWritableDatabase();

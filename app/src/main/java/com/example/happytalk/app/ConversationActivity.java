@@ -283,7 +283,7 @@ public class ConversationActivity extends Activity implements MediaPlayer.OnComp
             //get ref to the expandableListView
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
 
@@ -298,7 +298,7 @@ public class ConversationActivity extends Activity implements MediaPlayer.OnComp
             //get ref to the expandableListView
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
 
@@ -319,7 +319,7 @@ public class ConversationActivity extends Activity implements MediaPlayer.OnComp
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -330,7 +330,7 @@ public class ConversationActivity extends Activity implements MediaPlayer.OnComp
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -340,7 +340,7 @@ public class ConversationActivity extends Activity implements MediaPlayer.OnComp
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -350,7 +350,7 @@ public class ConversationActivity extends Activity implements MediaPlayer.OnComp
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -361,7 +361,7 @@ public class ConversationActivity extends Activity implements MediaPlayer.OnComp
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -371,7 +371,7 @@ public class ConversationActivity extends Activity implements MediaPlayer.OnComp
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -382,7 +382,7 @@ public class ConversationActivity extends Activity implements MediaPlayer.OnComp
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -393,7 +393,7 @@ public class ConversationActivity extends Activity implements MediaPlayer.OnComp
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -404,7 +404,7 @@ public class ConversationActivity extends Activity implements MediaPlayer.OnComp
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -415,7 +415,7 @@ public class ConversationActivity extends Activity implements MediaPlayer.OnComp
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -426,7 +426,7 @@ public class ConversationActivity extends Activity implements MediaPlayer.OnComp
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -437,7 +437,7 @@ public class ConversationActivity extends Activity implements MediaPlayer.OnComp
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -448,7 +448,7 @@ public class ConversationActivity extends Activity implements MediaPlayer.OnComp
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -459,7 +459,7 @@ public class ConversationActivity extends Activity implements MediaPlayer.OnComp
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -470,7 +470,7 @@ public class ConversationActivity extends Activity implements MediaPlayer.OnComp
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -482,7 +482,7 @@ public class ConversationActivity extends Activity implements MediaPlayer.OnComp
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -493,7 +493,7 @@ public class ConversationActivity extends Activity implements MediaPlayer.OnComp
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -504,7 +504,7 @@ public class ConversationActivity extends Activity implements MediaPlayer.OnComp
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -515,7 +515,7 @@ public class ConversationActivity extends Activity implements MediaPlayer.OnComp
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -526,7 +526,7 @@ public class ConversationActivity extends Activity implements MediaPlayer.OnComp
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -537,7 +537,7 @@ public class ConversationActivity extends Activity implements MediaPlayer.OnComp
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -548,7 +548,7 @@ public class ConversationActivity extends Activity implements MediaPlayer.OnComp
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -559,7 +559,7 @@ public class ConversationActivity extends Activity implements MediaPlayer.OnComp
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -570,7 +570,7 @@ public class ConversationActivity extends Activity implements MediaPlayer.OnComp
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -581,7 +581,7 @@ public class ConversationActivity extends Activity implements MediaPlayer.OnComp
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -592,7 +592,7 @@ public class ConversationActivity extends Activity implements MediaPlayer.OnComp
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -603,7 +603,7 @@ public class ConversationActivity extends Activity implements MediaPlayer.OnComp
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -614,7 +614,7 @@ public class ConversationActivity extends Activity implements MediaPlayer.OnComp
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -625,7 +625,7 @@ public class ConversationActivity extends Activity implements MediaPlayer.OnComp
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -637,7 +637,7 @@ public class ConversationActivity extends Activity implements MediaPlayer.OnComp
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -648,7 +648,7 @@ public class ConversationActivity extends Activity implements MediaPlayer.OnComp
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -659,7 +659,7 @@ public class ConversationActivity extends Activity implements MediaPlayer.OnComp
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -670,7 +670,7 @@ public class ConversationActivity extends Activity implements MediaPlayer.OnComp
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -681,7 +681,7 @@ public class ConversationActivity extends Activity implements MediaPlayer.OnComp
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -692,7 +692,7 @@ public class ConversationActivity extends Activity implements MediaPlayer.OnComp
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -703,7 +703,7 @@ public class ConversationActivity extends Activity implements MediaPlayer.OnComp
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -714,7 +714,7 @@ public class ConversationActivity extends Activity implements MediaPlayer.OnComp
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -725,7 +725,7 @@ public class ConversationActivity extends Activity implements MediaPlayer.OnComp
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -736,7 +736,7 @@ public class ConversationActivity extends Activity implements MediaPlayer.OnComp
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -747,7 +747,7 @@ public class ConversationActivity extends Activity implements MediaPlayer.OnComp
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -758,7 +758,7 @@ public class ConversationActivity extends Activity implements MediaPlayer.OnComp
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -769,7 +769,7 @@ public class ConversationActivity extends Activity implements MediaPlayer.OnComp
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -780,7 +780,7 @@ public class ConversationActivity extends Activity implements MediaPlayer.OnComp
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -791,7 +791,7 @@ public class ConversationActivity extends Activity implements MediaPlayer.OnComp
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -802,7 +802,7 @@ public class ConversationActivity extends Activity implements MediaPlayer.OnComp
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -813,7 +813,7 @@ public class ConversationActivity extends Activity implements MediaPlayer.OnComp
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -824,7 +824,7 @@ public class ConversationActivity extends Activity implements MediaPlayer.OnComp
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -835,7 +835,7 @@ public class ConversationActivity extends Activity implements MediaPlayer.OnComp
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -846,7 +846,7 @@ public class ConversationActivity extends Activity implements MediaPlayer.OnComp
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -857,7 +857,7 @@ public class ConversationActivity extends Activity implements MediaPlayer.OnComp
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -868,7 +868,7 @@ public class ConversationActivity extends Activity implements MediaPlayer.OnComp
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -879,7 +879,7 @@ public class ConversationActivity extends Activity implements MediaPlayer.OnComp
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -890,7 +890,7 @@ public class ConversationActivity extends Activity implements MediaPlayer.OnComp
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -901,7 +901,7 @@ public class ConversationActivity extends Activity implements MediaPlayer.OnComp
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -912,7 +912,7 @@ public class ConversationActivity extends Activity implements MediaPlayer.OnComp
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -923,7 +923,7 @@ public class ConversationActivity extends Activity implements MediaPlayer.OnComp
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -934,7 +934,7 @@ public class ConversationActivity extends Activity implements MediaPlayer.OnComp
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -945,7 +945,7 @@ public class ConversationActivity extends Activity implements MediaPlayer.OnComp
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -956,7 +956,7 @@ public class ConversationActivity extends Activity implements MediaPlayer.OnComp
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -967,7 +967,7 @@ public class ConversationActivity extends Activity implements MediaPlayer.OnComp
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -978,7 +978,7 @@ public class ConversationActivity extends Activity implements MediaPlayer.OnComp
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -989,7 +989,7 @@ public class ConversationActivity extends Activity implements MediaPlayer.OnComp
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -1000,7 +1000,7 @@ public class ConversationActivity extends Activity implements MediaPlayer.OnComp
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -1012,7 +1012,7 @@ public class ConversationActivity extends Activity implements MediaPlayer.OnComp
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -1023,7 +1023,7 @@ public class ConversationActivity extends Activity implements MediaPlayer.OnComp
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -1034,7 +1034,7 @@ public class ConversationActivity extends Activity implements MediaPlayer.OnComp
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -1045,7 +1045,7 @@ public class ConversationActivity extends Activity implements MediaPlayer.OnComp
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -1056,7 +1056,7 @@ public class ConversationActivity extends Activity implements MediaPlayer.OnComp
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -1067,7 +1067,7 @@ public class ConversationActivity extends Activity implements MediaPlayer.OnComp
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -1078,7 +1078,7 @@ public class ConversationActivity extends Activity implements MediaPlayer.OnComp
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -1089,7 +1089,7 @@ public class ConversationActivity extends Activity implements MediaPlayer.OnComp
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -1100,7 +1100,7 @@ public class ConversationActivity extends Activity implements MediaPlayer.OnComp
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -1111,7 +1111,7 @@ public class ConversationActivity extends Activity implements MediaPlayer.OnComp
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -1122,7 +1122,7 @@ public class ConversationActivity extends Activity implements MediaPlayer.OnComp
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -1133,7 +1133,7 @@ public class ConversationActivity extends Activity implements MediaPlayer.OnComp
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -1144,7 +1144,7 @@ public class ConversationActivity extends Activity implements MediaPlayer.OnComp
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -1155,7 +1155,7 @@ public class ConversationActivity extends Activity implements MediaPlayer.OnComp
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -1166,7 +1166,7 @@ public class ConversationActivity extends Activity implements MediaPlayer.OnComp
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -1177,7 +1177,7 @@ public class ConversationActivity extends Activity implements MediaPlayer.OnComp
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -1188,7 +1188,7 @@ public class ConversationActivity extends Activity implements MediaPlayer.OnComp
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -1199,7 +1199,7 @@ public class ConversationActivity extends Activity implements MediaPlayer.OnComp
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -1210,7 +1210,7 @@ public class ConversationActivity extends Activity implements MediaPlayer.OnComp
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -1222,7 +1222,7 @@ public class ConversationActivity extends Activity implements MediaPlayer.OnComp
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -1233,7 +1233,7 @@ public class ConversationActivity extends Activity implements MediaPlayer.OnComp
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -1244,7 +1244,7 @@ public class ConversationActivity extends Activity implements MediaPlayer.OnComp
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -1255,7 +1255,7 @@ public class ConversationActivity extends Activity implements MediaPlayer.OnComp
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -1266,7 +1266,7 @@ public class ConversationActivity extends Activity implements MediaPlayer.OnComp
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -1278,7 +1278,7 @@ public class ConversationActivity extends Activity implements MediaPlayer.OnComp
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -1289,7 +1289,7 @@ public class ConversationActivity extends Activity implements MediaPlayer.OnComp
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -1300,7 +1300,7 @@ public class ConversationActivity extends Activity implements MediaPlayer.OnComp
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -1311,7 +1311,7 @@ public class ConversationActivity extends Activity implements MediaPlayer.OnComp
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -1322,7 +1322,7 @@ public class ConversationActivity extends Activity implements MediaPlayer.OnComp
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -1333,7 +1333,7 @@ public class ConversationActivity extends Activity implements MediaPlayer.OnComp
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -1344,7 +1344,7 @@ public class ConversationActivity extends Activity implements MediaPlayer.OnComp
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -1355,7 +1355,7 @@ public class ConversationActivity extends Activity implements MediaPlayer.OnComp
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -1366,7 +1366,7 @@ public class ConversationActivity extends Activity implements MediaPlayer.OnComp
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -1377,7 +1377,7 @@ public class ConversationActivity extends Activity implements MediaPlayer.OnComp
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -1388,7 +1388,7 @@ public class ConversationActivity extends Activity implements MediaPlayer.OnComp
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -1399,7 +1399,7 @@ public class ConversationActivity extends Activity implements MediaPlayer.OnComp
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -1410,7 +1410,7 @@ public class ConversationActivity extends Activity implements MediaPlayer.OnComp
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -1421,7 +1421,7 @@ public class ConversationActivity extends Activity implements MediaPlayer.OnComp
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -1433,7 +1433,7 @@ public class ConversationActivity extends Activity implements MediaPlayer.OnComp
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -1445,7 +1445,7 @@ public class ConversationActivity extends Activity implements MediaPlayer.OnComp
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -1456,7 +1456,7 @@ public class ConversationActivity extends Activity implements MediaPlayer.OnComp
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -1467,7 +1467,7 @@ public class ConversationActivity extends Activity implements MediaPlayer.OnComp
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -1478,7 +1478,7 @@ public class ConversationActivity extends Activity implements MediaPlayer.OnComp
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -1489,7 +1489,7 @@ public class ConversationActivity extends Activity implements MediaPlayer.OnComp
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -1500,7 +1500,7 @@ public class ConversationActivity extends Activity implements MediaPlayer.OnComp
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -1511,7 +1511,7 @@ public class ConversationActivity extends Activity implements MediaPlayer.OnComp
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -1522,7 +1522,7 @@ public class ConversationActivity extends Activity implements MediaPlayer.OnComp
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -1533,7 +1533,7 @@ public class ConversationActivity extends Activity implements MediaPlayer.OnComp
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -1544,7 +1544,7 @@ public class ConversationActivity extends Activity implements MediaPlayer.OnComp
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -1555,7 +1555,7 @@ public class ConversationActivity extends Activity implements MediaPlayer.OnComp
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -1566,7 +1566,7 @@ public class ConversationActivity extends Activity implements MediaPlayer.OnComp
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -1577,7 +1577,7 @@ public class ConversationActivity extends Activity implements MediaPlayer.OnComp
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -1588,7 +1588,7 @@ public class ConversationActivity extends Activity implements MediaPlayer.OnComp
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -1600,7 +1600,7 @@ public class ConversationActivity extends Activity implements MediaPlayer.OnComp
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -1611,7 +1611,7 @@ public class ConversationActivity extends Activity implements MediaPlayer.OnComp
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -1622,7 +1622,7 @@ public class ConversationActivity extends Activity implements MediaPlayer.OnComp
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -1633,7 +1633,7 @@ public class ConversationActivity extends Activity implements MediaPlayer.OnComp
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -1644,7 +1644,7 @@ public class ConversationActivity extends Activity implements MediaPlayer.OnComp
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
@@ -1655,7 +1655,7 @@ public class ConversationActivity extends Activity implements MediaPlayer.OnComp
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList());
+            listAdapter = new MyListAdapter(ConversationActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
