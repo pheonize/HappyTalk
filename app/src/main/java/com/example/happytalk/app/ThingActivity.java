@@ -1601,6 +1601,7 @@ public class ThingActivity extends Activity implements SearchView.OnQueryTextLis
                 startActivity(i);
                 return true;
             //break;
+
             case R.id.action_search:
                 Intent intent;
                 intent = new Intent(getApplicationContext(),SearchActivity.class);

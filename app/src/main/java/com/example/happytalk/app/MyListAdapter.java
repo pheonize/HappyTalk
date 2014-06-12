@@ -210,6 +210,6 @@ public class MyListAdapter extends BaseExpandableListAdapter implements MediaPla
 
     @Override
     public void onCompletion(MediaPlayer mp) {
-
+        return;
     }
 }
