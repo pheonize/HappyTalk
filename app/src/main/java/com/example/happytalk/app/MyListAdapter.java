@@ -78,15 +78,15 @@ public class MyListAdapter extends BaseExpandableListAdapter {
 
 
 //
-//        btnSound.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//
-//
-//                //Toast.makeText(context,"Test",Toast.LENGTH_LONG).show();
-//
-//            }
-//        });
+        btnSound.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+
+                Toast.makeText(context,"Test",Toast.LENGTH_LONG).show();
+
+            }
+        });
 
 
 

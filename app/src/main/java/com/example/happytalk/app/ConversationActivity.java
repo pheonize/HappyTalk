@@ -302,22 +302,14 @@ public class ConversationActivity extends Activity implements MediaPlayer.OnComp
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
 
-
-
-
-            listAdapter.btnSound.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-            //        Toast.makeText(context,"Test",Toast.LENGTH_LONG).show();
-                    MediaPlayer mp = MediaPlayer.create(getApplicationContext(),R.raw.th);
-                    mp.start();
-                }
-            });
-
-
-
-
-
+//            listAdapter.btnSound.setOnClickListener(new View.OnClickListener() {
+//                @Override
+//                public void onClick(View v) {
+//            //        Toast.makeText(context,"Test",Toast.LENGTH_LONG).show();
+//                    MediaPlayer mp = MediaPlayer.create(getApplicationContext(),R.raw.th);
+//                    mp.start();
+//                }
+//            });
 
 
         }
