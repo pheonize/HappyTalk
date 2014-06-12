@@ -37,14 +37,14 @@ import com.example.happytalk.app.Database.Database;
 import java.util.ArrayList;
 
 
-public class ConversationActivity extends Activity {
+public class ConversationActivity extends Activity implements MediaPlayer.OnCompletionListener {
 
 
     //DB
     private static Database db;
     SQLiteDatabase sqLiteDatabase;
     Context context;
-    Button btnSound;
+
     String langTo, langFrom;
     String[] country_list = {"Brunei", "Cambodia", "China", "Indonesia",
             "Laos", "Malaysia", "Myanmar", "Philippines", "Singapore",
@@ -72,8 +72,8 @@ public class ConversationActivity extends Activity {
 
     private ConversationDAL loadWording;
 
-    private VideoView videoView;
-    private MediaController mediaPlayer;
+    private MediaPlayer mediaPlayer;
+    Button btnSound;
 
 
     @Override
@@ -1704,6 +1704,12 @@ public class ConversationActivity extends Activity {
     }
 
 
+    @Override
+    public void onCompletion(MediaPlayer mp) {
+        mediaPlayer.release();
+        mediaPlayer = null;
+
+    }
 }
 
 

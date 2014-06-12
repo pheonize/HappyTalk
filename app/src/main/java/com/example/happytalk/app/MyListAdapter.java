@@ -10,6 +10,7 @@ import android.widget.BaseExpandableListAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.text.TextUtils;
+import android.widget.Button;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -18,12 +19,14 @@ import java.util.Locale;
 /**
  * Created by oVANILLAz on 6/9/14 AD.
  */
-public class MyListAdapter extends BaseExpandableListAdapter {
+public class MyListAdapter extends BaseExpandableListAdapter implements MediaPlayer.OnCompletionListener {
 
     private Context context;
 
     private ArrayList<GroupHeader> groupHeadersList;
     private ArrayList<GroupHeader> originalList;
+    private MediaPlayer mediaPlayer;
+    Button btnSound;
 
     public MyListAdapter(Context context,ArrayList<GroupHeader> groupHeadersList){
         this.context = context;
@@ -58,13 +61,17 @@ public class MyListAdapter extends BaseExpandableListAdapter {
         TextView txtwordTo =(TextView) view.findViewById(R.id.txtWordTo);
         TextView txtkaraokeTH = (TextView) view.findViewById(R.id.txtKaraokeTH);
         TextView txtkaraokeEN = (TextView) view.findViewById(R.id.txtKaraokeEN);
-        ImageView btnSound = (ImageView) view.findViewById(R.id.sound);
+        final ImageView btnSound = (ImageView) view.findViewById(R.id.sound);
         ImageView btnFavorite = (ImageView) view.findViewById(R.id.favorite);
 
         btnSound.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                if(mediaPlayer == null){
+                  // mediaPlayer = MediaPlayer.create(MyListAdapter.this,R.raw.sound);
 
+                    mediaPlayer.setOnCompletionListener(MyListAdapter.this);
+                }
             }
         });
 
@@ -201,4 +208,8 @@ public class MyListAdapter extends BaseExpandableListAdapter {
     }
 
 
+    @Override
+    public void onCompletion(MediaPlayer mp) {
+
+    }
 }

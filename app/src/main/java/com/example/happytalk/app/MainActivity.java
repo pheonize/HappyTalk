@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.util.Log;
@@ -15,6 +16,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.content.res.TypedArray;
@@ -85,6 +87,7 @@ public class MainActivity extends Activity {
             R.drawable.myanmar_flag, R.drawable.philippines_flag,
             R.drawable.singapore_flag,
             R.drawable.vietnam_flag};
+
 
 
     @Override
@@ -284,6 +287,8 @@ public class MainActivity extends Activity {
         countryTo = (Spinner) findViewById(R.id.spinner2_show);
         // btnSearch = (Button) findViewById(R.id.btn_go);
     }
+
+
 
 
     //spinner

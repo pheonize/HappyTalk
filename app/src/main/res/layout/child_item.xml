@@ -14,14 +14,14 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:contentDescription="@string/app_name"
-        android:src="@drawable/help"/>
+        android:src="@drawable/sound"/>
     <ImageView
         android:id="@+id/favorite"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/sound"
         android:paddingTop="5dp"
-        android:src="@drawable/favorite"
+        android:src="@drawable/favorite1"
         />
     <LinearLayout
         android:layout_width="wrap_content"
