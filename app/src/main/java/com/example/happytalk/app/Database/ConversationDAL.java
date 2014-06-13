@@ -26,6 +26,7 @@ public class ConversationDAL  {
         ArrayList<Child> childList = new ArrayList<Child>();
         //karaokeEN, karaokeTH,wordFrom,wordEN,wordTo,sound,favorite
         Child child = new Child("Test1","Test2","Test3","Test4","Test5",null,null);
+        child.setSoundPath(R.raw.hello_br);
         childList.add(child);
 
         GroupHeader groupHeader = new GroupHeader("Thai","Brunei",childList);
@@ -38,6 +39,7 @@ public class ConversationDAL  {
     public void loadThaiToChina(){
         ArrayList<Child> childList = new ArrayList<Child>();
         Child child = new Child("Test6","Test7","Test8","Test9","Test10",null,null);
+        child.setSoundPath(R.raw.hello_th);
         childList.add(child);
 
         GroupHeader groupHeader = new GroupHeader("Thai","China",childList);

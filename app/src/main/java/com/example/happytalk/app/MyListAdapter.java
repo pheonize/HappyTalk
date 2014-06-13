@@ -2,6 +2,8 @@ package com.example.happytalk.app;
 
 import android.app.Activity;
 import android.content.Context;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.media.MediaPlayer;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -14,6 +16,9 @@ import android.widget.TextView;
 import android.text.TextUtils;
 import android.widget.Button;
 import android.widget.Toast;
+
+import com.example.happytalk.app.Database.Favorite;
+import com.example.happytalk.app.Database.FavoriteDAL;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -31,11 +36,18 @@ public class MyListAdapter extends BaseExpandableListAdapter {
     private MediaPlayer mediaPlayer;
     Button btnSound;
     Button btnFavorite;
-    private String lang_from,lang_to ;
+//    private String lang_from,lang_to ;
 
     private ArrayList<GroupHeader> groupHeader = new ArrayList<GroupHeader>();
 
     private Child child;
+
+    FavoriteDAL db;
+
+    SQLiteDatabase sqLiteDatabase;
+
+    Cursor mCursor;
+    String lang_from,lang_to,wordEN,wordFrom,wordTo,karaokeTH,karaokeEN;
 
 
 
@@ -65,7 +77,7 @@ public class MyListAdapter extends BaseExpandableListAdapter {
     }
 
     @Override
-    public View getChildView(int groupPosition,int childPosition,boolean isLastChild,View view ,ViewGroup parent){
+    public View getChildView(int groupPosition, final int childPosition,boolean isLastChild,View view ,ViewGroup parent){
        child = (Child) getChild(groupPosition, childPosition);
         if(view==null){
            LayoutInflater layoutInflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
@@ -86,16 +98,54 @@ public class MyListAdapter extends BaseExpandableListAdapter {
         //soundClass.loadSound();
 
 
-//
+
+
+
         btnSound.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                loadSound(lang_from,lang_to);
-
+                if(child.getSoundPath() != -1)
+                    loadSound(child.getSoundPath());
 
             }
         });
+
+        btnFavorite.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                db = new FavoriteDAL(context);
+                sqLiteDatabase = db.getWritableDatabase();
+                if(mCursor.getCount() ==0){
+
+
+
+                    String insert = "INSERT INTO " + FavoriteDAL.TABLE_FAVORITE + " (" + FavoriteDAL.COLUMN_LANGFROM
+                            + ", " + FavoriteDAL.COLUMN_LANGTO + ", " + FavoriteDAL.COLUMN_WORDEN + ", "
+                            + FavoriteDAL.COLUMN_WORDFROM + ", " + FavoriteDAL.COLUMN_WORDTO + ", " + FavoriteDAL.COLUMN_KARAOKEEN +
+                            ", " + FavoriteDAL.COLUMN_KARAOKETH + ") VALUES ('" +  lang_from + "', '" + lang_to +
+                            "', '" + child.getWordEN() + "', '" + child.getWordFrom() + "', '" + child.getWordTo() + "', '"
+                            + child.getKaraokeEN() + "', '" + child.getKaraokeTH() + "');";
+
+
+                    sqLiteDatabase.execSQL(insert);
+
+                    Toast.makeText(context , "Add Favorite Success" ,Toast.LENGTH_SHORT).show();
+                }
+                else{
+                    Toast.makeText(context,"Same data" ,Toast.LENGTH_SHORT).show();
+                }
+
+
+
+
+
+
+            }
+
+
+        });
+
 
 
 
@@ -109,6 +159,11 @@ public class MyListAdapter extends BaseExpandableListAdapter {
         return view;
     }
 
+    public void onStop(){
+        ;
+
+
+    }
     @Override
     public int getChildrenCount(int groupPosition){
         ArrayList<Child> childList = groupHeadersList.get(groupPosition).getChildList();
@@ -229,6 +284,9 @@ public class MyListAdapter extends BaseExpandableListAdapter {
 
 
 
+
+
+
     //LoadSound
 
 
@@ -245,11 +303,11 @@ public class MyListAdapter extends BaseExpandableListAdapter {
             MediaPlayer mp = MediaPlayer.create(context, R.raw.hello_br);
             mp.start();
         }
+    }
 
-
-
-
-
+    public void loadSound(int soundPath) {
+            MediaPlayer mp = MediaPlayer.create(context, soundPath);
+            mp.start();
     }
 
 

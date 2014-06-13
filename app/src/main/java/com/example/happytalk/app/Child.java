@@ -15,6 +15,7 @@ public class Child {
     private String karaokeEN = " ";
     private ImageView sound ;
     private ImageView favorite;
+    private int soundPath = -1;
 
     public String getKaraokeEN() {
         return karaokeEN;
@@ -72,6 +73,9 @@ public class Child {
         this.favorite = favorite;
     }
 
+    public int getSoundPath(){return this.soundPath;}
+    public void setSoundPath(int soundPath){this.soundPath = soundPath;}
+
     public Child(String karaokeEN, String karaokeTH, String wordFrom, String wordEN, String wordTo, ImageView sound, ImageView favorite) {
         super();
         this.karaokeEN = karaokeEN;
@@ -81,5 +85,6 @@ public class Child {
         this.wordTo = wordTo;
         this.sound = sound;
         this.favorite = favorite;
+       // this.soundPath = soundPath;
     }
 }

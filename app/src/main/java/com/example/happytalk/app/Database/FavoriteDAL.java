@@ -7,6 +7,11 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.widget.Toast;
 
+import com.example.happytalk.app.Child;
+import com.example.happytalk.app.GroupHeader;
+
+import java.util.ArrayList;
+
 /**
  * Created by oVANILLAz on 6/12/14 AD.
  */
@@ -26,8 +31,10 @@ public class FavoriteDAL extends SQLiteOpenHelper {
     public static final String COLUMN_WORDTO ="wordTo";
     public static final String COLUMN_KARAOKETH="karaokeTH";
     public static final String COLUMN_KARAOKEEN = "karaokeEN";
+
     private Context context;
     SQLiteDatabase db;
+    private ArrayList<GroupHeader> groupHeaderList = new ArrayList<GroupHeader>();
 
 
     public FavoriteDAL(Context context){
@@ -84,4 +91,31 @@ public class FavoriteDAL extends SQLiteOpenHelper {
         db.close();
 
     }
+
+
+
+
+    //Load favorite list
+
+
+    public void loadThaiToChina(){
+
+
+
+        ArrayList<Child> childList = new ArrayList<Child>();
+        Child child = new Child(COLUMN_KARAOKEEN,COLUMN_KARAOKETH,COLUMN_WORDFROM,COLUMN_WORDEN,COLUMN_WORDTO,null,null);
+        childList.add(child);
+
+        GroupHeader groupHeader = new GroupHeader(COLUMN_WORDFROM,COLUMN_WORDTO,childList);
+        groupHeaderList.add(groupHeader);
+
+
+    }
+
+
+    public ArrayList<GroupHeader> getGroupHeaderList()
+    {
+        return groupHeaderList;
+    }
+
 }
