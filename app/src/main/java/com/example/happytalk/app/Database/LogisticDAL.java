@@ -2365,99 +2365,2239 @@ public class LogisticDAL {
 
     public void loadCambodiaToChina(){
         ArrayList<Child> childList = new ArrayList<Child>();
-        Child child = new Child("ไทย","ไทย","ไทย","ไทย","ไทย",null,null);
+        Child child = new Child("hai-gwan",""," ផ្នែកគយ","Custom house"," 海关",null,null);
+        child.setSoundPath(-1);
         childList.add(child);
 
-        GroupHeader groupHeader = new GroupHeader("Cambodia","Singapore",childList);
+        GroupHeader groupHeader = new GroupHeader(" ផ្នែកគយ", "Custom house", childList);
         groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("hwor","","ទំនិញ","Goods"," 货",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("ទំនិញ", "Goods", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ma-thow",""," កំពង់ផែ","Dock warehouse"," 码头",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" កំពង់ផែ", "Dock warehouse", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("jerng-soo",""," ឯកសារបញ្ជាក់","Certificate"," 证书",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ឯកសារបញ្ជាក់", "Certificate", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("Jin-khow",""," នាំចូល","Import"," 进口",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" នាំចូល", "Import", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("choo-khow",""," នាំចេញ","Export"," 出口",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" នាំចេញ", "Export", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("fuai-yong",""," ថ្លៃចុះបញ្ជី","Charge"," 费用",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ថ្លៃចុះបញ្ជី", "Charge", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("fa-hwor-jer",""," អ្នកបញ្ជូនទំនិញ","Goods deliverer"," 发货者",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" អ្នកបញ្ជូនទំនិញ", "Goods deliverer", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("sow-hwor-jer",""," អ្នកទទួលទំនិញ","Goods receiver","收货者",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" អ្នកទទួលទំនិញ", "Goods receiver", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("chang-khoo",""," ឃ្លាំង/ឃ្លាំងទំនិញ","Warehouse"," 仓库",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ឃ្លាំង/ឃ្លាំងទំនិញ", "Warehouse", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("pao-sian",""," ធានារ៉ាប់រង","Insurance"," 保险",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ធានារ៉ាប់រង", "Insurance", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("tai-lee",""," អ្នកតំណាង","Shipping agent"," 代理",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" អ្នកតំណាង", "Shipping agent", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("thee-tun-jer",""," អ្នកទទួលបន្ទុកផ្នែកត្រាទំនិញ","Consignee "," 提单者",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" អ្នកទទួលបន្ទុកផ្នែកត្រាទំនិញ", "Consignee ", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("jee-juang-siang-haw-ma","","លេខទូកុងទឺណ័រទំនិញនិងលេខត្រាជ័រទូកុងទឺណ័រទំនិញ","Container and seal number"," 集装箱号码",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("លេខទូកុងទឺណ័រទំនិញនិងលេខត្រាជ័រទូកុងទឺណ័រទំនិញ", "Container and seal number", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("fa-hwor-tun",""," ឯកសារបញ្ចាឲ្យបញ្ចេញទំនិញ","Delivery order"," 发货单",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ឯកសារបញ្ចាឲ្យបញ្ចេញទំនិញ", "Delivery order", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ching-tun",""," មុខទំនិញ","Description of goods"," 清单",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" មុខទំនិញ", "Description of goods", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("jee-juang-siang-yian-chee-fuai-yong",""," ថ្លៃទូកុងទឺណ័រដែលបញ្ជូនក្រោយពេល វេលាកំណត់","Detention"," 集装箱延期费用",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ថ្លៃទូកុងទឺណ័រដែលបញ្ជូនក្រោយពេល វេលាកំណត់", "Detention", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("foo-in-fuay",""," ថ្លៃឯកសារ","Document fee"," 复印费",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ថ្លៃឯកសារ", "Document fee", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("hwor-awin-tay-lee",""," អ្នកតំណាងខាងទទួលបន្ទុកបញ្ជូន ទំនិញ","Freight forwarder"," 货运代理",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" អ្នកតំណាងខាងទទួលបន្ទុកបញ្ជូន ទំនិញ", "Freight forwarder", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("wuai-sian-phin",""," ទំនិញគ្រោះថ្នាក់","Dangerous goods"," 危险品",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ទំនិញគ្រោះថ្នាក់", "Dangerous goods", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("woo-phin-ming-cherng-her-woo-phin-pian-hao",""," ស្លាកសញ្ញានិងលេខកូដកេះទំនិញ","Shipping mark and number"," 物品名称和物品编号",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ស្លាកសញ្ញានិងលេខកូដកេះទំនិញ", "Shipping mark and number", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("song-hwor-tan",""," ឯកសារបញ្ជូនទំនិញ","Invoice","送货单",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ឯកសារបញ្ជូនទំនិញ", "Invoice", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("sow-hwor-tan",""," ឯកសារទទួលទំនិញ","Bill of lading"," 收货单",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ឯកសារទទួលទំនិញ", "Bill of lading", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("loo-khow-choo-khow",""," ផ្លូវចូល ផ្លូវចេញ","Entrance - Exit"," 入口- 出口",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ផ្លូវចូល ផ្លូវចេញ", "Entrance - Exit", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("wor-naa-sow-hwor-chew-yern-soo-lai/ wor- sian-jai-kher-yee-soe-hwa-ma","","ខ្ញុំមកទទួលយកទំនិញ និងយកនូវ    ឯកសារបញ្ចេញទំនិញមកបញ្ជាក់ ខ្ញុំ    អាចទទួលយកទំនិញបានឥឡូវទេ","I would like to pick up goods. I’m with a delivery order to confirm. Could I receive goods? "," 我拿售货确认书来，我现在可以收货吗",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("ខ្ញុំមកទទួលយកទំនិញ និងយកនូវ    ឯកសារបញ្ចេញទំនិញមកបញ្ជាក់ ខ្ញុំ    អាចទទួលយកទំនិញបានឥឡូវទេ", "I would like to pick up goods. I’m with a delivery order to confirm. Could I receive goods? ", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
     }
 
     public void loadCambodiaToThai(){
         ArrayList<Child> childList = new ArrayList<Child>();
-        Child child = new Child("ไทย","ไทย","ไทย","ไทย","ไทย",null,null);
+        Child child = new Child("dan-sun-la-ka-kon",""," ផ្នែកគយ","Custom house","ด่านศุลกากร",null,null);
+        child.setSoundPath(-1);
         childList.add(child);
 
-        GroupHeader groupHeader = new GroupHeader("Cambodia","ไทย",childList);
+        GroupHeader groupHeader = new GroupHeader(" ផ្នែកគយ", "Custom house", childList);
         groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("sin-kha","","ទំនិញ","Goods","สินค้า",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("ទំនិញ", "Goods", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("tha",""," កំពង់ផែ","Dock warehouse","ท่า",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" កំពង់ផែ", "Dock warehouse", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("nang-sue-rap-rong",""," ឯកសារបញ្ជាក់","Certificate","หนังสือรับรอง",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ឯកសារបញ្ជាក់", "Certificate", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("nam-khao",""," នាំចូល","Import","นำเข้า",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" នាំចូល", "Import", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("song-ork",""," នាំចេញ","Export","ส่งออก",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" នាំចេញ", "Export", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("kha-tham-niam",""," ថ្លៃចុះបញ្ជី","Charge","ค่าธรรมเนียม",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ថ្លៃចុះបញ្ជី", "Charge", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("phu-song-ork",""," អ្នកបញ្ជូនទំនិញ","Goods deliverer","ผู้ส่งสินค้า",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" អ្នកបញ្ជូនទំនិញ", "Goods deliverer", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("phu-rub-sin-kha",""," អ្នកទទួលទំនិញ","Goods receiver","ผู้รับสินค้า",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" អ្នកទទួលទំនិញ", "Goods receiver", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ko-dang/khlang-sin-kha",""," ឃ្លាំង/ឃ្លាំងទំនិញ","Warehouse","โกดัง/คลังสินค้า",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ឃ្លាំង/ឃ្លាំងទំនិញ", "Warehouse", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("pra-kan-phai",""," ធានារ៉ាប់រង","Insurance","ประกันภัย",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ធានារ៉ាប់រង", "Insurance", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("tua-thaen",""," អ្នកតំណាង","Shipping agent","ตัวแทน",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" អ្នកតំណាង", "Shipping agent", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("phu-rub-tra-song-sin-kha",""," អ្នកទទួលបន្ទុកផ្នែកត្រាទំនិញ","Consignee ","ผู้รับตราส่งสินค้า",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" អ្នកទទួលបន្ទុកផ្នែកត្រាទំនិញ", "Consignee ", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("mai-lek-tu-sin-kha-lae-mai-lek-thaep-pha-nuek-tu-sinkha","","លេខទូកុងទឺណ័រទំនិញនិងលេខត្រាជ័រទូកុងទឺណ័រទំនិញ","Container and seal number","หมายเลขตู้สินค้าและหมายเลขแถบผนึกตู้สินค้า",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("លេខទូកុងទឺណ័រទំនិញនិងលេខត្រាជ័រទូកុងទឺណ័រទំនិញ", "Container and seal number", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ba-isang-ploi-sin-kha",""," ឯកសារបញ្ចាឲ្យបញ្ចេញទំនិញ","Delivery order","ใบสั่งปล่อยสินค้า",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ឯកសារបញ្ចាឲ្យបញ្ចេញទំនិញ", "Delivery order", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("rai-kan-sin-kha",""," មុខទំនិញ","Description of goods","รายการสินค้า",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" មុខទំនិញ", "Description of goods", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("kha-khuen-tu-sin-kha-tee-cha-koen-kwa-tee-kam-not",""," ថ្លៃទូកុងទឺណ័រដែលបញ្ជូនក្រោយពេល វេលាកំណត់","Detention","ค่าคืนตู้สินค้าที่ช้าเกินกว่าเวลาที่กำหนด",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ថ្លៃទូកុងទឺណ័រដែលបញ្ជូនក្រោយពេល វេលាកំណត់", "Detention", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("kha-ek-ka-san",""," ថ្លៃឯកសារ","Document fee","ค่าเอกสาร",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ថ្លៃឯកសារ", "Document fee", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("tua-thaen-phu-rap-khon-song-sin-kha",""," អ្នកតំណាងខាងទទួលបន្ទុកបញ្ជូន ទំនិញ","Freight forwarder","ตัวแทนผู้รับขนส่งสินค้า",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" អ្នកតំណាងខាងទទួលបន្ទុកបញ្ជូន ទំនិញ", "Freight forwarder", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("sin-kha-an-ta-rai",""," ទំនិញគ្រោះថ្នាក់","Dangerous goods","สินค้าอันตราย",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ទំនិញគ្រោះថ្នាក់", "Dangerous goods", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("khrueang-mai-lae-mai-hipho-khong-sin-kha",""," ស្លាកសញ្ញានិងលេខកូដកេះទំនិញ","Shipping mark and number","เครื่องหมายและเลขหมายหีบห่อของสินค้า",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ស្លាកសញ្ញានិងលេខកូដកេះទំនិញ", "Shipping mark and number", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("bai-song-sin-kha",""," ឯកសារបញ្ជូនទំនិញ","Invoice","ใบส่งสินค้า",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ឯកសារបញ្ជូនទំនិញ", "Invoice", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("bai-rub-sin-kha",""," ឯកសារទទួលទំនិញ","Bill of lading","ใบรับสินค้า",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ឯកសារទទួលទំនិញ", "Bill of lading", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("thang-khao - thang-ork",""," ផ្លូវចូល ផ្លូវចេញ","Entrance - Exit","ทางเข้า -ทางออก",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ផ្លូវចូល ផ្លូវចេញ", "Entrance - Exit", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("phom-ma-rap-sin-kha-lae-aow-bai-song-ploi-sin-kha-ma-yuen-yan-pom-rup-sin-kha-dai-loei-mai-khrap","","ខ្ញុំមកទទួលយកទំនិញ និងយកនូវ    ឯកសារបញ្ចេញទំនិញមកបញ្ជាក់ ខ្ញុំ    អាចទទួលយកទំនិញបានឥឡូវទេ","I would like to pick up goods. I’m with a delivery order to confirm. Could I receive goods? ","ผมมารับสินค้าและเอาใบส่งปล่อยสินค้ามายืนยัน ผมรับสินค้าได้เลยไหมครับ",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("ខ្ញុំមកទទួលយកទំនិញ និងយកនូវ    ឯកសារបញ្ចេញទំនិញមកបញ្ជាក់ ខ្ញុំ    អាចទទួលយកទំនិញបានឥឡូវទេ", "I would like to pick up goods. I’m with a delivery order to confirm. Could I receive goods? ", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
     }
 
     public void loadCambodiaToBrunei(){
         ArrayList<Child> childList = new ArrayList<Child>();
-        Child child = new Child("ไทย","ไทย","ไทย","ไทย","ไทย",null,null);
+        Child child = new Child("ee-mee-kray-sen",""," ផ្នែកគយ","Custom house","Imigresen",null,null);
+        child.setSoundPath(-1);
         childList.add(child);
 
-        GroupHeader groupHeader = new GroupHeader("Cambodia","Brunei",childList);
+        GroupHeader groupHeader = new GroupHeader(" ផ្នែកគយ", "Custom house", childList);
         groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ba-ra-ngun-da-ka-ngun","","ទំនិញ","Goods","barangan  dagangan",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("ទំនិញ", "Goods", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("per-la-boo-hun",""," កំពង់ផែ","Dock warehouse","Pelabuhan ",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" កំពង់ផែ", "Dock warehouse", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("soo-rut-ya-mee-nun",""," ឯកសារបញ្ជាក់","Certificate","Surat jaminan",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ឯកសារបញ្ជាក់", "Certificate", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("im-pot",""," នាំចូល","Import","Impot",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" នាំចូល", "Import", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ex-pot",""," នាំចេញ","Export","Ekspot",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" នាំចេញ", "Export", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("yoo-run",""," ថ្លៃចុះបញ្ជី","Charge","Yuran",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ថ្លៃចុះបញ្ជី", "Charge", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("perng-hun-tul-ba-rung",""," អ្នកបញ្ជូនទំនិញ","Goods deliverer","Penghantar barang",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" អ្នកបញ្ជូនទំនិញ", "Goods deliverer", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("per-ner-ree-ma-ba-rung",""," អ្នកទទួលទំនិញ","Goods receiver","Penerima barang",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" អ្នកទទួលទំនិញ", "Goods receiver", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("koo-dung / koo-dung- ba-rung-gun",""," ឃ្លាំង/ឃ្លាំងទំនិញ","Warehouse","Gudang / Gudang barangan",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ឃ្លាំង/ឃ្លាំងទំនិញ", "Warehouse", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("in-soo-rern",""," ធានារ៉ាប់រង","Insurance","Insuren",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ធានារ៉ាប់រង", "Insurance", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("wa-geel",""," អ្នកតំណាង","Shipping agent","Wakil",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" អ្នកតំណាង", "Shipping agent", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("per-ner-ree-ma-ba-rung-gee-ree-mun",""," អ្នកទទួលបន្ទុកផ្នែកត្រាទំនិញ","Consignee ","Penerima barang kiriman",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" អ្នកទទួលបន្ទុកផ្នែកត្រាទំនិញ", "Consignee ", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("noam-bol-goan-tay-na-darn-noam-bol-jub-mer-ter-ray-goan-tay-na","","លេខទូកុងទឺណ័រទំនិញនិងលេខត្រាជ័រទូកុងទឺណ័រទំនិញ","Container and seal number","Nombor kontena dan nombor cap materai kontena",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("លេខទូកុងទឺណ័រទំនិញនិងលេខត្រាជ័រទូកុងទឺណ័រទំនិញ", "Container and seal number", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("soo-rut-per-rin-tah-perng-hun-ta-run ba-ra-ngun",""," ឯកសារបញ្ចាឲ្យបញ្ចេញទំនិញ","Delivery order","Surat perintah penghantaran barangan",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ឯកសារបញ្ចាឲ្យបញ្ចេញទំនិញ", "Delivery order", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ser-na-rai-ba-ra-ngun",""," មុខទំនិញ","Description of goods","Senarai barangan",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" មុខទំនិញ", "Description of goods", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ba-ya-run-mer-moo-lung-gun- goan-tay-na-tern-lay-wat-da-ree-ma-sa-yong-dee-ter-tub-gun",""," ថ្លៃទូកុងទឺណ័រដែលបញ្ជូនក្រោយពេល វេលាកំណត់","Detention","Bayaran memulangkan  kontena  terlewat dari  masa   yang ditetapkan",null,null);
+                child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ថ្លៃទូកុងទឺណ័រដែលបញ្ជូនក្រោយពេល វេលាកំណត់", "Detention", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("yoo-run-doe-goo-mern",""," ថ្លៃឯកសារ","Document fee","Yuran dokumen",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ថ្លៃឯកសារ", "Document fee", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("wa-geel-per-ner-ree-ma-per-ngung-goo-tun-ba-ra-ngun",""," អ្នកតំណាងខាងទទួលបន្ទុកបញ្ជូន ទំនិញ","Freight forwarder","Wakil penerima pengangkutan barangan",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" អ្នកតំណាងខាងទទួលបន្ទុកបញ្ជូន ទំនិញ", "Freight forwarder", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ba-ra-ngun-mern-ba-ha-ya",""," ទំនិញគ្រោះថ្នាក់","Dangerous goods","Barangan merbahaya",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ទំនិញគ្រោះថ្នាក់", "Dangerous goods", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("tun-da-darn-noam-bol-per-tee-ba-ra-ngun",""," ស្លាកសញ្ញានិងលេខកូដកេះទំនិញ","Shipping mark and number","Tanda dan nombor peti barangan",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ស្លាកសញ្ញានិងលេខកូដកេះទំនិញ", "Shipping mark and number", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("soo-rut-hun-tan-ba-ra-ngun",""," ឯកសារបញ្ជូនទំនិញ","Invoice","Surat hantar barangan",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ឯកសារបញ្ជូនទំនិញ", "Invoice", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("soo-rut-ter-ree-ma-ba-ra-ngun",""," ឯកសារទទួលទំនិញ","Bill of lading","Surat terima barangan",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ឯកសារទទួលទំនិញ", "Bill of lading", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ya-lun-ma-sook-ya-lun-ger-loo-wal",""," ផ្លូវចូល ផ្លូវចេញ","Entrance - Exit","Jalan masuk-jalan keluar",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ផ្លូវចូល ផ្លូវចេញ", "Entrance - Exit", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("sa-ya-da-tung-oon-took-mer-ngum-beel-ba-rang-bern-sa-ma-der-ngun-soo-rut-per-rin-tah-perng-hun-ta-run-ba-ra-ngun-sa-ya-boe-leh-ter-ree-ma-ba-rung-gah","","ខ្ញុំមកទទួលយកទំនិញ និងយកនូវ    ឯកសារបញ្ចេញទំនិញមកបញ្ជាក់ ខ្ញុំ    អាចទទួលយកទំនិញបានឥឡូវទេ","I would like to pick up goods. I’m with a delivery order to confirm. Could I receive goods? ","Saya datang untuk mengambil  barang bersama dengan surat  perintah penghantaranbarangan saya boleh terimabarang kah?",null,null);
+                child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("ខ្ញុំមកទទួលយកទំនិញ និងយកនូវ    ឯកសារបញ្ចេញទំនិញមកបញ្ជាក់ ខ្ញុំ    អាចទទួលយកទំនិញបានឥឡូវទេ", "I would like to pick up goods. I’m with a delivery order to confirm. Could I receive goods? ", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
     }
     public void loadCambodiaToCambodia(){
         ArrayList<Child> childList = new ArrayList<Child>();
-        Child child = new Child("ไทย","ไทย","ไทย","ไทย","ไทย",null,null);
+        Child child = new Child(" phnaek-goai",""," ផ្នែកគយ","Custom house","",null,null);
+        child.setSoundPath(-1);
         childList.add(child);
 
-        GroupHeader groupHeader = new GroupHeader("Cambodia","Cambodia",childList);
+        GroupHeader groupHeader = new GroupHeader(" ផ្នែកគយ", "Custom house", childList);
         groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child(" toom-neun","","ទំនិញ","Goods","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("ទំនិញ", "Goods", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child(" gom-puang-phae",""," កំពង់ផែ","Dock warehouse","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" កំពង់ផែ", "Dock warehouse", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child(" aek-gah-sa-bon-jiah",""," ឯកសារបញ្ជាក់","Certificate","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ឯកសារបញ្ជាក់", "Certificate", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("nuam-joen",""," នាំចូល","Import","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" នាំចូល", "Import", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("nuam-jern",""," នាំចេញ","Export","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" នាំចេញ", "Export", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("thlai-joh-bon-jee",""," ថ្លៃចុះបញ្ជី","Charge","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ថ្លៃចុះបញ្ជី", "Charge", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("niah-bon-joon-toom-neun",""," អ្នកបញ្ជូនទំនិញ","Goods deliverer","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" អ្នកបញ្ជូនទំនិញ", "Goods deliverer", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("niah-tao-tual-toom-neun",""," អ្នកទទួលទំនិញ","Goods receiver","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" អ្នកទទួលទំនិញ", "Goods receiver", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("kliang/kliang-toom-neun",""," ឃ្លាំង/ឃ្លាំងទំនិញ","Warehouse","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ឃ្លាំង/ឃ្លាំងទំនិញ", "Warehouse", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("thia-nia-rub-roang",""," ធានារ៉ាប់រង","Insurance","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ធានារ៉ាប់រង", "Insurance", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("niah-dom-narng",""," អ្នកតំណាង","Shipping agent","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" អ្នកតំណាង", "Shipping agent", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child(" niah-tao-tual-bon-took-phnaek-trar-toom-neun",""," អ្នកទទួលបន្ទុកផ្នែកត្រាទំនិញ","Consignee ","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" អ្នកទទួលបន្ទុកផ្នែកត្រាទំនិញ", "Consignee ", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child(" lake-too-gong-teu-nui-toom-neun-neung-lake-trar-jua-too-gong-teu- nui-toom-neun","","លេខទូកុងទឺណ័រទំនិញនិងលេខត្រាជ័រទូកុងទឺណ័រទំនិញ","Container and seal number","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("លេខទូកុងទឺណ័រទំនិញនិងលេខត្រាជ័រទូកុងទឺណ័រទំនិញ", "Container and seal number", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("aek-gah-sa-bon-jia-oay-bon-jern-toom-neun",""," ឯកសារបញ្ចាឲ្យបញ្ចេញទំនិញ","Delivery order","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ឯកសារបញ្ចាឲ្យបញ្ចេញទំនិញ", "Delivery order", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child(" mook-toom-neun",""," មុខទំនិញ","Description of goods","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" មុខទំនិញ", "Description of goods", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("thlai-gong-teu-nui-dael-bon- joon-groey-pel-way-lia-gom-nord",""," ថ្លៃទូកុងទឺណ័រដែលបញ្ជូនក្រោយពេល វេលាកំណត់","Detention","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ថ្លៃទូកុងទឺណ័រដែលបញ្ជូនក្រោយពេល វេលាកំណត់", "Detention", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("thlai -aek-gah-sa",""," ថ្លៃឯកសារ","Document fee","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ថ្លៃឯកសារ", "Document fee", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child(" niah-dorm-narng-khang-toa-tual-bon-took-bon-joon-toom-neun",""," អ្នកតំណាងខាងទទួលបន្ទុកបញ្ជូន ទំនិញ","Freight forwarder","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" អ្នកតំណាងខាងទទួលបន្ទុកបញ្ជូន ទំនិញ", "Freight forwarder", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child(" toom-neun-gruah-thnah",""," ទំនិញគ្រោះថ្នាក់","Dangerous goods","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ទំនិញគ្រោះថ្នាក់", "Dangerous goods", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child(" slark-sun-ya-neung-lake-goat-geh-toom-neun",""," ស្លាកសញ្ញានិងលេខកូដកេះទំនិញ","Shipping mark and number","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ស្លាកសញ្ញានិងលេខកូដកេះទំនិញ", "Shipping mark and number", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("aek-gah-sa-bon-joon-toom-neun",""," ឯកសារបញ្ជូនទំនិញ","Invoice","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ឯកសារបញ្ជូនទំនិញ", "Invoice", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child(" aek-gah-sa-tao-tual-toom-neun",""," ឯកសារទទួលទំនិញ","Bill of lading","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ឯកសារទទួលទំនិញ", "Bill of lading", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child(" phleuw-joen-phleuw-jern",""," ផ្លូវចូល ផ្លូវចេញ","Entrance - Exit","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ផ្លូវចូល ផ្លូវចេញ", "Entrance - Exit", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("kyom-moak-tao-tual-yoak-toom- neun-neung-yoak-neau-aek-gah-sa-bon- jern-toom-neun-moak-bon-jiah- khyom-art- tao-tual-yoak-toom-neun- barn-eui-leuw-tay","","ខ្ញុំមកទទួលយកទំនិញ និងយកនូវ    ឯកសារបញ្ចេញទំនិញមកបញ្ជាក់ ខ្ញុំ    អាចទទួលយកទំនិញបានឥឡូវទេ","I would like to pick up goods. I’m with a delivery order to confirm. Could I receive goods? ","",null,null);
+                child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("ខ្ញុំមកទទួលយកទំនិញ និងយកនូវ    ឯកសារបញ្ចេញទំនិញមកបញ្ជាក់ ខ្ញុំ    អាចទទួលយកទំនិញបានឥឡូវទេ", "I would like to pick up goods. I’m with a delivery order to confirm. Could I receive goods? ", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
     }
     public void loadCambodiaToIndonesia(){
         ArrayList<Child> childList = new ArrayList<Child>();
-        Child child = new Child("ไทย","ไทย","ไทย","ไทย","ไทย",null,null);
+        Child child = new Child("gan-tor- ber-ya-ju-gai",""," ផ្នែកគយ","Custom house","Kantor bea cukai",null,null);
+        child.setSoundPath(-1);
         childList.add(child);
 
-        GroupHeader groupHeader = new GroupHeader("Cambodia","Indonesia",childList);
+        GroupHeader groupHeader = new GroupHeader(" ផ្នែកគយ", "Custom house", childList);
         groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("bar-rang-bar-rang","","ទំនិញ","Goods","Barang-barang",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("ទំនិញ", "Goods", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("peu-lar- bu-han",""," កំពង់ផែ","Dock warehouse","Pelabuhan ",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" កំពង់ផែ", "Dock warehouse", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("soo-rat-peu-ngan-tar",""," ឯកសារបញ្ជាក់","Certificate","Surat pengantar",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ឯកសារបញ្ជាក់", "Certificate", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("im-por",""," នាំចូល","Import","Impor",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" នាំចូល", "Import", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ex-por",""," នាំចេញ","Export","Ekspor",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" នាំចេញ", "Export", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("bee-yar-yar-ad-mi-nis-tra-see",""," ថ្លៃចុះបញ្ជី","Charge","Biaya administrasi ",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ថ្លៃចុះបញ្ជី", "Charge", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("peu-ngee-rim-bar-rang-bar-rang",""," អ្នកបញ្ជូនទំនិញ","Goods deliverer","Pengirim barang-barang",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" អ្នកបញ្ជូនទំនិញ", "Goods deliverer", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("peu-ner-ree-mar-bar-rang-bar-rang",""," អ្នកទទួលទំនិញ","Goods receiver","Penerima barang-barang",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" អ្នកទទួលទំនិញ", "Goods receiver", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("gu-dang",""," ឃ្លាំង/ឃ្លាំងទំនិញ","Warehouse","Gudang",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ឃ្លាំង/ឃ្លាំងទំនិញ", "Warehouse", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ar-su-ran-see",""," ធានារ៉ាប់រង","Insurance","Asuransi",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ធានារ៉ាប់រង", "Insurance", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ar-gen-gar-pal",""," អ្នកតំណាង","Shipping agent","Agen kapal",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" អ្នកតំណាង", "Shipping agent", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("per-ner-ree-mar-bar-rang-bar-rang",""," អ្នកទទួលបន្ទុកផ្នែកត្រាទំនិញ","Consignee ","Penerima barang-barang",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" អ្នកទទួលបន្ទុកផ្នែកត្រាទំនិញ", "Consignee ", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("no-mor-peu-tee-bar-rang-bar-rang-dan no-mor-seu-gel-peu-tee-bar-rang-bar-rang","","លេខទូកុងទឺណ័រទំនិញនិងលេខត្រាជ័រទូកុងទឺណ័រទំនិញ","Container and seal number","Nomor peti barang-barang dan nomor segel peti barang-barang",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("លេខទូកុងទឺណ័រទំនិញនិងលេខត្រាជ័រទូកុងទឺណ័រទំនិញ", "Container and seal number", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("su-rat-peu-leu-par-san-bar-rang-bar-rang",""," ឯកសារបញ្ចាឲ្យបញ្ចេញទំនិញ","Delivery order","Surat pelepasan barang-barang",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ឯកសារបញ្ចាឲ្យបញ្ចេញទំនិញ", "Delivery order", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("daf-tar-bar-rang-bar-rang",""," មុខទំនិញ","Description of goods","Daftar barang-barang",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" មុខទំនិញ", "Description of goods", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("bee-yar-yar-peu-ngeum-bar-lee-yan-peu-tee-bar-rang-bar-rang-yang-ter-lat-mer-ler-bee-hee-wak-tu-yang-dee-teun-tu-kan",""," ថ្លៃទូកុងទឺណ័រដែលបញ្ជូនក្រោយពេល វេលាកំណត់","Detention","Biaya pengembalian peti barang-barang yang telat melebihi waktu yang ditentukan",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ថ្លៃទូកុងទឺណ័រដែលបញ្ជូនក្រោយពេល វេលាកំណត់", "Detention", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("bee-yar-yar -dork-gu-men",""," ថ្លៃឯកសារ","Document fee","Biaya dokumen ",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ថ្លៃឯកសារ", "Document fee", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ar-gen-peu-ngee-rim-bar-rang",""," អ្នកតំណាងខាងទទួលបន្ទុកបញ្ជូន ទំនិញ","Freight forwarder","Agen pengirim barang ",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" អ្នកតំណាងខាងទទួលបន្ទុកបញ្ជូន ទំនិញ", "Freight forwarder", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("bar-rang-bar-rang-ber-bar-har-yar",""," ទំនិញគ្រោះថ្នាក់","Dangerous goods","Barang-barang berbahaya",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ទំនិញគ្រោះថ្នាក់", "Dangerous goods", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("tan-dar-dan-no-mor-peu-tee-bar-rang-bar-rang",""," ស្លាកសញ្ញានិងលេខកូដកេះទំនិញ","Shipping mark and number","Tanda dan nomor peti barang-barang",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ស្លាកសញ្ញានិងលេខកូដកេះទំនិញ", "Shipping mark and number", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("fak-tur",""," ឯកសារបញ្ជូនទំនិញ","Invoice","Faktur",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ឯកសារបញ្ជូនទំនិញ", "Invoice", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("daf-tar-mu-war-tan-gar-pal",""," ឯកសារទទួលទំនិញ","Bill of lading","Daftar muatan kapal",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ឯកសារទទួលទំនិញ", "Bill of lading", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("mar-sook-ger-lu-war",""," ផ្លូវចូល ផ្លូវចេញ","Entrance - Exit","Masuk – Keluar ",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ផ្លូវចូល ផ្លូវចេញ", "Entrance - Exit", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("sar-yar-ee-ngin-am-pil-bar-rang-bar-rang   sar-yar-bar-war-su-rat-per-ngan-tar-ser-bar-kai-book-tee  ar-par-sar-yar-bee-sar-am-bil-bar-rang-bar-rang-ter-seu-but-seu-gar-rang","","ខ្ញុំមកទទួលយកទំនិញ និងយកនូវ    ឯកសារបញ្ចេញទំនិញមកបញ្ជាក់ ខ្ញុំ    អាចទទួលយកទំនិញបានឥឡូវទេ","I would like to pick up goods. I’m with a delivery order to confirm. Could I receive goods? ","Saya ingin ambil barang-barang.  Saya bawa surat pengantar sebagai bukti. Apa saya bisa ambil barang-barang tersebut sekarang?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("ខ្ញុំមកទទួលយកទំនិញ និងយកនូវ    ឯកសារបញ្ចេញទំនិញមកបញ្ជាក់ ខ្ញុំ    អាចទទួលយកទំនិញបានឥឡូវទេ", "I would like to pick up goods. I’m with a delivery order to confirm. Could I receive goods? ", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
     }
 
     public void loadCambodiaToLaos(){
         ArrayList<Child> childList = new ArrayList<Child>();
-        Child child = new Child("ไทย","ไทย","ไทย","ไทย","ไทย",null,null);
+        Child child = new Child("darn-su-lah-ga-gorn",""," ផ្នែកគយ","Custom house"," ດ່ານສຸລະກາກອນ",null,null);
+        child.setSoundPath(-1);
         childList.add(child);
 
-        GroupHeader groupHeader = new GroupHeader("Cambodia","Laos",childList);
+        GroupHeader groupHeader = new GroupHeader(" ផ្នែកគយ", "Custom house", childList);
         groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("sin-kha","","ទំនិញ","Goods"," ສິນຄ້າ",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("ទំនិញ", "Goods", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("tha",""," កំពង់ផែ","Dock warehouse"," ທ່າ",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" កំពង់ផែ", "Dock warehouse", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("nung-seu-hub-hong",""," ឯកសារបញ្ជាក់","Certificate"," ໜັງສືຮັບຮອງ",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ឯកសារបញ្ជាក់", "Certificate", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("num-khao",""," នាំចូល","Import"," ນຳເຂົ້າ",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" នាំចូល", "Import", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("song-org",""," នាំចេញ","Export"," ສົ່ງອອກ",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" នាំចេញ", "Export", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("kha-tum-niam",""," ថ្លៃចុះបញ្ជី","Charge"," ຄ່າທຳນຽມ",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ថ្លៃចុះបញ្ជី", "Charge", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("phoo-song-sin-kha",""," អ្នកបញ្ជូនទំនិញ","Goods deliverer"," ຜູ້ສົ່ງສິນຄ້າ",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" អ្នកបញ្ជូនទំនិញ", "Goods deliverer", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("phoo-hub-sin-kha",""," អ្នកទទួលទំនិញ","Goods receiver"," ຜູ້ຮັບສິນຄ້າ",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" អ្នកទទួលទំនិញ", "Goods receiver", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("hong-mian-khueang/hong-phuk-khueang",""," ឃ្លាំង/ឃ្លាំងទំនិញ","Warehouse"," ຫ້ອງມ້ຽນເຄື່ອງ / ຫ້ອງພັກເຄື່ອງ",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ឃ្លាំង/ឃ្លាំងទំនិញ", "Warehouse", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("pa-kun-phai",""," ធានារ៉ាប់រង","Insurance"," ປະກັນໄພ",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ធានារ៉ាប់រង", "Insurance", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("phu-tang-na",""," អ្នកតំណាង","Shipping agent"," ຜູ້ຕາງໜ້າ",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" អ្នកតំណាង", "Shipping agent", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("phoo-hub-ga-song-sin-kha",""," អ្នកទទួលបន្ទុកផ្នែកត្រាទំនិញ","Consignee "," ຜູ້ຮັບກາສົ່ງສິນຄ້າ",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" អ្នកទទួលបន្ទុកផ្នែកត្រាទំនិញ", "Consignee ", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("mai-leg-too-sin-kha-lae-mai-leg-ga-too-sin-kha","","លេខទូកុងទឺណ័រទំនិញនិងលេខត្រាជ័រទូកុងទឺណ័រទំនិញ","Container and seal number"," ໝາຍເລກຕູ້ສິນຄ້າແລະໝາຍເລກກາ ຕູ້ສິນຄ້າ",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("លេខទូកុងទឺណ័រទំនិញនិងលេខត្រាជ័រទូកុងទឺណ័រទំនិញ", "Container and seal number", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("bai-sung-poi-sin-kha",""," ឯកសារបញ្ចាឲ្យបញ្ចេញទំនិញ","Delivery order"," ໃບສັ່ງປ່ອຍສິນຄ້າ",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ឯកសារបញ្ចាឲ្យបញ្ចេញទំនិញ", "Delivery order", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("lai-garn-sin-kha",""," មុខទំនិញ","Description of goods"," ລາຍການສິນຄ້າ",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" មុខទំនិញ", "Description of goods", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("kha-song-kheun-too-sin-kha-thee-sa-gern-gwar-way-la-thee-gum-nod",""," ថ្លៃទូកុងទឺណ័រដែលបញ្ជូនក្រោយពេល វេលាកំណត់","Detention"," ຄ່າສົ່ງຄືນຕູ້ສິນຄ້າທີ່ຊ້າເກີນກວ່າເວລາ ທີ່ກຳໜົດ",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ថ្លៃទូកុងទឺណ័រដែលបញ្ជូនក្រោយពេល វេលាកំណត់", "Detention", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("kha-aek-ga-sarn",""," ថ្លៃឯកសារ","Document fee"," ຄ່າເອກກະສານ",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ថ្លៃឯកសារ", "Document fee", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("toe-thaen-phoo-hub-song-sin-kha",""," អ្នកតំណាងខាងទទួលបន្ទុកបញ្ជូន ទំនិញ","Freight forwarder"," ໂຕແທນຜູ້ຮັບສົ່ງສິນຄ້າ",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" អ្នកតំណាងខាងទទួលបន្ទុកបញ្ជូន ទំនិញ", "Freight forwarder", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("sin-kha-un-ta-lai",""," ទំនិញគ្រោះថ្នាក់","Dangerous goods"," ສິນຄ້າອັນຕະລາຍ",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ទំនិញគ្រោះថ្នាក់", "Dangerous goods", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("khueang-mai-lae-mai-leg-heeb-khong-sin-kha",""," ស្លាកសញ្ញានិងលេខកូដកេះទំនិញ","Shipping mark and number"," ເຄື່ອງໝາຍແລະໝາຍເລກຫີບຂອງສິນຄ້າ",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ស្លាកសញ្ញានិងលេខកូដកេះទំនិញ", "Shipping mark and number", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("bai-song-sin-kha",""," ឯកសារបញ្ជូនទំនិញ","Invoice"," ໃບສົ່ງສິນຄ້າ",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ឯកសារបញ្ជូនទំនិញ", "Invoice", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("bai-hub-sin-kha",""," ឯកសារទទួលទំនិញ","Bill of lading"," ໃບຮັບສິນຄ້າ",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ឯកសារទទួលទំនិញ", "Bill of lading", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("tharng-khao-tarng-org",""," ផ្លូវចូល ផ្លូវចេញ","Entrance - Exit"," ທາງເຂົ້າ - ທາງອອກ",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ផ្លូវចូល ផ្លូវចេញ", "Entrance - Exit", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("khoy-ma-hub-sin-kha-lae-ao-bai-song-poi-sin-kha-ma-yung-yuen-khoy-hub-sin-kha-dai-loey-bor","","ខ្ញុំមកទទួលយកទំនិញ និងយកនូវ    ឯកសារបញ្ចេញទំនិញមកបញ្ជាក់ ខ្ញុំ    អាចទទួលយកទំនិញបានឥឡូវទេ","I would like to pick up goods. I’m with a delivery order to confirm. Could I receive goods? ","ຂ້ອຍມາຮັບສິນຄ້າແລະເອົາໃບສົ່ງປ່ອຍສິນຄ້າມາຢັ້ງຢືນຂ້ອຍຮັບສິນຄ້າໄດ້ເລີຍບໍ",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("ខ្ញុំមកទទួលយកទំនិញ និងយកនូវ    ឯកសារបញ្ចេញទំនិញមកបញ្ជាក់ ខ្ញុំ    អាចទទួលយកទំនិញបានឥឡូវទេ", "I would like to pick up goods. I’m with a delivery order to confirm. Could I receive goods? ", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
     }
 
     public void loadCambodiaToMalaysia(){
         ArrayList<Child> childList = new ArrayList<Child>();
-        Child child = new Child("ไทย","ไทย","ไทย","ไทย","ไทย",null,null);
+        Child child = new Child("ee-mee-kray-sen",""," ផ្នែកគយ","Custom house","Imigresen",null,null);
+        child.setSoundPath(-1);
         childList.add(child);
 
-        GroupHeader groupHeader = new GroupHeader("Cambodia","Malaysia",childList);
+        GroupHeader groupHeader = new GroupHeader(" ផ្នែកគយ", "Custom house", childList);
         groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ba-ra-ngun-da-ka-ngun","","ទំនិញ","Goods","barangan  dagangan",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("ទំនិញ", "Goods", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("per-la-boo-hun",""," កំពង់ផែ","Dock warehouse","Pelabuhan ",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" កំពង់ផែ", "Dock warehouse", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("soo-rut-ya-mee-nun",""," ឯកសារបញ្ជាក់","Certificate","Surat jaminan",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ឯកសារបញ្ជាក់", "Certificate", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("im-pot",""," នាំចូល","Import","Impot",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" នាំចូល", "Import", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ex-pot",""," នាំចេញ","Export","Ekspot",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" នាំចេញ", "Export", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("yoo-run",""," ថ្លៃចុះបញ្ជី","Charge","Yuran",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ថ្លៃចុះបញ្ជី", "Charge", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("perng-hun-tul-ba-rung",""," អ្នកបញ្ជូនទំនិញ","Goods deliverer","Penghantar barang",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" អ្នកបញ្ជូនទំនិញ", "Goods deliverer", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("per-ner-ree-ma-ba-rung",""," អ្នកទទួលទំនិញ","Goods receiver","Penerima barang",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" អ្នកទទួលទំនិញ", "Goods receiver", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("koo-dung / koo-dung- ba-rung-gun",""," ឃ្លាំង/ឃ្លាំងទំនិញ","Warehouse","Gudang / Gudang barangan",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ឃ្លាំង/ឃ្លាំងទំនិញ", "Warehouse", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("in-soo-rern",""," ធានារ៉ាប់រង","Insurance","Insuren",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ធានារ៉ាប់រង", "Insurance", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("wa-geel",""," អ្នកតំណាង","Shipping agent","Wakil",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" អ្នកតំណាង", "Shipping agent", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("per-ner-ree-ma-ba-rung-gee-ree-mun",""," អ្នកទទួលបន្ទុកផ្នែកត្រាទំនិញ","Consignee ","Penerima barang kiriman",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" អ្នកទទួលបន្ទុកផ្នែកត្រាទំនិញ", "Consignee ", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("noam-bol-goan-tay-na-darn-noam-bol-jub-mer-ter-ray-goan-tay-na","","លេខទូកុងទឺណ័រទំនិញនិងលេខត្រាជ័រទូកុងទឺណ័រទំនិញ","Container and seal number","Nombor kontena dan nombor cap materai kontena",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("លេខទូកុងទឺណ័រទំនិញនិងលេខត្រាជ័រទូកុងទឺណ័រទំនិញ", "Container and seal number", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("soo-rut-per-rin-tah-perng-hun-ta-run ba-ra-ngun",""," ឯកសារបញ្ចាឲ្យបញ្ចេញទំនិញ","Delivery order","Surat perintah penghantaran barangan",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ឯកសារបញ្ចាឲ្យបញ្ចេញទំនិញ", "Delivery order", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ser-na-rai-ba-ra-ngun",""," មុខទំនិញ","Description of goods","Senarai barangan",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" មុខទំនិញ", "Description of goods", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ba-ya-run-mer-moo-lung-gun- goan-tay-na-tern-lay-wat-da-ree-ma-sa-yong-dee-ter-tub-gun",""," ថ្លៃទូកុងទឺណ័រដែលបញ្ជូនក្រោយពេល វេលាកំណត់","Detention","Bayaran memulangkan  kontena  terlewat dari  masa   yang ditetapkan",null,null);
+                child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ថ្លៃទូកុងទឺណ័រដែលបញ្ជូនក្រោយពេល វេលាកំណត់", "Detention", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("yoo-run-doe-goo-mern",""," ថ្លៃឯកសារ","Document fee","Yuran dokumen",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ថ្លៃឯកសារ", "Document fee", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("wa-geel-per-ner-ree-ma-per-ngung-goo-tun-ba-ra-ngun",""," អ្នកតំណាងខាងទទួលបន្ទុកបញ្ជូន ទំនិញ","Freight forwarder","Wakil penerima pengangkutan barangan",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" អ្នកតំណាងខាងទទួលបន្ទុកបញ្ជូន ទំនិញ", "Freight forwarder", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ba-ra-ngun-mern-ba-ha-ya",""," ទំនិញគ្រោះថ្នាក់","Dangerous goods","Barangan merbahaya",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ទំនិញគ្រោះថ្នាក់", "Dangerous goods", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("tun-da-darn-noam-bol-per-tee-ba-ra-ngun",""," ស្លាកសញ្ញានិងលេខកូដកេះទំនិញ","Shipping mark and number","Tanda dan nombor peti barangan",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ស្លាកសញ្ញានិងលេខកូដកេះទំនិញ", "Shipping mark and number", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("soo-rut-hun-tan-ba-ra-ngun",""," ឯកសារបញ្ជូនទំនិញ","Invoice","Surat hantar barangan",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ឯកសារបញ្ជូនទំនិញ", "Invoice", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("soo-rut-ter-ree-ma-ba-ra-ngun",""," ឯកសារទទួលទំនិញ","Bill of lading","Surat terima barangan",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ឯកសារទទួលទំនិញ", "Bill of lading", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ya-lun-ma-sook-ya-lun-ger-loo-wal",""," ផ្លូវចូល ផ្លូវចេញ","Entrance - Exit","Jalan masuk-jalan keluar",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ផ្លូវចូល ផ្លូវចេញ", "Entrance - Exit", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("sa-ya-da-tung-oon-took-mer-ngum-beel-ba-rang-bern-sa-ma-der-ngun-soo-rut-per-rin-tah-perng-hun-ta-run-ba-ra-ngun-sa-ya-boe-leh-ter-ree-ma-ba-rung-gah","","ខ្ញុំមកទទួលយកទំនិញ និងយកនូវ    ឯកសារបញ្ចេញទំនិញមកបញ្ជាក់ ខ្ញុំ    អាចទទួលយកទំនិញបានឥឡូវទេ","I would like to pick up goods. I’m with a delivery order to confirm. Could I receive goods? ","Saya datang untuk mengambil  barang bersama dengan surat  perintah penghantaranbarangan saya boleh terimabarang kah?",null,null);
+                child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("ខ្ញុំមកទទួលយកទំនិញ និងយកនូវ    ឯកសារបញ្ចេញទំនិញមកបញ្ជាក់ ខ្ញុំ    អាចទទួលយកទំនិញបានឥឡូវទេ", "I would like to pick up goods. I’m with a delivery order to confirm. Could I receive goods? ", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
     }
 
     public void loadCambodiaToMyanmar(){
         ArrayList<Child> childList = new ArrayList<Child>();
-        Child child = new Child("ไทย","ไทย","ไทย","ไทย","ไทย",null,null);
+        Child child = new Child("a-kaw-khoon-yong",""," ផ្នែកគយ","Custom house","အေကာက္ခြန္ရံု",null,null);
+        child.setSoundPath(-1);
         childList.add(child);
 
-        GroupHeader groupHeader = new GroupHeader("Cambodia","Myanmar",childList);
+        GroupHeader groupHeader = new GroupHeader(" ផ្នែកគយ", "Custom house", childList);
         groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("kong-piat-see","","ទំនិញ","Goods","ကုန္ပစၥည္း",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("ទំនិញ", "Goods", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("se-kan",""," កំពង់ផែ","Dock warehouse","ဆိပ္ကမ္း",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" កំពង់ផែ", "Dock warehouse", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("thaw-khan-sa",""," ឯកសារបញ្ជាក់","Certificate","ေထာက္ခံစာ",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ឯកសារបញ្ជាក់", "Certificate", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("twing-kong",""," នាំចូល","Import","သြင္းကုန္",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" នាំចូល", "Import", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("poh-kong",""," នាំចេញ","Export","ပုိ ့ကုန္",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" នាំចេញ", "Export", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("wun-saw-khah",""," ថ្លៃចុះបញ្ជី","Charge","၀န္ေဆာင္ခ",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ថ្លៃចុះបញ្ជី", "Charge", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("kong-poh-too",""," អ្នកបញ្ជូនទំនិញ","Goods deliverer","ကုန္ပုိ ့သူ",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" អ្នកបញ្ជូនទំនិញ", "Goods deliverer", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("kong-laeh-khan-too",""," អ្នកទទួលទំនិញ","Goods receiver","ကုန္လက္ခံသူ",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" អ្នកទទួលទំនិញ", "Goods receiver", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("kong-yong- kong-yong",""," ឃ្លាំង/ឃ្លាំងទំនិញ","Warehouse","ကုန္ရံု",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ឃ្លាំង/ឃ្លាំងទំនិញ", "Warehouse", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ar-ma-khan",""," ធានារ៉ាប់រង","Insurance","အာမခံ",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ធានារ៉ាប់រង", "Insurance", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("koe-sa-lae",""," អ្នកតំណាង","Shipping agent","ကိုယ္စားလွယ္",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" អ្នកតំណាង", "Shipping agent", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("kong-piat-see-ta-seh-laeh- khan- daeh-too",""," អ្នកទទួលបន្ទុកផ្នែកត្រាទំនិញ","Consignee ","ကုန္ပစၥည္းတံဆပ္လက္ခံတဲ့သူ",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" អ្នកទទួលបន្ទុកផ្នែកត្រាទំនិញ", "Consignee ", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("kong-tet-ta-nan-but-naeh kong- tet-ta-ba-koh-nan-but","","លេខទូកុងទឺណ័រទំនិញនិងលេខត្រាជ័រទូកុងទឺណ័រទំនិញ","Container and seal number","ကုန္ေသတၱာနံပါတ္နဲ႔ကုန္ေသတၱာဘာကုတ္နံပါတ္",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("លេខទូកុងទឺណ័រទំនិញនិងលេខត្រាជ័រទូកុងទឺណ័រទំនិញ", "Container and seal number", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("kong-ma-lwa",""," ឯកសារបញ្ចាឲ្យបញ្ចេញទំនិញ","Delivery order","ကုန္မွာလႊာ",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ឯកសារបញ្ចាឲ្យបញ្ចេញទំនិញ", "Delivery order", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("kong-piat-see-sa-yin",""," មុខទំនិញ","Description of goods","ကုန္ပစၥည္းစာရင္း",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" មុខទំនិញ", "Description of goods", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("a-cheng-loon-daeh-kong- tet-ta- khah",""," ថ្លៃទូកុងទឺណ័រដែលបញ្ជូនក្រោយពេល វេលាកំណត់","Detention","အခ်ိန္လြန္တဲ့ကုန္ေသတၱာခ",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ថ្លៃទូកុងទឺណ័រដែលបញ្ជូនក្រោយពេល វេលាកំណត់", "Detention", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("sa-ywaeh-sa-dan-khah",""," ថ្លៃឯកសារ","Document fee","စာ႐ြက္စာတမ္းခ",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ថ្លៃឯកសារ", "Document fee", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("kong-piat-see-tae-saw- daeh- koe-sa-lae",""," អ្នកតំណាងខាងទទួលបន្ទុកបញ្ជូន ទំនិញ","Freight forwarder","ကုန္ပစၥည္းသယ္ေဆာင္တဲ့ကိုယ္စားလွယ္",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" អ្នកតំណាងខាងទទួលបន្ទុកបញ្ជូន ទំនិញ", "Freight forwarder", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("an-da-yae-shi-daeh-kong- piat-see",""," ទំនិញគ្រោះថ្នាក់","Dangerous goods","အႏၲရာယ္ရွိတဲ့ကုန္ပစၥည္း",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ទំនិញគ្រោះថ្នាក់", "Dangerous goods", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("kong-piat-see-yaeh-a-mut- naeh, a- thoh-nan-but",""," ស្លាកសញ្ញានិងលេខកូដកេះទំនិញ","Shipping mark and number","ကုန္ပစၥည္းရဲ့အမွတ္နဲ႔အထုပ္နံပါတ္",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ស្លាកសញ្ញានិងលេខកូដកេះទំនិញ", "Shipping mark and number", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("kong-poh-lwa",""," ឯកសារបញ្ជូនទំនិញ","Invoice","ကုန္္ပို႕လႊာ",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ឯកសារបញ្ជូនទំនិញ", "Invoice", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("kong-ma-lwa",""," ឯកសារទទួលទំនិញ","Bill of lading","ကုန္မွာလႊာ",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ឯកសារទទួលទំនិញ", "Bill of lading", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("win-paw-thwaeh-paw",""," ផ្លូវចូល ផ្លូវចេញ","Entrance - Exit","ဝင္ေပါက္ - ထြက္ေပါက္",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ផ្លូវចូល ផ្លូវចេញ", "Entrance - Exit", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ja-nor-kong-piat-see-la- yoo-bee  kong-poh-lwa- teen-dae  ja-nor- kong-piat- see yoo- twa-loh-ya- bee-la-kha-mia","","ខ្ញុំមកទទួលយកទំនិញ និងយកនូវ    ឯកសារបញ្ចេញទំនិញមកបញ្ជាក់ ខ្ញុំ    អាចទទួលយកទំនិញបានឥឡូវទេ","I would like to pick up goods. I’m with a delivery order to confirm. Could I receive goods? ","ကြ်န္ေတာ္ကုန္ပစၥည္းလာယူၿပီ္း ကုန္္ပို႕လႊာတင္တယ္။ ကြ်န္ေတာ္ကုန္ပစၥည္း ယူသြားလို႔ရၿပီ္လားခင္ဗ်ာ။",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("ខ្ញុំមកទទួលយកទំនិញ និងយកនូវ    ឯកសារបញ្ចេញទំនិញមកបញ្ជាក់ ខ្ញុំ    អាចទទួលយកទំនិញបានឥឡូវទេ", "I would like to pick up goods. I’m with a delivery order to confirm. Could I receive goods? ", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
     }
 
     public void loadCambodiaToPhilippines(){
         ArrayList<Child> childList = new ArrayList<Child>();
-        Child child = new Child("ไทย","ไทย","ไทย","ไทย","ไทย",null,null);
+        Child child = new Child("kas-toms-in-spex-chan",""," ផ្នែកគយ","Custom house","Customs inspeksyon",null,null);
+        child.setSoundPath(-1);
         childList.add(child);
 
-        GroupHeader groupHeader = new GroupHeader("Cambodia","Philippines",childList);
+        GroupHeader groupHeader = new GroupHeader(" ផ្នែកគយ", "Custom house", childList);
         groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("par-nin-dar","","ទំនិញ","Goods","paninda",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("ទំនិញ", "Goods", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("pu-ey-rar-to",""," កំពង់ផែ","Dock warehouse","puerto",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" កំពង់ផែ", "Dock warehouse", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ser-ti-pi-go-nang-gar-ran-ti-yar",""," ឯកសារបញ្ជាក់","Certificate","sertipiko ng garantiya",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ឯកសារបញ្ជាក់", "Certificate", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ang-gat",""," នាំចូល","Import","angkat",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" នាំចូល", "Import", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("lu-was",""," នាំចេញ","Export","luwas",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" នាំចេញ", "Export", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("bar-yat",""," ថ្លៃចុះបញ្ជី","Charge","bayad",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ថ្លៃចុះបញ្ជី", "Charge", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("nak-par-dar-lar",""," អ្នកបញ្ជូនទំនិញ","Goods deliverer","nagpadala",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" អ្នកបញ្ជូនទំនិញ", "Goods deliverer", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("tu-mang-gap",""," អ្នកទទួលទំនិញ","Goods receiver","Tumanggap",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" អ្នកទទួលទំនិញ", "Goods receiver", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("bo-dey-gar-nang-par-nin-dar",""," ឃ្លាំង/ឃ្លាំងទំនិញ","Warehouse","Bodega ng paninda",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ឃ្លាំង/ឃ្លាំងទំនិញ", "Warehouse", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("pak-sey-sey-ku-ro",""," ធានារ៉ាប់រង","Insurance","pagseseguro",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ធានារ៉ាប់រង", "Insurance", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("gi-nar-tar-wan",""," អ្នកតំណាង","Shipping agent","kinatawan",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" អ្នកតំណាង", "Shipping agent", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("kom-sai-nee-of-goos",""," អ្នកទទួលបន្ទុកផ្នែកត្រាទំនិញ","Consignee ","Consignee of goods",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" អ្នកទទួលបន្ទុកផ្នែកត្រាទំនិញ", "Consignee ", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("bi-lang-nang-goos-kon-ten-ner-at-nang-sel-yar","","លេខទូកុងទឺណ័រទំនិញនិងលេខត្រាជ័រទូកុងទឺណ័រទំនិញ","Container and seal number","Bilang ng Goods container at ng selya",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("លេខទូកុងទឺណ័រទំនិញនិងលេខត្រាជ័រទូកុងទឺណ័រទំនិញ", "Container and seal number", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("or-der-sar-pak-dar-dar-lar-nang-gar-lar-gal",""," ឯកសារបញ្ចាឲ្យបញ្ចេញទំនិញ","Delivery order","Order sa pagdadala ng kalakal",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ឯកសារបញ្ចាឲ្យបញ្ចេញទំនិញ", "Delivery order", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("lis-tar-han-nang-mar-ngar-gar-lar-gal",""," មុខទំនិញ","Description of goods","Listahan ng mga kalakal",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" មុខទំនិញ", "Description of goods", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("mool-tar-sar-hu-ling-pak-sar-sar-u-li-nang-goos-kon-ten-ner",""," ថ្លៃទូកុងទឺណ័រដែលបញ្ជូនក្រោយពេល វេលាកំណត់","Detention","Multa sa huling pagsasauli ng goods container",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ថ្លៃទូកុងទឺណ័រដែលបញ្ជូនក្រោយពេល វេលាកំណត់", "Detention", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("dog-kiw-men-fee",""," ថ្លៃឯកសារ","Document fee","Document fee",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ថ្លៃឯកសារ", "Document fee", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ar-hen-tey-par-rar-sar-dey-li-wer-ree",""," អ្នកតំណាងខាងទទួលបន្ទុកបញ្ជូន ទំនិញ","Freight forwarder","Ahente para sa delivery",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" អ្នកតំណាងខាងទទួលបន្ទុកបញ្ជូន ទំនិញ", "Freight forwarder", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("mar-pan-ngar-nip-nar-mar-ngar-gar-lar-gal",""," ទំនិញគ្រោះថ្នាក់","Dangerous goods","mapanganib na mga kalakal",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ទំនិញគ្រោះថ្នាក់", "Dangerous goods", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("pi-rar-mar-at-nu-mey-ro-nang-pak-tang-gap-nang-gar-lar-gal",""," ស្លាកសញ្ញានិងលេខកូដកេះទំនិញ","Shipping mark and number","Pirma at numero ng pagtanggap ng kalakal",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ស្លាកសញ្ញានិងលេខកូដកេះទំនិញ", "Shipping mark and number", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("si-ngi-lin",""," ឯកសារបញ្ជូនទំនិញ","Invoice","singilin",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ឯកសារបញ្ជូនទំនិញ", "Invoice", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("gu-wen-tar-nang-pak-gar-gar",""," ឯកសារទទួលទំនិញ","Bill of lading","kuwenta ng pagkarga",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ឯកសារទទួលទំនិញ", "Bill of lading", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("pak- par-sok-at-ang-pak-lar-bas",""," ផ្លូវចូល ផ្លូវចេញ","Entrance - Exit","Pagpasok at ang paglabas",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ផ្លូវចូល ផ្លូវចេញ", "Entrance - Exit", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("nan-di-to-ar-go-pa-ra-gu-nin-ang-mar-ngar-gar-lar-gal-har-wak-go-ang-par-pel-par-rar-sar-or-der-for-dey-li-wer-ree-pu-wey-dey-bang-gu-nin-gar-ar-gad-ang-mar-ngar-gar-lar-gal","","ខ្ញុំមកទទួលយកទំនិញ និងយកនូវ    ឯកសារបញ្ចេញទំនិញមកបញ្ជាក់ ខ្ញុំ    អាចទទួលយកទំនិញបានឥឡូវទេ","I would like to pick up goods. I’m with a delivery order to confirm. Could I receive goods? ","Nandito ako para kunin ang mga kalakal. Hawak ko ang papel para sa “order for delivery”.  Puwede bang kunin kaagad ang mga kalakal?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("ខ្ញុំមកទទួលយកទំនិញ និងយកនូវ    ឯកសារបញ្ចេញទំនិញមកបញ្ជាក់ ខ្ញុំ    អាចទទួលយកទំនិញបានឥឡូវទេ", "I would like to pick up goods. I’m with a delivery order to confirm. Could I receive goods? ", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
     }
 
     public void loadCambodiaToSingapore(){
         ArrayList<Child> childList = new ArrayList<Child>();
-        Child child = new Child("ไทย","ไทย","ไทย","ไทย","ไทย",null,null);
+        Child child = new Child("cas-tom-haos",""," ផ្នែកគយ","Custom house","",null,null);
+        child.setSoundPath(-1);
         childList.add(child);
 
-        GroupHeader groupHeader = new GroupHeader("Cambodia","Singapore",childList);
+        GroupHeader groupHeader = new GroupHeader(" ផ្នែកគយ", "Custom house", childList);
         groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("goos","","ទំនិញ","Goods","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("ទំនិញ", "Goods", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("dok-ware-haos",""," កំពង់ផែ","Dock warehouse","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" កំពង់ផែ", "Dock warehouse", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ser-ti-fi-ket",""," ឯកសារបញ្ជាក់","Certificate","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ឯកសារបញ្ជាក់", "Certificate", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("im-port",""," នាំចូល","Import","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" នាំចូល", "Import", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ex-port",""," នាំចេញ","Export","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" នាំចេញ", "Export", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("charch",""," ថ្លៃចុះបញ្ជី","Charge","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ថ្លៃចុះបញ្ជី", "Charge", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("goos-dee-li-wer-rer",""," អ្នកបញ្ជូនទំនិញ","Goods deliverer","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" អ្នកបញ្ជូនទំនិញ", "Goods deliverer", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("goos-ree-seef-wer",""," អ្នកទទួលទំនិញ","Goods receiver","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" អ្នកទទួលទំនិញ", "Goods receiver", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ware-haos",""," ឃ្លាំង/ឃ្លាំងទំនិញ","Warehouse","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ឃ្លាំង/ឃ្លាំងទំនិញ", "Warehouse", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("in-chua-rans",""," ធានារ៉ាប់រង","Insurance","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ធានារ៉ាប់រង", "Insurance", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("chip-ping-eh-jent",""," អ្នកតំណាង","Shipping agent","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" អ្នកតំណាង", "Shipping agent", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("kan-sai-nee",""," អ្នកទទួលបន្ទុកផ្នែកត្រាទំនិញ","Consignee ","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" អ្នកទទួលបន្ទុកផ្នែកត្រាទំនិញ", "Consignee ", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("kon-ten-ner-an-sil-nam-ber","","លេខទូកុងទឺណ័រទំនិញនិងលេខត្រាជ័រទូកុងទឺណ័រទំនិញ","Container and seal number","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("លេខទូកុងទឺណ័រទំនិញនិងលេខត្រាជ័រទូកុងទឺណ័រទំនិញ", "Container and seal number", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("dee-li-wer-ree-or-der",""," ឯកសារបញ្ចាឲ្យបញ្ចេញទំនិញ","Delivery order","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ឯកសារបញ្ចាឲ្យបញ្ចេញទំនិញ", "Delivery order", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("dis-crip-chan-of-goos",""," មុខទំនិញ","Description of goods","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" មុខទំនិញ", "Description of goods", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("dee-ten-chan",""," ថ្លៃទូកុងទឺណ័រដែលបញ្ជូនក្រោយពេល វេលាកំណត់","Detention","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ថ្លៃទូកុងទឺណ័រដែលបញ្ជូនក្រោយពេល វេលាកំណត់", "Detention", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("dok-kio-ment-fee",""," ថ្លៃឯកសារ","Document fee","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ថ្លៃឯកសារ", "Document fee", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("fret-for-ward-der",""," អ្នកតំណាងខាងទទួលបន្ទុកបញ្ជូន ទំនិញ","Freight forwarder","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" អ្នកតំណាងខាងទទួលបន្ទុកបញ្ជូន ទំនិញ", "Freight forwarder", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("den-jer-ras-goos",""," ទំនិញគ្រោះថ្នាក់","Dangerous goods","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ទំនិញគ្រោះថ្នាក់", "Dangerous goods", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("chip-ping-mark-an-nam-ber",""," ស្លាកសញ្ញានិងលេខកូដកេះទំនិញ","Shipping mark and number","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ស្លាកសញ្ញានិងលេខកូដកេះទំនិញ", "Shipping mark and number", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("in-wois",""," ឯកសារបញ្ជូនទំនិញ","Invoice","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ឯកសារបញ្ជូនទំនិញ", "Invoice", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("bil-of-led -ding",""," ឯកសារទទួលទំនិញ","Bill of lading","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ឯកសារទទួលទំនិញ", "Bill of lading", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("en-trans-ex-sit",""," ផ្លូវចូល ផ្លូវចេញ","Entrance - Exit","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ផ្លូវចូល ផ្លូវចេញ", "Entrance - Exit", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ai-wood-laik-tu-pik-ap-goos-ai-am-wit-a-dee-li-wer-ree-or-der-to-kon-ferm-kood-ai-ree-seef-goos","","ខ្ញុំមកទទួលយកទំនិញ និងយកនូវ    ឯកសារបញ្ចេញទំនិញមកបញ្ជាក់ ខ្ញុំ    អាចទទួលយកទំនិញបានឥឡូវទេ","I would like to pick up goods. I’m with a delivery order to confirm. Could I receive goods? ","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("ខ្ញុំមកទទួលយកទំនិញ និងយកនូវ    ឯកសារបញ្ចេញទំនិញមកបញ្ជាក់ ខ្ញុំ    អាចទទួលយកទំនិញបានឥឡូវទេ", "I would like to pick up goods. I’m with a delivery order to confirm. Could I receive goods? ", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
     }
 
     public void loadCambodiaToVietnam(){
         ArrayList<Child> childList = new ArrayList<Child>();
-        Child child = new Child("ไทย","ไทย","ไทย","ไทย","ไทย",null,null);
+        Child child = new Child("hai-kwan",""," ផ្នែកគយ","Custom house","hải quan",null,null);
+        child.setSoundPath(-1);
         childList.add(child);
 
-        GroupHeader groupHeader = new GroupHeader("Cambodia","Vietnam",childList);
+        GroupHeader groupHeader = new GroupHeader(" ផ្នែកគយ", "Custom house", childList);
         groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("hang-hwa","","ទំនិញ","Goods","hàng hóa",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("ទំនិញ", "Goods", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("kong-tram-ben",""," កំពង់ផែ","Dock warehouse","cổng, trạm, bến",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" កំពង់ផែ", "Dock warehouse", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("yuai-jing-yern",""," ឯកសារបញ្ជាក់","Certificate","giấy chứng nhận",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ឯកសារបញ្ជាក់", "Certificate", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("yerb-khoeu",""," នាំចូល","Import","nhập khẩu",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" នាំចូល", "Import", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("suad-khoeu",""," នាំចេញ","Export","xuất khẩu",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" នាំចេញ", "Export", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("lay-fee",""," ថ្លៃចុះបញ្ជី","Charge","lệ phí",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ថ្លៃចុះបញ្ជី", "Charge", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ngeau-kuew-hang",""," អ្នកបញ្ជូនទំនិញ","Goods deliverer","người gửi hàng",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" អ្នកបញ្ជូនទំនិញ", "Goods deliverer", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ngeau-yern-hang",""," អ្នកទទួលទំនិញ","Goods receiver","người nhận hàng",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" អ្នកទទួលទំនិញ", "Goods receiver", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("khor / khor-hang",""," ឃ្លាំង/ឃ្លាំងទំនិញ","Warehouse","kho / kho hàng",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ឃ្លាំង/ឃ្លាំងទំនិញ", "Warehouse", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("boa-hium",""," ធានារ៉ាប់រង","Insurance","bảo hiểm",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ធានារ៉ាប់រង", "Insurance", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ngeau-dai-yean",""," អ្នកតំណាង","Shipping agent","người đại diện",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" អ្នកតំណាង", "Shipping agent", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ngeau-yern-hang-san-ferm",""," អ្នកទទួលបន្ទុកផ្នែកត្រាទំនិញ","Consignee ","người nhận hàng sản phẩm",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" អ្នកទទួលបន្ទុកផ្នែកត្រាទំនិញ", "Consignee ", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("soe-thung-container-wa-soe-korn-yue-kua-thung-container","","លេខទូកុងទឺណ័រទំនិញនិងលេខត្រាជ័រទូកុងទឺណ័រទំនិញ","Container and seal number","số thùng container và số con dấu của thùng container",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("លេខទូកុងទឺណ័រទំនិញនិងលេខត្រាជ័រទូកុងទឺណ័រទំនិញ", "Container and seal number", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("yuai-fab-jor-guew-hang",""," ឯកសារបញ្ចាឲ្យបញ្ចេញទំនិញ","Delivery order","giấy phép cho gủi hàng",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ឯកសារបញ្ចាឲ្យបញ្ចេញទំនិញ", "Delivery order", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("yan-suk-hang-hwa",""," មុខទំនិញ","Description of goods","danh sách hàng hóa",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" មុខទំនិញ", "Description of goods", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("tien-fard-container-den-jum-kwa-han-den",""," ថ្លៃទូកុងទឺណ័រដែលបញ្ជូនក្រោយពេល វេលាកំណត់","Detention","tiền phạt container đến chậm quá hạn định",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ថ្លៃទូកុងទឺណ័រដែលបញ្ជូនក្រោយពេល វេលាកំណត់", "Detention", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("tien-larm-yeaw-ter",""," ថ្លៃឯកសារ","Document fee","tiền làm giấy tờ",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ថ្លៃឯកសារ", "Document fee", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("dai-lee-wern-tai-hang-hwa",""," អ្នកតំណាងខាងទទួលបន្ទុកបញ្ជូន ទំនិញ","Freight forwarder","đại lý vận tải hàng hóa",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" អ្នកតំណាងខាងទទួលបន្ទុកបញ្ជូន ទំនិញ", "Freight forwarder", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("hang-ngui-heim",""," ទំនិញគ្រោះថ្នាក់","Dangerous goods","hàng nguy hiểm",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ទំនិញគ្រោះថ្នាក់", "Dangerous goods", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("yarn-hiaw-hwa-soe-hiaw-kua-boa-bi-san-ferm",""," ស្លាកសញ្ញានិងលេខកូដកេះទំនិញ","Shipping mark and number","nhãn hiệu và số hiệu của bao bì sản phẩm",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ស្លាកសញ្ញានិងលេខកូដកេះទំនិញ", "Shipping mark and number", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("hwa-dern-kuew-hang",""," ឯកសារបញ្ជូនទំនិញ","Invoice","hóa đơn gửi hàng ",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ឯកសារបញ្ជូនទំនិញ", "Invoice", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("hwa-dern-yern-hang",""," ឯកសារទទួលទំនិញ","Bill of lading","hóa đơn nhận hàng ",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ឯកសារទទួលទំនិញ", "Bill of lading", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("loi-wow-loi-ra",""," ផ្លូវចូល ផ្លូវចេញ","Entrance - Exit","lối vào - lối ra",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ផ្លូវចូល ផ្លូវចេញ", "Entrance - Exit", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("toay-den-yern-hang-hwa-dam-yuai-fab-jor-kuey-hang-den-larm-bung, toay-kor-thay-lun-hang-ngai-khong-ar","","ខ្ញុំមកទទួលយកទំនិញ និងយកនូវ    ឯកសារបញ្ចេញទំនិញមកបញ្ជាក់ ខ្ញុំ    អាចទទួលយកទំនិញបានឥឡូវទេ","I would like to pick up goods. I’m with a delivery order to confirm. Could I receive goods? ","tôi đến nhận hàng và đem giấy phép cho gửi hàng đến làm bằng, tôi có thể lãnh hàng ngay không ạ?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("ខ្ញុំមកទទួលយកទំនិញ និងយកនូវ    ឯកសារបញ្ចេញទំនិញមកបញ្ជាក់ ខ្ញុំ    អាចទទួលយកទំនិញបានឥឡូវទេ", "I would like to pick up goods. I’m with a delivery order to confirm. Could I receive goods? ", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------arang tersebut sekarang?","I would like to pick up goods. I’m with a delivery order to confirm. Could I receive goods? ","tôi đến nhận hàng và đem giấy phép cho gửi hàng đến làm bằng, tôi có thể lãnh hàng ngay không ạ?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Saya ingin ambil barang-barang.  Saya bawa surat pengantar sebagai bukti. Apa saya bisa ambil barang-barang tersebut sekarang?", "I would like to pick up goods. I’m with a delivery order to confirm. Could I receive goods? ", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
     }
 
     public void loadChinaToChina(){
