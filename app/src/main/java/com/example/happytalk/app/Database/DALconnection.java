@@ -37,11 +37,12 @@ public class DALconnection  {
     }
 
 
+    public void loadThaiToBrunei() {
+    }
 
 
     public ArrayList<GroupHeader> getGroupHeaderList()
     {
         return groupHeaderList;
     }
-
 }

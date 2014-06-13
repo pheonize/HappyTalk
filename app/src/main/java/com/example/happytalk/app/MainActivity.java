@@ -44,9 +44,9 @@ public class MainActivity extends Activity {
     private String strCountryFrom, strCountryTo;
 
     SQLiteDatabase sqLiteDatabase;
-    String[] country_list1 = {"Thai", "Brunei", "Cambodia", "China", "Indonesia",
-            "Laos", "Malaysia", "Myanmar", "Philippines", "Singapore",
-            "Vietnam"};
+    String[] country_list1 = {"Thailand(Thai)", "Brunei", "Cambodia", "China(Chinese)", "Indonesia(Bahasa Indonesia)",
+            "Laos(Lao)", "Malaysia", "Myanmar(Burmese)", "Philippines(Filipino)", "Singapore(English)",
+            "Vietnam(Vietnamese)"};
 
     Integer[] img1 = {R.drawable.thailand_flag, R.drawable.brunei_flag, R.drawable.cambodia_flag,
             R.drawable.china_flag, R.drawable.indonesia_flag,
@@ -55,9 +55,9 @@ public class MainActivity extends Activity {
             R.drawable.singapore_flag,
             R.drawable.vietnam_flag};
 
-    String[] country_list2 = {"China", "Thai", "Brunei", "Cambodia", "Indonesia",
-            "Laos", "Malaysia", "Myanmar", "Philippines", "Singapore",
-            "Vietnam"};
+    String[] country_list2 = {"China(Chinese)", "Thailand(Thai)", "Brunei", "Cambodia", "Indonesia(Bahasa Indonesia)",
+            "Laos(Lao)", "Malaysia", "Myanmar(Burmese)", "Philippines(Filipino)", "Singapore(English)",
+            "Vietnam(Vietnamese)"};
 
     Integer[] img2 = {R.drawable.china_flag, R.drawable.thailand_flag, R.drawable.brunei_flag, R.drawable.cambodia_flag,
             R.drawable.indonesia_flag,
@@ -69,7 +69,7 @@ public class MainActivity extends Activity {
 
     //Th
     String[] country_list1TH = {"ไทย", "บรูไน", "กัมพูชา", "จีน", "อินโดนีเซีย",
-            "ลาว", "มาเลเซีย", "พม่า", "ฟิลิปปินส์", "สิงคโปร์",
+            "ลาว", "มาเลเซีย", "พม่า", "ฟิลิปปินส์", "สิงคโปร์(อังกฤษ)",
             "เวียดนาม"};
 
     Integer[] img1TH = {R.drawable.thailand_flag, R.drawable.brunei_flag, R.drawable.cambodia_flag,
@@ -80,7 +80,7 @@ public class MainActivity extends Activity {
             R.drawable.vietnam_flag};
 
     String[] country_list2TH = {"จีน", "ไทย", "บรูไน", "กัมพูชา", "อินโดนีเซีย",
-            "ลาว", "มาเลเซีย", "พม่า", "ฟิลิปปินส์", "สิงคโปร์",
+            "ลาว", "มาเลเซีย", "พม่า", "ฟิลิปปินส์", "สิงคโปร์(อังกฤษ)",
             "เวียดนาม"};
 
     Integer[] img2TH = {R.drawable.china_flag, R.drawable.thailand_flag, R.drawable.brunei_flag, R.drawable.cambodia_flag,
