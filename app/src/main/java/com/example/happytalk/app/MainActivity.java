@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
+import android.database.sqlite.SQLiteDatabase;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
@@ -29,6 +30,7 @@ import android.widget.AdapterView.OnItemSelectedListener;
 
 
 import com.example.happytalk.app.Database.Database;
+import com.example.happytalk.app.Database.FavoriteDAL;
 
 import java.util.Locale;
 
@@ -41,7 +43,7 @@ public class MainActivity extends Activity {
 
     private String strCountryFrom, strCountryTo;
 
-
+    SQLiteDatabase sqLiteDatabase;
     String[] country_list1 = {"Thai", "Brunei", "Cambodia", "China", "Indonesia",
             "Laos", "Malaysia", "Myanmar", "Philippines", "Singapore",
             "Vietnam"};
@@ -118,7 +120,10 @@ public class MainActivity extends Activity {
 
         //Test DB //
         //Database
-        Database db = new Database(this);
+       // Database db = new Database(this);
+        FavoriteDAL db = new FavoriteDAL(this);
+        //db.getWritableDatabase();
+
 
 
         //Configuration configuration = new Configuration();

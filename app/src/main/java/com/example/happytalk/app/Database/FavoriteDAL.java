@@ -5,6 +5,7 @@ import android.content.Context;
 import android.database.DatabaseErrorHandler;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.util.Log;
 import android.widget.Toast;
 
 import com.example.happytalk.app.Child;
@@ -33,8 +34,18 @@ public class FavoriteDAL extends SQLiteOpenHelper {
     public static final String COLUMN_KARAOKEEN = "karaokeEN";
 
     private Context context;
-    SQLiteDatabase db;
+
     private ArrayList<GroupHeader> groupHeaderList = new ArrayList<GroupHeader>();
+
+
+
+//    String CREATE_FAVORITE_TABLE =  "CREATE TABLE "+ TABLE_FAVORITE + "("
+//            + COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " + COLUMN_LANGFROM +
+//            " TEXT, " + COLUMN_LANGTO + " TEXT, " + COLUMN_WORDEN + " TEXT, "+  COLUMN_WORDFROM + " TEXT, " +
+//            COLUMN_WORDTO + " TEXT, " + COLUMN_KARAOKETH + " TEXT, " + COLUMN_KARAOKEEN +
+//            " TEXT " + ")";
+
+
 
 
     public FavoriteDAL(Context context){
@@ -42,19 +53,16 @@ public class FavoriteDAL extends SQLiteOpenHelper {
 
 
     }
-
-
-
     @Override
     public void onCreate(SQLiteDatabase db) {
-
-        String CREATE_FAVORITE_TABLE =  "CREATE TABLE "+ TABLE_FAVORITE + "("
+        String CREATE_FAVORITE_TABLE = "CREATE TABLE "+ TABLE_FAVORITE + "("
                 + COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " + COLUMN_LANGFROM +
-                " TEXT, " + COLUMN_LANGTO + " TEXT, " + COLUMN_WORDEN + " TEXT, "+  COLUMN_WORDFROM + " TEXT, " +
+                " TEXT, " + COLUMN_LANGTO + " TEXT, " + COLUMN_WORDEN + " TEXT, " + COLUMN_WORDFROM + " TEXT, " +
                 COLUMN_WORDTO + " TEXT, " + COLUMN_KARAOKETH + " TEXT, " + COLUMN_KARAOKEEN +
                 " TEXT " + ")";
+
         db.execSQL(CREATE_FAVORITE_TABLE);
-        Toast.makeText(context,"Create "+ TABLE_FAVORITE ,Toast.LENGTH_SHORT).show();
+        Log.d("CREATE TABLE", "Create Table Successfully.");
 
     }
 
@@ -66,7 +74,7 @@ public class FavoriteDAL extends SQLiteOpenHelper {
     }
 
     public void addFavorite(Favorite favorite){
-        db =this.getWritableDatabase();
+        SQLiteDatabase db =this.getWritableDatabase();
 
         ContentValues values = new ContentValues();
         values.put(COLUMN_LANGFROM,favorite.getLangFrom());
@@ -79,12 +87,12 @@ public class FavoriteDAL extends SQLiteOpenHelper {
 
 
         db.insert(TABLE_FAVORITE,null,values);
-        Toast.makeText(context,"insert finish",Toast.LENGTH_SHORT).show();
+//        Toast.makeText(context,"insert finish",Toast.LENGTH_SHORT).show();
         db.close();
     }
 
     public void removeFavorite(Favorite favorite){
-        db = this.getWritableDatabase();
+        SQLiteDatabase db = this.getWritableDatabase();
 
         db.delete(TABLE_FAVORITE, COLUMN_ID + " = ?",
                 new String[] {String.valueOf(favorite.getId())});

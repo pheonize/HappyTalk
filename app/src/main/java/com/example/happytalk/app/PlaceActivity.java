@@ -83,9 +83,9 @@ public class PlaceActivity extends Activity implements SearchView.OnQueryTextLis
 
         //DB
 
-        db = new Database(this);
-
-        sqLiteDatabase = db.getWritableDatabase();
+//        db = new Database(this);
+//
+//        sqLiteDatabase = db.getWritableDatabase();
 
 
     }

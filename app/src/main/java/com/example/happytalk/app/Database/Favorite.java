@@ -1,5 +1,7 @@
 package com.example.happytalk.app.Database;
 
+import android.database.sqlite.SQLiteDatabase;
+
 /**
  * Created by oVANILLAz on 6/13/14 AD.
  */
@@ -13,7 +15,12 @@ public class Favorite {
     String karaokeEN;
     String wordEN;
 
+
+    private FavoriteDAL favoriteDAL;
+    private SQLiteDatabase sqLiteDatabase;
     public Favorite(){
+
+
 
     }
 
@@ -28,15 +35,6 @@ public class Favorite {
         this.wordEN = wordEN;
     }
 
-    public Favorite(String langFrom, String langTo, String wordFrom, String wordTo, String karaokeTH, String karaokeEN,  String wordEN) {
-        this.langFrom = langFrom;
-        this.langTo = langTo;
-        this.wordFrom = wordFrom;
-        this.wordTo = wordTo;
-        this.karaokeTH = karaokeTH;
-        this.karaokeEN = karaokeEN;
-        this.wordEN = wordEN;
-    }
     public int getId() {
         return id;
     }
@@ -101,3 +99,4 @@ public class Favorite {
         this.wordEN = wordEN;
     }
 }
+

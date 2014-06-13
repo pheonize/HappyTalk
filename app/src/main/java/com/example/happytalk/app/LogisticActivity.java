@@ -87,9 +87,9 @@ public class LogisticActivity extends Activity implements SearchView.OnQueryText
 
         //DB
 
-        db = new Database(this);
-
-        sqLiteDatabase = db.getWritableDatabase();
+//        db = new Database(this);
+//
+//        sqLiteDatabase = db.getWritableDatabase();
 
 
     }

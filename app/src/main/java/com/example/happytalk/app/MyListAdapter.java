@@ -36,15 +36,18 @@ public class MyListAdapter extends BaseExpandableListAdapter {
     private MediaPlayer mediaPlayer;
     Button btnSound;
     Button btnFavorite;
+
 //    private String lang_from,lang_to ;
 
     private ArrayList<GroupHeader> groupHeader = new ArrayList<GroupHeader>();
 
     private Child child;
 
-    FavoriteDAL db;
 
+    FavoriteDAL favoriteDAL;
     SQLiteDatabase sqLiteDatabase;
+
+
 
     Cursor mCursor;
     String lang_from,lang_to,wordEN,wordFrom,wordTo,karaokeTH,karaokeEN;
@@ -114,32 +117,53 @@ public class MyListAdapter extends BaseExpandableListAdapter {
             @Override
             public void onClick(View v) {
 
-                db = new FavoriteDAL(context);
-                sqLiteDatabase = db.getWritableDatabase();
-                if(mCursor.getCount() ==0){
 
 
-
-                    String insert = "INSERT INTO " + FavoriteDAL.TABLE_FAVORITE + " (" + FavoriteDAL.COLUMN_LANGFROM
-                            + ", " + FavoriteDAL.COLUMN_LANGTO + ", " + FavoriteDAL.COLUMN_WORDEN + ", "
-                            + FavoriteDAL.COLUMN_WORDFROM + ", " + FavoriteDAL.COLUMN_WORDTO + ", " + FavoriteDAL.COLUMN_KARAOKEEN +
-                            ", " + FavoriteDAL.COLUMN_KARAOKETH + ") VALUES ('" +  lang_from + "', '" + lang_to +
-                            "', '" + child.getWordEN() + "', '" + child.getWordFrom() + "', '" + child.getWordTo() + "', '"
-                            + child.getKaraokeEN() + "', '" + child.getKaraokeTH() + "');";
-
-
-                    sqLiteDatabase.execSQL(insert);
-
-                    Toast.makeText(context , "Add Favorite Success" ,Toast.LENGTH_SHORT).show();
-                }
-                else{
-                    Toast.makeText(context,"Same data" ,Toast.LENGTH_SHORT).show();
-                }
-
-
-
-
-
+             //   Favorite();
+                //db = new FavoriteDAL(context);
+                //sqLiteDatabase = db.getWritableDatabase();
+//                if(mCursor.getCount() ==0){
+//
+//
+//                    String insert = "INSERT INTO " + FavoriteDAL.TABLE_FAVORITE + " (" + FavoriteDAL.COLUMN_LANGFROM
+//                            + ", " + FavoriteDAL.COLUMN_LANGTO + ", " + FavoriteDAL.COLUMN_WORDEN + ", "
+//                            + FavoriteDAL.COLUMN_WORDFROM + ", " + FavoriteDAL.COLUMN_WORDTO + ", " + FavoriteDAL.COLUMN_KARAOKEEN +
+//                            ", " + FavoriteDAL.COLUMN_KARAOKETH + ") VALUES ('" +  lang_from + "', '" + lang_to +
+//                            "', '" + child.getWordEN() + "', '" + child.getWordFrom() + "', '" + child.getWordTo() + "', '"
+//                            + child.getKaraokeEN() + "', '" + child.getKaraokeTH() + "');";
+//
+//
+//                    sqLiteDatabase.execSQL(insert);
+//
+//                    Toast.makeText(context , "Add Favorite Success" ,Toast.LENGTH_SHORT).show();
+//                }
+//                else{
+//                    lang_from = mCursor.getString(mCursor.getColumnIndex(FavoriteDAL.COLUMN_LANGFROM));
+//                    lang_to = mCursor.getString(mCursor.getColumnIndex(FavoriteDAL.COLUMN_LANGTO));
+//                    wordEN = mCursor.getString(mCursor.getColumnIndex(FavoriteDAL.COLUMN_WORDEN));
+//                    wordFrom = mCursor.getString(mCursor.getColumnIndex(FavoriteDAL.COLUMN_WORDFROM));
+//                    wordTo = mCursor.getString(mCursor.getColumnIndex(FavoriteDAL.COLUMN_WORDTO));
+//                    karaokeEN = mCursor.getString(mCursor.getColumnIndex(FavoriteDAL.COLUMN_KARAOKEEN));
+//                    karaokeTH = mCursor.getString(mCursor.getColumnIndex(FavoriteDAL.COLUMN_KARAOKETH));
+//
+//                    String delete = "DELETE FROM " + FavoriteDAL.TABLE_FAVORITE + "WHERE "
+//                            + FavoriteDAL.COLUMN_LANGFROM + "='" + lang_from + "'"
+//                            + " AND " + FavoriteDAL.COLUMN_LANGTO + "='" + lang_to + "'"
+//                            + " AND " + FavoriteDAL.COLUMN_WORDEN + "='" + wordEN + "'"
+//                            + " AND " + FavoriteDAL.COLUMN_WORDFROM + "='" + wordFrom + "'"
+//                            + " AND " + FavoriteDAL.COLUMN_WORDTO + "='" + wordTo + "'"
+//                            + " AND " + FavoriteDAL.COLUMN_KARAOKEEN + "='" + karaokeEN + "'"
+//                            + " AND " + FavoriteDAL.COLUMN_KARAOKETH + "='" + karaokeTH + "';";
+//
+//                    sqLiteDatabase.execSQL(delete);
+//                    mCursor.requery();
+//
+//                    Toast.makeText(context,"Same data" ,Toast.LENGTH_SHORT).show();
+//                }
+//
+//
+//                db.close();
+//                sqLiteDatabase.close();
 
             }
 
@@ -159,11 +183,36 @@ public class MyListAdapter extends BaseExpandableListAdapter {
         return view;
     }
 
-    public void onStop(){
-        ;
 
 
-    }
+//    private void Favorite() {
+//        favoriteDAL = new FavoriteDAL(context);
+//        String wordEN = child.getWordEN();
+//        String wordFrom = child.getWordFrom();
+//        String wordTo = child.getWordTo();
+//        String karaokeEN = child.getKaraokeEN();
+//        String karaokeTH = child.getKaraokeTH();
+//
+//        String insert = "INSERT INTO " + FavoriteDAL.TABLE_FAVORITE + " (" + FavoriteDAL.COLUMN_LANGFROM
+//                + ", " + FavoriteDAL.COLUMN_LANGTO + ", " + FavoriteDAL.COLUMN_WORDEN + ", "
+//                + FavoriteDAL.COLUMN_WORDFROM + ", " + FavoriteDAL.COLUMN_WORDTO + ", " + FavoriteDAL.COLUMN_KARAOKEEN +
+//                ", " + FavoriteDAL.COLUMN_KARAOKETH + ") VALUES ('" + lang_from + "', '" + lang_to +
+//                "', '" + wordEN + "', '" + wordFrom + "', '" + wordTo + "', '"
+//                + karaokeEN + "', '" + karaokeTH + "');";
+//
+//          //  favoriteDAL.addFavorite(new Favorite(lang_from,lang_to,wordEN,wordFrom,wordTo,karaokeEN,karaokeTH));
+//
+//            //long insert =
+//
+//
+//
+//            sqLiteDatabase.execSQL(insert);
+//            Toast.makeText(context, "Add Favorite Success", Toast.LENGTH_SHORT).show();
+//
+//
+//    }
+
+
     @Override
     public int getChildrenCount(int groupPosition){
         ArrayList<Child> childList = groupHeadersList.get(groupPosition).getChildList();

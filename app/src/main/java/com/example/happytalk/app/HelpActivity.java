@@ -97,9 +97,9 @@ public class HelpActivity extends Activity implements SearchView.OnQueryTextList
 
         //DB
 
-        db = new Database(this);
-
-        sqLiteDatabase = db.getWritableDatabase();
+//        db = new Database(this);
+//
+//        sqLiteDatabase = db.getWritableDatabase();
 
 
     }

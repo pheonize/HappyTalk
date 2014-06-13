@@ -37,15 +37,16 @@ import android.widget.VideoView;
 
 import com.example.happytalk.app.Database.ConversationDAL;
 import com.example.happytalk.app.Database.Database;
+import com.example.happytalk.app.Database.FavoriteDAL;
 
 import java.util.ArrayList;
 
 
-public class ConversationActivity extends Activity implements MediaPlayer.OnCompletionListener {
+public class ConversationActivity extends Activity {
 
 
     //DB
-    private static Database db;
+    //private static Database db;
     SQLiteDatabase sqLiteDatabase;
     Context context;
 
@@ -78,8 +79,12 @@ public class ConversationActivity extends Activity implements MediaPlayer.OnComp
     private ConversationDAL loadWording;
 
     private MediaPlayer mediaPlayer;
-    Button btnSound;
-    Button btnFavorite;
+//    Button btnSound;
+//    Button btnFavorite;
+//
+
+    private static FavoriteDAL favoriteDAL;
+
 
 
 
@@ -103,9 +108,11 @@ public class ConversationActivity extends Activity implements MediaPlayer.OnComp
 
         //DB
 
-        db = new Database(this);
-
-        sqLiteDatabase = db.getWritableDatabase();
+        //db = new Database(this);
+//        favoriteDAL = new FavoriteDAL(this);
+//        sqLiteDatabase = favoriteDAL.getWritableDatabase();
+            favoriteDAL = new FavoriteDAL(this);
+        sqLiteDatabase = favoriteDAL.getWritableDatabase();
 
 
     }
@@ -1581,12 +1588,12 @@ public class ConversationActivity extends Activity implements MediaPlayer.OnComp
 
     }
 
-    public void onPause() {
-        super.onPause();
-        db.close();
-        sqLiteDatabase.close();
-    }
-
+//    public void onPause() {
+//        super.onPause();
+//        db.close();
+//        sqLiteDatabase.close();
+//    }
+//
 
 
     @Override
@@ -1628,12 +1635,6 @@ public class ConversationActivity extends Activity implements MediaPlayer.OnComp
 
 
 
-    @Override
-    public void onCompletion(MediaPlayer mp) {
-        mediaPlayer.release();
-        mediaPlayer = null;
-
-    }
 }
 
 

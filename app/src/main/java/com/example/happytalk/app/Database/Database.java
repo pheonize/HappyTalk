@@ -24,6 +24,7 @@ public class Database extends SQLiteOpenHelper {
     public static final String TABLE_PLACE = "place";
     public static final String TABLE_EMERGENCY= "emergency";
     public static final String TABLE_LOGISTIC = "logistic";
+    public static final String TABLE_FAVORITE = "favorite";
 
 
 
@@ -80,12 +81,19 @@ public class Database extends SQLiteOpenHelper {
                 COLUMN_WORDTO + " TEXT, " + COLUMN_KARAOKETH + " TEXT, " + COLUMN_KARAOKEEN +
                 " TEXT, " + COLUMN_SOUND + " TEXT " + ")";
 
+        String CREATE_FAVORITE_TABLE = "CREATE TABLE "+ TABLE_LOGISTIC + "("
+                + COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " + COLUMN_LANGFROM +
+                " TEXT, " + COLUMN_LANGTO + " TEXT, " + COLUMN_WORDEN + " TEXT, "+  COLUMN_WORDFROM + " TEXT, " +
+                COLUMN_WORDTO + " TEXT, " + COLUMN_KARAOKETH + " TEXT, " + COLUMN_KARAOKEEN +
+                " TEXT, " + COLUMN_SOUND + " TEXT " + ")";
+
 
         db.execSQL(CREATE_CONVERSATION_TABLE);
         db.execSQL(CREATE_THING_TABLE);
         db.execSQL(CREATE_PLACE_TABLE);
         db.execSQL(CREATE_EMERGENCY_TABLE);
         db.execSQL(CREATE_LOGISTIC_TABLE);
+        db.execSQL(CREATE_FAVORITE_TABLE);
 
     }
     //Conversation
@@ -594,6 +602,8 @@ public class Database extends SQLiteOpenHelper {
         db.execSQL("DROP TABLE IF EXISTS " + TABLE_PLACE);
         db.execSQL("DROP TABLE IF EXISTS " + TABLE_EMERGENCY);
         db.execSQL("DROP TABLE IF EXISTS " + TABLE_LOGISTIC);
+        db.execSQL("DROP TABLE IF EXISTS " + TABLE_FAVORITE);
+
         onCreate(db);
     }
 
