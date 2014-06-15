@@ -228,7 +228,7 @@ public class HelpActivity extends Activity implements SearchView.OnQueryTextList
         }
         if(lang_from.equals("Thai")&& lang_to.equals("Myanmar") || lang_from.equals("ไทย") && lang_to.equals("พม่า")){
             loadWording = new EmergencyDAL();
-            loadWording.loadThaiToMalaysia();
+            loadWording.loadThaiToMyanmar();
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
@@ -447,16 +447,6 @@ public class HelpActivity extends Activity implements SearchView.OnQueryTextList
             myList.setAdapter(listAdapter);
         }
 
-        if(lang_from.equals("Cambodia") && lang_to.equals("Indonesia") || lang_from.equals("กัมพูชา") && lang_to.equals("อินโดนีเซีย")){
-            loadWording = new EmergencyDAL();
-            loadWording.loadCambodiaToIndonesia();
-
-            myList = (ExpandableListView) findViewById(R.id.groupListview);
-            //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(HelpActivity.this, loadWording.getGroupHeaderList(),lang_from,lang_to);
-            //attach the adapter to the list
-            myList.setAdapter(listAdapter);
-        }
 
         if(lang_from.equals("Cambodia") && lang_to.equals("Laos") || lang_from.equals("กัมพูชา") && lang_to.equals("ลาว")){
             loadWording = new EmergencyDAL();

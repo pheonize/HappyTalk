@@ -222,7 +222,7 @@ public class ThingActivity extends Activity implements SearchView.OnQueryTextLis
         }
         if(lang_from.equals("Thai")&& lang_to.equals("Myanmar") || lang_from.equals("ไทย") && lang_to.equals("พม่า")){
             loadWording = new ThingDAL();
-            loadWording.loadThaiToMalaysia();
+            loadWording.loadThaiToMyanmar();
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
