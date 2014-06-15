@@ -11,16 +11,16 @@
     <Button
         style="?android:attr/buttonStyleSmall"
         android:id="@+id/sounds"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
         android:layout_marginTop="10dp"
         android:contentDescription="@string/app_name"
         android:background="@drawable/s"/>
     <Button
         style="?android:attr/buttonStyleSmall"
         android:id="@+id/favorite"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
         android:layout_marginTop="10dp"
         android:layout_below="@+id/sounds"
         android:contentDescription="@string/app_name"
@@ -37,7 +37,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_centerVertical="true"
-        android:paddingTop="20dp"
+        android:paddingTop="10dp"
         android:paddingLeft="50dp"
         android:text="test1"/>
     <TextView
