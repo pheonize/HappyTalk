@@ -2679,7 +2679,7 @@ public class ThingDAL {
     public void loadBruneiToBrunei(){
         ArrayList<Child> childList = new ArrayList<Child>();
         Child child = new Child("sa-ya-ra-sa-la-pul","","Saya rasa lapar","I  feel hungry.","",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.hungry_br);
         childList.add(child);
 
         GroupHeader groupHeader = new GroupHeader("Saya rasa lapar", "I  feel hungry.", childList);
@@ -2687,7 +2687,7 @@ public class ThingDAL {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("sa-ya-hern-duk-ma-gun-na-si","","Saya hendak makan nasi","I would like some food.","",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.somefood_br);
         childList.add(child);
 
         groupHeader = new GroupHeader("Saya hendak makan nasi", "I would like some food.", childList);
@@ -2695,7 +2695,7 @@ public class ThingDAL {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("to-long-ger-loo-wul-gun-rer-sit-mer- ngee-goot-na-ma-darn-ar-la-mud-ee-nee","","Tolong keluarkan resit mengikut nama dan alamat ini","Could you please give me a receipt following by these name and address.","",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.receipt_br);
         childList.add(child);
 
         groupHeader = new GroupHeader("Tolong keluarkan resit mengikut nama dan alamat ini", "Could you please give me a receipt following by these name and address.", childList);
@@ -2703,7 +2703,7 @@ public class ThingDAL {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("sa-ya-pern-loo-gun-ger-tas-tee-soo","","Saya perlukan kertas tisu","I would like some toilet paper.","",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.toilerpaper_br);
         childList.add(child);
 
         groupHeader = new GroupHeader("Saya perlukan kertas tisu", "I would like some toilet paper.", childList);
@@ -2711,7 +2711,7 @@ public class ThingDAL {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("sa-ya-pern-loo-gun-gai-too-wa-la","","Saya perlukankain tuala","I would like a towel.","",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.towel_br);
         childList.add(child);
 
         groupHeader = new GroupHeader("Saya perlukankain tuala", "I would like a towel.", childList);
@@ -2719,7 +2719,7 @@ public class ThingDAL {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("sa-ya-ma-hoo-ai-mee-noo-mun","","Saya mahu air minuman","I would like some drinking water.","",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.drinkwater);
         childList.add(child);
 
         groupHeader = new GroupHeader("Saya mahu air minuman", "I would like some drinking water.", childList);
@@ -2727,7 +2727,7 @@ public class ThingDAL {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("sa-ya-pern-loo-gun-per-ta","","Saya perlukan peta","I would like a map.","",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.map_br);
         childList.add(child);
 
         groupHeader = new GroupHeader("Saya perlukan peta", "I would like a map.", childList);
@@ -2735,7 +2735,7 @@ public class ThingDAL {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("sa-ya-pern-loo-gun-oo-bud-der-mun","","Saya perlukan  ubat deman","I would like the aspirin.","",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.aspirin_br);
         childList.add(child);
 
         groupHeader = new GroupHeader("Saya perlukan  ubat deman", "I would like the aspirin.", childList);
@@ -2743,7 +2743,7 @@ public class ThingDAL {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("sa-ya-pern-loo-gun-oo-bud-ba-took","","Saya perlukan ubat batuk","I would like the cough mixture.","",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.cough_br);
         childList.add(child);
 
         groupHeader = new GroupHeader("Saya perlukan ubat batuk", "I would like the cough mixture.", childList);
@@ -2751,7 +2751,7 @@ public class ThingDAL {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("sa-ya-pern-loo-gun-oo-bud-sa-git-per-root","","Saya perlukan ubat sakit perut","I would like the stomach ache medicine.","",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.stomach_br);
         childList.add(child);
 
         groupHeader = new GroupHeader("Saya perlukan ubat sakit perut", "I would like the stomach ache medicine.", childList);
@@ -2759,7 +2759,7 @@ public class ThingDAL {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("sa-ya-ma-hoo-go-pee","","Saya mahu kopi","I would like a coffee.","",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.coffee_br);
         childList.add(child);
 
         groupHeader = new GroupHeader("Saya mahu kopi", "I would like a coffee.", childList);
@@ -2767,7 +2767,7 @@ public class ThingDAL {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("sa-ya-pern-loo-gun-mee-yuk","","Saya perlukan  minyak","I would like to get the fuel oil.","",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.oil_br);
         childList.add(child);
 
         groupHeader = new GroupHeader("Saya perlukan  minyak", "I would like to get the fuel oil.", childList);
@@ -2775,7 +2775,7 @@ public class ThingDAL {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("sa-ya-pern-loo-gun-ai-soo-ling","","Saya perlukan air suling","I would like a distilled water.","",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.distilledwater_br);
         childList.add(child);
 
         groupHeader = new GroupHeader("Saya perlukan air suling", "I would like a distilled water.", childList);
@@ -2783,7 +2783,7 @@ public class ThingDAL {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("sa-ya-pern-loo-gun-ba-ter-ree","","Saya perlukan bateri","I would like a battery.","",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.battery_br);
         childList.add(child);
 
         groupHeader = new GroupHeader("Saya perlukan bateri", "I would like a battery.", childList);
@@ -2791,7 +2791,7 @@ public class ThingDAL {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("sa-ya-pern-loo-gun-per-moo-tul-sgroo","","Saya perlukan pemutar skru","I would like a screw driver.","",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.screw_br);
         childList.add(child);
 
         groupHeader = new GroupHeader("Saya perlukan pemutar skru", "I would like a screw driver.", childList);
@@ -2799,7 +2799,7 @@ public class ThingDAL {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("sa-ya-pern-loo-gun-ser-pa-na","","Saya perlukan sepana","I would like a wrench.","",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.wrench_br);
         childList.add(child);
 
         groupHeader = new GroupHeader("Saya perlukan sepana", "I would like a wrench.", childList);
@@ -2807,7 +2807,7 @@ public class ThingDAL {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("sa-ya-pern-loo-gun-yek","","Saya perlukan jek","I would like a jack.","",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.jack_br);
         childList.add(child);
 
         groupHeader = new GroupHeader("Saya perlukan jek", "I would like a jack.", childList);
@@ -2815,7 +2815,7 @@ public class ThingDAL {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("sa-ya-pern-loo-gun-ta-yul-kun-tee","","Saya perlukan  tayar ganti","I would like a spare wheel.","",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.wheel_br);
         childList.add(child);
 
         groupHeader = new GroupHeader("Saya perlukan  tayar ganti", "I would like a spare wheel.", childList);
@@ -2823,7 +2823,7 @@ public class ThingDAL {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("sa-ya-pern-loo-gun-lum-poo-soo-luh","","Saya perlukan lampu suluh","I would like a  flashlight.","",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.flashlight_br);
         childList.add(child);
 
         groupHeader = new GroupHeader("Saya perlukan lampu suluh", "I would like a  flashlight.", childList);
@@ -2831,7 +2831,7 @@ public class ThingDAL {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("sa-ya-pern-loo-gun-soo-doo/ kul-poo","","Saya perlukan sudu/garpu","I would like a fork.","",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.fork_br);
         childList.add(child);
 
         groupHeader = new GroupHeader("Saya perlukan sudu/garpu", "I would like a fork.", childList);
@@ -2839,7 +2839,7 @@ public class ThingDAL {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("sa-ya-pern-loo-gun-ga-yoo-per-nger-pit","","Saya perlukan kayu pengepit","I would like a chopstick.","",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.chopstick_br);
         childList.add(child);
 
         groupHeader = new GroupHeader("Saya perlukan kayu pengepit", "I would like a chopstick.", childList);
@@ -2847,7 +2847,7 @@ public class ThingDAL {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("sa-ya-pern-loo-gun-ga-til/ tee-lum/ la-pik","","Saya perlukan katil/ tilam/lapik","I would like a bed / mattress.","",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.bed_br);
         childList.add(child);
 
         groupHeader = new GroupHeader("Saya perlukan katil/ tilam/lapik", "I would like a bed / mattress.", childList);
@@ -2855,7 +2855,7 @@ public class ThingDAL {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("sa-ya-pern-loo-gun-gai-ser-lee-mut","","Saya perlukan kain selimut","I would like a blanket.","",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.blanket_br);
         childList.add(child);
 
         groupHeader = new GroupHeader("Saya perlukan kain selimut", "I would like a blanket.", childList);
@@ -2863,7 +2863,7 @@ public class ThingDAL {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("sa-ya-pern-loo-gun-bun-tal","","Saya perlukan bantal","I would like a pillow.","",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.pillow_br);
         childList.add(child);
 
         groupHeader = new GroupHeader("Saya perlukan bantal", "I would like a pillow.", childList);
@@ -2871,7 +2871,7 @@ public class ThingDAL {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("sa-ya-pern-loo-gun-tay-lay-fon","","Saya perlukan telefon","I would like to get a phone.","",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.phone_br);
         childList.add(child);
 
         groupHeader = new GroupHeader("Saya perlukan telefon", "I would like to get a phone.", childList);
@@ -4917,7 +4917,7 @@ public class ThingDAL {
     public void loadCambodiaToBrunei(){
         ArrayList<Child> childList = new ArrayList<Child>();
         Child child = new Child("sa-ya-ra-sa-la-pul",""," ខ្ញុំមានអារម្មណ៍ថា ដូចជាឃ្លានហើយ","I  feel hungry.","Saya rasa lapar",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.hungry_br);
         childList.add(child);
 
         GroupHeader groupHeader = new GroupHeader(" ខ្ញុំមានអារម្មណ៍ថា ដូចជាឃ្លានហើយ", "I  feel hungry.", childList);
@@ -4925,7 +4925,7 @@ public class ThingDAL {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("sa-ya-hern-duk-ma-gun-na-si",""," ខ្ញុំត្រូវការហូបបាយ","I would like some food.","Saya hendak makan nasi",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.somefood_br);
         childList.add(child);
 
         groupHeader = new GroupHeader(" ខ្ញុំត្រូវការហូបបាយ", "I would like some food.", childList);
@@ -4933,7 +4933,7 @@ public class ThingDAL {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("to-long-ger-loo-wul-gun-rer-sit-mer- ngee-goot-na-ma-darn-ar-la-mud-ee-nee",""," សូមជួយសរសេរនូវវិក័យបត្រតាម ឈ្មោះ និងទីកន្លែងនេះផង","Could you please give me a receipt following by these name and address.","Tolong keluarkan resit mengikut nama dan alamat ini",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.receipt_br);
         childList.add(child);
 
         groupHeader = new GroupHeader(" សូមជួយសរសេរនូវវិក័យបត្រតាម ឈ្មោះ និងទីកន្លែងនេះផង", "Could you please give me a receipt following by these name and address.", childList);
@@ -4941,7 +4941,7 @@ public class ThingDAL {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("sa-ya-pern-loo-gun-ger-tas-tee-soo",""," ខ្ញុំត្រូវការក្រដាសអនាម័យ","I would like some toilet paper.","Saya perlukan kertas tisu",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.toilerpaper_br);
         childList.add(child);
 
         groupHeader = new GroupHeader(" ខ្ញុំត្រូវការក្រដាសអនាម័យ", "I would like some toilet paper.", childList);
@@ -4949,7 +4949,7 @@ public class ThingDAL {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("sa-ya-pern-loo-gun-gai-too-wa-la",""," ខ្ញុំត្រូវការកន្សែងពោះគោ","I would like a towel.","Saya perlukankain tuala",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.towel_br);
         childList.add(child);
 
         groupHeader = new GroupHeader(" ខ្ញុំត្រូវការកន្សែងពោះគោ", "I would like a towel.", childList);
@@ -4957,7 +4957,7 @@ public class ThingDAL {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("sa-ya-ma-hoo-ai-mee-noo-mun","","  ខ្ញុំត្រូវការទឹកសុទ្ធ","I would like some drinking water.","Saya mahu air minuman",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.drinkwater);
         childList.add(child);
 
         groupHeader = new GroupHeader("  ខ្ញុំត្រូវការទឹកសុទ្ធ", "I would like some drinking water.", childList);
@@ -4965,7 +4965,7 @@ public class ThingDAL {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("sa-ya-pern-loo-gun-per-ta","","  ខ្ញុំត្រូវការផែនទី","I would like a map.","Saya perlukan peta",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.map_br);
         childList.add(child);
 
         groupHeader = new GroupHeader("  ខ្ញុំត្រូវការផែនទី", "I would like a map.", childList);
@@ -4973,7 +4973,7 @@ public class ThingDAL {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("sa-ya-pern-loo-gun-oo-bud-der-mun","","  ខ្ញុំត្រូវការថ្នាំផ្តាសាយ","I would like the aspirin.","Saya perlukan  ubat deman",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.aspirin_br);
         childList.add(child);
 
         groupHeader = new GroupHeader("  ខ្ញុំត្រូវការថ្នាំផ្តាសាយ", "I would like the aspirin.", childList);
@@ -4981,7 +4981,7 @@ public class ThingDAL {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("sa-ya-pern-loo-gun-oo-bud-ba-took","","  ខ្ញុំត្រូវការថ្នាំឈឺក","I would like the cough mixture.","Saya perlukan ubat batuk",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.cough_br);
         childList.add(child);
 
         groupHeader = new GroupHeader("  ខ្ញុំត្រូវការថ្នាំឈឺក", "I would like the cough mixture.", childList);
@@ -4989,7 +4989,7 @@ public class ThingDAL {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("sa-ya-pern-loo-gun-oo-bud-sa-git-per-root","","  ខ្ញុំត្រូវការថ្នាំឈឺពោះ","I would like the stomach ache medicine.","Saya perlukan ubat sakit perut",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.stomach_br);
         childList.add(child);
 
         groupHeader = new GroupHeader("  ខ្ញុំត្រូវការថ្នាំឈឺពោះ", "I would like the stomach ache medicine.", childList);
@@ -4997,7 +4997,7 @@ public class ThingDAL {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("sa-ya-ma-hoo-go-pee","","  ខ្ញុំត្រូវការកាហ្វេ","I would like a coffee.","Saya mahu kopi",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.coffee_br);
         childList.add(child);
 
         groupHeader = new GroupHeader("  ខ្ញុំត្រូវការកាហ្វេ", "I would like a coffee.", childList);
@@ -5005,7 +5005,7 @@ public class ThingDAL {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("sa-ya-pern-loo-gun-mee-yuk","","  ខ្ញុំត្រូវការប្រេងសាំង","I would like to get the fuel oil.","Saya perlukan  minyak",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.oil_br);
         childList.add(child);
 
         groupHeader = new GroupHeader("  ខ្ញុំត្រូវការប្រេងសាំង", "I would like to get the fuel oil.", childList);
@@ -5013,7 +5013,7 @@ public class ThingDAL {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("sa-ya-pern-loo-gun-ai-soo-ling","","  ខ្ញុំត្រូវការទឹកចម្រាញ់","I would like a distilled water.","Saya perlukan air suling",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.distilledwater_br);
         childList.add(child);
 
         groupHeader = new GroupHeader("  ខ្ញុំត្រូវការទឹកចម្រាញ់", "I would like a distilled water.", childList);
@@ -5021,7 +5021,7 @@ public class ThingDAL {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("sa-ya-pern-loo-gun-ba-ter-ree","","  ខ្ញុំត្រូវការថ្មពិល","I would like a battery.","Saya perlukan bateri",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.battery_br);
         childList.add(child);
 
         groupHeader = new GroupHeader("  ខ្ញុំត្រូវការថ្មពិល", "I would like a battery.", childList);
@@ -5029,7 +5029,7 @@ public class ThingDAL {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("sa-ya-pern-loo-gun-per-moo-tul-sgroo","","  ខ្ញុំត្រូវការទុរវីស","I would like a screw driver.","Saya perlukan pemutar skru",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.screw_br);
         childList.add(child);
 
         groupHeader = new GroupHeader("  ខ្ញុំត្រូវការទុរវីស", "I would like a screw driver.", childList);
@@ -5037,7 +5037,7 @@ public class ThingDAL {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("sa-ya-pern-loo-gun-ser-pa-na","","  ខ្ញុំត្រូវការប្រដាប់មួល","I would like a wrench.","Saya perlukan sepana",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.wrench_br);
         childList.add(child);
 
         groupHeader = new GroupHeader("  ខ្ញុំត្រូវការប្រដាប់មួល", "I would like a wrench.", childList);
@@ -5045,7 +5045,7 @@ public class ThingDAL {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("sa-ya-pern-loo-gun-yek","","  ខ្ញុំត្រូវការប្រដាប់ដូយ","I would like a jack.","Saya perlukan jek",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.jack_br);
         childList.add(child);
 
         groupHeader = new GroupHeader("  ខ្ញុំត្រូវការប្រដាប់ដូយ", "I would like a jack.", childList);
@@ -5053,7 +5053,7 @@ public class ThingDAL {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("sa-ya-pern-loo-gun-ta-yul-kun-tee","","  ខ្ញុំត្រូវការសំបកកង់ដូរ","I would like a spare wheel.","Saya perlukan  tayar ganti",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.wheel_br);
         childList.add(child);
 
         groupHeader = new GroupHeader("  ខ្ញុំត្រូវការសំបកកង់ដូរ", "I would like a spare wheel.", childList);
@@ -5061,7 +5061,7 @@ public class ThingDAL {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("sa-ya-pern-loo-gun-lum-poo-soo-luh","","  ខ្ញុំត្រូវការពិល","I would like a  flashlight.","Saya perlukan lampu suluh",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.flashlight_br);
         childList.add(child);
 
         groupHeader = new GroupHeader("  ខ្ញុំត្រូវការពិល", "I would like a  flashlight.", childList);
@@ -5069,7 +5069,7 @@ public class ThingDAL {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("sa-ya-pern-loo-gun-soo-doo/ kul-poo","","  ខ្ញុំត្រូវការស្លាបព្រាសម","I would like a fork.","Saya perlukan sudu/garpu",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.fork_br);
         childList.add(child);
 
         groupHeader = new GroupHeader("  ខ្ញុំត្រូវការស្លាបព្រាសម", "I would like a fork.", childList);
@@ -5077,7 +5077,7 @@ public class ThingDAL {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("sa-ya-pern-loo-gun-ga-yoo-per-nger-pit","","  ខ្ញុំត្រូវការចង្កឹះ","I would like a chopstick.","Saya perlukan kayu pengepit",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.chopstick_br);
         childList.add(child);
 
         groupHeader = new GroupHeader("  ខ្ញុំត្រូវការចង្កឹះ", "I would like a chopstick.", childList);
@@ -5085,7 +5085,7 @@ public class ThingDAL {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("sa-ya-pern-loo-gun-ga-til/ tee-lum/ la-pik","","  ខ្ញុំត្រូវការគ្រែ/ពូក/ទ្រនាប់ក្រាល","I would like a bed / mattress.","Saya perlukan katil/ tilam/lapik",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.bed_br);
         childList.add(child);
 
         groupHeader = new GroupHeader("  ខ្ញុំត្រូវការគ្រែ/ពូក/ទ្រនាប់ក្រាល", "I would like a bed / mattress.", childList);
@@ -5093,7 +5093,7 @@ public class ThingDAL {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("sa-ya-pern-loo-gun-gai-ser-lee-mut","","  ខ្ញុំត្រូវការភួយ","I would like a blanket.","Saya perlukan kain selimut",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.blanket_br);
         childList.add(child);
 
         groupHeader = new GroupHeader("  ខ្ញុំត្រូវការភួយ", "I would like a blanket.", childList);
@@ -5101,7 +5101,7 @@ public class ThingDAL {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("sa-ya-pern-loo-gun-bun-tal","","  ខ្ញុំត្រូវការខ្នើយ","I would like a pillow.","Saya perlukan bantal",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.pillow_br);
         childList.add(child);
 
         groupHeader = new GroupHeader("  ខ្ញុំត្រូវការខ្នើយ", "I would like a pillow.", childList);
@@ -5109,7 +5109,7 @@ public class ThingDAL {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("sa-ya-pern-loo-gun-tay-lay-fon","","  ខ្ញុំត្រូវការទូរសព្ទ","I would like to get a phone.","Saya perlukan telefon",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.phone_br);
         childList.add(child);
 
         groupHeader = new GroupHeader("  ខ្ញុំត្រូវការទូរសព្ទ", "I would like to get a phone.", childList);
@@ -7148,7 +7148,7 @@ public class ThingDAL {
     public void loadChinaToBrunei(){
         ArrayList<Child> childList = new ArrayList<Child>();
         Child child = new Child("sa-ya-ra-sa-la-pul",""," 我觉得饿了","I  feel hungry.","Saya rasa lapar",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.hungry_br);
         childList.add(child);
 
         GroupHeader groupHeader = new GroupHeader(" 我觉得饿了", "I  feel hungry.", childList);
@@ -7156,7 +7156,7 @@ public class ThingDAL {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("sa-ya-hern-duk-ma-gun-na-si",""," 我要吃饭","I would like some food.","Saya hendak makan nasi",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.somefood_br);
         childList.add(child);
 
         groupHeader = new GroupHeader(" 我要吃饭", "I would like some food.", childList);
@@ -7164,7 +7164,7 @@ public class ThingDAL {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("to-long-ger-loo-wul-gun-rer-sit-mer- ngee-goot-na-ma-darn-ar-la-mud-ee-nee",""," 请按照这名字和 地址开单","Could you please give me a receipt following by these name and address.","Tolong keluarkan resit mengikut nama dan alamat ini",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.receipt_br);
         childList.add(child);
 
         groupHeader = new GroupHeader(" 请按照这名字和 地址开单", "Could you please give me a receipt following by these name and address.", childList);
@@ -7172,7 +7172,7 @@ public class ThingDAL {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("sa-ya-pern-loo-gun-ger-tas-tee-soo",""," 我要卫生纸","I would like some toilet paper.","Saya perlukan kertas tisu",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.toilerpaper_br);
         childList.add(child);
 
         groupHeader = new GroupHeader(" 我要卫生纸", "I would like some toilet paper.", childList);
@@ -7180,7 +7180,7 @@ public class ThingDAL {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("sa-ya-pern-loo-gun-gai-too-wa-la",""," 我要毛巾","I would like a towel.","Saya perlukankain tuala",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.towel_br);
         childList.add(child);
 
         groupHeader = new GroupHeader(" 我要毛巾", "I would like a towel.", childList);
@@ -7188,7 +7188,7 @@ public class ThingDAL {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("sa-ya-ma-hoo-ai-mee-noo-mun",""," 我要纯水","I would like some drinking water.","Saya mahu air minuman",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.drinkwater);
         childList.add(child);
 
         groupHeader = new GroupHeader(" 我要纯水", "I would like some drinking water.", childList);
@@ -7196,7 +7196,7 @@ public class ThingDAL {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("sa-ya-pern-loo-gun-per-ta",""," 我要地图","I would like a map.","Saya perlukan peta",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.map_br);
         childList.add(child);
 
         groupHeader = new GroupHeader(" 我要地图", "I would like a map.", childList);
@@ -7204,7 +7204,7 @@ public class ThingDAL {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("sa-ya-pern-loo-gun-oo-bud-der-mun",""," 我要退烧药","I would like the aspirin.","Saya perlukan  ubat deman",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.aspirin_br);
         childList.add(child);
 
         groupHeader = new GroupHeader(" 我要退烧药", "I would like the aspirin.", childList);
@@ -7212,7 +7212,7 @@ public class ThingDAL {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("sa-ya-pern-loo-gun-oo-bud-ba-took",""," 我要止咳糖浆","I would like the cough mixture.","Saya perlukan ubat batuk",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.cough_br);
         childList.add(child);
 
         groupHeader = new GroupHeader(" 我要止咳糖浆", "I would like the cough mixture.", childList);
@@ -7220,7 +7220,7 @@ public class ThingDAL {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("sa-ya-pern-loo-gun-oo-bud-sa-git-per-root",""," 我要止泻药","I would like the stomach ache medicine.","Saya perlukan ubat sakit perut",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.stomach_br);
         childList.add(child);
 
         groupHeader = new GroupHeader(" 我要止泻药", "I would like the stomach ache medicine.", childList);
@@ -7228,7 +7228,7 @@ public class ThingDAL {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("sa-ya-ma-hoo-go-pee",""," 我要咖啡","I would like a coffee.","Saya mahu kopi",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.coffee_br);
         childList.add(child);
 
         groupHeader = new GroupHeader(" 我要咖啡", "I would like a coffee.", childList);
@@ -7236,7 +7236,7 @@ public class ThingDAL {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("sa-ya-pern-loo-gun-mee-yuk",""," 我要汽油","I would like to get the fuel oil.","Saya perlukan  minyak",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.oil_br);
         childList.add(child);
 
         groupHeader = new GroupHeader(" 我要汽油", "I would like to get the fuel oil.", childList);
@@ -7244,7 +7244,7 @@ public class ThingDAL {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("sa-ya-pern-loo-gun-ai-soo-ling",""," 我要蒸馏水","I would like a distilled water.","Saya perlukan air suling",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.distilledwater_br);
         childList.add(child);
 
         groupHeader = new GroupHeader(" 我要蒸馏水", "I would like a distilled water.", childList);
@@ -7252,7 +7252,7 @@ public class ThingDAL {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("sa-ya-pern-loo-gun-ba-ter-ree",""," 我要电池","I would like a battery.","Saya perlukan bateri",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.battery_br);
         childList.add(child);
 
         groupHeader = new GroupHeader(" 我要电池", "I would like a battery.", childList);
@@ -7260,7 +7260,7 @@ public class ThingDAL {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("sa-ya-pern-loo-gun-per-moo-tul-sgroo",""," 我要螺丝刀","I would like a screw driver.","Saya perlukan pemutar skru",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.screw_br);
         childList.add(child);
 
         groupHeader = new GroupHeader(" 我要螺丝刀", "I would like a screw driver.", childList);
@@ -7268,7 +7268,7 @@ public class ThingDAL {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("sa-ya-pern-loo-gun-ser-pa-na",""," 我要扳手","I would like a wrench.","Saya perlukan sepana",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.wrench_br);
         childList.add(child);
 
         groupHeader = new GroupHeader(" 我要扳手", "I would like a wrench.", childList);
@@ -7276,7 +7276,7 @@ public class ThingDAL {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("sa-ya-pern-loo-gun-yek",""," 我要千斤顶","I would like a jack.","Saya perlukan jek",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.jack_br);
         childList.add(child);
 
         groupHeader = new GroupHeader(" 我要千斤顶", "I would like a jack.", childList);
@@ -7284,7 +7284,7 @@ public class ThingDAL {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("sa-ya-pern-loo-gun-ta-yul-kun-tee",""," 我要备胎","I would like a spare wheel.","Saya perlukan  tayar ganti",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.wheel_br);
         childList.add(child);
 
         groupHeader = new GroupHeader(" 我要备胎", "I would like a spare wheel.", childList);
@@ -7292,7 +7292,7 @@ public class ThingDAL {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("sa-ya-pern-loo-gun-lum-poo-soo-luh",""," 我要手电筒","I would like a  flashlight.","Saya perlukan lampu suluh",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.flashlight_br);
         childList.add(child);
 
         groupHeader = new GroupHeader(" 我要手电筒", "I would like a  flashlight.", childList);
@@ -7300,7 +7300,7 @@ public class ThingDAL {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("sa-ya-pern-loo-gun-soo-doo/ kul-poo",""," 我要勺子和叉子","I would like a fork.","Saya perlukan sudu/garpu",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.fork_br);
         childList.add(child);
 
         groupHeader = new GroupHeader(" 我要勺子和叉子", "I would like a fork.", childList);
@@ -7308,7 +7308,7 @@ public class ThingDAL {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("sa-ya-pern-loo-gun-ga-yoo-per-nger-pit",""," 我要筷子","I would like a chopstick.","Saya perlukan kayu pengepit",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.chopstick_br);
         childList.add(child);
 
         groupHeader = new GroupHeader(" 我要筷子", "I would like a chopstick.", childList);
@@ -7316,7 +7316,7 @@ public class ThingDAL {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("sa-ya-pern-loo-gun-ga-til/ tee-lum/ la-pik",""," 我要床垫/床垫/垫子","I would like a bed / mattress.","Saya perlukan katil/ tilam/lapik",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.bed_br);
         childList.add(child);
 
         groupHeader = new GroupHeader(" 我要床垫/床垫/垫子", "I would like a bed / mattress.", childList);
@@ -7324,7 +7324,7 @@ public class ThingDAL {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("sa-ya-pern-loo-gun-gai-ser-lee-mut",""," 我要被子","I would like a blanket.","Saya perlukan kain selimut",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.blanket_br);
         childList.add(child);
 
         groupHeader = new GroupHeader(" 我要被子", "I would like a blanket.", childList);
@@ -7332,7 +7332,7 @@ public class ThingDAL {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("sa-ya-pern-loo-gun-bun-tal",""," 我要枕头","I would like a pillow.","Saya perlukan bantal",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.pillow_br);
         childList.add(child);
 
         groupHeader = new GroupHeader(" 我要枕头", "I would like a pillow.", childList);
@@ -7340,7 +7340,7 @@ public class ThingDAL {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("sa-ya-pern-loo-gun-tay-lay-fon",""," 我要打电话","I would like to get a phone.","Saya perlukan telefon",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.phone_br);
         childList.add(child);
 
         groupHeader = new GroupHeader(" 我要打电话", "I would like to get a phone.", childList);

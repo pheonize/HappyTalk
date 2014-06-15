@@ -641,200 +641,200 @@ public class ConversationDAL  {
     public void loadThaiToCambodia(){
         ArrayList<Child> childList = new ArrayList<Child>();
         childList = new ArrayList<Child>();
-        child = new Child("joom-riab-sua","","สวัสดี","Hello","ជ៓រាបសួរ",null,null);
-        child.setSoundPath(-1);
+        child = new Child("joom-riab-sua","จุม-เรี้ยบ-ซัว","สวัสดี","Hello","ជ៓រាបសួរ",null,null);
+        child.setSoundPath(R.raw.hello_cb);
         childList.add(child);
 
         groupHeader = new GroupHeader("สวัสดี", "Hello", childList);
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("a-roon-sua-sduai-baad / ja","","สวัสดีตอนเช้าครับ/ค่ะ","Good Morning Sir/Madame","អរុណសួស្តី បាទ/ចា ",null,null);
-        child.setSoundPath(-1);
+        child = new Child("a-roon-sua-sduai-baad / ja","อะ-รุน-ซัว-ซเด็ย-บ๊าด/จ๋า","สวัสดีตอนเช้าครับ/ค่ะ","Good Morning Sir/Madame","អរុណសួស្តី បាទ/ចា ",null,null);
+        child.setSoundPath(R.raw.morning_cb);
         childList.add(child);
 
         groupHeader = new GroupHeader("สวัสดีตอนเช้าครับ/ค่ะ", "Good Morning Sir/Madame", childList);
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("sa-yun-sua- sduai -baad / ja","","สวัสดีตอนบ่ายครับ/ค่ะ","Good Afternoon Sir/Madame.","សាយ័ណ្ណសួស្តី បាទ/ចា",null,null);
-        child.setSoundPath(-1);
+        child = new Child("sa-yun-sua- sduai -baad / ja","ซา-ย็วน-ซัว-ซเด็ย-บ๊าด/จ๋า","สวัสดีตอนบ่ายครับ/ค่ะ","Good Afternoon Sir/Madame.","សាយ័ណ្ណសួស្តី បាទ/ចា",null,null);
+        child.setSoundPath(R.raw.afternoon_cb);
         childList.add(child);
 
         groupHeader = new GroupHeader("สวัสดีตอนบ่ายครับ/ค่ะ", "Good Afternoon Sir/Madame.", childList);
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("ti-wia-sua- sduai -baad / ja","","สวัสดีตอนเย็นครับ/ค่ะ","Good Evening Sir/Madame."," ទិវាសួស្តី បាទ/ចា",null,null);
-        child.setSoundPath(-1);
+        child = new Child("ti-wia-sua- sduai -baad / ja","ติ-เวีย-ซัว-ซเด็ย-บ๊าด/จ๋า","สวัสดีตอนเย็นครับ/ค่ะ","Good Evening Sir/Madame."," ទិវាសួស្តី បាទ/ចា",null,null);
+        child.setSoundPath(R.raw.everning_cb);
         childList.add(child);
 
         groupHeader = new GroupHeader("สวัสดีตอนเย็นครับ/ค่ะ", "Good Evening Sir/Madame.", childList);
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("ria-truai-sua- sduai -baad / ja","","ราตรีสวัสดิ์ครับ/ค่ะ","Good Night Sir/Madame."," រាត្រីសួស្តី បាទ/ចា",null,null);
-        child.setSoundPath(-1);
+        child = new Child("ria-truai-sua- sduai -baad / ja","เรีย-เตรีย-ซัว-ซเด็ย-บ๊าด/จ๋า","ราตรีสวัสดิ์ครับ/ค่ะ","Good Night Sir/Madame."," រាត្រីសួស្តី បាទ/ចា",null,null);
+        child.setSoundPath(R.raw.night_cb);
         childList.add(child);
 
         groupHeader = new GroupHeader("ราตรีสวัสดิ์ครับ/ค่ะ", "Good Night Sir/Madame.", childList);
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("khyom-chmuah…………….","","ฉันชื่อ.....................","My name is…."," ខ្ញុំឈ្មោះ........................",null,null);
-        child.setSoundPath(-1);
+        child = new Child("khyom-chmuah…………….","คญม-ชมัวะฮ...","ฉันชื่อ.....................","My name is…."," ខ្ញុំឈ្មោះ........................",null,null);
+        child.setSoundPath(R.raw.mynameis_cb);
         childList.add(child);
 
         groupHeader = new GroupHeader("ฉันชื่อ.....................", "My name is….", childList);
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("niah-chmuah-awuai-dae","","คุณชื่ออะไร","What is your name?"," អ្នកឈ្មោះអ្វីដែរ?",null,null);
-        child.setSoundPath(-1);
+        child = new Child("niah-chmuah-awuai-dae","เนียะ-ชมัวะฮ-อเว็ย-แด","คุณชื่ออะไร","What is your name?"," អ្នកឈ្មោះអ្វីដែរ?",null,null);
+        child.setSoundPath(R.raw.whatyourname_cb);
         childList.add(child);
 
         groupHeader = new GroupHeader("คุณชื่ออะไร", "What is your name?", childList);
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("joh-loak-wuen-yang-merc-dae","","คุณเป็นอย่างไร","How are you?"," ចុះលោកវិញ យ៉ាងម៉េចដែរ?",null,null);
-        child.setSoundPath(-1);
+        child = new Child("joh-loak-wuen-yang-merc-dae","โจ๊ะฮ-โล้ก-วึญ-ยาง-เมิจ-แต","คุณเป็นอย่างไร","How are you?"," ចុះលោកវិញ យ៉ាងម៉េចដែរ?",null,null);
+        child.setSoundPath(R.raw.howareyou_br);
         childList.add(child);
 
         groupHeader = new GroupHeader("คุณเป็นอย่างไร", "How are you?", childList);
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("reek-riay-nah-dael-ban-skual","","ยินดีที่ได้รู้จัก","Nice to meet you."," រីករាយណាស់ដែលបានស្គាល់",null,null);
-        child.setSoundPath(-1);
+        child = new Child("reek-riay-nah-dael-ban-skual","รีก-เรียย-นะฮ-แดล-บาน-ซก็วล","ยินดีที่ได้รู้จัก","Nice to meet you."," រីករាយណាស់ដែលបានស្គាល់",null,null);
+        child.setSoundPath(R.raw.nicetomeet_cb);
         childList.add(child);
 
         groupHeader = new GroupHeader("ยินดีที่ได้รู้จัก", "Nice to meet you.", childList);
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("khyom-sok-sbai","","ฉันสบายดี","I’m fine."," ខ្ញុំសុខសប្បាយ",null,null);
-        child.setSoundPath(-1);
+        child = new Child("khyom-sok-sbai","คญม-ซก-ซบาย","ฉันสบายดี","I’m fine."," ខ្ញុំសុខសប្បាយ",null,null);
+        child.setSoundPath(R.raw.fine_cb);
         childList.add(child);
 
         groupHeader = new GroupHeader("ฉันสบายดี", "I’m fine.", childList);
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("lia-sern-huai","","ลาก่อน","Good Bye."," លាសិនហើយ",null,null);
-        child.setSoundPath(-1);
+        child = new Child("lia-sern-huai","เลีย-เขิน-เฮย","ลาก่อน","Good Bye."," លាសិនហើយ",null,null);
+        child.setSoundPath(R.raw.bye_cb);
         childList.add(child);
 
         groupHeader = new GroupHeader("ลาก่อน", "Good Bye.", childList);
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("soam-merl-thae-riah-sa-khluan-phong- na","","ดูแลตัวเองด้วยนะ","Take care of yourself."," សូមមើលថែរក្សាខ្លួនផងហ្នា",null,null);
-        child.setSoundPath(-1);
+        child = new Child("soam-merl-thae-riah-sa-khluan-phong- na","โซม-เมิล-แท-เรียะ-ซา-คลวน-พอง-หนา","ดูแลตัวเองด้วยนะ","Take care of yourself."," សូមមើលថែរក្សាខ្លួនផងហ្នា",null,null);
+        child.setSoundPath(R.raw.takecare_cb);
         childList.add(child);
 
         groupHeader = new GroupHeader("ดูแลตัวเองด้วยนะ", "Take care of yourself.", childList);
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("jum-juap-khnia-pel-groey-tiad","","แล้วเจอกัน","See you again."," ចាំជួបគ្នាពេលក្រោយទៀត",null,null);
-        child.setSoundPath(-1);
+        child = new Child("jum-juap-khnia-pel-groey-tiad","จำ-จวบ-คเนีย-เปล-โกรย-เตี้ยด","แล้วเจอกัน","See you again."," ចាំជួបគ្នាពេលក្រោយទៀត",null,null);
+        child.setSoundPath(R.raw.seeu_cb);
         childList.add(child);
 
         groupHeader = new GroupHeader("แล้วเจอกัน", "See you again.", childList);
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("or-kun-baad / ja","","ขอบคุณครับ/ค่ะ","Thank you Sir/Madame."," អរគុណបាទ/ចា",null,null);
-        child.setSoundPath(-1);
+        child = new Child("or-kun-baad / ja","ออ-กุน-บ๊าด/จ๋า","ขอบคุณครับ/ค่ะ","Thank you Sir/Madame."," អរគុណបាទ/ចា",null,null);
+        child.setSoundPath(R.raw.thank_cb);
         childList.add(child);
 
         groupHeader = new GroupHeader("ขอบคุณครับ/ค่ะ", "Thank you Sir/Madame.", childList);
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("soam-toh-baad / ja","","ขอโทษครับ/ค่ะ","Sorry Sir/Madame."," សូមទោសបាទ/ចា",null,null);
-        child.setSoundPath(-1);
+        child = new Child("soam-toh-baad / ja","โซม-โต๊ะฮ-บ๊าด/จ๋า","ขอโทษครับ/ค่ะ","Sorry Sir/Madame."," សូមទោសបាទ/ចា",null,null);
+        child.setSoundPath(R.raw.sry_cb);
         childList.add(child);
 
         groupHeader = new GroupHeader("ขอโทษครับ/ค่ะ", "Sorry Sir/Madame.", childList);
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("trerm-treuw","","ใช่","Yes."," ត្រឹមត្រូវ",null,null);
-        child.setSoundPath(-1);
+        child = new Child("trerm-treuw","ตเริม-ตเริว","ใช่","Yes."," ត្រឹមត្រូវ",null,null);
+        child.setSoundPath(R.raw.yes_cb);
         childList.add(child);
 
         groupHeader = new GroupHeader("ใช่", "Yes.", childList);
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("muen-trerm-treuw-tay","","ไม่ใช่","No."," មិនត្រឹមត្រូវទេ",null,null);
-        child.setSoundPath(-1);
+        child = new Child("muen-trerm-treuw-tay","มึน-ตเริม-ตเริว-เต","ไม่ใช่","No."," មិនត្រឹមត្រូវទេ",null,null);
+        child.setSoundPath(R.raw.no_cb);
         childList.add(child);
 
         groupHeader = new GroupHeader("ไม่ใช่", "No.", childList);
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("pra-god-nah","","แน่นอน","Of course"," ប្រាកដណាស់",null,null);
-        child.setSoundPath(-1);
+        child = new Child("pra-god-nah","ปรา-ก็อต-นะฮ","แน่นอน","Of course"," ប្រាកដណាស់",null,null);
+        child.setSoundPath(R.raw.ofcourse_cb);
         childList.add(child);
 
         groupHeader = new GroupHeader("แน่นอน", "Of course", childList);
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("muen-jbah-tay","","ไม่แน่นอน","I’m not sure"," មិនច្បាស់ទេ",null,null);
-        child.setSoundPath(-1);
+        child = new Child("muen-jbah-tay","มึน-จบ๊ะฮ-เต","ไม่แน่นอน","I’m not sure"," មិនច្បាស់ទេ",null,null);
+        child.setSoundPath(R.raw.notsure_cb);
         childList.add(child);
 
         groupHeader = new GroupHeader("ไม่แน่นอน", "I’m not sure", childList);
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("yual-srob","","เห็นด้วย","Agree","យល់ស្រប",null,null);
-        child.setSoundPath(-1);
+        child = new Child("yual-srob","ยวล-ซร้อบ","เห็นด้วย","Agree","យល់ស្រប",null,null);
+        child.setSoundPath(R.raw.agree_cb);
         childList.add(child);
 
         groupHeader = new GroupHeader("เห็นด้วย", "Agree", childList);
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("muen -yual-srob-tay","","ไม่เห็นด้วย","Disagree","មិនយល់ស្របទេ",null,null);
-        child.setSoundPath(-1);
+        child = new Child("muen -yual-srob-tay","มึน-ยวล-ซร้อบ-เต","ไม่เห็นด้วย","Disagree","មិនយល់ស្របទេ",null,null);
+        child.setSoundPath(R.raw.disagree_cb);
         childList.add(child);
 
         groupHeader = new GroupHeader("ไม่เห็นด้วย", "Disagree", childList);
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("pel-nih-moang-pon-marn (soam-mern-nia-leh-ka-bon-terd)","","ตอนนี้เป็นเวลาอะไร (ขอดูนาฬิกาหน่อย)","What time is it? (Could you tell me the time, please)                                       ","ពេលនេះ ម៉ោងប៉ុន្មាន? (សូមមើលនាឡិកាបន្តិច)",null,null);
-        child.setSoundPath(-1);
+        child = new Child("pel-nih-moang-pon-marn (soam-mern-nia-leh-ka-bon-terd)","เปล-นิฮ-โมง-ปน-มาน(โซม-เมิล-เนีย-เละ-กา-บ็อน-เติจ)","ตอนนี้เป็นเวลาอะไร (ขอดูนาฬิกาหน่อย)","What time is it? (Could you tell me the time, please)                                       ","ពេលនេះ ម៉ោងប៉ុន្មាន? (សូមមើលនាឡិកាបន្តិច)",null,null);
+        child.setSoundPath(R.raw.whattime_cb);
         childList.add(child);
 
         groupHeader = new GroupHeader("ตอนนี้เป็นเวลาอะไร (ขอดูนาฬิกาหน่อย)", "What time is it? (Could you tell me the time, please)                                       ", childList);
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("thlay-pon-man","","ราคาเท่าไร","How much does this cost?","ថ្លៃប៉ុន្មាន?",null,null);
-        child.setSoundPath(-1);
+        child = new Child("thlay-pon-man","ทลัย-ปน-มาน","ราคาเท่าไร","How much does this cost?","ថ្លៃប៉ុន្មាន?",null,null);
+        child.setSoundPath(R.raw.howmuch_cb);
         childList.add(child);
 
         groupHeader = new GroupHeader("ราคาเท่าไร", "How much does this cost?", childList);
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("nuew-tee-nih-toe-tual-yoak-gard-ern-tian-reu-tay","","ที่นี่รับบัตรเครดิตไหม","Do you take credit cards?","នៅទីនេះទទួលយកកាតឥណទានឬទេ?",null,null);
-        child.setSoundPath(-1);
+        child = new Child("nuew-tee-nih-toe-tual-yoak-gard-ern-tian-reu-tay","นึว-ตี-นิฮ-โต-ตวล-โยก-ก๊าด-เอิน-เตียน-รือ-เต๋","ที่นี่รับบัตรเครดิตไหม","Do you take credit cards?","នៅទីនេះទទួលយកកាតឥណទានឬទេ?",null,null);
+        child.setSoundPath(R.raw.creditcard_cb);
         childList.add(child);
 
         groupHeader = new GroupHeader("ที่นี่รับบัตรเครดิตไหม", "Do you take credit cards?", childList);
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("toe-tual-dough-lui-reu-tay","","รับแลกเงินไหม","Can I change some money?","ទទួលដូរលុយឬទេ?",null,null);
-        child.setSoundPath(-1);
+        child = new Child("toe-tual-dough-lui-reu-tay","ไต-ตวล-โดว-ลุย-รือ-เต๋","รับแลกเงินไหม","Can I change some money?","ទទួលដូរលុយឬទេ?",null,null);
+        child.setSoundPath(R.raw.changemoney_cb);
         childList.add(child);
 
         groupHeader = new GroupHeader("รับแลกเงินไหม", "Can I change some money?", childList);
@@ -2686,7 +2686,7 @@ public class ConversationDAL  {
     public void loadBruneiToBrunei(){
         ArrayList<Child> childList = new ArrayList<Child>();
         Child child = new Child("gu-moos-tar","","Kumusta","Hello","",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.hello_br);
         childList.add(child);
 
         GroupHeader groupHeader = new GroupHeader("Kumusta", "Hello", childList);
@@ -2694,7 +2694,7 @@ public class ConversationDAL  {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("ser-la-mud-pa-kee","","Selamat pagi","Good Morning Sir/Madame","",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.morning_br);
         childList.add(child);
 
         groupHeader = new GroupHeader("Selamat pagi", "Good Morning Sir/Madame", childList);
@@ -2702,7 +2702,7 @@ public class ConversationDAL  {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("ser-la-mud-per-tung","","Selamat petang","Good Afternoon Sir/Madame.","",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.afternoon_br);
         childList.add(child);
 
         groupHeader = new GroupHeader("Selamat petang", "Good Afternoon Sir/Madame.", childList);
@@ -2710,7 +2710,7 @@ public class ConversationDAL  {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("ser-la-mud-per-tung","","Selamat petang","Good Evening Sir/Madame.","",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.everning_br);
         childList.add(child);
 
         groupHeader = new GroupHeader("Selamat petang", "Good Evening Sir/Madame.", childList);
@@ -2718,7 +2718,7 @@ public class ConversationDAL  {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("ser-la-mud-ma-lum","","Selamat malam","Good Night Sir/Madame.","",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.night_br);
         childList.add(child);
 
         groupHeader = new GroupHeader("Selamat malam", "Good Night Sir/Madame.", childList);
@@ -2726,7 +2726,7 @@ public class ConversationDAL  {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("na-ma-sa-ya","","Nama saya……","My name is….","",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.myname_br);
         childList.add(child);
 
         groupHeader = new GroupHeader("Nama saya……", "My name is….", childList);
@@ -2734,7 +2734,7 @@ public class ConversationDAL  {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("see-ya-pa-gah-na-ma-un-da","","Siapakah nama anda","What is your name?","",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.whatsyourname_br);
         childList.add(child);
 
         groupHeader = new GroupHeader("Siapakah nama anda", "What is your name?", childList);
@@ -2742,7 +2742,7 @@ public class ConversationDAL  {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("ar-pa-ka-bul","","Apa khabar","How are you?","",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.howareyou_br);
         childList.add(child);
 
         groupHeader = new GroupHeader("Apa khabar", "How are you?", childList);
@@ -2750,7 +2750,7 @@ public class ConversationDAL  {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("koem-bee-ra-da-pud-burn-gur-na-lun- der-ngun-un-da","","Gembira dapat berkenalan dengan anda","Nice to meet you.","",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.nicetomeet_br);
         childList.add(child);
 
         groupHeader = new GroupHeader("Gembira dapat berkenalan dengan anda", "Nice to meet you.", childList);
@@ -2758,7 +2758,7 @@ public class ConversationDAL  {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("ka-bul-baik","","Khabar baik","I’m fine.","",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.fine_br);
         childList.add(child);
 
         groupHeader = new GroupHeader("Khabar baik", "I’m fine.", childList);
@@ -2766,7 +2766,7 @@ public class ConversationDAL  {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("ser-la-mud-ting-kul","","Selamat tinggal","Good Bye.","",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.bye_br);
         childList.add(child);
 
         groupHeader = new GroupHeader("Selamat tinggal", "Good Bye.", childList);
@@ -2774,7 +2774,7 @@ public class ConversationDAL  {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("ya-ka-dee-ree-baik-baik-ya","","Jaga diri baik-baik ya","Take care of yourself.","",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.takecare_br);
         childList.add(child);
 
         groupHeader = new GroupHeader("Jaga diri baik-baik ya", "Take care of yourself.", childList);
@@ -2782,7 +2782,7 @@ public class ConversationDAL  {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("yoom-pa-la-kee","","jumpa lagi","See you again.","",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.seeu_br);
         childList.add(child);
 
         groupHeader = new GroupHeader("jumpa lagi", "See you again.", childList);
@@ -2790,7 +2790,7 @@ public class ConversationDAL  {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("ter-ree-ma-ga-seh","","terima kasih","Thank you Sir/Madame.","",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.thank_br);
         childList.add(child);
 
         groupHeader = new GroupHeader("terima kasih", "Thank you Sir/Madame.", childList);
@@ -2798,7 +2798,7 @@ public class ConversationDAL  {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("ma-af-gun-sa-ya","","Maafkan saya","Sorry Sir/Madame.","",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.sry_br);
         childList.add(child);
 
         groupHeader = new GroupHeader("Maafkan saya", "Sorry Sir/Madame.", childList);
@@ -2806,7 +2806,7 @@ public class ConversationDAL  {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("ya","","ya","Yes.","",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.yes_br);
         childList.add(child);
 
         groupHeader = new GroupHeader("ya", "Yes.", childList);
@@ -2814,7 +2814,7 @@ public class ConversationDAL  {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("boo-gun","","bukan","No.","",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.no_br);
         childList.add(child);
 
         groupHeader = new GroupHeader("bukan", "No.", childList);
@@ -2822,7 +2822,7 @@ public class ConversationDAL  {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("soo-da-tern-too","","sudah tentu","Of course","",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.ofcourse_br);
         childList.add(child);
 
         groupHeader = new GroupHeader("sudah tentu", "Of course", childList);
@@ -2830,7 +2830,7 @@ public class ConversationDAL  {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("tee-duk-tern-too","","tidak tentu","I’m not sure","",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.notsure_br);
         childList.add(child);
 
         groupHeader = new GroupHeader("tidak tentu", "I’m not sure", childList);
@@ -2838,7 +2838,7 @@ public class ConversationDAL  {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("ser-too-yoo","","setuju","Agree","",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.agree_br);
         childList.add(child);
 
         groupHeader = new GroupHeader("setuju", "Agree", childList);
@@ -2846,7 +2846,7 @@ public class ConversationDAL  {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("tee-duk-ser-too-yoo","","tidak setuju","Disagree","",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.disagree_br);
         childList.add(child);
 
         groupHeader = new GroupHeader("tidak setuju", "Disagree", childList);
@@ -2854,7 +2854,7 @@ public class ConversationDAL  {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("ser-ga-rung-poo-goon-ber-ra-pa-min-ta-tay-ngoak-yum-ser-dee-kit-ya","","Sekarang pukul berapa minta tengok jam sedikit ya","What time is it?(Could you tell me the time, please)","",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.whattime_br);
         childList.add(child);
 
         groupHeader = new GroupHeader("Sekarang pukul berapa minta tengok jam sedikit ya", "What time is it?(Could you tell me the time, please)", childList);
@@ -2862,7 +2862,7 @@ public class ConversationDAL  {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("hul-ka-ber-ra-pa gah","","Harga berapa","How much does this cost?","",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.howmuch_br);
         childList.add(child);
 
         groupHeader = new GroupHeader("Harga berapa", "How much does this cost?", childList);
@@ -2870,7 +2870,7 @@ public class ConversationDAL  {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("dee-see-nee-ter-ree-ma-gard-kray-dit-gah","","Di sini terima kad kridit kah?","Do you take credit cards?","",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.credit_br);
         childList.add(child);
 
         groupHeader = new GroupHeader("Di sini terima kad kridit kah?", "Do you take credit cards?", childList);
@@ -2878,7 +2878,7 @@ public class ConversationDAL  {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("ter-ree-ma-oon-took-mer-noo-gul-wang-","","Terima untuk menukar wang kah?","Can I change some money?","",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.changemoney_br);
         childList.add(child);
 
         groupHeader = new GroupHeader("Terima untuk menukar wang kah?", "Can I change some money?", childList);
@@ -4725,7 +4725,7 @@ public class ConversationDAL  {
     public void loadCambodiaToBrunei(){
         ArrayList<Child> childList = new ArrayList<Child>();
         Child child = new Child("gu-moos-tar","","ជ៓រាបសួរ","Hello","Kumusta",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.hello_br);
         childList.add(child);
 
         GroupHeader groupHeader = new GroupHeader("ជ៓រាបសួរ", "Hello", childList);
@@ -4733,7 +4733,7 @@ public class ConversationDAL  {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("ser-la-mud-pa-kee","","អរុណសួស្តី បាទ/ចា ","Good Morning Sir/Madame","Selamat pagi",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.morning_br);
         childList.add(child);
 
         groupHeader = new GroupHeader("អរុណសួស្តី បាទ/ចា ", "Good Morning Sir/Madame", childList);
@@ -4741,7 +4741,7 @@ public class ConversationDAL  {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("ser-la-mud-per-tung","","សាយ័ណ្ណសួស្តី បាទ/ចា","Good Afternoon Sir/Madame.","Selamat petang",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.afternoon_br);
         childList.add(child);
 
         groupHeader = new GroupHeader("សាយ័ណ្ណសួស្តី បាទ/ចា", "Good Afternoon Sir/Madame.", childList);
@@ -4749,7 +4749,7 @@ public class ConversationDAL  {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("ser-la-mud-per-tung",""," ទិវាសួស្តី បាទ/ចា","Good Evening Sir/Madame.","Selamat petang",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.everning_br);
         childList.add(child);
 
         groupHeader = new GroupHeader(" ទិវាសួស្តី បាទ/ចា", "Good Evening Sir/Madame.", childList);
@@ -4757,7 +4757,7 @@ public class ConversationDAL  {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("ser-la-mud-ma-lum",""," រាត្រីសួស្តី បាទ/ចា","Good Night Sir/Madame.","Selamat malam",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.night_br);
         childList.add(child);
 
         groupHeader = new GroupHeader(" រាត្រីសួស្តី បាទ/ចា", "Good Night Sir/Madame.", childList);
@@ -4765,7 +4765,7 @@ public class ConversationDAL  {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("na-ma-sa-ya",""," ខ្ញុំឈ្មោះ........................","My name is….","Nama saya……",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.myname_br);
         childList.add(child);
 
         groupHeader = new GroupHeader(" ខ្ញុំឈ្មោះ........................", "My name is….", childList);
@@ -4773,7 +4773,7 @@ public class ConversationDAL  {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("see-ya-pa-gah-na-ma-un-da",""," អ្នកឈ្មោះអ្វីដែរ?","What is your name?","Siapakah nama anda",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.whatsyourname_br);
         childList.add(child);
 
         groupHeader = new GroupHeader(" អ្នកឈ្មោះអ្វីដែរ?", "What is your name?", childList);
@@ -4781,7 +4781,7 @@ public class ConversationDAL  {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("ar-pa-ka-bul",""," ចុះលោកវិញ យ៉ាងម៉េចដែរ?","How are you?","Apa khabar",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.howareyou_br);
         childList.add(child);
 
         groupHeader = new GroupHeader(" ចុះលោកវិញ យ៉ាងម៉េចដែរ?", "How are you?", childList);
@@ -4789,7 +4789,7 @@ public class ConversationDAL  {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("koem-bee-ra-da-pud-burn-gur-na-lun- der-ngun-un-da",""," រីករាយណាស់ដែលបានស្គាល់","Nice to meet you.","Gembira dapat berkenalan dengan anda",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.nicetomeet_br);
         childList.add(child);
 
         groupHeader = new GroupHeader(" រីករាយណាស់ដែលបានស្គាល់", "Nice to meet you.", childList);
@@ -4797,7 +4797,7 @@ public class ConversationDAL  {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("ka-bul-baik",""," ខ្ញុំសុខសប្បាយ","I’m fine.","Khabar baik",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.fine_br);
         childList.add(child);
 
         groupHeader = new GroupHeader(" ខ្ញុំសុខសប្បាយ", "I’m fine.", childList);
@@ -4805,7 +4805,7 @@ public class ConversationDAL  {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("ser-la-mud-ting-kul",""," លាសិនហើយ","Good Bye.","Selamat tinggal",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.bye_br);
         childList.add(child);
 
         groupHeader = new GroupHeader(" លាសិនហើយ", "Good Bye.", childList);
@@ -4813,7 +4813,7 @@ public class ConversationDAL  {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("ya-ka-dee-ree-baik-baik-ya",""," សូមមើលថែរក្សាខ្លួនផងហ្នា","Take care of yourself.","Jaga diri baik-baik ya",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.takecare_br);
         childList.add(child);
 
         groupHeader = new GroupHeader(" សូមមើលថែរក្សាខ្លួនផងហ្នា", "Take care of yourself.", childList);
@@ -4821,7 +4821,7 @@ public class ConversationDAL  {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("yoom-pa-la-kee",""," ចាំជួបគ្នាពេលក្រោយទៀត","See you again.","jumpa lagi",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.seeu_br);
         childList.add(child);
 
         groupHeader = new GroupHeader(" ចាំជួបគ្នាពេលក្រោយទៀត", "See you again.", childList);
@@ -4829,7 +4829,7 @@ public class ConversationDAL  {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("ter-ree-ma-ga-seh",""," អរគុណបាទ/ចា","Thank you Sir/Madame.","terima kasih",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.thank_br);
         childList.add(child);
 
         groupHeader = new GroupHeader(" អរគុណបាទ/ចា", "Thank you Sir/Madame.", childList);
@@ -4837,7 +4837,7 @@ public class ConversationDAL  {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("ma-af-gun-sa-ya",""," សូមទោសបាទ/ចា","Sorry Sir/Madame.","Maafkan saya",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.sry_br);
         childList.add(child);
 
         groupHeader = new GroupHeader(" សូមទោសបាទ/ចា", "Sorry Sir/Madame.", childList);
@@ -4845,7 +4845,7 @@ public class ConversationDAL  {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("ya",""," ត្រឹមត្រូវ","Yes.","ya",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.yes_br);
         childList.add(child);
 
         groupHeader = new GroupHeader(" ត្រឹមត្រូវ", "Yes.", childList);
@@ -4853,7 +4853,7 @@ public class ConversationDAL  {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("boo-gun",""," មិនត្រឹមត្រូវទេ","No.","bukan",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.no_br);
         childList.add(child);
 
         groupHeader = new GroupHeader(" មិនត្រឹមត្រូវទេ", "No.", childList);
@@ -4861,7 +4861,7 @@ public class ConversationDAL  {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("soo-da-tern-too",""," ប្រាកដណាស់","Of course","sudah tentu",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.ofcourse_br);
         childList.add(child);
 
         groupHeader = new GroupHeader(" ប្រាកដណាស់", "Of course", childList);
@@ -4869,7 +4869,7 @@ public class ConversationDAL  {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("tee-duk-tern-too",""," មិនច្បាស់ទេ","I’m not sure","tidak tentu",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.notsure_br);
         childList.add(child);
 
         groupHeader = new GroupHeader(" មិនច្បាស់ទេ", "I’m not sure", childList);
@@ -4877,7 +4877,7 @@ public class ConversationDAL  {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("ser-too-yoo","","យល់ស្រប","Agree","setuju",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.agree_br);
         childList.add(child);
 
         groupHeader = new GroupHeader("យល់ស្រប", "Agree", childList);
@@ -4885,7 +4885,7 @@ public class ConversationDAL  {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("tee-duk-ser-too-yoo","","មិនយល់ស្របទេ","Disagree","tidak setuju",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.disagree_br);
         childList.add(child);
 
         groupHeader = new GroupHeader("មិនយល់ស្របទេ", "Disagree", childList);
@@ -4893,7 +4893,7 @@ public class ConversationDAL  {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("ser-ga-rung-poo-goon-ber-ra-pa-min-ta-tay-ngoak-yum-ser-dee-kit-ya","","ពេលនេះ ម៉ោងប៉ុន្មាន? (សូមមើលនាឡិកាបន្តិច)","What time is it? (Could you tell me the time, please)","Sekarang pukul berapa minta tengok jam sedikit ya",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.whattime_br);
         childList.add(child);
 
         groupHeader = new GroupHeader("ពេលនេះ ម៉ោងប៉ុន្មាន? (សូមមើលនាឡិកាបន្តិច)", "What time is it? (Could you tell me the time, please)", childList);
@@ -4901,7 +4901,7 @@ public class ConversationDAL  {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("hul-ka-ber-ra-pa gah","","ថ្លៃប៉ុន្មាន?","How much does this cost?","Harga berapa",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.howmuch_br);
         childList.add(child);
 
         groupHeader = new GroupHeader("ថ្លៃប៉ុន្មាន?", "How much does this cost?", childList);
@@ -4909,7 +4909,7 @@ public class ConversationDAL  {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("dee-see-nee-ter-ree-ma-gard-kray-dit-gah","","នៅទីនេះទទួលយកកាតឥណទានឬទេ?","Do you take credit cards?","Di sini terima kad kridit kah?",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.credit_br);
         childList.add(child);
 
         groupHeader = new GroupHeader("នៅទីនេះទទួលយកកាតឥណទានឬទេ?", "Do you take credit cards?", childList);
@@ -4917,7 +4917,7 @@ public class ConversationDAL  {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("ter-ree-ma-oon-took-mer-noo-gul-wang-","","ទទួលដូរលុយឬទេ?","Can I change some money?","Terima untuk menukar wang kah?",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.changemoney_br);
         childList.add(child);
 
         groupHeader = new GroupHeader("ទទួលដូរលុយឬទេ?", "Can I change some money?", childList);
@@ -6956,7 +6956,7 @@ public class ConversationDAL  {
     public void loadChinaToBrunei(){
         ArrayList<Child> childList = new ArrayList<Child>();
         Child child = new Child("gu-moos-tar","","你好","Hello","Kumusta",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.hello_br);
         childList.add(child);
 
         GroupHeader groupHeader = new GroupHeader("你好", "Hello", childList);
@@ -6964,7 +6964,7 @@ public class ConversationDAL  {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("ser-la-mud-pa-kee","","早安","Good Morning Sir/Madame","Selamat pagi",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.morning_br);
         childList.add(child);
 
         groupHeader = new GroupHeader("早安", "Good Morning Sir/Madame", childList);
@@ -6972,7 +6972,7 @@ public class ConversationDAL  {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("ser-la-mud-per-tung",""," 午安","Good Afternoon Sir/Madame.","Selamat petang",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.afternoon_br);
         childList.add(child);
 
         groupHeader = new GroupHeader(" 午安", "Good Afternoon Sir/Madame.", childList);
@@ -6980,7 +6980,7 @@ public class ConversationDAL  {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("ser-la-mud-per-tung",""," 晚上好","Good Evening Sir/Madame.","Selamat petang",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.everning_br);
         childList.add(child);
 
         groupHeader = new GroupHeader(" 晚上好", "Good Evening Sir/Madame.", childList);
@@ -6988,7 +6988,7 @@ public class ConversationDAL  {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("ser-la-mud-ma-lum",""," 晚安","Good Night Sir/Madame.","Selamat malam",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.night_br);
         childList.add(child);
 
         groupHeader = new GroupHeader(" 晚安", "Good Night Sir/Madame.", childList);
@@ -6996,7 +6996,7 @@ public class ConversationDAL  {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("na-ma-sa-ya",""," 我叫","My name is….","Nama saya……",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.myname_br);
         childList.add(child);
 
         groupHeader = new GroupHeader(" 我叫", "My name is….", childList);
@@ -7004,7 +7004,7 @@ public class ConversationDAL  {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("see-ya-pa-gah-na-ma-un-da",""," 你贵姓","What is your name?","Siapakah nama anda",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.whatsyourname_br);
         childList.add(child);
 
         groupHeader = new GroupHeader(" 你贵姓", "What is your name?", childList);
@@ -7012,7 +7012,7 @@ public class ConversationDAL  {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("ar-pa-ka-bul",""," 你好吗","How are you?","Apa khabar",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.howareyou_br);
         childList.add(child);
 
         groupHeader = new GroupHeader(" 你好吗", "How are you?", childList);
@@ -7020,7 +7020,7 @@ public class ConversationDAL  {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("koem-bee-ra-da-pud-burn-gur-na-lun- der-ngun-un-da",""," 认识你很高兴","Nice to meet you.","Gembira dapat berkenalan dengan anda",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.nicetomeet_br);
         childList.add(child);
 
         groupHeader = new GroupHeader(" 认识你很高兴", "Nice to meet you.", childList);
@@ -7028,7 +7028,7 @@ public class ConversationDAL  {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("ka-bul-baik",""," 我很好","I’m fine.","Khabar baik",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.fine_br);
         childList.add(child);
 
         groupHeader = new GroupHeader(" 我很好", "I’m fine.", childList);
@@ -7036,7 +7036,7 @@ public class ConversationDAL  {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("ser-la-mud-ting-kul",""," 再见","Good Bye.","Selamat tinggal",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.bye_br);
         childList.add(child);
 
         groupHeader = new GroupHeader(" 再见", "Good Bye.", childList);
@@ -7044,7 +7044,7 @@ public class ConversationDAL  {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("ya-ka-dee-ree-baik-baik-ya",""," 保重","Take care of yourself.","Jaga diri baik-baik ya",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.takecare_br);
         childList.add(child);
 
         groupHeader = new GroupHeader(" 保重", "Take care of yourself.", childList);
@@ -7052,7 +7052,7 @@ public class ConversationDAL  {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("yoom-pa-la-kee",""," 回头见","See you again.","jumpa lagi",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.seeu_br);
         childList.add(child);
 
         groupHeader = new GroupHeader(" 回头见", "See you again.", childList);
@@ -7060,7 +7060,7 @@ public class ConversationDAL  {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("ter-ree-ma-ga-seh",""," 谢谢","Thank you Sir/Madame.","terima kasih",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.thank_br);
         childList.add(child);
 
         groupHeader = new GroupHeader(" 谢谢", "Thank you Sir/Madame.", childList);
@@ -7068,7 +7068,7 @@ public class ConversationDAL  {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("ma-af-gun-sa-ya",""," 对不起","Sorry Sir/Madame.","Maafkan saya",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.sry_br);
         childList.add(child);
 
         groupHeader = new GroupHeader(" 对不起", "Sorry Sir/Madame.", childList);
@@ -7076,7 +7076,7 @@ public class ConversationDAL  {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("ya",""," 是","Yes.","ya",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.yes_br);
         childList.add(child);
 
         groupHeader = new GroupHeader(" 是", "Yes.", childList);
@@ -7084,7 +7084,7 @@ public class ConversationDAL  {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("boo-gun",""," 不是","No.","bukan",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.no_br);
         childList.add(child);
 
         groupHeader = new GroupHeader(" 不是", "No.", childList);
@@ -7092,7 +7092,7 @@ public class ConversationDAL  {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("soo-da-tern-too",""," 一定","Of course","sudah tentu",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.ofcourse_br);
         childList.add(child);
 
         groupHeader = new GroupHeader(" 一定", "Of course", childList);
@@ -7100,7 +7100,7 @@ public class ConversationDAL  {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("tee-duk-tern-too",""," 不一定","I’m not sure","tidak tentu",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.notsure_br);
         childList.add(child);
 
         groupHeader = new GroupHeader(" 不一定", "I’m not sure", childList);
@@ -7108,7 +7108,7 @@ public class ConversationDAL  {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("ser-too-yoo",""," 同意","Agree","setuju",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.agree_br);
         childList.add(child);
 
         groupHeader = new GroupHeader(" 同意", "Agree", childList);
@@ -7116,7 +7116,7 @@ public class ConversationDAL  {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("tee-duk-ser-too-yoo",""," 不同意","Disagree","tidak setuju",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.disagree_br);
         childList.add(child);
 
         groupHeader = new GroupHeader(" 不同意", "Disagree", childList);
@@ -7124,7 +7124,7 @@ public class ConversationDAL  {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("ser-ga-rung-poo-goon-ber-ra-pa-min-ta-tay-ngoak-yum-ser-dee-kit-ya",""," 现在几点了（要看手表）","What time is it?(Could you tell me the time, please)","Sekarang pukul berapa minta tengok jam sedikit ya",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.whattime_br);
         childList.add(child);
 
         groupHeader = new GroupHeader(" 现在几点了（要看手表）", "What time is it?(Could you tell me the time, please) ", childList);
@@ -7132,7 +7132,7 @@ public class ConversationDAL  {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("hul-ka-ber-ra-pa gah",""," 多少钱","How much does this cost?","Harga berapa",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.howmuch_br);
         childList.add(child);
 
         groupHeader = new GroupHeader(" 多少钱", "How much does this cost?", childList);
@@ -7140,7 +7140,7 @@ public class ConversationDAL  {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("dee-see-nee-ter-ree-ma-gard-kray-dit-gah",""," 这里能用信用卡付款吗","Do you take credit cards?","Di sini terima kad kridit kah?",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.credit_br);
         childList.add(child);
 
         groupHeader = new GroupHeader(" 这里能用信用卡付款吗", "Do you take credit cards?", childList);
@@ -7148,7 +7148,7 @@ public class ConversationDAL  {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("ter-ree-ma-oon-took-mer-noo-gul-wang-",""," 可以换钱吗","Can I change some money?","Terima untuk menukar wang kah?",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.changemoney_br);
         childList.add(child);
 
         groupHeader = new GroupHeader(" 可以换钱吗", "Can I change some money?", childList);
@@ -9189,7 +9189,7 @@ public class ConversationDAL  {
     public void loadIndonesiaToBrunei(){
         ArrayList<Child> childList = new ArrayList<Child>();
         Child child = new Child("gu-moos-tar","","Halo","Hello","Kumusta",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.hello_br);
         childList.add(child);
 
         GroupHeader groupHeader = new GroupHeader("Halo", "Hello", childList);
@@ -9197,7 +9197,7 @@ public class ConversationDAL  {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("ser-la-mud-pa-kee","","Selamat pagi, Bapak/Ibu","Good Morning Sir/Madame","Selamat pagi",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.morning_br);
         childList.add(child);
 
         groupHeader = new GroupHeader("Selamat pagi, Bapak/Ibu", "Good Morning Sir/Madame", childList);
@@ -9205,7 +9205,7 @@ public class ConversationDAL  {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("ser-la-mud-per-tung","","Selamat siang, Bapak/Ibu","Good Afternoon Sir/Madame.","Selamat petang",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.afternoon_br);
         childList.add(child);
 
         groupHeader = new GroupHeader("Selamat siang, Bapak/Ibu", "Good Afternoon Sir/Madame.", childList);
@@ -9213,7 +9213,7 @@ public class ConversationDAL  {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("ser-la-mud-per-tung","","Selamat sore, Bapak/Ibu","Good Evening Sir/Madame.","Selamat petang",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.everning_br);
         childList.add(child);
 
         groupHeader = new GroupHeader("Selamat sore, Bapak/Ibu", "Good Evening Sir/Madame.", childList);
@@ -9221,7 +9221,7 @@ public class ConversationDAL  {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("ser-la-mud-ma-lum","","Selamat malam, Bapak/Ibu ","Good Night Sir/Madame.","Selamat malam",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.night_br);
         childList.add(child);
 
         groupHeader = new GroupHeader("Selamat malam, Bapak/Ibu ", "Good Night Sir/Madame.", childList);
@@ -9229,7 +9229,7 @@ public class ConversationDAL  {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("na-ma-sa-ya","","Nama saya …….","My name is….","Nama saya……",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.myname_br);
         childList.add(child);
 
         groupHeader = new GroupHeader("Nama saya …….", "My name is….", childList);
@@ -9237,7 +9237,7 @@ public class ConversationDAL  {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("see-ya-pa-gah-na-ma-un-da","","Siapa nama anda ?","What is your name?","Siapakah nama anda",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.whatsyourname_br);
         childList.add(child);
 
         groupHeader = new GroupHeader("Siapa nama anda ?", "What is your name?", childList);
@@ -9245,7 +9245,7 @@ public class ConversationDAL  {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("ar-pa-ka-bul","","Apa kabar ?","How are you?","Apa khabar",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.howareyou_br);
         childList.add(child);
 
         groupHeader = new GroupHeader("Apa kabar ?", "How are you?", childList);
@@ -9253,7 +9253,7 @@ public class ConversationDAL  {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("koem-bee-ra-da-pud-burn-gur-na-lun- der-ngun-un-da","","Senang bertemu dengan anda","Nice to meet you.","Gembira dapat berkenalan dengan anda",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.nicetomeet_br);
         childList.add(child);
 
         groupHeader = new GroupHeader("Senang bertemu dengan anda", "Nice to meet you.", childList);
@@ -9261,7 +9261,7 @@ public class ConversationDAL  {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("ka-bul-baik","","Saya baik-baik saja.","I’m fine.","Khabar baik",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.fine_br);
         childList.add(child);
 
         groupHeader = new GroupHeader("Saya baik-baik saja.", "I’m fine.", childList);
@@ -9269,7 +9269,7 @@ public class ConversationDAL  {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("ser-la-mud-ting-kul","","Selamat jalan (for the person who stays)  Selamat tinggal (for the person who goes away)","Good Bye.","Selamat tinggal",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.bye_br);
         childList.add(child);
 
         groupHeader = new GroupHeader("Selamat jalan (for the person who stays)  Selamat tinggal (for the person who goes away)", "Good Bye.", childList);
@@ -9277,7 +9277,7 @@ public class ConversationDAL  {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("ya-ka-dee-ree-baik-baik-ya","","Jagalah diri anda baik-baik","Take care of yourself.","Jaga diri baik-baik ya",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.takecare_br);
         childList.add(child);
 
         groupHeader = new GroupHeader("Jagalah diri anda baik-baik", "Take care of yourself.", childList);
@@ -9285,7 +9285,7 @@ public class ConversationDAL  {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("yoom-pa-la-kee","","Sampai bertemu lagi","See you again.","jumpa lagi",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.seeu_br);
         childList.add(child);
 
         groupHeader = new GroupHeader("Sampai bertemu lagi", "See you again.", childList);
@@ -9293,7 +9293,7 @@ public class ConversationDAL  {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("ter-ree-ma-ga-seh","","Terima kasih, Bapak/Ibu","Thank you Sir/Madame.","terima kasih",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.thank_br);
         childList.add(child);
 
         groupHeader = new GroupHeader("Terima kasih, Bapak/Ibu", "Thank you Sir/Madame.", childList);
@@ -9301,7 +9301,7 @@ public class ConversationDAL  {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("ma-af-gun-sa-ya","","Maaf, Bapak/Ibu","Sorry Sir/Madame.","Maafkan saya",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.sry_br);
         childList.add(child);
 
         groupHeader = new GroupHeader("Maaf, Bapak/Ibu", "Sorry Sir/Madame.", childList);
@@ -9309,7 +9309,7 @@ public class ConversationDAL  {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("ya","","Ya","Yes.","ya",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.yes_br);
         childList.add(child);
 
         groupHeader = new GroupHeader("Ya", "Yes.", childList);
@@ -9317,7 +9317,7 @@ public class ConversationDAL  {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("boo-gun","","Tidak","No.","bukan",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.no_br);
         childList.add(child);
 
         groupHeader = new GroupHeader("Tidak", "No.", childList);
@@ -9325,7 +9325,7 @@ public class ConversationDAL  {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("soo-da-tern-too","","Tentu saja","Of course","sudah tentu",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.ofcourse_br);
         childList.add(child);
 
         groupHeader = new GroupHeader("Tentu saja", "Of course", childList);
@@ -9333,7 +9333,7 @@ public class ConversationDAL  {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("tee-duk-tern-too","","Tidak tentu","I’m not sure","tidak tentu",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.notsure_br);
         childList.add(child);
 
         groupHeader = new GroupHeader("Tidak tentu", "I’m not sure", childList);
@@ -9341,7 +9341,7 @@ public class ConversationDAL  {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("ser-too-yoo","","Setuju","Agree","setuju",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.agree_br);
         childList.add(child);
 
         groupHeader = new GroupHeader("Setuju", "Agree", childList);
@@ -9349,7 +9349,7 @@ public class ConversationDAL  {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("tee-duk-ser-too-yoo","","Tidak setuju","Disagree","tidak setuju",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.disagree_br);
         childList.add(child);
 
         groupHeader = new GroupHeader("Tidak setuju", "Disagree", childList);
@@ -9357,7 +9357,7 @@ public class ConversationDAL  {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("ser-ga-rung-poo-goon-ber-ra-pa-min-ta-tay-ngoak-yum-ser-dee-kit-ya","","Sekarang jam berapa?","What time is it?  (Could you tell me the time, please)","Sekarang pukul berapa minta tengok jam sedikit ya",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.whattime_br);
         childList.add(child);
 
         groupHeader = new GroupHeader("Sekarang jam berapa?", "What time is it? (Could you tell me the time, please)  ", childList);
@@ -9365,7 +9365,7 @@ public class ConversationDAL  {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("hul-ka-ber-ra-pa gah","","Berapa harganya?","How much does this cost?","Harga berapa",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.howmuch_br);
         childList.add(child);
 
         groupHeader = new GroupHeader("Berapa harganya?", "How much does this cost?", childList);
@@ -9373,7 +9373,7 @@ public class ConversationDAL  {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("dee-see-nee-ter-ree-ma-gard-kray-dit-gah","","Apakah menerima kartu kredit?","Do you take credit cards?","Di sini terima kad kridit kah?",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.credit_br);
         childList.add(child);
 
         groupHeader = new GroupHeader("Apakah menerima kartu kredit?", "Do you take credit cards?", childList);
@@ -9381,7 +9381,7 @@ public class ConversationDAL  {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("ter-ree-ma-oon-took-mer-noo-gul-wang-","","Apa bisa tukar uang?","Can I change some money?","Terima untuk menukar wang kah?",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.changemoney_br);
         childList.add(child);
 
         groupHeader = new GroupHeader("Apa bisa tukar uang?", "Can I change some money?", childList);
@@ -11433,7 +11433,7 @@ public class ConversationDAL  {
         ArrayList<Child> childList = new ArrayList<Child>();
         childList = new ArrayList<Child>();
         child = new Child("gu-moos-tar",""," ສະບາຍດີ","Hello","Kumusta",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.hello_br);
         childList.add(child);
 
         groupHeader = new GroupHeader(" ສະບາຍດີ", "Hello", childList);
@@ -11441,7 +11441,7 @@ public class ConversationDAL  {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("ser-la-mud-pa-kee",""," ສະບາຍດີຕອນເຊົ້າ","Good Morning Sir/Madame","Selamat pagi",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.morning_br);
         childList.add(child);
 
         groupHeader = new GroupHeader(" ສະບາຍດີຕອນເຊົ້າ", "Good Morning Sir/Madame", childList);
@@ -11449,7 +11449,7 @@ public class ConversationDAL  {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("ser-la-mud-per-tung",""," ສະບາຍດີຕອນທ່ຽງ","Good Afternoon Sir/Madame.","Selamat petang",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.afternoon_br);
         childList.add(child);
 
         groupHeader = new GroupHeader(" ສະບາຍດີຕອນທ່ຽງ", "Good Afternoon Sir/Madame.", childList);
@@ -11457,7 +11457,7 @@ public class ConversationDAL  {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("ser-la-mud-per-tung",""," ສະບາຍດີຕອນແລງ","Good Evening Sir/Madame.","Selamat petang",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.everning_br);
         childList.add(child);
 
         groupHeader = new GroupHeader(" ສະບາຍດີຕອນແລງ", "Good Evening Sir/Madame.", childList);
@@ -11465,7 +11465,7 @@ public class ConversationDAL  {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("ser-la-mud-ma-lum",""," ສະບາຍດີຕອນກາງຄືນ","Good Night Sir/Madame.","Selamat malam",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.night_br);
         childList.add(child);
 
         groupHeader = new GroupHeader(" ສະບາຍດີຕອນກາງຄືນ", "Good Night Sir/Madame.", childList);
@@ -11473,7 +11473,7 @@ public class ConversationDAL  {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("na-ma-sa-ya",""," ຂ້ອຍຊື່…………","My name is….","Nama saya……",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.myname_br);
         childList.add(child);
 
         groupHeader = new GroupHeader(" ຂ້ອຍຊື່…………", "My name is….", childList);
@@ -11481,7 +11481,7 @@ public class ConversationDAL  {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("see-ya-pa-gah-na-ma-un-da",""," ເຈົ້າຊື່ຫຍັງ","What is your name?","Siapakah nama anda",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.whatsyourname_br);
         childList.add(child);
 
         groupHeader = new GroupHeader(" ເຈົ້າຊື່ຫຍັງ", "What is your name?", childList);
@@ -11489,7 +11489,7 @@ public class ConversationDAL  {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("ar-pa-ka-bul",""," ເຈົ້າເປັນຈັງໃດ","How are you?","Apa khabar",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.howareyou_br);
         childList.add(child);
 
         groupHeader = new GroupHeader(" ເຈົ້າເປັນຈັງໃດ", "How are you?", childList);
@@ -11497,7 +11497,7 @@ public class ConversationDAL  {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("koem-bee-ra-da-pud-burn-gur-na-lun- der-ngun-un-da",""," ຍິນດີທີ່ໄດ້ຮູ້ຈັກ","Nice to meet you.","Gembira dapat berkenalan dengan anda",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.nicetomeet_br);
         childList.add(child);
 
         groupHeader = new GroupHeader(" ຍິນດີທີ່ໄດ້ຮູ້ຈັກ", "Nice to meet you.", childList);
@@ -11505,7 +11505,7 @@ public class ConversationDAL  {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("ka-bul-baik",""," ຂ້ອຍສະບາຍດີ","I’m fine.","Khabar baik",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.fine_br);
         childList.add(child);
 
         groupHeader = new GroupHeader(" ຂ້ອຍສະບາຍດີ", "I’m fine.", childList);
@@ -11513,7 +11513,7 @@ public class ConversationDAL  {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("ser-la-mud-ting-kul",""," ລາກ່ອນ","Good Bye.","Selamat tinggal",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.bye_br);
         childList.add(child);
 
         groupHeader = new GroupHeader(" ລາກ່ອນ", "Good Bye.", childList);
@@ -11521,7 +11521,7 @@ public class ConversationDAL  {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("ya-ka-dee-ree-baik-baik-ya",""," ເບິ່ງແຍງໂຕເອງແດ່ເດີ້","Take care of yourself.","Jaga diri baik-baik ya",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.takecare_br);
         childList.add(child);
 
         groupHeader = new GroupHeader(" ເບິ່ງແຍງໂຕເອງແດ່ເດີ້", "Take care of yourself.", childList);
@@ -11529,7 +11529,7 @@ public class ConversationDAL  {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("yoom-pa-la-kee",""," ແລ້ວພົບກັນ","See you again.","jumpa lagi",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.seeu_br);
         childList.add(child);
 
         groupHeader = new GroupHeader(" ແລ້ວພົບກັນ", "See you again.", childList);
@@ -11537,7 +11537,7 @@ public class ConversationDAL  {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("ter-ree-ma-ga-seh",""," ຂອບໃຈ","Thank you Sir/Madame.","terima kasih",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.thank_br);
         childList.add(child);
 
         groupHeader = new GroupHeader(" ຂອບໃຈ", "Thank you Sir/Madame.", childList);
@@ -11545,7 +11545,7 @@ public class ConversationDAL  {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("ma-af-gun-sa-ya",""," ຂໍໂທດ","Sorry Sir/Madame.","Maafkan saya",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.sry_br);
         childList.add(child);
 
         groupHeader = new GroupHeader(" ຂໍໂທດ", "Sorry Sir/Madame.", childList);
@@ -11553,7 +11553,7 @@ public class ConversationDAL  {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("ya",""," ແມ່ນ","Yes.","ya",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.yes_br);
         childList.add(child);
 
         groupHeader = new GroupHeader(" ແມ່ນ", "Yes.", childList);
@@ -11561,7 +11561,7 @@ public class ConversationDAL  {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("boo-gun",""," ບໍ່ແມ່ນ","No.","bukan",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.no_br);
         childList.add(child);
 
         groupHeader = new GroupHeader(" ບໍ່ແມ່ນ", "No.", childList);
@@ -11569,7 +11569,7 @@ public class ConversationDAL  {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("soo-da-tern-too",""," ແນ່ນອນ","Of course","sudah tentu",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.ofcourse_br);
         childList.add(child);
 
         groupHeader = new GroupHeader(" ແນ່ນອນ", "Of course", childList);
@@ -11577,7 +11577,7 @@ public class ConversationDAL  {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("tee-duk-tern-too",""," ບໍ່ແນ່ນອນ","I’m not sure","tidak tentu",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.notsure_br);
         childList.add(child);
 
         groupHeader = new GroupHeader(" ບໍ່ແນ່ນອນ", "I’m not sure", childList);
@@ -11585,7 +11585,7 @@ public class ConversationDAL  {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("ser-too-yoo",""," ເຫັນນຳ","Agree","setuju",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.agree_br);
         childList.add(child);
 
         groupHeader = new GroupHeader(" ເຫັນນຳ", "Agree", childList);
@@ -11593,7 +11593,7 @@ public class ConversationDAL  {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("tee-duk-ser-too-yoo",""," ບໍ່ເຫັນນຳ","Disagree","tidak setuju",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.disagree_br);
         childList.add(child);
 
         groupHeader = new GroupHeader(" ບໍ່ເຫັນນຳ", "Disagree", childList);
@@ -11601,7 +11601,7 @@ public class ConversationDAL  {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("ser-ga-rung-poo-goon-ber-ra-pa-min-ta-tay-ngoak-yum-ser-dee-kit-ya",""," ຕອນນີ້ເປັນເວລາເທົ່າໃດ (ຂໍເບິ່ງໂມງແດ່)","What time is it? (Could you tell me the time, please)  ","Sekarang pukul berapa minta tengok jam sedikit ya",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.whattime_br);
         childList.add(child);
 
         groupHeader = new GroupHeader(" ຕອນນີ້ເປັນເວລາເທົ່າໃດ (ຂໍເບິ່ງໂມງແດ່)", "What time is it?  (Could you tell me the time, please) ", childList);
@@ -11609,7 +11609,7 @@ public class ConversationDAL  {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("hul-ka-ber-ra-pa gah",""," ລາຄາເທົ່າໃດ","How much does this cost?","Harga berapa",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.howmuch_br);
         childList.add(child);
 
         groupHeader = new GroupHeader(" ລາຄາເທົ່າໃດ", "How much does this cost?", childList);
@@ -11617,7 +11617,7 @@ public class ConversationDAL  {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("dee-see-nee-ter-ree-ma-gard-kray-dit-gah",""," ບ່ອນນີ້ຮັບບັດເຄຣດິດບໍ","Do you take credit cards?","Di sini terima kad kridit kah?",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.credit_br);
         childList.add(child);
 
         groupHeader = new GroupHeader(" ບ່ອນນີ້ຮັບບັດເຄຣດິດບໍ", "Do you take credit cards?", childList);
@@ -11625,7 +11625,7 @@ public class ConversationDAL  {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("ter-ree-ma-oon-took-mer-noo-gul-wang-",""," ຮັບແລກປ່ຽນເງິນບໍ","Can I change some money?","Terima untuk menukar wang kah?",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.changemoney_br);
         childList.add(child);
 
         groupHeader = new GroupHeader(" ຮັບແລກປ່ຽນເງິນບໍ", "Can I change some money?", childList);
@@ -13678,7 +13678,7 @@ public class ConversationDAL  {
         ArrayList<Child> childList = new ArrayList<Child>();
         childList = new ArrayList<Child>();
         child = new Child("gu-moos-tar","","Kumusta","Hello","Kumusta",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.hello_br);
         childList.add(child);
 
         groupHeader = new GroupHeader("Kumusta", "Hello", childList);
@@ -13686,7 +13686,7 @@ public class ConversationDAL  {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("ser-la-mud-pa-kee","","Selamat pagi","Good Morning Sir/Madame","Selamat pagi",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.morning_br);
         childList.add(child);
 
         groupHeader = new GroupHeader("Selamat pagi", "Good Morning Sir/Madame", childList);
@@ -13694,7 +13694,7 @@ public class ConversationDAL  {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("ser-la-mud-per-tung","","Selamat petang","Good Afternoon Sir/Madame.","Selamat petang",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.afternoon_br);
         childList.add(child);
 
         groupHeader = new GroupHeader("Selamat petang", "Good Afternoon Sir/Madame.", childList);
@@ -13702,7 +13702,7 @@ public class ConversationDAL  {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("ser-la-mud-per-tung","","Selamat petang","Good Evening Sir/Madame.","Selamat petang",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.everning_br);
         childList.add(child);
 
         groupHeader = new GroupHeader("Selamat petang", "Good Evening Sir/Madame.", childList);
@@ -13710,7 +13710,7 @@ public class ConversationDAL  {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("ser-la-mud-ma-lum","","Selamat malam","Good Night Sir/Madame.","Selamat malam",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.night_br);
         childList.add(child);
 
         groupHeader = new GroupHeader("Selamat malam", "Good Night Sir/Madame.", childList);
@@ -13718,7 +13718,7 @@ public class ConversationDAL  {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("na-ma-sa-ya","","Nama saya……","My name is….","Nama saya……",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.myname_br);
         childList.add(child);
 
         groupHeader = new GroupHeader("Nama saya……", "My name is….", childList);
@@ -13726,7 +13726,7 @@ public class ConversationDAL  {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("see-ya-pa-gah-na-ma-un-da","","Siapakah nama anda","What is your name?","Siapakah nama anda",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.whatsyourname_br);
         childList.add(child);
 
         groupHeader = new GroupHeader("Siapakah nama anda", "What is your name?", childList);
@@ -13734,7 +13734,7 @@ public class ConversationDAL  {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("ar-pa-ka-bul","","Apa khabar","How are you?","Apa khabar",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.howareyou_br);
         childList.add(child);
 
         groupHeader = new GroupHeader("Apa khabar", "How are you?", childList);
@@ -13742,7 +13742,7 @@ public class ConversationDAL  {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("koem-bee-ra-da-pud-burn-gur-na-lun- der-ngun-un-da","","Gembira dapat berkenalan dengan anda","Nice to meet you.","Gembira dapat berkenalan dengan anda",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.nicetomeet_br);
         childList.add(child);
 
         groupHeader = new GroupHeader("Gembira dapat berkenalan dengan anda", "Nice to meet you.", childList);
@@ -13750,7 +13750,7 @@ public class ConversationDAL  {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("ka-bul-baik","","Khabar baik","I’m fine.","Khabar baik",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.fine_br);
         childList.add(child);
 
         groupHeader = new GroupHeader("Khabar baik", "I’m fine.", childList);
@@ -13758,7 +13758,7 @@ public class ConversationDAL  {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("ser-la-mud-ting-kul","","Selamat tinggal","Good Bye.","Selamat tinggal",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.bye_br);
         childList.add(child);
 
         groupHeader = new GroupHeader("Selamat tinggal", "Good Bye.", childList);
@@ -13766,7 +13766,7 @@ public class ConversationDAL  {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("ya-ka-dee-ree-baik-baik-ya","","Jaga diri baik-baik ya","Take care of yourself.","Jaga diri baik-baik ya",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.takecare_br);
         childList.add(child);
 
         groupHeader = new GroupHeader("Jaga diri baik-baik ya", "Take care of yourself.", childList);
@@ -13774,7 +13774,7 @@ public class ConversationDAL  {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("yoom-pa-la-kee","","jumpa lagi","See you again.","jumpa lagi",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.seeu_br);
         childList.add(child);
 
         groupHeader = new GroupHeader("jumpa lagi", "See you again.", childList);
@@ -13782,7 +13782,7 @@ public class ConversationDAL  {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("ter-ree-ma-ga-seh","","terima kasih","Thank you Sir/Madame.","terima kasih",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.thank_br);
         childList.add(child);
 
         groupHeader = new GroupHeader("terima kasih", "Thank you Sir/Madame.", childList);
@@ -13790,7 +13790,7 @@ public class ConversationDAL  {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("ma-af-gun-sa-ya","","Maafkan saya","Sorry Sir/Madame.","Maafkan saya",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.sry_br);
         childList.add(child);
 
         groupHeader = new GroupHeader("Maafkan saya", "Sorry Sir/Madame.", childList);
@@ -13798,7 +13798,7 @@ public class ConversationDAL  {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("ya","","ya","Yes.","ya",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.yes_br);
         childList.add(child);
 
         groupHeader = new GroupHeader("ya", "Yes.", childList);
@@ -13806,7 +13806,7 @@ public class ConversationDAL  {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("boo-gun","","bukan","No.","bukan",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.no_br);
         childList.add(child);
 
         groupHeader = new GroupHeader("bukan", "No.", childList);
@@ -13814,7 +13814,7 @@ public class ConversationDAL  {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("soo-da-tern-too","","sudah tentu","Of course","sudah tentu",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.ofcourse_br);
         childList.add(child);
 
         groupHeader = new GroupHeader("sudah tentu", "Of course", childList);
@@ -13822,7 +13822,7 @@ public class ConversationDAL  {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("tee-duk-tern-too","","tidak tentu","I’m not sure","tidak tentu",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.notsure_br);
         childList.add(child);
 
         groupHeader = new GroupHeader("tidak tentu", "I’m not sure", childList);
@@ -13830,7 +13830,7 @@ public class ConversationDAL  {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("ser-too-yoo","","setuju","Agree","setuju",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.agree_br);
         childList.add(child);
 
         groupHeader = new GroupHeader("setuju", "Agree", childList);
@@ -13838,7 +13838,7 @@ public class ConversationDAL  {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("tee-duk-ser-too-yoo","","tidak setuju","Disagree","tidak setuju",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.disagree_br);
         childList.add(child);
 
         groupHeader = new GroupHeader("tidak setuju", "Disagree", childList);
@@ -13846,7 +13846,7 @@ public class ConversationDAL  {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("ser-ga-rung-poo-goon-ber-ra-pa-min-ta-tay-ngoak-yum-ser-dee-kit-ya","","Sekarang pukul berapa minta tengok jam sedikit ya","What time is it?  (Could you tell me the time, please) ","Sekarang pukul berapa minta tengok jam sedikit ya",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.whattime_br);
         childList.add(child);
 
         groupHeader = new GroupHeader("Sekarang pukul berapa minta tengok jam sedikit ya", "What time is it?(Could you tell me the time, please) ", childList);
@@ -13854,7 +13854,7 @@ public class ConversationDAL  {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("hul-ka-ber-ra-pa gah","","Harga berapa","How much does this cost?","Harga berapa",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.howmuch_br);
         childList.add(child);
 
         groupHeader = new GroupHeader("Harga berapa", "How much does this cost?", childList);
@@ -13862,7 +13862,7 @@ public class ConversationDAL  {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("dee-see-nee-ter-ree-ma-gard-kray-dit-gah","","Di sini terima kad kridit kah?","Do you take credit cards?","Di sini terima kad kridit kah?",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.credit_br);
         childList.add(child);
 
         groupHeader = new GroupHeader("Di sini terima kad kridit kah?", "Do you take credit cards?", childList);
@@ -13870,7 +13870,7 @@ public class ConversationDAL  {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("ter-ree-ma-oon-took-mer-noo-gul-wang-","","Terima untuk menukar wang kah?","Can I change some money?","Terima untuk menukar wang kah?",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.changemoney_br);
         childList.add(child);
 
         groupHeader = new GroupHeader("Terima untuk menukar wang kah?", "Can I change some money?", childList);
@@ -15920,7 +15920,7 @@ public class ConversationDAL  {
         ArrayList<Child> childList = new ArrayList<Child>();
         childList = new ArrayList<Child>();
         child = new Child("gu-moos-tar","","မဂ๎လာပါ။","Hello","Kumusta",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.hello_br);
         childList.add(child);
 
         groupHeader = new GroupHeader("မဂ๎လာပါ။", "Hello", childList);
@@ -15928,7 +15928,7 @@ public class ConversationDAL  {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("ser-la-mud-pa-kee","","မဂ๎လာမနက္ခင္းပါ ခင္ဗ်ာ∕ရွင္။","Good Morning Sir/Madame","Selamat pagi",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.morning_br);
         childList.add(child);
 
         groupHeader = new GroupHeader("မဂ๎လာမနက္ခင္းပါ ခင္ဗ်ာ∕ရွင္။", "Good Morning Sir/Madame", childList);
@@ -15936,7 +15936,7 @@ public class ConversationDAL  {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("ser-la-mud-per-tung","","မဂ๎လာေန႔ခင္းပါ ခင္ဗ်ာ∕ရွင္။","Good Afternoon Sir/Madame.","Selamat petang",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.afternoon_br);
         childList.add(child);
 
         groupHeader = new GroupHeader("မဂ๎လာေန႔ခင္းပါ ခင္ဗ်ာ∕ရွင္။", "Good Afternoon Sir/Madame.", childList);
@@ -15944,7 +15944,7 @@ public class ConversationDAL  {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("ser-la-mud-per-tung","","မဂ๎လာညေနခင္းပါ ခင္ဗ်ာ∕ရွင္။","Good Evening Sir/Madame.","Selamat petang",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.everning_br);
         childList.add(child);
 
         groupHeader = new GroupHeader("မဂ๎လာညေနခင္းပါ ခင္ဗ်ာ∕ရွင္။", "Good Evening Sir/Madame.", childList);
@@ -15952,7 +15952,7 @@ public class ConversationDAL  {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("ser-la-mud-ma-lum","","ဂြတ္ႏိုက္။","Good Night Sir/Madame.","Selamat malam",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.night_br);
         childList.add(child);
 
         groupHeader = new GroupHeader("ဂြတ္ႏိုက္။", "Good Night Sir/Madame.", childList);
@@ -15960,7 +15960,7 @@ public class ConversationDAL  {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("na-ma-sa-ya","","ကြ်န္ေတာ္⁄ကြ်န္မ နာမည္........ ပါ။","My name is….","Nama saya……",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.myname_br);
         childList.add(child);
 
         groupHeader = new GroupHeader("ကြ်န္ေတာ္⁄ကြ်န္မ နာမည္........ ပါ။", "My name is….", childList);
@@ -15968,7 +15968,7 @@ public class ConversationDAL  {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("see-ya-pa-gah-na-ma-un-da","","ခင္ဗ်ား∕ရွင္ နာမည္ဘယ္လိုေခၚသလဲ။","What is your name?","Siapakah nama anda",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.whatsyourname_br);
         childList.add(child);
 
         groupHeader = new GroupHeader("ခင္ဗ်ား∕ရွင္ နာမည္ဘယ္လိုေခၚသလဲ။", "What is your name?", childList);
@@ -15976,7 +15976,7 @@ public class ConversationDAL  {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("ar-pa-ka-bul","","ခင္ဗ်ား∕ရွင္ ေနေကာင္းလား။","How are you?","Apa khabar",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.howareyou_br);
         childList.add(child);
 
         groupHeader = new GroupHeader("ခင္ဗ်ား∕ရွင္ ေနေကာင္းလား။", "How are you?", childList);
@@ -15984,7 +15984,7 @@ public class ConversationDAL  {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("koem-bee-ra-da-pud-burn-gur-na-lun- der-ngun-un-da","","ေတြ႕ရတာဝမ္းပါတယ္။","Nice to meet you.","Gembira dapat berkenalan dengan anda",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.nicetomeet_br);
         childList.add(child);
 
         groupHeader = new GroupHeader("ေတြ႕ရတာဝမ္းပါတယ္။", "Nice to meet you.", childList);
@@ -15992,7 +15992,7 @@ public class ConversationDAL  {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("ka-bul-baik","","","I’m fine.","Khabar baik",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.fine_br);
         childList.add(child);
 
         groupHeader = new GroupHeader("", "I’m fine.", childList);
@@ -16000,7 +16000,7 @@ public class ConversationDAL  {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("ser-la-mud-ting-kul","","ကြ်န္ေတာ္⁄ကြ်န္မ ေနေကာင္းပါတယ္။","Good Bye.","Selamat tinggal",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.bye_br);
         childList.add(child);
 
         groupHeader = new GroupHeader("ကြ်န္ေတာ္⁄ကြ်န္မ ေနေကာင္းပါတယ္။", "Good Bye.", childList);
@@ -16008,7 +16008,7 @@ public class ConversationDAL  {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("ya-ka-dee-ree-baik-baik-ya","","သြားေတာ့မယ္။","Take care of yourself.","Jaga diri baik-baik ya",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.takecare_br);
         childList.add(child);
 
         groupHeader = new GroupHeader("သြားေတာ့မယ္။", "Take care of yourself.", childList);
@@ -16016,7 +16016,7 @@ public class ConversationDAL  {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("yoom-pa-la-kee","","ကိုယ့္ကိုယ္ဂရုစိုက္ပါ။","See you again.","jumpa lagi",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.seeu_br);
         childList.add(child);
 
         groupHeader = new GroupHeader("ကိုယ့္ကိုယ္ဂရုစိုက္ပါ။", "See you again.", childList);
@@ -16024,7 +16024,7 @@ public class ConversationDAL  {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("ter-ree-ma-ga-seh","","ေနာက္တစ္ခါေတြ႕ပါရေစ။","Thank you Sir/Madame.","terima kasih",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.thank_br);
         childList.add(child);
 
         groupHeader = new GroupHeader("ေနာက္တစ္ခါေတြ႕ပါရေစ။", "Thank you Sir/Madame.", childList);
@@ -16032,7 +16032,7 @@ public class ConversationDAL  {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("ma-af-gun-sa-ya","","ေက်းဇူးတင္ပါတယ္ ခင္ဗ်ာ⁄ရွင္။","Sorry Sir/Madame.","Maafkan saya",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.sry_br);
         childList.add(child);
 
         groupHeader = new GroupHeader("ေက်းဇူးတင္ပါတယ္ ခင္ဗ်ာ⁄ရွင္။", "Sorry Sir/Madame.", childList);
@@ -16040,7 +16040,7 @@ public class ConversationDAL  {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("ya","","ဟုတ္တယ္။","Yes.","ya",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.yes_br);
         childList.add(child);
 
         groupHeader = new GroupHeader("ဟုတ္တယ္။", "Yes.", childList);
@@ -16048,7 +16048,7 @@ public class ConversationDAL  {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("boo-gun","","မဟုတ္ဘူး။","No.","bukan",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.no_br);
         childList.add(child);
 
         groupHeader = new GroupHeader("မဟုတ္ဘူး။", "No.", childList);
@@ -16056,7 +16056,7 @@ public class ConversationDAL  {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("soo-da-tern-too","","ေသခ်ာတယ္။","Of course","sudah tentu",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.ofcourse_br);
         childList.add(child);
 
         groupHeader = new GroupHeader("ေသခ်ာတယ္။", "Of course", childList);
@@ -16064,7 +16064,7 @@ public class ConversationDAL  {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("tee-duk-tern-too","","မေသခ်ာဘူး။","I’m not sure","tidak tentu",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.notsure_br);
         childList.add(child);
 
         groupHeader = new GroupHeader("မေသခ်ာဘူး။", "I’m not sure", childList);
@@ -16072,7 +16072,7 @@ public class ConversationDAL  {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("ser-too-yoo","","သေဘာတူတယ္။","Agree","setuju",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.agree_br);
         childList.add(child);
 
         groupHeader = new GroupHeader("သေဘာတူတယ္။", "Agree", childList);
@@ -16080,7 +16080,7 @@ public class ConversationDAL  {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("tee-duk-ser-too-yoo","","သေဘာမတူဘူး။","Disagree","tidak setuju",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.disagree_br);
         childList.add(child);
 
         groupHeader = new GroupHeader("သေဘာမတူဘူး။", "Disagree", childList);
@@ -16088,7 +16088,7 @@ public class ConversationDAL  {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("ser-ga-rung-poo-goon-ber-ra-pa-min-ta-tay-ngoak-yum-ser-dee-kit-ya","","အခုဘယ္အခ်ိန္ရွိၿပီလဲ။ (နာရီခဏၾကည့္ပါ။)","What time is it? (Could you tell me the time, please) ","Sekarang pukul berapa minta tengok jam sedikit ya",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.whattime_br);
         childList.add(child);
 
         groupHeader = new GroupHeader("အခုဘယ္အခ်ိန္ရွိၿပီလဲ။ (နာရီခဏၾကည့္ပါ။)", "What time is it? (Could you tell me the time, please)", childList);
@@ -16096,7 +16096,7 @@ public class ConversationDAL  {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("hul-ka-ber-ra-pa gah","","ေစ်းဘယ္ေလာက္လဲ။","How much does this cost?","Harga berapa",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.howmuch_br);
         childList.add(child);
 
         groupHeader = new GroupHeader("ေစ်းဘယ္ေလာက္လဲ။", "How much does this cost?", childList);
@@ -16104,7 +16104,7 @@ public class ConversationDAL  {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("dee-see-nee-ter-ree-ma-gard-kray-dit-gah","","အေႂကြးဝယ္ခြင့္ကဒ္သံုးလို႔ရလား။","Do you take credit cards?","Di sini terima kad kridit kah?",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.credit_br);
         childList.add(child);
 
         groupHeader = new GroupHeader("အေႂကြးဝယ္ခြင့္ကဒ္သံုးလို႔ရလား။", "Do you take credit cards?", childList);
@@ -16112,7 +16112,7 @@ public class ConversationDAL  {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("ter-ree-ma-oon-took-mer-noo-gul-wang-","","ေငြလဲလို႔ရလား။","Can I change some money?","Terima untuk menukar wang kah?",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.changemoney_br);
         childList.add(child);
 
         groupHeader = new GroupHeader("ေငြလဲလို႔ရလား။", "Can I change some money?", childList);
@@ -17960,7 +17960,7 @@ public class ConversationDAL  {
         ArrayList<Child> childList = new ArrayList<Child>();
         childList = new ArrayList<Child>();
         child = new Child("gu-moos-tar","","Kumusta","Hello","Kumusta",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.hello_br);
         childList.add(child);
 
         groupHeader = new GroupHeader("Kumusta", "Hello", childList);
@@ -17968,7 +17968,7 @@ public class ConversationDAL  {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("ser-la-mud-pa-kee","","Magandang umaga","Good Morning Sir/Madame","Selamat pagi",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.morning_br);
         childList.add(child);
 
         groupHeader = new GroupHeader("Magandang umaga", "Good Morning Sir/Madame", childList);
@@ -17976,7 +17976,7 @@ public class ConversationDAL  {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("ser-la-mud-per-tung","","Magandang tanghali","Good Afternoon Sir/Madame.","Selamat petang",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.afternoon_br);
         childList.add(child);
 
         groupHeader = new GroupHeader("Magandang tanghali", "Good Afternoon Sir/Madame.", childList);
@@ -17984,7 +17984,7 @@ public class ConversationDAL  {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("ser-la-mud-per-tung","","Mangandang gabi","Good Evening Sir/Madame.","Selamat petang",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.everning_br);
         childList.add(child);
 
         groupHeader = new GroupHeader("Mangandang gabi", "Good Evening Sir/Madame.", childList);
@@ -17992,7 +17992,7 @@ public class ConversationDAL  {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("ser-la-mud-ma-lum","","Mangandang gabi","Good Night Sir/Madame.","Selamat malam",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.night_br);
         childList.add(child);
 
         groupHeader = new GroupHeader("Mangandang gabi", "Good Night Sir/Madame.", childList);
@@ -18000,7 +18000,7 @@ public class ConversationDAL  {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("na-ma-sa-ya","","Ang pangalan ko ay…","My name is….","Nama saya……",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.myname_br);
         childList.add(child);
 
         groupHeader = new GroupHeader("Ang pangalan ko ay…", "My name is….", childList);
@@ -18008,7 +18008,7 @@ public class ConversationDAL  {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("see-ya-pa-gah-na-ma-un-da","","Anong pangalan mo?","What is your name?","Siapakah nama anda",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.whatsyourname_br);
         childList.add(child);
 
         groupHeader = new GroupHeader("Anong pangalan mo?", "What is your name?", childList);
@@ -18016,7 +18016,7 @@ public class ConversationDAL  {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("ar-pa-ka-bul","","Kumusta ka?","How are you?","Apa khabar",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.howareyou_br);
         childList.add(child);
 
         groupHeader = new GroupHeader("Kumusta ka?", "How are you?", childList);
@@ -18024,7 +18024,7 @@ public class ConversationDAL  {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("koem-bee-ra-da-pud-burn-gur-na-lun- der-ngun-un-da","","Natutuwa akong makilala ka.","Nice to meet you.","Gembira dapat berkenalan dengan anda",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.nicetomeet_br);
         childList.add(child);
 
         groupHeader = new GroupHeader("Natutuwa akong makilala ka.", "Nice to meet you.", childList);
@@ -18032,7 +18032,7 @@ public class ConversationDAL  {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("ka-bul-baik","","Mabuti","I’m fine.","Khabar baik",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.fine_br);
         childList.add(child);
 
         groupHeader = new GroupHeader("Mabuti", "I’m fine.", childList);
@@ -18040,7 +18040,7 @@ public class ConversationDAL  {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("ser-la-mud-ting-kul","","Paalam","Good Bye.","Selamat tinggal",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.bye_br);
         childList.add(child);
 
         groupHeader = new GroupHeader("Paalam", "Good Bye.", childList);
@@ -18048,7 +18048,7 @@ public class ConversationDAL  {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("ya-ka-dee-ree-baik-baik-ya","","Ingat ","Take care of yourself.","Jaga diri baik-baik ya",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.takecare_br);
         childList.add(child);
 
         groupHeader = new GroupHeader("Ingat ", "Take care of yourself.", childList);
@@ -18056,7 +18056,7 @@ public class ConversationDAL  {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("yoom-pa-la-kee","","Hanggang sa susunod","See you again.","jumpa lagi",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.seeu_br);
         childList.add(child);
 
         groupHeader = new GroupHeader("Hanggang sa susunod", "See you again.", childList);
@@ -18064,7 +18064,7 @@ public class ConversationDAL  {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("ter-ree-ma-ga-seh","","Salamat","Thank you Sir/Madame.","terima kasih",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.thank_br);
         childList.add(child);
 
         groupHeader = new GroupHeader("Salamat", "Thank you Sir/Madame.", childList);
@@ -18072,7 +18072,7 @@ public class ConversationDAL  {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("ma-af-gun-sa-ya","","Maabala","Sorry Sir/Madame.","Maafkan saya",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.sry_br);
         childList.add(child);
 
         groupHeader = new GroupHeader("Maabala", "Sorry Sir/Madame.", childList);
@@ -18080,7 +18080,7 @@ public class ConversationDAL  {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("ya","","Oo","Yes.","ya",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.yes_br);
         childList.add(child);
 
         groupHeader = new GroupHeader("Oo", "Yes.", childList);
@@ -18088,7 +18088,7 @@ public class ConversationDAL  {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("boo-gun","","Hindi","No.","bukan",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.no_br);
         childList.add(child);
 
         groupHeader = new GroupHeader("Hindi", "No.", childList);
@@ -18096,7 +18096,7 @@ public class ConversationDAL  {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("soo-da-tern-too","","Sigurado","Of course","sudah tentu",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.ofcourse_br);
         childList.add(child);
 
         groupHeader = new GroupHeader("Sigurado", "Of course", childList);
@@ -18104,7 +18104,7 @@ public class ConversationDAL  {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("tee-duk-tern-too","","Hindi ako sigurado","I’m not sure","tidak tentu",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.notsure_br);
         childList.add(child);
 
         groupHeader = new GroupHeader("Hindi ako sigurado", "I’m not sure", childList);
@@ -18112,7 +18112,7 @@ public class ConversationDAL  {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("ser-too-yoo","","Sumasang-ayon ako","Agree","setuju",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.agree_br);
         childList.add(child);
 
         groupHeader = new GroupHeader("Sumasang-ayon ako", "Agree", childList);
@@ -18120,7 +18120,7 @@ public class ConversationDAL  {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("tee-duk-ser-too-yoo","","Hindi ako sumasang-ayon","Disagree","tidak setuju",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.disagree_br);
         childList.add(child);
 
         groupHeader = new GroupHeader("Hindi ako sumasang-ayon", "Disagree", childList);
@@ -18128,7 +18128,7 @@ public class ConversationDAL  {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("ser-ga-rung-poo-goon-ber-ra-pa-min-ta-tay-ngoak-yum-ser-dee-kit-ya","","Anong oras na?","What time is it?(Could you tell me the time, please)  ","Sekarang pukul berapa minta tengok jam sedikit ya",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.whattime_br);
         childList.add(child);
 
         groupHeader = new GroupHeader("Anong oras na?", "What time is it? (Could you tell me the time, please) ", childList);
@@ -18136,7 +18136,7 @@ public class ConversationDAL  {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("hul-ka-ber-ra-pa gah","","Magkano?","How much does this cost?","Harga berapa",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.howmuch_br);
         childList.add(child);
 
         groupHeader = new GroupHeader("Magkano?", "How much does this cost?", childList);
@@ -18144,7 +18144,7 @@ public class ConversationDAL  {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("dee-see-nee-ter-ree-ma-gard-kray-dit-gah","","Tinatanggap ba ang credit card dito","Do you take credit cards?","Di sini terima kad kridit kah?",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.credit_br);
         childList.add(child);
 
         groupHeader = new GroupHeader("Tinatanggap ba ang credit card dito", "Do you take credit cards?", childList);
@@ -18152,7 +18152,7 @@ public class ConversationDAL  {
 //-------------------------------------------------
         childList = new ArrayList<Child>();
         child = new Child("ter-ree-ma-oon-took-mer-noo-gul-wang-","","Meron ba ditong money exchange","Can I change some money?","Terima untuk menukar wang kah?",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.changemoney_br);
         childList.add(child);
 
         groupHeader = new GroupHeader("Meron ba ditong money exchange", "Can I change some money?", childList);
