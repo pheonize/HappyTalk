@@ -339,20 +339,20 @@ public class MyListAdapter extends BaseExpandableListAdapter {
     //LoadSound
 
 
-    public void loadSound(String lang_from,String lang_to){
-
-    //Th-ch
-            if(child.getWordFrom().contains("Test8")) {
-                MediaPlayer mp = MediaPlayer.create(context, R.raw.hello_th);
-                mp.start();
-            }
-
-    //Th-Br
-        if(child.getWordFrom().contains("Test3")){
-            MediaPlayer mp = MediaPlayer.create(context, R.raw.hello_br);
-            mp.start();
-        }
-    }
+//    public void loadSound(String lang_from,String lang_to){
+//
+//    //Th-ch
+//            if(child.getWordFrom().contains("Test8")) {
+//                MediaPlayer mp = MediaPlayer.create(context, R.raw.hello_th);
+//                mp.start();
+//            }
+//
+//    //Th-Br
+//        if(child.getWordFrom().contains("Test3")){
+//            MediaPlayer mp = MediaPlayer.create(context, R.raw.hello_br);
+//            mp.start();
+//        }
+//    }
 
     public void loadSound(int soundPath) {
             MediaPlayer mp = MediaPlayer.create(context, soundPath);

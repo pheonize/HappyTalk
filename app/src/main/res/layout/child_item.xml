@@ -58,24 +58,25 @@
             android:layout_centerVertical="true"
             android:paddingLeft="50dp"
             android:text="test3"/>
+        <TextView
+            android:id="@+id/txtKaraokeTH"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/txtWordEN"
+            android:layout_centerVertical="true"
+            android:paddingLeft="50dp"
+            android:text="test5"/>
     <TextView
         android:id="@+id/txtKaraokeEN"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
-        android:layout_below="@id/txtWordTo"
+        android:layout_below="@id/txtKaraokeTH"
         android:layout_centerVertical="true"
         android:paddingLeft="50dp"
         android:text="test4"/>
-    <TextView
-            android:id="@+id/txtKaraokeTH"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_below="@id/txtKaraokeEN"
-            android:layout_centerVertical="true"
-            android:paddingLeft="50dp"
-            android:text="test5"/>
+
     </LinearLayout>
 
 
