@@ -38,6 +38,7 @@ public class DALconnection  {
 
 
     public void loadThaiToBrunei() {
+
     }
 
 
