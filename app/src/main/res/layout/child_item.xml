@@ -14,9 +14,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-
         android:contentDescription="@string/app_name"
-
         android:background="@drawable/s"/>
     <Button
         style="?android:attr/buttonStyleSmall"
@@ -26,7 +24,6 @@
         android:layout_marginTop="10dp"
         android:layout_below="@+id/sounds"
         android:contentDescription="@string/app_name"
-
         android:background="@drawable/f"/>
 
     <LinearLayout

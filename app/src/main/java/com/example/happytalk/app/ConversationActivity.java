@@ -1031,7 +1031,7 @@ public class ConversationActivity extends Activity {
 
         if (lang_from.equals("Malaysia") && lang_to.equals("Singapore") || lang_from.equals("มาเลเซีย") && lang_to.equals("สิงคโปร์")) {
             loadWording = new ConversationDAL();
-            loadWording.loadMalaysiaToPhilippines();
+            loadWording.loadMalaysiaToSingapore();
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
@@ -1120,7 +1120,7 @@ public class ConversationActivity extends Activity {
 
         if (lang_from.equals("Myanmar") && lang_to.equals("Laos") || lang_from.equals("พม่า") && lang_to.equals("ลาว")) {
             loadWording = new ConversationDAL();
-            loadWording.loadMyanmarToIndonesia();
+            loadWording.loadMyanmarToLaos();
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data

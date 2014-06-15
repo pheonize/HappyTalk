@@ -987,7 +987,7 @@ public class LogisticActivity extends Activity implements SearchView.OnQueryText
 
         if (lang_from.equals("Malaysia") && lang_to.equals("Singapore") || lang_from.equals("มาเลเซีย") && lang_to.equals("สิงคโปร์")) {
             loadWording = new LogisticDAL();
-            loadWording.loadMalaysiaToPhilippines();
+            loadWording.loadMalaysiaToSingapore();
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
@@ -1076,7 +1076,7 @@ public class LogisticActivity extends Activity implements SearchView.OnQueryText
 
         if (lang_from.equals("Myanmar") && lang_to.equals("Laos") || lang_from.equals("พม่า") && lang_to.equals("ลาว")) {
             loadWording = new LogisticDAL();
-            loadWording.loadMyanmarToIndonesia();
+            loadWording.loadMyanmarToLaos();
 
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data

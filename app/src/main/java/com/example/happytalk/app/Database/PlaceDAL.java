@@ -9,6 +9,8 @@ import java.util.ArrayList;
  * Created by oVANILLAz on 6/10/14 AD.
  */
 public class PlaceDAL {
+    Child child;
+    GroupHeader groupHeader;
     private ArrayList<GroupHeader> groupHeaderList = new ArrayList<GroupHeader>();
 
     public void loadThaiToBrunei(){
@@ -4723,148 +4725,2241 @@ public class PlaceDAL {
 
     public void loadIndonesiaToChina(){
         ArrayList<Child> childList = new ArrayList<Child>();
-        Child child = new Child("ไทย","ไทย","ไทย","ไทย","ไทย",null,null);
+        childList = new ArrayList<Child>();
+        Child child = new Child("see-sow-jian-jai-nar","","Di mana kamar kecil (toilet) ?","Where is the toilet?"," 洗手间在哪儿",null,null);
+        child.setSoundPath(-1);
         childList.add(child);
 
-        GroupHeader groupHeader = new GroupHeader("Indonesia","China",childList);
+        GroupHeader groupHeader = new GroupHeader("Di mana kamar kecil (toilet) ?", "Where is the toilet?", childList);
         groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ywii-seu-jai-nar","","Di mana kamar mandi ?","Where is the bathroom?"," 浴室在哪儿",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Di mana kamar mandi ?", "Where is the bathroom?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("chun-thing-jai-nar","","Di mana restoran ?","Where is the restaurant?"," 餐厅在哪儿",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Di mana restoran ?", "Where is the restaurant?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("sung-tian-jai-nar","","Di mana toko ?","Where is the shop?"," 商店在哪儿",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Di mana toko ?", "Where is the shop?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("siw-cher-hang-jai-nar","","Di mana bengkel ?","Where is the garage?"," 修车行在哪儿",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Di mana bengkel ?", "Where is the garage?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ee-awian-jai-nar","","Di mana rumah sakit ?","Where is the hospital?"," 医院在哪儿",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Di mana rumah sakit ?", "Where is the hospital?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("jern-sua-jai-nar","","Di mana klinik ?","Where is the clinic?"," 诊所在哪儿",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Di mana klinik ?", "Where is the clinic?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("yao-tian-jai-nar","","Di mana apotek ?","Where is the pharmacy?"," 药店在哪儿",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Di mana apotek ?", "Where is the pharmacy?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("jia-yow-jun-jai-nar","","Di mana pompa bensin?","Where is the gas station?"," 加油站在哪儿",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Di mana pompa bensin?", "Where is the gas station?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("fun-tian-jai-nar","","Di mana hotel?","Where is the hotel?"," 饭店在哪儿",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Di mana hotel?", "Where is the hotel?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("seu-chang-jai-nar","","Di mana pasar ?","Where is the market?"," 市场在哪儿",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Di mana pasar ?", "Where is the market?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("thing-cher-chang-jai-nar","","Di mana tempat parkir mobil ?","Where is the car rest area?"," 停车场在哪儿",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Di mana tempat parkir mobil ?", "Where is the car rest area?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("jing-char-jwee-jai-nar","","Di mana kantor polisi ?","Where is the police station?"," 警察局在哪儿",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Di mana kantor polisi ?", "Where is the police station?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("jing-char-kung-thing-jai-nar","","Di mana pos polisi ?","Where is the police booth?","警察岗亭在哪儿",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Di mana pos polisi ?", "Where is the police booth?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("hwor-pee-toy-huan-choo-jai-nar","","Di mana tempat tukar uang?","Where is the exchange bureau?"," 货币兑换处在哪儿",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Di mana tempat tukar uang?", "Where is the exchange bureau?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ma-thow-jai-nar","","Di mana dermaga ?","Where is the pier?"," 码头在哪儿",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Di mana dermaga ?", "Where is the pier?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("chang-khoo-jai-nar","","Di mana gudang simpan barang?","Where is the warehouse?"," 仓库在哪儿",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Di mana gudang simpan barang?", "Where is the warehouse?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
     }
 
     public void loadIndonesiaToThai(){
         ArrayList<Child> childList = new ArrayList<Child>();
-        Child child = new Child("ไทย","ไทย","ไทย","ไทย","ไทย",null,null);
+        Child child = new Child("hongnam-pai-thang-nai","","Di mana kamar kecil (toilet) ?","Where is the toilet?","ห้องน้ำไปทางไหน",null,null);
+        child.setSoundPath(-1);
         childList.add(child);
 
-        GroupHeader groupHeader = new GroupHeader("Indonesia","Thai",childList);
+        GroupHeader groupHeader = new GroupHeader("Di mana kamar kecil (toilet) ?", "Where is the toilet?", childList);
         groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("hong-ap-nam-pai-thang-nai","","Di mana kamar mandi ?","Where is the bathroom?","ห้องอาบน้ำไปทางไหน",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Di mana kamar mandi ?", "Where is the bathroom?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ran-ar-han-pai-thang-nai","","Di mana restoran ?","Where is the restaurant?","ร้านอาหารไปทางไหน",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Di mana restoran ?", "Where is the restaurant?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ran-kha-pai-thang-nai","","Di mana toko ?","Where is the shop?","ร้านค้าไปทางไหน",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Di mana toko ?", "Where is the shop?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("au-som-rot-pai-thang-nai","","Di mana bengkel ?","Where is the garage?","อู่ซ่อมรถไปทางไหน",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Di mana bengkel ?", "Where is the garage?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("rong-pha-ya-ban-pai-thang-nai","","Di mana rumah sakit ?","Where is the hospital?","โรงพยาบาลไปทางไหน",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Di mana rumah sakit ?", "Where is the hospital?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("clinic-pai-thang-nai","","Di mana klinik ?","Where is the clinic?","คลินิกไปทางไหน",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Di mana klinik ?", "Where is the clinic?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ran-khai-ya-pai-thang-nai","","Di mana apotek ?","Where is the pharmacy?","ร้านขายยาไปทางไหน",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Di mana apotek ?", "Where is the pharmacy?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("pam-nam-man-pai-thang-nai","","Di mana pompa bensin?","Where is the gas station?","ปั๊มน้ำมันไปทางไหน",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Di mana pompa bensin?", "Where is the gas station?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("rong-raem-pai-thang-nai","","Di mana hotel?","Where is the hotel?","โรงแรมไปทางไหน",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Di mana hotel?", "Where is the hotel?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("talad-pai-thang-nai","","Di mana pasar ?","Where is the market?","ตลาดไปทางไหน",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Di mana pasar ?", "Where is the market?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("chut-phak-rod-pai-thang-nai","","Di mana tempat parkir mobil ?","Where is the car rest area?","จุดพักรถไปทางไหน",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Di mana tempat parkir mobil ?", "Where is the car rest area?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("sa-tha-ni-tam-ruat-pai-thang-nai","","Di mana kantor polisi ?","Where is the police station?","สถานีตำรวจไปทางไหน",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Di mana kantor polisi ?", "Where is the police station?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("pom-tam-ruat-pai-thang-nai","","Di mana pos polisi ?","Where is the police booth?","ป้อมตำรวจไปทางไหน",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Di mana pos polisi ?", "Where is the police booth?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("sa-than-thi-laek-ngoen-ra-wang-pra-thet-pai-thang-nai","","Di mana tempat tukar uang?","Where is the exchange bureau?","สถานที่แลกเงินระหว่างประเทศไปทางไหน",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Di mana tempat tukar uang?", "Where is the exchange bureau?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("tha-ruea-pai-thang-nai","","Di mana dermaga ?","Where is the pier?","ท่าเรือไปทางไหน",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Di mana dermaga ?", "Where is the pier?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ko-dang-phak-sinkha-pai-thang-nai","","Di mana gudang simpan barang?","Where is the warehouse?","โกดังพักสินค้าไปทางไหน",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Di mana gudang simpan barang?", "Where is the warehouse?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
     }
 
     public void loadIndonesiaToBrunei(){
         ArrayList<Child> childList = new ArrayList<Child>();
-        Child child = new Child("ไทย","ไทย","ไทย","ไทย","ไทย",null,null);
+        Child child = new Child("tun-das-ger-ar-rah-ma-na","","Di mana kamar kecil (toilet) ?","Where is the toilet?","Tandas ke arah  mana",null,null);
+        child.setSoundPath(-1);
         childList.add(child);
 
-        GroupHeader groupHeader = new GroupHeader("Indonesia","Brunei",childList);
+        GroupHeader groupHeader = new GroupHeader("Di mana kamar kecil (toilet) ?", "Where is the toilet?", childList);
         groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("bee-lik-mun-dee-ger-ar-rah-ma-na","","Di mana kamar mandi ?","Where is the bathroom?","Bilik mandi  ke arah mana",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Di mana kamar mandi ?", "Where is the bathroom?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("res-to-run-ger-ar-rah-ma-na","","Di mana restoran ?","Where is the restaurant?","Restoran ke arah mana",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Di mana restoran ?", "Where is the restaurant?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ger-dai-ger-ar-rah-ma-na","","Di mana toko ?","Where is the shop?","Kedai ke arah mana",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Di mana toko ?", "Where is the shop?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("beng-gail-ger-ray-ta-ger-ar-rah-ma-na","","Di mana bengkel ?","Where is the garage?","Bengkel kereta ke arah mana",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Di mana bengkel ?", "Where is the garage?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("hos-pi-tal-ger-ar-rah-ma-na","","Di mana rumah sakit ?","Where is the hospital?","Hospital ke arah mana",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Di mana rumah sakit ?", "Where is the hospital?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("glee-nik-ger-ar-rah-ma-na","","Di mana klinik ?","Where is the clinic?","Klinik ke arah mana",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Di mana klinik ?", "Where is the clinic?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ger-dai-oo-bud-ger-ar-rah-ma-na","","Di mana apotek ?","Where is the pharmacy?","Kedai ubat ke arah mana",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Di mana apotek ?", "Where is the pharmacy?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("stay-sen-mee-yuk-ger-ar-rah-ma-na","","Di mana pompa bensin?","Where is the gas station?","Stesen minyak ke arah mana",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Di mana pompa bensin?", "Where is the gas station?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ho-tel-ger-ar-rah-ma-na","","Di mana hotel?","Where is the hotel?","Hotel ke arah mana",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Di mana hotel?", "Where is the hotel?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("pa-sul-ger-ar-rah-ma-na","","Di mana pasar ?","Where is the market?","Pasar ke arah mana",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Di mana pasar ?", "Where is the market?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("term-pud-bern-hern-tee-ger-ray-ta-ger-ar-rah-ma-na","","Di mana tempat parkir mobil ?","Where is the car rest area?","Tempat berhenti kereta ke arah mana",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Di mana tempat parkir mobil ?", "Where is the car rest area?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ba-lai-po-lis-ger-ar-rah-ma-na","","Di mana kantor polisi ?","Where is the police station?","Balai polis ke arah mana",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Di mana kantor polisi ?", "Where is the police station?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("pone-doke-po-lis-ger-ar-rah-ma-na","","Di mana pos polisi ?","Where is the police booth?","Pondok polis ke arah mana",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Di mana pos polisi ?", "Where is the police booth?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ger-dai-per-ngoo-roop-ger-ar-rah-ma-na","","Di mana tempat tukar uang?","Where is the exchange bureau?","Kedai pengurup ke arah mana",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Di mana tempat tukar uang?", "Where is the exchange bureau?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("per-la-boo-hun-ger-ar-rah-ma-na","","Di mana dermaga ?","Where is the pier?","Pelabuhan ke arah mana",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Di mana dermaga ?", "Where is the pier?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("sto/ koo-dung-ba-rung-da-ka-ngun-ger-ar-rah-ma-na","","Di mana gudang simpan barang?","Where is the warehouse?","Stor / Gudang barang dagangan ke arah mana",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Di mana gudang simpan barang?", "Where is the warehouse?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
     }
 
     public void loadIndonesiaToCambodia(){
         ArrayList<Child> childList = new ArrayList<Child>();
-        Child child = new Child("ไทย","ไทย","ไทย","ไทย","ไทย",null,null);
+        Child child = new Child("bon-toop-tuek-tuew-khang-na","","Di mana kamar kecil (toilet) ?","Where is the toilet?","  បន្ទប់ទឹកទៅខាងណា?",null,null);
+        child.setSoundPath(-1);
         childList.add(child);
 
-        GroupHeader groupHeader = new GroupHeader("Indonesia","Cambodia",childList);
+        GroupHeader groupHeader = new GroupHeader("Di mana kamar kecil (toilet) ?", "Where is the toilet?", childList);
         groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("bon-toop-ngood-tuek-tuew -khang-na","","Di mana kamar mandi ?","Where is the bathroom?"," បន្ទប់ងូតទឹកទៅខាងណា?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Di mana kamar mandi ?", "Where is the bathroom?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("hang-bai-tuew-khang-na","","Di mana restoran ?","Where is the restaurant?","ហាងបាយទៅខាងណា?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Di mana restoran ?", "Where is the restaurant?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("hang-luah-dough-tuew-khang-na","","Di mana toko ?","Where is the shop?"," ហាងលក់ដូរទៅខាងណា?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Di mana toko ?", "Where is the shop?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("yian-than-juah-joon-lan-tuew-khang-na","","Di mana bengkel ?","Where is the garage?","មន្ទីរពេទ្យទៅខាងណា?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Di mana bengkel ?", "Where is the garage?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("muan-tee-paed-teuw-khang-na","","Di mana rumah sakit ?","Where is the hospital?","គ្លីនិកទៅខាងណា?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Di mana rumah sakit ?", "Where is the hospital?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("klee-nik-tuew-khang-na","","Di mana klinik ?","Where is the clinic?"," ហ្វាម៉ាស៊ីទៅខាងណា?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Di mana klinik ?", "Where is the clinic?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("fa-ma-see-tuew-khang-na","","Di mana apotek ?","Where is the pharmacy?","ស្ថានីយ៍ប្រេងឥន្ទនៈទៅខាងណា?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Di mana apotek ?", "Where is the pharmacy?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("stha-nee-preng-in-ta-niah- tuew-khang-na","","Di mana pompa bensin?","Where is the gas station?","សណ្ឋាគារទៅខាងណា?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Di mana pompa bensin?", "Where is the gas station?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("son-tha-gia-tuew-khang-na","","Di mana hotel?","Where is the hotel?","ផ្សារទៅខាងណា?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Di mana hotel?", "Where is the hotel?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("psa-tuew-khang-na","","Di mana pasar ?","Where is the market?","កន្លែងឈប់ឡានទៅខាងណា?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Di mana pasar ?", "Where is the market?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("gon-laeng-choop- larn- tuew-khang- na","","Di mana tempat parkir mobil ?","Where is the car rest area?"," ប៉ុស្តិ៍ប៉ូលីសទៅខាងណា?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Di mana tempat parkir mobil ?", "Where is the car rest area?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("poh-po-leas-tuew-khang-na","","Di mana kantor polisi ?","Where is the police station?","កន្លែងប៉ុស្តិ៍យាមប៉ូលីសទៅខាង ណា?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Di mana kantor polisi ?", "Where is the police station?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("gon-laeng-poh-yiam-po-leas-tuew- khang-na","","Di mana pos polisi ?","Where is the police booth?","កន្លែងដូរលុយបរទេសទៅខាងណា?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Di mana pos polisi ?", "Where is the police booth?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("gon-laeng-dough-luy-bor-ra-teh- tuew- khang-na","","Di mana tempat tukar uang?","Where is the exchange bureau?","កំពង់ផែទៅខាងណា?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Di mana tempat tukar uang?", "Where is the exchange bureau?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("gom-puang-phae-tuew-khang-na","","Di mana dermaga ?","Where is the pier?"," ឃ្លាំងសម្រាប់ដាក់ឥវ៉ាន់ទៅខាងណា?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Di mana dermaga ?", "Where is the pier?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("kliang-som-rub-dah-uai-wun-tuew-khang-na","","Di mana gudang simpan barang?","Where is the warehouse?"," ជួយផង ខ្ញុំត្រូវចោរប្លន់",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Di mana gudang simpan barang?", "Where is the warehouse?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
     }
 
     public void loadIndonesiaToIndonesia(){
         ArrayList<Child> childList = new ArrayList<Child>();
-        Child child = new Child("ไทย","ไทย","ไทย","ไทย","ไทย",null,null);
+        Child child = new Child("dee-mar-nar-gar-mar-geu-jeel (toi-let)","","Di mana kamar kecil (toilet) ?","Where is the toilet?","",null,null);
+        child.setSoundPath(-1);
         childList.add(child);
 
-        GroupHeader groupHeader = new GroupHeader("Indonesia","Indonesia",childList);
+        GroupHeader groupHeader = new GroupHeader("Di mana kamar kecil (toilet) ?", "Where is the toilet?", childList);
         groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("dee-mar-nar-gar-mar-man-dee","","Di mana kamar mandi ?","Where is the bathroom?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Di mana kamar mandi ?", "Where is the bathroom?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("dee-mar-nar-res-to-ran","","Di mana restoran ?","Where is the restaurant?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Di mana restoran ?", "Where is the restaurant?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("dee-mar-nar-to-go","","Di mana toko ?","Where is the shop?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Di mana toko ?", "Where is the shop?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("dee-mar-nar beng-kel","","Di mana bengkel ?","Where is the garage?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Di mana bengkel ?", "Where is the garage?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("dee-mar-nar-ru-mah-sar-git","","Di mana rumah sakit ?","Where is the hospital?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Di mana rumah sakit ?", "Where is the hospital?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("dee-mar-nar-glee-nik","","Di mana klinik ?","Where is the clinic?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Di mana klinik ?", "Where is the clinic?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("dee-mar-nar-ar-po-tek","","Di mana apotek ?","Where is the pharmacy?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Di mana apotek ?", "Where is the pharmacy?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("dee-mar-nar-pom-par-ben-sin","","Di mana pompa bensin?","Where is the gas station?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Di mana pompa bensin?", "Where is the gas station?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("dee-mar-nar-ho-tel","","Di mana hotel?","Where is the hotel?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Di mana hotel?", "Where is the hotel?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("dee-mar-nar-par-sar","","Di mana pasar ?","Where is the market?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Di mana pasar ?", "Where is the market?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("dee-mar-nar-teum-pat-par-geer-mo-bil","","Di mana tempat parkir mobil ?","Where is the car rest area?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Di mana tempat parkir mobil ?", "Where is the car rest area?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("dee-mar-nar-gan-to-po-lee-see","","Di mana kantor polisi ?","Where is the police station?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Di mana kantor polisi ?", "Where is the police station?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("dee-mar-nar-pos-po-lee-see","","Di mana pos polisi ?","Where is the police booth?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Di mana pos polisi ?", "Where is the police booth?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("dee-mar-nar-teum-pat-tu-gar-u-wang","","Di mana tempat tukar uang?","Where is the exchange bureau?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Di mana tempat tukar uang?", "Where is the exchange bureau?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("dee-mar-nar-der-mar-kar","","Di mana dermaga ?","Where is the pier?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Di mana dermaga ?", "Where is the pier?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("dee-mar-nar-ku-dang-seem-pan-bar-rang","","Di mana gudang simpan barang?","Where is the warehouse?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Di mana gudang simpan barang?", "Where is the warehouse?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
     }
 
     public void loadIndonesiaToLaos(){
         ArrayList<Child> childList = new ArrayList<Child>();
-        Child child = new Child("ไทย","ไทย","ไทย","ไทย","ไทย",null,null);
+
+        childList = new ArrayList<Child>();
+        child = new Child("hong-num-pai-tharng-dai","","Di mana kamar kecil (toilet) ?","Where is the toilet?"," ຫ້ອງນ້ຳໄປທາງໃດ",null,null);
+        child.setSoundPath(-1);
         childList.add(child);
 
-        GroupHeader groupHeader = new GroupHeader("Indonesia","Laos",childList);
+        groupHeader = new GroupHeader("Di mana kamar kecil (toilet) ?", "Where is the toilet?", childList);
         groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("hong-arb-num-pai-tharng-dai","","Di mana kamar mandi ?","Where is the bathroom?"," ຫ້ອງອາບນ້ຳໄປທາງໃດ",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Di mana kamar mandi ?", "Where is the bathroom?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("harn-ar-harn-pai-tharng-dai","","Di mana restoran ?","Where is the restaurant?"," ຮ້ານອາຫານໄປທາງໃດ",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Di mana restoran ?", "Where is the restaurant?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("harn-kai-khueang-pai-tharng-dai","","Di mana toko ?","Where is the shop?"," ຮ້ານຂາຍເຄື່ອງໄປທາງໃດ",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Di mana toko ?", "Where is the shop?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ga-lar-paeng-load-pai-tharng-dai","","Di mana bengkel ?","Where is the garage?"," ກະລ່າແປງລົດໄປທາງໃດ",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Di mana bengkel ?", "Where is the garage?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("hong-mor-pai-tharng-dai","","Di mana rumah sakit ?","Where is the hospital?"," ໂຮງໝໍໄປທາງໃດ",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Di mana rumah sakit ?", "Where is the hospital?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("klee-nik-pai-tharng-dai","","Di mana klinik ?","Where is the clinic?"," ຄລິນິກໄປທາງໃດ",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Di mana klinik ?", "Where is the clinic?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("harn-khai-ya-pai-tharng-dai","","Di mana apotek ?","Where is the pharmacy?"," ຮ້ານຂາຍຢາໄປທາງໃດ",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Di mana apotek ?", "Where is the pharmacy?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("pum-num-mun-pai-tharng-dai","","Di mana pompa bensin?","Where is the gas station?"," ປ້ຳນ້ຳມັນໄປທາງໃດ",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Di mana pompa bensin?", "Where is the gas station?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("hong-haem-pai-tharng -dai","","Di mana hotel?","Where is the hotel?"," ໂຮງແຮມໄປທາງໃດ",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Di mana hotel?", "Where is the hotel?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ta-lard-pai-tharng -dai","","Di mana pasar ?","Where is the market?"," ຕະຫຼາດໄປທາງໃດ",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Di mana pasar ?", "Where is the market?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("bon-jord-phuk-load- pai-tharng-dai","","Di mana tempat parkir mobil ?","Where is the car rest area?"," ບ່ອນຈອດພັກລົດໄປທາງໃດ",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Di mana tempat parkir mobil ?", "Where is the car rest area?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("sa-ta-nee-tum-luad- pai-tharng-dai","","Di mana kantor polisi ?","Where is the police station?"," ສະຖານີຕຳຫຼວດໄປທາງໃດ",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Di mana kantor polisi ?", "Where is the police station?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("pom-tum-luad- pai-tharng-dai","","Di mana pos polisi ?","Where is the police booth?"," ປ້ອມຕຳຫຼວດໄປທາງໃດ",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Di mana pos polisi ?", "Where is the police booth?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("bon-laek-pian-ngern-ta-lah-wang-pa-thed- pai-tharng-dai","","Di mana tempat tukar uang?","Where is the exchange bureau?"," ບ່ອນແລກປ່ຽນເງິນຕາລະຫວ່າງປະເທດ ໄປທາງໃດ",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Di mana tempat tukar uang?", "Where is the exchange bureau?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("tha-huea- pai-tharng-dai","","Di mana dermaga ?","Where is the pier?"," ທ່າເຮືອໄປທາງໃດ",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Di mana dermaga ?", "Where is the pier?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("hong-mian-sin-kha- pai-tharng-dai","","Di mana gudang simpan barang?","Where is the warehouse?"," ຫ້ອງມ້ຽນສິນຄ້າໄປທາງໃດ",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Di mana gudang simpan barang?", "Where is the warehouse?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
     }
 
 
     public void loadIndonesiaToMalaysia(){
         ArrayList<Child> childList = new ArrayList<Child>();
-        Child child = new Child("ไทย","ไทย","ไทย","ไทย","ไทย",null,null);
+        childList = new ArrayList<Child>();
+        child = new Child("tun-das-ger-ar-rah-ma-na","","Di mana kamar kecil (toilet) ?","Where is the toilet?","Tandas ke arah  mana",null,null);
+        child.setSoundPath(-1);
         childList.add(child);
 
-        GroupHeader groupHeader = new GroupHeader("Indonesia","Malaysia",childList);
+        groupHeader = new GroupHeader("Di mana kamar kecil (toilet) ?", "Where is the toilet?", childList);
         groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("bee-lik-mun-dee-ger-ar-rah-ma-na","","Di mana kamar mandi ?","Where is the bathroom?","Bilik mandi  ke arah mana",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Di mana kamar mandi ?", "Where is the bathroom?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("res-to-run-ger-ar-rah-ma-na","","Di mana restoran ?","Where is the restaurant?","Restoran ke arah mana",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Di mana restoran ?", "Where is the restaurant?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ger-dai-ger-ar-rah-ma-na","","Di mana toko ?","Where is the shop?","Kedai ke arah mana",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Di mana toko ?", "Where is the shop?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("beng-gail-ger-ray-ta-ger-ar-rah-ma-na","","Di mana bengkel ?","Where is the garage?","Bengkel kereta ke arah mana",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Di mana bengkel ?", "Where is the garage?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("hos-pi-tal-ger-ar-rah-ma-na","","Di mana rumah sakit ?","Where is the hospital?","Hospital ke arah mana",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Di mana rumah sakit ?", "Where is the hospital?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("glee-nik-ger-ar-rah-ma-na","","Di mana klinik ?","Where is the clinic?","Klinik ke arah mana",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Di mana klinik ?", "Where is the clinic?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ger-dai-oo-bud-ger-ar-rah-ma-na","","Di mana apotek ?","Where is the pharmacy?","Kedai ubat ke arah mana",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Di mana apotek ?", "Where is the pharmacy?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("stay-sen-mee-yuk-ger-ar-rah-ma-na","","Di mana pompa bensin?","Where is the gas station?","Stesen minyak ke arah mana",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Di mana pompa bensin?", "Where is the gas station?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ho-tel-ger-ar-rah-ma-na","","Di mana hotel?","Where is the hotel?","Hotel ke arah mana",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Di mana hotel?", "Where is the hotel?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("pa-sul-ger-ar-rah-ma-na","","Di mana pasar ?","Where is the market?","Pasar ke arah mana",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Di mana pasar ?", "Where is the market?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("term-pud-bern-hern-tee-ger-ray-ta-ger-ar-rah-ma-na","","Di mana tempat parkir mobil ?","Where is the car rest area?","Tempat berhenti kereta ke arah mana",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Di mana tempat parkir mobil ?", "Where is the car rest area?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ba-lai-po-lis-ger-ar-rah-ma-na","","Di mana kantor polisi ?","Where is the police station?","Balai polis ke arah mana",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Di mana kantor polisi ?", "Where is the police station?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("pone-doke-po-lis-ger-ar-rah-ma-na","","Di mana pos polisi ?","Where is the police booth?","Pondok polis ke arah mana",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Di mana pos polisi ?", "Where is the police booth?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ger-dai-per-ngoo-roop-ger-ar-rah-ma-na","","Di mana tempat tukar uang?","Where is the exchange bureau?","Kedai pengurup ke arah mana",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Di mana tempat tukar uang?", "Where is the exchange bureau?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("per-la-boo-hun-ger-ar-rah-ma-na","","Di mana dermaga ?","Where is the pier?","Pelabuhan ke arah mana",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Di mana dermaga ?", "Where is the pier?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("sto/ koo-dung-ba-rung-da-ka-ngun-ger-ar-rah-ma-na","","Di mana gudang simpan barang?","Where is the warehouse?","Stor / Gudang barang dagangan ke arah mana",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Di mana gudang simpan barang?", "Where is the warehouse?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
     }
 
 
     public void loadIndonesiaToMyanmar(){
         ArrayList<Child> childList = new ArrayList<Child>();
-        Child child = new Child("ไทย","ไทย","ไทย","ไทย","ไทย",null,null);
+        childList = new ArrayList<Child>();
+        child = new Child("eng-ta-bae-ma-shi-lae","","Di mana kamar kecil (toilet) ?","Where is the toilet?","အိမ္သာဘယ္မွာရွိလဲ။",null,null);
+        child.setSoundPath(-1);
         childList.add(child);
 
-        GroupHeader groupHeader = new GroupHeader("Indonesia","Myanmar",childList);
+        groupHeader = new GroupHeader("Di mana kamar kecil (toilet) ?", "Where is the toilet?", childList);
         groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ye-show-kan-bae-ma-shi- lae","","Di mana kamar mandi ?","Where is the bathroom?","ေရခ်ိဳးခန္းဘယ္မွာရွိလဲ။",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Di mana kamar mandi ?", "Where is the bathroom?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("sa-taw-sai-bae-ma-shi- lae","","Di mana restoran ?","Where is the restaurant?","စားေသာက္ဆိုင္ဘယ္မွာရွိလဲ။",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Di mana restoran ?", "Where is the restaurant?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("se-sai-bae-ma-shi-lae","","Di mana toko ?","Where is the shop?","ေစ်းဆိုင္ဘယ္မွာရွိလဲ။",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Di mana toko ?", "Where is the shop?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ka-wa-choh-bae-ma-shi- lae","","Di mana bengkel ?","Where is the garage?","ကား၀ပ္ေရွာ့ဘယ္မွာရွိလဲ။",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Di mana bengkel ?", "Where is the garage?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("se-yong-bae-ma-shi-lae","","Di mana rumah sakit ?","Where is the hospital?","ေဆးရွံဘယ္မွာရွိလဲ။",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Di mana rumah sakit ?", "Where is the hospital?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("se-kan-bae-ma-shi-lae","","Di mana klinik ?","Where is the clinic?","ေဆးခန္းဘယ္မွာရွိလဲ။",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Di mana klinik ?", "Where is the clinic?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("se-sai-bae-ma-shi-lae","","Di mana apotek ?","Where is the pharmacy?","ေဆးဆိုင္ဘယ္မွာရွိလဲ။",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Di mana apotek ?", "Where is the pharmacy?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("dat-see-sai-bae-ma-shi- lae","","Di mana pompa bensin?","Where is the gas station?","ဓာတ္ဆီဆိုင္ဘယ္မွာရွိလဲ။",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Di mana pompa bensin?", "Where is the gas station?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("hoe-tae-bae-ma-shi-lae","","Di mana hotel?","Where is the hotel?","ဟိုတယ္ဘယ္မွာရွိလဲ။",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Di mana hotel?", "Where is the hotel?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("se-bae-ma-shi-lae","","Di mana pasar ?","Where is the market?","ေစ်းဘယ္မွာရွိလဲ။",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Di mana pasar ?", "Where is the market?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ka-yat-daeh-ne-ya-bae-ma-shi-lae","","Di mana tempat parkir mobil ?","Where is the car rest area?","ကားရပ္တဲ့ေနရာဘယ္မွာရွိလဲ။",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Di mana tempat parkir mobil ?", "Where is the car rest area?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("yae-sa-khan-bae-ma-shi- lae","","Di mana kantor polisi ?","Where is the police station?","ရဲစခန္းဘယ္မွာရွိလဲ။",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Di mana kantor polisi ?", "Where is the police station?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("yae-ging-bae-ma-shi-lae","","Di mana pos polisi ?","Where is the police booth?","ရဲကင္းဘယ္မွာရွိလဲ။",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Di mana pos polisi ?", "Where is the police booth?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("na-nai-ngan-ngwe-lae-daeh-ne-ya-bae-ma-shi-lae","","Di mana tempat tukar uang?","Where is the exchange bureau?","ႏွစ္ႏိုင္ငံေငြလဲတဲ့ေနရာဘယ္မွာရွိလဲ။",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Di mana tempat tukar uang?", "Where is the exchange bureau?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("seh-kan-bae-ma-shi-lae","","Di mana dermaga ?","Where is the pier?","ဆိပ္ကမ္းဘယ္မွာရွိလဲ။",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Di mana dermaga ?", "Where is the pier?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("kong -yong -bae -ma -shi -lae","","Di mana gudang simpan barang?","Where is the warehouse?","ကုန္ရံုဘယ္မွာရွိလဲ။",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Di mana gudang simpan barang?", "Where is the warehouse?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
     }
 
     public void loadIndonesiaToPhilippines(){
         ArrayList<Child> childList = new ArrayList<Child>();
-        Child child = new Child("ไทย","ไทย","ไทย","ไทย","ไทย",null,null);
+        childList = new ArrayList<Child>();
+        child = new Child("nar-sar-an-ang-ban-yo","","Di mana kamar kecil (toilet) ?","Where is the toilet?","Nasaan ang banyo?",null,null);
+        child.setSoundPath(-1);
         childList.add(child);
 
-        GroupHeader groupHeader = new GroupHeader("Indonesia","Philippines",childList);
+        groupHeader = new GroupHeader("Di mana kamar kecil (toilet) ?", "Where is the toilet?", childList);
         groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("nar-sar-an-ang-par-li-gu-an","","Di mana kamar mandi ?","Where is the bathroom?","Nasaan ang paliguan?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Di mana kamar mandi ?", "Where is the bathroom?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("nar-sar-an-ang-kar-rin-dey-ri-yar","","Di mana restoran ?","Where is the restaurant?","Nasaan ang carinderiya?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Di mana restoran ?", "Where is the restaurant?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("nar-sar-an-ang-morl","","Di mana toko ?","Where is the shop?","Nasaan ang mall?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Di mana toko ?", "Where is the shop?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("nar-sar-an-ang-gar-rar-hey","","Di mana bengkel ?","Where is the garage?","Nasaan ang garahe?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Di mana bengkel ?", "Where is the garage?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("nar-sar-an-ang-os-pi-tal","","Di mana rumah sakit ?","Where is the hospital?","Nasaan ang ospital?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Di mana rumah sakit ?", "Where is the hospital?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("nar-sar-an-ang-gli-nik","","Di mana klinik ?","Where is the clinic?","Nasaan ang klinik?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Di mana klinik ?", "Where is the clinic?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("nar-sar-an-ang-bo-ti-gar","","Di mana apotek ?","Where is the pharmacy?","Nasaan ang botika?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Di mana apotek ?", "Where is the pharmacy?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("nar-sar-an-ang-gar-so-li-nar-han","","Di mana pompa bensin?","Where is the gas station?","Nasaan ang gasolinahan?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Di mana pompa bensin?", "Where is the gas station?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("nar-sar-an-ang-ho-tel","","Di mana hotel?","Where is the hotel?","Nasaan ang hotel?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Di mana hotel?", "Where is the hotel?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("nar-sar-an-ang-par-leng-gey","","Di mana pasar ?","Where is the market?","Nasaan ang palengke?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Di mana pasar ?", "Where is the market?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("nar-sar-an-ang-hin-tu-an-nang-boos","","Di mana tempat parkir mobil ?","Where is the car rest area?","Nasaan ang hintuan ng bus?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Di mana tempat parkir mobil ?", "Where is the car rest area?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("nar-sar-an-ang-him-pi-lan-nang-pu-lis","","Di mana kantor polisi ?","Where is the police station?","Nasaan ang himpilan ng pulis?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Di mana kantor polisi ?", "Where is the police station?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("nar-sar-an-ang-chek-poit-nang-pu-lis","","Di mana pos polisi ?","Where is the police booth?","Nasaan ang checkpoint ng pulis?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Di mana pos polisi ?", "Where is the police booth?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("nar-sar-an-ang-lu-gar-rar-pang-par-lit-nang-pey-rar","","Di mana tempat tukar uang?","Where is the exchange bureau?","Nasaan ang lugar pang palit ng pera?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Di mana tempat tukar uang?", "Where is the exchange bureau?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("nar-sar-an-ang-pu-ey-rer-to","","Di mana dermaga ?","Where is the pier?","Nasaan ang puerto?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Di mana dermaga ?", "Where is the pier?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("nar-sar-an-ang-bo-dey-gar","","Di mana gudang simpan barang?","Where is the warehouse?","Nasaan ang bodega?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Di mana gudang simpan barang?", "Where is the warehouse?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
     }
 
     public void loadIndonesiaToSingapore(){
         ArrayList<Child> childList = new ArrayList<Child>();
-        Child child = new Child("ไทย","ไทย","ไทย","ไทย","ไทย",null,null);
+        childList = new ArrayList<Child>();
+        child = new Child("ware-is-der-toi-let","","Di mana kamar kecil (toilet) ?","Where is the toilet?","",null,null);
+        child.setSoundPath(-1);
         childList.add(child);
 
-        GroupHeader groupHeader = new GroupHeader("Indonesia","Singapore",childList);
+        groupHeader = new GroupHeader("Di mana kamar kecil (toilet) ?", "Where is the toilet?", childList);
         groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ware -is-der-bat-room","","Di mana kamar mandi ?","Where is the bathroom?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Di mana kamar mandi ?", "Where is the bathroom?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ware -is-der-res-ter-rong","","Di mana restoran ?","Where is the restaurant?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Di mana restoran ?", "Where is the restaurant?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ware-is-der-chop","","Di mana toko ?","Where is the shop?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Di mana toko ?", "Where is the shop?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ware-is-der-gar-rarch","","Di mana bengkel ?","Where is the garage?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Di mana bengkel ?", "Where is the garage?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ware-is-der-hos-pi-tol","","Di mana rumah sakit ?","Where is the hospital?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Di mana rumah sakit ?", "Where is the hospital?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ware-is-der-klee-nik","","Di mana klinik ?","Where is the clinic?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Di mana klinik ?", "Where is the clinic?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ware-is-der-far-mar-see","","Di mana apotek ?","Where is the pharmacy?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Di mana apotek ?", "Where is the pharmacy?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ware-is-der-gas-stey-chan","","Di mana pompa bensin?","Where is the gas station?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Di mana pompa bensin?", "Where is the gas station?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ware-is-der-ho-tel","","Di mana hotel?","Where is the hotel?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Di mana hotel?", "Where is the hotel?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ware-is-der-mar-ket","","Di mana pasar ?","Where is the market?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Di mana pasar ?", "Where is the market?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ware-is-der-kar-res-ae-ria","","Di mana tempat parkir mobil ?","Where is the car rest area?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Di mana tempat parkir mobil ?", "Where is the car rest area?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ware-is-der-po-lis-stey-chan","","Di mana kantor polisi ?","Where is the police station?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Di mana kantor polisi ?", "Where is the police station?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ware-is-der-po-lis-boot","","Di mana pos polisi ?","Where is the police booth?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Di mana pos polisi ?", "Where is the police booth?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ware-is-der-ex-chench-bio-ro","","Di mana tempat tukar uang?","Where is the exchange bureau?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Di mana tempat tukar uang?", "Where is the exchange bureau?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ware-is-der-pia","","Di mana dermaga ?","Where is the pier?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Di mana dermaga ?", "Where is the pier?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ware-is-der- ware-haus","","Di mana gudang simpan barang?","Where is the warehouse?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Di mana gudang simpan barang?", "Where is the warehouse?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
     }
 
     public void loadIndonesiaToVietnam(){
         ArrayList<Child> childList = new ArrayList<Child>();
-        Child child = new Child("ไทย","ไทย","ไทย","ไทย","ไทย",null,null);
+        childList = new ArrayList<Child>();
+        child = new Child("fong-way-sin-dee-loi-now","","Di mana kamar kecil (toilet) ?","Where is the toilet?","phòng vệ sinh đi lối nào",null,null);
+        child.setSoundPath(-1);
         childList.add(child);
 
-        GroupHeader groupHeader = new GroupHeader("Indonesia","Vietnam",childList);
+        groupHeader = new GroupHeader("Di mana kamar kecil (toilet) ?", "Where is the toilet?", childList);
         groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("fong-tum-dee-loi-now","","Di mana kamar mandi ?","Where is the bathroom?","phòng tắm đi lối nào",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Di mana kamar mandi ?", "Where is the bathroom?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("tiam-un-dee-loi-now","","Di mana restoran ?","Where is the restaurant?","tiệm ăn đi lối nào",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Di mana restoran ?", "Where is the restaurant?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("keur-tiam-dee-loi-now","","Di mana toko ?","Where is the shop?","cửa tiệm đi lối nào",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Di mana toko ?", "Where is the shop?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ka-ra-suea-sae-dee-loi-now","","Di mana bengkel ?","Where is the garage?","ga ra sửa xe đi lối nào",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Di mana bengkel ?", "Where is the garage?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("beng-wien-dee-loi-now","","Di mana rumah sakit ?","Where is the hospital?","bệnh viện đi lối nào?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Di mana rumah sakit ?", "Where is the hospital?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("fong-mug-dee-loi-now","","Di mana klinik ?","Where is the clinic?","phòng mạch đi lối nào?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Di mana klinik ?", "Where is the clinic?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("tiam-thuak-tuai-dee-loi-now","","Di mana apotek ?","Where is the pharmacy?","tiệm thuốc  tây đi lối nào?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Di mana apotek ?", "Where is the pharmacy?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("tram-sung-dee-loi-now","","Di mana pompa bensin?","Where is the gas station?","trạm xăng đi lối nào?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Di mana pompa bensin?", "Where is the gas station?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("Khuk-san-dee-loi-now","","Di mana hotel?","Where is the hotel?","khách sạn đi lối nào?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Di mana hotel?", "Where is the hotel?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("joe-dee-loi-now","","Di mana pasar ?","Where is the market?","chợ đi lối nào?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Di mana pasar ?", "Where is the market?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("noei-doe-sae-dee-loi-now","","Di mana tempat parkir mobil ?","Where is the car rest area?","nơi đậu xe đi lối nào?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Di mana tempat parkir mobil ?", "Where is the car rest area?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("don-kong-arn-dee-loi-now","","Di mana kantor polisi ?","Where is the police station?","đồn công an đi lối nào?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Di mana kantor polisi ?", "Where is the police station?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("Tram-kun-sard-dee-loi-now","","Di mana pos polisi ?","Where is the police booth?","trạm cảnh sát đi lối nào?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Di mana pos polisi ?", "Where is the police booth?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("Tram-doi-why-tay-dee-loi-now","","Di mana tempat tukar uang?","Where is the exchange bureau?","trạm đổi ngoại tệ đi lối nào?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Di mana tempat tukar uang?", "Where is the exchange bureau?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ben-toa-dee-loi-now","","Di mana dermaga ?","Where is the pier?","bến tàu đi lối nào?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Di mana dermaga ?", "Where is the pier?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("Khor-true-hang-dee-loi-now","","Di mana gudang simpan barang?","Where is the warehouse?","kho trữ hàng đi lối nào?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Di mana gudang simpan barang?", "Where is the warehouse?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
     }
 
     public void loadLaosToChina(){
         ArrayList<Child> childList = new ArrayList<Child>();
-        Child child = new Child("ไทย","ไทย","ไทย","ไทย","ไทย",null,null);
+        childList = new ArrayList<Child>();
+        child = new Child("see-sow-jian-jai-nar",""," ຫ້ອງນ້ຳໄປທາງໃດ","Where is the toilet?"," 洗手间在哪儿",null,null);
+        child.setSoundPath(-1);
         childList.add(child);
 
-        GroupHeader groupHeader = new GroupHeader("Laos","China",childList);
+        groupHeader = new GroupHeader(" ຫ້ອງນ້ຳໄປທາງໃດ", "Where is the toilet?", childList);
         groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ywii-seu-jai-nar",""," ຫ້ອງອາບນ້ຳໄປທາງໃດ","Where is the bathroom?"," 浴室在哪儿",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ຫ້ອງອາບນ້ຳໄປທາງໃດ", "Where is the bathroom?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("chun-thing-jai-nar",""," ຮ້ານອາຫານໄປທາງໃດ","Where is the restaurant?"," 餐厅在哪儿",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ຮ້ານອາຫານໄປທາງໃດ", "Where is the restaurant?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("sung-tian-jai-nar",""," ຮ້ານຂາຍເຄື່ອງໄປທາງໃດ","Where is the shop?"," 商店在哪儿",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ຮ້ານຂາຍເຄື່ອງໄປທາງໃດ", "Where is the shop?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("siw-cher-hang-jai-nar",""," ກະລ່າແປງລົດໄປທາງໃດ","Where is the garage?"," 修车行在哪儿",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ກະລ່າແປງລົດໄປທາງໃດ", "Where is the garage?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ee-awian-jai-nar",""," ໂຮງໝໍໄປທາງໃດ","Where is the hospital?"," 医院在哪儿",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ໂຮງໝໍໄປທາງໃດ", "Where is the hospital?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("jern-sua-jai-nar",""," ຄລິນິກໄປທາງໃດ","Where is the clinic?"," 诊所在哪儿",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ຄລິນິກໄປທາງໃດ", "Where is the clinic?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("yao-tian-jai-nar",""," ຮ້ານຂາຍຢາໄປທາງໃດ","Where is the pharmacy?"," 药店在哪儿",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ຮ້ານຂາຍຢາໄປທາງໃດ", "Where is the pharmacy?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("jia-yow-jun-jai-nar",""," ປ້ຳນ້ຳມັນໄປທາງໃດ","Where is the gas station?"," 加油站在哪儿",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ປ້ຳນ້ຳມັນໄປທາງໃດ", "Where is the gas station?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("fun-tian-jai-nar",""," ໂຮງແຮມໄປທາງໃດ","Where is the hotel?"," 饭店在哪儿",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ໂຮງແຮມໄປທາງໃດ", "Where is the hotel?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("seu-chang-jai-nar",""," ຕະຫຼາດໄປທາງໃດ","Where is the market?"," 市场在哪儿",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ຕະຫຼາດໄປທາງໃດ", "Where is the market?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("thing-cher-chang-jai-nar",""," ບ່ອນຈອດພັກລົດໄປທາງໃດ","Where is the car rest area?"," 停车场在哪儿",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ບ່ອນຈອດພັກລົດໄປທາງໃດ", "Where is the car rest area?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("jing-char-jwee-jai-nar",""," ສະຖານີຕຳຫຼວດໄປທາງໃດ","Where is the police station?"," 警察局在哪儿",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ສະຖານີຕຳຫຼວດໄປທາງໃດ", "Where is the police station?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("jing-char-kung-thing-jai-nar",""," ປ້ອມຕຳຫຼວດໄປທາງໃດ","Where is the police booth?","警察岗亭在哪儿",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ປ້ອມຕຳຫຼວດໄປທາງໃດ", "Where is the police booth?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("hwor-pee-toy-huan-choo-jai-nar",""," ບ່ອນແລກປ່ຽນເງິນຕາລະຫວ່າງປະເທດ ໄປທາງໃດ","Where is the exchange bureau?"," 货币兑换处在哪儿",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ບ່ອນແລກປ່ຽນເງິນຕາລະຫວ່າງປະເທດ ໄປທາງໃດ", "Where is the exchange bureau?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ma-thow-jai-nar",""," ທ່າເຮືອໄປທາງໃດ","Where is the pier?"," 码头在哪儿",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ທ່າເຮືອໄປທາງໃດ", "Where is the pier?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("chang-khoo-jai-nar",""," ຫ້ອງມ້ຽນສິນຄ້າໄປທາງໃດ","Where is the warehouse?"," 仓库在哪儿",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ຫ້ອງມ້ຽນສິນຄ້າໄປທາງໃດ", "Where is the warehouse?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
     }
 
     public void loadLaosToThai(){
         ArrayList<Child> childList = new ArrayList<Child>();
-        Child child = new Child("ไทย","ไทย","ไทย","ไทย","ไทย",null,null);
+        childList = new ArrayList<Child>();
+        child = new Child("hongnam-pai-thang-nai",""," ຫ້ອງນ້ຳໄປທາງໃດ","Where is the toilet?","ห้องน้ำไปทางไหน",null,null);
+        child.setSoundPath(-1);
         childList.add(child);
 
-        GroupHeader groupHeader = new GroupHeader("Laos","Thai",childList);
+        groupHeader = new GroupHeader(" ຫ້ອງນ້ຳໄປທາງໃດ", "Where is the toilet?", childList);
         groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("hong-ap-nam-pai-thang-nai",""," ຫ້ອງອາບນ້ຳໄປທາງໃດ","Where is the bathroom?","ห้องอาบน้ำไปทางไหน",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ຫ້ອງອາບນ້ຳໄປທາງໃດ", "Where is the bathroom?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ran-ar-han-pai-thang-nai",""," ຮ້ານອາຫານໄປທາງໃດ","Where is the restaurant?","ร้านอาหารไปทางไหน",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ຮ້ານອາຫານໄປທາງໃດ", "Where is the restaurant?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ran-kha-pai-thang-nai",""," ຮ້ານຂາຍເຄື່ອງໄປທາງໃດ","Where is the shop?","ร้านค้าไปทางไหน",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ຮ້ານຂາຍເຄື່ອງໄປທາງໃດ", "Where is the shop?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("au-som-rot-pai-thang-nai",""," ກະລ່າແປງລົດໄປທາງໃດ","Where is the garage?","อู่ซ่อมรถไปทางไหน",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ກະລ່າແປງລົດໄປທາງໃດ", "Where is the garage?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("rong-pha-ya-ban-pai-thang-nai",""," ໂຮງໝໍໄປທາງໃດ","Where is the hospital?","โรงพยาบาลไปทางไหน",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ໂຮງໝໍໄປທາງໃດ", "Where is the hospital?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("clinic-pai-thang-nai",""," ຄລິນິກໄປທາງໃດ","Where is the clinic?","คลินิกไปทางไหน",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ຄລິນິກໄປທາງໃດ", "Where is the clinic?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ran-khai-ya-pai-thang-nai",""," ຮ້ານຂາຍຢາໄປທາງໃດ","Where is the pharmacy?","ร้านขายยาไปทางไหน",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ຮ້ານຂາຍຢາໄປທາງໃດ", "Where is the pharmacy?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("pam-nam-man-pai-thang-nai",""," ປ້ຳນ້ຳມັນໄປທາງໃດ","Where is the gas station?","ปั๊มน้ำมันไปทางไหน",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ປ້ຳນ້ຳມັນໄປທາງໃດ", "Where is the gas station?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("rong-raem-pai-thang-nai",""," ໂຮງແຮມໄປທາງໃດ","Where is the hotel?","โรงแรมไปทางไหน",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ໂຮງແຮມໄປທາງໃດ", "Where is the hotel?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("talad-pai-thang-nai",""," ຕະຫຼາດໄປທາງໃດ","Where is the market?","ตลาดไปทางไหน",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ຕະຫຼາດໄປທາງໃດ", "Where is the market?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("chut-phak-rod-pai-thang-nai",""," ບ່ອນຈອດພັກລົດໄປທາງໃດ","Where is the car rest area?","จุดพักรถไปทางไหน",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ບ່ອນຈອດພັກລົດໄປທາງໃດ", "Where is the car rest area?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("sa-tha-ni-tam-ruat-pai-thang-nai",""," ສະຖານີຕຳຫຼວດໄປທາງໃດ","Where is the police station?","สถานีตำรวจไปทางไหน",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ສະຖານີຕຳຫຼວດໄປທາງໃດ", "Where is the police station?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("pom-tam-ruat-pai-thang-nai",""," ປ້ອມຕຳຫຼວດໄປທາງໃດ","Where is the police booth?","ป้อมตำรวจไปทางไหน",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ປ້ອມຕຳຫຼວດໄປທາງໃດ", "Where is the police booth?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("sa-than-thi-laek-ngoen-ra-wang-pra-thet-pai-thang-nai",""," ບ່ອນແລກປ່ຽນເງິນຕາລະຫວ່າງປະເທດ ໄປທາງໃດ","Where is the exchange bureau?","สถานที่แลกเงินระหว่างประเทศไปทางไหน",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ບ່ອນແລກປ່ຽນເງິນຕາລະຫວ່າງປະເທດ ໄປທາງໃດ", "Where is the exchange bureau?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("tha-ruea-pai-thang-nai",""," ທ່າເຮືອໄປທາງໃດ","Where is the pier?","ท่าเรือไปทางไหน",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ທ່າເຮືອໄປທາງໃດ", "Where is the pier?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ko-dang-phak-sinkha-pai-thang-nai",""," ຫ້ອງມ້ຽນສິນຄ້າໄປທາງໃດ","Where is the warehouse?","โกดังพักสินค้าไปทางไหน",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ຫ້ອງມ້ຽນສິນຄ້າໄປທາງໃດ", "Where is the warehouse?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
     }
 
     public void loadLaosToBrunei(){
         ArrayList<Child> childList = new ArrayList<Child>();
-        Child child = new Child("ไทย","ไทย","ไทย","ไทย","ไทย",null,null);
+        childList = new ArrayList<Child>();
+        child = new Child("tun-das-ger-ar-rah-ma-na",""," ຫ້ອງນ້ຳໄປທາງໃດ","Where is the toilet?","Tandas ke arah  mana",null,null);
+        child.setSoundPath(-1);
         childList.add(child);
 
-        GroupHeader groupHeader = new GroupHeader("Laos","Thai",childList);
+        groupHeader = new GroupHeader(" ຫ້ອງນ້ຳໄປທາງໃດ", "Where is the toilet?", childList);
         groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("bee-lik-mun-dee-ger-ar-rah-ma-na",""," ຫ້ອງອາບນ້ຳໄປທາງໃດ","Where is the bathroom?","Bilik mandi  ke arah mana",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ຫ້ອງອາບນ້ຳໄປທາງໃດ", "Where is the bathroom?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("res-to-run-ger-ar-rah-ma-na",""," ຮ້ານອາຫານໄປທາງໃດ","Where is the restaurant?","Restoran ke arah mana",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ຮ້ານອາຫານໄປທາງໃດ", "Where is the restaurant?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ger-dai-ger-ar-rah-ma-na",""," ຮ້ານຂາຍເຄື່ອງໄປທາງໃດ","Where is the shop?","Kedai ke arah mana",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ຮ້ານຂາຍເຄື່ອງໄປທາງໃດ", "Where is the shop?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("beng-gail-ger-ray-ta-ger-ar-rah-ma-na",""," ກະລ່າແປງລົດໄປທາງໃດ","Where is the garage?","Bengkel kereta ke arah mana",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ກະລ່າແປງລົດໄປທາງໃດ", "Where is the garage?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("hos-pi-tal-ger-ar-rah-ma-na",""," ໂຮງໝໍໄປທາງໃດ","Where is the hospital?","Hospital ke arah mana",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ໂຮງໝໍໄປທາງໃດ", "Where is the hospital?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("glee-nik-ger-ar-rah-ma-na",""," ຄລິນິກໄປທາງໃດ","Where is the clinic?","Klinik ke arah mana",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ຄລິນິກໄປທາງໃດ", "Where is the clinic?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ger-dai-oo-bud-ger-ar-rah-ma-na",""," ຮ້ານຂາຍຢາໄປທາງໃດ","Where is the pharmacy?","Kedai ubat ke arah mana",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ຮ້ານຂາຍຢາໄປທາງໃດ", "Where is the pharmacy?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("stay-sen-mee-yuk-ger-ar-rah-ma-na",""," ປ້ຳນ້ຳມັນໄປທາງໃດ","Where is the gas station?","Stesen minyak ke arah mana",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ປ້ຳນ້ຳມັນໄປທາງໃດ", "Where is the gas station?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ho-tel-ger-ar-rah-ma-na",""," ໂຮງແຮມໄປທາງໃດ","Where is the hotel?","Hotel ke arah mana",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ໂຮງແຮມໄປທາງໃດ", "Where is the hotel?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("pa-sul-ger-ar-rah-ma-na",""," ຕະຫຼາດໄປທາງໃດ","Where is the market?","Pasar ke arah mana",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ຕະຫຼາດໄປທາງໃດ", "Where is the market?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("term-pud-bern-hern-tee-ger-ray-ta-ger-ar-rah-ma-na",""," ບ່ອນຈອດພັກລົດໄປທາງໃດ","Where is the car rest area?","Tempat berhenti kereta ke arah mana",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ບ່ອນຈອດພັກລົດໄປທາງໃດ", "Where is the car rest area?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ba-lai-po-lis-ger-ar-rah-ma-na",""," ສະຖານີຕຳຫຼວດໄປທາງໃດ","Where is the police station?","Balai polis ke arah mana",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ສະຖານີຕຳຫຼວດໄປທາງໃດ", "Where is the police station?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("pone-doke-po-lis-ger-ar-rah-ma-na",""," ປ້ອມຕຳຫຼວດໄປທາງໃດ","Where is the police booth?","Pondok polis ke arah mana",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ປ້ອມຕຳຫຼວດໄປທາງໃດ", "Where is the police booth?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ger-dai-per-ngoo-roop-ger-ar-rah-ma-na",""," ບ່ອນແລກປ່ຽນເງິນຕາລະຫວ່າງປະເທດ ໄປທາງໃດ","Where is the exchange bureau?","Kedai pengurup ke arah mana",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ບ່ອນແລກປ່ຽນເງິນຕາລະຫວ່າງປະເທດ ໄປທາງໃດ", "Where is the exchange bureau?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("per-la-boo-hun-ger-ar-rah-ma-na",""," ທ່າເຮືອໄປທາງໃດ","Where is the pier?","Pelabuhan ke arah mana",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ທ່າເຮືອໄປທາງໃດ", "Where is the pier?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("sto/ koo-dung-ba-rung-da-ka-ngun-ger-ar-rah-ma-na",""," ຫ້ອງມ້ຽນສິນຄ້າໄປທາງໃດ","Where is the warehouse?","Stor / Gudang barang dagangan ke arah mana",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ຫ້ອງມ້ຽນສິນຄ້າໄປທາງໃດ", "Where is the warehouse?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
     }
 
     public void loadLaosToCambodia(){
         ArrayList<Child> childList = new ArrayList<Child>();
-        Child child = new Child("ไทย","ไทย","ไทย","ไทย","ไทย",null,null);
+        childList = new ArrayList<Child>();
+        child = new Child("bon-toop-tuek-tuew-khang-na",""," ຫ້ອງນ້ຳໄປທາງໃດ","Where is the toilet?","  បន្ទប់ទឹកទៅខាងណា?",null,null);
+        child.setSoundPath(-1);
         childList.add(child);
 
-        GroupHeader groupHeader = new GroupHeader("Laos","Cambodia",childList);
+        groupHeader = new GroupHeader(" ຫ້ອງນ້ຳໄປທາງໃດ", "Where is the toilet?", childList);
         groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("bon-toop-ngood-tuek-tuew -khang-na",""," ຫ້ອງອາບນ້ຳໄປທາງໃດ","Where is the bathroom?"," បន្ទប់ងូតទឹកទៅខាងណា?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ຫ້ອງອາບນ້ຳໄປທາງໃດ", "Where is the bathroom?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("hang-bai-tuew-khang-na",""," ຮ້ານອາຫານໄປທາງໃດ","Where is the restaurant?","ហាងបាយទៅខាងណា?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ຮ້ານອາຫານໄປທາງໃດ", "Where is the restaurant?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("hang-luah-dough-tuew-khang-na",""," ຮ້ານຂາຍເຄື່ອງໄປທາງໃດ","Where is the shop?"," ហាងលក់ដូរទៅខាងណា?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ຮ້ານຂາຍເຄື່ອງໄປທາງໃດ", "Where is the shop?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("yian-than-juah-joon-lan-tuew-khang-na",""," ກະລ່າແປງລົດໄປທາງໃດ","Where is the garage?","មន្ទីរពេទ្យទៅខាងណា?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ກະລ່າແປງລົດໄປທາງໃດ", "Where is the garage?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("muan-tee-paed-teuw-khang-na",""," ໂຮງໝໍໄປທາງໃດ","Where is the hospital?","គ្លីនិកទៅខាងណា?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ໂຮງໝໍໄປທາງໃດ", "Where is the hospital?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("klee-nik-tuew-khang-na",""," ຄລິນິກໄປທາງໃດ","Where is the clinic?"," ហ្វាម៉ាស៊ីទៅខាងណា?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ຄລິນິກໄປທາງໃດ", "Where is the clinic?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("fa-ma-see-tuew-khang-na",""," ຮ້ານຂາຍຢາໄປທາງໃດ","Where is the pharmacy?","ស្ថានីយ៍ប្រេងឥន្ទនៈទៅខាងណា?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ຮ້ານຂາຍຢາໄປທາງໃດ", "Where is the pharmacy?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("stha-nee-preng-in-ta-niah- tuew-khang-na",""," ປ້ຳນ້ຳມັນໄປທາງໃດ","Where is the gas station?","សណ្ឋាគារទៅខាងណា?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ປ້ຳນ້ຳມັນໄປທາງໃດ", "Where is the gas station?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("son-tha-gia-tuew-khang-na",""," ໂຮງແຮມໄປທາງໃດ","Where is the hotel?","ផ្សារទៅខាងណា?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ໂຮງແຮມໄປທາງໃດ", "Where is the hotel?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("psa-tuew-khang-na",""," ຕະຫຼາດໄປທາງໃດ","Where is the market?","កន្លែងឈប់ឡានទៅខាងណា?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ຕະຫຼາດໄປທາງໃດ", "Where is the market?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("gon-laeng-choop- larn- tuew-khang- na",""," ບ່ອນຈອດພັກລົດໄປທາງໃດ","Where is the car rest area?"," ប៉ុស្តិ៍ប៉ូលីសទៅខាងណា?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ບ່ອນຈອດພັກລົດໄປທາງໃດ", "Where is the car rest area?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("poh-po-leas-tuew-khang-na",""," ສະຖານີຕຳຫຼວດໄປທາງໃດ","Where is the police station?","កន្លែងប៉ុស្តិ៍យាមប៉ូលីសទៅខាង ណា?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ສະຖານີຕຳຫຼວດໄປທາງໃດ", "Where is the police station?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("gon-laeng-poh-yiam-po-leas-tuew- khang-na",""," ປ້ອມຕຳຫຼວດໄປທາງໃດ","Where is the police booth?","កន្លែងដូរលុយបរទេសទៅខាងណា?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ປ້ອມຕຳຫຼວດໄປທາງໃດ", "Where is the police booth?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("gon-laeng-dough-luy-bor-ra-teh- tuew- khang-na",""," ບ່ອນແລກປ່ຽນເງິນຕາລະຫວ່າງປະເທດ ໄປທາງໃດ","Where is the exchange bureau?","កំពង់ផែទៅខាងណា?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ບ່ອນແລກປ່ຽນເງິນຕາລະຫວ່າງປະເທດ ໄປທາງໃດ", "Where is the exchange bureau?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("gom-puang-phae-tuew-khang-na",""," ທ່າເຮືອໄປທາງໃດ","Where is the pier?"," ឃ្លាំងសម្រាប់ដាក់ឥវ៉ាន់ទៅខាងណា?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ທ່າເຮືອໄປທາງໃດ", "Where is the pier?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("kliang-som-rub-dah-uai-wun-tuew-khang-na",""," ຫ້ອງມ້ຽນສິນຄ້າໄປທາງໃດ","Where is the warehouse?"," ជួយផង ខ្ញុំត្រូវចោរប្លន់",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ຫ້ອງມ້ຽນສິນຄ້າໄປທາງໃດ", "Where is the warehouse?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
     }
 
     public void loadLaosToIndonesia(){
         ArrayList<Child> childList = new ArrayList<Child>();
-        Child child = new Child("ไทย","ไทย","ไทย","ไทย","ไทย",null,null);
+        childList = new ArrayList<Child>();
+        child = new Child("dee-mar-nar-gar-mar-geu-jeel (toi-let)",""," ຫ້ອງນ້ຳໄປທາງໃດ","Where is the toilet?","Di mana kamar kecil (toilet) ?",null,null);
+        child.setSoundPath(-1);
         childList.add(child);
 
-        GroupHeader groupHeader = new GroupHeader("Laos","Indonesia",childList);
+        groupHeader = new GroupHeader(" ຫ້ອງນ້ຳໄປທາງໃດ", "Where is the toilet?", childList);
         groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("dee-mar-nar-gar-mar-man-dee",""," ຫ້ອງອາບນ້ຳໄປທາງໃດ","Where is the bathroom?","Di mana kamar mandi ?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ຫ້ອງອາບນ້ຳໄປທາງໃດ", "Where is the bathroom?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("dee-mar-nar-res-to-ran",""," ຮ້ານອາຫານໄປທາງໃດ","Where is the restaurant?","Di mana restoran ?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ຮ້ານອາຫານໄປທາງໃດ", "Where is the restaurant?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("dee-mar-nar-to-go",""," ຮ້ານຂາຍເຄື່ອງໄປທາງໃດ","Where is the shop?","Di mana toko ?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ຮ້ານຂາຍເຄື່ອງໄປທາງໃດ", "Where is the shop?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("dee-mar-nar beng-kel",""," ກະລ່າແປງລົດໄປທາງໃດ","Where is the garage?","Di mana bengkel ?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ກະລ່າແປງລົດໄປທາງໃດ", "Where is the garage?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("dee-mar-nar-ru-mah-sar-git",""," ໂຮງໝໍໄປທາງໃດ","Where is the hospital?","Di mana rumah sakit ?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ໂຮງໝໍໄປທາງໃດ", "Where is the hospital?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("dee-mar-nar-glee-nik",""," ຄລິນິກໄປທາງໃດ","Where is the clinic?","Di mana klinik ?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ຄລິນິກໄປທາງໃດ", "Where is the clinic?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("dee-mar-nar-ar-po-tek",""," ຮ້ານຂາຍຢາໄປທາງໃດ","Where is the pharmacy?","Di mana apotek ?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ຮ້ານຂາຍຢາໄປທາງໃດ", "Where is the pharmacy?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("dee-mar-nar-pom-par-ben-sin",""," ປ້ຳນ້ຳມັນໄປທາງໃດ","Where is the gas station?","Di mana pompa bensin?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ປ້ຳນ້ຳມັນໄປທາງໃດ", "Where is the gas station?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("dee-mar-nar-ho-tel",""," ໂຮງແຮມໄປທາງໃດ","Where is the hotel?","Di mana hotel?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ໂຮງແຮມໄປທາງໃດ", "Where is the hotel?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("dee-mar-nar-par-sar",""," ຕະຫຼາດໄປທາງໃດ","Where is the market?","Di mana pasar ?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ຕະຫຼາດໄປທາງໃດ", "Where is the market?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("dee-mar-nar-teum-pat-par-geer-mo-bil",""," ບ່ອນຈອດພັກລົດໄປທາງໃດ","Where is the car rest area?","Di mana tempat parkir mobil ?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ບ່ອນຈອດພັກລົດໄປທາງໃດ", "Where is the car rest area?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("dee-mar-nar-gan-to-po-lee-see",""," ສະຖານີຕຳຫຼວດໄປທາງໃດ","Where is the police station?","Di mana kantor polisi ?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ສະຖານີຕຳຫຼວດໄປທາງໃດ", "Where is the police station?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("dee-mar-nar-pos-po-lee-see",""," ປ້ອມຕຳຫຼວດໄປທາງໃດ","Where is the police booth?","Di mana pos polisi ?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ປ້ອມຕຳຫຼວດໄປທາງໃດ", "Where is the police booth?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("dee-mar-nar-teum-pat-tu-gar-u-wang",""," ບ່ອນແລກປ່ຽນເງິນຕາລະຫວ່າງປະເທດ ໄປທາງໃດ","Where is the exchange bureau?","Di mana tempat tukar uang?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ບ່ອນແລກປ່ຽນເງິນຕາລະຫວ່າງປະເທດ ໄປທາງໃດ", "Where is the exchange bureau?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("dee-mar-nar-der-mar-kar",""," ທ່າເຮືອໄປທາງໃດ","Where is the pier?","Di mana dermaga ?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ທ່າເຮືອໄປທາງໃດ", "Where is the pier?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("dee-mar-nar-ku-dang-seem-pan-bar-rang",""," ຫ້ອງມ້ຽນສິນຄ້າໄປທາງໃດ","Where is the warehouse?","Di mana gudang simpan barang?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ຫ້ອງມ້ຽນສິນຄ້າໄປທາງໃດ", "Where is the warehouse?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
     }
 
     public void loadLaosToLaos(){
@@ -4878,226 +6973,3501 @@ public class PlaceDAL {
 
     public void loadLaosToMalaysia(){
         ArrayList<Child> childList = new ArrayList<Child>();
-        Child child = new Child("ไทย","ไทย","ไทย","ไทย","ไทย",null,null);
+        childList = new ArrayList<Child>();
+        child = new Child("tun-das-ger-ar-rah-ma-na",""," ຫ້ອງນ້ຳໄປທາງໃດ","Where is the toilet?","Tandas ke arah  mana",null,null);
+        child.setSoundPath(-1);
         childList.add(child);
 
-        GroupHeader groupHeader = new GroupHeader("Laos","Malaysia",childList);
+        groupHeader = new GroupHeader(" ຫ້ອງນ້ຳໄປທາງໃດ", "Where is the toilet?", childList);
         groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("bee-lik-mun-dee-ger-ar-rah-ma-na",""," ຫ້ອງອາບນ້ຳໄປທາງໃດ","Where is the bathroom?","Bilik mandi  ke arah mana",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ຫ້ອງອາບນ້ຳໄປທາງໃດ", "Where is the bathroom?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("res-to-run-ger-ar-rah-ma-na",""," ຮ້ານອາຫານໄປທາງໃດ","Where is the restaurant?","Restoran ke arah mana",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ຮ້ານອາຫານໄປທາງໃດ", "Where is the restaurant?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ger-dai-ger-ar-rah-ma-na",""," ຮ້ານຂາຍເຄື່ອງໄປທາງໃດ","Where is the shop?","Kedai ke arah mana",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ຮ້ານຂາຍເຄື່ອງໄປທາງໃດ", "Where is the shop?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("beng-gail-ger-ray-ta-ger-ar-rah-ma-na",""," ກະລ່າແປງລົດໄປທາງໃດ","Where is the garage?","Bengkel kereta ke arah mana",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ກະລ່າແປງລົດໄປທາງໃດ", "Where is the garage?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("hos-pi-tal-ger-ar-rah-ma-na",""," ໂຮງໝໍໄປທາງໃດ","Where is the hospital?","Hospital ke arah mana",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ໂຮງໝໍໄປທາງໃດ", "Where is the hospital?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("glee-nik-ger-ar-rah-ma-na",""," ຄລິນິກໄປທາງໃດ","Where is the clinic?","Klinik ke arah mana",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ຄລິນິກໄປທາງໃດ", "Where is the clinic?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ger-dai-oo-bud-ger-ar-rah-ma-na",""," ຮ້ານຂາຍຢາໄປທາງໃດ","Where is the pharmacy?","Kedai ubat ke arah mana",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ຮ້ານຂາຍຢາໄປທາງໃດ", "Where is the pharmacy?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("stay-sen-mee-yuk-ger-ar-rah-ma-na",""," ປ້ຳນ້ຳມັນໄປທາງໃດ","Where is the gas station?","Stesen minyak ke arah mana",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ປ້ຳນ້ຳມັນໄປທາງໃດ", "Where is the gas station?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ho-tel-ger-ar-rah-ma-na",""," ໂຮງແຮມໄປທາງໃດ","Where is the hotel?","Hotel ke arah mana",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ໂຮງແຮມໄປທາງໃດ", "Where is the hotel?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("pa-sul-ger-ar-rah-ma-na",""," ຕະຫຼາດໄປທາງໃດ","Where is the market?","Pasar ke arah mana",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ຕະຫຼາດໄປທາງໃດ", "Where is the market?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("term-pud-bern-hern-tee-ger-ray-ta-ger-ar-rah-ma-na",""," ບ່ອນຈອດພັກລົດໄປທາງໃດ","Where is the car rest area?","Tempat berhenti kereta ke arah mana",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ບ່ອນຈອດພັກລົດໄປທາງໃດ", "Where is the car rest area?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ba-lai-po-lis-ger-ar-rah-ma-na",""," ສະຖານີຕຳຫຼວດໄປທາງໃດ","Where is the police station?","Balai polis ke arah mana",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ສະຖານີຕຳຫຼວດໄປທາງໃດ", "Where is the police station?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("pone-doke-po-lis-ger-ar-rah-ma-na",""," ປ້ອມຕຳຫຼວດໄປທາງໃດ","Where is the police booth?","Pondok polis ke arah mana",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ປ້ອມຕຳຫຼວດໄປທາງໃດ", "Where is the police booth?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ger-dai-per-ngoo-roop-ger-ar-rah-ma-na",""," ບ່ອນແລກປ່ຽນເງິນຕາລະຫວ່າງປະເທດ ໄປທາງໃດ","Where is the exchange bureau?","Kedai pengurup ke arah mana",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ບ່ອນແລກປ່ຽນເງິນຕາລະຫວ່າງປະເທດ ໄປທາງໃດ", "Where is the exchange bureau?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("per-la-boo-hun-ger-ar-rah-ma-na",""," ທ່າເຮືອໄປທາງໃດ","Where is the pier?","Pelabuhan ke arah mana",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ທ່າເຮືອໄປທາງໃດ", "Where is the pier?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("sto/ koo-dung-ba-rung-da-ka-ngun-ger-ar-rah-ma-na",""," ຫ້ອງມ້ຽນສິນຄ້າໄປທາງໃດ","Where is the warehouse?","Stor / Gudang barang dagangan ke arah mana",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ຫ້ອງມ້ຽນສິນຄ້າໄປທາງໃດ", "Where is the warehouse?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
     }
 
     public void loadLaosToMyanmar(){
         ArrayList<Child> childList = new ArrayList<Child>();
-        Child child = new Child("ไทย","ไทย","ไทย","ไทย","ไทย",null,null);
+        childList = new ArrayList<Child>();
+        child = new Child("eng-ta-bae-ma-shi-lae",""," ຫ້ອງນ້ຳໄປທາງໃດ","Where is the toilet?","အိမ္သာဘယ္မွာရွိလဲ။",null,null);
+        child.setSoundPath(-1);
         childList.add(child);
 
-        GroupHeader groupHeader = new GroupHeader("Laos","Myanmar",childList);
+        groupHeader = new GroupHeader(" ຫ້ອງນ້ຳໄປທາງໃດ", "Where is the toilet?", childList);
         groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ye-show-kan-bae-ma-shi- lae",""," ຫ້ອງອາບນ້ຳໄປທາງໃດ","Where is the bathroom?","ေရခ်ိဳးခန္းဘယ္မွာရွိလဲ။",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ຫ້ອງອາບນ້ຳໄປທາງໃດ", "Where is the bathroom?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("sa-taw-sai-bae-ma-shi- lae",""," ຮ້ານອາຫານໄປທາງໃດ","Where is the restaurant?","စားေသာက္ဆိုင္ဘယ္မွာရွိလဲ။",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ຮ້ານອາຫານໄປທາງໃດ", "Where is the restaurant?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("se-sai-bae-ma-shi-lae",""," ຮ້ານຂາຍເຄື່ອງໄປທາງໃດ","Where is the shop?","ေစ်းဆိုင္ဘယ္မွာရွိလဲ။",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ຮ້ານຂາຍເຄື່ອງໄປທາງໃດ", "Where is the shop?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ka-wa-choh-bae-ma-shi- lae",""," ກະລ່າແປງລົດໄປທາງໃດ","Where is the garage?","ကား၀ပ္ေရွာ့ဘယ္မွာရွိလဲ။",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ກະລ່າແປງລົດໄປທາງໃດ", "Where is the garage?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("se-yong-bae-ma-shi-lae",""," ໂຮງໝໍໄປທາງໃດ","Where is the hospital?","ေဆးရွံဘယ္မွာရွိလဲ။",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ໂຮງໝໍໄປທາງໃດ", "Where is the hospital?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("se-kan-bae-ma-shi-lae",""," ຄລິນິກໄປທາງໃດ","Where is the clinic?","ေဆးခန္းဘယ္မွာရွိလဲ။",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ຄລິນິກໄປທາງໃດ", "Where is the clinic?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("se-sai-bae-ma-shi-lae",""," ຮ້ານຂາຍຢາໄປທາງໃດ","Where is the pharmacy?","ေဆးဆိုင္ဘယ္မွာရွိလဲ။",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ຮ້ານຂາຍຢາໄປທາງໃດ", "Where is the pharmacy?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("dat-see-sai-bae-ma-shi- lae",""," ປ້ຳນ້ຳມັນໄປທາງໃດ","Where is the gas station?","ဓာတ္ဆီဆိုင္ဘယ္မွာရွိလဲ။",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ປ້ຳນ້ຳມັນໄປທາງໃດ", "Where is the gas station?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("hoe-tae-bae-ma-shi-lae",""," ໂຮງແຮມໄປທາງໃດ","Where is the hotel?","ဟိုတယ္ဘယ္မွာရွိလဲ။",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ໂຮງແຮມໄປທາງໃດ", "Where is the hotel?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("se-bae-ma-shi-lae",""," ຕະຫຼາດໄປທາງໃດ","Where is the market?","ေစ်းဘယ္မွာရွိလဲ။",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ຕະຫຼາດໄປທາງໃດ", "Where is the market?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ka-yat-daeh-ne-ya-bae-ma-shi-lae",""," ບ່ອນຈອດພັກລົດໄປທາງໃດ","Where is the car rest area?","ကားရပ္တဲ့ေနရာဘယ္မွာရွိလဲ။",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ບ່ອນຈອດພັກລົດໄປທາງໃດ", "Where is the car rest area?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("yae-sa-khan-bae-ma-shi- lae",""," ສະຖານີຕຳຫຼວດໄປທາງໃດ","Where is the police station?","ရဲစခန္းဘယ္မွာရွိလဲ။",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ສະຖານີຕຳຫຼວດໄປທາງໃດ", "Where is the police station?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("yae-ging-bae-ma-shi-lae",""," ປ້ອມຕຳຫຼວດໄປທາງໃດ","Where is the police booth?","ရဲကင္းဘယ္မွာရွိလဲ။",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ປ້ອມຕຳຫຼວດໄປທາງໃດ", "Where is the police booth?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("na-nai-ngan-ngwe-lae-daeh-ne-ya-bae-ma-shi-lae",""," ບ່ອນແລກປ່ຽນເງິນຕາລະຫວ່າງປະເທດ ໄປທາງໃດ","Where is the exchange bureau?","ႏွစ္ႏိုင္ငံေငြလဲတဲ့ေနရာဘယ္မွာရွိလဲ။",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ບ່ອນແລກປ່ຽນເງິນຕາລະຫວ່າງປະເທດ ໄປທາງໃດ", "Where is the exchange bureau?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("seh-kan-bae-ma-shi-lae",""," ທ່າເຮືອໄປທາງໃດ","Where is the pier?","ဆိပ္ကမ္းဘယ္မွာရွိလဲ။",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ທ່າເຮືອໄປທາງໃດ", "Where is the pier?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("kong -yong -bae -ma -shi -lae",""," ຫ້ອງມ້ຽນສິນຄ້າໄປທາງໃດ","Where is the warehouse?","ကုန္ရံုဘယ္မွာရွိလဲ။",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ຫ້ອງມ້ຽນສິນຄ້າໄປທາງໃດ", "Where is the warehouse?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
     }
 
     public void loadLaosToPhilippines(){
         ArrayList<Child> childList = new ArrayList<Child>();
-        Child child = new Child("ไทย","ไทย","ไทย","ไทย","ไทย",null,null);
+        childList = new ArrayList<Child>();
+        child = new Child("nar-sar-an-ang-ban-yo",""," ຫ້ອງນ້ຳໄປທາງໃດ","Where is the toilet?","Nasaan ang banyo?",null,null);
+        child.setSoundPath(-1);
         childList.add(child);
 
-        GroupHeader groupHeader = new GroupHeader("Laos","Philippines",childList);
+        groupHeader = new GroupHeader(" ຫ້ອງນ້ຳໄປທາງໃດ", "Where is the toilet?", childList);
         groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("nar-sar-an-ang-par-li-gu-an",""," ຫ້ອງອາບນ້ຳໄປທາງໃດ","Where is the bathroom?","Nasaan ang paliguan?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ຫ້ອງອາບນ້ຳໄປທາງໃດ", "Where is the bathroom?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("nar-sar-an-ang-kar-rin-dey-ri-yar",""," ຮ້ານອາຫານໄປທາງໃດ","Where is the restaurant?","Nasaan ang carinderiya?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ຮ້ານອາຫານໄປທາງໃດ", "Where is the restaurant?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("nar-sar-an-ang-morl",""," ຮ້ານຂາຍເຄື່ອງໄປທາງໃດ","Where is the shop?","Nasaan ang mall?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ຮ້ານຂາຍເຄື່ອງໄປທາງໃດ", "Where is the shop?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("nar-sar-an-ang-gar-rar-hey",""," ກະລ່າແປງລົດໄປທາງໃດ","Where is the garage?","Nasaan ang garahe?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ກະລ່າແປງລົດໄປທາງໃດ", "Where is the garage?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("nar-sar-an-ang-os-pi-tal",""," ໂຮງໝໍໄປທາງໃດ","Where is the hospital?","Nasaan ang ospital?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ໂຮງໝໍໄປທາງໃດ", "Where is the hospital?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("nar-sar-an-ang-gli-nik",""," ຄລິນິກໄປທາງໃດ","Where is the clinic?","Nasaan ang klinik?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ຄລິນິກໄປທາງໃດ", "Where is the clinic?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("nar-sar-an-ang-bo-ti-gar",""," ຮ້ານຂາຍຢາໄປທາງໃດ","Where is the pharmacy?","Nasaan ang botika?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ຮ້ານຂາຍຢາໄປທາງໃດ", "Where is the pharmacy?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("nar-sar-an-ang-gar-so-li-nar-han",""," ປ້ຳນ້ຳມັນໄປທາງໃດ","Where is the gas station?","Nasaan ang gasolinahan?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ປ້ຳນ້ຳມັນໄປທາງໃດ", "Where is the gas station?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("nar-sar-an-ang-ho-tel",""," ໂຮງແຮມໄປທາງໃດ","Where is the hotel?","Nasaan ang hotel?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ໂຮງແຮມໄປທາງໃດ", "Where is the hotel?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("nar-sar-an-ang-par-leng-gey",""," ຕະຫຼາດໄປທາງໃດ","Where is the market?","Nasaan ang palengke?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ຕະຫຼາດໄປທາງໃດ", "Where is the market?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("nar-sar-an-ang-hin-tu-an-nang-boos",""," ບ່ອນຈອດພັກລົດໄປທາງໃດ","Where is the car rest area?","Nasaan ang hintuan ng bus?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ບ່ອນຈອດພັກລົດໄປທາງໃດ", "Where is the car rest area?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("nar-sar-an-ang-him-pi-lan-nang-pu-lis",""," ສະຖານີຕຳຫຼວດໄປທາງໃດ","Where is the police station?","Nasaan ang himpilan ng pulis?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ສະຖານີຕຳຫຼວດໄປທາງໃດ", "Where is the police station?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("nar-sar-an-ang-chek-poit-nang-pu-lis",""," ປ້ອມຕຳຫຼວດໄປທາງໃດ","Where is the police booth?","Nasaan ang checkpoint ng pulis?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ປ້ອມຕຳຫຼວດໄປທາງໃດ", "Where is the police booth?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("nar-sar-an-ang-lu-gar-rar-pang-par-lit-nang-pey-rar",""," ບ່ອນແລກປ່ຽນເງິນຕາລະຫວ່າງປະເທດ ໄປທາງໃດ","Where is the exchange bureau?","Nasaan ang lugar pang palit ng pera?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ບ່ອນແລກປ່ຽນເງິນຕາລະຫວ່າງປະເທດ ໄປທາງໃດ", "Where is the exchange bureau?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("nar-sar-an-ang-pu-ey-rer-to",""," ທ່າເຮືອໄປທາງໃດ","Where is the pier?","Nasaan ang puerto?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ທ່າເຮືອໄປທາງໃດ", "Where is the pier?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("nar-sar-an-ang-bo-dey-gar",""," ຫ້ອງມ້ຽນສິນຄ້າໄປທາງໃດ","Where is the warehouse?","Nasaan ang bodega?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ຫ້ອງມ້ຽນສິນຄ້າໄປທາງໃດ", "Where is the warehouse?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
     }
 
     public void loadLaosToSingapore(){
         ArrayList<Child> childList = new ArrayList<Child>();
-        Child child = new Child("ไทย","ไทย","ไทย","ไทย","ไทย",null,null);
+        childList = new ArrayList<Child>();
+        child = new Child("ware-is-der-toi-let",""," ຫ້ອງນ້ຳໄປທາງໃດ","Where is the toilet?","",null,null);
+        child.setSoundPath(-1);
         childList.add(child);
 
-        GroupHeader groupHeader = new GroupHeader("Laos","Singapore",childList);
+        groupHeader = new GroupHeader(" ຫ້ອງນ້ຳໄປທາງໃດ", "Where is the toilet?", childList);
         groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ware -is-der-bat-room",""," ຫ້ອງອາບນ້ຳໄປທາງໃດ","Where is the bathroom?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ຫ້ອງອາບນ້ຳໄປທາງໃດ", "Where is the bathroom?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ware -is-der-res-ter-rong",""," ຮ້ານອາຫານໄປທາງໃດ","Where is the restaurant?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ຮ້ານອາຫານໄປທາງໃດ", "Where is the restaurant?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ware-is-der-chop",""," ຮ້ານຂາຍເຄື່ອງໄປທາງໃດ","Where is the shop?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ຮ້ານຂາຍເຄື່ອງໄປທາງໃດ", "Where is the shop?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ware-is-der-gar-rarch",""," ກະລ່າແປງລົດໄປທາງໃດ","Where is the garage?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ກະລ່າແປງລົດໄປທາງໃດ", "Where is the garage?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ware-is-der-hos-pi-tol",""," ໂຮງໝໍໄປທາງໃດ","Where is the hospital?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ໂຮງໝໍໄປທາງໃດ", "Where is the hospital?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ware-is-der-klee-nik",""," ຄລິນິກໄປທາງໃດ","Where is the clinic?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ຄລິນິກໄປທາງໃດ", "Where is the clinic?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ware-is-der-far-mar-see",""," ຮ້ານຂາຍຢາໄປທາງໃດ","Where is the pharmacy?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ຮ້ານຂາຍຢາໄປທາງໃດ", "Where is the pharmacy?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ware-is-der-gas-stey-chan",""," ປ້ຳນ້ຳມັນໄປທາງໃດ","Where is the gas station?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ປ້ຳນ້ຳມັນໄປທາງໃດ", "Where is the gas station?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ware-is-der-ho-tel",""," ໂຮງແຮມໄປທາງໃດ","Where is the hotel?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ໂຮງແຮມໄປທາງໃດ", "Where is the hotel?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ware-is-der-mar-ket",""," ຕະຫຼາດໄປທາງໃດ","Where is the market?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ຕະຫຼາດໄປທາງໃດ", "Where is the market?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ware-is-der-kar-res-ae-ria",""," ບ່ອນຈອດພັກລົດໄປທາງໃດ","Where is the car rest area?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ບ່ອນຈອດພັກລົດໄປທາງໃດ", "Where is the car rest area?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ware-is-der-po-lis-stey-chan",""," ສະຖານີຕຳຫຼວດໄປທາງໃດ","Where is the police station?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ສະຖານີຕຳຫຼວດໄປທາງໃດ", "Where is the police station?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ware-is-der-po-lis-boot",""," ປ້ອມຕຳຫຼວດໄປທາງໃດ","Where is the police booth?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ປ້ອມຕຳຫຼວດໄປທາງໃດ", "Where is the police booth?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ware-is-der-ex-chench-bio-ro",""," ບ່ອນແລກປ່ຽນເງິນຕາລະຫວ່າງປະເທດ ໄປທາງໃດ","Where is the exchange bureau?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ບ່ອນແລກປ່ຽນເງິນຕາລະຫວ່າງປະເທດ ໄປທາງໃດ", "Where is the exchange bureau?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ware-is-der-pia",""," ທ່າເຮືອໄປທາງໃດ","Where is the pier?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ທ່າເຮືອໄປທາງໃດ", "Where is the pier?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ware-is-der- ware-haus",""," ຫ້ອງມ້ຽນສິນຄ້າໄປທາງໃດ","Where is the warehouse?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ຫ້ອງມ້ຽນສິນຄ້າໄປທາງໃດ", "Where is the warehouse?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
     }
 
 
     public void loadLaosToVietnam(){
         ArrayList<Child> childList = new ArrayList<Child>();
-        Child child = new Child("ไทย","ไทย","ไทย","ไทย","ไทย",null,null);
+        childList = new ArrayList<Child>();
+        child = new Child("fong-way-sin-dee-loi-now",""," ຫ້ອງນ້ຳໄປທາງໃດ","Where is the toilet?","phòng vệ sinh đi lối nào",null,null);
+        child.setSoundPath(-1);
         childList.add(child);
 
-        GroupHeader groupHeader = new GroupHeader("Laos","Vietnam",childList);
+        groupHeader = new GroupHeader(" ຫ້ອງນ້ຳໄປທາງໃດ", "Where is the toilet?", childList);
         groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("fong-tum-dee-loi-now",""," ຫ້ອງອາບນ້ຳໄປທາງໃດ","Where is the bathroom?","phòng tắm đi lối nào",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ຫ້ອງອາບນ້ຳໄປທາງໃດ", "Where is the bathroom?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("tiam-un-dee-loi-now",""," ຮ້ານອາຫານໄປທາງໃດ","Where is the restaurant?","tiệm ăn đi lối nào",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ຮ້ານອາຫານໄປທາງໃດ", "Where is the restaurant?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("keur-tiam-dee-loi-now",""," ຮ້ານຂາຍເຄື່ອງໄປທາງໃດ","Where is the shop?","cửa tiệm đi lối nào",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ຮ້ານຂາຍເຄື່ອງໄປທາງໃດ", "Where is the shop?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ka-ra-suea-sae-dee-loi-now",""," ກະລ່າແປງລົດໄປທາງໃດ","Where is the garage?","ga ra sửa xe đi lối nào",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ກະລ່າແປງລົດໄປທາງໃດ", "Where is the garage?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("beng-wien-dee-loi-now",""," ໂຮງໝໍໄປທາງໃດ","Where is the hospital?","bệnh viện đi lối nào?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ໂຮງໝໍໄປທາງໃດ", "Where is the hospital?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("fong-mug-dee-loi-now",""," ຄລິນິກໄປທາງໃດ","Where is the clinic?","phòng mạch đi lối nào?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ຄລິນິກໄປທາງໃດ", "Where is the clinic?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("tiam-thuak-tuai-dee-loi-now",""," ຮ້ານຂາຍຢາໄປທາງໃດ","Where is the pharmacy?","tiệm thuốc  tây đi lối nào?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ຮ້ານຂາຍຢາໄປທາງໃດ", "Where is the pharmacy?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("tram-sung-dee-loi-now",""," ປ້ຳນ້ຳມັນໄປທາງໃດ","Where is the gas station?","trạm xăng đi lối nào?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ປ້ຳນ້ຳມັນໄປທາງໃດ", "Where is the gas station?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("Khuk-san-dee-loi-now",""," ໂຮງແຮມໄປທາງໃດ","Where is the hotel?","khách sạn đi lối nào?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ໂຮງແຮມໄປທາງໃດ", "Where is the hotel?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("joe-dee-loi-now",""," ຕະຫຼາດໄປທາງໃດ","Where is the market?","chợ đi lối nào?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ຕະຫຼາດໄປທາງໃດ", "Where is the market?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("noei-doe-sae-dee-loi-now",""," ບ່ອນຈອດພັກລົດໄປທາງໃດ","Where is the car rest area?","nơi đậu xe đi lối nào?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ບ່ອນຈອດພັກລົດໄປທາງໃດ", "Where is the car rest area?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("don-kong-arn-dee-loi-now",""," ສະຖານີຕຳຫຼວດໄປທາງໃດ","Where is the police station?","đồn công an đi lối nào?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ສະຖານີຕຳຫຼວດໄປທາງໃດ", "Where is the police station?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("Tram-kun-sard-dee-loi-now",""," ປ້ອມຕຳຫຼວດໄປທາງໃດ","Where is the police booth?","trạm cảnh sát đi lối nào?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ປ້ອມຕຳຫຼວດໄປທາງໃດ", "Where is the police booth?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("Tram-doi-why-tay-dee-loi-now",""," ບ່ອນແລກປ່ຽນເງິນຕາລະຫວ່າງປະເທດ ໄປທາງໃດ","Where is the exchange bureau?","trạm đổi ngoại tệ đi lối nào?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ບ່ອນແລກປ່ຽນເງິນຕາລະຫວ່າງປະເທດ ໄປທາງໃດ", "Where is the exchange bureau?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ben-toa-dee-loi-now",""," ທ່າເຮືອໄປທາງໃດ","Where is the pier?","bến tàu đi lối nào?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ທ່າເຮືອໄປທາງໃດ", "Where is the pier?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("Khor-true-hang-dee-loi-now",""," ຫ້ອງມ້ຽນສິນຄ້າໄປທາງໃດ","Where is the warehouse?","kho trữ hàng đi lối nào?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ຫ້ອງມ້ຽນສິນຄ້າໄປທາງໃດ", "Where is the warehouse?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
     }
 
     public void loadMalaysiaToChina(){
         ArrayList<Child> childList = new ArrayList<Child>();
-        Child child = new Child("ไทย","ไทย","ไทย","ไทย","ไทย",null,null);
+        childList = new ArrayList<Child>();
+        child = new Child("see-sow-jian-jai-nar","","Tandas ke arah  mana","Where is the toilet?"," 洗手间在哪儿",null,null);
+        child.setSoundPath(-1);
         childList.add(child);
 
-        GroupHeader groupHeader = new GroupHeader("Malaysia","China",childList);
+        groupHeader = new GroupHeader("Tandas ke arah  mana", "Where is the toilet?", childList);
         groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ywii-seu-jai-nar","","Bilik mandi  ke arah mana","Where is the bathroom?"," 浴室在哪儿",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Bilik mandi  ke arah mana", "Where is the bathroom?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("chun-thing-jai-nar","","Restoran ke arah mana","Where is the restaurant?"," 餐厅在哪儿",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Restoran ke arah mana", "Where is the restaurant?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("sung-tian-jai-nar","","Kedai ke arah mana","Where is the shop?"," 商店在哪儿",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Kedai ke arah mana", "Where is the shop?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("siw-cher-hang-jai-nar","","Bengkel kereta ke arah mana","Where is the garage?"," 修车行在哪儿",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Bengkel kereta ke arah mana", "Where is the garage?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ee-awian-jai-nar","","Hospital ke arah mana","Where is the hospital?"," 医院在哪儿",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Hospital ke arah mana", "Where is the hospital?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("jern-sua-jai-nar","","Klinik ke arah mana","Where is the clinic?"," 诊所在哪儿",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Klinik ke arah mana", "Where is the clinic?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("yao-tian-jai-nar","","Kedai ubat ke arah mana","Where is the pharmacy?"," 药店在哪儿",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Kedai ubat ke arah mana", "Where is the pharmacy?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("jia-yow-jun-jai-nar","","Stesen minyak ke arah mana","Where is the gas station?"," 加油站在哪儿",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Stesen minyak ke arah mana", "Where is the gas station?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("fun-tian-jai-nar","","Hotel ke arah mana","Where is the hotel?"," 饭店在哪儿",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Hotel ke arah mana", "Where is the hotel?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("seu-chang-jai-nar","","Pasar ke arah mana","Where is the market?"," 市场在哪儿",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Pasar ke arah mana", "Where is the market?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("thing-cher-chang-jai-nar","","Tempat berhenti kereta ke arah mana","Where is the car rest area?"," 停车场在哪儿",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Tempat berhenti kereta ke arah mana", "Where is the car rest area?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("jing-char-jwee-jai-nar","","Balai polis ke arah mana","Where is the police station?"," 警察局在哪儿",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Balai polis ke arah mana", "Where is the police station?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("jing-char-kung-thing-jai-nar","","Pondok polis ke arah mana","Where is the police booth?","警察岗亭在哪儿",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Pondok polis ke arah mana", "Where is the police booth?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("hwor-pee-toy-huan-choo-jai-nar","","Kedai pengurup ke arah mana","Where is the exchange bureau?"," 货币兑换处在哪儿",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Kedai pengurup ke arah mana", "Where is the exchange bureau?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ma-thow-jai-nar","","Pelabuhan ke arah mana","Where is the pier?"," 码头在哪儿",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Pelabuhan ke arah mana", "Where is the pier?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("chang-khoo-jai-nar","","Stor / Gudang barang dagangan ke arah mana","Where is the warehouse?"," 仓库在哪儿",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Stor / Gudang barang dagangan ke arah mana", "Where is the warehouse?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
     }
 
     public void loadMalaysiaToThai(){
         ArrayList<Child> childList = new ArrayList<Child>();
-        Child child = new Child("ไทย","ไทย","ไทย","ไทย","ไทย",null,null);
+        childList = new ArrayList<Child>();
+        child = new Child("hongnam-pai-thang-nai","","Tandas ke arah  mana","Where is the toilet?","ห้องน้ำไปทางไหน",null,null);
+        child.setSoundPath(-1);
         childList.add(child);
 
-        GroupHeader groupHeader = new GroupHeader("Malaysia","Thai",childList);
+        groupHeader = new GroupHeader("Tandas ke arah  mana", "Where is the toilet?", childList);
         groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("hong-ap-nam-pai-thang-nai","","Bilik mandi  ke arah mana","Where is the bathroom?","ห้องอาบน้ำไปทางไหน",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Bilik mandi  ke arah mana", "Where is the bathroom?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ran-ar-han-pai-thang-nai","","Restoran ke arah mana","Where is the restaurant?","ร้านอาหารไปทางไหน",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Restoran ke arah mana", "Where is the restaurant?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ran-kha-pai-thang-nai","","Kedai ke arah mana","Where is the shop?","ร้านค้าไปทางไหน",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Kedai ke arah mana", "Where is the shop?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("au-som-rot-pai-thang-nai","","Bengkel kereta ke arah mana","Where is the garage?","อู่ซ่อมรถไปทางไหน",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Bengkel kereta ke arah mana", "Where is the garage?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("rong-pha-ya-ban-pai-thang-nai","","Hospital ke arah mana","Where is the hospital?","โรงพยาบาลไปทางไหน",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Hospital ke arah mana", "Where is the hospital?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("clinic-pai-thang-nai","","Klinik ke arah mana","Where is the clinic?","คลินิกไปทางไหน",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Klinik ke arah mana", "Where is the clinic?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ran-khai-ya-pai-thang-nai","","Kedai ubat ke arah mana","Where is the pharmacy?","ร้านขายยาไปทางไหน",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Kedai ubat ke arah mana", "Where is the pharmacy?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("pam-nam-man-pai-thang-nai","","Stesen minyak ke arah mana","Where is the gas station?","ปั๊มน้ำมันไปทางไหน",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Stesen minyak ke arah mana", "Where is the gas station?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("rong-raem-pai-thang-nai","","Hotel ke arah mana","Where is the hotel?","โรงแรมไปทางไหน",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Hotel ke arah mana", "Where is the hotel?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("talad-pai-thang-nai","","Pasar ke arah mana","Where is the market?","ตลาดไปทางไหน",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Pasar ke arah mana", "Where is the market?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("chut-phak-rod-pai-thang-nai","","Tempat berhenti kereta ke arah mana","Where is the car rest area?","จุดพักรถไปทางไหน",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Tempat berhenti kereta ke arah mana", "Where is the car rest area?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("sa-tha-ni-tam-ruat-pai-thang-nai","","Balai polis ke arah mana","Where is the police station?","สถานีตำรวจไปทางไหน",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Balai polis ke arah mana", "Where is the police station?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("pom-tam-ruat-pai-thang-nai","","Pondok polis ke arah mana","Where is the police booth?","ป้อมตำรวจไปทางไหน",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Pondok polis ke arah mana", "Where is the police booth?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("sa-than-thi-laek-ngoen-ra-wang-pra-thet-pai-thang-nai","","Kedai pengurup ke arah mana","Where is the exchange bureau?","สถานที่แลกเงินระหว่างประเทศไปทางไหน",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Kedai pengurup ke arah mana", "Where is the exchange bureau?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("tha-ruea-pai-thang-nai","","Pelabuhan ke arah mana","Where is the pier?","ท่าเรือไปทางไหน",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Pelabuhan ke arah mana", "Where is the pier?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ko-dang-phak-sinkha-pai-thang-nai","","Stor / Gudang barang dagangan ke arah mana","Where is the warehouse?","โกดังพักสินค้าไปทางไหน",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Stor / Gudang barang dagangan ke arah mana", "Where is the warehouse?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
     }
 
     public void loadMalaysiaToBrunei(){
         ArrayList<Child> childList = new ArrayList<Child>();
-        Child child = new Child("ไทย","ไทย","ไทย","ไทย","ไทย",null,null);
+        childList = new ArrayList<Child>();
+        child = new Child("tun-das-ger-ar-rah-ma-na","","Tandas ke arah  mana","Where is the toilet?","Tandas ke arah  mana",null,null);
+        child.setSoundPath(-1);
         childList.add(child);
 
-        GroupHeader groupHeader = new GroupHeader("Malaysia","Brunei",childList);
+        groupHeader = new GroupHeader("Tandas ke arah  mana", "Where is the toilet?", childList);
         groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("bee-lik-mun-dee-ger-ar-rah-ma-na","","Bilik mandi  ke arah mana","Where is the bathroom?","Bilik mandi  ke arah mana",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Bilik mandi  ke arah mana", "Where is the bathroom?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("res-to-run-ger-ar-rah-ma-na","","Restoran ke arah mana","Where is the restaurant?","Restoran ke arah mana",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Restoran ke arah mana", "Where is the restaurant?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ger-dai-ger-ar-rah-ma-na","","Kedai ke arah mana","Where is the shop?","Kedai ke arah mana",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Kedai ke arah mana", "Where is the shop?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("beng-gail-ger-ray-ta-ger-ar-rah-ma-na","","Bengkel kereta ke arah mana","Where is the garage?","Bengkel kereta ke arah mana",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Bengkel kereta ke arah mana", "Where is the garage?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("hos-pi-tal-ger-ar-rah-ma-na","","Hospital ke arah mana","Where is the hospital?","Hospital ke arah mana",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Hospital ke arah mana", "Where is the hospital?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("glee-nik-ger-ar-rah-ma-na","","Klinik ke arah mana","Where is the clinic?","Klinik ke arah mana",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Klinik ke arah mana", "Where is the clinic?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ger-dai-oo-bud-ger-ar-rah-ma-na","","Kedai ubat ke arah mana","Where is the pharmacy?","Kedai ubat ke arah mana",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Kedai ubat ke arah mana", "Where is the pharmacy?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("stay-sen-mee-yuk-ger-ar-rah-ma-na","","Stesen minyak ke arah mana","Where is the gas station?","Stesen minyak ke arah mana",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Stesen minyak ke arah mana", "Where is the gas station?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ho-tel-ger-ar-rah-ma-na","","Hotel ke arah mana","Where is the hotel?","Hotel ke arah mana",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Hotel ke arah mana", "Where is the hotel?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("pa-sul-ger-ar-rah-ma-na","","Pasar ke arah mana","Where is the market?","Pasar ke arah mana",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Pasar ke arah mana", "Where is the market?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("term-pud-bern-hern-tee-ger-ray-ta-ger-ar-rah-ma-na","","Tempat berhenti kereta ke arah mana","Where is the car rest area?","Tempat berhenti kereta ke arah mana",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Tempat berhenti kereta ke arah mana", "Where is the car rest area?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ba-lai-po-lis-ger-ar-rah-ma-na","","Balai polis ke arah mana","Where is the police station?","Balai polis ke arah mana",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Balai polis ke arah mana", "Where is the police station?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("pone-doke-po-lis-ger-ar-rah-ma-na","","Pondok polis ke arah mana","Where is the police booth?","Pondok polis ke arah mana",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Pondok polis ke arah mana", "Where is the police booth?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ger-dai-per-ngoo-roop-ger-ar-rah-ma-na","","Kedai pengurup ke arah mana","Where is the exchange bureau?","Kedai pengurup ke arah mana",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Kedai pengurup ke arah mana", "Where is the exchange bureau?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("per-la-boo-hun-ger-ar-rah-ma-na","","Pelabuhan ke arah mana","Where is the pier?","Pelabuhan ke arah mana",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Pelabuhan ke arah mana", "Where is the pier?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("sto/ koo-dung-ba-rung-da-ka-ngun-ger-ar-rah-ma-na","","Stor / Gudang barang dagangan ke arah mana","Where is the warehouse?","Stor / Gudang barang dagangan ke arah mana",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Stor / Gudang barang dagangan ke arah mana", "Where is the warehouse?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
     }
 
     public void loadMalaysiaToCambodia(){
         ArrayList<Child> childList = new ArrayList<Child>();
-        Child child = new Child("ไทย","ไทย","ไทย","ไทย","ไทย",null,null);
+        childList = new ArrayList<Child>();
+        child = new Child("bon-toop-tuek-tuew-khang-na","","Tandas ke arah  mana","Where is the toilet?","  បន្ទប់ទឹកទៅខាងណា?",null,null);
+        child.setSoundPath(-1);
         childList.add(child);
 
-        GroupHeader groupHeader = new GroupHeader("Malaysia","Cambodia",childList);
+        groupHeader = new GroupHeader("Tandas ke arah  mana", "Where is the toilet?", childList);
         groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("bon-toop-ngood-tuek-tuew -khang-na","","Bilik mandi  ke arah mana","Where is the bathroom?"," បន្ទប់ងូតទឹកទៅខាងណា?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Bilik mandi  ke arah mana", "Where is the bathroom?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("hang-bai-tuew-khang-na","","Restoran ke arah mana","Where is the restaurant?","ហាងបាយទៅខាងណា?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Restoran ke arah mana", "Where is the restaurant?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("hang-luah-dough-tuew-khang-na","","Kedai ke arah mana","Where is the shop?"," ហាងលក់ដូរទៅខាងណា?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Kedai ke arah mana", "Where is the shop?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("yian-than-juah-joon-lan-tuew-khang-na","","Bengkel kereta ke arah mana","Where is the garage?","មន្ទីរពេទ្យទៅខាងណា?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Bengkel kereta ke arah mana", "Where is the garage?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("muan-tee-paed-teuw-khang-na","","Hospital ke arah mana","Where is the hospital?","គ្លីនិកទៅខាងណា?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Hospital ke arah mana", "Where is the hospital?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("klee-nik-tuew-khang-na","","Klinik ke arah mana","Where is the clinic?"," ហ្វាម៉ាស៊ីទៅខាងណា?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Klinik ke arah mana", "Where is the clinic?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("fa-ma-see-tuew-khang-na","","Kedai ubat ke arah mana","Where is the pharmacy?","ស្ថានីយ៍ប្រេងឥន្ទនៈទៅខាងណា?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Kedai ubat ke arah mana", "Where is the pharmacy?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("stha-nee-preng-in-ta-niah- tuew-khang-na","","Stesen minyak ke arah mana","Where is the gas station?","សណ្ឋាគារទៅខាងណា?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Stesen minyak ke arah mana", "Where is the gas station?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("son-tha-gia-tuew-khang-na","","Hotel ke arah mana","Where is the hotel?","ផ្សារទៅខាងណា?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Hotel ke arah mana", "Where is the hotel?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("psa-tuew-khang-na","","Pasar ke arah mana","Where is the market?","កន្លែងឈប់ឡានទៅខាងណា?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Pasar ke arah mana", "Where is the market?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("gon-laeng-choop- larn- tuew-khang- na","","Tempat berhenti kereta ke arah mana","Where is the car rest area?"," ប៉ុស្តិ៍ប៉ូលីសទៅខាងណា?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Tempat berhenti kereta ke arah mana", "Where is the car rest area?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("poh-po-leas-tuew-khang-na","","Balai polis ke arah mana","Where is the police station?","កន្លែងប៉ុស្តិ៍យាមប៉ូលីសទៅខាង ណា?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Balai polis ke arah mana", "Where is the police station?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("gon-laeng-poh-yiam-po-leas-tuew- khang-na","","Pondok polis ke arah mana","Where is the police booth?","កន្លែងដូរលុយបរទេសទៅខាងណា?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Pondok polis ke arah mana", "Where is the police booth?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("gon-laeng-dough-luy-bor-ra-teh- tuew- khang-na","","Kedai pengurup ke arah mana","Where is the exchange bureau?","កំពង់ផែទៅខាងណា?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Kedai pengurup ke arah mana", "Where is the exchange bureau?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("gom-puang-phae-tuew-khang-na","","Pelabuhan ke arah mana","Where is the pier?"," ឃ្លាំងសម្រាប់ដាក់ឥវ៉ាន់ទៅខាងណា?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Pelabuhan ke arah mana", "Where is the pier?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("kliang-som-rub-dah-uai-wun-tuew-khang-na","","Stor / Gudang barang dagangan ke arah mana","Where is the warehouse?"," ជួយផង ខ្ញុំត្រូវចោរប្លន់",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Stor / Gudang barang dagangan ke arah mana", "Where is the warehouse?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
     }
 
     public void loadMalaysiaToIndonesia(){
         ArrayList<Child> childList = new ArrayList<Child>();
-        Child child = new Child("ไทย","ไทย","ไทย","ไทย","ไทย",null,null);
+        childList = new ArrayList<Child>();
+        child = new Child("dee-mar-nar-gar-mar-geu-jeel (toi-let)","","Tandas ke arah  mana","Where is the toilet?","Di mana kamar kecil (toilet) ?",null,null);
+        child.setSoundPath(-1);
         childList.add(child);
 
-        GroupHeader groupHeader = new GroupHeader("Malaysia","Indonesia",childList);
+        groupHeader = new GroupHeader("Tandas ke arah  mana", "Where is the toilet?", childList);
         groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("dee-mar-nar-gar-mar-man-dee","","Bilik mandi  ke arah mana","Where is the bathroom?","Di mana kamar mandi ?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Bilik mandi  ke arah mana", "Where is the bathroom?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("dee-mar-nar-res-to-ran","","Restoran ke arah mana","Where is the restaurant?","Di mana restoran ?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Restoran ke arah mana", "Where is the restaurant?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("dee-mar-nar-to-go","","Kedai ke arah mana","Where is the shop?","Di mana toko ?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Kedai ke arah mana", "Where is the shop?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("dee-mar-nar beng-kel","","Bengkel kereta ke arah mana","Where is the garage?","Di mana bengkel ?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Bengkel kereta ke arah mana", "Where is the garage?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("dee-mar-nar-ru-mah-sar-git","","Hospital ke arah mana","Where is the hospital?","Di mana rumah sakit ?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Hospital ke arah mana", "Where is the hospital?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("dee-mar-nar-glee-nik","","Klinik ke arah mana","Where is the clinic?","Di mana klinik ?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Klinik ke arah mana", "Where is the clinic?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("dee-mar-nar-ar-po-tek","","Kedai ubat ke arah mana","Where is the pharmacy?","Di mana apotek ?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Kedai ubat ke arah mana", "Where is the pharmacy?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("dee-mar-nar-pom-par-ben-sin","","Stesen minyak ke arah mana","Where is the gas station?","Di mana pompa bensin?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Stesen minyak ke arah mana", "Where is the gas station?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("dee-mar-nar-ho-tel","","Hotel ke arah mana","Where is the hotel?","Di mana hotel?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Hotel ke arah mana", "Where is the hotel?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("dee-mar-nar-par-sar","","Pasar ke arah mana","Where is the market?","Di mana pasar ?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Pasar ke arah mana", "Where is the market?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("dee-mar-nar-teum-pat-par-geer-mo-bil","","Tempat berhenti kereta ke arah mana","Where is the car rest area?","Di mana tempat parkir mobil ?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Tempat berhenti kereta ke arah mana", "Where is the car rest area?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("dee-mar-nar-gan-to-po-lee-see","","Balai polis ke arah mana","Where is the police station?","Di mana kantor polisi ?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Balai polis ke arah mana", "Where is the police station?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("dee-mar-nar-pos-po-lee-see","","Pondok polis ke arah mana","Where is the police booth?","Di mana pos polisi ?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Pondok polis ke arah mana", "Where is the police booth?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("dee-mar-nar-teum-pat-tu-gar-u-wang","","Kedai pengurup ke arah mana","Where is the exchange bureau?","Di mana tempat tukar uang?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Kedai pengurup ke arah mana", "Where is the exchange bureau?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("dee-mar-nar-der-mar-kar","","Pelabuhan ke arah mana","Where is the pier?","Di mana dermaga ?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Pelabuhan ke arah mana", "Where is the pier?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("dee-mar-nar-ku-dang-seem-pan-bar-rang","","Stor / Gudang barang dagangan ke arah mana","Where is the warehouse?","Di mana gudang simpan barang?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Stor / Gudang barang dagangan ke arah mana", "Where is the warehouse?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
     }
 
     public void loadMalaysiaToLaos(){
         ArrayList<Child> childList = new ArrayList<Child>();
-        Child child = new Child("ไทย","ไทย","ไทย","ไทย","ไทย",null,null);
+        childList = new ArrayList<Child>();
+        child = new Child("hong-num-pai-tharng-dai","","Tandas ke arah  mana","Where is the toilet?"," ຫ້ອງນ້ຳໄປທາງໃດ",null,null);
+        child.setSoundPath(-1);
         childList.add(child);
 
-        GroupHeader groupHeader = new GroupHeader("Malaysia","Laos",childList);
+        groupHeader = new GroupHeader("Tandas ke arah  mana", "Where is the toilet?", childList);
         groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("hong-arb-num-pai-tharng-dai","","Bilik mandi  ke arah mana","Where is the bathroom?"," ຫ້ອງອາບນ້ຳໄປທາງໃດ",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Bilik mandi  ke arah mana", "Where is the bathroom?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("harn-ar-harn-pai-tharng-dai","","Restoran ke arah mana","Where is the restaurant?"," ຮ້ານອາຫານໄປທາງໃດ",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Restoran ke arah mana", "Where is the restaurant?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("harn-kai-khueang-pai-tharng-dai","","Kedai ke arah mana","Where is the shop?"," ຮ້ານຂາຍເຄື່ອງໄປທາງໃດ",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Kedai ke arah mana", "Where is the shop?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ga-lar-paeng-load-pai-tharng-dai","","Bengkel kereta ke arah mana","Where is the garage?"," ກະລ່າແປງລົດໄປທາງໃດ",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Bengkel kereta ke arah mana", "Where is the garage?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("hong-mor-pai-tharng-dai","","Hospital ke arah mana","Where is the hospital?"," ໂຮງໝໍໄປທາງໃດ",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Hospital ke arah mana", "Where is the hospital?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("klee-nik-pai-tharng-dai","","Klinik ke arah mana","Where is the clinic?"," ຄລິນິກໄປທາງໃດ",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Klinik ke arah mana", "Where is the clinic?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("harn-khai-ya-pai-tharng-dai","","Kedai ubat ke arah mana","Where is the pharmacy?"," ຮ້ານຂາຍຢາໄປທາງໃດ",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Kedai ubat ke arah mana", "Where is the pharmacy?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("pum-num-mun-pai-tharng-dai","","Stesen minyak ke arah mana","Where is the gas station?"," ປ້ຳນ້ຳມັນໄປທາງໃດ",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Stesen minyak ke arah mana", "Where is the gas station?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("hong-haem-pai-tharng -dai","","Hotel ke arah mana","Where is the hotel?"," ໂຮງແຮມໄປທາງໃດ",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Hotel ke arah mana", "Where is the hotel?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ta-lard-pai-tharng -dai","","Pasar ke arah mana","Where is the market?"," ຕະຫຼາດໄປທາງໃດ",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Pasar ke arah mana", "Where is the market?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("bon-jord-phuk-load- pai-tharng-dai","","Tempat berhenti kereta ke arah mana","Where is the car rest area?"," ບ່ອນຈອດພັກລົດໄປທາງໃດ",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Tempat berhenti kereta ke arah mana", "Where is the car rest area?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("sa-ta-nee-tum-luad- pai-tharng-dai","","Balai polis ke arah mana","Where is the police station?"," ສະຖານີຕຳຫຼວດໄປທາງໃດ",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Balai polis ke arah mana", "Where is the police station?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("pom-tum-luad- pai-tharng-dai","","Pondok polis ke arah mana","Where is the police booth?"," ປ້ອມຕຳຫຼວດໄປທາງໃດ",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Pondok polis ke arah mana", "Where is the police booth?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("bon-laek-pian-ngern-ta-lah-wang-pa-thed- pai-tharng-dai","","Kedai pengurup ke arah mana","Where is the exchange bureau?"," ບ່ອນແລກປ່ຽນເງິນຕາລະຫວ່າງປະເທດ ໄປທາງໃດ",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Kedai pengurup ke arah mana", "Where is the exchange bureau?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("tha-huea- pai-tharng-dai","","Pelabuhan ke arah mana","Where is the pier?"," ທ່າເຮືອໄປທາງໃດ",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Pelabuhan ke arah mana", "Where is the pier?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("hong-mian-sin-kha- pai-tharng-dai","","Stor / Gudang barang dagangan ke arah mana","Where is the warehouse?"," ຫ້ອງມ້ຽນສິນຄ້າໄປທາງໃດ",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Stor / Gudang barang dagangan ke arah mana", "Where is the warehouse?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
     }
     public void loadMalaysiaToMalaysia(){
         ArrayList<Child> childList = new ArrayList<Child>();
-        Child child = new Child("ไทย","ไทย","ไทย","ไทย","ไทย",null,null);
+        childList = new ArrayList<Child>();
+        child = new Child("tun-das-ger-ar-rah-ma-na","","Tandas ke arah  mana","Where is the toilet?","",null,null);
+        child.setSoundPath(-1);
         childList.add(child);
 
-        GroupHeader groupHeader = new GroupHeader("Malaysia","Malaysia",childList);
+        groupHeader = new GroupHeader("Tandas ke arah  mana", "Where is the toilet?", childList);
         groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("bee-lik-mun-dee-ger-ar-rah-ma-na","","Bilik mandi  ke arah mana","Where is the bathroom?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Bilik mandi  ke arah mana", "Where is the bathroom?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("res-to-run-ger-ar-rah-ma-na","","Restoran ke arah mana","Where is the restaurant?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Restoran ke arah mana", "Where is the restaurant?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ger-dai-ger-ar-rah-ma-na","","Kedai ke arah mana","Where is the shop?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Kedai ke arah mana", "Where is the shop?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("beng-gail-ger-ray-ta-ger-ar-rah-ma-na","","Bengkel kereta ke arah mana","Where is the garage?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Bengkel kereta ke arah mana", "Where is the garage?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("hos-pi-tal-ger-ar-rah-ma-na","","Hospital ke arah mana","Where is the hospital?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Hospital ke arah mana", "Where is the hospital?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("glee-nik-ger-ar-rah-ma-na","","Klinik ke arah mana","Where is the clinic?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Klinik ke arah mana", "Where is the clinic?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ger-dai-oo-bud-ger-ar-rah-ma-na","","Kedai ubat ke arah mana","Where is the pharmacy?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Kedai ubat ke arah mana", "Where is the pharmacy?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("stay-sen-mee-yuk-ger-ar-rah-ma-na","","Stesen minyak ke arah mana","Where is the gas station?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Stesen minyak ke arah mana", "Where is the gas station?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ho-tel-ger-ar-rah-ma-na","","Hotel ke arah mana","Where is the hotel?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Hotel ke arah mana", "Where is the hotel?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("pa-sul-ger-ar-rah-ma-na","","Pasar ke arah mana","Where is the market?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Pasar ke arah mana", "Where is the market?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("term-pud-bern-hern-tee-ger-ray-ta-ger-ar-rah-ma-na","","Tempat berhenti kereta ke arah mana","Where is the car rest area?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Tempat berhenti kereta ke arah mana", "Where is the car rest area?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ba-lai-po-lis-ger-ar-rah-ma-na","","Balai polis ke arah mana","Where is the police station?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Balai polis ke arah mana", "Where is the police station?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("pone-doke-po-lis-ger-ar-rah-ma-na","","Pondok polis ke arah mana","Where is the police booth?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Pondok polis ke arah mana", "Where is the police booth?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ger-dai-per-ngoo-roop-ger-ar-rah-ma-na","","Kedai pengurup ke arah mana","Where is the exchange bureau?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Kedai pengurup ke arah mana", "Where is the exchange bureau?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("per-la-boo-hun-ger-ar-rah-ma-na","","Pelabuhan ke arah mana","Where is the pier?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Pelabuhan ke arah mana", "Where is the pier?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("sto/ koo-dung-ba-rung-da-ka-ngun-ger-ar-rah-ma-na","","Stor / Gudang barang dagangan ke arah mana","Where is the warehouse?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Stor / Gudang barang dagangan ke arah mana", "Where is the warehouse?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
     }
 
     public void loadMalaysiaToMyanmar(){
         ArrayList<Child> childList = new ArrayList<Child>();
-        Child child = new Child("ไทย","ไทย","ไทย","ไทย","ไทย",null,null);
+        childList = new ArrayList<Child>();
+        child = new Child("eng-ta-bae-ma-shi-lae","","Tandas ke arah  mana","Where is the toilet?","အိမ္သာဘယ္မွာရွိလဲ။",null,null);
+        child.setSoundPath(-1);
         childList.add(child);
 
-        GroupHeader groupHeader = new GroupHeader("Malaysia","Myanmar",childList);
+        groupHeader = new GroupHeader("Tandas ke arah  mana", "Where is the toilet?", childList);
         groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ye-show-kan-bae-ma-shi- lae","","Bilik mandi  ke arah mana","Where is the bathroom?","ေရခ်ိဳးခန္းဘယ္မွာရွိလဲ။",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Bilik mandi  ke arah mana", "Where is the bathroom?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("sa-taw-sai-bae-ma-shi- lae","","Restoran ke arah mana","Where is the restaurant?","စားေသာက္ဆိုင္ဘယ္မွာရွိလဲ။",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Restoran ke arah mana", "Where is the restaurant?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("se-sai-bae-ma-shi-lae","","Kedai ke arah mana","Where is the shop?","ေစ်းဆိုင္ဘယ္မွာရွိလဲ။",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Kedai ke arah mana", "Where is the shop?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ka-wa-choh-bae-ma-shi- lae","","Bengkel kereta ke arah mana","Where is the garage?","ကား၀ပ္ေရွာ့ဘယ္မွာရွိလဲ။",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Bengkel kereta ke arah mana", "Where is the garage?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("se-yong-bae-ma-shi-lae","","Hospital ke arah mana","Where is the hospital?","ေဆးရွံဘယ္မွာရွိလဲ။",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Hospital ke arah mana", "Where is the hospital?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("se-kan-bae-ma-shi-lae","","Klinik ke arah mana","Where is the clinic?","ေဆးခန္းဘယ္မွာရွိလဲ။",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Klinik ke arah mana", "Where is the clinic?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("se-sai-bae-ma-shi-lae","","Kedai ubat ke arah mana","Where is the pharmacy?","ေဆးဆိုင္ဘယ္မွာရွိလဲ။",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Kedai ubat ke arah mana", "Where is the pharmacy?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("dat-see-sai-bae-ma-shi- lae","","Stesen minyak ke arah mana","Where is the gas station?","ဓာတ္ဆီဆိုင္ဘယ္မွာရွိလဲ။",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Stesen minyak ke arah mana", "Where is the gas station?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("hoe-tae-bae-ma-shi-lae","","Hotel ke arah mana","Where is the hotel?","ဟိုတယ္ဘယ္မွာရွိလဲ။",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Hotel ke arah mana", "Where is the hotel?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("se-bae-ma-shi-lae","","Pasar ke arah mana","Where is the market?","ေစ်းဘယ္မွာရွိလဲ။",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Pasar ke arah mana", "Where is the market?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ka-yat-daeh-ne-ya-bae-ma-shi-lae","","Tempat berhenti kereta ke arah mana","Where is the car rest area?","ကားရပ္တဲ့ေနရာဘယ္မွာရွိလဲ။",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Tempat berhenti kereta ke arah mana", "Where is the car rest area?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("yae-sa-khan-bae-ma-shi- lae","","Balai polis ke arah mana","Where is the police station?","ရဲစခန္းဘယ္မွာရွိလဲ။",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Balai polis ke arah mana", "Where is the police station?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("yae-ging-bae-ma-shi-lae","","Pondok polis ke arah mana","Where is the police booth?","ရဲကင္းဘယ္မွာရွိလဲ။",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Pondok polis ke arah mana", "Where is the police booth?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("na-nai-ngan-ngwe-lae-daeh-ne-ya-bae-ma-shi-lae","","Kedai pengurup ke arah mana","Where is the exchange bureau?","ႏွစ္ႏိုင္ငံေငြလဲတဲ့ေနရာဘယ္မွာရွိလဲ။",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Kedai pengurup ke arah mana", "Where is the exchange bureau?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("seh-kan-bae-ma-shi-lae","","Pelabuhan ke arah mana","Where is the pier?","ဆိပ္ကမ္းဘယ္မွာရွိလဲ။",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Pelabuhan ke arah mana", "Where is the pier?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("kong -yong -bae -ma -shi -lae","","Stor / Gudang barang dagangan ke arah mana","Where is the warehouse?","ကုန္ရံုဘယ္မွာရွိလဲ။",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Stor / Gudang barang dagangan ke arah mana", "Where is the warehouse?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
     }
 
     public void loadMalaysiaToPhilippines(){
         ArrayList<Child> childList = new ArrayList<Child>();
-        Child child = new Child("ไทย","ไทย","ไทย","ไทย","ไทย",null,null);
+        childList = new ArrayList<Child>();
+        child = new Child("nar-sar-an-ang-ban-yo","","Tandas ke arah  mana","Where is the toilet?","Nasaan ang banyo?",null,null);
+        child.setSoundPath(-1);
         childList.add(child);
 
-        GroupHeader groupHeader = new GroupHeader("Malaysia","Philippines",childList);
+        groupHeader = new GroupHeader("Tandas ke arah  mana", "Where is the toilet?", childList);
         groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("nar-sar-an-ang-par-li-gu-an","","Bilik mandi  ke arah mana","Where is the bathroom?","Nasaan ang paliguan?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Bilik mandi  ke arah mana", "Where is the bathroom?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("nar-sar-an-ang-kar-rin-dey-ri-yar","","Restoran ke arah mana","Where is the restaurant?","Nasaan ang carinderiya?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Restoran ke arah mana", "Where is the restaurant?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("nar-sar-an-ang-morl","","Kedai ke arah mana","Where is the shop?","Nasaan ang mall?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Kedai ke arah mana", "Where is the shop?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("nar-sar-an-ang-gar-rar-hey","","Bengkel kereta ke arah mana","Where is the garage?","Nasaan ang garahe?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Bengkel kereta ke arah mana", "Where is the garage?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("nar-sar-an-ang-os-pi-tal","","Hospital ke arah mana","Where is the hospital?","Nasaan ang ospital?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Hospital ke arah mana", "Where is the hospital?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("nar-sar-an-ang-gli-nik","","Klinik ke arah mana","Where is the clinic?","Nasaan ang klinik?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Klinik ke arah mana", "Where is the clinic?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("nar-sar-an-ang-bo-ti-gar","","Kedai ubat ke arah mana","Where is the pharmacy?","Nasaan ang botika?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Kedai ubat ke arah mana", "Where is the pharmacy?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("nar-sar-an-ang-gar-so-li-nar-han","","Stesen minyak ke arah mana","Where is the gas station?","Nasaan ang gasolinahan?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Stesen minyak ke arah mana", "Where is the gas station?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("nar-sar-an-ang-ho-tel","","Hotel ke arah mana","Where is the hotel?","Nasaan ang hotel?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Hotel ke arah mana", "Where is the hotel?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("nar-sar-an-ang-par-leng-gey","","Pasar ke arah mana","Where is the market?","Nasaan ang palengke?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Pasar ke arah mana", "Where is the market?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("nar-sar-an-ang-hin-tu-an-nang-boos","","Tempat berhenti kereta ke arah mana","Where is the car rest area?","Nasaan ang hintuan ng bus?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Tempat berhenti kereta ke arah mana", "Where is the car rest area?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("nar-sar-an-ang-him-pi-lan-nang-pu-lis","","Balai polis ke arah mana","Where is the police station?","Nasaan ang himpilan ng pulis?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Balai polis ke arah mana", "Where is the police station?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("nar-sar-an-ang-chek-poit-nang-pu-lis","","Pondok polis ke arah mana","Where is the police booth?","Nasaan ang checkpoint ng pulis?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Pondok polis ke arah mana", "Where is the police booth?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("nar-sar-an-ang-lu-gar-rar-pang-par-lit-nang-pey-rar","","Kedai pengurup ke arah mana","Where is the exchange bureau?","Nasaan ang lugar pang palit ng pera?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Kedai pengurup ke arah mana", "Where is the exchange bureau?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("nar-sar-an-ang-pu-ey-rer-to","","Pelabuhan ke arah mana","Where is the pier?","Nasaan ang puerto?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Pelabuhan ke arah mana", "Where is the pier?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("nar-sar-an-ang-bo-dey-gar","","Stor / Gudang barang dagangan ke arah mana","Where is the warehouse?","Nasaan ang bodega?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Stor / Gudang barang dagangan ke arah mana", "Where is the warehouse?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
     }
 
     public void loadMalaysiaToVietnam(){
         ArrayList<Child> childList = new ArrayList<Child>();
-        Child child = new Child("ไทย","ไทย","ไทย","ไทย","ไทย",null,null);
+        childList = new ArrayList<Child>();
+        child = new Child("fong-way-sin-dee-loi-now","","Tandas ke arah  mana","Where is the toilet?","phòng vệ sinh đi lối nào",null,null);
+        child.setSoundPath(-1);
         childList.add(child);
 
-        GroupHeader groupHeader = new GroupHeader("Malaysia","Vietnam",childList);
+        groupHeader = new GroupHeader("Tandas ke arah  mana", "Where is the toilet?", childList);
         groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("fong-tum-dee-loi-now","","Bilik mandi  ke arah mana","Where is the bathroom?","phòng tắm đi lối nào",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Bilik mandi  ke arah mana", "Where is the bathroom?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("tiam-un-dee-loi-now","","Restoran ke arah mana","Where is the restaurant?","tiệm ăn đi lối nào",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Restoran ke arah mana", "Where is the restaurant?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("keur-tiam-dee-loi-now","","Kedai ke arah mana","Where is the shop?","cửa tiệm đi lối nào",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Kedai ke arah mana", "Where is the shop?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ka-ra-suea-sae-dee-loi-now","","Bengkel kereta ke arah mana","Where is the garage?","ga ra sửa xe đi lối nào",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Bengkel kereta ke arah mana", "Where is the garage?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("beng-wien-dee-loi-now","","Hospital ke arah mana","Where is the hospital?","bệnh viện đi lối nào?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Hospital ke arah mana", "Where is the hospital?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("fong-mug-dee-loi-now","","Klinik ke arah mana","Where is the clinic?","phòng mạch đi lối nào?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Klinik ke arah mana", "Where is the clinic?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("tiam-thuak-tuai-dee-loi-now","","Kedai ubat ke arah mana","Where is the pharmacy?","tiệm thuốc  tây đi lối nào?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Kedai ubat ke arah mana", "Where is the pharmacy?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("tram-sung-dee-loi-now","","Stesen minyak ke arah mana","Where is the gas station?","trạm xăng đi lối nào?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Stesen minyak ke arah mana", "Where is the gas station?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("Khuk-san-dee-loi-now","","Hotel ke arah mana","Where is the hotel?","khách sạn đi lối nào?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Hotel ke arah mana", "Where is the hotel?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("joe-dee-loi-now","","Pasar ke arah mana","Where is the market?","chợ đi lối nào?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Pasar ke arah mana", "Where is the market?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("noei-doe-sae-dee-loi-now","","Tempat berhenti kereta ke arah mana","Where is the car rest area?","nơi đậu xe đi lối nào?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Tempat berhenti kereta ke arah mana", "Where is the car rest area?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("don-kong-arn-dee-loi-now","","Balai polis ke arah mana","Where is the police station?","đồn công an đi lối nào?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Balai polis ke arah mana", "Where is the police station?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("Tram-kun-sard-dee-loi-now","","Pondok polis ke arah mana","Where is the police booth?","trạm cảnh sát đi lối nào?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Pondok polis ke arah mana", "Where is the police booth?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("Tram-doi-why-tay-dee-loi-now","","Kedai pengurup ke arah mana","Where is the exchange bureau?","trạm đổi ngoại tệ đi lối nào?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Kedai pengurup ke arah mana", "Where is the exchange bureau?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ben-toa-dee-loi-now","","Pelabuhan ke arah mana","Where is the pier?","bến tàu đi lối nào?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Pelabuhan ke arah mana", "Where is the pier?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("Khor-true-hang-dee-loi-now","","Stor / Gudang barang dagangan ke arah mana","Where is the warehouse?","kho trữ hàng đi lối nào?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Stor / Gudang barang dagangan ke arah mana", "Where is the warehouse?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
     }
 
     public void loadMyanmarToChina(){
         ArrayList<Child> childList = new ArrayList<Child>();
-        Child child = new Child("ไทย","ไทย","ไทย","ไทย","ไทย",null,null);
+        childList = new ArrayList<Child>();
+        child = new Child("see-sow-jian-jai-nar","","အိမ္သာဘယ္မွာရွိလဲ။","Where is the toilet?"," 洗手间在哪儿",null,null);
+        child.setSoundPath(-1);
         childList.add(child);
 
-        GroupHeader groupHeader = new GroupHeader("Myanmar","China",childList);
+        groupHeader = new GroupHeader("အိမ္သာဘယ္မွာရွိလဲ။", "Where is the toilet?", childList);
         groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ywii-seu-jai-nar","","ေရခ်ိဳးခန္းဘယ္မွာရွိလဲ။","Where is the bathroom?"," 浴室在哪儿",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("ေရခ်ိဳးခန္းဘယ္မွာရွိလဲ။", "Where is the bathroom?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("chun-thing-jai-nar","","စားေသာက္ဆိုင္ဘယ္မွာရွိလဲ။","Where is the restaurant?"," 餐厅在哪儿",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("စားေသာက္ဆိုင္ဘယ္မွာရွိလဲ။", "Where is the restaurant?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("sung-tian-jai-nar","","ေစ်းဆိုင္ဘယ္မွာရွိလဲ။","Where is the shop?"," 商店在哪儿",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("ေစ်းဆိုင္ဘယ္မွာရွိလဲ။", "Where is the shop?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("siw-cher-hang-jai-nar","","ကား၀ပ္ေရွာ့ဘယ္မွာရွိလဲ။","Where is the garage?"," 修车行在哪儿",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("ကား၀ပ္ေရွာ့ဘယ္မွာရွိလဲ။", "Where is the garage?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ee-awian-jai-nar","","ေဆးရွံဘယ္မွာရွိလဲ။","Where is the hospital?"," 医院在哪儿",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("ေဆးရွံဘယ္မွာရွိလဲ။", "Where is the hospital?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("jern-sua-jai-nar","","ေဆးခန္းဘယ္မွာရွိလဲ။","Where is the clinic?"," 诊所在哪儿",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("ေဆးခန္းဘယ္မွာရွိလဲ။", "Where is the clinic?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("yao-tian-jai-nar","","ေဆးဆိုင္ဘယ္မွာရွိလဲ။","Where is the pharmacy?"," 药店在哪儿",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("ေဆးဆိုင္ဘယ္မွာရွိလဲ။", "Where is the pharmacy?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("jia-yow-jun-jai-nar","","ဓာတ္ဆီဆိုင္ဘယ္မွာရွိလဲ။","Where is the gas station?"," 加油站在哪儿",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("ဓာတ္ဆီဆိုင္ဘယ္မွာရွိလဲ။", "Where is the gas station?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("fun-tian-jai-nar","","ဟိုတယ္ဘယ္မွာရွိလဲ။","Where is the hotel?"," 饭店在哪儿",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("ဟိုတယ္ဘယ္မွာရွိလဲ။", "Where is the hotel?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("seu-chang-jai-nar","","ေစ်းဘယ္မွာရွိလဲ။","Where is the market?"," 市场在哪儿",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("ေစ်းဘယ္မွာရွိလဲ။", "Where is the market?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("thing-cher-chang-jai-nar","","ကားရပ္တဲ့ေနရာဘယ္မွာရွိလဲ။","Where is the car rest area?"," 停车场在哪儿",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("ကားရပ္တဲ့ေနရာဘယ္မွာရွိလဲ။", "Where is the car rest area?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("jing-char-jwee-jai-nar","","ရဲစခန္းဘယ္မွာရွိလဲ။","Where is the police station?"," 警察局在哪儿",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("ရဲစခန္းဘယ္မွာရွိလဲ။", "Where is the police station?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("jing-char-kung-thing-jai-nar","","ရဲကင္းဘယ္မွာရွိလဲ။","Where is the police booth?","警察岗亭在哪儿",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("ရဲကင္းဘယ္မွာရွိလဲ။", "Where is the police booth?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("hwor-pee-toy-huan-choo-jai-nar","","ႏွစ္ႏိုင္ငံေငြလဲတဲ့ေနရာဘယ္မွာရွိလဲ။","Where is the exchange bureau?"," 货币兑换处在哪儿",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("ႏွစ္ႏိုင္ငံေငြလဲတဲ့ေနရာဘယ္မွာရွိလဲ။", "Where is the exchange bureau?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ma-thow-jai-nar","","ဆိပ္ကမ္းဘယ္မွာရွိလဲ။","Where is the pier?"," 码头在哪儿",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("ဆိပ္ကမ္းဘယ္မွာရွိလဲ။", "Where is the pier?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("chang-khoo-jai-nar","","ကုန္ရံုဘယ္မွာရွိလဲ။","Where is the warehouse?"," 仓库在哪儿",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("ကုန္ရံုဘယ္မွာရွိလဲ။", "Where is the warehouse?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
     }
 
     public void loadMyanmarToThai(){
         ArrayList<Child> childList = new ArrayList<Child>();
-        Child child = new Child("ไทย","ไทย","ไทย","ไทย","ไทย",null,null);
+        childList = new ArrayList<Child>();
+        child = new Child("hongnam-pai-thang-nai","","အိမ္သာဘယ္မွာရွိလဲ။","Where is the toilet?","ห้องน้ำไปทางไหน",null,null);
+        child.setSoundPath(-1);
         childList.add(child);
 
-        GroupHeader groupHeader = new GroupHeader("Myanmar","Thai",childList);
+        groupHeader = new GroupHeader("အိမ္သာဘယ္မွာရွိလဲ။", "Where is the toilet?", childList);
         groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("hong-ap-nam-pai-thang-nai","","ေရခ်ိဳးခန္းဘယ္မွာရွိလဲ။","Where is the bathroom?","ห้องอาบน้ำไปทางไหน",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("ေရခ်ိဳးခန္းဘယ္မွာရွိလဲ။", "Where is the bathroom?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ran-ar-han-pai-thang-nai","","စားေသာက္ဆိုင္ဘယ္မွာရွိလဲ။","Where is the restaurant?","ร้านอาหารไปทางไหน",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("စားေသာက္ဆိုင္ဘယ္မွာရွိလဲ။", "Where is the restaurant?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ran-kha-pai-thang-nai","","ေစ်းဆိုင္ဘယ္မွာရွိလဲ။","Where is the shop?","ร้านค้าไปทางไหน",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("ေစ်းဆိုင္ဘယ္မွာရွိလဲ။", "Where is the shop?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("au-som-rot-pai-thang-nai","","ကား၀ပ္ေရွာ့ဘယ္မွာရွိလဲ။","Where is the garage?","อู่ซ่อมรถไปทางไหน",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("ကား၀ပ္ေရွာ့ဘယ္မွာရွိလဲ။", "Where is the garage?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("rong-pha-ya-ban-pai-thang-nai","","ေဆးရွံဘယ္မွာရွိလဲ။","Where is the hospital?","โรงพยาบาลไปทางไหน",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("ေဆးရွံဘယ္မွာရွိလဲ။", "Where is the hospital?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("clinic-pai-thang-nai","","ေဆးခန္းဘယ္မွာရွိလဲ။","Where is the clinic?","คลินิกไปทางไหน",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("ေဆးခန္းဘယ္မွာရွိလဲ။", "Where is the clinic?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ran-khai-ya-pai-thang-nai","","ေဆးဆိုင္ဘယ္မွာရွိလဲ။","Where is the pharmacy?","ร้านขายยาไปทางไหน",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("ေဆးဆိုင္ဘယ္မွာရွိလဲ။", "Where is the pharmacy?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("pam-nam-man-pai-thang-nai","","ဓာတ္ဆီဆိုင္ဘယ္မွာရွိလဲ။","Where is the gas station?","ปั๊มน้ำมันไปทางไหน",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("ဓာတ္ဆီဆိုင္ဘယ္မွာရွိလဲ။", "Where is the gas station?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("rong-raem-pai-thang-nai","","ဟိုတယ္ဘယ္မွာရွိလဲ။","Where is the hotel?","โรงแรมไปทางไหน",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("ဟိုတယ္ဘယ္မွာရွိလဲ။", "Where is the hotel?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("talad-pai-thang-nai","","ေစ်းဘယ္မွာရွိလဲ။","Where is the market?","ตลาดไปทางไหน",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("ေစ်းဘယ္မွာရွိလဲ။", "Where is the market?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("chut-phak-rod-pai-thang-nai","","ကားရပ္တဲ့ေနရာဘယ္မွာရွိလဲ။","Where is the car rest area?","จุดพักรถไปทางไหน",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("ကားရပ္တဲ့ေနရာဘယ္မွာရွိလဲ။", "Where is the car rest area?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("sa-tha-ni-tam-ruat-pai-thang-nai","","ရဲစခန္းဘယ္မွာရွိလဲ။","Where is the police station?","สถานีตำรวจไปทางไหน",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("ရဲစခန္းဘယ္မွာရွိလဲ။", "Where is the police station?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("pom-tam-ruat-pai-thang-nai","","ရဲကင္းဘယ္မွာရွိလဲ။","Where is the police booth?","ป้อมตำรวจไปทางไหน",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("ရဲကင္းဘယ္မွာရွိလဲ။", "Where is the police booth?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("sa-than-thi-laek-ngoen-ra-wang-pra-thet-pai-thang-nai","","ႏွစ္ႏိုင္ငံေငြလဲတဲ့ေနရာဘယ္မွာရွိလဲ။","Where is the exchange bureau?","สถานที่แลกเงินระหว่างประเทศไปทางไหน",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("ႏွစ္ႏိုင္ငံေငြလဲတဲ့ေနရာဘယ္မွာရွိလဲ။", "Where is the exchange bureau?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("tha-ruea-pai-thang-nai","","ဆိပ္ကမ္းဘယ္မွာရွိလဲ။","Where is the pier?","ท่าเรือไปทางไหน",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("ဆိပ္ကမ္းဘယ္မွာရွိလဲ။", "Where is the pier?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ko-dang-phak-sinkha-pai-thang-nai","","ကုန္ရံုဘယ္မွာရွိလဲ။","Where is the warehouse?","โกดังพักสินค้าไปทางไหน",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("ကုန္ရံုဘယ္မွာရွိလဲ။", "Where is the warehouse?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
     }
 
     public void loadMyanmarToBrunei(){
         ArrayList<Child> childList = new ArrayList<Child>();
-        Child child = new Child("ไทย","ไทย","ไทย","ไทย","ไทย",null,null);
+        childList = new ArrayList<Child>();
+        child = new Child("tun-das-ger-ar-rah-ma-na","","အိမ္သာဘယ္မွာရွိလဲ။","Where is the toilet?","Tandas ke arah  mana",null,null);
+        child.setSoundPath(-1);
         childList.add(child);
 
-        GroupHeader groupHeader = new GroupHeader("Myanmar","Brunei",childList);
+        groupHeader = new GroupHeader("အိမ္သာဘယ္မွာရွိလဲ။", "Where is the toilet?", childList);
         groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("bee-lik-mun-dee-ger-ar-rah-ma-na","","ေရခ်ိဳးခန္းဘယ္မွာရွိလဲ။","Where is the bathroom?","Bilik mandi  ke arah mana",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("ေရခ်ိဳးခန္းဘယ္မွာရွိလဲ။", "Where is the bathroom?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("res-to-run-ger-ar-rah-ma-na","","စားေသာက္ဆိုင္ဘယ္မွာရွိလဲ။","Where is the restaurant?","Restoran ke arah mana",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("စားေသာက္ဆိုင္ဘယ္မွာရွိလဲ။", "Where is the restaurant?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ger-dai-ger-ar-rah-ma-na","","ေစ်းဆိုင္ဘယ္မွာရွိလဲ။","Where is the shop?","Kedai ke arah mana",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("ေစ်းဆိုင္ဘယ္မွာရွိလဲ။", "Where is the shop?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("beng-gail-ger-ray-ta-ger-ar-rah-ma-na","","ကား၀ပ္ေရွာ့ဘယ္မွာရွိလဲ။","Where is the garage?","Bengkel kereta ke arah mana",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("ကား၀ပ္ေရွာ့ဘယ္မွာရွိလဲ။", "Where is the garage?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("hos-pi-tal-ger-ar-rah-ma-na","","ေဆးရွံဘယ္မွာရွိလဲ။","Where is the hospital?","Hospital ke arah mana",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("ေဆးရွံဘယ္မွာရွိလဲ။", "Where is the hospital?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("glee-nik-ger-ar-rah-ma-na","","ေဆးခန္းဘယ္မွာရွိလဲ။","Where is the clinic?","Klinik ke arah mana",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("ေဆးခန္းဘယ္မွာရွိလဲ။", "Where is the clinic?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ger-dai-oo-bud-ger-ar-rah-ma-na","","ေဆးဆိုင္ဘယ္မွာရွိလဲ။","Where is the pharmacy?","Kedai ubat ke arah mana",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("ေဆးဆိုင္ဘယ္မွာရွိလဲ။", "Where is the pharmacy?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("stay-sen-mee-yuk-ger-ar-rah-ma-na","","ဓာတ္ဆီဆိုင္ဘယ္မွာရွိလဲ။","Where is the gas station?","Stesen minyak ke arah mana",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("ဓာတ္ဆီဆိုင္ဘယ္မွာရွိလဲ။", "Where is the gas station?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ho-tel-ger-ar-rah-ma-na","","ဟိုတယ္ဘယ္မွာရွိလဲ။","Where is the hotel?","Hotel ke arah mana",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("ဟိုတယ္ဘယ္မွာရွိလဲ။", "Where is the hotel?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("pa-sul-ger-ar-rah-ma-na","","ေစ်းဘယ္မွာရွိလဲ။","Where is the market?","Pasar ke arah mana",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("ေစ်းဘယ္မွာရွိလဲ။", "Where is the market?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("term-pud-bern-hern-tee-ger-ray-ta-ger-ar-rah-ma-na","","ကားရပ္တဲ့ေနရာဘယ္မွာရွိလဲ။","Where is the car rest area?","Tempat berhenti kereta ke arah mana",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("ကားရပ္တဲ့ေနရာဘယ္မွာရွိလဲ။", "Where is the car rest area?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ba-lai-po-lis-ger-ar-rah-ma-na","","ရဲစခန္းဘယ္မွာရွိလဲ။","Where is the police station?","Balai polis ke arah mana",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("ရဲစခန္းဘယ္မွာရွိလဲ။", "Where is the police station?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("pone-doke-po-lis-ger-ar-rah-ma-na","","ရဲကင္းဘယ္မွာရွိလဲ။","Where is the police booth?","Pondok polis ke arah mana",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("ရဲကင္းဘယ္မွာရွိလဲ။", "Where is the police booth?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ger-dai-per-ngoo-roop-ger-ar-rah-ma-na","","ႏွစ္ႏိုင္ငံေငြလဲတဲ့ေနရာဘယ္မွာရွိလဲ။","Where is the exchange bureau?","Kedai pengurup ke arah mana",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("ႏွစ္ႏိုင္ငံေငြလဲတဲ့ေနရာဘယ္မွာရွိလဲ။", "Where is the exchange bureau?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("per-la-boo-hun-ger-ar-rah-ma-na","","ဆိပ္ကမ္းဘယ္မွာရွိလဲ။","Where is the pier?","Pelabuhan ke arah mana",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("ဆိပ္ကမ္းဘယ္မွာရွိလဲ။", "Where is the pier?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("sto/ koo-dung-ba-rung-da-ka-ngun-ger-ar-rah-ma-na","","ကုန္ရံုဘယ္မွာရွိလဲ။","Where is the warehouse?","Stor / Gudang barang dagangan ke arah mana",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("ကုန္ရံုဘယ္မွာရွိလဲ။", "Where is the warehouse?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
     }
 
     public void loadMyanmarToCambodia(){
         ArrayList<Child> childList = new ArrayList<Child>();
-        Child child = new Child("ไทย","ไทย","ไทย","ไทย","ไทย",null,null);
+        childList = new ArrayList<Child>();
+        child = new Child("bon-toop-tuek-tuew-khang-na","","အိမ္သာဘယ္မွာရွိလဲ။","Where is the toilet?","  បន្ទប់ទឹកទៅខាងណា?",null,null);
+        child.setSoundPath(-1);
         childList.add(child);
 
-        GroupHeader groupHeader = new GroupHeader("Myanmar","Cambodia",childList);
+        groupHeader = new GroupHeader("အိမ္သာဘယ္မွာရွိလဲ။", "Where is the toilet?", childList);
         groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("bon-toop-ngood-tuek-tuew -khang-na","","ေရခ်ိဳးခန္းဘယ္မွာရွိလဲ။","Where is the bathroom?"," បន្ទប់ងូតទឹកទៅខាងណា?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("ေရခ်ိဳးခန္းဘယ္မွာရွိလဲ။", "Where is the bathroom?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("hang-bai-tuew-khang-na","","စားေသာက္ဆိုင္ဘယ္မွာရွိလဲ။","Where is the restaurant?","ហាងបាយទៅខាងណា?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("စားေသာက္ဆိုင္ဘယ္မွာရွိလဲ။", "Where is the restaurant?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("hang-luah-dough-tuew-khang-na","","ေစ်းဆိုင္ဘယ္မွာရွိလဲ။","Where is the shop?"," ហាងលក់ដូរទៅខាងណា?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("ေစ်းဆိုင္ဘယ္မွာရွိလဲ။", "Where is the shop?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("yian-than-juah-joon-lan-tuew-khang-na","","ကား၀ပ္ေရွာ့ဘယ္မွာရွိလဲ။","Where is the garage?","មន្ទីរពេទ្យទៅខាងណា?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("ကား၀ပ္ေရွာ့ဘယ္မွာရွိလဲ။", "Where is the garage?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("muan-tee-paed-teuw-khang-na","","ေဆးရွံဘယ္မွာရွိလဲ။","Where is the hospital?","គ្លីនិកទៅខាងណា?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("ေဆးရွံဘယ္မွာရွိလဲ။", "Where is the hospital?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("klee-nik-tuew-khang-na","","ေဆးခန္းဘယ္မွာရွိလဲ။","Where is the clinic?"," ហ្វាម៉ាស៊ីទៅខាងណា?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("ေဆးခန္းဘယ္မွာရွိလဲ။", "Where is the clinic?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("fa-ma-see-tuew-khang-na","","ေဆးဆိုင္ဘယ္မွာရွိလဲ။","Where is the pharmacy?","ស្ថានីយ៍ប្រេងឥន្ទនៈទៅខាងណា?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("ေဆးဆိုင္ဘယ္မွာရွိလဲ။", "Where is the pharmacy?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("stha-nee-preng-in-ta-niah- tuew-khang-na","","ဓာတ္ဆီဆိုင္ဘယ္မွာရွိလဲ။","Where is the gas station?","សណ្ឋាគារទៅខាងណា?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("ဓာတ္ဆီဆိုင္ဘယ္မွာရွိလဲ။", "Where is the gas station?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("son-tha-gia-tuew-khang-na","","ဟိုတယ္ဘယ္မွာရွိလဲ။","Where is the hotel?","ផ្សារទៅខាងណា?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("ဟိုတယ္ဘယ္မွာရွိလဲ။", "Where is the hotel?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("psa-tuew-khang-na","","ေစ်းဘယ္မွာရွိလဲ။","Where is the market?","កន្លែងឈប់ឡានទៅខាងណា?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("ေစ်းဘယ္မွာရွိလဲ။", "Where is the market?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("gon-laeng-choop- larn- tuew-khang- na","","ကားရပ္တဲ့ေနရာဘယ္မွာရွိလဲ။","Where is the car rest area?"," ប៉ុស្តិ៍ប៉ូលីសទៅខាងណា?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("ကားရပ္တဲ့ေနရာဘယ္မွာရွိလဲ။", "Where is the car rest area?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("poh-po-leas-tuew-khang-na","","ရဲစခန္းဘယ္မွာရွိလဲ။","Where is the police station?","កន្លែងប៉ុស្តិ៍យាមប៉ូលីសទៅខាង ណា?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("ရဲစခန္းဘယ္မွာရွိလဲ။", "Where is the police station?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("gon-laeng-poh-yiam-po-leas-tuew- khang-na","","ရဲကင္းဘယ္မွာရွိလဲ။","Where is the police booth?","កន្លែងដូរលុយបរទេសទៅខាងណា?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("ရဲကင္းဘယ္မွာရွိလဲ။", "Where is the police booth?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("gon-laeng-dough-luy-bor-ra-teh- tuew- khang-na","","ႏွစ္ႏိုင္ငံေငြလဲတဲ့ေနရာဘယ္မွာရွိလဲ။","Where is the exchange bureau?","កំពង់ផែទៅខាងណា?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("ႏွစ္ႏိုင္ငံေငြလဲတဲ့ေနရာဘယ္မွာရွိလဲ။", "Where is the exchange bureau?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("gom-puang-phae-tuew-khang-na","","ဆိပ္ကမ္းဘယ္မွာရွိလဲ။","Where is the pier?"," ឃ្លាំងសម្រាប់ដាក់ឥវ៉ាន់ទៅខាងណា?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("ဆိပ္ကမ္းဘယ္မွာရွိလဲ။", "Where is the pier?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("kliang-som-rub-dah-uai-wun-tuew-khang-na","","ကုန္ရံုဘယ္မွာရွိလဲ။","Where is the warehouse?"," ជួយផង ខ្ញុំត្រូវចោរប្លន់",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("ကုန္ရံုဘယ္မွာရွိလဲ။", "Where is the warehouse?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
     }
 
     public void loadMyanmarToIndonesia(){
         ArrayList<Child> childList = new ArrayList<Child>();
-        Child child = new Child("ไทย","ไทย","ไทย","ไทย","ไทย",null,null);
+        childList = new ArrayList<Child>();
+        child = new Child("dee-mar-nar-gar-mar-geu-jeel (toi-let)","","အိမ္သာဘယ္မွာရွိလဲ။","Where is the toilet?","Di mana kamar kecil (toilet) ?",null,null);
+        child.setSoundPath(-1);
         childList.add(child);
 
-        GroupHeader groupHeader = new GroupHeader("Myanmar","Indonesia",childList);
+        groupHeader = new GroupHeader("အိမ္သာဘယ္မွာရွိလဲ။", "Where is the toilet?", childList);
         groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("dee-mar-nar-gar-mar-man-dee","","ေရခ်ိဳးခန္းဘယ္မွာရွိလဲ။","Where is the bathroom?","Di mana kamar mandi ?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("ေရခ်ိဳးခန္းဘယ္မွာရွိလဲ။", "Where is the bathroom?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("dee-mar-nar-res-to-ran","","စားေသာက္ဆိုင္ဘယ္မွာရွိလဲ။","Where is the restaurant?","Di mana restoran ?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("စားေသာက္ဆိုင္ဘယ္မွာရွိလဲ။", "Where is the restaurant?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("dee-mar-nar-to-go","","ေစ်းဆိုင္ဘယ္မွာရွိလဲ။","Where is the shop?","Di mana toko ?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("ေစ်းဆိုင္ဘယ္မွာရွိလဲ။", "Where is the shop?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("dee-mar-nar beng-kel","","ကား၀ပ္ေရွာ့ဘယ္မွာရွိလဲ။","Where is the garage?","Di mana bengkel ?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("ကား၀ပ္ေရွာ့ဘယ္မွာရွိလဲ။", "Where is the garage?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("dee-mar-nar-ru-mah-sar-git","","ေဆးရွံဘယ္မွာရွိလဲ။","Where is the hospital?","Di mana rumah sakit ?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("ေဆးရွံဘယ္မွာရွိလဲ။", "Where is the hospital?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("dee-mar-nar-glee-nik","","ေဆးခန္းဘယ္မွာရွိလဲ။","Where is the clinic?","Di mana klinik ?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("ေဆးခန္းဘယ္မွာရွိလဲ။", "Where is the clinic?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("dee-mar-nar-ar-po-tek","","ေဆးဆိုင္ဘယ္မွာရွိလဲ။","Where is the pharmacy?","Di mana apotek ?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("ေဆးဆိုင္ဘယ္မွာရွိလဲ။", "Where is the pharmacy?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("dee-mar-nar-pom-par-ben-sin","","ဓာတ္ဆီဆိုင္ဘယ္မွာရွိလဲ။","Where is the gas station?","Di mana pompa bensin?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("ဓာတ္ဆီဆိုင္ဘယ္မွာရွိလဲ။", "Where is the gas station?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("dee-mar-nar-ho-tel","","ဟိုတယ္ဘယ္မွာရွိလဲ။","Where is the hotel?","Di mana hotel?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("ဟိုတယ္ဘယ္မွာရွိလဲ။", "Where is the hotel?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("dee-mar-nar-par-sar","","ေစ်းဘယ္မွာရွိလဲ။","Where is the market?","Di mana pasar ?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("ေစ်းဘယ္မွာရွိလဲ။", "Where is the market?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("dee-mar-nar-teum-pat-par-geer-mo-bil","","ကားရပ္တဲ့ေနရာဘယ္မွာရွိလဲ။","Where is the car rest area?","Di mana tempat parkir mobil ?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("ကားရပ္တဲ့ေနရာဘယ္မွာရွိလဲ။", "Where is the car rest area?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("dee-mar-nar-gan-to-po-lee-see","","ရဲစခန္းဘယ္မွာရွိလဲ။","Where is the police station?","Di mana kantor polisi ?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("ရဲစခန္းဘယ္မွာရွိလဲ။", "Where is the police station?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("dee-mar-nar-pos-po-lee-see","","ရဲကင္းဘယ္မွာရွိလဲ။","Where is the police booth?","Di mana pos polisi ?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("ရဲကင္းဘယ္မွာရွိလဲ။", "Where is the police booth?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("dee-mar-nar-teum-pat-tu-gar-u-wang","","ႏွစ္ႏိုင္ငံေငြလဲတဲ့ေနရာဘယ္မွာရွိလဲ။","Where is the exchange bureau?","Di mana tempat tukar uang?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("ႏွစ္ႏိုင္ငံေငြလဲတဲ့ေနရာဘယ္မွာရွိလဲ။", "Where is the exchange bureau?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("dee-mar-nar-der-mar-kar","","ဆိပ္ကမ္းဘယ္မွာရွိလဲ။","Where is the pier?","Di mana dermaga ?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("ဆိပ္ကမ္းဘယ္မွာရွိလဲ။", "Where is the pier?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("dee-mar-nar-ku-dang-seem-pan-bar-rang","","ကုန္ရံုဘယ္မွာရွိလဲ။","Where is the warehouse?","Di mana gudang simpan barang?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("ကုန္ရံုဘယ္မွာရွိလဲ။", "Where is the warehouse?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
     }
 
     public void loadMyanmarToMalaysia(){
         ArrayList<Child> childList = new ArrayList<Child>();
-        Child child = new Child("ไทย","ไทย","ไทย","ไทย","ไทย",null,null);
+        childList = new ArrayList<Child>();
+        child = new Child("tun-das-ger-ar-rah-ma-na","","အိမ္သာဘယ္မွာရွိလဲ။","Where is the toilet?","Tandas ke arah  mana",null,null);
+        child.setSoundPath(-1);
         childList.add(child);
 
-        GroupHeader groupHeader = new GroupHeader("Myanmar","Indonesia",childList);
+        groupHeader = new GroupHeader("အိမ္သာဘယ္မွာရွိလဲ။", "Where is the toilet?", childList);
         groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("bee-lik-mun-dee-ger-ar-rah-ma-na","","ေရခ်ိဳးခန္းဘယ္မွာရွိလဲ။","Where is the bathroom?","Bilik mandi  ke arah mana",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("ေရခ်ိဳးခန္းဘယ္မွာရွိလဲ။", "Where is the bathroom?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("res-to-run-ger-ar-rah-ma-na","","စားေသာက္ဆိုင္ဘယ္မွာရွိလဲ။","Where is the restaurant?","Restoran ke arah mana",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("စားေသာက္ဆိုင္ဘယ္မွာရွိလဲ။", "Where is the restaurant?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ger-dai-ger-ar-rah-ma-na","","ေစ်းဆိုင္ဘယ္မွာရွိလဲ။","Where is the shop?","Kedai ke arah mana",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("ေစ်းဆိုင္ဘယ္မွာရွိလဲ။", "Where is the shop?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("beng-gail-ger-ray-ta-ger-ar-rah-ma-na","","ကား၀ပ္ေရွာ့ဘယ္မွာရွိလဲ။","Where is the garage?","Bengkel kereta ke arah mana",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("ကား၀ပ္ေရွာ့ဘယ္မွာရွိလဲ။", "Where is the garage?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("hos-pi-tal-ger-ar-rah-ma-na","","ေဆးရွံဘယ္မွာရွိလဲ။","Where is the hospital?","Hospital ke arah mana",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("ေဆးရွံဘယ္မွာရွိလဲ။", "Where is the hospital?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("glee-nik-ger-ar-rah-ma-na","","ေဆးခန္းဘယ္မွာရွိလဲ။","Where is the clinic?","Klinik ke arah mana",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("ေဆးခန္းဘယ္မွာရွိလဲ။", "Where is the clinic?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ger-dai-oo-bud-ger-ar-rah-ma-na","","ေဆးဆိုင္ဘယ္မွာရွိလဲ။","Where is the pharmacy?","Kedai ubat ke arah mana",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("ေဆးဆိုင္ဘယ္မွာရွိလဲ။", "Where is the pharmacy?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("stay-sen-mee-yuk-ger-ar-rah-ma-na","","ဓာတ္ဆီဆိုင္ဘယ္မွာရွိလဲ။","Where is the gas station?","Stesen minyak ke arah mana",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("ဓာတ္ဆီဆိုင္ဘယ္မွာရွိလဲ။", "Where is the gas station?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ho-tel-ger-ar-rah-ma-na","","ဟိုတယ္ဘယ္မွာရွိလဲ။","Where is the hotel?","Hotel ke arah mana",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("ဟိုတယ္ဘယ္မွာရွိလဲ။", "Where is the hotel?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("pa-sul-ger-ar-rah-ma-na","","ေစ်းဘယ္မွာရွိလဲ။","Where is the market?","Pasar ke arah mana",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("ေစ်းဘယ္မွာရွိလဲ။", "Where is the market?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("term-pud-bern-hern-tee-ger-ray-ta-ger-ar-rah-ma-na","","ကားရပ္တဲ့ေနရာဘယ္မွာရွိလဲ။","Where is the car rest area?","Tempat berhenti kereta ke arah mana",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("ကားရပ္တဲ့ေနရာဘယ္မွာရွိလဲ။", "Where is the car rest area?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ba-lai-po-lis-ger-ar-rah-ma-na","","ရဲစခန္းဘယ္မွာရွိလဲ။","Where is the police station?","Balai polis ke arah mana",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("ရဲစခန္းဘယ္မွာရွိလဲ။", "Where is the police station?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("pone-doke-po-lis-ger-ar-rah-ma-na","","ရဲကင္းဘယ္မွာရွိလဲ။","Where is the police booth?","Pondok polis ke arah mana",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("ရဲကင္းဘယ္မွာရွိလဲ။", "Where is the police booth?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ger-dai-per-ngoo-roop-ger-ar-rah-ma-na","","ႏွစ္ႏိုင္ငံေငြလဲတဲ့ေနရာဘယ္မွာရွိလဲ။","Where is the exchange bureau?","Kedai pengurup ke arah mana",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("ႏွစ္ႏိုင္ငံေငြလဲတဲ့ေနရာဘယ္မွာရွိလဲ။", "Where is the exchange bureau?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("per-la-boo-hun-ger-ar-rah-ma-na","","ဆိပ္ကမ္းဘယ္မွာရွိလဲ။","Where is the pier?","Pelabuhan ke arah mana",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("ဆိပ္ကမ္းဘယ္မွာရွိလဲ။", "Where is the pier?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("sto/ koo-dung-ba-rung-da-ka-ngun-ger-ar-rah-ma-na","","ကုန္ရံုဘယ္မွာရွိလဲ။","Where is the warehouse?","Stor / Gudang barang dagangan ke arah mana",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("ကုန္ရံုဘယ္မွာရွိလဲ။", "Where is the warehouse?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
     }
 
     public void loadMyanmarToMyanmar(){
         ArrayList<Child> childList = new ArrayList<Child>();
-        Child child = new Child("ไทย","ไทย","ไทย","ไทย","ไทย",null,null);
+        childList = new ArrayList<Child>();
+        child = new Child("eng-ta-bae-ma-shi-lae","","အိမ္သာဘယ္မွာရွိလဲ။","Where is the toilet?","",null,null);
+        child.setSoundPath(-1);
         childList.add(child);
 
-        GroupHeader groupHeader = new GroupHeader("Myanmar","Myanmar",childList);
+        groupHeader = new GroupHeader("အိမ္သာဘယ္မွာရွိလဲ။", "Where is the toilet?", childList);
         groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ye-show-kan-bae-ma-shi- lae","","ေရခ်ိဳးခန္းဘယ္မွာရွိလဲ။","Where is the bathroom?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("ေရခ်ိဳးခန္းဘယ္မွာရွိလဲ။", "Where is the bathroom?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("sa-taw-sai-bae-ma-shi- lae","","စားေသာက္ဆိုင္ဘယ္မွာရွိလဲ။","Where is the restaurant?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("စားေသာက္ဆိုင္ဘယ္မွာရွိလဲ။", "Where is the restaurant?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("se-sai-bae-ma-shi-lae","","ေစ်းဆိုင္ဘယ္မွာရွိလဲ။","Where is the shop?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("ေစ်းဆိုင္ဘယ္မွာရွိလဲ။", "Where is the shop?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ka-wa-choh-bae-ma-shi- lae","","ကား၀ပ္ေရွာ့ဘယ္မွာရွိလဲ။","Where is the garage?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("ကား၀ပ္ေရွာ့ဘယ္မွာရွိလဲ။", "Where is the garage?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("se-yong-bae-ma-shi-lae","","ေဆးရွံဘယ္မွာရွိလဲ။","Where is the hospital?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("ေဆးရွံဘယ္မွာရွိလဲ။", "Where is the hospital?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("se-kan-bae-ma-shi-lae","","ေဆးခန္းဘယ္မွာရွိလဲ။","Where is the clinic?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("ေဆးခန္းဘယ္မွာရွိလဲ။", "Where is the clinic?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("se-sai-bae-ma-shi-lae","","ေဆးဆိုင္ဘယ္မွာရွိလဲ။","Where is the pharmacy?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("ေဆးဆိုင္ဘယ္မွာရွိလဲ။", "Where is the pharmacy?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("dat-see-sai-bae-ma-shi- lae","","ဓာတ္ဆီဆိုင္ဘယ္မွာရွိလဲ။","Where is the gas station?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("ဓာတ္ဆီဆိုင္ဘယ္မွာရွိလဲ။", "Where is the gas station?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("hoe-tae-bae-ma-shi-lae","","ဟိုတယ္ဘယ္မွာရွိလဲ။","Where is the hotel?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("ဟိုတယ္ဘယ္မွာရွိလဲ။", "Where is the hotel?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("se-bae-ma-shi-lae","","ေစ်းဘယ္မွာရွိလဲ။","Where is the market?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("ေစ်းဘယ္မွာရွိလဲ။", "Where is the market?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ka-yat-daeh-ne-ya-bae-ma-shi-lae","","ကားရပ္တဲ့ေနရာဘယ္မွာရွိလဲ။","Where is the car rest area?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("ကားရပ္တဲ့ေနရာဘယ္မွာရွိလဲ။", "Where is the car rest area?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("yae-sa-khan-bae-ma-shi- lae","","ရဲစခန္းဘယ္မွာရွိလဲ။","Where is the police station?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("ရဲစခန္းဘယ္မွာရွိလဲ။", "Where is the police station?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("yae-ging-bae-ma-shi-lae","","ရဲကင္းဘယ္မွာရွိလဲ။","Where is the police booth?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("ရဲကင္းဘယ္မွာရွိလဲ။", "Where is the police booth?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("na-nai-ngan-ngwe-lae-daeh-ne-ya-bae-ma-shi-lae","","ႏွစ္ႏိုင္ငံေငြလဲတဲ့ေနရာဘယ္မွာရွိလဲ။","Where is the exchange bureau?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("ႏွစ္ႏိုင္ငံေငြလဲတဲ့ေနရာဘယ္မွာရွိလဲ။", "Where is the exchange bureau?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("seh-kan-bae-ma-shi-lae","","ဆိပ္ကမ္းဘယ္မွာရွိလဲ။","Where is the pier?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("ဆိပ္ကမ္းဘယ္မွာရွိလဲ။", "Where is the pier?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("kong -yong -bae -ma -shi -lae","","ကုန္ရံုဘယ္မွာရွိလဲ။","Where is the warehouse?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("ကုန္ရံုဘယ္မွာရွိလဲ။", "Where is the warehouse?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
     }
     public void loadMyanmarToPhilippines(){
         ArrayList<Child> childList = new ArrayList<Child>();
-        Child child = new Child("ไทย","ไทย","ไทย","ไทย","ไทย",null,null);
+        childList = new ArrayList<Child>();
+        child = new Child("nar-sar-an-ang-ban-yo","","အိမ္သာဘယ္မွာရွိလဲ။","Where is the toilet?","Nasaan ang banyo?",null,null);
+        child.setSoundPath(-1);
         childList.add(child);
 
-        GroupHeader groupHeader = new GroupHeader("Myanmar","Philippines",childList);
+        groupHeader = new GroupHeader("အိမ္သာဘယ္မွာရွိလဲ။", "Where is the toilet?", childList);
         groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("nar-sar-an-ang-par-li-gu-an","","ေရခ်ိဳးခန္းဘယ္မွာရွိလဲ။","Where is the bathroom?","Nasaan ang paliguan?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("ေရခ်ိဳးခန္းဘယ္မွာရွိလဲ။", "Where is the bathroom?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("nar-sar-an-ang-kar-rin-dey-ri-yar","","စားေသာက္ဆိုင္ဘယ္မွာရွိလဲ။","Where is the restaurant?","Nasaan ang carinderiya?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("စားေသာက္ဆိုင္ဘယ္မွာရွိလဲ။", "Where is the restaurant?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("nar-sar-an-ang-morl","","ေစ်းဆိုင္ဘယ္မွာရွိလဲ။","Where is the shop?","Nasaan ang mall?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("ေစ်းဆိုင္ဘယ္မွာရွိလဲ။", "Where is the shop?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("nar-sar-an-ang-gar-rar-hey","","ကား၀ပ္ေရွာ့ဘယ္မွာရွိလဲ။","Where is the garage?","Nasaan ang garahe?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("ကား၀ပ္ေရွာ့ဘယ္မွာရွိလဲ။", "Where is the garage?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("nar-sar-an-ang-os-pi-tal","","ေဆးရွံဘယ္မွာရွိလဲ။","Where is the hospital?","Nasaan ang ospital?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("ေဆးရွံဘယ္မွာရွိလဲ။", "Where is the hospital?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("nar-sar-an-ang-gli-nik","","ေဆးခန္းဘယ္မွာရွိလဲ။","Where is the clinic?","Nasaan ang klinik?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("ေဆးခန္းဘယ္မွာရွိလဲ။", "Where is the clinic?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("nar-sar-an-ang-bo-ti-gar","","ေဆးဆိုင္ဘယ္မွာရွိလဲ။","Where is the pharmacy?","Nasaan ang botika?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("ေဆးဆိုင္ဘယ္မွာရွိလဲ။", "Where is the pharmacy?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("nar-sar-an-ang-gar-so-li-nar-han","","ဓာတ္ဆီဆိုင္ဘယ္မွာရွိလဲ။","Where is the gas station?","Nasaan ang gasolinahan?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("ဓာတ္ဆီဆိုင္ဘယ္မွာရွိလဲ။", "Where is the gas station?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("nar-sar-an-ang-ho-tel","","ဟိုတယ္ဘယ္မွာရွိလဲ။","Where is the hotel?","Nasaan ang hotel?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("ဟိုတယ္ဘယ္မွာရွိလဲ။", "Where is the hotel?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("nar-sar-an-ang-par-leng-gey","","ေစ်းဘယ္မွာရွိလဲ။","Where is the market?","Nasaan ang palengke?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("ေစ်းဘယ္မွာရွိလဲ။", "Where is the market?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("nar-sar-an-ang-hin-tu-an-nang-boos","","ကားရပ္တဲ့ေနရာဘယ္မွာရွိလဲ။","Where is the car rest area?","Nasaan ang hintuan ng bus?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("ကားရပ္တဲ့ေနရာဘယ္မွာရွိလဲ။", "Where is the car rest area?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("nar-sar-an-ang-him-pi-lan-nang-pu-lis","","ရဲစခန္းဘယ္မွာရွိလဲ။","Where is the police station?","Nasaan ang himpilan ng pulis?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("ရဲစခန္းဘယ္မွာရွိလဲ။", "Where is the police station?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("nar-sar-an-ang-chek-poit-nang-pu-lis","","ရဲကင္းဘယ္မွာရွိလဲ။","Where is the police booth?","Nasaan ang checkpoint ng pulis?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("ရဲကင္းဘယ္မွာရွိလဲ။", "Where is the police booth?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("nar-sar-an-ang-lu-gar-rar-pang-par-lit-nang-pey-rar","","ႏွစ္ႏိုင္ငံေငြလဲတဲ့ေနရာဘယ္မွာရွိလဲ။","Where is the exchange bureau?","Nasaan ang lugar pang palit ng pera?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("ႏွစ္ႏိုင္ငံေငြလဲတဲ့ေနရာဘယ္မွာရွိလဲ။", "Where is the exchange bureau?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("nar-sar-an-ang-pu-ey-rer-to","","ဆိပ္ကမ္းဘယ္မွာရွိလဲ။","Where is the pier?","Nasaan ang puerto?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("ဆိပ္ကမ္းဘယ္မွာရွိလဲ။", "Where is the pier?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("nar-sar-an-ang-bo-dey-gar","","ကုန္ရံုဘယ္မွာရွိလဲ။","Where is the warehouse?","Nasaan ang bodega?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("ကုန္ရံုဘယ္မွာရွိလဲ။", "Where is the warehouse?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
     }
 
     public void loadMyanmarToSingapore(){
         ArrayList<Child> childList = new ArrayList<Child>();
-        Child child = new Child("ไทย","ไทย","ไทย","ไทย","ไทย",null,null);
+        childList = new ArrayList<Child>();
+        child = new Child("ware-is-der-toi-let","","အိမ္သာဘယ္မွာရွိလဲ။","Where is the toilet?","",null,null);
+        child.setSoundPath(-1);
         childList.add(child);
 
-        GroupHeader groupHeader = new GroupHeader("Myanmar","Singapore",childList);
+        groupHeader = new GroupHeader("အိမ္သာဘယ္မွာရွိလဲ။", "Where is the toilet?", childList);
         groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ware -is-der-bat-room","","ေရခ်ိဳးခန္းဘယ္မွာရွိလဲ။","Where is the bathroom?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("ေရခ်ိဳးခန္းဘယ္မွာရွိလဲ။", "Where is the bathroom?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ware -is-der-res-ter-rong","","စားေသာက္ဆိုင္ဘယ္မွာရွိလဲ။","Where is the restaurant?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("စားေသာက္ဆိုင္ဘယ္မွာရွိလဲ။", "Where is the restaurant?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ware-is-der-chop","","ေစ်းဆိုင္ဘယ္မွာရွိလဲ။","Where is the shop?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("ေစ်းဆိုင္ဘယ္မွာရွိလဲ။", "Where is the shop?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ware-is-der-gar-rarch","","ကား၀ပ္ေရွာ့ဘယ္မွာရွိလဲ။","Where is the garage?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("ကား၀ပ္ေရွာ့ဘယ္မွာရွိလဲ။", "Where is the garage?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ware-is-der-hos-pi-tol","","ေဆးရွံဘယ္မွာရွိလဲ။","Where is the hospital?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("ေဆးရွံဘယ္မွာရွိလဲ။", "Where is the hospital?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ware-is-der-klee-nik","","ေဆးခန္းဘယ္မွာရွိလဲ။","Where is the clinic?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("ေဆးခန္းဘယ္မွာရွိလဲ။", "Where is the clinic?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ware-is-der-far-mar-see","","ေဆးဆိုင္ဘယ္မွာရွိလဲ။","Where is the pharmacy?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("ေဆးဆိုင္ဘယ္မွာရွိလဲ။", "Where is the pharmacy?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ware-is-der-gas-stey-chan","","ဓာတ္ဆီဆိုင္ဘယ္မွာရွိလဲ။","Where is the gas station?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("ဓာတ္ဆီဆိုင္ဘယ္မွာရွိလဲ။", "Where is the gas station?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ware-is-der-ho-tel","","ဟိုတယ္ဘယ္မွာရွိလဲ။","Where is the hotel?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("ဟိုတယ္ဘယ္မွာရွိလဲ။", "Where is the hotel?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ware-is-der-mar-ket","","ေစ်းဘယ္မွာရွိလဲ။","Where is the market?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("ေစ်းဘယ္မွာရွိလဲ။", "Where is the market?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ware-is-der-kar-res-ae-ria","","ကားရပ္တဲ့ေနရာဘယ္မွာရွိလဲ။","Where is the car rest area?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("ကားရပ္တဲ့ေနရာဘယ္မွာရွိလဲ။", "Where is the car rest area?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ware-is-der-po-lis-stey-chan","","ရဲစခန္းဘယ္မွာရွိလဲ။","Where is the police station?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("ရဲစခန္းဘယ္မွာရွိလဲ။", "Where is the police station?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ware-is-der-po-lis-boot","","ရဲကင္းဘယ္မွာရွိလဲ။","Where is the police booth?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("ရဲကင္းဘယ္မွာရွိလဲ။", "Where is the police booth?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ware-is-der-ex-chench-bio-ro","","ႏွစ္ႏိုင္ငံေငြလဲတဲ့ေနရာဘယ္မွာရွိလဲ။","Where is the exchange bureau?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("ႏွစ္ႏိုင္ငံေငြလဲတဲ့ေနရာဘယ္မွာရွိလဲ။", "Where is the exchange bureau?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ware-is-der-pia","","ဆိပ္ကမ္းဘယ္မွာရွိလဲ။","Where is the pier?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("ဆိပ္ကမ္းဘယ္မွာရွိလဲ။", "Where is the pier?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ware-is-der- ware-haus","","ကုန္ရံုဘယ္မွာရွိလဲ။","Where is the warehouse?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("ကုန္ရံုဘယ္မွာရွိလဲ။", "Where is the warehouse?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
     }
 
     public void loadMyanmarToVietnam(){
         ArrayList<Child> childList = new ArrayList<Child>();
-        Child child = new Child("ไทย","ไทย","ไทย","ไทย","ไทย",null,null);
+        childList = new ArrayList<Child>();
+        child = new Child("fong-way-sin-dee-loi-now","","အိမ္သာဘယ္မွာရွိလဲ။","Where is the toilet?","phòng vệ sinh đi lối nào",null,null);
+        child.setSoundPath(-1);
         childList.add(child);
 
-        GroupHeader groupHeader = new GroupHeader("Myanmar","Vietnam",childList);
+        groupHeader = new GroupHeader("အိမ္သာဘယ္မွာရွိလဲ။", "Where is the toilet?", childList);
         groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("fong-tum-dee-loi-now","","ေရခ်ိဳးခန္းဘယ္မွာရွိလဲ။","Where is the bathroom?","phòng tắm đi lối nào",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("ေရခ်ိဳးခန္းဘယ္မွာရွိလဲ။", "Where is the bathroom?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("tiam-un-dee-loi-now","","စားေသာက္ဆိုင္ဘယ္မွာရွိလဲ။","Where is the restaurant?","tiệm ăn đi lối nào",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("စားေသာက္ဆိုင္ဘယ္မွာရွိလဲ။", "Where is the restaurant?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("keur-tiam-dee-loi-now","","ေစ်းဆိုင္ဘယ္မွာရွိလဲ။","Where is the shop?","cửa tiệm đi lối nào",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("ေစ်းဆိုင္ဘယ္မွာရွိလဲ။", "Where is the shop?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ka-ra-suea-sae-dee-loi-now","","ကား၀ပ္ေရွာ့ဘယ္မွာရွိလဲ။","Where is the garage?","ga ra sửa xe đi lối nào",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("ကား၀ပ္ေရွာ့ဘယ္မွာရွိလဲ။", "Where is the garage?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("beng-wien-dee-loi-now","","ေဆးရွံဘယ္မွာရွိလဲ။","Where is the hospital?","bệnh viện đi lối nào?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("ေဆးရွံဘယ္မွာရွိလဲ။", "Where is the hospital?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("fong-mug-dee-loi-now","","ေဆးခန္းဘယ္မွာရွိလဲ။","Where is the clinic?","phòng mạch đi lối nào?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("ေဆးခန္းဘယ္မွာရွိလဲ။", "Where is the clinic?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("tiam-thuak-tuai-dee-loi-now","","ေဆးဆိုင္ဘယ္မွာရွိလဲ။","Where is the pharmacy?","tiệm thuốc  tây đi lối nào?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("ေဆးဆိုင္ဘယ္မွာရွိလဲ။", "Where is the pharmacy?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("tram-sung-dee-loi-now","","ဓာတ္ဆီဆိုင္ဘယ္မွာရွိလဲ။","Where is the gas station?","trạm xăng đi lối nào?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("ဓာတ္ဆီဆိုင္ဘယ္မွာရွိလဲ။", "Where is the gas station?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("Khuk-san-dee-loi-now","","ဟိုတယ္ဘယ္မွာရွိလဲ။","Where is the hotel?","khách sạn đi lối nào?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("ဟိုတယ္ဘယ္မွာရွိလဲ။", "Where is the hotel?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("joe-dee-loi-now","","ေစ်းဘယ္မွာရွိလဲ။","Where is the market?","chợ đi lối nào?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("ေစ်းဘယ္မွာရွိလဲ။", "Where is the market?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("noei-doe-sae-dee-loi-now","","ကားရပ္တဲ့ေနရာဘယ္မွာရွိလဲ။","Where is the car rest area?","nơi đậu xe đi lối nào?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("ကားရပ္တဲ့ေနရာဘယ္မွာရွိလဲ။", "Where is the car rest area?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("don-kong-arn-dee-loi-now","","ရဲစခန္းဘယ္မွာရွိလဲ။","Where is the police station?","đồn công an đi lối nào?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("ရဲစခန္းဘယ္မွာရွိလဲ။", "Where is the police station?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("Tram-kun-sard-dee-loi-now","","ရဲကင္းဘယ္မွာရွိလဲ။","Where is the police booth?","trạm cảnh sát đi lối nào?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("ရဲကင္းဘယ္မွာရွိလဲ။", "Where is the police booth?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("Tram-doi-why-tay-dee-loi-now","","ႏွစ္ႏိုင္ငံေငြလဲတဲ့ေနရာဘယ္မွာရွိလဲ။","Where is the exchange bureau?","trạm đổi ngoại tệ đi lối nào?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("ႏွစ္ႏိုင္ငံေငြလဲတဲ့ေနရာဘယ္မွာရွိလဲ။", "Where is the exchange bureau?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ben-toa-dee-loi-now","","ဆိပ္ကမ္းဘယ္မွာရွိလဲ။","Where is the pier?","bến tàu đi lối nào?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("ဆိပ္ကမ္းဘယ္မွာရွိလဲ။", "Where is the pier?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("Khor-true-hang-dee-loi-now","","ကုန္ရံုဘယ္မွာရွိလဲ။","Where is the warehouse?","kho trữ hàng đi lối nào?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("ကုန္ရံုဘယ္မွာရွိလဲ။", "Where is the warehouse?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
     }
 
     public void loadPhilippinesToChina(){
@@ -5111,29 +10481,422 @@ public class PlaceDAL {
 
     public void loadPhilippinesToThai(){
         ArrayList<Child> childList = new ArrayList<Child>();
-        Child child = new Child("ไทย","ไทย","ไทย","ไทย","ไทย",null,null);
+        childList = new ArrayList<Child>();
+        child = new Child("hongnam-pai-thang-nai","","Nasaan ang banyo?","Where is the toilet?","ห้องน้ำไปทางไหน",null,null);
+        child.setSoundPath(-1);
         childList.add(child);
 
-        GroupHeader groupHeader = new GroupHeader("Philippines","Thai",childList);
+        groupHeader = new GroupHeader("Nasaan ang banyo?", "Where is the toilet?", childList);
         groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("hong-ap-nam-pai-thang-nai","","Nasaan ang paliguan?","Where is the bathroom?","ห้องอาบน้ำไปทางไหน",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Nasaan ang paliguan?", "Where is the bathroom?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ran-ar-han-pai-thang-nai","","Nasaan ang carinderiya?","Where is the restaurant?","ร้านอาหารไปทางไหน",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Nasaan ang carinderiya?", "Where is the restaurant?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ran-kha-pai-thang-nai","","Nasaan ang mall?","Where is the shop?","ร้านค้าไปทางไหน",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Nasaan ang mall?", "Where is the shop?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("au-som-rot-pai-thang-nai","","Nasaan ang garahe?","Where is the garage?","อู่ซ่อมรถไปทางไหน",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Nasaan ang garahe?", "Where is the garage?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("rong-pha-ya-ban-pai-thang-nai","","Nasaan ang ospital?","Where is the hospital?","โรงพยาบาลไปทางไหน",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Nasaan ang ospital?", "Where is the hospital?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("clinic-pai-thang-nai","","Nasaan ang klinik?","Where is the clinic?","คลินิกไปทางไหน",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Nasaan ang klinik?", "Where is the clinic?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ran-khai-ya-pai-thang-nai","","Nasaan ang botika?","Where is the pharmacy?","ร้านขายยาไปทางไหน",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Nasaan ang botika?", "Where is the pharmacy?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("pam-nam-man-pai-thang-nai","","Nasaan ang gasolinahan?","Where is the gas station?","ปั๊มน้ำมันไปทางไหน",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Nasaan ang gasolinahan?", "Where is the gas station?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("rong-raem-pai-thang-nai","","Nasaan ang hotel?","Where is the hotel?","โรงแรมไปทางไหน",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Nasaan ang hotel?", "Where is the hotel?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("talad-pai-thang-nai","","Nasaan ang palengke?","Where is the market?","ตลาดไปทางไหน",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Nasaan ang palengke?", "Where is the market?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("chut-phak-rod-pai-thang-nai","","Nasaan ang hintuan ng bus?","Where is the car rest area?","จุดพักรถไปทางไหน",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Nasaan ang hintuan ng bus?", "Where is the car rest area?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("sa-tha-ni-tam-ruat-pai-thang-nai","","Nasaan ang himpilan ng pulis?","Where is the police station?","สถานีตำรวจไปทางไหน",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Nasaan ang himpilan ng pulis?", "Where is the police station?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("pom-tam-ruat-pai-thang-nai","","Nasaan ang checkpoint ng pulis?","Where is the police booth?","ป้อมตำรวจไปทางไหน",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Nasaan ang checkpoint ng pulis?", "Where is the police booth?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("sa-than-thi-laek-ngoen-ra-wang-pra-thet-pai-thang-nai","","Nasaan ang lugar pang palit ng pera?","Where is the exchange bureau?","สถานที่แลกเงินระหว่างประเทศไปทางไหน",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Nasaan ang lugar pang palit ng pera?", "Where is the exchange bureau?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("tha-ruea-pai-thang-nai","","Nasaan ang puerto?","Where is the pier?","ท่าเรือไปทางไหน",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Nasaan ang puerto?", "Where is the pier?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ko-dang-phak-sinkha-pai-thang-nai","","Nasaan ang bodega?","Where is the warehouse?","โกดังพักสินค้าไปทางไหน",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Nasaan ang bodega?", "Where is the warehouse?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
     }
 
     public void loadPhilippinesToBrunei(){
         ArrayList<Child> childList = new ArrayList<Child>();
-        Child child = new Child("ไทย","ไทย","ไทย","ไทย","ไทย",null,null);
+        childList = new ArrayList<Child>();
+        child = new Child("tun-das-ger-ar-rah-ma-na","","Nasaan ang banyo?","Where is the toilet?","Tandas ke arah  mana",null,null);
+        child.setSoundPath(-1);
         childList.add(child);
 
-        GroupHeader groupHeader = new GroupHeader("Philippines","Brunei",childList);
+        groupHeader = new GroupHeader("Nasaan ang banyo?", "Where is the toilet?", childList);
         groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("bee-lik-mun-dee-ger-ar-rah-ma-na","","Nasaan ang paliguan?","Where is the bathroom?","Bilik mandi  ke arah mana",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Nasaan ang paliguan?", "Where is the bathroom?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("res-to-run-ger-ar-rah-ma-na","","Nasaan ang carinderiya?","Where is the restaurant?","Restoran ke arah mana",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Nasaan ang carinderiya?", "Where is the restaurant?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ger-dai-ger-ar-rah-ma-na","","Nasaan ang mall?","Where is the shop?","Kedai ke arah mana",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Nasaan ang mall?", "Where is the shop?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("beng-gail-ger-ray-ta-ger-ar-rah-ma-na","","Nasaan ang garahe?","Where is the garage?","Bengkel kereta ke arah mana",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Nasaan ang garahe?", "Where is the garage?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("hos-pi-tal-ger-ar-rah-ma-na","","Nasaan ang ospital?","Where is the hospital?","Hospital ke arah mana",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Nasaan ang ospital?", "Where is the hospital?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("glee-nik-ger-ar-rah-ma-na","","Nasaan ang klinik?","Where is the clinic?","Klinik ke arah mana",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Nasaan ang klinik?", "Where is the clinic?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ger-dai-oo-bud-ger-ar-rah-ma-na","","Nasaan ang botika?","Where is the pharmacy?","Kedai ubat ke arah mana",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Nasaan ang botika?", "Where is the pharmacy?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("stay-sen-mee-yuk-ger-ar-rah-ma-na","","Nasaan ang gasolinahan?","Where is the gas station?","Stesen minyak ke arah mana",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Nasaan ang gasolinahan?", "Where is the gas station?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ho-tel-ger-ar-rah-ma-na","","Nasaan ang hotel?","Where is the hotel?","Hotel ke arah mana",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Nasaan ang hotel?", "Where is the hotel?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("pa-sul-ger-ar-rah-ma-na","","Nasaan ang palengke?","Where is the market?","Pasar ke arah mana",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Nasaan ang palengke?", "Where is the market?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("term-pud-bern-hern-tee-ger-ray-ta-ger-ar-rah-ma-na","","Nasaan ang hintuan ng bus?","Where is the car rest area?","Tempat berhenti kereta ke arah mana",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Nasaan ang hintuan ng bus?", "Where is the car rest area?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ba-lai-po-lis-ger-ar-rah-ma-na","","Nasaan ang himpilan ng pulis?","Where is the police station?","Balai polis ke arah mana",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Nasaan ang himpilan ng pulis?", "Where is the police station?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("pone-doke-po-lis-ger-ar-rah-ma-na","","Nasaan ang checkpoint ng pulis?","Where is the police booth?","Pondok polis ke arah mana",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Nasaan ang checkpoint ng pulis?", "Where is the police booth?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ger-dai-per-ngoo-roop-ger-ar-rah-ma-na","","Nasaan ang lugar pang palit ng pera?","Where is the exchange bureau?","Kedai pengurup ke arah mana",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Nasaan ang lugar pang palit ng pera?", "Where is the exchange bureau?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("per-la-boo-hun-ger-ar-rah-ma-na","","Nasaan ang puerto?","Where is the pier?","Pelabuhan ke arah mana",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Nasaan ang puerto?", "Where is the pier?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("sto/ koo-dung-ba-rung-da-ka-ngun-ger-ar-rah-ma-na","","Nasaan ang bodega?","Where is the warehouse?","Stor / Gudang barang dagangan ke arah mana",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Nasaan ang bodega?", "Where is the warehouse?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
     }
 
     public void loadPhilippinesToCambodia(){
         ArrayList<Child> childList = new ArrayList<Child>();
-        Child child = new Child("ไทย","ไทย","ไทย","ไทย","ไทย",null,null);
+        childList = new ArrayList<Child>();
+        child = new Child("bon-toop-tuek-tuew-khang-na","","Nasaan ang banyo?","Where is the toilet?","  បន្ទប់ទឹកទៅខាងណា?",null,null);
+        child.setSoundPath(-1);
         childList.add(child);
 
-        GroupHeader groupHeader = new GroupHeader("Philippines","Cambodia",childList);
+        groupHeader = new GroupHeader("Nasaan ang banyo?", "Where is the toilet?", childList);
         groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("bon-toop-ngood-tuek-tuew -khang-na","","Nasaan ang paliguan?","Where is the bathroom?"," បន្ទប់ងូតទឹកទៅខាងណា?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Nasaan ang paliguan?", "Where is the bathroom?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("hang-bai-tuew-khang-na","","Nasaan ang carinderiya?","Where is the restaurant?","ហាងបាយទៅខាងណា?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Nasaan ang carinderiya?", "Where is the restaurant?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("hang-luah-dough-tuew-khang-na","","Nasaan ang mall?","Where is the shop?"," ហាងលក់ដូរទៅខាងណា?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Nasaan ang mall?", "Where is the shop?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("yian-than-juah-joon-lan-tuew-khang-na","","Nasaan ang garahe?","Where is the garage?","មន្ទីរពេទ្យទៅខាងណា?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Nasaan ang garahe?", "Where is the garage?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("muan-tee-paed-teuw-khang-na","","Nasaan ang ospital?","Where is the hospital?","គ្លីនិកទៅខាងណា?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Nasaan ang ospital?", "Where is the hospital?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("klee-nik-tuew-khang-na","","Nasaan ang klinik?","Where is the clinic?"," ហ្វាម៉ាស៊ីទៅខាងណា?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Nasaan ang klinik?", "Where is the clinic?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("fa-ma-see-tuew-khang-na","","Nasaan ang botika?","Where is the pharmacy?","ស្ថានីយ៍ប្រេងឥន្ទនៈទៅខាងណា?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Nasaan ang botika?", "Where is the pharmacy?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("stha-nee-preng-in-ta-niah- tuew-khang-na","","Nasaan ang gasolinahan?","Where is the gas station?","សណ្ឋាគារទៅខាងណា?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Nasaan ang gasolinahan?", "Where is the gas station?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("son-tha-gia-tuew-khang-na","","Nasaan ang hotel?","Where is the hotel?","ផ្សារទៅខាងណា?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Nasaan ang hotel?", "Where is the hotel?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("psa-tuew-khang-na","","Nasaan ang palengke?","Where is the market?","កន្លែងឈប់ឡានទៅខាងណា?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Nasaan ang palengke?", "Where is the market?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("gon-laeng-choop- larn- tuew-khang- na","","Nasaan ang hintuan ng bus?","Where is the car rest area?"," ប៉ុស្តិ៍ប៉ូលីសទៅខាងណា?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Nasaan ang hintuan ng bus?", "Where is the car rest area?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("poh-po-leas-tuew-khang-na","","Nasaan ang himpilan ng pulis?","Where is the police station?","កន្លែងប៉ុស្តិ៍យាមប៉ូលីសទៅខាង ណា?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Nasaan ang himpilan ng pulis?", "Where is the police station?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("gon-laeng-poh-yiam-po-leas-tuew- khang-na","","Nasaan ang checkpoint ng pulis?","Where is the police booth?","កន្លែងដូរលុយបរទេសទៅខាងណា?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Nasaan ang checkpoint ng pulis?", "Where is the police booth?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("gon-laeng-dough-luy-bor-ra-teh- tuew- khang-na","","Nasaan ang lugar pang palit ng pera?","Where is the exchange bureau?","កំពង់ផែទៅខាងណា?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Nasaan ang lugar pang palit ng pera?", "Where is the exchange bureau?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("gom-puang-phae-tuew-khang-na","","Nasaan ang puerto?","Where is the pier?"," ឃ្លាំងសម្រាប់ដាក់ឥវ៉ាន់ទៅខាងណា?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Nasaan ang puerto?", "Where is the pier?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("kliang-som-rub-dah-uai-wun-tuew-khang-na","","Nasaan ang bodega?","Where is the warehouse?"," ជួយផង ខ្ញុំត្រូវចោរប្លន់",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Nasaan ang bodega?", "Where is the warehouse?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
     }
 
     public void loadPhilippinesToIndonesia(){
@@ -5147,91 +10910,1401 @@ public class PlaceDAL {
 
     public void loadPhilippinesToLaos(){
         ArrayList<Child> childList = new ArrayList<Child>();
-        Child child = new Child("ไทย","ไทย","ไทย","ไทย","ไทย",null,null);
+        childList = new ArrayList<Child>();
+        child = new Child("hong-num-pai-tharng-dai","","Nasaan ang banyo?","Where is the toilet?"," ຫ້ອງນ້ຳໄປທາງໃດ",null,null);
+        child.setSoundPath(-1);
         childList.add(child);
 
-        GroupHeader groupHeader = new GroupHeader("Philippines","Laos",childList);
+        groupHeader = new GroupHeader("Nasaan ang banyo?", "Where is the toilet?", childList);
         groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("hong-arb-num-pai-tharng-dai","","Nasaan ang paliguan?","Where is the bathroom?"," ຫ້ອງອາບນ້ຳໄປທາງໃດ",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Nasaan ang paliguan?", "Where is the bathroom?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("harn-ar-harn-pai-tharng-dai","","Nasaan ang carinderiya?","Where is the restaurant?"," ຮ້ານອາຫານໄປທາງໃດ",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Nasaan ang carinderiya?", "Where is the restaurant?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("harn-kai-khueang-pai-tharng-dai","","Nasaan ang mall?","Where is the shop?"," ຮ້ານຂາຍເຄື່ອງໄປທາງໃດ",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Nasaan ang mall?", "Where is the shop?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ga-lar-paeng-load-pai-tharng-dai","","Nasaan ang garahe?","Where is the garage?"," ກະລ່າແປງລົດໄປທາງໃດ",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Nasaan ang garahe?", "Where is the garage?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("hong-mor-pai-tharng-dai","","Nasaan ang ospital?","Where is the hospital?"," ໂຮງໝໍໄປທາງໃດ",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Nasaan ang ospital?", "Where is the hospital?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("klee-nik-pai-tharng-dai","","Nasaan ang klinik?","Where is the clinic?"," ຄລິນິກໄປທາງໃດ",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Nasaan ang klinik?", "Where is the clinic?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("harn-khai-ya-pai-tharng-dai","","Nasaan ang botika?","Where is the pharmacy?"," ຮ້ານຂາຍຢາໄປທາງໃດ",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Nasaan ang botika?", "Where is the pharmacy?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("pum-num-mun-pai-tharng-dai","","Nasaan ang gasolinahan?","Where is the gas station?"," ປ້ຳນ້ຳມັນໄປທາງໃດ",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Nasaan ang gasolinahan?", "Where is the gas station?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("hong-haem-pai-tharng -dai","","Nasaan ang hotel?","Where is the hotel?"," ໂຮງແຮມໄປທາງໃດ",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Nasaan ang hotel?", "Where is the hotel?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ta-lard-pai-tharng -dai","","Nasaan ang palengke?","Where is the market?"," ຕະຫຼາດໄປທາງໃດ",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Nasaan ang palengke?", "Where is the market?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("bon-jord-phuk-load- pai-tharng-dai","","Nasaan ang hintuan ng bus?","Where is the car rest area?"," ບ່ອນຈອດພັກລົດໄປທາງໃດ",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Nasaan ang hintuan ng bus?", "Where is the car rest area?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("sa-ta-nee-tum-luad- pai-tharng-dai","","Nasaan ang himpilan ng pulis?","Where is the police station?"," ສະຖານີຕຳຫຼວດໄປທາງໃດ",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Nasaan ang himpilan ng pulis?", "Where is the police station?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("pom-tum-luad- pai-tharng-dai","","Nasaan ang checkpoint ng pulis?","Where is the police booth?"," ປ້ອມຕຳຫຼວດໄປທາງໃດ",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Nasaan ang checkpoint ng pulis?", "Where is the police booth?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("bon-laek-pian-ngern-ta-lah-wang-pa-thed- pai-tharng-dai","","Nasaan ang lugar pang palit ng pera?","Where is the exchange bureau?"," ບ່ອນແລກປ່ຽນເງິນຕາລະຫວ່າງປະເທດ ໄປທາງໃດ",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Nasaan ang lugar pang palit ng pera?", "Where is the exchange bureau?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("tha-huea- pai-tharng-dai","","Nasaan ang puerto?","Where is the pier?"," ທ່າເຮືອໄປທາງໃດ",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Nasaan ang puerto?", "Where is the pier?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("hong-mian-sin-kha- pai-tharng-dai","","Nasaan ang bodega?","Where is the warehouse?"," ຫ້ອງມ້ຽນສິນຄ້າໄປທາງໃດ",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Nasaan ang bodega?", "Where is the warehouse?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
     }
 
     public void loadPhilippinesToMalaysia(){
         ArrayList<Child> childList = new ArrayList<Child>();
-        Child child = new Child("ไทย","ไทย","ไทย","ไทย","ไทย",null,null);
+        childList = new ArrayList<Child>();
+        child = new Child("tun-das-ger-ar-rah-ma-na","","Nasaan ang banyo?","Where is the toilet?","Tandas ke arah  mana",null,null);
+        child.setSoundPath(-1);
         childList.add(child);
 
-        GroupHeader groupHeader = new GroupHeader("Philippines","Malaysia",childList);
+        groupHeader = new GroupHeader("Nasaan ang banyo?", "Where is the toilet?", childList);
         groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("bee-lik-mun-dee-ger-ar-rah-ma-na","","Nasaan ang paliguan?","Where is the bathroom?","Bilik mandi  ke arah mana",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Nasaan ang paliguan?", "Where is the bathroom?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("res-to-run-ger-ar-rah-ma-na","","Nasaan ang carinderiya?","Where is the restaurant?","Restoran ke arah mana",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Nasaan ang carinderiya?", "Where is the restaurant?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ger-dai-ger-ar-rah-ma-na","","Nasaan ang mall?","Where is the shop?","Kedai ke arah mana",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Nasaan ang mall?", "Where is the shop?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("beng-gail-ger-ray-ta-ger-ar-rah-ma-na","","Nasaan ang garahe?","Where is the garage?","Bengkel kereta ke arah mana",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Nasaan ang garahe?", "Where is the garage?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("hos-pi-tal-ger-ar-rah-ma-na","","Nasaan ang ospital?","Where is the hospital?","Hospital ke arah mana",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Nasaan ang ospital?", "Where is the hospital?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("glee-nik-ger-ar-rah-ma-na","","Nasaan ang klinik?","Where is the clinic?","Klinik ke arah mana",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Nasaan ang klinik?", "Where is the clinic?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ger-dai-oo-bud-ger-ar-rah-ma-na","","Nasaan ang botika?","Where is the pharmacy?","Kedai ubat ke arah mana",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Nasaan ang botika?", "Where is the pharmacy?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("stay-sen-mee-yuk-ger-ar-rah-ma-na","","Nasaan ang gasolinahan?","Where is the gas station?","Stesen minyak ke arah mana",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Nasaan ang gasolinahan?", "Where is the gas station?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ho-tel-ger-ar-rah-ma-na","","Nasaan ang hotel?","Where is the hotel?","Hotel ke arah mana",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Nasaan ang hotel?", "Where is the hotel?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("pa-sul-ger-ar-rah-ma-na","","Nasaan ang palengke?","Where is the market?","Pasar ke arah mana",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Nasaan ang palengke?", "Where is the market?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("term-pud-bern-hern-tee-ger-ray-ta-ger-ar-rah-ma-na","","Nasaan ang hintuan ng bus?","Where is the car rest area?","Tempat berhenti kereta ke arah mana",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Nasaan ang hintuan ng bus?", "Where is the car rest area?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ba-lai-po-lis-ger-ar-rah-ma-na","","Nasaan ang himpilan ng pulis?","Where is the police station?","Balai polis ke arah mana",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Nasaan ang himpilan ng pulis?", "Where is the police station?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("pone-doke-po-lis-ger-ar-rah-ma-na","","Nasaan ang checkpoint ng pulis?","Where is the police booth?","Pondok polis ke arah mana",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Nasaan ang checkpoint ng pulis?", "Where is the police booth?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ger-dai-per-ngoo-roop-ger-ar-rah-ma-na","","Nasaan ang lugar pang palit ng pera?","Where is the exchange bureau?","Kedai pengurup ke arah mana",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Nasaan ang lugar pang palit ng pera?", "Where is the exchange bureau?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("per-la-boo-hun-ger-ar-rah-ma-na","","Nasaan ang puerto?","Where is the pier?","Pelabuhan ke arah mana",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Nasaan ang puerto?", "Where is the pier?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("sto/ koo-dung-ba-rung-da-ka-ngun-ger-ar-rah-ma-na","","Nasaan ang bodega?","Where is the warehouse?","Stor / Gudang barang dagangan ke arah mana",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Nasaan ang bodega?", "Where is the warehouse?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
     }
     public void loadPhilippinesToMyanmar(){
         ArrayList<Child> childList = new ArrayList<Child>();
-        Child child = new Child("ไทย","ไทย","ไทย","ไทย","ไทย",null,null);
+        childList = new ArrayList<Child>();
+        child = new Child("eng-ta-bae-ma-shi-lae","","Nasaan ang banyo?","Where is the toilet?","အိမ္သာဘယ္မွာရွိလဲ။",null,null);
+        child.setSoundPath(-1);
         childList.add(child);
 
-        GroupHeader groupHeader = new GroupHeader("Philippines","Myanmar",childList);
+        groupHeader = new GroupHeader("Nasaan ang banyo?", "Where is the toilet?", childList);
         groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ye-show-kan-bae-ma-shi- lae","","Nasaan ang paliguan?","Where is the bathroom?","ေရခ်ိဳးခန္းဘယ္မွာရွိလဲ။",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Nasaan ang paliguan?", "Where is the bathroom?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("sa-taw-sai-bae-ma-shi- lae","","Nasaan ang carinderiya?","Where is the restaurant?","စားေသာက္ဆိုင္ဘယ္မွာရွိလဲ။",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Nasaan ang carinderiya?", "Where is the restaurant?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("se-sai-bae-ma-shi-lae","","Nasaan ang mall?","Where is the shop?","ေစ်းဆိုင္ဘယ္မွာရွိလဲ။",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Nasaan ang mall?", "Where is the shop?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ka-wa-choh-bae-ma-shi- lae","","Nasaan ang garahe?","Where is the garage?","ကား၀ပ္ေရွာ့ဘယ္မွာရွိလဲ။",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Nasaan ang garahe?", "Where is the garage?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("se-yong-bae-ma-shi-lae","","Nasaan ang ospital?","Where is the hospital?","ေဆးရွံဘယ္မွာရွိလဲ။",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Nasaan ang ospital?", "Where is the hospital?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("se-kan-bae-ma-shi-lae","","Nasaan ang klinik?","Where is the clinic?","ေဆးခန္းဘယ္မွာရွိလဲ။",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Nasaan ang klinik?", "Where is the clinic?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("se-sai-bae-ma-shi-lae","","Nasaan ang botika?","Where is the pharmacy?","ေဆးဆိုင္ဘယ္မွာရွိလဲ။",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Nasaan ang botika?", "Where is the pharmacy?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("dat-see-sai-bae-ma-shi- lae","","Nasaan ang gasolinahan?","Where is the gas station?","ဓာတ္ဆီဆိုင္ဘယ္မွာရွိလဲ။",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Nasaan ang gasolinahan?", "Where is the gas station?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("hoe-tae-bae-ma-shi-lae","","Nasaan ang hotel?","Where is the hotel?","ဟိုတယ္ဘယ္မွာရွိလဲ။",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Nasaan ang hotel?", "Where is the hotel?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("se-bae-ma-shi-lae","","Nasaan ang palengke?","Where is the market?","ေစ်းဘယ္မွာရွိလဲ။",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Nasaan ang palengke?", "Where is the market?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ka-yat-daeh-ne-ya-bae-ma-shi-lae","","Nasaan ang hintuan ng bus?","Where is the car rest area?","ကားရပ္တဲ့ေနရာဘယ္မွာရွိလဲ။",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Nasaan ang hintuan ng bus?", "Where is the car rest area?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("yae-sa-khan-bae-ma-shi- lae","","Nasaan ang himpilan ng pulis?","Where is the police station?","ရဲစခန္းဘယ္မွာရွိလဲ။",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Nasaan ang himpilan ng pulis?", "Where is the police station?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("yae-ging-bae-ma-shi-lae","","Nasaan ang checkpoint ng pulis?","Where is the police booth?","ရဲကင္းဘယ္မွာရွိလဲ။",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Nasaan ang checkpoint ng pulis?", "Where is the police booth?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("na-nai-ngan-ngwe-lae-daeh-ne-ya-bae-ma-shi-lae","","Nasaan ang lugar pang palit ng pera?","Where is the exchange bureau?","ႏွစ္ႏိုင္ငံေငြလဲတဲ့ေနရာဘယ္မွာရွိလဲ။",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Nasaan ang lugar pang palit ng pera?", "Where is the exchange bureau?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("seh-kan-bae-ma-shi-lae","","Nasaan ang puerto?","Where is the pier?","ဆိပ္ကမ္းဘယ္မွာရွိလဲ။",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Nasaan ang puerto?", "Where is the pier?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("kong -yong -bae -ma -shi -lae","","Nasaan ang bodega?","Where is the warehouse?","ကုန္ရံုဘယ္မွာရွိလဲ။",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Nasaan ang bodega?", "Where is the warehouse?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
     }
 
     public void loadPhilippinesToPhilippines(){
         ArrayList<Child> childList = new ArrayList<Child>();
-        Child child = new Child("ไทย","ไทย","ไทย","ไทย","ไทย",null,null);
+        childList = new ArrayList<Child>();
+        child = new Child("nar-sar-an-ang-ban-yo","","Nasaan ang banyo?","Where is the toilet?","",null,null);
+        child.setSoundPath(-1);
         childList.add(child);
 
-        GroupHeader groupHeader = new GroupHeader("Philippines","Philippines",childList);
+        groupHeader = new GroupHeader("Nasaan ang banyo?", "Where is the toilet?", childList);
         groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("nar-sar-an-ang-par-li-gu-an","","Nasaan ang paliguan?","Where is the bathroom?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Nasaan ang paliguan?", "Where is the bathroom?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("nar-sar-an-ang-kar-rin-dey-ri-yar","","Nasaan ang carinderiya?","Where is the restaurant?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Nasaan ang carinderiya?", "Where is the restaurant?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("nar-sar-an-ang-morl","","Nasaan ang mall?","Where is the shop?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Nasaan ang mall?", "Where is the shop?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("nar-sar-an-ang-gar-rar-hey","","Nasaan ang garahe?","Where is the garage?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Nasaan ang garahe?", "Where is the garage?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("nar-sar-an-ang-os-pi-tal","","Nasaan ang ospital?","Where is the hospital?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Nasaan ang ospital?", "Where is the hospital?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("nar-sar-an-ang-gli-nik","","Nasaan ang klinik?","Where is the clinic?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Nasaan ang klinik?", "Where is the clinic?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("nar-sar-an-ang-bo-ti-gar","","Nasaan ang botika?","Where is the pharmacy?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Nasaan ang botika?", "Where is the pharmacy?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("nar-sar-an-ang-gar-so-li-nar-han","","Nasaan ang gasolinahan?","Where is the gas station?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Nasaan ang gasolinahan?", "Where is the gas station?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("nar-sar-an-ang-ho-tel","","Nasaan ang hotel?","Where is the hotel?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Nasaan ang hotel?", "Where is the hotel?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("nar-sar-an-ang-par-leng-gey","","Nasaan ang palengke?","Where is the market?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Nasaan ang palengke?", "Where is the market?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("nar-sar-an-ang-hin-tu-an-nang-boos","","Nasaan ang hintuan ng bus?","Where is the car rest area?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Nasaan ang hintuan ng bus?", "Where is the car rest area?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("nar-sar-an-ang-him-pi-lan-nang-pu-lis","","Nasaan ang himpilan ng pulis?","Where is the police station?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Nasaan ang himpilan ng pulis?", "Where is the police station?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("nar-sar-an-ang-chek-poit-nang-pu-lis","","Nasaan ang checkpoint ng pulis?","Where is the police booth?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Nasaan ang checkpoint ng pulis?", "Where is the police booth?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("nar-sar-an-ang-lu-gar-rar-pang-par-lit-nang-pey-rar","","Nasaan ang lugar pang palit ng pera?","Where is the exchange bureau?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Nasaan ang lugar pang palit ng pera?", "Where is the exchange bureau?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("nar-sar-an-ang-pu-ey-rer-to","","Nasaan ang puerto?","Where is the pier?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Nasaan ang puerto?", "Where is the pier?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("nar-sar-an-ang-bo-dey-gar","","Nasaan ang bodega?","Where is the warehouse?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Nasaan ang bodega?", "Where is the warehouse?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
     }
 
     public void loadPhilippinesToSingapore(){
         ArrayList<Child> childList = new ArrayList<Child>();
-        Child child = new Child("ไทย","ไทย","ไทย","ไทย","ไทย",null,null);
+        childList = new ArrayList<Child>();
+        child = new Child("ware-is-der-toi-let","","Nasaan ang banyo?","Where is the toilet?","",null,null);
+        child.setSoundPath(-1);
         childList.add(child);
 
-        GroupHeader groupHeader = new GroupHeader("Philippines","Singapore",childList);
+        groupHeader = new GroupHeader("Nasaan ang banyo?", "Where is the toilet?", childList);
         groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ware -is-der-bat-room","","Nasaan ang paliguan?","Where is the bathroom?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Nasaan ang paliguan?", "Where is the bathroom?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ware -is-der-res-ter-rong","","Nasaan ang carinderiya?","Where is the restaurant?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Nasaan ang carinderiya?", "Where is the restaurant?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ware-is-der-chop","","Nasaan ang mall?","Where is the shop?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Nasaan ang mall?", "Where is the shop?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ware-is-der-gar-rarch","","Nasaan ang garahe?","Where is the garage?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Nasaan ang garahe?", "Where is the garage?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ware-is-der-hos-pi-tol","","Nasaan ang ospital?","Where is the hospital?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Nasaan ang ospital?", "Where is the hospital?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ware-is-der-klee-nik","","Nasaan ang klinik?","Where is the clinic?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Nasaan ang klinik?", "Where is the clinic?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ware-is-der-far-mar-see","","Nasaan ang botika?","Where is the pharmacy?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Nasaan ang botika?", "Where is the pharmacy?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ware-is-der-gas-stey-chan","","Nasaan ang gasolinahan?","Where is the gas station?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Nasaan ang gasolinahan?", "Where is the gas station?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ware-is-der-ho-tel","","Nasaan ang hotel?","Where is the hotel?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Nasaan ang hotel?", "Where is the hotel?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ware-is-der-mar-ket","","Nasaan ang palengke?","Where is the market?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Nasaan ang palengke?", "Where is the market?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ware-is-der-kar-res-ae-ria","","Nasaan ang hintuan ng bus?","Where is the car rest area?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Nasaan ang hintuan ng bus?", "Where is the car rest area?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ware-is-der-po-lis-stey-chan","","Nasaan ang himpilan ng pulis?","Where is the police station?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Nasaan ang himpilan ng pulis?", "Where is the police station?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ware-is-der-po-lis-boot","","Nasaan ang checkpoint ng pulis?","Where is the police booth?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Nasaan ang checkpoint ng pulis?", "Where is the police booth?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ware-is-der-ex-chench-bio-ro","","Nasaan ang lugar pang palit ng pera?","Where is the exchange bureau?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Nasaan ang lugar pang palit ng pera?", "Where is the exchange bureau?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ware-is-der-pia","","Nasaan ang puerto?","Where is the pier?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Nasaan ang puerto?", "Where is the pier?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ware-is-der- ware-haus","","Nasaan ang bodega?","Where is the warehouse?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Nasaan ang bodega?", "Where is the warehouse?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
     }
 
     public void loadPhilippinesToVietnam(){
         ArrayList<Child> childList = new ArrayList<Child>();
-        Child child = new Child("ไทย","ไทย","ไทย","ไทย","ไทย",null,null);
+        childList = new ArrayList<Child>();
+        child = new Child("fong-way-sin-dee-loi-now","","Nasaan ang banyo?","Where is the toilet?","phòng vệ sinh đi lối nào",null,null);
+        child.setSoundPath(-1);
         childList.add(child);
 
-        GroupHeader groupHeader = new GroupHeader("Philippines","Vietnam",childList);
+        groupHeader = new GroupHeader("Nasaan ang banyo?", "Where is the toilet?", childList);
         groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("fong-tum-dee-loi-now","","Nasaan ang paliguan?","Where is the bathroom?","phòng tắm đi lối nào",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Nasaan ang paliguan?", "Where is the bathroom?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("tiam-un-dee-loi-now","","Nasaan ang carinderiya?","Where is the restaurant?","tiệm ăn đi lối nào",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Nasaan ang carinderiya?", "Where is the restaurant?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("keur-tiam-dee-loi-now","","Nasaan ang mall?","Where is the shop?","cửa tiệm đi lối nào",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Nasaan ang mall?", "Where is the shop?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ka-ra-suea-sae-dee-loi-now","","Nasaan ang garahe?","Where is the garage?","ga ra sửa xe đi lối nào",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Nasaan ang garahe?", "Where is the garage?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("beng-wien-dee-loi-now","","Nasaan ang ospital?","Where is the hospital?","bệnh viện đi lối nào?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Nasaan ang ospital?", "Where is the hospital?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("fong-mug-dee-loi-now","","Nasaan ang klinik?","Where is the clinic?","phòng mạch đi lối nào?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Nasaan ang klinik?", "Where is the clinic?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("tiam-thuak-tuai-dee-loi-now","","Nasaan ang botika?","Where is the pharmacy?","tiệm thuốc  tây đi lối nào?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Nasaan ang botika?", "Where is the pharmacy?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("tram-sung-dee-loi-now","","Nasaan ang gasolinahan?","Where is the gas station?","trạm xăng đi lối nào?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Nasaan ang gasolinahan?", "Where is the gas station?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("Khuk-san-dee-loi-now","","Nasaan ang hotel?","Where is the hotel?","khách sạn đi lối nào?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Nasaan ang hotel?", "Where is the hotel?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("joe-dee-loi-now","","Nasaan ang palengke?","Where is the market?","chợ đi lối nào?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Nasaan ang palengke?", "Where is the market?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("noei-doe-sae-dee-loi-now","","Nasaan ang hintuan ng bus?","Where is the car rest area?","nơi đậu xe đi lối nào?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Nasaan ang hintuan ng bus?", "Where is the car rest area?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("don-kong-arn-dee-loi-now","","Nasaan ang himpilan ng pulis?","Where is the police station?","đồn công an đi lối nào?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Nasaan ang himpilan ng pulis?", "Where is the police station?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("Tram-kun-sard-dee-loi-now","","Nasaan ang checkpoint ng pulis?","Where is the police booth?","trạm cảnh sát đi lối nào?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Nasaan ang checkpoint ng pulis?", "Where is the police booth?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("Tram-doi-why-tay-dee-loi-now","","Nasaan ang lugar pang palit ng pera?","Where is the exchange bureau?","trạm đổi ngoại tệ đi lối nào?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Nasaan ang lugar pang palit ng pera?", "Where is the exchange bureau?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ben-toa-dee-loi-now","","Nasaan ang puerto?","Where is the pier?","bến tàu đi lối nào?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Nasaan ang puerto?", "Where is the pier?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("Khor-true-hang-dee-loi-now","","Nasaan ang bodega?","Where is the warehouse?","kho trữ hàng đi lối nào?",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Nasaan ang bodega?", "Where is the warehouse?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
     }
 
     public void loadSingaporeToChina(){
         ArrayList<Child> childList = new ArrayList<Child>();
-        Child child = new Child("ไทย","ไทย","ไทย","ไทย","ไทย",null,null);
+        childList = new ArrayList<Child>();
+        child = new Child("see-sow-jian-jai-nar",""," 洗手间在哪儿","Where is the toilet?","",null,null);
+        child.setSoundPath(-1);
         childList.add(child);
 
-        GroupHeader groupHeader = new GroupHeader("Singapore","China",childList);
+        groupHeader = new GroupHeader(" 洗手间在哪儿", "Where is the toilet?", childList);
         groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ywii-seu-jai-nar",""," 浴室在哪儿","Where is the bathroom?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" 浴室在哪儿", "Where is the bathroom?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("chun-thing-jai-nar",""," 餐厅在哪儿","Where is the restaurant?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" 餐厅在哪儿", "Where is the restaurant?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("sung-tian-jai-nar",""," 商店在哪儿","Where is the shop?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" 商店在哪儿", "Where is the shop?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("siw-cher-hang-jai-nar",""," 修车行在哪儿","Where is the garage?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" 修车行在哪儿", "Where is the garage?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ee-awian-jai-nar",""," 医院在哪儿","Where is the hospital?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" 医院在哪儿", "Where is the hospital?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("jern-sua-jai-nar",""," 诊所在哪儿","Where is the clinic?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" 诊所在哪儿", "Where is the clinic?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("yao-tian-jai-nar",""," 药店在哪儿","Where is the pharmacy?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" 药店在哪儿", "Where is the pharmacy?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("jia-yow-jun-jai-nar",""," 加油站在哪儿","Where is the gas station?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" 加油站在哪儿", "Where is the gas station?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("fun-tian-jai-nar",""," 饭店在哪儿","Where is the hotel?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" 饭店在哪儿", "Where is the hotel?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("seu-chang-jai-nar",""," 市场在哪儿","Where is the market?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" 市场在哪儿", "Where is the market?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("thing-cher-chang-jai-nar",""," 停车场在哪儿","Where is the car rest area?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" 停车场在哪儿", "Where is the car rest area?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("jing-char-jwee-jai-nar",""," 警察局在哪儿","Where is the police station?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" 警察局在哪儿", "Where is the police station?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("jing-char-kung-thing-jai-nar","","警察岗亭在哪儿","Where is the police booth?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("警察岗亭在哪儿", "Where is the police booth?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("hwor-pee-toy-huan-choo-jai-nar",""," 货币兑换处在哪儿","Where is the exchange bureau?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" 货币兑换处在哪儿", "Where is the exchange bureau?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ma-thow-jai-nar",""," 码头在哪儿","Where is the pier?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" 码头在哪儿", "Where is the pier?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("chang-khoo-jai-nar",""," 仓库在哪儿","Where is the warehouse?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" 仓库在哪儿", "Where is the warehouse?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
     }
 
     public void loadSingaporeToThai(){
         ArrayList<Child> childList = new ArrayList<Child>();
-        Child child = new Child("ไทย","ไทย","ไทย","ไทย","ไทย",null,null);
+        childList = new ArrayList<Child>();
+        child = new Child("hongnam-pai-thang-nai","","ห้องน้ำไปทางไหน","Where is the toilet?","",null,null);
+        child.setSoundPath(-1);
         childList.add(child);
 
-        GroupHeader groupHeader = new GroupHeader("Singapore","Thai",childList);
+        groupHeader = new GroupHeader("ห้องน้ำไปทางไหน", "Where is the toilet?", childList);
         groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("hong-ap-nam-pai-thang-nai","","ห้องอาบน้ำไปทางไหน","Where is the bathroom?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("ห้องอาบน้ำไปทางไหน", "Where is the bathroom?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ran-ar-han-pai-thang-nai","","ร้านอาหารไปทางไหน","Where is the restaurant?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("ร้านอาหารไปทางไหน", "Where is the restaurant?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ran-kha-pai-thang-nai","","ร้านค้าไปทางไหน","Where is the shop?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("ร้านค้าไปทางไหน", "Where is the shop?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("au-som-rot-pai-thang-nai","","อู่ซ่อมรถไปทางไหน","Where is the garage?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("อู่ซ่อมรถไปทางไหน", "Where is the garage?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("rong-pha-ya-ban-pai-thang-nai","","โรงพยาบาลไปทางไหน","Where is the hospital?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("โรงพยาบาลไปทางไหน", "Where is the hospital?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("clinic-pai-thang-nai","","คลินิกไปทางไหน","Where is the clinic?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("คลินิกไปทางไหน", "Where is the clinic?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ran-khai-ya-pai-thang-nai","","ร้านขายยาไปทางไหน","Where is the pharmacy?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("ร้านขายยาไปทางไหน", "Where is the pharmacy?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("pam-nam-man-pai-thang-nai","","ปั๊มน้ำมันไปทางไหน","Where is the gas station?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("ปั๊มน้ำมันไปทางไหน", "Where is the gas station?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("rong-raem-pai-thang-nai","","โรงแรมไปทางไหน","Where is the hotel?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("โรงแรมไปทางไหน", "Where is the hotel?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("talad-pai-thang-nai","","ตลาดไปทางไหน","Where is the market?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("ตลาดไปทางไหน", "Where is the market?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("chut-phak-rod-pai-thang-nai","","จุดพักรถไปทางไหน","Where is the car rest area?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("จุดพักรถไปทางไหน", "Where is the car rest area?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("sa-tha-ni-tam-ruat-pai-thang-nai","","สถานีตำรวจไปทางไหน","Where is the police station?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("สถานีตำรวจไปทางไหน", "Where is the police station?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("pom-tam-ruat-pai-thang-nai","","ป้อมตำรวจไปทางไหน","Where is the police booth?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("ป้อมตำรวจไปทางไหน", "Where is the police booth?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("sa-than-thi-laek-ngoen-ra-wang-pra-thet-pai-thang-nai","","สถานที่แลกเงินระหว่างประเทศไปทางไหน","Where is the exchange bureau?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("สถานที่แลกเงินระหว่างประเทศไปทางไหน", "Where is the exchange bureau?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("tha-ruea-pai-thang-nai","","ท่าเรือไปทางไหน","Where is the pier?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("ท่าเรือไปทางไหน", "Where is the pier?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ko-dang-phak-sinkha-pai-thang-nai","","โกดังพักสินค้าไปทางไหน","Where is the warehouse?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("โกดังพักสินค้าไปทางไหน", "Where is the warehouse?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
     }
 
     public void loadSingaporeToBrunei(){
         ArrayList<Child> childList = new ArrayList<Child>();
-        Child child = new Child("ไทย","ไทย","ไทย","ไทย","ไทย",null,null);
+        childList = new ArrayList<Child>();
+        child = new Child("tun-das-ger-ar-rah-ma-na","","Tandas ke arah  mana","Where is the toilet?","",null,null);
+        child.setSoundPath(-1);
         childList.add(child);
 
-        GroupHeader groupHeader = new GroupHeader("Singapore","Brunei",childList);
+        groupHeader = new GroupHeader("Tandas ke arah  mana", "Where is the toilet?", childList);
         groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("bee-lik-mun-dee-ger-ar-rah-ma-na","","Bilik mandi  ke arah mana","Where is the bathroom?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Bilik mandi  ke arah mana", "Where is the bathroom?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("res-to-run-ger-ar-rah-ma-na","","Restoran ke arah mana","Where is the restaurant?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Restoran ke arah mana", "Where is the restaurant?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ger-dai-ger-ar-rah-ma-na","","Kedai ke arah mana","Where is the shop?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Kedai ke arah mana", "Where is the shop?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("beng-gail-ger-ray-ta-ger-ar-rah-ma-na","","Bengkel kereta ke arah mana","Where is the garage?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Bengkel kereta ke arah mana", "Where is the garage?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("hos-pi-tal-ger-ar-rah-ma-na","","Hospital ke arah mana","Where is the hospital?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Hospital ke arah mana", "Where is the hospital?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("glee-nik-ger-ar-rah-ma-na","","Klinik ke arah mana","Where is the clinic?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Klinik ke arah mana", "Where is the clinic?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ger-dai-oo-bud-ger-ar-rah-ma-na","","Kedai ubat ke arah mana","Where is the pharmacy?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Kedai ubat ke arah mana", "Where is the pharmacy?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("stay-sen-mee-yuk-ger-ar-rah-ma-na","","Stesen minyak ke arah mana","Where is the gas station?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Stesen minyak ke arah mana", "Where is the gas station?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ho-tel-ger-ar-rah-ma-na","","Hotel ke arah mana","Where is the hotel?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Hotel ke arah mana", "Where is the hotel?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("pa-sul-ger-ar-rah-ma-na","","Pasar ke arah mana","Where is the market?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Pasar ke arah mana", "Where is the market?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("term-pud-bern-hern-tee-ger-ray-ta-ger-ar-rah-ma-na","","Tempat berhenti kereta ke arah mana","Where is the car rest area?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Tempat berhenti kereta ke arah mana", "Where is the car rest area?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ba-lai-po-lis-ger-ar-rah-ma-na","","Balai polis ke arah mana","Where is the police station?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Balai polis ke arah mana", "Where is the police station?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("pone-doke-po-lis-ger-ar-rah-ma-na","","Pondok polis ke arah mana","Where is the police booth?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Pondok polis ke arah mana", "Where is the police booth?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ger-dai-per-ngoo-roop-ger-ar-rah-ma-na","","Kedai pengurup ke arah mana","Where is the exchange bureau?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Kedai pengurup ke arah mana", "Where is the exchange bureau?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("per-la-boo-hun-ger-ar-rah-ma-na","","Pelabuhan ke arah mana","Where is the pier?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Pelabuhan ke arah mana", "Where is the pier?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("sto/ koo-dung-ba-rung-da-ka-ngun-ger-ar-rah-ma-na","","Stor / Gudang barang dagangan ke arah mana","Where is the warehouse?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Stor / Gudang barang dagangan ke arah mana", "Where is the warehouse?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
     }
 
     public void loadSingaporeToCambodia(){
         ArrayList<Child> childList = new ArrayList<Child>();
-        Child child = new Child("ไทย","ไทย","ไทย","ไทย","ไทย",null,null);
+        childList = new ArrayList<Child>();
+        child = new Child("bon-toop-tuek-tuew-khang-na","","  បន្ទប់ទឹកទៅខាងណា?","Where is the toilet?","",null,null);
+        child.setSoundPath(-1);
         childList.add(child);
 
-        GroupHeader groupHeader = new GroupHeader("Singapore","Cambodia",childList);
+        groupHeader = new GroupHeader("  បន្ទប់ទឹកទៅខាងណា?", "Where is the toilet?", childList);
         groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("bon-toop-ngood-tuek-tuew -khang-na",""," បន្ទប់ងូតទឹកទៅខាងណា?","Where is the bathroom?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" បន្ទប់ងូតទឹកទៅខាងណា?", "Where is the bathroom?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("hang-bai-tuew-khang-na","","ហាងបាយទៅខាងណា?","Where is the restaurant?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("ហាងបាយទៅខាងណា?", "Where is the restaurant?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("hang-luah-dough-tuew-khang-na",""," ហាងលក់ដូរទៅខាងណា?","Where is the shop?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ហាងលក់ដូរទៅខាងណា?", "Where is the shop?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("yian-than-juah-joon-lan-tuew-khang-na","","មន្ទីរពេទ្យទៅខាងណា?","Where is the garage?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("មន្ទីរពេទ្យទៅខាងណា?", "Where is the garage?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("muan-tee-paed-teuw-khang-na","","គ្លីនិកទៅខាងណា?","Where is the hospital?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("គ្លីនិកទៅខាងណា?", "Where is the hospital?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("klee-nik-tuew-khang-na",""," ហ្វាម៉ាស៊ីទៅខាងណា?","Where is the clinic?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ហ្វាម៉ាស៊ីទៅខាងណា?", "Where is the clinic?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("fa-ma-see-tuew-khang-na","","ស្ថានីយ៍ប្រេងឥន្ទនៈទៅខាងណា?","Where is the pharmacy?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("ស្ថានីយ៍ប្រេងឥន្ទនៈទៅខាងណា?", "Where is the pharmacy?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("stha-nee-preng-in-ta-niah- tuew-khang-na","","សណ្ឋាគារទៅខាងណា?","Where is the gas station?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("សណ្ឋាគារទៅខាងណា?", "Where is the gas station?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("son-tha-gia-tuew-khang-na","","ផ្សារទៅខាងណា?","Where is the hotel?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("ផ្សារទៅខាងណា?", "Where is the hotel?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("psa-tuew-khang-na","","កន្លែងឈប់ឡានទៅខាងណា?","Where is the market?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("កន្លែងឈប់ឡានទៅខាងណា?", "Where is the market?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("gon-laeng-choop- larn- tuew-khang- na",""," ប៉ុស្តិ៍ប៉ូលីសទៅខាងណា?","Where is the car rest area?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ប៉ុស្តិ៍ប៉ូលីសទៅខាងណា?", "Where is the car rest area?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("poh-po-leas-tuew-khang-na","","កន្លែងប៉ុស្តិ៍យាមប៉ូលីសទៅខាង ណា?","Where is the police station?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("កន្លែងប៉ុស្តិ៍យាមប៉ូលីសទៅខាង ណា?", "Where is the police station?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("gon-laeng-poh-yiam-po-leas-tuew- khang-na","","កន្លែងដូរលុយបរទេសទៅខាងណា?","Where is the police booth?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("កន្លែងដូរលុយបរទេសទៅខាងណា?", "Where is the police booth?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("gon-laeng-dough-luy-bor-ra-teh- tuew- khang-na","","កំពង់ផែទៅខាងណា?","Where is the exchange bureau?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("កំពង់ផែទៅខាងណា?", "Where is the exchange bureau?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("gom-puang-phae-tuew-khang-na",""," ឃ្លាំងសម្រាប់ដាក់ឥវ៉ាន់ទៅខាងណា?","Where is the pier?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ឃ្លាំងសម្រាប់ដាក់ឥវ៉ាន់ទៅខាងណា?", "Where is the pier?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("kliang-som-rub-dah-uai-wun-tuew-khang-na",""," ជួយផង ខ្ញុំត្រូវចោរប្លន់","Where is the warehouse?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader(" ជួយផង ខ្ញុំត្រូវចោរប្លន់", "Where is the warehouse?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
     }
 
     public void loadSingaporeToIndonesia(){
@@ -5406,5 +12479,285 @@ public class PlaceDAL {
     public ArrayList<GroupHeader> getGroupHeaderList()
     {
         return groupHeaderList;
+    }
+
+    public void loadMalaysiaToSingapore() {
+        ArrayList<Child> childList = new ArrayList<Child>();
+        childList = new ArrayList<Child>();
+        child = new Child("ware-is-der-toi-let","","Tandas ke arah  mana","Where is the toilet?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Tandas ke arah  mana", "Where is the toilet?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ware -is-der-bat-room","","Bilik mandi  ke arah mana","Where is the bathroom?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Bilik mandi  ke arah mana", "Where is the bathroom?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ware -is-der-res-ter-rong","","Restoran ke arah mana","Where is the restaurant?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Restoran ke arah mana", "Where is the restaurant?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ware-is-der-chop","","Kedai ke arah mana","Where is the shop?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Kedai ke arah mana", "Where is the shop?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ware-is-der-gar-rarch","","Bengkel kereta ke arah mana","Where is the garage?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Bengkel kereta ke arah mana", "Where is the garage?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ware-is-der-hos-pi-tol","","Hospital ke arah mana","Where is the hospital?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Hospital ke arah mana", "Where is the hospital?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ware-is-der-klee-nik","","Klinik ke arah mana","Where is the clinic?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Klinik ke arah mana", "Where is the clinic?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ware-is-der-far-mar-see","","Kedai ubat ke arah mana","Where is the pharmacy?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Kedai ubat ke arah mana", "Where is the pharmacy?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ware-is-der-gas-stey-chan","","Stesen minyak ke arah mana","Where is the gas station?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Stesen minyak ke arah mana", "Where is the gas station?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ware-is-der-ho-tel","","Hotel ke arah mana","Where is the hotel?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Hotel ke arah mana", "Where is the hotel?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ware-is-der-mar-ket","","Pasar ke arah mana","Where is the market?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Pasar ke arah mana", "Where is the market?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ware-is-der-kar-res-ae-ria","","Tempat berhenti kereta ke arah mana","Where is the car rest area?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Tempat berhenti kereta ke arah mana", "Where is the car rest area?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ware-is-der-po-lis-stey-chan","","Balai polis ke arah mana","Where is the police station?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Balai polis ke arah mana", "Where is the police station?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ware-is-der-po-lis-boot","","Pondok polis ke arah mana","Where is the police booth?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Pondok polis ke arah mana", "Where is the police booth?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ware-is-der-ex-chench-bio-ro","","Kedai pengurup ke arah mana","Where is the exchange bureau?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Kedai pengurup ke arah mana", "Where is the exchange bureau?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ware-is-der-pia","","Pelabuhan ke arah mana","Where is the pier?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Pelabuhan ke arah mana", "Where is the pier?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ware-is-der- ware-haus","","Stor / Gudang barang dagangan ke arah mana","Where is the warehouse?","",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("Stor / Gudang barang dagangan ke arah mana", "Where is the warehouse?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+    }
+
+    public void loadMyanmarToLaos() {
+        ArrayList<Child> childList = new ArrayList<Child>();
+        childList = new ArrayList<Child>();
+        child = new Child("hong-num-pai-tharng-dai","","အိမ္သာဘယ္မွာရွိလဲ။","Where is the toilet?"," ຫ້ອງນ້ຳໄປທາງໃດ",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("အိမ္သာဘယ္မွာရွိလဲ။", "Where is the toilet?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("hong-arb-num-pai-tharng-dai","","ေရခ်ိဳးခန္းဘယ္မွာရွိလဲ။","Where is the bathroom?"," ຫ້ອງອາບນ້ຳໄປທາງໃດ",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("ေရခ်ိဳးခန္းဘယ္မွာရွိလဲ။", "Where is the bathroom?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("harn-ar-harn-pai-tharng-dai","","စားေသာက္ဆိုင္ဘယ္မွာရွိလဲ။","Where is the restaurant?"," ຮ້ານອາຫານໄປທາງໃດ",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("စားေသာက္ဆိုင္ဘယ္မွာရွိလဲ။", "Where is the restaurant?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("harn-kai-khueang-pai-tharng-dai","","ေစ်းဆိုင္ဘယ္မွာရွိလဲ။","Where is the shop?"," ຮ້ານຂາຍເຄື່ອງໄປທາງໃດ",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("ေစ်းဆိုင္ဘယ္မွာရွိလဲ။", "Where is the shop?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ga-lar-paeng-load-pai-tharng-dai","","ကား၀ပ္ေရွာ့ဘယ္မွာရွိလဲ။","Where is the garage?"," ກະລ່າແປງລົດໄປທາງໃດ",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("ကား၀ပ္ေရွာ့ဘယ္မွာရွိလဲ။", "Where is the garage?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("hong-mor-pai-tharng-dai","","ေဆးရွံဘယ္မွာရွိလဲ။","Where is the hospital?"," ໂຮງໝໍໄປທາງໃດ",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("ေဆးရွံဘယ္မွာရွိလဲ။", "Where is the hospital?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("klee-nik-pai-tharng-dai","","ေဆးခန္းဘယ္မွာရွိလဲ။","Where is the clinic?"," ຄລິນິກໄປທາງໃດ",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("ေဆးခန္းဘယ္မွာရွိလဲ။", "Where is the clinic?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("harn-khai-ya-pai-tharng-dai","","ေဆးဆိုင္ဘယ္မွာရွိလဲ။","Where is the pharmacy?"," ຮ້ານຂາຍຢາໄປທາງໃດ",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("ေဆးဆိုင္ဘယ္မွာရွိလဲ။", "Where is the pharmacy?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("pum-num-mun-pai-tharng-dai","","ဓာတ္ဆီဆိုင္ဘယ္မွာရွိလဲ။","Where is the gas station?"," ປ້ຳນ້ຳມັນໄປທາງໃດ",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("ဓာတ္ဆီဆိုင္ဘယ္မွာရွိလဲ။", "Where is the gas station?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("hong-haem-pai-tharng -dai","","ဟိုတယ္ဘယ္မွာရွိလဲ။","Where is the hotel?"," ໂຮງແຮມໄປທາງໃດ",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("ဟိုတယ္ဘယ္မွာရွိလဲ။", "Where is the hotel?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("ta-lard-pai-tharng -dai","","ေစ်းဘယ္မွာရွိလဲ။","Where is the market?"," ຕະຫຼາດໄປທາງໃດ",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("ေစ်းဘယ္မွာရွိလဲ။", "Where is the market?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("bon-jord-phuk-load- pai-tharng-dai","","ကားရပ္တဲ့ေနရာဘယ္မွာရွိလဲ။","Where is the car rest area?"," ບ່ອນຈອດພັກລົດໄປທາງໃດ",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("ကားရပ္တဲ့ေနရာဘယ္မွာရွိလဲ။", "Where is the car rest area?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("sa-ta-nee-tum-luad- pai-tharng-dai","","ရဲစခန္းဘယ္မွာရွိလဲ။","Where is the police station?"," ສະຖານີຕຳຫຼວດໄປທາງໃດ",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("ရဲစခန္းဘယ္မွာရွိလဲ။", "Where is the police station?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("pom-tum-luad- pai-tharng-dai","","ရဲကင္းဘယ္မွာရွိလဲ။","Where is the police booth?"," ປ້ອມຕຳຫຼວດໄປທາງໃດ",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("ရဲကင္းဘယ္မွာရွိလဲ။", "Where is the police booth?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("bon-laek-pian-ngern-ta-lah-wang-pa-thed- pai-tharng-dai","","ႏွစ္ႏိုင္ငံေငြလဲတဲ့ေနရာဘယ္မွာရွိလဲ။","Where is the exchange bureau?"," ບ່ອນແລກປ່ຽນເງິນຕາລະຫວ່າງປະເທດ ໄປທາງໃດ",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("ႏွစ္ႏိုင္ငံေငြလဲတဲ့ေနရာဘယ္မွာရွိလဲ။", "Where is the exchange bureau?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("tha-huea- pai-tharng-dai","","ဆိပ္ကမ္းဘယ္မွာရွိလဲ။","Where is the pier?"," ທ່າເຮືອໄປທາງໃດ",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("ဆိပ္ကမ္းဘယ္မွာရွိလဲ။", "Where is the pier?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
+        childList = new ArrayList<Child>();
+        child = new Child("hong-mian-sin-kha- pai-tharng-dai","","ကုန္ရံုဘယ္မွာရွိလဲ။","Where is the warehouse?"," ຫ້ອງມ້ຽນສິນຄ້າໄປທາງໃດ",null,null);
+        child.setSoundPath(-1);
+        childList.add(child);
+
+        groupHeader = new GroupHeader("ကုန္ရံုဘယ္မွာရွိလဲ။", "Where is the warehouse?", childList);
+        groupHeaderList.add(groupHeader);
+//-------------------------------------------------
     }
 }
