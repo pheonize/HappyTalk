@@ -25,13 +25,13 @@
             android:layout_height="wrap_content"
             android:id="@+id/sss"
             android:background="@drawable/sss"
-            android:layout_marginRight="5dp"/>
+            android:layout_marginRight="10dp"/>
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/happy"
             android:background="@drawable/happytalk"
-            android:layout_marginRight="5dp"/>
+            android:layout_marginRight="10dp"/>
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -78,22 +78,23 @@
             android:textSize="14dp"/>
 
     </LinearLayout>
-    <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/aboutThai"
-            android:layout_marginLeft="120dp"
-            android:layout_gravity="center_vertical"
-            android:textSize="14dp"
-            android:layout="@layout/about"
+    <!--<LinearLayout-->
+        <!--android:orientation="vertical"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginTop="10dp">-->
+        <!--<Button-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="@string/aboutSSS"-->
+            <!--android:layout_marginLeft="120dp"-->
+            <!--android:id="@+id/aboutTh"-->
+            <!--android:textSize="14dp"-->
 
-            />
-        </LinearLayout>
+
+
+           <!--/>-->
+        <!--</LinearLayout>-->
 
 
 

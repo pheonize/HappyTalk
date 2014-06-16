@@ -15,14 +15,36 @@
 
     </PreferenceCategory>
     </PreferenceScreen>
-    <PreferenceScreen
-        android:key="About "
-        android:title="@string/about">
-        <PreferenceCategory android:title="@string/about"></PreferenceCategory>
-            <PreferenceScreen
-                android:layout="@layout/about">
 
-                </PreferenceScreen>
+    <PreferenceScreen
+       android:key="About "
+       android:title="@string/about">
+        <PreferenceCategory
+            android:title="@string/about"
+            android:layout="@layout/about">
+
+
+        </PreferenceCategory>
+        </PreferenceScreen>
+    <PreferenceScreen
+        android:key="About Thai Health"
+        android:title="@string/aboutSSS">
+        <PreferenceCategory
+            android:title="@string/aboutSSS"
+            android:layout="@layout/about2"
+            ></PreferenceCategory>
+
+
+
+
+                <!--android:layout="@layout/about">-->
+
+
+
+
+
+
+
 
 
 

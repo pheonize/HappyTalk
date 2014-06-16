@@ -12,6 +12,8 @@ import android.preference.PreferenceManager;
 import android.util.DisplayMetrics;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 
 import java.util.Locale;
@@ -31,7 +33,20 @@ public class SettingActivity extends PreferenceActivity implements OnSharedPrefe
         settings.registerOnSharedPreferenceChangeListener(this);
 
         displayCurrentName(settings);
+        //aboutSSS();
     }
+
+//    private void aboutSSS() {
+//        Button btnAbout = (Button) findViewById(R.id.aboutTh);
+//        btnAbout.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent intent = new Intent(getApplicationContext(),AboutActivity2.class);
+//                startActivity(intent);
+//            }
+//        });
+//    }
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.activity_main_actions,menu);
@@ -54,6 +69,7 @@ public class SettingActivity extends PreferenceActivity implements OnSharedPrefe
 
 
     }
+
 
     @Override
     public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String key) {

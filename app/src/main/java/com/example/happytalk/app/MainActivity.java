@@ -5,6 +5,7 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.database.sqlite.SQLiteDatabase;
+import android.graphics.Typeface;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
@@ -89,7 +90,7 @@ public class MainActivity extends Activity {
             R.drawable.myanmar_flag, R.drawable.philippines_flag,
             R.drawable.singapore_flag,
             R.drawable.vietnam_flag};
-
+    Context context;
 
 
     @Override
@@ -124,6 +125,11 @@ public class MainActivity extends Activity {
         FavoriteDAL db = new FavoriteDAL(this);
         //db.getWritableDatabase();
 
+//        String fontPath = "fonts/mmrtext.otf";
+//        TextView txtText = (TextView) findViewById(R.id.country);
+//        Typeface tf = Typeface.createFromAsset(txtText.getContext().getAssets(),fontPath);
+//
+//        txtText.setTypeface(tf);
 
 
         //Configuration configuration = new Configuration();
@@ -274,7 +280,6 @@ public class MainActivity extends Activity {
 
         }
     }
-
 
 
 

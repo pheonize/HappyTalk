@@ -56,8 +56,8 @@ public class SettingActivity_1 extends Activity {
                        // Language();
                         break;
                     case 1:
-                        intent = new Intent(getApplicationContext(), AboutActivity.class);
-                        startActivity(intent);
+                       // intent = new Intent(getApplicationContext(), AboutActivity.class);
+                       // startActivity(intent);
                         break;
                     default:
                         break;
