@@ -99,6 +99,7 @@ public class FavoriteActivity extends Activity{
 
         String select = " SELECT * FROM " + FavoriteDAL.TABLE_FAVORITE;
         Cursor mCursor = sqLiteDatabase.rawQuery(select, null);
+        if (mCursor.moveToFirst()) {
 
 
 
@@ -110,7 +111,7 @@ public class FavoriteActivity extends Activity{
             groupHeader = new GroupHeader(mCursor.getString(4), mCursor.getString(5), childList);
             groupHeaderList.add(groupHeader);
 
-
+        }
     }
 
     public ArrayList<GroupHeader> getGroupHeaderList() {

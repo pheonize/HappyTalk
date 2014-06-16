@@ -200,11 +200,33 @@ public class MyListAdapter extends BaseExpandableListAdapter {
                 + karaokeEN + "', '" + karaokeTH + "', '" + sound + "');";
 
 
+        String delete = "DELETE FROM " + FavoriteDAL.TABLE_FAVORITE + " WHERE "
+                + FavoriteDAL.COLUMN_LANGFROM + "='" + lang_from + "'"
+                + " AND " + FavoriteDAL.COLUMN_LANGTO + "='" + lang_to + "'"
+                + " AND " + FavoriteDAL.COLUMN_WORDEN + "='" + wordEN + "'"
+                + " AND " + FavoriteDAL.COLUMN_WORDFROM + "='" + wordFrom + "'"
+                + " AND " + FavoriteDAL.COLUMN_WORDTO + "='" + wordTo + "'"
+                + " AND " + FavoriteDAL.COLUMN_KARAOKEEN + "='" + karaokeEN + "'"
+                + " AND " + FavoriteDAL.COLUMN_KARAOKETH + "='" + karaokeTH + "'"
+                + " AND " + FavoriteDAL.COLUMN_SOUND + "='" + sound +"';";
+
+
 
             sqLiteDatabase = favoriteDAL.getWritableDatabase();
             if(sqLiteDatabase != null) {
 
-                sqLiteDatabase.execSQL(insert);
+                String select = " SELECT * FROM " + FavoriteDAL.TABLE_FAVORITE;
+                Cursor mCursor = sqLiteDatabase.rawQuery(select, null);
+                if (mCursor.moveToFirst()) {
+
+                    if (mCursor.getString(5).equals(wordTo)) {
+
+                        sqLiteDatabase.execSQL(delete);
+                    }
+                }
+                else {
+                    sqLiteDatabase.execSQL(insert);
+                }
             }
         else {
                 String s = "";

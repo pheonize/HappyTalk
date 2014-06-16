@@ -42,11 +42,7 @@ public class FavoriteDAL extends SQLiteOpenHelper {
     private ArrayList<GroupHeader> groupHeaderList = new ArrayList<GroupHeader>();
 
 
-//    String CREATE_FAVORITE_TABLE =  "CREATE TABLE "+ TABLE_FAVORITE + "("
-//            + COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " + COLUMN_LANGFROM +
-//            " TEXT, " + COLUMN_LANGTO + " TEXT, " + COLUMN_WORDEN + " TEXT, "+  COLUMN_WORDFROM + " TEXT, " +
-//            COLUMN_WORDTO + " TEXT, " + COLUMN_KARAOKETH + " TEXT, " + COLUMN_KARAOKEEN +
-//            " TEXT " + ")";
+
 
 
     public FavoriteDAL(Context context) {
@@ -78,36 +74,7 @@ public class FavoriteDAL extends SQLiteOpenHelper {
         onCreate(db);
     }
 
-//    public void addFavorite(Favorite favorite){
-//        SQLiteDatabase db =this.getWritableDatabase();
-//
-//        ContentValues values = new ContentValues();
-//        values.put(COLUMN_LANGFROM,favorite.getLangFrom());
-//        values.put(COLUMN_LANGTO,favorite.getLangTo());
-//        values.put(COLUMN_WORDEN,favorite.getWordEN());
-//        values.put(COLUMN_WORDFROM,favorite.getWordFrom());
-//        values.put(COLUMN_WORDTO,favorite.getWordTo());
-//        values.put(COLUMN_KARAOKETH,favorite.getKaraokeTH());
-//        values.put(COLUMN_KARAOKEEN,favorite.getKaraokeEN());
-//
-//
-//
-//        db.insert(TABLE_FAVORITE,null,values);
-////        Toast.makeText(context,"insert finish",Toast.LENGTH_SHORT).show();
-//        db.close();
-//    }
-//
-//    public void removeFavorite(Favorite favorite){
-//        SQLiteDatabase db = this.getWritableDatabase();
-//
-//        db.delete(TABLE_FAVORITE, COLUMN_ID + " = ?",
-//                new String[] {String.valueOf(favorite.getId())});
-//        db.close();
-//
-//    }
 
-
-    //Load favorite list
 
 
 
