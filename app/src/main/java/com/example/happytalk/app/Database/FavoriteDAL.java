@@ -74,10 +74,4 @@ public class FavoriteDAL extends SQLiteOpenHelper {
         onCreate(db);
     }
 
-
-
-
-
-
-
 }

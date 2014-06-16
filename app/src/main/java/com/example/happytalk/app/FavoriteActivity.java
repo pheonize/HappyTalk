@@ -98,20 +98,23 @@ public class FavoriteActivity extends Activity{
 
 
         String select = " SELECT * FROM " + FavoriteDAL.TABLE_FAVORITE;
-        Cursor mCursor = sqLiteDatabase.rawQuery(select, null);
-        if (mCursor.moveToFirst()) {
+        Cursor mCursor = sqLiteDatabase.rawQuery(select,null);
+        //mCursor.moveToFirst() ;
 
+        if (mCursor .moveToFirst()) {
 
+            while (mCursor.isAfterLast() == false) {
+                childList = new ArrayList<Child>();
+                child = new Child(mCursor.getString(7), mCursor.getString(6), mCursor.getString(4), mCursor.getString(3), mCursor.getString(5), null, null);
+                childList.add(child);
+                child.setSoundPath(mCursor.getInt(8));
 
-
-            child = new Child(mCursor.getString(7), mCursor.getString(6), mCursor.getString(4), mCursor.getString(3), mCursor.getString(5), null, null);
-            childList.add(child);
-            child.setSoundPath(mCursor.getInt(8));
-
-            groupHeader = new GroupHeader(mCursor.getString(4), mCursor.getString(5), childList);
-            groupHeaderList.add(groupHeader);
-
+                groupHeader = new GroupHeader(mCursor.getString(4), mCursor.getString(5), childList);
+                groupHeaderList.add(groupHeader);
+                mCursor.moveToNext();
+            }
         }
+
     }
 
     public ArrayList<GroupHeader> getGroupHeaderList() {

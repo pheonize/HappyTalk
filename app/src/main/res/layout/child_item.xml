@@ -15,7 +15,8 @@
         android:layout_height="30dp"
         android:layout_marginTop="10dp"
         android:contentDescription="@string/app_name"
-        android:background="@drawable/s"/>
+        android:background="@drawable/s"
+        android:onClick="sound"/>
     <Button
         style="?android:attr/buttonStyleSmall"
         android:id="@+id/favorite"
@@ -24,7 +25,8 @@
         android:layout_marginTop="10dp"
         android:layout_below="@+id/sounds"
         android:contentDescription="@string/app_name"
-        android:background="@drawable/f"/>
+        android:background="@drawable/fav_unshow"
+        android:onClick="favorite"/>
 
     <LinearLayout
         android:layout_width="wrap_content"

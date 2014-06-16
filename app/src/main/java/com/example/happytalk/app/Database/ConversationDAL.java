@@ -2278,7 +2278,7 @@ public class ConversationDAL  {
         ArrayList<Child> childList = new ArrayList<Child>();
 
         Child child = new Child("nee-hao","","Kumusta","Hello","你好",null,null);
-        child.setSoundPath(-1);
+        child.setSoundPath(R.raw.hello_ch);
         childList.add(child);
 
         GroupHeader groupHeader = new GroupHeader("Kumusta", "Hello", childList);

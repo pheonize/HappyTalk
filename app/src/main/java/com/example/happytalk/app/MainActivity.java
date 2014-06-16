@@ -45,8 +45,8 @@ public class MainActivity extends Activity {
 
     SQLiteDatabase sqLiteDatabase;
     String[] country_list1 = {"Thai", "Brunei", "Cambodia", "China", "Indonesia",
-            "Laos", "Malaysia", "Myanmar", "Philippines", "Singapore(English)",
-            "Vietnam(Vietnamese)"};
+            "Laos", "Malaysia", "Myanmar", "Philippines", "Singapore",
+            "Vietnam"};
 
     Integer[] img1 = {R.drawable.thailand_flag, R.drawable.brunei_flag, R.drawable.cambodia_flag,
             R.drawable.china_flag, R.drawable.indonesia_flag,
@@ -55,7 +55,7 @@ public class MainActivity extends Activity {
             R.drawable.singapore_flag,
             R.drawable.vietnam_flag};
 
-    String[] country_list2 = {"China", "Thailand", "Brunei", "Cambodia", "Indonesia",
+    String[] country_list2 = {"China", "Thai", "Brunei", "Cambodia", "Indonesia",
             "Laos", "Malaysia", "Myanmar", "Philippines", "Singapore",
             "Vietnam"};
 

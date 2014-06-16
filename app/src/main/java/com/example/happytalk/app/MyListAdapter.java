@@ -105,6 +105,7 @@ public class MyListAdapter extends BaseExpandableListAdapter {
             @Override
             public void onClick(View v) {
                 if(child.getSoundPath() != -1)
+
                     loadSound(child.getSoundPath());
 
             }
@@ -195,48 +196,55 @@ public class MyListAdapter extends BaseExpandableListAdapter {
         String insert = "INSERT INTO " + FavoriteDAL.TABLE_FAVORITE + " (" + FavoriteDAL.COLUMN_LANGFROM
                 + ", " + FavoriteDAL.COLUMN_LANGTO + ", " + FavoriteDAL.COLUMN_WORDEN + ", "
                 + FavoriteDAL.COLUMN_WORDFROM + ", " + FavoriteDAL.COLUMN_WORDTO + ", " + FavoriteDAL.COLUMN_KARAOKEEN +
-                ", " + FavoriteDAL.COLUMN_KARAOKETH + ", "+ FavoriteDAL.COLUMN_SOUND + " ) VALUES ('" + lang_from + "', '" + lang_to +
+                ", " + FavoriteDAL.COLUMN_KARAOKETH + ", " + FavoriteDAL.COLUMN_SOUND + " ) VALUES ('" + lang_from + "', '" + lang_to +
                 "', '" + wordEN + "', '" + wordFrom + "', '" + wordTo + "', '"
                 + karaokeEN + "', '" + karaokeTH + "', '" + sound + "');";
 
 
         String delete = "DELETE FROM " + FavoriteDAL.TABLE_FAVORITE + " WHERE "
-                + FavoriteDAL.COLUMN_LANGFROM + "='" + lang_from + "'"
-                + " AND " + FavoriteDAL.COLUMN_LANGTO + "='" + lang_to + "'"
-                + " AND " + FavoriteDAL.COLUMN_WORDEN + "='" + wordEN + "'"
-                + " AND " + FavoriteDAL.COLUMN_WORDFROM + "='" + wordFrom + "'"
-                + " AND " + FavoriteDAL.COLUMN_WORDTO + "='" + wordTo + "'"
-                + " AND " + FavoriteDAL.COLUMN_KARAOKEEN + "='" + karaokeEN + "'"
-                + " AND " + FavoriteDAL.COLUMN_KARAOKETH + "='" + karaokeTH + "'"
-                + " AND " + FavoriteDAL.COLUMN_SOUND + "='" + sound +"';";
 
 
+                 + FavoriteDAL.COLUMN_WORDFROM + "='" + wordFrom + "'"
+                + " AND " + FavoriteDAL.COLUMN_WORDTO + "='" + wordTo + "'";
 
-            sqLiteDatabase = favoriteDAL.getWritableDatabase();
-            if(sqLiteDatabase != null) {
 
-                String select = " SELECT * FROM " + FavoriteDAL.TABLE_FAVORITE;
-                Cursor mCursor = sqLiteDatabase.rawQuery(select, null);
-                if (mCursor.moveToFirst()) {
+        sqLiteDatabase = favoriteDAL.getWritableDatabase();
+       // if (sqLiteDatabase != null) {
 
-                    if (mCursor.getString(5).equals(wordTo)) {
+            String select = " SELECT * FROM " + FavoriteDAL.TABLE_FAVORITE;
+            Cursor mCursor = sqLiteDatabase.rawQuery(select, null);
 
-                        sqLiteDatabase.execSQL(delete);
-                    }
+        int magicSave = 0;
+        if (mCursor .moveToFirst()) {
+            while (mCursor.isAfterLast() == false) {
+
+                if (mCursor.getString(4).equals(wordFrom) && mCursor.getString(5).equals(wordTo)) {
+                    magicSave++;
+                    sqLiteDatabase.execSQL(delete);
+                    Toast.makeText(context, "Delete Favorite Success", Toast.LENGTH_SHORT).show();
                 }
-                else {
-                    sqLiteDatabase.execSQL(insert);
-                }
+                mCursor.moveToNext();
             }
-        else {
-                String s = "";
+
+            if(magicSave == 0)
+            {
+                sqLiteDatabase.execSQL(insert);
+                Toast.makeText(context, "Add Favorite Success", Toast.LENGTH_SHORT).show();
+            }
+        }
+        else{
+            sqLiteDatabase.execSQL(insert);
+            Toast.makeText(context, "Add Favorite Success", Toast.LENGTH_SHORT).show();
+        }
                 //Toast.makeText(context, "Add Favorite Success", Toast.LENGTH_SHORT).show();
-            }
-
+         //   }
+//        else {
+//            sqLiteDatabase.execSQL(insert);
+//            Toast.makeText(context, "Add Favorite Success", Toast.LENGTH_SHORT).show();
+//
+//        }
 
     }
-
-
     @Override
     public int getChildrenCount(int groupPosition){
         ArrayList<Child> childList = groupHeadersList.get(groupPosition).getChildList();
@@ -359,28 +367,13 @@ public class MyListAdapter extends BaseExpandableListAdapter {
 
 
 
-
     //LoadSound
 
-
-//    public void loadSound(String lang_from,String lang_to){
-//
-//    //Th-ch
-//            if(child.getWordFrom().contains("Test8")) {
-//                MediaPlayer mp = MediaPlayer.create(context, R.raw.hello_th);
-//                mp.start();
-//            }
-//
-//    //Th-Br
-//        if(child.getWordFrom().contains("Test3")){
-//            MediaPlayer mp = MediaPlayer.create(context, R.raw.hello_br);
-//            mp.start();
-//        }
-//    }
 
     public void loadSound(int soundPath) {
             MediaPlayer mp = MediaPlayer.create(context, soundPath);
             mp.start();
+
     }
 
 
