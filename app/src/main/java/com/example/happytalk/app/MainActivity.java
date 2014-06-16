@@ -129,7 +129,7 @@ public class MainActivity extends Activity {
         //Configuration configuration = new Configuration();
 
 
-        if (value.equals("English(United States)")) {
+        if (value.equals("English(United States)")||value.equals("ENG")) {
            // getResources().updateConfiguration(config, null);
             initWidget();
             Spinner countryFrom = (Spinner) findViewById(R.id.spinner_show);

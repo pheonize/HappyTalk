@@ -635,7 +635,7 @@ public class LogisticDAL {
     public void loadThaiToCambodia(){
         ArrayList<Child> childList = new ArrayList<Child>();
         childList = new ArrayList<Child>();
-        child = new Child(" phnaek-goai","","ด่านศุลกากร","Custom house"," ផ្នែកគយ",null,null);
+        child = new Child(" phnaek-goai","พแน้ก – โกย","ด่านศุลกากร","Custom house"," ផ្នែកគយ",null,null);
         child.setSoundPath(-1);
         childList.add(child);
 
@@ -643,7 +643,7 @@ public class LogisticDAL {
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child(" toom-neun","","สินค้า","Goods","ទំនិញ",null,null);
+        child = new Child(" toom-neun","ตุม – นึญ","สินค้า","Goods","ទំនិញ",null,null);
         child.setSoundPath(-1);
         childList.add(child);
 
@@ -651,7 +651,7 @@ public class LogisticDAL {
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child(" gom-puang-phae","","ท่า","Dock warehouse"," កំពង់ផែ",null,null);
+        child = new Child(" gom-puang-phae","ก็อม – ปวง – แพ","ท่า","Dock warehouse"," កំពង់ផែ",null,null);
         child.setSoundPath(-1);
         childList.add(child);
 
@@ -659,7 +659,7 @@ public class LogisticDAL {
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child(" aek-gah-sa-bon-jiah","","หนังสือรับรอง","Certificate"," ឯកសារបញ្ជាក់",null,null);
+        child = new Child(" aek-gah-sa-bon-jiah","แอก – กะ – ซา – บ็อญ – เจี๊ยะ","หนังสือรับรอง","Certificate"," ឯកសារបញ្ជាក់",null,null);
         child.setSoundPath(-1);
         childList.add(child);
 
@@ -667,7 +667,7 @@ public class LogisticDAL {
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("nuam-joen","","นำเข้า","Import"," នាំចូល",null,null);
+        child = new Child("nuam-joen","น็วม – โจล","นำเข้า","Import"," នាំចូល",null,null);
         child.setSoundPath(-1);
         childList.add(child);
 
@@ -675,7 +675,7 @@ public class LogisticDAL {
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("nuam-jern","","ส่งออก","Export"," នាំចេញ",null,null);
+        child = new Child("nuam-jern","น็วม –  เจิญ","ส่งออก","Export"," នាំចេញ",null,null);
         child.setSoundPath(-1);
         childList.add(child);
 
@@ -683,7 +683,7 @@ public class LogisticDAL {
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("thlai-joh-bon-jee","","ค่าธรรมเนียม","Charge"," ថ្លៃចុះបញ្ជី",null,null);
+        child = new Child("thlai-joh-bon-jee","ทลัย – โจ๊ะฮ – บ็อญ – จี","ค่าธรรมเนียม","Charge"," ថ្លៃចុះបញ្ជី",null,null);
         child.setSoundPath(-1);
         childList.add(child);
 
@@ -691,7 +691,7 @@ public class LogisticDAL {
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("niah-bon-joon-toom-neun","","ผู้ส่งสินค้า","Goods deliverer"," អ្នកបញ្ជូនទំនិញ",null,null);
+        child = new Child("niah-bon-joon-toom-neun","เนียะ – บ็อญ – จูน  –  ตุม  –  นึญ","ผู้ส่งสินค้า","Goods deliverer"," អ្នកបញ្ជូនទំនិញ",null,null);
         child.setSoundPath(-1);
         childList.add(child);
 
@@ -699,7 +699,7 @@ public class LogisticDAL {
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("niah-tao-tual-toom-neun","","ผู้รับสินค้า","Goods receiver"," អ្នកទទួលទំនិញ",null,null);
+        child = new Child("niah-tao-tual-toom-neun","เนียะ – โต – ตวล  –  ตุม  –  นึญ","ผู้รับสินค้า","Goods receiver"," អ្នកទទួលទំនិញ",null,null);
         child.setSoundPath(-1);
         childList.add(child);
 
@@ -707,7 +707,7 @@ public class LogisticDAL {
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("kliang/kliang-toom-neun","","โกดัง/คลังสินค้า","Warehouse"," ឃ្លាំង/ឃ្លាំងទំនិញ",null,null);
+        child = new Child("kliang/kliang-toom-neun","เคลียง / เคลียง   –  ตุม  –  นึญ","โกดัง/คลังสินค้า","Warehouse"," ឃ្លាំង/ឃ្លាំងទំនិញ",null,null);
         child.setSoundPath(-1);
         childList.add(child);
 
@@ -715,7 +715,7 @@ public class LogisticDAL {
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("thia-nia-rub-roang","","ประกันภัย","Insurance"," ធានារ៉ាប់រង",null,null);
+        child = new Child("thia-nia-rub-roang","เทีย – เนีย – รับ – โรง","ประกันภัย","Insurance"," ធានារ៉ាប់រង",null,null);
         child.setSoundPath(-1);
         childList.add(child);
 
@@ -723,7 +723,7 @@ public class LogisticDAL {
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("niah-dom-narng","","ตัวแทน","Shipping agent"," អ្នកតំណាង",null,null);
+        child = new Child("niah-dom-narng","เนียะ – ด็อม – นาง","ตัวแทน","Shipping agent"," អ្នកតំណាង",null,null);
         child.setSoundPath(-1);
         childList.add(child);
 
@@ -731,7 +731,7 @@ public class LogisticDAL {
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child(" niah-tao-tual-bon-took-phnaek-trar-toom-neun","","ผู้รับตราส่งสินค้า","Consignee "," អ្នកទទួលបន្ទុកផ្នែកត្រាទំនិញ",null,null);
+        child = new Child(" niah-tao-tual-bon-took-phnaek-trar-toom-neun","เนียะ – โต – ตวล – บ็อน – ตุ๊ก – พแน้ก  – ตรา – ตุม – นึญ","ผู้รับตราส่งสินค้า","Consignee "," អ្នកទទួលបន្ទុកផ្នែកត្រាទំនិញ",null,null);
         child.setSoundPath(-1);
         childList.add(child);
 
@@ -739,7 +739,7 @@ public class LogisticDAL {
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child(" lake-too-gong-teu-nui-toom-neun-neung-lake-trar-jua-too-gong-teu- nui-toom-neun","","หมายเลขตู้สินค้าและหมายเลขแถบผนึกตู้สินค้า","Container and seal number","លេខទូកុងទឺណ័រទំនិញនិងលេខត្រាជ័រទូកុងទឺណ័រទំនិញ",null,null);
+        child = new Child(" lake-too-gong-teu-nui-toom-neun-neung-lake-trar-jua-too-gong-teu- nui-toom-neun","เล้ก –  ตู –  กง – ตือ – นัว – ตุม – นึญ – นึง – เล้ก – ตรา – จัว –  ตู –  กง – ตือ – นัว – ตุม – นึญ","หมายเลขตู้สินค้าและหมายเลขแถบผนึกตู้สินค้า","Container and seal number","លេខទូកុងទឺណ័រទំនិញនិងលេខត្រាជ័រទូកុងទឺណ័រទំនិញ",null,null);
         child.setSoundPath(-1);
         childList.add(child);
 
@@ -747,7 +747,7 @@ public class LogisticDAL {
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("aek-gah-sa-bon-jia-oay-bon-jern-toom-neun","","ใบสั่งปล่อยสินค้า","Delivery order"," ឯកសារបញ្ចាឲ្យបញ្ចេញទំនិញ",null,null);
+        child = new Child("aek-gah-sa-bon-jia-oay-bon-jern-toom-neun","แอ๊ก – กะ – ซา – บ็อญ – เจีย – โอย – บ็อญ – เจิญ – ตุม – นึญ","ใบสั่งปล่อยสินค้า","Delivery order"," ឯកសារបញ្ចាឲ្យបញ្ចេញទំនិញ",null,null);
         child.setSoundPath(-1);
         childList.add(child);
 
@@ -755,7 +755,7 @@ public class LogisticDAL {
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child(" mook-toom-neun","","รายการสินค้า","Description of goods"," មុខទំនិញ",null,null);
+        child = new Child(" mook-toom-neun","มุก – ตุม – นึญ","รายการสินค้า","Description of goods"," មុខទំនិញ",null,null);
         child.setSoundPath(-1);
         childList.add(child);
 
@@ -763,7 +763,7 @@ public class LogisticDAL {
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("thlai-gong-teu-nui-dael-bon- joon-groey-pel-way-lia-gom-nord","","ค่าคืนตู้สินค้าที่ช้าเกินกว่าเวลาที่กำหนด","Detention"," ថ្លៃទូកុងទឺណ័រដែលបញ្ជូនក្រោយពេល វេលាកំណត់",null,null);
+        child = new Child("thlai-gong-teu-nui-dael-bon- joon-groey-pel-way-lia-gom-nord"," ทลัย – ตู – กง – ตือ – นัว – แดล – บ็อญ – จูน – โกรย –เปล – เว – เลีย – ก็อม – น็อด","ค่าคืนตู้สินค้าที่ช้าเกินกว่าเวลาที่กำหนด","Detention"," ថ្លៃទូកុងទឺណ័រដែលបញ្ជូនក្រោយពេល វេលាកំណត់",null,null);
         child.setSoundPath(-1);
         childList.add(child);
 
@@ -771,7 +771,7 @@ public class LogisticDAL {
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("thlai -aek-gah-sa","","ค่าเอกสาร","Document fee"," ថ្លៃឯកសារ",null,null);
+        child = new Child("thlai -aek-gah-sa","ทลัย  –  แอ๊ก –  กะ –  ซา","ค่าเอกสาร","Document fee"," ថ្លៃឯកសារ",null,null);
         child.setSoundPath(-1);
         childList.add(child);
 
@@ -779,7 +779,7 @@ public class LogisticDAL {
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child(" niah-dorm-narng-khang-toa-tual-bon-took-bon-joon-toom-neun","","ตัวแทนผู้รับขนส่งสินค้า","Freight forwarder"," អ្នកតំណាងខាងទទួលបន្ទុកបញ្ជូន ទំនិញ",null,null);
+        child = new Child(" niah-dorm-narng-khang-toa-tual-bon-took-bon-joon-toom-neun","เนียะ – ด็อม – นาง – คาง – โต – ตวล – บ็อน – ตุ๊ก – บ็อน – จูน – ตุม – นึญ","ตัวแทนผู้รับขนส่งสินค้า","Freight forwarder"," អ្នកតំណាងខាងទទួលបន្ទុកបញ្ជូន ទំនិញ",null,null);
         child.setSoundPath(-1);
         childList.add(child);
 
@@ -787,7 +787,7 @@ public class LogisticDAL {
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child(" toom-neun-gruah-thnah","","สินค้าอันตราย","Dangerous goods"," ទំនិញគ្រោះថ្នាក់",null,null);
+        child = new Child(" toom-neun-gruah-thnah","ตุม – นึญ – กรัวะฮ – ทนะ","สินค้าอันตราย","Dangerous goods"," ទំនិញគ្រោះថ្នាក់",null,null);
         child.setSoundPath(-1);
         childList.add(child);
 
@@ -795,7 +795,7 @@ public class LogisticDAL {
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child(" slark-sun-ya-neung-lake-goat-geh-toom-neun","","เครื่องหมายและเลขหมายหีบห่อของสินค้า","Shipping mark and number"," ស្លាកសញ្ញានិងលេខកូដកេះទំនិញ",null,null);
+        child = new Child(" slark-sun-ya-neung-lake-goat-geh-toom-neun","ซลาก – ซัญ – ญา – นึง – เล้ก – โก๊ด – เก๊ะฮ – ตุม – นึญ","เครื่องหมายและเลขหมายหีบห่อของสินค้า","Shipping mark and number"," ស្លាកសញ្ញានិងលេខកូដកេះទំនិញ",null,null);
         child.setSoundPath(-1);
         childList.add(child);
 
@@ -803,7 +803,7 @@ public class LogisticDAL {
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("aek-gah-sa-bon-joon-toom-neun","","ใบส่งสินค้า","Invoice"," ឯកសារបញ្ជូនទំនិញ",null,null);
+        child = new Child("aek-gah-sa-bon-joon-toom-neun","แอ๊ก  –  กะ –  ซา –  บ็อญ – จูน –  ตุม –  นึญ ","ใบส่งสินค้า","Invoice"," ឯកសារបញ្ជូនទំនិញ",null,null);
         child.setSoundPath(-1);
         childList.add(child);
 
@@ -811,7 +811,7 @@ public class LogisticDAL {
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child(" aek-gah-sa-tao-tual-toom-neun","","ใบรับสินค้า","Bill of lading"," ឯកសារទទួលទំនិញ",null,null);
+        child = new Child(" aek-gah-sa-tao-tual-toom-neun"," แอ๊ก –  กะ –  ซา  – โต –  ตวล  – ตุม  – นึญ","ใบรับสินค้า","Bill of lading"," ឯកសារទទួលទំនិញ",null,null);
         child.setSoundPath(-1);
         childList.add(child);
 
@@ -819,7 +819,7 @@ public class LogisticDAL {
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child(" phleuw-joen-phleuw-jern","","ทางเข้า -ทางออก","Entrance - Exit"," ផ្លូវចូល ផ្លូវចេញ",null,null);
+        child = new Child(" phleuw-joen-phleuw-jern","พเลิว  –  โจล – พเลิว – เจิญ","ทางเข้า -ทางออก","Entrance - Exit"," ផ្លូវចូល ផ្លូវចេញ",null,null);
         child.setSoundPath(-1);
         childList.add(child);
 
@@ -827,7 +827,7 @@ public class LogisticDAL {
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("kyom-moak-tao-tual-yoak-toom- neun-neung-yoak-neau-aek-gah-sa-bon- jern-toom-neun-moak-bon-jiah- khyom-art- tao-tual-yoak-toom-neun- barn-eui-leuw-tay","","ผมมารับสินค้าและเอาใบส่งปล่อยสินค้ามายืนยัน ผมรับสินค้าได้เลยไหมครับ","I would like to pick up goods. I’m with a delivery order to confirm. Could I receive goods? ","ខ្ញុំមកទទួលយកទំនិញ និងយកនូវ    ឯកសារបញ្ចេញទំនិញមកបញ្ជាក់ ខ្ញុំ    អាចទទួលយកទំនិញបានឥឡូវទេ",null,null);
+        child = new Child("kyom-moak-tao-tual-yoak-toom- neun-neung-yoak-neau-aek-gah-sa-bon- jern-toom-neun-moak-bon-jiah- khyom-art- tao-tual-yoak-toom-neun- barn-eui-leuw-tay","คญม  –  โมก – โต – ตวล – โยก – ตุม – นึญ – นึง – โยก – เนิว – แอ๊ก – กะ – ซา – บ็อญ – เจิญ – ตุม – นึญ – โมก – บ็อญ – เจียะ – คญม – อาจ –โต – ตวล – โยก – ตุม – นึญ – บาน – เอ็ย – เลิว – เต๋","ผมมารับสินค้าและเอาใบส่งปล่อยสินค้ามายืนยัน ผมรับสินค้าได้เลยไหมครับ","I would like to pick up goods. I’m with a delivery order to confirm. Could I receive goods? ","ខ្ញុំមកទទួលយកទំនិញ និងយកនូវ    ឯកសារបញ្ចេញទំនិញមកបញ្ជាក់ ខ្ញុំ    អាចទទួលយកទំនិញបានឥឡូវទេ",null,null);
                 child.setSoundPath(-1);
         childList.add(child);
 

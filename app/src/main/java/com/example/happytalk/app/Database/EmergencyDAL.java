@@ -340,7 +340,7 @@ public class EmergencyDAL {
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("khyom-jia-juan-jiad-thai-ter-mian- niah-na-art-ni-yiay-phia-sa-thai-barn-khlah-tay","","ฉันเป็นคนไทยมีใครพูดภาษาไทยได้บ้าง","I am Thai. Does anyone speak Thai?"," រថយន្តខូច តើអ្នកអាចជួយខ្ញុំបានទេ?",null,null);
+        child = new Child("khyom-jia-juan-jiad-thai-ter-mian- niah-na-art-ni-yiay-phia-sa-thai-barn-khlah-tay","คญม – เจีย – จวน – เจี้ยด – ทัย – เต๋อ – เมียน – เนียะ –นา – อาจ – นิ – เยียย – เพีย – ซา – ทัย – บาน – คละฮ – เต๋","ฉันเป็นคนไทยมีใครพูดภาษาไทยได้บ้าง","I am Thai. Does anyone speak Thai?"," រថយន្តខូច តើអ្នកអាចជួយខ្ញុំបានទេ?",null,null);
         child.setSoundPath(-1);
         childList.add(child);
 
@@ -348,7 +348,7 @@ public class EmergencyDAL {
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("ruad-yuan-khoat-ter-niah-art-juay- khyom-barn-tay","","รถเสีย คุณช่วยได้ไหม","My car has broken down, can you help me?"," ខ្ញុំផ្តាសាយ",null,null);
+        child = new Child("ruad-yuan-khoat-ter-niah-art-juay- khyom-barn-tay","ร็วด – ยวน – โคจ – เต๋อ – เนียะ – อาจ – จวย – คญม –บาน – เต๋","รถเสีย คุณช่วยได้ไหม","My car has broken down, can you help me?"," ខ្ញុំផ្តាសាយ",null,null);
         child.setSoundPath(-1);
         childList.add(child);
 
@@ -356,7 +356,7 @@ public class EmergencyDAL {
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("khyom-phda-sai","","ฉันเป็นไข้","I’ve got a temperature."," ខ្ញុំផ្តាសាយ",null,null);
+        child = new Child("khyom-phda-sai","คญม – พดา – ซาย","ฉันเป็นไข้","I’ve got a temperature."," ខ្ញុំផ្តាសាយ",null,null);
         child.setSoundPath(-1);
         childList.add(child);
 
@@ -364,7 +364,7 @@ public class EmergencyDAL {
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("khyom-cheu-kbal","","ฉันปวดหัว","I've been having headaches.","ខ្ញុំឈឺក្បាល",null,null);
+        child = new Child("khyom-cheu-kbal","คญม – ชือ – กบาล","ฉันปวดหัว","I've been having headaches.","ខ្ញុំឈឺក្បាល",null,null);
         child.setSoundPath(-1);
         childList.add(child);
 
@@ -372,7 +372,7 @@ public class EmergencyDAL {
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("khyom-cheu-puah (doat-jia-meun-sruan-puah-sauh)","","ฉันปวดท้อง(ไม่สบาย)","I've been having stomachache."," ខ្ញុំឈឺពោះ(ដូចជាមិនស្រួលពោះសោះ)",null,null);
+        child = new Child("khyom-cheu-puah (doat-jia-meun-sruan-puah-sauh)","คญม – ชือ – ปั๊วะฮ  (โดจ – เจีย – มึน – ซรวล – ปัวะฮ –  เซาะฮ)","ฉันปวดท้อง(ไม่สบาย)","I've been having stomachache."," ខ្ញុំឈឺពោះ(ដូចជាមិនស្រួលពោះសោះ)",null,null);
         child.setSoundPath(-1);
         childList.add(child);
 
@@ -380,7 +380,7 @@ public class EmergencyDAL {
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("khyom-cheu- puah  (joen-bon-toop-tuek)","","ฉันปวดท้อง(ห้องน้ำ)","I would like to go to the toilet."," ខ្ញុំឈឺពោះ(ចូលបន្ទប់ទឹក)",null,null);
+        child = new Child("khyom-cheu- puah  (joen-bon-toop-tuek)","คญม – ชือ – ปั๊วะฮ  (โจล – บ็อน – ตุ๊บ – ตึ๊ก)","ฉันปวดท้อง(ห้องน้ำ)","I would like to go to the toilet."," ខ្ញុំឈឺពោះ(ចូលបន្ទប់ទឹក)",null,null);
         child.setSoundPath(-1);
         childList.add(child);
 
@@ -388,7 +388,7 @@ public class EmergencyDAL {
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child(" khyom -treuw-ga-bon-joen-phlerng","","ฉันต้องการชาร์ตไฟ","I need to charge up my phone."," ខ្ញុំត្រូវការបញ្ចូលភ្លើង",null,null);
+        child = new Child(" khyom -treuw-ga-bon-joen-phlerng","คญม – ตเริว – กา – บ็อญ – โจล – เพลิง","ฉันต้องการชาร์ตไฟ","I need to charge up my phone."," ខ្ញុំត្រូវការបញ្ចូលភ្លើង",null,null);
         child.setSoundPath(-1);
         childList.add(child);
 
@@ -396,7 +396,7 @@ public class EmergencyDAL {
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child(" khyom-treuw-ga-how-groam-hoon-thia-nia-rub-roang","","ฉันต้องการเรียกประกัน","I would like to call an insurance."," ខ្ញុំត្រូវការហៅក្រុមហ៊ុនធានារ៉ាប់រង",null,null);
+        child = new Child(" khyom-treuw-ga-how-groam-hoon-thia-nia-rub-roang","คญม – ตเริว – กา – เฮา – กรม – ฮุน – เทีย – เนีย  – รับ –โรง","ฉันต้องการเรียกประกัน","I would like to call an insurance."," ខ្ញុំត្រូវការហៅក្រុមហ៊ុនធានារ៉ាប់រង",null,null);
         child.setSoundPath(-1);
         childList.add(child);
 
@@ -404,7 +404,7 @@ public class EmergencyDAL {
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child(" soam-juay-nuam-khyom -teuw-muan-tee-paed-bon-tert","","ช่วยพาฉันไปโรงพยาบาลที","Could you take me to the hospital?","សួមជួយនាំខ្ញុំទៅមន្ទីរពេទ្យបន្តិច",null,null);
+        child = new Child(" soam-juay-nuam-khyom -teuw-muan-tee-paed-bon-tert","โซม – จวย – น็วม – คญม – ตึว – ม็วน – ตี – แป๊ด – บ็อน – เติจ","ช่วยพาฉันไปโรงพยาบาลที","Could you take me to the hospital?","សួមជួយនាំខ្ញុំទៅមន្ទីរពេទ្យបន្តិច",null,null);
         child.setSoundPath(-1);
         childList.add(child);
 
@@ -412,7 +412,7 @@ public class EmergencyDAL {
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("khyom -barn-juab-ou-pud-wah-hed-soam- juay- khyom -phong","","ผมได้รับอุบัติเหตุ ช่วยผมด้วย","I’ve been having an accident, could you help me?","ខ្ញុំបានជួបឧបទ្ទវហេតុ​ សូមជួយខ្ញុំផង",null,null);
+        child = new Child("khyom -barn-juab-ou-pud-wah-hed-soam- juay- khyom -phong","คญม –  บาน –  จ๊วบ – อุ – ปั๊ด – วะ – เฮด – โซม – จวย –  คญม –  พอง","ผมได้รับอุบัติเหตุ ช่วยผมด้วย","I’ve been having an accident, could you help me?","ខ្ញុំបានជួបឧបទ្ទវហេតុ​ សូមជួយខ្ញុំផង",null,null);
         child.setSoundPath(-1);
         childList.add(child);
 
