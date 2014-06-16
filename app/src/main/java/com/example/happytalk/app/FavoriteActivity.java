@@ -3,6 +3,7 @@ package com.example.happytalk.app;
 /**
  * Created by oVANILLAz on 5/21/14 AD.
  */
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.app.Activity;
@@ -23,10 +24,14 @@ public class FavoriteActivity extends Activity{
 
     private MyListAdapter listAdapter;
     private ExpandableListView myList;
-    String lang_from,lang_to;
-    private static FavoriteDAL db;
 
+    FavoriteDAL favoriteDAL;
     SQLiteDatabase sqLiteDatabase;
+
+    ArrayList<Child> childList = new ArrayList<Child>();
+    Child child;
+    GroupHeader groupHeader;
+
     private ArrayList<GroupHeader> groupHeaderList = new ArrayList<GroupHeader>();
 
     public void onCreate(Bundle saveInstanceState){
@@ -35,11 +40,7 @@ public class FavoriteActivity extends Activity{
 
         checkLanguage();
 
-        //Create
 
-        db = new FavoriteDAL(this);
-
-        sqLiteDatabase = db.getWritableDatabase();
     }
 
     public void checkLanguage() {
@@ -67,34 +68,63 @@ public class FavoriteActivity extends Activity{
             langTo.setText(lang_to);
 
         }
-        displayList(lang_from, lang_to);
 
 
+        displayList(lang_from,lang_to);
 
     }
 
-    public void displayList(String lang_from,String lang_to){
-        if (lang_from.equals("Thai") && lang_to.equals("China") || lang_from.equals("ไทย") && lang_to.equals("จีน")) {
-            db= new FavoriteDAL(this);
-            db.loadThaiToChina();
+    public void displayList(String lang_from,String lang_to) {
+
+            favoriteDAL = new FavoriteDAL(this);
+            sqLiteDatabase = favoriteDAL.getWritableDatabase();
+            loadFavorite();
+
+            //loadFavorite();
             //get ref to the expandableListView
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(FavoriteActivity.this, db.getGroupHeaderList(),lang_from,lang_to);
+            listAdapter = new MyListAdapter(FavoriteActivity.this, getGroupHeaderList(), lang_from, lang_to);
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
 
 
 
 
-        }
+
     }
 
+    public void loadFavorite() {
+
+
+        String select = " SELECT * FROM " + FavoriteDAL.TABLE_FAVORITE;
+        Cursor mCursor = sqLiteDatabase.rawQuery(select, null);
 
 
 
 
+            child = new Child(mCursor.getString(7), mCursor.getString(6), mCursor.getString(4), mCursor.getString(3), mCursor.getString(5), null, null);
+            childList.add(child);
+            child.setSoundPath(mCursor.getInt(8));
+
+            groupHeader = new GroupHeader(mCursor.getString(4), mCursor.getString(5), childList);
+            groupHeaderList.add(groupHeader);
 
 
+    }
 
+    public ArrayList<GroupHeader> getGroupHeaderList() {
+        return groupHeaderList;
+    }
 }
+
+
+
+
+
+
+
+
+
+
+

@@ -14,6 +14,7 @@ public class Favorite {
     String karaokeTH;
     String karaokeEN;
     String wordEN;
+    int sound;
 
 
     private FavoriteDAL favoriteDAL;
@@ -24,7 +25,7 @@ public class Favorite {
 
     }
 
-    public Favorite(int id, String langFrom, String langTo, String wordFrom, String wordTo, String karaokeTH, String karaokeEN, String wordEN) {
+    public Favorite(int id, String langFrom, String langTo, String wordFrom, String wordTo, String karaokeTH, String karaokeEN, String wordEN,int sound) {
         this.id = id;
         this.langFrom = langFrom;
         this.langTo = langTo;
@@ -33,6 +34,7 @@ public class Favorite {
         this.karaokeTH = karaokeTH;
         this.karaokeEN = karaokeEN;
         this.wordEN = wordEN;
+        this.sound = sound;
     }
 
     public int getId() {
@@ -97,6 +99,14 @@ public class Favorite {
 
     public void setWordEN(String wordEN) {
         this.wordEN = wordEN;
+    }
+
+    public int getSound() {
+        return sound;
+    }
+
+    public void setSound(int sound) {
+        this.sound = sound;
     }
 }
 

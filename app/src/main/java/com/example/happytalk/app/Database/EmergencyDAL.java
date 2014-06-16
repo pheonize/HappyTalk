@@ -119,7 +119,7 @@ public class EmergencyDAL {
     public void loadThaiToChina(){
         ArrayList<Child> childList = new ArrayList<Child>();
         childList = new ArrayList<Child>();
-        child = new Child("jiw-ming-ar-wor-puai-chiang-jia-ler","","ช่วยด้วย ฉันโดนปล้น","Help me! I’ve been robbed."," 救命啊，我被抢劫了",null,null);
+        child = new Child("jiw-ming-ar-wor-puai-chiang-jia-ler","จิ้ว-มิ่ง-อา หว่อ-เป้ย-เฉี่ยง-เจี๋ย-เลอ","ช่วยด้วย ฉันโดนปล้น","Help me! I’ve been robbed."," 救命啊，我被抢劫了",null,null);
         child.setSoundPath(-1);
         childList.add(child);
 
@@ -127,7 +127,7 @@ public class EmergencyDAL {
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("jiw-ming-ar-wor-puai-saing-hai-ler","","ช่วยด้วย ฉันโดนทำร้าย","Help me! I've been attacked."," 救命啊，我被伤害了",null,null);
+        child = new Child("jiw-ming-ar-wor-puai-saing-hai-ler","จิ๋ว-มิ่ง-อา หว่อ-เป้ย-ซาง-ไห้-เลอ","ช่วยด้วย ฉันโดนทำร้าย","Help me! I've been attacked."," 救命啊，我被伤害了",null,null);
         child.setSoundPath(-1);
         childList.add(child);
 
@@ -135,7 +135,7 @@ public class EmergencyDAL {
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("wor-seu-thai-gua-yern-sui-hui-sua-thai-awee","","ฉันเป็นคนไทยมีใครพูดภาษาไทยได้บ้าง","I am Thai. Does anyone speak Thai?"," 我是泰国人，谁会说泰语",null,null);
+        child = new Child("wor-seu-thai-gua-yern-sui-hui-sua-thai-awee","หว่อ-ซื่อ-ไท้-กั๋ว-เหยิน สุย-ฮุ่ย-ซัว- ไท่- อวี่","ฉันเป็นคนไทยมีใครพูดภาษาไทยได้บ้าง","I am Thai. Does anyone speak Thai?"," 我是泰国人，谁会说泰语",null,null);
         child.setSoundPath(-1);
         childList.add(child);
 
@@ -143,7 +143,7 @@ public class EmergencyDAL {
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("cher-hwai-ler-nee-nerng-pung-wor-ma","","รถเสีย คุณช่วยได้ไหม","My car has broken down, can you help me?"," 车坏了，你能帮我吗",null,null);
+        child = new Child("cher-hwai-ler-nee-nerng-pung-wor-ma","เชอ-ฮว่าย-เลอ      หนี่-เหนิง-ปัง-หว่อ-มา","รถเสีย คุณช่วยได้ไหม","My car has broken down, can you help me?"," 车坏了，你能帮我吗",null,null);
         child.setSoundPath(-1);
         childList.add(child);
 
@@ -151,7 +151,7 @@ public class EmergencyDAL {
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("wor-fa-sao-ler","","ฉันเป็นไข้","I’ve got a temperature."," 我发烧了",null,null);
+        child = new Child("wor-fa-sao-ler","หว่อ-ฟา-เซา-เลอ","ฉันเป็นไข้","I’ve got a temperature."," 我发烧了",null,null);
         child.setSoundPath(-1);
         childList.add(child);
 
@@ -159,7 +159,7 @@ public class EmergencyDAL {
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("wor-thow-therng","","ฉันปวดหัว","I've been having headaches."," 我头疼",null,null);
+        child = new Child("wor-thow-therng"," หว่อ-โถว-เถิง","ฉันปวดหัว","I've been having headaches."," 我头疼",null,null);
         child.setSoundPath(-1);
         childList.add(child);
 
@@ -167,7 +167,7 @@ public class EmergencyDAL {
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("wor-too-jeu-therng (poo-soo-foo)","","ฉันปวดท้อง(ไม่สบาย)","I've been having stomachache."," 我肚子疼 （不舒服）",null,null);
+        child = new Child("wor-too-jeu-therng (poo-soo-foo)","หว่อ-ตู้-จื่อ-เถิง (ปู้-ซู-ฝู )","ฉันปวดท้อง(ไม่สบาย)","I've been having stomachache."," 我肚子疼 （不舒服）",null,null);
         child.setSoundPath(-1);
         childList.add(child);
 
@@ -175,7 +175,7 @@ public class EmergencyDAL {
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("wor-too-jeu-therng (see-sow-jian)","","ฉันปวดท้อง(ห้องน้ำ)","I would like to go to the toilet."," 我肚子疼（洗手间）",null,null);
+        child = new Child("wor-too-jeu-therng (see-sow-jian)","หว่อ-ตู้-จื่อ-เถิง (สี-โส่ว-เจียน)","ฉันปวดท้อง(ห้องน้ำ)","I would like to go to the toilet."," 我肚子疼（洗手间）",null,null);
         child.setSoundPath(-1);
         childList.add(child);
 
@@ -183,7 +183,7 @@ public class EmergencyDAL {
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("wor-yao-chong-tian","","ฉันต้องการชาร์ตไฟ","I need to charge up my phone."," 我要充电",null,null);
+        child = new Child("wor-yao-chong-tian","หว่อ-เย่า-ชง-เตี้ยน","ฉันต้องการชาร์ตไฟ","I need to charge up my phone."," 我要充电",null,null);
         child.setSoundPath(-1);
         childList.add(child);
 
@@ -191,7 +191,7 @@ public class EmergencyDAL {
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("wor-yao-jaw-paw-sian-gong-seu","","ฉันต้องการเรียกประกัน","I would like to call an insurance."," 我要找保险公司",null,null);
+        child = new Child("wor-yao-jaw-paw-sian-gong-seu"," หว่อ-เย่า-จ่าว-ป๋าว-เสี่ยน-กง-ซือ","ฉันต้องการเรียกประกัน","I would like to call an insurance."," 我要找保险公司",null,null);
         child.setSoundPath(-1);
         childList.add(child);
 
@@ -199,7 +199,7 @@ public class EmergencyDAL {
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("ching-song-wor-chwee-ee-awian","","ช่วยพาฉันไปโรงพยาบาลที","Could you take me to the hospital?"," 请送我去医院",null,null);
+        child = new Child("ching-song-wor-chwee-ee-awian","ฉิ่ง-ซ่ง-หว่อ-ชวี่-อี-เอวี้ยน","ช่วยพาฉันไปโรงพยาบาลที","Could you take me to the hospital?"," 请送我去医院",null,null);
         child.setSoundPath(-1);
         childList.add(child);
 
@@ -207,7 +207,7 @@ public class EmergencyDAL {
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("wor-choo-seu-goo-ler-ching-pung-wor","","ผมได้รับอุบัติเหตุ ช่วยผมด้วย","I’ve been having an accident, could you help me?"," 我出事故了，请帮我",null,null);
+        child = new Child("wor-choo-seu-goo-ler-ching-pung-wor"," หว่อ-ชู-ซื่อ-กู้-เลอ ฉิ่ง-ปัง-หว่อ","ผมได้รับอุบัติเหตุ ช่วยผมด้วย","I’ve been having an accident, could you help me?"," 我出事故了，请帮我",null,null);
         child.setSoundPath(-1);
         childList.add(child);
 

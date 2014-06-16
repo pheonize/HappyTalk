@@ -97,9 +97,6 @@ public class MyListAdapter extends BaseExpandableListAdapter {
         btnSound = (Button) view.findViewById(R.id.sounds);
         btnFavorite = (Button) view.findViewById(R.id.favorite);
 
-       // soundClass = new SoundClass();
-        //soundClass.loadSound();
-
 
 
 
@@ -119,7 +116,7 @@ public class MyListAdapter extends BaseExpandableListAdapter {
 
 
 
-             //   Favorite();
+               Favorite();
                 //db = new FavoriteDAL(context);
                 //sqLiteDatabase = db.getWritableDatabase();
 //                if(mCursor.getCount() ==0){
@@ -185,32 +182,37 @@ public class MyListAdapter extends BaseExpandableListAdapter {
 
 
 
-//    private void Favorite() {
-//        favoriteDAL = new FavoriteDAL(context);
-//        String wordEN = child.getWordEN();
-//        String wordFrom = child.getWordFrom();
-//        String wordTo = child.getWordTo();
-//        String karaokeEN = child.getKaraokeEN();
-//        String karaokeTH = child.getKaraokeTH();
-//
-//        String insert = "INSERT INTO " + FavoriteDAL.TABLE_FAVORITE + " (" + FavoriteDAL.COLUMN_LANGFROM
-//                + ", " + FavoriteDAL.COLUMN_LANGTO + ", " + FavoriteDAL.COLUMN_WORDEN + ", "
-//                + FavoriteDAL.COLUMN_WORDFROM + ", " + FavoriteDAL.COLUMN_WORDTO + ", " + FavoriteDAL.COLUMN_KARAOKEEN +
-//                ", " + FavoriteDAL.COLUMN_KARAOKETH + ") VALUES ('" + lang_from + "', '" + lang_to +
-//                "', '" + wordEN + "', '" + wordFrom + "', '" + wordTo + "', '"
-//                + karaokeEN + "', '" + karaokeTH + "');";
-//
-//          //  favoriteDAL.addFavorite(new Favorite(lang_from,lang_to,wordEN,wordFrom,wordTo,karaokeEN,karaokeTH));
-//
-//            //long insert =
-//
-//
-//
-//            sqLiteDatabase.execSQL(insert);
-//            Toast.makeText(context, "Add Favorite Success", Toast.LENGTH_SHORT).show();
-//
-//
-//    }
+    private void Favorite() {
+        favoriteDAL = new FavoriteDAL(context);
+        String wordEN = child.getWordEN();
+        String wordFrom = child.getWordFrom();
+        String wordTo = child.getWordTo();
+        String karaokeEN = child.getKaraokeEN();
+        String karaokeTH = child.getKaraokeTH();
+        int sound = child.getSoundPath();
+
+
+        String insert = "INSERT INTO " + FavoriteDAL.TABLE_FAVORITE + " (" + FavoriteDAL.COLUMN_LANGFROM
+                + ", " + FavoriteDAL.COLUMN_LANGTO + ", " + FavoriteDAL.COLUMN_WORDEN + ", "
+                + FavoriteDAL.COLUMN_WORDFROM + ", " + FavoriteDAL.COLUMN_WORDTO + ", " + FavoriteDAL.COLUMN_KARAOKEEN +
+                ", " + FavoriteDAL.COLUMN_KARAOKETH + ", "+ FavoriteDAL.COLUMN_SOUND + " ) VALUES ('" + lang_from + "', '" + lang_to +
+                "', '" + wordEN + "', '" + wordFrom + "', '" + wordTo + "', '"
+                + karaokeEN + "', '" + karaokeTH + "', '" + sound + "');";
+
+
+
+            sqLiteDatabase = favoriteDAL.getWritableDatabase();
+            if(sqLiteDatabase != null) {
+
+                sqLiteDatabase.execSQL(insert);
+            }
+        else {
+                String s = "";
+                //Toast.makeText(context, "Add Favorite Success", Toast.LENGTH_SHORT).show();
+            }
+
+
+    }
 
 
     @Override

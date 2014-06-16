@@ -223,7 +223,7 @@ public class ThingDAL {
     public void loadThaiToChina(){
         ArrayList<Child> childList = new ArrayList<Child>();
         childList = new ArrayList<Child>();
-        child = new Child("wor-jew-ter-er-ler","","ฉันรู้สึกหิว","I  feel hungry."," 我觉得饿了",null,null);
+        child = new Child("wor-jew-ter-er-ler","หว่อ-เจิว-เตอ-เอ้อ-เลอ","ฉันรู้สึกหิว","I  feel hungry."," 我觉得饿了",null,null);
         child.setSoundPath(-1);
         childList.add(child);
 
@@ -231,7 +231,7 @@ public class ThingDAL {
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("wor-yao-cheu-fun","","ฉันต้องการอาหาร","I would like some food."," 我要吃饭",null,null);
+        child = new Child("wor-yao-cheu-fun","หว่อ-เย่า-ชือ-ฟั่น","ฉันต้องการอาหาร","I would like some food."," 我要吃饭",null,null);
         child.setSoundPath(-1);
         childList.add(child);
 
@@ -239,7 +239,7 @@ public class ThingDAL {
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("chig-un-jao-jer-ming-jeu-her-tee-jeu-khai-tun","","กรุณาออกใบเสร็จตามชื่อและที่อยู่นี้ด้วย","Could you please give me a receipt following by these name and address."," 请按照这名字和 地址开单",null,null);
+        child = new Child("chig-un-jao-jer-ming-jeu-her-tee-jeu-khai-tun"," ฉิ่ง-อัน-เจ้า-เจ้อ-หมิง-จื่อ-เหอ-ตี้-จื่อ-คาย-ตัน","กรุณาออกใบเสร็จตามชื่อและที่อยู่นี้ด้วย","Could you please give me a receipt following by these name and address."," 请按照这名字和 地址开单",null,null);
         child.setSoundPath(-1);
         childList.add(child);
 
@@ -247,7 +247,7 @@ public class ThingDAL {
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("wor-yao-wuai-seng-jeu","","ฉันต้องการกระดาษชำระ","I would like some toilet paper."," 我要卫生纸",null,null);
+        child = new Child("wor-yao-wuai-seng-jeu"," หว่อ-เย่า-เว่ย-เซิง-จื่อ","ฉันต้องการกระดาษชำระ","I would like some toilet paper."," 我要卫生纸",null,null);
         child.setSoundPath(-1);
         childList.add(child);
 
@@ -255,7 +255,7 @@ public class ThingDAL {
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("wor-yao-mao-jin","","ฉันต้องการผ้าขนหนู","I would like a towel."," 我要毛巾",null,null);
+        child = new Child("wor-yao-mao-jin","หว่อ-เย่า-เหมา-จิน","ฉันต้องการผ้าขนหนู","I would like a towel."," 我要毛巾",null,null);
         child.setSoundPath(-1);
         childList.add(child);
 
@@ -263,7 +263,7 @@ public class ThingDAL {
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("wor-yao-choon-sui","","ฉันต้องการน้ำดื่ม","I would like some drinking water."," 我要纯水",null,null);
+        child = new Child("wor-yao-choon-sui"," หว่อ-เย่า-ฉุน-สุ่ย","ฉันต้องการน้ำดื่ม","I would like some drinking water."," 我要纯水",null,null);
         child.setSoundPath(-1);
         childList.add(child);
 
@@ -271,7 +271,7 @@ public class ThingDAL {
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("wor-yao-tee-thoo","","ฉันต้องการแผนที่","I would like a map."," 我要地图",null,null);
+        child = new Child("wor-yao-tee-thoo"," หว่อ-เย่า-ตี้-ถู","ฉันต้องการแผนที่","I would like a map."," 我要地图",null,null);
         child.setSoundPath(-1);
         childList.add(child);
 
@@ -279,7 +279,7 @@ public class ThingDAL {
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("wor-yao-thui-sao-yao","","ฉันต้องการยาแก้ไข้","I would like the aspirin."," 我要退烧药",null,null);
+        child = new Child("wor-yao-thui-sao-yao","หว่อ-เย่า-ทุ้ย-เซา-เหย้า","ฉันต้องการยาแก้ไข้","I would like the aspirin."," 我要退烧药",null,null);
         child.setSoundPath(-1);
         childList.add(child);
 
@@ -287,7 +287,7 @@ public class ThingDAL {
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("wor-yao-jeu-kher-thung-jiang","","ฉันต้องการยาแก้ไอ","I would like the cough mixture."," 我要止咳糖浆",null,null);
+        child = new Child("wor-yao-jeu-kher-thung-jiang"," หว่อ-เย่า-จื่อ-เขอ-ถัง-เจี้ยง","ฉันต้องการยาแก้ไอ","I would like the cough mixture."," 我要止咳糖浆",null,null);
         child.setSoundPath(-1);
         childList.add(child);
 
@@ -295,7 +295,7 @@ public class ThingDAL {
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("wor-yao-jeu-sia-yao","","ฉันต้องการยาแก้ปวดท้อง","I would like the stomach ache medicine."," 我要止泻药",null,null);
+        child = new Child("wor-yao-jeu-sia-yao","หว่อ-เย่า-จื่อ-เซี่ย-เหย้า","ฉันต้องการยาแก้ปวดท้อง","I would like the stomach ache medicine."," 我要止泻药",null,null);
         child.setSoundPath(-1);
         childList.add(child);
 
@@ -303,7 +303,7 @@ public class ThingDAL {
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("wor-yao-kha-fuai","","ฉันต้องการกาแฟ","I would like a coffee."," 我要咖啡",null,null);
+        child = new Child("wor-yao-kha-fuai","หว่อ-เย่า-คา-เฟย","ฉันต้องการกาแฟ","I would like a coffee."," 我要咖啡",null,null);
         child.setSoundPath(-1);
         childList.add(child);
 
@@ -311,7 +311,7 @@ public class ThingDAL {
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("wor-yao-chee-yow","","ฉันต้องการน้ำมัน","I would like to get the fuel oil."," 我要汽油",null,null);
+        child = new Child("wor-yao-chee-yow"," หว่อ-เย่า-ชี่-โหยว","ฉันต้องการน้ำมัน","I would like to get the fuel oil."," 我要汽油",null,null);
         child.setSoundPath(-1);
         childList.add(child);
 
@@ -319,7 +319,7 @@ public class ThingDAL {
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("wor-yao-jerng-liw-sui","","ฉันต้องการน้ำกลั่น","I would like a distilled water."," 我要蒸馏水",null,null);
+        child = new Child("wor-yao-jerng-liw-sui"," หว่อ-เย่า-เจิง-หลิว-สุ่ย","ฉันต้องการน้ำกลั่น","I would like a distilled water."," 我要蒸馏水",null,null);
         child.setSoundPath(-1);
         childList.add(child);
 
@@ -327,7 +327,7 @@ public class ThingDAL {
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("wor-yao-tian-cheu","","ฉันต้องการแบตเตอรี่","I would like a battery."," 我要电池",null,null);
+        child = new Child("wor-yao-tian-cheu"," หว่อ-เย่า-เตี้ยน-ฉือ","ฉันต้องการแบตเตอรี่","I would like a battery."," 我要电池",null,null);
         child.setSoundPath(-1);
         childList.add(child);
 
@@ -335,7 +335,7 @@ public class ThingDAL {
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("wor-yao-lua-seu-tao","","ฉันต้องการไขควง","I would like a screw driver."," 我要螺丝刀",null,null);
+        child = new Child("wor-yao-lua-seu-tao","หว่อ-เย่า-หลัว-ซือ-เตา","ฉันต้องการไขควง","I would like a screw driver."," 我要螺丝刀",null,null);
         child.setSoundPath(-1);
         childList.add(child);
 
@@ -343,7 +343,7 @@ public class ThingDAL {
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("wor-yao-pun-sow","","ฉันต้องการประแจ","I would like a wrench."," 我要扳手",null,null);
+        child = new Child("wor-yao-pun-sow","หว่อ-เย่า-ปัน-โส่ว","ฉันต้องการประแจ","I would like a wrench."," 我要扳手",null,null);
         child.setSoundPath(-1);
         childList.add(child);
 
@@ -351,7 +351,7 @@ public class ThingDAL {
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("wor-yao-chian-jin-ting","","ฉันต้องการแม่แรง","I would like a jack."," 我要千斤顶",null,null);
+        child = new Child("wor-yao-chian-jin-ting"," หว่อ-เย่า-เชียน-จิน-ติ่ง","ฉันต้องการแม่แรง","I would like a jack."," 我要千斤顶",null,null);
         child.setSoundPath(-1);
         childList.add(child);
 
@@ -359,7 +359,7 @@ public class ThingDAL {
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("wor-yao-puai-thai","","ฉันต้องการยางอะไหล่","I would like a spare wheel."," 我要备胎",null,null);
+        child = new Child("wor-yao-puai-thai","หว่อ-เย่า-เป้ย-ไท","ฉันต้องการยางอะไหล่","I would like a spare wheel."," 我要备胎",null,null);
         child.setSoundPath(-1);
         childList.add(child);
 
@@ -367,7 +367,7 @@ public class ThingDAL {
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("wor-yao-sow-tian-thong","","ฉันต้องการไฟฉาย","I would like a  flashlight."," 我要手电筒",null,null);
+        child = new Child("wor-yao-sow-tian-thong"," หว่อ-เย่า-โส่ว-เตี้ยน-ถ่ง","ฉันต้องการไฟฉาย","I would like a  flashlight."," 我要手电筒",null,null);
         child.setSoundPath(-1);
         childList.add(child);
 
@@ -375,7 +375,7 @@ public class ThingDAL {
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("wor-yao-sao-jeu-her-cha-jeu","","ฉันต้องการช้อนส้อม","I would like a fork."," 我要勺子和叉子",null,null);
+        child = new Child("wor-yao-sao-jeu-her-cha-jeu","หว่อ-เย่า-เสา-จื่อ-เหอ-ชา-จื่อ","ฉันต้องการช้อนส้อม","I would like a fork."," 我要勺子和叉子",null,null);
         child.setSoundPath(-1);
         childList.add(child);
 
@@ -383,7 +383,7 @@ public class ThingDAL {
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("wor-yao-khwai-jeu","","ฉันต้องการตะเกียบ","I would like a chopstick."," 我要筷子",null,null);
+        child = new Child("wor-yao-khwai-jeu"," หว่อ-เย่า-ไคว่-จื่อ","ฉันต้องการตะเกียบ","I would like a chopstick."," 我要筷子",null,null);
         child.setSoundPath(-1);
         childList.add(child);
 
@@ -391,7 +391,7 @@ public class ThingDAL {
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("wor-yao-chuang-tian-chuang-tian-tian-jeu","","ฉันต้องการที่นอน/ฟูก/เบาะ","I would like a bed / mattress."," 我要床垫/床垫/垫子",null,null);
+        child = new Child("wor-yao-chuang-tian-chuang-tian-tian-jeu","หว่อ-เย่า-ฉวง-เตี้ยน/ฉวง-เตี้ยน/เตี้ยน-จื่อ","ฉันต้องการที่นอน/ฟูก/เบาะ","I would like a bed / mattress."," 我要床垫/床垫/垫子",null,null);
         child.setSoundPath(-1);
         childList.add(child);
 
@@ -399,7 +399,7 @@ public class ThingDAL {
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("wor-yao-puai-jeu","","ฉันต้องการผ้าห่ม","I would like a blanket."," 我要被子",null,null);
+        child = new Child("wor-yao-puai-jeu","หว่อ-เย่า-เป้ย-จื่อ","ฉันต้องการผ้าห่ม","I would like a blanket."," 我要被子",null,null);
         child.setSoundPath(-1);
         childList.add(child);
 
@@ -407,7 +407,7 @@ public class ThingDAL {
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("wor-yao-jerng-thow","","ฉันต้องการหมอน","I would like a pillow."," 我要枕头",null,null);
+        child = new Child("wor-yao-jerng-thow"," หว่อ-เย่า-เจิ่ง-โถว","ฉันต้องการหมอน","I would like a pillow."," 我要枕头",null,null);
         child.setSoundPath(-1);
         childList.add(child);
 
@@ -415,7 +415,7 @@ public class ThingDAL {
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("wor-yao-taa-tian-hwa","","ฉันต้องการโทรศัพท์","I would like to get a phone."," 我要打电话",null,null);
+        child = new Child("wor-yao-taa-tian-hwa"," หว่อ-เย่า-ต่า-เตี้ยน-ฮว่า","ฉันต้องการโทรศัพท์","I would like to get a phone."," 我要打电话",null,null);
         child.setSoundPath(-1);
         childList.add(child);
 

@@ -192,6 +192,8 @@ public class MainActivity extends Activity {
                             break;
                         case 5:
                             intent = new Intent(getApplicationContext(), FavoriteActivity.class);
+                            intent.putExtra("strCountryFrom", strCountryFrom);
+                            intent.putExtra("strCountryTo", strCountryTo);
                             startActivity(intent);
                             break;
                     }

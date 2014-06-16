@@ -223,7 +223,7 @@ public class LogisticDAL {
     public void loadThaiToChina(){
         ArrayList<Child> childList = new ArrayList<Child>();
         childList = new ArrayList<Child>();
-        child = new Child("hai-gwan","","ด่านศุลกากร","Custom house"," 海关",null,null);
+        child = new Child("hai-gwan","ไฮ่-กวาน","ด่านศุลกากร","Custom house"," 海关",null,null);
         child.setSoundPath(-1);
         childList.add(child);
 
@@ -231,7 +231,7 @@ public class LogisticDAL {
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("hwor","","สินค้า","Goods"," 货",null,null);
+        child = new Child("hwor"," ฮว่อ","สินค้า","Goods"," 货",null,null);
         child.setSoundPath(-1);
         childList.add(child);
 
@@ -239,7 +239,7 @@ public class LogisticDAL {
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("ma-thow","","ท่า","Dock warehouse"," 码头",null,null);
+        child = new Child("ma-thow","หม่า-โถว","ท่า","Dock warehouse"," 码头",null,null);
         child.setSoundPath(-1);
         childList.add(child);
 
@@ -247,7 +247,7 @@ public class LogisticDAL {
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("jerng-soo","","หนังสือรับรอง","Certificate"," 证书",null,null);
+        child = new Child("jerng-soo"," เจิ้ง-ซู","หนังสือรับรอง","Certificate"," 证书",null,null);
         child.setSoundPath(-1);
         childList.add(child);
 
@@ -255,7 +255,7 @@ public class LogisticDAL {
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("Jin-khow","","นำเข้า","Import"," 进口",null,null);
+        child = new Child("Jin-khow"," จิ้น-โขว่","นำเข้า","Import"," 进口",null,null);
         child.setSoundPath(-1);
         childList.add(child);
 
