@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.media.Image;
 import android.media.MediaPlayer;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -36,6 +37,7 @@ public class MyListAdapter extends BaseExpandableListAdapter {
     private MediaPlayer mediaPlayer;
     Button btnSound;
     Button btnFavorite;
+
 
 //    private String lang_from,lang_to ;
 
@@ -222,6 +224,7 @@ public class MyListAdapter extends BaseExpandableListAdapter {
                     magicSave++;
                     sqLiteDatabase.execSQL(delete);
                     Toast.makeText(context, "Delete Favorite Success", Toast.LENGTH_SHORT).show();
+
                 }
                 mCursor.moveToNext();
             }
@@ -230,6 +233,7 @@ public class MyListAdapter extends BaseExpandableListAdapter {
             {
                 sqLiteDatabase.execSQL(insert);
                 Toast.makeText(context, "Add Favorite Success", Toast.LENGTH_SHORT).show();
+
             }
         }
         else{
@@ -245,6 +249,8 @@ public class MyListAdapter extends BaseExpandableListAdapter {
 //        }
 
     }
+
+
     @Override
     public int getChildrenCount(int groupPosition){
         ArrayList<Child> childList = groupHeadersList.get(groupPosition).getChildList();

@@ -585,7 +585,7 @@ public class PlaceDAL {
     public void loadThaiToIndonesia(){
         ArrayList<Child> childList = new ArrayList<Child>();
         childList = new ArrayList<Child>();
-        child = new Child("dee-mar-nar-gar-mar-geu-jeel (toi-let)","","ห้องน้ำไปทางไหน","Where is the toilet?","Di mana kamar kecil (toilet) ?",null,null);
+        child = new Child("dee-mar-nar-gar-mar-geu-jeel (toi-let)","ดีมานา กามัร เกอจีล (ตอยเลต)","ห้องน้ำไปทางไหน","Where is the toilet?","Di mana kamar kecil (toilet) ?",null,null);
         child.setSoundPath(-1);
         childList.add(child);
 
@@ -593,7 +593,7 @@ public class PlaceDAL {
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("dee-mar-nar-gar-mar-man-dee","","ห้องอาบน้ำไปทางไหน","Where is the bathroom?","Di mana kamar mandi ?",null,null);
+        child = new Child("dee-mar-nar-gar-mar-man-dee","ดีมานา กามัร มันดี","ห้องอาบน้ำไปทางไหน","Where is the bathroom?","Di mana kamar mandi ?",null,null);
         child.setSoundPath(-1);
         childList.add(child);
 
@@ -601,7 +601,7 @@ public class PlaceDAL {
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("dee-mar-nar-res-to-ran","","ร้านอาหารไปทางไหน","Where is the restaurant?","Di mana restoran ?",null,null);
+        child = new Child("dee-mar-nar-res-to-ran","ดีมานา เรสโตรัน","ร้านอาหารไปทางไหน","Where is the restaurant?","Di mana restoran ?",null,null);
         child.setSoundPath(-1);
         childList.add(child);
 
@@ -609,7 +609,7 @@ public class PlaceDAL {
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("dee-mar-nar-to-go","","ร้านค้าไปทางไหน","Where is the shop?","Di mana toko ?",null,null);
+        child = new Child("dee-mar-nar-to-go","ดีมานา โตโก","ร้านค้าไปทางไหน","Where is the shop?","Di mana toko ?",null,null);
         child.setSoundPath(-1);
         childList.add(child);
 
@@ -617,7 +617,7 @@ public class PlaceDAL {
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("dee-mar-nar beng-kel","","อู่ซ่อมรถไปทางไหน","Where is the garage?","Di mana bengkel ?",null,null);
+        child = new Child("dee-mar-nar beng-kel","ดีมานา เบงเกล","อู่ซ่อมรถไปทางไหน","Where is the garage?","Di mana bengkel ?",null,null);
         child.setSoundPath(-1);
         childList.add(child);
 
@@ -625,7 +625,7 @@ public class PlaceDAL {
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("dee-mar-nar-ru-mah-sar-git","","โรงพยาบาลไปทางไหน","Where is the hospital?","Di mana rumah sakit ?",null,null);
+        child = new Child("dee-mar-nar-ru-mah-sar-git","ดีมานา รูมะฮ์ ซากิต","โรงพยาบาลไปทางไหน","Where is the hospital?","Di mana rumah sakit ?",null,null);
         child.setSoundPath(-1);
         childList.add(child);
 
@@ -633,7 +633,7 @@ public class PlaceDAL {
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("dee-mar-nar-glee-nik","","คลินิกไปทางไหน","Where is the clinic?","Di mana klinik ?",null,null);
+        child = new Child("dee-mar-nar-glee-nik","ดีมานา กลีนิก","คลินิกไปทางไหน","Where is the clinic?","Di mana klinik ?",null,null);
         child.setSoundPath(-1);
         childList.add(child);
 
@@ -641,7 +641,7 @@ public class PlaceDAL {
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("dee-mar-nar-ar-po-tek","","ร้านขายยาไปทางไหน","Where is the pharmacy?","Di mana apotek ?",null,null);
+        child = new Child("dee-mar-nar-ar-po-tek","ดีมานา อาโปเตก","ร้านขายยาไปทางไหน","Where is the pharmacy?","Di mana apotek ?",null,null);
         child.setSoundPath(-1);
         childList.add(child);
 
@@ -649,7 +649,7 @@ public class PlaceDAL {
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("dee-mar-nar-pom-par-ben-sin","","ปั๊มน้ำมันไปทางไหน","Where is the gas station?","Di mana pompa bensin?",null,null);
+        child = new Child("dee-mar-nar-pom-par-ben-sin","ดีมานา โปมปา เบนซิน","ปั๊มน้ำมันไปทางไหน","Where is the gas station?","Di mana pompa bensin?",null,null);
         child.setSoundPath(-1);
         childList.add(child);
 
@@ -657,7 +657,7 @@ public class PlaceDAL {
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("dee-mar-nar-ho-tel","","โรงแรมไปทางไหน","Where is the hotel?","Di mana hotel?",null,null);
+        child = new Child("dee-mar-nar-ho-tel","ดีมานา โฮเตล","โรงแรมไปทางไหน","Where is the hotel?","Di mana hotel?",null,null);
         child.setSoundPath(-1);
         childList.add(child);
 
@@ -665,7 +665,7 @@ public class PlaceDAL {
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("dee-mar-nar-par-sar","","ตลาดไปทางไหน","Where is the market?","Di mana pasar ?",null,null);
+        child = new Child("dee-mar-nar-par-sar","ดีมานา ปาซัร","ตลาดไปทางไหน","Where is the market?","Di mana pasar ?",null,null);
         child.setSoundPath(-1);
         childList.add(child);
 
@@ -673,7 +673,7 @@ public class PlaceDAL {
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("dee-mar-nar-teum-pat-par-geer-mo-bil","","จุดพักรถไปทางไหน","Where is the car rest area?","Di mana tempat parkir mobil ?",null,null);
+        child = new Child("dee-mar-nar-teum-pat-par-geer-mo-bil","ดีมานา เตอมปัต ปากีร โมบิล","จุดพักรถไปทางไหน","Where is the car rest area?","Di mana tempat parkir mobil ?",null,null);
         child.setSoundPath(-1);
         childList.add(child);
 
@@ -681,7 +681,7 @@ public class PlaceDAL {
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("dee-mar-nar-gan-to-po-lee-see","","สถานีตำรวจไปทางไหน","Where is the police station?","Di mana kantor polisi ?",null,null);
+        child = new Child("dee-mar-nar-gan-to-po-lee-see","ดีมานา กันโต โปลีซี","สถานีตำรวจไปทางไหน","Where is the police station?","Di mana kantor polisi ?",null,null);
         child.setSoundPath(-1);
         childList.add(child);
 
@@ -689,7 +689,7 @@ public class PlaceDAL {
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("dee-mar-nar-pos-po-lee-see","","ป้อมตำรวจไปทางไหน","Where is the police booth?","Di mana pos polisi ?",null,null);
+        child = new Child("dee-mar-nar-pos-po-lee-see","ดีมานา โปส โปลีซี","ป้อมตำรวจไปทางไหน","Where is the police booth?","Di mana pos polisi ?",null,null);
         child.setSoundPath(-1);
         childList.add(child);
 
@@ -697,7 +697,7 @@ public class PlaceDAL {
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("dee-mar-nar-teum-pat-tu-gar-u-wang","","สถานที่แลกเงินระหว่างประเทศไปทางไหน","Where is the exchange bureau?","Di mana tempat tukar uang?",null,null);
+        child = new Child("dee-mar-nar-teum-pat-tu-gar-u-wang","ดีมานา เตอมปัต ตูกัร อูวัง","สถานที่แลกเงินระหว่างประเทศไปทางไหน","Where is the exchange bureau?","Di mana tempat tukar uang?",null,null);
         child.setSoundPath(-1);
         childList.add(child);
 
@@ -705,7 +705,7 @@ public class PlaceDAL {
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("dee-mar-nar-der-mar-kar","","ท่าเรือไปทางไหน","Where is the pier?","Di mana dermaga ?",null,null);
+        child = new Child("dee-mar-nar-der-mar-kar","ดีมานา เดอรมากา","ท่าเรือไปทางไหน","Where is the pier?","Di mana dermaga ?",null,null);
         child.setSoundPath(-1);
         childList.add(child);
 
@@ -713,7 +713,7 @@ public class PlaceDAL {
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("dee-mar-nar-ku-dang-seem-pan-bar-rang","","โกดังพักสินค้าไปทางไหน","Where is the warehouse?","Di mana gudang simpan barang?",null,null);
+        child = new Child("dee-mar-nar-ku-dang-seem-pan-bar-rang","ดีมานา กูดัง ซีมปัน บารัง","โกดังพักสินค้าไปทางไหน","Where is the warehouse?","Di mana gudang simpan barang?",null,null);
         child.setSoundPath(-1);
         childList.add(child);
 
@@ -726,7 +726,7 @@ public class PlaceDAL {
     public void loadThaiToLaos(){
         ArrayList<Child> childList = new ArrayList<Child>();
         childList = new ArrayList<Child>();
-        child = new Child("hong-num-pai-tharng-dai","","ห้องน้ำไปทางไหน","Where is the toilet?"," ຫ້ອງນ້ຳໄປທາງໃດ",null,null);
+        child = new Child("hong-num-pai-tharng-dai","ห้อง-น้ำ-ไป-ทาง-ใด","ห้องน้ำไปทางไหน","Where is the toilet?"," ຫ້ອງນ້ຳໄປທາງໃດ",null,null);
         child.setSoundPath(-1);
         childList.add(child);
 
@@ -734,7 +734,7 @@ public class PlaceDAL {
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("hong-arb-num-pai-tharng-dai","","ห้องอาบน้ำไปทางไหน","Where is the bathroom?"," ຫ້ອງອາບນ້ຳໄປທາງໃດ",null,null);
+        child = new Child("hong-arb-num-pai-tharng-dai","ห้อง-อาบ-น้ำ-ไป-ทาง-ใด","ห้องอาบน้ำไปทางไหน","Where is the bathroom?"," ຫ້ອງອາບນ້ຳໄປທາງໃດ",null,null);
         child.setSoundPath(-1);
         childList.add(child);
 
@@ -742,7 +742,7 @@ public class PlaceDAL {
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("harn-ar-harn-pai-tharng-dai","","ร้านอาหารไปทางไหน","Where is the restaurant?"," ຮ້ານອາຫານໄປທາງໃດ",null,null);
+        child = new Child("harn-ar-harn-pai-tharng-dai","ฮ้าน-อา-หาน-ไป-ทาง-ใด","ร้านอาหารไปทางไหน","Where is the restaurant?"," ຮ້ານອາຫານໄປທາງໃດ",null,null);
         child.setSoundPath(-1);
         childList.add(child);
 
@@ -750,7 +750,7 @@ public class PlaceDAL {
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("harn-kai-khueang-pai-tharng-dai","","ร้านค้าไปทางไหน","Where is the shop?"," ຮ້ານຂາຍເຄື່ອງໄປທາງໃດ",null,null);
+        child = new Child("harn-kai-khueang-pai-tharng-dai","ฮ้าน-ขาย-เคื่อง-ไป-ทาง-ใด","ร้านค้าไปทางไหน","Where is the shop?"," ຮ້ານຂາຍເຄື່ອງໄປທາງໃດ",null,null);
         child.setSoundPath(-1);
         childList.add(child);
 
@@ -758,7 +758,7 @@ public class PlaceDAL {
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("ga-lar-paeng-load-pai-tharng-dai","","อู่ซ่อมรถไปทางไหน","Where is the garage?"," ກະລ່າແປງລົດໄປທາງໃດ",null,null);
+        child = new Child("ga-lar-paeng-load-pai-tharng-dai","กะ-ล่า-แปง-ลด-ไป-ทาง-ใด","อู่ซ่อมรถไปทางไหน","Where is the garage?"," ກະລ່າແປງລົດໄປທາງໃດ",null,null);
         child.setSoundPath(-1);
         childList.add(child);
 
@@ -766,7 +766,7 @@ public class PlaceDAL {
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("hong-mor-pai-tharng-dai","","โรงพยาบาลไปทางไหน","Where is the hospital?"," ໂຮງໝໍໄປທາງໃດ",null,null);
+        child = new Child("hong-mor-pai-tharng-dai","โฮง-หมอ-ไป-ทาง-ใด","โรงพยาบาลไปทางไหน","Where is the hospital?"," ໂຮງໝໍໄປທາງໃດ",null,null);
         child.setSoundPath(-1);
         childList.add(child);
 
@@ -774,7 +774,7 @@ public class PlaceDAL {
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("klee-nik-pai-tharng-dai","","คลินิกไปทางไหน","Where is the clinic?"," ຄລິນິກໄປທາງໃດ",null,null);
+        child = new Child("klee-nik-pai-tharng-dai","คลิ-นิก-ไป-ทาง-ใด","คลินิกไปทางไหน","Where is the clinic?"," ຄລິນິກໄປທາງໃດ",null,null);
         child.setSoundPath(-1);
         childList.add(child);
 
@@ -782,7 +782,7 @@ public class PlaceDAL {
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("harn-khai-ya-pai-tharng-dai","","ร้านขายยาไปทางไหน","Where is the pharmacy?"," ຮ້ານຂາຍຢາໄປທາງໃດ",null,null);
+        child = new Child("harn-khai-ya-pai-tharng-dai","ฮ้าน-ขาย-ยา-ไป-ทาง-ใด","ร้านขายยาไปทางไหน","Where is the pharmacy?"," ຮ້ານຂາຍຢາໄປທາງໃດ",null,null);
         child.setSoundPath(-1);
         childList.add(child);
 
@@ -790,7 +790,7 @@ public class PlaceDAL {
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("pum-num-mun-pai-tharng-dai","","ปั๊มน้ำมันไปทางไหน","Where is the gas station?"," ປ້ຳນ້ຳມັນໄປທາງໃດ",null,null);
+        child = new Child("pum-num-mun-pai-tharng-dai","ปั้ม-น้ำ-มัน-ไป-ทาง-ใด","ปั๊มน้ำมันไปทางไหน","Where is the gas station?"," ປ້ຳນ້ຳມັນໄປທາງໃດ",null,null);
         child.setSoundPath(-1);
         childList.add(child);
 
@@ -798,7 +798,7 @@ public class PlaceDAL {
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("hong-haem-pai-tharng -dai","","โรงแรมไปทางไหน","Where is the hotel?"," ໂຮງແຮມໄປທາງໃດ",null,null);
+        child = new Child("hong-haem-pai-tharng -dai","โฮง-แฮม-ไป-ทาง-ใด","โรงแรมไปทางไหน","Where is the hotel?"," ໂຮງແຮມໄປທາງໃດ",null,null);
         child.setSoundPath(-1);
         childList.add(child);
 
@@ -806,7 +806,7 @@ public class PlaceDAL {
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("ta-lard-pai-tharng -dai","","ตลาดไปทางไหน","Where is the market?"," ຕະຫຼາດໄປທາງໃດ",null,null);
+        child = new Child("ta-lard-pai-tharng -dai","ตะ-หลาด-ไป-ทาง-ใด","ตลาดไปทางไหน","Where is the market?"," ຕະຫຼາດໄປທາງໃດ",null,null);
         child.setSoundPath(-1);
         childList.add(child);
 
@@ -814,7 +814,7 @@ public class PlaceDAL {
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("bon-jord-phuk-load- pai-tharng-dai","","จุดพักรถไปทางไหน","Where is the car rest area?"," ບ່ອນຈອດພັກລົດໄປທາງໃດ",null,null);
+        child = new Child("bon-jord-phuk-load- pai-tharng-dai","บ่อน-จอด-พัก-ลด-ไป-ทาง-ใด","จุดพักรถไปทางไหน","Where is the car rest area?"," ບ່ອນຈອດພັກລົດໄປທາງໃດ",null,null);
         child.setSoundPath(-1);
         childList.add(child);
 
@@ -822,7 +822,7 @@ public class PlaceDAL {
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("sa-ta-nee-tum-luad- pai-tharng-dai","","สถานีตำรวจไปทางไหน","Where is the police station?"," ສະຖານີຕຳຫຼວດໄປທາງໃດ",null,null);
+        child = new Child("sa-ta-nee-tum-luad- pai-tharng-dai","สะ-ถา-นี-ตำ-ลวด-ไป-ทาง-ใด","สถานีตำรวจไปทางไหน","Where is the police station?"," ສະຖານີຕຳຫຼວດໄປທາງໃດ",null,null);
         child.setSoundPath(-1);
         childList.add(child);
 
@@ -830,7 +830,7 @@ public class PlaceDAL {
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("pom-tum-luad- pai-tharng-dai","","ป้อมตำรวจไปทางไหน","Where is the police booth?"," ປ້ອມຕຳຫຼວດໄປທາງໃດ",null,null);
+        child = new Child("pom-tum-luad- pai-tharng-dai","ป้อม-ตำ-หลวด-ไป-ทาง-ใด","ป้อมตำรวจไปทางไหน","Where is the police booth?"," ປ້ອມຕຳຫຼວດໄປທາງໃດ",null,null);
         child.setSoundPath(-1);
         childList.add(child);
 
@@ -838,7 +838,7 @@ public class PlaceDAL {
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("bon-laek-pian-ngern-ta-lah-wang-pa-thed- pai-tharng-dai","","สถานที่แลกเงินระหว่างประเทศไปทางไหน","Where is the exchange bureau?"," ບ່ອນແລກປ່ຽນເງິນຕາລະຫວ່າງປະເທດ ໄປທາງໃດ",null,null);
+        child = new Child("bon-laek-pian-ngern-ta-lah-wang-pa-thed- pai-tharng-dai","บ่อน-แลก-เปี่ยน-เงิน-ตา-ละ-หว่าง-ปะ-เทด-ไป-ทาง-ใด","สถานที่แลกเงินระหว่างประเทศไปทางไหน","Where is the exchange bureau?"," ບ່ອນແລກປ່ຽນເງິນຕາລະຫວ່າງປະເທດ ໄປທາງໃດ",null,null);
         child.setSoundPath(-1);
         childList.add(child);
 
@@ -846,7 +846,7 @@ public class PlaceDAL {
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("tha-huea- pai-tharng-dai","","ท่าเรือไปทางไหน","Where is the pier?"," ທ່າເຮືອໄປທາງໃດ",null,null);
+        child = new Child("tha-huea- pai-tharng-dai","ท่า-เฮือ-ไป-ทาง-ใด","ท่าเรือไปทางไหน","Where is the pier?"," ທ່າເຮືອໄປທາງໃດ",null,null);
         child.setSoundPath(-1);
         childList.add(child);
 
@@ -854,7 +854,7 @@ public class PlaceDAL {
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("hong-mian-sin-kha- pai-tharng-dai","","โกดังพักสินค้าไปทางไหน","Where is the warehouse?"," ຫ້ອງມ້ຽນສິນຄ້າໄປທາງໃດ",null,null);
+        child = new Child("hong-mian-sin-kha- pai-tharng-dai","ห้อง-เมี้ยน-สิน-ค้า-ไป-ทาง-ใด","โกดังพักสินค้าไปทางไหน","Where is the warehouse?"," ຫ້ອງມ້ຽນສິນຄ້າໄປທາງໃດ",null,null);
         child.setSoundPath(-1);
         childList.add(child);
 
@@ -867,7 +867,7 @@ public class PlaceDAL {
     public void loadThaiToMalaysia(){
         ArrayList<Child> childList = new ArrayList<Child>();
         childList = new ArrayList<Child>();
-        child = new Child("tun-das-ger-ar-rah-ma-na","","ห้องน้ำไปทางไหน","Where is the toilet?","Tandas ke arah  mana",null,null);
+        child = new Child("tun-das-ger-ar-rah-ma-na","ตัน-ดัซ-เกอ-อา-ระห์-มา-นา","ห้องน้ำไปทางไหน","Where is the toilet?","Tandas ke arah  mana",null,null);
         child.setSoundPath(-1);
         childList.add(child);
 
@@ -875,7 +875,7 @@ public class PlaceDAL {
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("bee-lik-mun-dee-ger-ar-rah-ma-na","","ห้องอาบน้ำไปทางไหน","Where is the bathroom?","Bilik mandi  ke arah mana",null,null);
+        child = new Child("bee-lik-mun-dee-ger-ar-rah-ma-na","บี-ลิก-มัน-ดี-เกอ-อา-ระห์-มา-นา","ห้องอาบน้ำไปทางไหน","Where is the bathroom?","Bilik mandi  ke arah mana",null,null);
         child.setSoundPath(-1);
         childList.add(child);
 
@@ -883,7 +883,7 @@ public class PlaceDAL {
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("res-to-run-ger-ar-rah-ma-na","","ร้านอาหารไปทางไหน","Where is the restaurant?","Restoran ke arah mana",null,null);
+        child = new Child("res-to-run-ger-ar-rah-ma-na","เรส-โต-รัน-เกอ-อา-ระห์-มา-นา","ร้านอาหารไปทางไหน","Where is the restaurant?","Restoran ke arah mana",null,null);
         child.setSoundPath(-1);
         childList.add(child);
 
@@ -891,7 +891,7 @@ public class PlaceDAL {
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("ger-dai-ger-ar-rah-ma-na","","ร้านค้าไปทางไหน","Where is the shop?","Kedai ke arah mana",null,null);
+        child = new Child("ger-dai-ger-ar-rah-ma-na","เกอ-ได-เกอ-อา-ระห์-มา-นา","ร้านค้าไปทางไหน","Where is the shop?","Kedai ke arah mana",null,null);
         child.setSoundPath(-1);
         childList.add(child);
 
@@ -899,7 +899,7 @@ public class PlaceDAL {
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("beng-gail-ger-ray-ta-ger-ar-rah-ma-na","","อู่ซ่อมรถไปทางไหน","Where is the garage?","Bengkel kereta ke arah mana",null,null);
+        child = new Child("beng-gail-ger-ray-ta-ger-ar-rah-ma-na","เบง-เกล-เกอ-เร-ตา-เกอ-อา-ระห์-มา-นา","อู่ซ่อมรถไปทางไหน","Where is the garage?","Bengkel kereta ke arah mana",null,null);
         child.setSoundPath(-1);
         childList.add(child);
 
@@ -907,7 +907,7 @@ public class PlaceDAL {
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("hos-pi-tal-ger-ar-rah-ma-na","","โรงพยาบาลไปทางไหน","Where is the hospital?","Hospital ke arah mana",null,null);
+        child = new Child("hos-pi-tal-ger-ar-rah-ma-na","โฮซ-ปี-ตัล-เกอ-อา-ระห์-มา-นา","โรงพยาบาลไปทางไหน","Where is the hospital?","Hospital ke arah mana",null,null);
         child.setSoundPath(-1);
         childList.add(child);
 
@@ -915,7 +915,7 @@ public class PlaceDAL {
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("glee-nik-ger-ar-rah-ma-na","","คลินิกไปทางไหน","Where is the clinic?","Klinik ke arah mana",null,null);
+        child = new Child("glee-nik-ger-ar-rah-ma-na","กลี-นิก-เกอ-อา-ระห์-มา-นา","คลินิกไปทางไหน","Where is the clinic?","Klinik ke arah mana",null,null);
         child.setSoundPath(-1);
         childList.add(child);
 
@@ -923,7 +923,7 @@ public class PlaceDAL {
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("ger-dai-oo-bud-ger-ar-rah-ma-na","","ร้านขายยาไปทางไหน","Where is the pharmacy?","Kedai ubat ke arah mana",null,null);
+        child = new Child("ger-dai-oo-bud-ger-ar-rah-ma-na","เกอ-ได-อู-บัต-เกอ-อา-ระห์-มา-นา","ร้านขายยาไปทางไหน","Where is the pharmacy?","Kedai ubat ke arah mana",null,null);
         child.setSoundPath(-1);
         childList.add(child);
 
@@ -931,7 +931,7 @@ public class PlaceDAL {
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("stay-sen-mee-yuk-ger-ar-rah-ma-na","","ปั๊มน้ำมันไปทางไหน","Where is the gas station?","Stesen minyak ke arah mana",null,null);
+        child = new Child("stay-sen-mee-yuk-ger-ar-rah-ma-na","ซเต-เซ็น-มี-ยัก-เกอ-อา-ระห์-มา-นา","ปั๊มน้ำมันไปทางไหน","Where is the gas station?","Stesen minyak ke arah mana",null,null);
         child.setSoundPath(-1);
         childList.add(child);
 
@@ -939,7 +939,7 @@ public class PlaceDAL {
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("ho-tel-ger-ar-rah-ma-na","","โรงแรมไปทางไหน","Where is the hotel?","Hotel ke arah mana",null,null);
+        child = new Child("ho-tel-ger-ar-rah-ma-na","โฮ-เตล-เกอ-อา-ระห์-มา-นา","โรงแรมไปทางไหน","Where is the hotel?","Hotel ke arah mana",null,null);
         child.setSoundPath(-1);
         childList.add(child);
 
@@ -947,7 +947,7 @@ public class PlaceDAL {
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("pa-sul-ger-ar-rah-ma-na","","ตลาดไปทางไหน","Where is the market?","Pasar ke arah mana",null,null);
+        child = new Child("pa-sul-ger-ar-rah-ma-na","ปา-ซัร-เกอ-อา-ระห์-มา-นา","ตลาดไปทางไหน","Where is the market?","Pasar ke arah mana",null,null);
         child.setSoundPath(-1);
         childList.add(child);
 
@@ -955,7 +955,7 @@ public class PlaceDAL {
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("term-pud-bern-hern-tee-ger-ray-ta-ger-ar-rah-ma-na","","จุดพักรถไปทางไหน","Where is the car rest area?","Tempat berhenti kereta ke arah mana",null,null);
+        child = new Child("term-pud-bern-hern-tee-ger-ray-ta-ger-ar-rah-ma-na","เติม-ปัต-เบิร-เฮิน-ตี-เกอ-เร-ตา-เกอ-อา-ระห์-มา-นา","จุดพักรถไปทางไหน","Where is the car rest area?","Tempat berhenti kereta ke arah mana",null,null);
         child.setSoundPath(-1);
         childList.add(child);
 
@@ -963,7 +963,7 @@ public class PlaceDAL {
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("ba-lai-po-lis-ger-ar-rah-ma-na","","สถานีตำรวจไปทางไหน","Where is the police station?","Balai polis ke arah mana",null,null);
+        child = new Child("ba-lai-po-lis-ger-ar-rah-ma-na","บา-ไล-โป-ลิซ-เกอ-อา-ระห์-มา-นา","สถานีตำรวจไปทางไหน","Where is the police station?","Balai polis ke arah mana",null,null);
         child.setSoundPath(-1);
         childList.add(child);
 
@@ -971,7 +971,7 @@ public class PlaceDAL {
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("pone-doke-po-lis-ger-ar-rah-ma-na","","ป้อมตำรวจไปทางไหน","Where is the police booth?","Pondok polis ke arah mana",null,null);
+        child = new Child("pone-doke-po-lis-ger-ar-rah-ma-na","โปน-โด๊ก-โป-ลิซ-เกอ-อา-ระห์-มา-นา","ป้อมตำรวจไปทางไหน","Where is the police booth?","Pondok polis ke arah mana",null,null);
         child.setSoundPath(-1);
         childList.add(child);
 
@@ -979,7 +979,7 @@ public class PlaceDAL {
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("ger-dai-per-ngoo-roop-ger-ar-rah-ma-na","","สถานที่แลกเงินระหว่างประเทศไปทางไหน","Where is the exchange bureau?","Kedai pengurup ke arah mana",null,null);
+        child = new Child("ger-dai-per-ngoo-roop-ger-ar-rah-ma-na","เกอ-ได-เปอ-งู-รุป-เกอ-อา-ระห์-มา-นา","สถานที่แลกเงินระหว่างประเทศไปทางไหน","Where is the exchange bureau?","Kedai pengurup ke arah mana",null,null);
         child.setSoundPath(-1);
         childList.add(child);
 
@@ -987,7 +987,7 @@ public class PlaceDAL {
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("per-la-boo-hun-ger-ar-rah-ma-na","","ท่าเรือไปทางไหน","Where is the pier?","Pelabuhan ke arah mana",null,null);
+        child = new Child("per-la-boo-hun-ger-ar-rah-ma-na","เปอ-ลา-บู-ฮัน-เกอ-อา-ระห์-มา-นา","ท่าเรือไปทางไหน","Where is the pier?","Pelabuhan ke arah mana",null,null);
         child.setSoundPath(-1);
         childList.add(child);
 
@@ -995,7 +995,7 @@ public class PlaceDAL {
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("sto/ koo-dung-ba-rung-da-ka-ngun-ger-ar-rah-ma-na","","โกดังพักสินค้าไปทางไหน","Where is the warehouse?","Stor / Gudang barang dagangan ke arah mana",null,null);
+        child = new Child("sto/ koo-dung-ba-rung-da-ka-ngun-ger-ar-rah-ma-na","ซ-โตร์ / ฆู-ดัง-บา-รัง-ดา-ฆา-งัน-เกอ-อา-ระห์-มา-นา","โกดังพักสินค้าไปทางไหน","Where is the warehouse?","Stor / Gudang barang dagangan ke arah mana",null,null);
         child.setSoundPath(-1);
         childList.add(child);
 
@@ -1007,7 +1007,7 @@ public class PlaceDAL {
     public void loadThaiToMyanmar(){
         ArrayList<Child> childList = new ArrayList<Child>();
         childList = new ArrayList<Child>();
-        child = new Child("eng-ta-bae-ma-shi-lae","","ห้องน้ำไปทางไหน","Where is the toilet?","အိမ္သာဘယ္မွာရွိလဲ။",null,null);
+        child = new Child("eng-ta-bae-ma-shi-lae","เอ่ง-ต่า-แบ่-หม่า-ชิ-แล","ห้องน้ำไปทางไหน","Where is the toilet?","အိမ္သာဘယ္မွာရွိလဲ။",null,null);
         child.setSoundPath(-1);
         childList.add(child);
 
@@ -1015,7 +1015,7 @@ public class PlaceDAL {
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("ye-show-kan-bae-ma-shi- lae","","ห้องอาบน้ำไปทางไหน","Where is the bathroom?","ေရခ်ိဳးခန္းဘယ္မွာရွိလဲ။",null,null);
+        child = new Child("ye-show-kan-bae-ma-shi- lae","เหย่-โช-กาน-แบ่-หม่า-ชิ-แล","ห้องอาบน้ำไปทางไหน","Where is the bathroom?","ေရခ်ိဳးခန္းဘယ္မွာရွိလဲ။",null,null);
         child.setSoundPath(-1);
         childList.add(child);
 
@@ -1023,7 +1023,7 @@ public class PlaceDAL {
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("sa-taw-sai-bae-ma-shi- lae","","ร้านอาหารไปทางไหน","Where is the restaurant?","စားေသာက္ဆိုင္ဘယ္မွာရွိလဲ။",null,null);
+        child = new Child("sa-taw-sai-bae-ma-shi- lae","ซา-เต้า-ส่าย-แบ่-หม่า-ชิ-แล","ร้านอาหารไปทางไหน","Where is the restaurant?","စားေသာက္ဆိုင္ဘယ္မွာရွိလဲ။",null,null);
         child.setSoundPath(-1);
         childList.add(child);
 
@@ -1031,7 +1031,7 @@ public class PlaceDAL {
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("se-sai-bae-ma-shi-lae","","ร้านค้าไปทางไหน","Where is the shop?","ေစ်းဆိုင္ဘယ္မွာရွိလဲ။",null,null);
+        child = new Child("se-sai-bae-ma-shi-lae","เซ-ส่าย-แบ่-หม่า-ชิ-แล","ร้านค้าไปทางไหน","Where is the shop?","ေစ်းဆိုင္ဘယ္မွာရွိလဲ။",null,null);
         child.setSoundPath(-1);
         childList.add(child);
 
@@ -1039,7 +1039,7 @@ public class PlaceDAL {
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("ka-wa-choh-bae-ma-shi- lae","","อู่ซ่อมรถไปทางไหน","Where is the garage?","ကား၀ပ္ေရွာ့ဘယ္မွာရွိလဲ။",null,null);
+        child = new Child("ka-wa-choh-bae-ma-shi- lae","กา-วะ-เชาะ-แบ่-หม่า-ชิ-แล","อู่ซ่อมรถไปทางไหน","Where is the garage?","ကား၀ပ္ေရွာ့ဘယ္မွာရွိလဲ။",null,null);
         child.setSoundPath(-1);
         childList.add(child);
 
@@ -1047,7 +1047,7 @@ public class PlaceDAL {
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("se-yong-bae-ma-shi-lae","","โรงพยาบาลไปทางไหน","Where is the hospital?","ေဆးရွံဘယ္မွာရွိလဲ။",null,null);
+        child = new Child("se-yong-bae-ma-shi-lae","เซ-โหย่ง-แบ่-หม่า-ชิ-แล","โรงพยาบาลไปทางไหน","Where is the hospital?","ေဆးရွံဘယ္မွာရွိလဲ။",null,null);
         child.setSoundPath(-1);
         childList.add(child);
 
@@ -1055,7 +1055,7 @@ public class PlaceDAL {
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("se-kan-bae-ma-shi-lae","","คลินิกไปทางไหน","Where is the clinic?","ေဆးခန္းဘယ္မွာရွိလဲ။",null,null);
+        child = new Child("se-kan-bae-ma-shi-lae","เซ-กาน-แบ่-หม่า-ชิ-แล","คลินิกไปทางไหน","Where is the clinic?","ေဆးခန္းဘယ္မွာရွိလဲ။",null,null);
         child.setSoundPath(-1);
         childList.add(child);
 
@@ -1063,7 +1063,7 @@ public class PlaceDAL {
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("se-sai-bae-ma-shi-lae","","ร้านขายยาไปทางไหน","Where is the pharmacy?","ေဆးဆိုင္ဘယ္မွာရွိလဲ။",null,null);
+        child = new Child("se-sai-bae-ma-shi-lae","เซ-ส่าย-แบ่-หม่า-ชิ-แล","ร้านขายยาไปทางไหน","Where is the pharmacy?","ေဆးဆိုင္ဘယ္မွာရွိလဲ။",null,null);
         child.setSoundPath(-1);
         childList.add(child);
 
@@ -1071,7 +1071,7 @@ public class PlaceDAL {
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("dat-see-sai-bae-ma-shi- lae","","ปั๊มน้ำมันไปทางไหน","Where is the gas station?","ဓာတ္ဆီဆိုင္ဘယ္မွာရွိလဲ။",null,null);
+        child = new Child("dat-see-sai-bae-ma-shi- lae","ดั๊ด-สี่-ส่าย-แบ่-หม่า-ชิ-แล","ปั๊มน้ำมันไปทางไหน","Where is the gas station?","ဓာတ္ဆီဆိုင္ဘယ္မွာရွိလဲ။",null,null);
         child.setSoundPath(-1);
         childList.add(child);
 
@@ -1079,7 +1079,7 @@ public class PlaceDAL {
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("hoe-tae-bae-ma-shi-lae","","โรงแรมไปทางไหน","Where is the hotel?","ဟိုတယ္ဘယ္မွာရွိလဲ။",null,null);
+        child = new Child("hoe-tae-bae-ma-shi-lae","โฮ-แต-แบ่-หม่า-ชิ-แล","โรงแรมไปทางไหน","Where is the hotel?","ဟိုတယ္ဘယ္မွာရွိလဲ။",null,null);
         child.setSoundPath(-1);
         childList.add(child);
 
@@ -1087,7 +1087,7 @@ public class PlaceDAL {
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("se-bae-ma-shi-lae","","ตลาดไปทางไหน","Where is the market?","ေစ်းဘယ္မွာရွိလဲ။",null,null);
+        child = new Child("se-bae-ma-shi-lae","เซ-แบ่-หม่า-ชิ-แล","ตลาดไปทางไหน","Where is the market?","ေစ်းဘယ္မွာရွိလဲ။",null,null);
         child.setSoundPath(-1);
         childList.add(child);
 
@@ -1095,7 +1095,7 @@ public class PlaceDAL {
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("ka-yat-daeh-ne-ya-bae-ma-shi-lae","","จุดพักรถไปทางไหน","Where is the car rest area?","ကားရပ္တဲ့ေနရာဘယ္မွာရွိလဲ။",null,null);
+        child = new Child("ka-yat-daeh-ne-ya-bae-ma-shi-lae","กา-ยัด-แด๊ะ-เหน่-หย่า-แบ่-หม่า-ชิ-แล","จุดพักรถไปทางไหน","Where is the car rest area?","ကားရပ္တဲ့ေနရာဘယ္မွာရွိလဲ။",null,null);
         child.setSoundPath(-1);
         childList.add(child);
 
@@ -1103,7 +1103,7 @@ public class PlaceDAL {
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("yae-sa-khan-bae-ma-shi- lae","","สถานีตำรวจไปทางไหน","Where is the police station?","ရဲစခန္းဘယ္မွာရွိလဲ။",null,null);
+        child = new Child("yae-sa-khan-bae-ma-shi- lae","แย-สะ-คาน-แบ่-หม่า-ชิ-แล","สถานีตำรวจไปทางไหน","Where is the police station?","ရဲစခန္းဘယ္မွာရွိလဲ။",null,null);
         child.setSoundPath(-1);
         childList.add(child);
 
@@ -1111,7 +1111,7 @@ public class PlaceDAL {
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("yae-ging-bae-ma-shi-lae","","ป้อมตำรวจไปทางไหน","Where is the police booth?","ရဲကင္းဘယ္မွာရွိလဲ။",null,null);
+        child = new Child("yae-ging-bae-ma-shi-lae","แย-กีง-แบ่-หม่า-ชิ-แล","ป้อมตำรวจไปทางไหน","Where is the police booth?","ရဲကင္းဘယ္မွာရွိလဲ။",null,null);
         child.setSoundPath(-1);
         childList.add(child);
 
@@ -1119,7 +1119,7 @@ public class PlaceDAL {
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("na-nai-ngan-ngwe-lae-daeh-ne-ya-bae-ma-shi-lae","","สถานที่แลกเงินระหว่างประเทศไปทางไหน","Where is the exchange bureau?","ႏွစ္ႏိုင္ငံေငြလဲတဲ့ေနရာဘယ္မွာရွိလဲ။",null,null);
+        child = new Child("na-nai-ngan-ngwe-lae-daeh-ne-ya-bae-ma-shi-lae","หนะ-ไหน่-หงั่น-งเว่-แล-แด๊ะ-เหน่-หย่า- แบ่-หม่า-ชิ-แล","สถานที่แลกเงินระหว่างประเทศไปทางไหน","Where is the exchange bureau?","ႏွစ္ႏိုင္ငံေငြလဲတဲ့ေနရာဘယ္မွာရွိလဲ။",null,null);
         child.setSoundPath(-1);
         childList.add(child);
 
@@ -1127,7 +1127,7 @@ public class PlaceDAL {
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("seh-kan-bae-ma-shi-lae","","ท่าเรือไปทางไหน","Where is the pier?","ဆိပ္ကမ္းဘယ္မွာရွိလဲ။",null,null);
+        child = new Child("seh-kan-bae-ma-shi-lae","เซ-กา-บา-มา-ซิ-แล","ท่าเรือไปทางไหน","Where is the pier?","ဆိပ္ကမ္းဘယ္မွာရွိလဲ။",null,null);
         child.setSoundPath(-1);
         childList.add(child);
 
@@ -1135,7 +1135,7 @@ public class PlaceDAL {
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("kong -yong -bae -ma -shi -lae","","โกดังพักสินค้าไปทางไหน","Where is the warehouse?","ကုန္ရံုဘယ္မွာရွိလဲ။",null,null);
+        child = new Child("kong -yong -bae -ma -shi -lae","โก่ง-โหย่ง-แบ่-หม่า - ชิ -แล","โกดังพักสินค้าไปทางไหน","Where is the warehouse?","ကုန္ရံုဘယ္မွာရွိလဲ။",null,null);
         child.setSoundPath(-1);
         childList.add(child);
 
@@ -1147,7 +1147,7 @@ public class PlaceDAL {
     public void loadThaiToPhilippines(){
         ArrayList<Child> childList = new ArrayList<Child>();
         childList = new ArrayList<Child>();
-        child = new Child("nar-sar-an-ang-ban-yo","","ห้องน้ำไปทางไหน","Where is the toilet?","Nasaan ang banyo?",null,null);
+        child = new Child("nar-sar-an-ang-ban-yo","นา-ซา-อัน-อัง-บัน-โย","ห้องน้ำไปทางไหน","Where is the toilet?","Nasaan ang banyo?",null,null);
         child.setSoundPath(-1);
         childList.add(child);
 
@@ -1155,7 +1155,7 @@ public class PlaceDAL {
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("nar-sar-an-ang-par-li-gu-an","","ห้องอาบน้ำไปทางไหน","Where is the bathroom?","Nasaan ang paliguan?",null,null);
+        child = new Child("nar-sar-an-ang-par-li-gu-an","นา-ซา-อัน-อัง-ปา-ลิ-กุ-อัน","ห้องอาบน้ำไปทางไหน","Where is the bathroom?","Nasaan ang paliguan?",null,null);
         child.setSoundPath(-1);
         childList.add(child);
 
@@ -1163,7 +1163,7 @@ public class PlaceDAL {
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("nar-sar-an-ang-kar-rin-dey-ri-yar","","ร้านอาหารไปทางไหน","Where is the restaurant?","Nasaan ang carinderiya?",null,null);
+        child = new Child("nar-sar-an-ang-kar-rin-dey-ri-yar","นา-ซา-อัน-อัง-คา-ริน-เด-ริ-ยา","ร้านอาหารไปทางไหน","Where is the restaurant?","Nasaan ang carinderiya?",null,null);
         child.setSoundPath(-1);
         childList.add(child);
 
@@ -1171,7 +1171,7 @@ public class PlaceDAL {
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("nar-sar-an-ang-morl","","ร้านค้าไปทางไหน","Where is the shop?","Nasaan ang mall?",null,null);
+        child = new Child("nar-sar-an-ang-morl","นา-ซา-อัน-อัง-มอล","ร้านค้าไปทางไหน","Where is the shop?","Nasaan ang mall?",null,null);
         child.setSoundPath(-1);
         childList.add(child);
 
@@ -1179,7 +1179,7 @@ public class PlaceDAL {
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("nar-sar-an-ang-gar-rar-hey","","อู่ซ่อมรถไปทางไหน","Where is the garage?","Nasaan ang garahe?",null,null);
+        child = new Child("nar-sar-an-ang-gar-rar-hey","นา-ซา-อัน-อัง-กา-รา-เฮ","อู่ซ่อมรถไปทางไหน","Where is the garage?","Nasaan ang garahe?",null,null);
         child.setSoundPath(-1);
         childList.add(child);
 
@@ -1187,7 +1187,7 @@ public class PlaceDAL {
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("nar-sar-an-ang-os-pi-tal","","โรงพยาบาลไปทางไหน","Where is the hospital?","Nasaan ang ospital?",null,null);
+        child = new Child("nar-sar-an-ang-os-pi-tal","นา-ซา-อัน-อัง-ออส-ปิ-ตัล","โรงพยาบาลไปทางไหน","Where is the hospital?","Nasaan ang ospital?",null,null);
         child.setSoundPath(-1);
         childList.add(child);
 
@@ -1195,7 +1195,7 @@ public class PlaceDAL {
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("nar-sar-an-ang-gli-nik","","คลินิกไปทางไหน","Where is the clinic?","Nasaan ang klinik?",null,null);
+        child = new Child("nar-sar-an-ang-gli-nik","นา-ซา-อัน-อัง-กลิ-นิค","คลินิกไปทางไหน","Where is the clinic?","Nasaan ang klinik?",null,null);
         child.setSoundPath(-1);
         childList.add(child);
 
@@ -1203,7 +1203,7 @@ public class PlaceDAL {
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("nar-sar-an-ang-bo-ti-gar","","ร้านขายยาไปทางไหน","Where is the pharmacy?","Nasaan ang botika?",null,null);
+        child = new Child("nar-sar-an-ang-bo-ti-gar","นา-ซา-อัน-อัง-โบ-ติ-กา","ร้านขายยาไปทางไหน","Where is the pharmacy?","Nasaan ang botika?",null,null);
         child.setSoundPath(-1);
         childList.add(child);
 
@@ -1211,7 +1211,7 @@ public class PlaceDAL {
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("nar-sar-an-ang-gar-so-li-nar-han","","ปั๊มน้ำมันไปทางไหน","Where is the gas station?","Nasaan ang gasolinahan?",null,null);
+        child = new Child("nar-sar-an-ang-gar-so-li-nar-han","นา-ซา-อัน-อัง-กา-โซ-ลิ-นา-ฮัน","ปั๊มน้ำมันไปทางไหน","Where is the gas station?","Nasaan ang gasolinahan?",null,null);
         child.setSoundPath(-1);
         childList.add(child);
 
@@ -1219,7 +1219,7 @@ public class PlaceDAL {
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("nar-sar-an-ang-ho-tel","","โรงแรมไปทางไหน","Where is the hotel?","Nasaan ang hotel?",null,null);
+        child = new Child("nar-sar-an-ang-ho-tel","นา-ซา-อัน-อัง-โฮ-เตล","โรงแรมไปทางไหน","Where is the hotel?","Nasaan ang hotel?",null,null);
         child.setSoundPath(-1);
         childList.add(child);
 
@@ -1227,7 +1227,7 @@ public class PlaceDAL {
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("nar-sar-an-ang-par-leng-gey","","ตลาดไปทางไหน","Where is the market?","Nasaan ang palengke?",null,null);
+        child = new Child("nar-sar-an-ang-par-leng-gey","นา-ซา-อัน-อัง-ปา-เลง-เก","ตลาดไปทางไหน","Where is the market?","Nasaan ang palengke?",null,null);
         child.setSoundPath(-1);
         childList.add(child);
 
@@ -1235,7 +1235,7 @@ public class PlaceDAL {
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("nar-sar-an-ang-hin-tu-an-nang-boos","","จุดพักรถไปทางไหน","Where is the car rest area?","Nasaan ang hintuan ng bus?",null,null);
+        child = new Child("nar-sar-an-ang-hin-tu-an-nang-boos","นา-ซา-อัน-อัง-ฮิน-ตุ-อัน-นัง-บุส","จุดพักรถไปทางไหน","Where is the car rest area?","Nasaan ang hintuan ng bus?",null,null);
         child.setSoundPath(-1);
         childList.add(child);
 
@@ -1243,7 +1243,7 @@ public class PlaceDAL {
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("nar-sar-an-ang-him-pi-lan-nang-pu-lis","","สถานีตำรวจไปทางไหน","Where is the police station?","Nasaan ang himpilan ng pulis?",null,null);
+        child = new Child("nar-sar-an-ang-him-pi-lan-nang-pu-lis","นา-ซา-อัน-อัง-ฮิม-ปิ-ลัน-นัง-ปุ-ลิส","สถานีตำรวจไปทางไหน","Where is the police station?","Nasaan ang himpilan ng pulis?",null,null);
         child.setSoundPath(-1);
         childList.add(child);
 
@@ -1251,7 +1251,7 @@ public class PlaceDAL {
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("nar-sar-an-ang-chek-poit-nang-pu-lis","","ป้อมตำรวจไปทางไหน","Where is the police booth?","Nasaan ang checkpoint ng pulis?",null,null);
+        child = new Child("nar-sar-an-ang-chek-poit-nang-pu-lis","นา-ซา-อัน-อัง-เชค-พอยท์-นัง-ปุ-ลิส","ป้อมตำรวจไปทางไหน","Where is the police booth?","Nasaan ang checkpoint ng pulis?",null,null);
         child.setSoundPath(-1);
         childList.add(child);
 
@@ -1259,7 +1259,7 @@ public class PlaceDAL {
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("nar-sar-an-ang-lu-gar-rar-pang-par-lit-nang-pey-rar","","สถานที่แลกเงินระหว่างประเทศไปทางไหน","Where is the exchange bureau?","Nasaan ang lugar pang palit ng pera?",null,null);
+        child = new Child("nar-sar-an-ang-lu-gar-rar-pang-par-lit-nang-pey-rar","นา-ซา-อัน-อัง-ลุ-กา-ระ-ปัง-ปา-ลิท-นัง-เปรา","สถานที่แลกเงินระหว่างประเทศไปทางไหน","Where is the exchange bureau?","Nasaan ang lugar pang palit ng pera?",null,null);
         child.setSoundPath(-1);
         childList.add(child);
 
@@ -1267,7 +1267,7 @@ public class PlaceDAL {
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("nar-sar-an-ang-pu-ey-rer-to","","ท่าเรือไปทางไหน","Where is the pier?","Nasaan ang puerto?",null,null);
+        child = new Child("nar-sar-an-ang-pu-ey-rer-to","นา-ซา-อัน-อัง-ปู-เอ-เรอะ-โต","ท่าเรือไปทางไหน","Where is the pier?","Nasaan ang puerto?",null,null);
         child.setSoundPath(-1);
         childList.add(child);
 
@@ -1275,7 +1275,7 @@ public class PlaceDAL {
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("nar-sar-an-ang-bo-dey-gar","","โกดังพักสินค้าไปทางไหน","Where is the warehouse?","Nasaan ang bodega?",null,null);
+        child = new Child("nar-sar-an-ang-bo-dey-gar","นา-ซา-อัน-อัง-โบ-เด-กา","โกดังพักสินค้าไปทางไหน","Where is the warehouse?","Nasaan ang bodega?",null,null);
         child.setSoundPath(-1);
         childList.add(child);
 
@@ -1287,7 +1287,7 @@ public class PlaceDAL {
     public void loadThaiToSingapore(){
         ArrayList<Child> childList = new ArrayList<Child>();
         childList = new ArrayList<Child>();
-        child = new Child("ware-is-der-toi-let","","ห้องน้ำไปทางไหน","Where is the toilet?","",null,null);
+        child = new Child("ware-is-der-toi-let","แวร์-อิส-เดอะ-ท้อย-เลท","ห้องน้ำไปทางไหน","Where is the toilet?","",null,null);
         child.setSoundPath(-1);
         childList.add(child);
 
@@ -1295,7 +1295,7 @@ public class PlaceDAL {
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("ware -is-der-bat-room","","ห้องอาบน้ำไปทางไหน","Where is the bathroom?","",null,null);
+        child = new Child("ware -is-der-bat-room","แวร์-อิส-เดอะ-แบ๊ท-รูม","ห้องอาบน้ำไปทางไหน","Where is the bathroom?","",null,null);
         child.setSoundPath(-1);
         childList.add(child);
 
@@ -1303,7 +1303,7 @@ public class PlaceDAL {
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("ware -is-der-res-ter-rong","","ร้านอาหารไปทางไหน","Where is the restaurant?","",null,null);
+        child = new Child("ware -is-der-res-ter-rong","แวร์-อิส-เดอะ-เรส-เตอ-รอง","ร้านอาหารไปทางไหน","Where is the restaurant?","",null,null);
         child.setSoundPath(-1);
         childList.add(child);
 
@@ -1311,7 +1311,7 @@ public class PlaceDAL {
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("ware-is-der-chop","","ร้านค้าไปทางไหน","Where is the shop?","",null,null);
+        child = new Child("ware-is-der-chop","แวร์-อิส-เดอะ-ช้อป","ร้านค้าไปทางไหน","Where is the shop?","",null,null);
         child.setSoundPath(-1);
         childList.add(child);
 
@@ -1319,7 +1319,7 @@ public class PlaceDAL {
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("ware-is-der-gar-rarch","","อู่ซ่อมรถไปทางไหน","Where is the garage?","",null,null);
+        child = new Child("ware-is-der-gar-rarch","แวร์-อิส-เดอะ-กา-ร่าจ","อู่ซ่อมรถไปทางไหน","Where is the garage?","",null,null);
         child.setSoundPath(-1);
         childList.add(child);
 
@@ -1327,7 +1327,7 @@ public class PlaceDAL {
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("ware-is-der-hos-pi-tol","","โรงพยาบาลไปทางไหน","Where is the hospital?","",null,null);
+        child = new Child("ware-is-der-hos-pi-tol","แวร์-อิส-เดอะ-ฮอส-ปี-ทอล","โรงพยาบาลไปทางไหน","Where is the hospital?","",null,null);
         child.setSoundPath(-1);
         childList.add(child);
 
@@ -1335,7 +1335,7 @@ public class PlaceDAL {
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("ware-is-der-klee-nik","","คลินิกไปทางไหน","Where is the clinic?","",null,null);
+        child = new Child("ware-is-der-klee-nik","แวร์-อิส-เดอะ-คลี-นิค","คลินิกไปทางไหน","Where is the clinic?","",null,null);
         child.setSoundPath(-1);
         childList.add(child);
 
@@ -1343,7 +1343,7 @@ public class PlaceDAL {
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("ware-is-der-far-mar-see","","ร้านขายยาไปทางไหน","Where is the pharmacy?","",null,null);
+        child = new Child("ware-is-der-far-mar-see","แวร์-อิส-เดอะ-ฟา-มา-ซี","ร้านขายยาไปทางไหน","Where is the pharmacy?","",null,null);
         child.setSoundPath(-1);
         childList.add(child);
 
@@ -1351,7 +1351,7 @@ public class PlaceDAL {
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("ware-is-der-gas-stey-chan","","ปั๊มน้ำมันไปทางไหน","Where is the gas station?","",null,null);
+        child = new Child("ware-is-der-gas-stey-chan","แวร์-อิส-เดอะ-แก๊ส-สเต๊-ชั่น","ปั๊มน้ำมันไปทางไหน","Where is the gas station?","",null,null);
         child.setSoundPath(-1);
         childList.add(child);
 
@@ -1359,7 +1359,7 @@ public class PlaceDAL {
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("ware-is-der-ho-tel","","โรงแรมไปทางไหน","Where is the hotel?","",null,null);
+        child = new Child("ware-is-der-ho-tel","แวร์-อิส-เดอะ-โฮ-เทล","โรงแรมไปทางไหน","Where is the hotel?","",null,null);
         child.setSoundPath(-1);
         childList.add(child);
 
@@ -1367,7 +1367,7 @@ public class PlaceDAL {
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("ware-is-der-mar-ket","","ตลาดไปทางไหน","Where is the market?","",null,null);
+        child = new Child("ware-is-der-mar-ket","แวร์-อิส-เดอะ-ม้า-เก็ต","ตลาดไปทางไหน","Where is the market?","",null,null);
         child.setSoundPath(-1);
         childList.add(child);
 
@@ -1375,7 +1375,7 @@ public class PlaceDAL {
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("ware-is-der-kar-res-ae-ria","","จุดพักรถไปทางไหน","Where is the car rest area?","",null,null);
+        child = new Child("ware-is-der-kar-res-ae-ria","แวร์-อิส-เดอะ-คาร์-เรส-แอ-เรีย","จุดพักรถไปทางไหน","Where is the car rest area?","",null,null);
         child.setSoundPath(-1);
         childList.add(child);
 
@@ -1383,7 +1383,7 @@ public class PlaceDAL {
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("ware-is-der-po-lis-stey-chan","","สถานีตำรวจไปทางไหน","Where is the police station?","",null,null);
+        child = new Child("ware-is-der-po-lis-stey-chan","แวร์-อิส-เดอะ-โพ-ลิส-สเต๊-ชั่น","สถานีตำรวจไปทางไหน","Where is the police station?","",null,null);
         child.setSoundPath(-1);
         childList.add(child);
 
@@ -1391,7 +1391,7 @@ public class PlaceDAL {
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("ware-is-der-po-lis-boot","","ป้อมตำรวจไปทางไหน","Where is the police booth?","",null,null);
+        child = new Child("ware-is-der-po-lis-boot","แวร์-อิส-เดอะ-โพ-ลิส-บู๊ท","ป้อมตำรวจไปทางไหน","Where is the police booth?","",null,null);
         child.setSoundPath(-1);
         childList.add(child);
 
@@ -1399,7 +1399,7 @@ public class PlaceDAL {
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("ware-is-der-ex-chench-bio-ro","","สถานที่แลกเงินระหว่างประเทศไปทางไหน","Where is the exchange bureau?","",null,null);
+        child = new Child("ware-is-der-ex-chench-bio-ro","แวร์-อิส-เดอะ-เอ็กซ์-เช้นจ์-บิ๊ว-โร","สถานที่แลกเงินระหว่างประเทศไปทางไหน","Where is the exchange bureau?","",null,null);
         child.setSoundPath(-1);
         childList.add(child);
 
@@ -1407,7 +1407,7 @@ public class PlaceDAL {
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("ware-is-der-pia","","ท่าเรือไปทางไหน","Where is the pier?","",null,null);
+        child = new Child("ware-is-der-pia","แวร์-อิส-เดอะ-เพียร์","ท่าเรือไปทางไหน","Where is the pier?","",null,null);
         child.setSoundPath(-1);
         childList.add(child);
 
@@ -1415,7 +1415,7 @@ public class PlaceDAL {
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("ware-is-der- ware-haus","","โกดังพักสินค้าไปทางไหน","Where is the warehouse?","",null,null);
+        child = new Child("ware-is-der- ware-haus","แวร์-อิส-เดอะ-แวร์เฮ้าส์","โกดังพักสินค้าไปทางไหน","Where is the warehouse?","",null,null);
         child.setSoundPath(-1);
         childList.add(child);
 
@@ -1427,7 +1427,7 @@ public class PlaceDAL {
     public void loadThaiToVietnam(){
         ArrayList<Child> childList = new ArrayList<Child>();
         childList = new ArrayList<Child>();
-        child = new Child("fong-way-sin-dee-loi-now","","ห้องน้ำไปทางไหน","Where is the toilet?","phòng vệ sinh đi lối nào",null,null);
+        child = new Child("fong-way-sin-dee-loi-now","ฝ่อง-เหว่-ซิน-ดี-โหลย-หน่าว","ห้องน้ำไปทางไหน","Where is the toilet?","phòng vệ sinh đi lối nào",null,null);
         child.setSoundPath(-1);
         childList.add(child);
 
@@ -1435,7 +1435,7 @@ public class PlaceDAL {
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("fong-tum-dee-loi-now","","ห้องอาบน้ำไปทางไหน","Where is the bathroom?","phòng tắm đi lối nào",null,null);
+        child = new Child("fong-tum-dee-loi-now","ฝ่อง-ตั๊ม-ดี-โหลย-หน่าว","ห้องอาบน้ำไปทางไหน","Where is the bathroom?","phòng tắm đi lối nào",null,null);
         child.setSoundPath(-1);
         childList.add(child);
 
@@ -1443,7 +1443,7 @@ public class PlaceDAL {
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("tiam-un-dee-loi-now","","ร้านอาหารไปทางไหน","Where is the restaurant?","tiệm ăn đi lối nào",null,null);
+        child = new Child("tiam-un-dee-loi-now","เตี่ยม-อัน-ดี-โหลย-หน่าว","ร้านอาหารไปทางไหน","Where is the restaurant?","tiệm ăn đi lối nào",null,null);
         child.setSoundPath(-1);
         childList.add(child);
 
@@ -1451,7 +1451,7 @@ public class PlaceDAL {
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("keur-tiam-dee-loi-now","","ร้านค้าไปทางไหน","Where is the shop?","cửa tiệm đi lối nào",null,null);
+        child = new Child("keur-tiam-dee-loi-now","เกื๋อ-เตี่ยม-ดี-โหลย-หน่าว","ร้านค้าไปทางไหน","Where is the shop?","cửa tiệm đi lối nào",null,null);
         child.setSoundPath(-1);
         childList.add(child);
 
@@ -1459,7 +1459,7 @@ public class PlaceDAL {
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("ka-ra-suea-sae-dee-loi-now","","อู่ซ่อมรถไปทางไหน","Where is the garage?","ga ra sửa xe đi lối nào",null,null);
+        child = new Child("ka-ra-suea-sae-dee-loi-now","กา-รา-เสือ-แซ-ดี-โหลย-หน่าว","อู่ซ่อมรถไปทางไหน","Where is the garage?","ga ra sửa xe đi lối nào",null,null);
         child.setSoundPath(-1);
         childList.add(child);
 
@@ -1467,7 +1467,7 @@ public class PlaceDAL {
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("beng-wien-dee-loi-now","","โรงพยาบาลไปทางไหน","Where is the hospital?","bệnh viện đi lối nào?",null,null);
+        child = new Child("beng-wien-dee-loi-now","เบ่ง-เหวี่ยน-ดี-โหลย-หน่าว","โรงพยาบาลไปทางไหน","Where is the hospital?","bệnh viện đi lối nào?",null,null);
         child.setSoundPath(-1);
         childList.add(child);
 
@@ -1475,7 +1475,7 @@ public class PlaceDAL {
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("fong-mug-dee-loi-now","","คลินิกไปทางไหน","Where is the clinic?","phòng mạch đi lối nào?",null,null);
+        child = new Child("fong-mug-dee-loi-now","ฝ่อง-หมัก-ดี-โหลย-หน่าว","คลินิกไปทางไหน","Where is the clinic?","phòng mạch đi lối nào?",null,null);
         child.setSoundPath(-1);
         childList.add(child);
 
@@ -1483,7 +1483,7 @@ public class PlaceDAL {
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("tiam-thuak-tuai-dee-loi-now","","ร้านขายยาไปทางไหน","Where is the pharmacy?","tiệm thuốc  tây đi lối nào?",null,null);
+        child = new Child("tiam-thuak-tuai-dee-loi-now","เตี่ยม-ท๊วก-เตย-ดี-โหลย-หน่าว","ร้านขายยาไปทางไหน","Where is the pharmacy?","tiệm thuốc  tây đi lối nào?",null,null);
         child.setSoundPath(-1);
         childList.add(child);
 
@@ -1491,7 +1491,7 @@ public class PlaceDAL {
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("tram-sung-dee-loi-now","","ปั๊มน้ำมันไปทางไหน","Where is the gas station?","trạm xăng đi lối nào?",null,null);
+        child = new Child("tram-sung-dee-loi-now","ตร่าม-ซัง-ดี-โหลย-หน่าว","ปั๊มน้ำมันไปทางไหน","Where is the gas station?","trạm xăng đi lối nào?",null,null);
         child.setSoundPath(-1);
         childList.add(child);
 
@@ -1499,7 +1499,7 @@ public class PlaceDAL {
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("Khuk-san-dee-loi-now","","โรงแรมไปทางไหน","Where is the hotel?","khách sạn đi lối nào?",null,null);
+        child = new Child("Khuk-san-dee-loi-now","คั๊ก-ส่าน-ดี-โหลย-หน่าว","โรงแรมไปทางไหน","Where is the hotel?","khách sạn đi lối nào?",null,null);
         child.setSoundPath(-1);
         childList.add(child);
 
@@ -1507,7 +1507,7 @@ public class PlaceDAL {
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("joe-dee-loi-now","","ตลาดไปทางไหน","Where is the market?","chợ đi lối nào?",null,null);
+        child = new Child("joe-dee-loi-now","เจอะ-ดี-โหลย-หน่าว","ตลาดไปทางไหน","Where is the market?","chợ đi lối nào?",null,null);
         child.setSoundPath(-1);
         childList.add(child);
 
@@ -1515,7 +1515,7 @@ public class PlaceDAL {
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("noei-doe-sae-dee-loi-now","","จุดพักรถไปทางไหน","Where is the car rest area?","nơi đậu xe đi lối nào?",null,null);
+        child = new Child("noei-doe-sae-dee-loi-now","เนย-เดิ่ว-แซ-ดี-โหลย-หน่าว","จุดพักรถไปทางไหน","Where is the car rest area?","nơi đậu xe đi lối nào?",null,null);
         child.setSoundPath(-1);
         childList.add(child);
 
@@ -1523,7 +1523,7 @@ public class PlaceDAL {
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("don-kong-arn-dee-loi-now","","สถานีตำรวจไปทางไหน","Where is the police station?","đồn công an đi lối nào?",null,null);
+        child = new Child("don-kong-arn-dee-loi-now","โดน-กง-อาน- ดี-โหลย-หน่าว","สถานีตำรวจไปทางไหน","Where is the police station?","đồn công an đi lối nào?",null,null);
         child.setSoundPath(-1);
         childList.add(child);
 
@@ -1531,7 +1531,7 @@ public class PlaceDAL {
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("Tram-kun-sard-dee-loi-now","","ป้อมตำรวจไปทางไหน","Where is the police booth?","trạm cảnh sát đi lối nào?",null,null);
+        child = new Child("Tram-kun-sard-dee-loi-now","ตร่าม-กั๋น-ซ๊าต-ดี-โหลย-หน่าว","ป้อมตำรวจไปทางไหน","Where is the police booth?","trạm cảnh sát đi lối nào?",null,null);
         child.setSoundPath(-1);
         childList.add(child);
 
@@ -1539,7 +1539,7 @@ public class PlaceDAL {
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("Tram-doi-why-tay-dee-loi-now","","สถานที่แลกเงินระหว่างประเทศไปทางไหน","Where is the exchange bureau?","trạm đổi ngoại tệ đi lối nào?",null,null);
+        child = new Child("Tram-doi-why-tay-dee-loi-now","ตร่าม-โด๋ย-หว่าย-เต๊-ดี-โหลย-หน่าว","สถานที่แลกเงินระหว่างประเทศไปทางไหน","Where is the exchange bureau?","trạm đổi ngoại tệ đi lối nào?",null,null);
         child.setSoundPath(-1);
         childList.add(child);
 
@@ -1547,7 +1547,7 @@ public class PlaceDAL {
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("ben-toa-dee-loi-now","","ท่าเรือไปทางไหน","Where is the pier?","bến tàu đi lối nào?",null,null);
+        child = new Child("ben-toa-dee-loi-now","เบน-เต่า-ดี-โหลย-หน่าว","ท่าเรือไปทางไหน","Where is the pier?","bến tàu đi lối nào?",null,null);
         child.setSoundPath(-1);
         childList.add(child);
 
@@ -1555,7 +1555,7 @@ public class PlaceDAL {
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("Khor-true-hang-dee-loi-now","","โกดังพักสินค้าไปทางไหน","Where is the warehouse?","kho trữ hàng đi lối nào?",null,null);
+        child = new Child("Khor-true-hang-dee-loi-now","คอ-ตรื๋อ-ห่าง-ดี-โหลย-หน่าว","โกดังพักสินค้าไปทางไหน","Where is the warehouse?","kho trữ hàng đi lối nào?",null,null);
         child.setSoundPath(-1);
         childList.add(child);
 

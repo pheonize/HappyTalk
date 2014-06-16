@@ -11,6 +11,7 @@ import android.content.Intent;
 import android.content.res.Configuration;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.graphics.Typeface;
 import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
@@ -106,6 +107,7 @@ public class ConversationActivity extends Activity {
 
 
 
+
         //DB
 
         //db = new Database(this);
@@ -116,6 +118,8 @@ public class ConversationActivity extends Activity {
 
 
     }
+
+
 
 
     public void checkLanguage() {

@@ -6,10 +6,10 @@
         android:title="@string/language">
     <PreferenceCategory android:title="@string/language">
         <ListPreference
-            android:key="langPref"
             android:defaultValue="ENG"
             android:entries="@array/lang_names"
             android:entryValues="@array/lang_val"
+            android:key="langPref"
             android:summary="Choose your language"
             android:title="Language"/>
 
@@ -20,10 +20,12 @@
         android:title="@string/about">
         <PreferenceCategory android:title="@string/about"></PreferenceCategory>
             <PreferenceScreen
-                android:layout="@layout/about"
-               >
+                android:layout="@layout/about">
 
                 </PreferenceScreen>
+
+
+
 
             <!--<intent android:action="android.intent.action.VIEW"-->
                 <!--android:targetClass="@string/about"></intent>-->
