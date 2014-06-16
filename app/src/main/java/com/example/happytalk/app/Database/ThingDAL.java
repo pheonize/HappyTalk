@@ -636,200 +636,200 @@ public class ThingDAL {
     public void loadThaiToCambodia(){
         ArrayList<Child> childList = new ArrayList<Child>();
         childList = new ArrayList<Child>();
-        child = new Child("khyom-mian-ar-rom-tha-doac-jia-klian-huai","","ฉันรู้สึกหิว","I  feel hungry."," ខ្ញុំមានអារម្មណ៍ថា ដូចជាឃ្លានហើយ",null,null);
-        child.setSoundPath(-1);
+        child = new Child("khyom-mian-ar-rom-tha-doac-jia-klian-huai","คญม-เมียน-อา-ร็อม-ทา-โดจ-เจีย-คเลียน-เฮย","ฉันรู้สึกหิว","I  feel hungry."," ខ្ញុំមានអារម្មណ៍ថា ដូចជាឃ្លានហើយ",null,null);
+        child.setSoundPath(R.raw.hungry_cb);
         childList.add(child);
 
         groupHeader = new GroupHeader("ฉันรู้สึกหิว", "I  feel hungry.", childList);
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("khyom-treuw-ga-hope-bai","","ฉันต้องการอาหาร","I would like some food."," ខ្ញុំត្រូវការហូបបាយ",null,null);
-        child.setSoundPath(-1);
+        child = new Child("khyom-treuw-ga-hope-bai","คญม-ตเริว-กา-โฮ้บ-บาย","ฉันต้องการอาหาร","I would like some food."," ខ្ញុំត្រូវការហូបបាយ",null,null);
+        child.setSoundPath(R.raw.somefood_cb);
         childList.add(child);
 
         groupHeader = new GroupHeader("ฉันต้องการอาหาร", "I would like some food.", childList);
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("soam-juai-sor-say-neuw-wi-gai-but-tarm-chmuah-nueng-tee-gon-laeng-nih-phong","","กรุณาออกใบเสร็จตามชื่อและที่อยู่นี้ด้วย","Could you please give me a receipt following by these name and address."," សូមជួយសរសេរនូវវិក័យបត្រតាម ឈ្មោះ និងទីកន្លែងនេះផង",null,null);
-                child.setSoundPath(-1);
+        child = new Child("soam-juai-sor-say-neuw-wi-gai-but-tarm-chmuah-nueng-tee-gon-laeng-nih-phong","โซม-จวย-ซอ-เซ-เนิว-วิ-กัย-บัด-ตาม-ชมัวะฮ-นึง-ตี-ก็อน-แลง-นิฮ-พอง","กรุณาออกใบเสร็จตามชื่อและที่อยู่นี้ด้วย","Could you please give me a receipt following by these name and address."," សូមជួយសរសេរនូវវិក័យបត្រតាម ឈ្មោះ និងទីកន្លែងនេះផង",null,null);
+                child.setSoundPath(R.raw.receipt_cb);
         childList.add(child);
 
         groupHeader = new GroupHeader("กรุณาออกใบเสร็จตามชื่อและที่อยู่นี้ด้วย", "Could you please give me a receipt following by these name and address.", childList);
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("khyom-treuw-ga-graw-dah- a-na-mai","","ฉันต้องการกระดาษชำระ","I would like some toilet paper."," ខ្ញុំត្រូវការក្រដាសអនាម័យ",null,null);
-        child.setSoundPath(-1);
+        child = new Child("khyom-treuw-ga-graw-dah- a-na-mai","คญม-ตเริว-กา-กรอ-ต๊ะฮ-อะ-นา-มัย","ฉันต้องการกระดาษชำระ","I would like some toilet paper."," ខ្ញុំត្រូវការក្រដាសអនាម័យ",null,null);
+        child.setSoundPath(R.raw.toiletpaper_cb);
         childList.add(child);
 
         groupHeader = new GroupHeader("ฉันต้องการกระดาษชำระ", "I would like some toilet paper.", childList);
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("khyom-treuw-ga-gon-saeng-puah-go","","ฉันต้องการผ้าขนหนู","I would like a towel."," ខ្ញុំត្រូវការកន្សែងពោះគោ",null,null);
-        child.setSoundPath(-1);
+        child = new Child("khyom-treuw-ga-gon-saeng-puah-go","คญม-ตเริว-กา-ก็อน-แซง-ปั๊วะฮ-โก","ฉันต้องการผ้าขนหนู","I would like a towel."," ខ្ញុំត្រូវការកន្សែងពោះគោ",null,null);
+        child.setSoundPath(R.raw.towel_cb);
         childList.add(child);
 
         groupHeader = new GroupHeader("ฉันต้องการผ้าขนหนู", "I would like a towel.", childList);
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("khyom-treuw-ga-tuek-soat","","ฉันต้องการน้ำดื่ม","I would like some drinking water.","  ខ្ញុំត្រូវការទឹកសុទ្ធ",null,null);
-        child.setSoundPath(-1);
+        child = new Child("khyom-treuw-ga-tuek-soat","คญม-ตเริว-กา-ตึ๊ก-ซด","ฉันต้องการน้ำดื่ม","I would like some drinking water.","  ខ្ញុំត្រូវការទឹកសុទ្ធ",null,null);
+        child.setSoundPath(R.raw.drinkingwater_cb);
         childList.add(child);
 
         groupHeader = new GroupHeader("ฉันต้องการน้ำดื่ม", "I would like some drinking water.", childList);
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("khyom-treuw-ga-phaen-tee","","ฉันต้องการแผนที่","I would like a map.","  ខ្ញុំត្រូវការផែនទី",null,null);
-        child.setSoundPath(-1);
+        child = new Child("khyom-treuw-ga-phaen-tee","คญม-ตเริว-กา-แพน-ตี","ฉันต้องการแผนที่","I would like a map.","  ខ្ញុំត្រូវការផែនទី",null,null);
+        child.setSoundPath(R.raw.map_cb);
         childList.add(child);
 
         groupHeader = new GroupHeader("ฉันต้องการแผนที่", "I would like a map.", childList);
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("khyom-treuw-ga-thnam- pda-sai","","ฉันต้องการยาแก้ไข้","I would like the aspirin.","  ខ្ញុំត្រូវការថ្នាំផ្តាសាយ",null,null);
-        child.setSoundPath(-1);
+        child = new Child("khyom-treuw-ga-thnam- pda-sai","คญม-ตเริว-กา-ทนัม-พดา-ชาย","ฉันต้องการยาแก้ไข้","I would like the aspirin.","  ខ្ញុំត្រូវការថ្នាំផ្តាសាយ",null,null);
+        child.setSoundPath(R.raw.aspirin_cb);
         childList.add(child);
 
         groupHeader = new GroupHeader("ฉันต้องการยาแก้ไข้", "I would like the aspirin.", childList);
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("khyom-treuw-ga-thnam-cheu-gaw","","ฉันต้องการยาแก้ไอ","I would like the cough mixture.","  ខ្ញុំត្រូវការថ្នាំឈឺក",null,null);
-        child.setSoundPath(-1);
+        child = new Child("khyom-treuw-ga-thnam-cheu-gaw","คญม-ตเริว-กา-ทนัม-ซือ-กอว","ฉันต้องการยาแก้ไอ","I would like the cough mixture.","  ខ្ញុំត្រូវការថ្នាំឈឺក",null,null);
+        child.setSoundPath(R.raw.cough_cb);
         childList.add(child);
 
         groupHeader = new GroupHeader("ฉันต้องการยาแก้ไอ", "I would like the cough mixture.", childList);
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("khyom-treuw-ga-thnam-cheu-puah","","ฉันต้องการยาแก้ปวดท้อง","I would like the stomach ache medicine.","  ខ្ញុំត្រូវការថ្នាំឈឺពោះ",null,null);
-        child.setSoundPath(-1);
+        child = new Child("khyom-treuw-ga-thnam-cheu-puah","คญม-ตเริว-กา-ทนัม-ชือ-ปั๊วะฮ","ฉันต้องการยาแก้ปวดท้อง","I would like the stomach ache medicine.","  ខ្ញុំត្រូវការថ្នាំឈឺពោះ",null,null);
+        child.setSoundPath(R.raw.stomachmedicine_cb);
         childList.add(child);
 
         groupHeader = new GroupHeader("ฉันต้องการยาแก้ปวดท้อง", "I would like the stomach ache medicine.", childList);
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("khyom-treuw-ga-ga-fe","","ฉันต้องการกาแฟ","I would like a coffee.","  ខ្ញុំត្រូវការកាហ្វេ",null,null);
-        child.setSoundPath(-1);
+        child = new Child("khyom-treuw-ga-ga-fe","คญม-ตเริว-กา-กา-เฟ","ฉันต้องการกาแฟ","I would like a coffee.","  ខ្ញុំត្រូវការកាហ្វេ",null,null);
+        child.setSoundPath(R.raw.coffee_cb);
         childList.add(child);
 
         groupHeader = new GroupHeader("ฉันต้องการกาแฟ", "I would like a coffee.", childList);
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("khyom-treuw-ga-preng-sung","","ฉันต้องการน้ำมัน","I would like to get the fuel oil.","  ខ្ញុំត្រូវការប្រេងសាំង",null,null);
-        child.setSoundPath(-1);
+        child = new Child("khyom-treuw-ga-preng-sung","คญม-ตเริว-กา-เปรง-ซํง","ฉันต้องการน้ำมัน","I would like to get the fuel oil.","  ខ្ញុំត្រូវការប្រេងសាំង",null,null);
+        child.setSoundPath(R.raw.oil_cb);
         childList.add(child);
 
         groupHeader = new GroupHeader("ฉันต้องการน้ำมัน", "I would like to get the fuel oil.", childList);
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("khyom-treuw-ga-tuek-jom-run","","ฉันต้องการน้ำกลั่น","I would like a distilled water.","  ខ្ញុំត្រូវការទឹកចម្រាញ់",null,null);
-        child.setSoundPath(-1);
+        child = new Child("khyom-treuw-ga-tuek-jom-run","คญม-ตเริว-กา-ตึ๊ก-จ็อม-รัญ","ฉันต้องการน้ำกลั่น","I would like a distilled water.","  ខ្ញុំត្រូវការទឹកចម្រាញ់",null,null);
+        child.setSoundPath(R.raw.distilledwater_cb);
         childList.add(child);
 
         groupHeader = new GroupHeader("ฉันต้องการน้ำกลั่น", "I would like a distilled water.", childList);
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("khyom-treuw-ga-thmor-puel","","ฉันต้องการแบตเตอรี่","I would like a battery.","  ខ្ញុំត្រូវការថ្មពិល",null,null);
-        child.setSoundPath(-1);
+        child = new Child("khyom-treuw-ga-thmor-puel","คญม-ตเริว-กา-ทมอ-ปีล","ฉันต้องการแบตเตอรี่","I would like a battery.","  ខ្ញុំត្រូវការថ្មពិល",null,null);
+        child.setSoundPath(R.raw.battery_cb);
         childList.add(child);
 
         groupHeader = new GroupHeader("ฉันต้องการแบตเตอรี่", "I would like a battery.", childList);
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("khyom-treuw-ga-too-rah-weeh","","ฉันต้องการไขควง","I would like a screw driver.","  ខ្ញុំត្រូវការទុរវីស",null,null);
-        child.setSoundPath(-1);
+        child = new Child("khyom-treuw-ga-too-rah-weeh","คญม-ตเริว-กา-ตู-เรอะ-วีฮ","ฉันต้องการไขควง","I would like a screw driver.","  ខ្ញុំត្រូវការទុរវីស",null,null);
+        child.setSoundPath(R.raw.screw_cb);
         childList.add(child);
 
         groupHeader = new GroupHeader("ฉันต้องการไขควง", "I would like a screw driver.", childList);
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("khyom-treuw-ga-pror-dub-mual","","ฉันต้องการประแจ","I would like a wrench.","  ខ្ញុំត្រូវការប្រដាប់មួល",null,null);
-        child.setSoundPath(-1);
+        child = new Child("khyom-treuw-ga-pror-dub-mual","คญม-ตเริว-กา-ปรอ-ดั๊บ-มั๊ว","ฉันต้องการประแจ","I would like a wrench.","  ខ្ញុំត្រូវការប្រដាប់មួល",null,null);
+        child.setSoundPath(R.raw.wrench_cb);
         childList.add(child);
 
         groupHeader = new GroupHeader("ฉันต้องการประแจ", "I would like a wrench.", childList);
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("khyom-treuw-ga-pror-dub-doey","","ฉันต้องการแม่แรง","I would like a jack.","  ខ្ញុំត្រូវការប្រដាប់ដូយ",null,null);
-        child.setSoundPath(-1);
+        child = new Child("khyom-treuw-ga-pror-dub-doey","คญม-ตเริว-กา-ปรอ-ดั๊บ-โดย","ฉันต้องการแม่แรง","I would like a jack.","  ខ្ញុំត្រូវការប្រដាប់ដូយ",null,null);
+        child.setSoundPath(R.raw.jack_cb);
         childList.add(child);
 
         groupHeader = new GroupHeader("ฉันต้องการแม่แรง", "I would like a jack.", childList);
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("khyom-treuw-ga-som-bok-gong-dough","","ฉันต้องการยางอะไหล่","I would like a spare wheel.","  ខ្ញុំត្រូវការសំបកកង់ដូរ",null,null);
-        child.setSoundPath(-1);
+        child = new Child("khyom-treuw-ga-som-bok-gong-dough","คญม-ตเริว-กา-ซ็อม-บ้อก-ก็อง-โดว","ฉันต้องการยางอะไหล่","I would like a spare wheel.","  ខ្ញុំត្រូវការសំបកកង់ដូរ",null,null);
+        child.setSoundPath(R.raw.wheel_cb);
         childList.add(child);
 
         groupHeader = new GroupHeader("ฉันต้องการยางอะไหล่", "I would like a spare wheel.", childList);
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("khyom-treuw-ga-puel","","ฉันต้องการไฟฉาย","I would like a  flashlight.","  ខ្ញុំត្រូវការពិល",null,null);
-        child.setSoundPath(-1);
+        child = new Child("khyom-treuw-ga-puel","คญม-ตเริว-กา-ปีล","ฉันต้องการไฟฉาย","I would like a  flashlight.","  ខ្ញុំត្រូវការពិល",null,null);
+        child.setSoundPath(R.raw.flashlight_cb);
         childList.add(child);
 
         groupHeader = new GroupHeader("ฉันต้องการไฟฉาย", "I would like a  flashlight.", childList);
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("khyom-treuw-ga-slarb-pria-som","","ฉันต้องการช้อนส้อม","I would like a fork.","  ខ្ញុំត្រូវការស្លាបព្រាសម",null,null);
-        child.setSoundPath(-1);
+        child = new Child("khyom-treuw-ga-slarb-pria-som","คญม-ตเริว-กา-ซล้าบ-เปรีย-ซอม","ฉันต้องการช้อนส้อม","I would like a fork.","  ខ្ញុំត្រូវការស្លាបព្រាសម",null,null);
+        child.setSoundPath(R.raw.fork_cb);
         childList.add(child);
 
         groupHeader = new GroupHeader("ฉันต้องการช้อนส้อม", "I would like a fork.", childList);
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("khyom-treuw-ga-jong-geh ","","ฉันต้องการตะเกียบ","I would like a chopstick.","  ខ្ញុំត្រូវការចង្កឹះ",null,null);
-        child.setSoundPath(-1);
+        child = new Child("khyom-treuw-ga-jong-geh ","คญม-ตเริว-กา-จ็อง-เก๊อะฮ","ฉันต้องการตะเกียบ","I would like a chopstick.","  ខ្ញុំត្រូវការចង្កឹះ",null,null);
+        child.setSoundPath(R.raw.chopstick_cb);
         childList.add(child);
 
         groupHeader = new GroupHeader("ฉันต้องการตะเกียบ", "I would like a chopstick.", childList);
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("khyom-treuw-ga-krae / pook / trow-nuab-grai","","ฉันต้องการที่นอน/ฟูก/เบาะ","I would like a bed / mattress.","  ខ្ញុំត្រូវការគ្រែ/ពូក/ទ្រនាប់ក្រាល",null,null);
-        child.setSoundPath(-1);
+        child = new Child("khyom-treuw-ga-krae / pook / trow-nuab-grai","คญม-ตเริว-กา/แกร/ปู๊ก/โตร-น็วบ-กราล","ฉันต้องการที่นอน/ฟูก/เบาะ","I would like a bed / mattress.","  ខ្ញុំត្រូវការគ្រែ/ពូក/ទ្រនាប់ក្រាល",null,null);
+        child.setSoundPath(R.raw.bed_cb);
         childList.add(child);
 
         groupHeader = new GroupHeader("ฉันต้องการที่นอน/ฟูก/เบาะ", "I would like a bed / mattress.", childList);
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("khyom-treuw-ga-phuai","","ฉันต้องการผ้าห่ม","I would like a blanket.","  ខ្ញុំត្រូវការភួយ",null,null);
-        child.setSoundPath(-1);
+        child = new Child("khyom-treuw-ga-phuai","คญม-ตเริว-กา-พวย","ฉันต้องการผ้าห่ม","I would like a blanket.","  ខ្ញុំត្រូវការភួយ",null,null);
+        child.setSoundPath(R.raw.blanket_cb);
         childList.add(child);
 
         groupHeader = new GroupHeader("ฉันต้องการผ้าห่ม", "I would like a blanket.", childList);
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("khyom-treuw-ga-khnery","","ฉันต้องการหมอน","I would like a pillow.","  ខ្ញុំត្រូវការខ្នើយ",null,null);
-        child.setSoundPath(-1);
+        child = new Child("khyom-treuw-ga-khnery","คญม-ตเริว-กา-คเนย","ฉันต้องการหมอน","I would like a pillow.","  ខ្ញុំត្រូវការខ្នើយ",null,null);
+        child.setSoundPath(R.raw.pillow_cb);
         childList.add(child);
 
         groupHeader = new GroupHeader("ฉันต้องการหมอน", "I would like a pillow.", childList);
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("khyom-treuw-ga-too-ra-sub","","ฉันต้องการโทรศัพท์","I would like to get a phone.","  ខ្ញុំត្រូវការទូរសព្ទ",null,null);
-        child.setSoundPath(-1);
+        child = new Child("khyom-treuw-ga-too-ra-sub","คญม-ตเริว-กา-ตู-ระ-ซับ","ฉันต้องการโทรศัพท์","I would like to get a phone.","  ខ្ញុំត្រូវការទូរសព្ទ",null,null);
+        child.setSoundPath(R.raw.phone_cb);
         childList.add(child);
 
         groupHeader = new GroupHeader("ฉันต้องการโทรศัพท์", "I would like to get a phone.", childList);

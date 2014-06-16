@@ -1573,11 +1573,7 @@ public class HelpActivity extends Activity implements SearchView.OnQueryTextList
 
     }
 
-    public void onPause() {
-        super.onPause();
-        db.close();
-        sqLiteDatabase.close();
-    }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

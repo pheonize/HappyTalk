@@ -408,5 +408,6 @@ public class DALconnection  {
     }
 
     public void loadVietnamToVietnam() {
+
     }
 }

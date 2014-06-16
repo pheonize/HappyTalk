@@ -324,7 +324,7 @@ public class EmergencyDAL {
     public void loadThaiToCambodia(){
         ArrayList<Child> childList = new ArrayList<Child>();
         childList = new ArrayList<Child>();
-        child = new Child("juay-phong-khyom-treuw-joe-plon","","ช่วยด้วย ฉันโดนปล้น","Help me! I’ve been robbed."," ជួយផង ខ្ញុំត្រូវគេធ្វើបាប",null,null);
+        child = new Child("juay-phong-khyom-treuw-joe-plon","จวย – พอง – คญม – ตเริว – โจ – ปล็อน","ช่วยด้วย ฉันโดนปล้น","Help me! I’ve been robbed."," ជួយផង ខ្ញុំត្រូវគេធ្វើបាប",null,null);
         child.setSoundPath(-1);
         childList.add(child);
 
@@ -332,7 +332,7 @@ public class EmergencyDAL {
         groupHeaderList.add(groupHeader);
 //-------------------------------------------------
         childList = new ArrayList<Child>();
-        child = new Child("juay -phong-khyom- treuw -gay-thwer-barb","","ช่วยด้วย ฉันโดนทำร้าย","Help me! I've been attacked."," ខ្ញុំជាជនជាតិថៃ តើមានអ្នកណាអាច និយាយភាសាថៃបានខ្លះទេ?",null,null);
+        child = new Child("juay -phong-khyom- treuw -gay-thwer-barb","จวย – พอง – คญม – ตเริว – เก – ทเวอ – บ๊าบ","ช่วยด้วย ฉันโดนทำร้าย","Help me! I've been attacked."," ខ្ញុំជាជនជាតិថៃ តើមានអ្នកណាអាច និយាយភាសាថៃបានខ្លះទេ?",null,null);
         child.setSoundPath(-1);
         childList.add(child);
 

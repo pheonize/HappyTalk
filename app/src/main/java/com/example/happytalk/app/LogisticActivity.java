@@ -1569,11 +1569,7 @@ public class LogisticActivity extends Activity implements SearchView.OnQueryText
 
     }
 
-    public void onPause() {
-        super.onPause();
-        db.close();
-        sqLiteDatabase.close();
-    }
+
 
 
     @Override
