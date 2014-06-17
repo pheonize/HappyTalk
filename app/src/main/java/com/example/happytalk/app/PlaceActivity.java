@@ -1583,7 +1583,7 @@ public class PlaceActivity extends Activity implements SearchView.OnQueryTextLis
             case R.id.action_settings:
                 Intent i;
                 i = new Intent(getApplicationContext(), SettingActivity.class);
-                finish();
+               // finish();
                 startActivity(i);
 
                 return true;
@@ -1596,7 +1596,7 @@ public class PlaceActivity extends Activity implements SearchView.OnQueryTextLis
                 saveValue(lang_from,lang_to);
                 intent.putExtra("strCountryFrom", lang_from);
                 intent.putExtra("strCountryTo", lang_to);
-                finish();
+               // finish();
                 startActivity(intent);
 
 

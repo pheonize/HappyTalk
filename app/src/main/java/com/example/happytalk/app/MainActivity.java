@@ -450,7 +450,7 @@ public class MainActivity extends Activity {
                             Log.d("countryFrom", strCountryFrom);
                             Log.d("countryTo", strCountryTo);
 
-                            finish();
+                            //finish();
                             startActivity(intent);
 
                             break;
@@ -458,7 +458,7 @@ public class MainActivity extends Activity {
                             intent = new Intent(getApplicationContext(), ThingActivity.class);
                             intent.putExtra("strCountryFrom", strCountryFrom);
                             intent.putExtra("strCountryTo", strCountryTo);
-                            finish();
+                           // finish();
                             startActivity(intent);
 
                             break;
@@ -466,7 +466,7 @@ public class MainActivity extends Activity {
                             intent = new Intent(getApplicationContext(), PlaceActivity.class);
                             intent.putExtra("strCountryFrom", strCountryFrom);
                             intent.putExtra("strCountryTo", strCountryTo);
-                            finish();
+                            //finish();
                             startActivity(intent);
 
                             break;
@@ -475,7 +475,7 @@ public class MainActivity extends Activity {
                             intent = new Intent(getApplicationContext(), HelpActivity.class);
                             intent.putExtra("strCountryFrom", strCountryFrom);
                             intent.putExtra("strCountryTo", strCountryTo);
-                            finish();
+                            //finish();
                             startActivity(intent);
 
                             break;
@@ -484,7 +484,7 @@ public class MainActivity extends Activity {
                             intent.putExtra("strCountryFrom", strCountryFrom);
                             intent.putExtra("strCountryTo", strCountryTo);
 
-                            finish();
+                            //finish();
                             startActivity(intent);
 
                             break;
@@ -492,7 +492,7 @@ public class MainActivity extends Activity {
                             intent = new Intent(getApplicationContext(), FavoriteActivity.class);
                             intent.putExtra("strCountryFrom", strCountryFrom);
                             intent.putExtra("strCountryTo", strCountryTo);
-                            finish();
+                            //finish();
                             startActivity(intent);
 
                             break;
@@ -535,7 +535,7 @@ public class MainActivity extends Activity {
                             Log.d("countryFrom", strCountryFrom);
                             Log.d("countryTo", strCountryTo);
 
-                            finish();
+                           // finish();
                             startActivity(intent);
                             //onRestart();
                             break;
@@ -551,7 +551,7 @@ public class MainActivity extends Activity {
                             intent = new Intent(getApplicationContext(), PlaceActivity.class);
                             intent.putExtra("strCountryFrom", strCountryFrom);
                             intent.putExtra("strCountryTo", strCountryTo);
-                            finish();
+                           // finish();
                             startActivity(intent);
                             // onRestart();
                             break;
@@ -560,13 +560,13 @@ public class MainActivity extends Activity {
                             intent.putExtra("strCountryFrom", strCountryFrom);
                             intent.putExtra("strCountryTo", strCountryTo);
                             startActivity(intent);
-                            onRestart();
+                            //onRestart();
                             break;
                         case 4:
                             intent = new Intent(getApplicationContext(), LogisticActivity.class);
                             intent.putExtra("strCountryFrom", strCountryFrom);
                             intent.putExtra("strCountryTo", strCountryTo);
-                            finish();
+                            //finish();
                             startActivity(intent);
                             //onRestart();
                             break;
@@ -574,7 +574,7 @@ public class MainActivity extends Activity {
                             intent = new Intent(getApplicationContext(), FavoriteActivity.class);
                             intent.putExtra("strCountryFrom", strCountryFrom);
                             intent.putExtra("strCountryTo", strCountryTo);
-                            finish();
+                            //finish();
                             startActivity(intent);
                             //onRestart();
                             break;

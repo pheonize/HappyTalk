@@ -126,44 +126,44 @@ public class FavoriteActivity extends Activity{
         return groupHeaderList;
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.activity_main_actions, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-
-
-        switch (item.getItemId()) {
-            case R.id.action_settings:
-                Intent i;
-                i = new Intent(getApplicationContext(), SettingActivity.class);
-                finish();
-                startActivity(i);
-
-                return true;
-            //break;
-
-            case R.id.action_search:
-                Intent intent;
-                intent = new Intent(getApplicationContext(),SearchActivity.class);
-
-
-
-                intent.putExtra("strCountryFrom", lang_from);
-                intent.putExtra("strCountryTo", lang_to);
-                finish();
-                startActivity(intent);
-
-
-                return true;
-            default:
-                return super.onOptionsItemSelected(item);
-        }
-    }
+//    @Override
+//    public boolean onCreateOptionsMenu(Menu menu) {
+//        MenuInflater inflater = getMenuInflater();
+//        inflater.inflate(R.menu.activity_main_actions, menu);
+//        return true;
+//    }
+//
+//    @Override
+//    public boolean onOptionsItemSelected(MenuItem item) {
+//
+//
+//        switch (item.getItemId()) {
+//            case R.id.action_settings:
+//                Intent i;
+//                i = new Intent(getApplicationContext(), SettingActivity.class);
+//                //finish();
+//                startActivity(i);
+//
+//                return true;
+//            //break;
+//
+//            case R.id.action_search:
+//                Intent intent;
+//                intent = new Intent(getApplicationContext(),SearchActivity.class);
+//
+//
+//
+//                intent.putExtra("strCountryFrom", lang_from);
+//                intent.putExtra("strCountryTo", lang_to);
+//                //finish();
+//                startActivity(intent);
+//
+//
+//                return true;
+//            default:
+//                return super.onOptionsItemSelected(item);
+//        }
+//    }
 }
 
 

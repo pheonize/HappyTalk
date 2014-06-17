@@ -33,14 +33,14 @@ public class SearchActivity extends Activity implements SearchView.OnQueryTextLi
 
     private ConversationDAL loadConversation = new ConversationDAL();
     private ThingDAL loadThing = new ThingDAL();
-//    private PlaceDAL loadPlace;
-//    private EmergencyDAL loadEmergency;
-//    private LogisticDAL loadLogistic;
-    //private DALconnection daLconnection;
+    private PlaceDAL loadPlace = new PlaceDAL();
+    private EmergencyDAL loadEmergency = new EmergencyDAL();
+    private LogisticDAL loadLogistic = new LogisticDAL();
+
 
 
     private MyListAdapter listAdapter;
-    private MyListAdapter listAdapter1;
+
     private ExpandableListView myList;
     private ArrayList<GroupHeader> groupHeaderList = new ArrayList<GroupHeader>();
     private String strCountryFrom, strCountryTo;
@@ -110,1375 +110,2198 @@ public class SearchActivity extends Activity implements SearchView.OnQueryTextLi
     }
 
     public void initData(String lang_from, String lang_to) {
-        loadConversation.loadBruneiToLaos();
-        loadThing.loadBruneiToLaos();
-        ArrayList<GroupHeader> listgh = new ArrayList<GroupHeader>();
-        listgh.addAll(loadConversation.getGroupHeaderList());
-        listgh.addAll(loadThing.getGroupHeaderList());
-        myList = (ExpandableListView) findViewById(R.id.groupListview);
-        //create the adapter by passing your ArrayList data
-        listAdapter = new MyListAdapter(SearchActivity.this, listgh,lang_from,lang_to);
-        myList.setAdapter(listAdapter);
-        /*
+
+
         if (lang_from.equals("Thai") && lang_to.equals("Brunei") || lang_from.equals("ไทย") && lang_to.equals("บรูไน")) {
 
-            //display the list
-            // loadThaiToBrunei();
-            daLconnection = new DALconnection();
-            daLconnection.loadThaiToBrunei();
-
-
-
-            //get ref to the expandableListView
+            loadConversation.loadThaiToBrunei();
+            loadThing.loadThaiToBrunei();
+            loadEmergency.loadThaiToBrunei();
+            loadLogistic.loadThaiToBrunei();
+            loadPlace.loadThaiToBrunei();
+            ArrayList<GroupHeader> list= new ArrayList<GroupHeader>();
+            list.addAll(loadConversation.getGroupHeaderList());
+            list.addAll(loadThing.getGroupHeaderList());
+            list.addAll(loadEmergency.getGroupHeaderList());
+            list.addAll(loadLogistic.getGroupHeaderList());
+            list.addAll(loadPlace.getGroupHeaderList());
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(SearchActivity.this, daLconnection.getGroupHeaderList(),lang_from,lang_to);
-
-            //attach the adapter to the list
+            listAdapter = new MyListAdapter(SearchActivity.this, list,lang_from,lang_to);
             myList.setAdapter(listAdapter);
 
         }
         if (lang_from.equals("Thai") && lang_to.equals("China") || lang_from.equals("ไทย") && lang_to.equals("จีน")) {
-            daLconnection = new DALconnection();
-            daLconnection.loadThaiToChina();
-            //get ref to the expandableListView
+            loadConversation.loadThaiToChina();
+            loadThing.loadThaiToChina();
+            loadEmergency.loadThaiToChina();
+            loadLogistic.loadThaiToChina();
+            loadPlace.loadThaiToChina();
+            ArrayList<GroupHeader> list= new ArrayList<GroupHeader>();
+            list.addAll(loadConversation.getGroupHeaderList());
+            list.addAll(loadThing.getGroupHeaderList());
+            list.addAll(loadEmergency.getGroupHeaderList());
+            list.addAll(loadLogistic.getGroupHeaderList());
+            list.addAll(loadPlace.getGroupHeaderList());
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(SearchActivity.this, daLconnection.getGroupHeaderList(),lang_from,lang_to);
-            //attach the adapter to the list
+            listAdapter = new MyListAdapter(SearchActivity.this, list,lang_from,lang_to);
             myList.setAdapter(listAdapter);
-
 
 
         }
         if (lang_from.equals("Thai") && lang_to.equals("Thai") || lang_from.equals("ไทย") && lang_to.equals("ไทย")) {
-            daLconnection = new DALconnection();
-            daLconnection.loadThaiToThai();
-
+            loadConversation.loadThaiToThai();
+            loadThing.loadThaiToThai();
+            loadEmergency.loadThaiToThai();
+            loadLogistic.loadThaiToThai();
+            loadPlace.loadThaiToThai();
+            ArrayList<GroupHeader> list= new ArrayList<GroupHeader>();
+            list.addAll(loadConversation.getGroupHeaderList());
+            list.addAll(loadThing.getGroupHeaderList());
+            list.addAll(loadEmergency.getGroupHeaderList());
+            list.addAll(loadLogistic.getGroupHeaderList());
+            list.addAll(loadPlace.getGroupHeaderList());
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(SearchActivity.this, daLconnection.getGroupHeaderList(),lang_from,lang_to);
-            //attach the adapter to the list
+            listAdapter = new MyListAdapter(SearchActivity.this, list,lang_from,lang_to);
             myList.setAdapter(listAdapter);
         }
 
         if (lang_from.equals("Thai") && lang_to.equals("Cambodia") || lang_from.equals("ไทย") && lang_to.equals("กัมพูชา")) {
-            daLconnection = new DALconnection();
-            daLconnection.loadThaiToCambodia();
-
+            loadConversation.loadThaiToCambodia();
+            loadThing.loadThaiToCambodia();
+            loadEmergency.loadThaiToCambodia();
+            loadLogistic.loadThaiToCambodia();
+            loadPlace.loadThaiToCambodia();
+            ArrayList<GroupHeader> list= new ArrayList<GroupHeader>();
+            list.addAll(loadConversation.getGroupHeaderList());
+            list.addAll(loadThing.getGroupHeaderList());
+            list.addAll(loadEmergency.getGroupHeaderList());
+            list.addAll(loadLogistic.getGroupHeaderList());
+            list.addAll(loadPlace.getGroupHeaderList());
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(SearchActivity.this, daLconnection.getGroupHeaderList(),lang_from,lang_to);
-            //attach the adapter to the list
+            listAdapter = new MyListAdapter(SearchActivity.this, list,lang_from,lang_to);
             myList.setAdapter(listAdapter);
         }
         if (lang_from.equals("Thai") && lang_to.equals("Indonesia") || lang_from.equals("ไทย") && lang_to.equals("อินโดนีเซีย")) {
-            daLconnection = new DALconnection();
-            daLconnection.loadThaiToIndonesia();
-
+            loadConversation.loadThaiToIndonesia();
+            loadThing.loadThaiToIndonesia();
+            loadEmergency.loadThaiToIndonesia();
+            loadLogistic.loadThaiToIndonesia();
+            loadPlace.loadThaiToIndonesia();
+            ArrayList<GroupHeader> list= new ArrayList<GroupHeader>();
+            list.addAll(loadConversation.getGroupHeaderList());
+            list.addAll(loadThing.getGroupHeaderList());
+            list.addAll(loadEmergency.getGroupHeaderList());
+            list.addAll(loadLogistic.getGroupHeaderList());
+            list.addAll(loadPlace.getGroupHeaderList());
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(SearchActivity.this, daLconnection.getGroupHeaderList(),lang_from,lang_to);
-            //attach the adapter to the list
+            listAdapter = new MyListAdapter(SearchActivity.this, list,lang_from,lang_to);
             myList.setAdapter(listAdapter);
         }
         if (lang_from.equals("Thai") && lang_to.equals("Laos") || lang_from.equals("ไทย") && lang_to.equals("ลาว")) {
-            daLconnection = new DALconnection();
-            daLconnection.loadThaiToLaos();
-
+            loadConversation.loadThaiToLaos();
+            loadThing.loadThaiToLaos();
+            loadEmergency.loadThaiToLaos();
+            loadLogistic.loadThaiToLaos();
+            loadPlace.loadThaiToLaos();
+            ArrayList<GroupHeader> list= new ArrayList<GroupHeader>();
+            list.addAll(loadConversation.getGroupHeaderList());
+            list.addAll(loadThing.getGroupHeaderList());
+            list.addAll(loadEmergency.getGroupHeaderList());
+            list.addAll(loadLogistic.getGroupHeaderList());
+            list.addAll(loadPlace.getGroupHeaderList());
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(SearchActivity.this, daLconnection.getGroupHeaderList(),lang_from,lang_to);
-            //attach the adapter to the list
+            listAdapter = new MyListAdapter(SearchActivity.this, list,lang_from,lang_to);
             myList.setAdapter(listAdapter);
         }
 
         if (lang_from.equals("Thai") && lang_to.equals("Malaysia") || lang_from.equals("ไทย") && lang_to.equals("มาเลเซีย")) {
-            daLconnection = new DALconnection();
-            daLconnection.loadThaiToMalaysia();
-
+            loadConversation.loadThaiToMalaysia();
+            loadThing.loadThaiToMalaysia();
+            loadEmergency.loadThaiToMalaysia();
+            loadLogistic.loadThaiToMalaysia();
+            loadPlace.loadThaiToMalaysia();
+            ArrayList<GroupHeader> list= new ArrayList<GroupHeader>();
+            list.addAll(loadConversation.getGroupHeaderList());
+            list.addAll(loadThing.getGroupHeaderList());
+            list.addAll(loadEmergency.getGroupHeaderList());
+            list.addAll(loadLogistic.getGroupHeaderList());
+            list.addAll(loadPlace.getGroupHeaderList());
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(SearchActivity.this, daLconnection.getGroupHeaderList(),lang_from,lang_to);
-            //attach the adapter to the list
+            listAdapter = new MyListAdapter(SearchActivity.this, list,lang_from,lang_to);
             myList.setAdapter(listAdapter);
         }
         if (lang_from.equals("Thai") && lang_to.equals("Myanmar") || lang_from.equals("ไทย") && lang_to.equals("พม่า")) {
-            daLconnection = new DALconnection();
-            daLconnection.loadThaiToMyanmar();
-
+            loadConversation.loadThaiToMyanmar();
+            loadThing.loadThaiToMyanmar();
+            loadEmergency.loadThaiToMyanmar();
+            loadLogistic.loadThaiToMyanmar();
+            loadPlace.loadThaiToMyanmar();
+            ArrayList<GroupHeader> list= new ArrayList<GroupHeader>();
+            list.addAll(loadConversation.getGroupHeaderList());
+            list.addAll(loadThing.getGroupHeaderList());
+            list.addAll(loadEmergency.getGroupHeaderList());
+            list.addAll(loadLogistic.getGroupHeaderList());
+            list.addAll(loadPlace.getGroupHeaderList());
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(SearchActivity.this, daLconnection.getGroupHeaderList(),lang_from,lang_to);
-            //attach the adapter to the list
+            listAdapter = new MyListAdapter(SearchActivity.this, list,lang_from,lang_to);
             myList.setAdapter(listAdapter);
         }
 
         if (lang_from.equals("Thai") && lang_to.equals("Philippines") || lang_from.equals("ไทย") && lang_to.equals("ฟิลิปปินส์")) {
-            daLconnection = new DALconnection();
-            daLconnection.loadThaiToPhilippines();
-
+            loadConversation.loadThaiToPhilippines();
+            loadThing.loadThaiToPhilippines();
+            loadEmergency.loadThaiToPhilippines();
+            loadLogistic.loadThaiToPhilippines();
+            loadPlace.loadThaiToPhilippines();
+            ArrayList<GroupHeader> list= new ArrayList<GroupHeader>();
+            list.addAll(loadConversation.getGroupHeaderList());
+            list.addAll(loadThing.getGroupHeaderList());
+            list.addAll(loadEmergency.getGroupHeaderList());
+            list.addAll(loadLogistic.getGroupHeaderList());
+            list.addAll(loadPlace.getGroupHeaderList());
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(SearchActivity.this, daLconnection.getGroupHeaderList(),lang_from,lang_to);
-            //attach the adapter to the list
+            listAdapter = new MyListAdapter(SearchActivity.this, list,lang_from,lang_to);
             myList.setAdapter(listAdapter);
         }
 
         if (lang_from.equals("Thai") && lang_to.equals("Singapore") || lang_from.equals("ไทย") && lang_to.equals("สิงคโปร์")) {
-            daLconnection = new DALconnection();
-            daLconnection.loadThaiToSingapore();
-
+            loadConversation.loadThaiToSingapore();
+            loadThing.loadThaiToSingapore();
+            loadEmergency.loadThaiToSingapore();
+            loadLogistic.loadThaiToSingapore();
+            loadPlace.loadThaiToSingapore();
+            ArrayList<GroupHeader> list= new ArrayList<GroupHeader>();
+            list.addAll(loadConversation.getGroupHeaderList());
+            list.addAll(loadThing.getGroupHeaderList());
+            list.addAll(loadEmergency.getGroupHeaderList());
+            list.addAll(loadLogistic.getGroupHeaderList());
+            list.addAll(loadPlace.getGroupHeaderList());
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(SearchActivity.this, daLconnection.getGroupHeaderList(),lang_from,lang_to);
-            //attach the adapter to the list
+            listAdapter = new MyListAdapter(SearchActivity.this, list,lang_from,lang_to);
             myList.setAdapter(listAdapter);
         }
 
         if (lang_from.equals("Thai") && lang_to.equals("Vietnam") || lang_from.equals("ไทย") && lang_to.equals("เวียดนาม")) {
-            daLconnection = new DALconnection();
-            daLconnection.loadThaiToVietnam();
-
+            loadConversation.loadThaiToVietnam();
+            loadThing.loadThaiToVietnam();
+            loadEmergency.loadThaiToVietnam();
+            loadLogistic.loadThaiToVietnam();
+            loadPlace.loadThaiToVietnam();
+            ArrayList<GroupHeader> list= new ArrayList<GroupHeader>();
+            list.addAll(loadConversation.getGroupHeaderList());
+            list.addAll(loadThing.getGroupHeaderList());
+            list.addAll(loadEmergency.getGroupHeaderList());
+            list.addAll(loadLogistic.getGroupHeaderList());
+            list.addAll(loadPlace.getGroupHeaderList());
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(SearchActivity.this, daLconnection.getGroupHeaderList(),lang_from,lang_to);
-            //attach the adapter to the list
+            listAdapter = new MyListAdapter(SearchActivity.this, list,lang_from,lang_to);
             myList.setAdapter(listAdapter);
         }
 
         if (lang_from.equals("Brunei") && lang_to.equals("China") || lang_from.equals("บรูไน") && lang_to.equals("จีน")) {
-            daLconnection = new DALconnection();
-            daLconnection.loadBruneiToChina();
-
+            loadConversation.loadBruneiToChina();
+            loadThing.loadBruneiToChina();
+            loadEmergency.loadBruneiToChina();
+            loadLogistic.loadBruneiToChina();
+            loadPlace.loadBruneiToChina();
+            ArrayList<GroupHeader> list= new ArrayList<GroupHeader>();
+            list.addAll(loadConversation.getGroupHeaderList());
+            list.addAll(loadThing.getGroupHeaderList());
+            list.addAll(loadEmergency.getGroupHeaderList());
+            list.addAll(loadLogistic.getGroupHeaderList());
+            list.addAll(loadPlace.getGroupHeaderList());
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(SearchActivity.this, daLconnection.getGroupHeaderList(),lang_from,lang_to);
-            //attach the adapter to the list
+            listAdapter = new MyListAdapter(SearchActivity.this, list,lang_from,lang_to);
             myList.setAdapter(listAdapter);
         }
 
         if (lang_from.equals("Brunei") && lang_to.equals("Thai") || lang_from.equals("บรูไน") && lang_to.equals("ไทย")) {
-            daLconnection = new DALconnection();
-            daLconnection.loadBruneiToThai();
-
+            loadConversation.loadBruneiToThai();
+            loadThing.loadBruneiToThai();
+            loadEmergency.loadBruneiToThai();
+            loadLogistic.loadBruneiToThai();
+            loadPlace.loadBruneiToThai();
+            ArrayList<GroupHeader> list= new ArrayList<GroupHeader>();
+            list.addAll(loadConversation.getGroupHeaderList());
+            list.addAll(loadThing.getGroupHeaderList());
+            list.addAll(loadEmergency.getGroupHeaderList());
+            list.addAll(loadLogistic.getGroupHeaderList());
+            list.addAll(loadPlace.getGroupHeaderList());
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(SearchActivity.this, daLconnection.getGroupHeaderList(),lang_from,lang_to);
-            //attach the adapter to the list
+            listAdapter = new MyListAdapter(SearchActivity.this, list,lang_from,lang_to);
             myList.setAdapter(listAdapter);
         }
 
         if (lang_from.equals("Brunei") && lang_to.equals("Brunei") || lang_from.equals("บรูไน") && lang_to.equals("บรูไน")) {
-            daLconnection = new DALconnection();
-            daLconnection.loadBruneiToBrunei();
-
+            loadConversation.loadBruneiToBrunei();
+            loadThing.loadBruneiToBrunei();
+            loadEmergency.loadBruneiToBrunei();
+            loadLogistic.loadBruneiToBrunei();
+            loadPlace.loadBruneiToBrunei();
+            ArrayList<GroupHeader> list= new ArrayList<GroupHeader>();
+            list.addAll(loadConversation.getGroupHeaderList());
+            list.addAll(loadThing.getGroupHeaderList());
+            list.addAll(loadEmergency.getGroupHeaderList());
+            list.addAll(loadLogistic.getGroupHeaderList());
+            list.addAll(loadPlace.getGroupHeaderList());
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(SearchActivity.this, daLconnection.getGroupHeaderList(),lang_from,lang_to);
-            //attach the adapter to the list
+            listAdapter = new MyListAdapter(SearchActivity.this, list,lang_from,lang_to);
             myList.setAdapter(listAdapter);
         }
 
         if (lang_from.equals("Brunei") && lang_to.equals("Cambodia") || lang_from.equals("บรูไน") && lang_to.equals("กัมพูชา")) {
-            daLconnection = new DALconnection();
-            daLconnection.loadBruneiToCambodia();
-
+            loadConversation.loadBruneiToCambodia();
+            loadThing.loadBruneiToCambodia();
+            loadEmergency.loadBruneiToCambodia();
+            loadLogistic.loadBruneiToCambodia();
+            loadPlace.loadBruneiToCambodia();
+            ArrayList<GroupHeader> list= new ArrayList<GroupHeader>();
+            list.addAll(loadConversation.getGroupHeaderList());
+            list.addAll(loadThing.getGroupHeaderList());
+            list.addAll(loadEmergency.getGroupHeaderList());
+            list.addAll(loadLogistic.getGroupHeaderList());
+            list.addAll(loadPlace.getGroupHeaderList());
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(SearchActivity.this, daLconnection.getGroupHeaderList(),lang_from,lang_to);
-            //attach the adapter to the list
+            listAdapter = new MyListAdapter(SearchActivity.this, list,lang_from,lang_to);
             myList.setAdapter(listAdapter);
         }
 
         if (lang_from.equals("Brunei") && lang_to.equals("Indonesia") || lang_from.equals("บรูไน") && lang_to.equals("อินโดนีเซีย")) {
-            daLconnection = new DALconnection();
-            daLconnection.loadBruneiToIndonesia();
-
+            loadConversation.loadBruneiToIndonesia();
+            loadThing.loadBruneiToIndonesia();
+            loadEmergency.loadBruneiToIndonesia();
+            loadLogistic.loadBruneiToIndonesia();
+            loadPlace.loadBruneiToIndonesia();
+            ArrayList<GroupHeader> list= new ArrayList<GroupHeader>();
+            list.addAll(loadConversation.getGroupHeaderList());
+            list.addAll(loadThing.getGroupHeaderList());
+            list.addAll(loadEmergency.getGroupHeaderList());
+            list.addAll(loadLogistic.getGroupHeaderList());
+            list.addAll(loadPlace.getGroupHeaderList());
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(SearchActivity.this, daLconnection.getGroupHeaderList(),lang_from,lang_to);
-            //attach the adapter to the list
+            listAdapter = new MyListAdapter(SearchActivity.this, list,lang_from,lang_to);
             myList.setAdapter(listAdapter);
         }
 
         if (lang_from.equals("Brunei") && lang_to.equals("Laos") || lang_from.equals("บรูไน") && lang_to.equals("ลาว")) {
-            daLconnection = new DALconnection();
-            daLconnection.loadBruneiToLaos();
-
+            loadConversation.loadBruneiToLaos();
+            loadThing.loadBruneiToLaos();
+            loadEmergency.loadBruneiToLaos();
+            loadLogistic.loadBruneiToLaos();
+            loadPlace.loadBruneiToLaos();
+            ArrayList<GroupHeader> list= new ArrayList<GroupHeader>();
+            list.addAll(loadConversation.getGroupHeaderList());
+            list.addAll(loadThing.getGroupHeaderList());
+            list.addAll(loadEmergency.getGroupHeaderList());
+            list.addAll(loadLogistic.getGroupHeaderList());
+            list.addAll(loadPlace.getGroupHeaderList());
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(SearchActivity.this, daLconnection.getGroupHeaderList(),lang_from,lang_to);
-            //attach the adapter to the list
+            listAdapter = new MyListAdapter(SearchActivity.this, list,lang_from,lang_to);
             myList.setAdapter(listAdapter);
         }
 
 
         if (lang_from.equals("Brunei") && lang_to.equals("Malaysia") || lang_from.equals("บรูไน") && lang_to.equals("มาเลเซีย")) {
-            daLconnection = new DALconnection();
-            daLconnection.loadBruneiToMalaysia();
-
+            loadConversation.loadBruneiToMalaysia();
+            loadThing.loadBruneiToMalaysia();
+            loadEmergency.loadBruneiToMalaysia();
+            loadLogistic.loadBruneiToMalaysia();
+            loadPlace.loadBruneiToMalaysia();
+            ArrayList<GroupHeader> list= new ArrayList<GroupHeader>();
+            list.addAll(loadConversation.getGroupHeaderList());
+            list.addAll(loadThing.getGroupHeaderList());
+            list.addAll(loadEmergency.getGroupHeaderList());
+            list.addAll(loadLogistic.getGroupHeaderList());
+            list.addAll(loadPlace.getGroupHeaderList());
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(SearchActivity.this, daLconnection.getGroupHeaderList(),lang_from,lang_to);
-            //attach the adapter to the list
+            listAdapter = new MyListAdapter(SearchActivity.this, list,lang_from,lang_to);
             myList.setAdapter(listAdapter);
         }
 
         if (lang_from.equals("Brunei") && lang_to.equals("Myanmar") || lang_from.equals("บรูไน") && lang_to.equals("พม่า")) {
-            daLconnection = new DALconnection();
-            daLconnection.loadBruneiToMyanmar();
-
+            loadConversation.loadBruneiToMyanmar();
+            loadThing.loadBruneiToMyanmar();
+            loadEmergency.loadBruneiToMyanmar();
+            loadLogistic.loadBruneiToMyanmar();
+            loadPlace.loadBruneiToMyanmar();
+            ArrayList<GroupHeader> list= new ArrayList<GroupHeader>();
+            list.addAll(loadConversation.getGroupHeaderList());
+            list.addAll(loadThing.getGroupHeaderList());
+            list.addAll(loadEmergency.getGroupHeaderList());
+            list.addAll(loadLogistic.getGroupHeaderList());
+            list.addAll(loadPlace.getGroupHeaderList());
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(SearchActivity.this, daLconnection.getGroupHeaderList(),lang_from,lang_to);
-            //attach the adapter to the list
+            listAdapter = new MyListAdapter(SearchActivity.this, list,lang_from,lang_to);
             myList.setAdapter(listAdapter);
         }
 
         if (lang_from.equals("Brunei") && lang_to.equals("Philippines") || lang_from.equals("บรูไน") && lang_to.equals("ฟิลิปปินส์")) {
-            daLconnection = new DALconnection();
-            daLconnection.loadBruneiToPhilippines();
-
+            loadConversation.loadBruneiToPhilippines();
+            loadThing.loadBruneiToPhilippines();
+            loadEmergency.loadBruneiToPhilippines();
+            loadLogistic.loadBruneiToPhilippines();
+            loadPlace.loadBruneiToPhilippines();
+            ArrayList<GroupHeader> list= new ArrayList<GroupHeader>();
+            list.addAll(loadConversation.getGroupHeaderList());
+            list.addAll(loadThing.getGroupHeaderList());
+            list.addAll(loadEmergency.getGroupHeaderList());
+            list.addAll(loadLogistic.getGroupHeaderList());
+            list.addAll(loadPlace.getGroupHeaderList());
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(SearchActivity.this, daLconnection.getGroupHeaderList(),lang_from,lang_to);
-            //attach the adapter to the list
+            listAdapter = new MyListAdapter(SearchActivity.this, list,lang_from,lang_to);
             myList.setAdapter(listAdapter);
         }
 
         if (lang_from.equals("Brunei") && lang_to.equals("Singapore") || lang_from.equals("บรูไน") && lang_to.equals("สิงคโปร์")) {
-            daLconnection = new DALconnection();
-            daLconnection.loadBruneiToSingapore();
-
+            loadConversation.loadBruneiToSingapore();
+            loadThing.loadBruneiToSingapore();
+            loadEmergency.loadBruneiToSingapore();
+            loadLogistic.loadBruneiToSingapore();
+            loadPlace.loadBruneiToSingapore();
+            ArrayList<GroupHeader> list= new ArrayList<GroupHeader>();
+            list.addAll(loadConversation.getGroupHeaderList());
+            list.addAll(loadThing.getGroupHeaderList());
+            list.addAll(loadEmergency.getGroupHeaderList());
+            list.addAll(loadLogistic.getGroupHeaderList());
+            list.addAll(loadPlace.getGroupHeaderList());
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(SearchActivity.this, daLconnection.getGroupHeaderList(),lang_from,lang_to);
-            //attach the adapter to the list
+            listAdapter = new MyListAdapter(SearchActivity.this, list,lang_from,lang_to);
             myList.setAdapter(listAdapter);
         }
 
         if (lang_from.equals("Brunei") && lang_to.equals("Vietnam") || lang_from.equals("บรูไน") && lang_to.equals("เวียดนาม")) {
-            daLconnection = new DALconnection();
-            daLconnection.loadBruneiToVietnam();
-
+            loadConversation.loadBruneiToVietnam();
+            loadThing.loadBruneiToVietnam();
+            loadEmergency.loadBruneiToVietnam();
+            loadLogistic.loadBruneiToVietnam();
+            loadPlace.loadBruneiToVietnam();
+            ArrayList<GroupHeader> list= new ArrayList<GroupHeader>();
+            list.addAll(loadConversation.getGroupHeaderList());
+            list.addAll(loadThing.getGroupHeaderList());
+            list.addAll(loadEmergency.getGroupHeaderList());
+            list.addAll(loadLogistic.getGroupHeaderList());
+            list.addAll(loadPlace.getGroupHeaderList());
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(SearchActivity.this, daLconnection.getGroupHeaderList(),lang_from,lang_to);
-            //attach the adapter to the list
+            listAdapter = new MyListAdapter(SearchActivity.this, list,lang_from,lang_to);
             myList.setAdapter(listAdapter);
         }
 
         if (lang_from.equals("Cambodia") && lang_to.equals("China") || lang_from.equals("กัมพูชา") && lang_to.equals("จีน")) {
-            daLconnection = new DALconnection();
-            daLconnection.loadCambodiaToChina();
-
+            loadConversation.loadCambodiaToChina();
+            loadThing.loadCambodiaToChina();
+            loadEmergency.loadCambodiaToChina();
+            loadLogistic.loadCambodiaToChina();
+            loadPlace.loadCambodiaToChina();
+            ArrayList<GroupHeader> list= new ArrayList<GroupHeader>();
+            list.addAll(loadConversation.getGroupHeaderList());
+            list.addAll(loadThing.getGroupHeaderList());
+            list.addAll(loadEmergency.getGroupHeaderList());
+            list.addAll(loadLogistic.getGroupHeaderList());
+            list.addAll(loadPlace.getGroupHeaderList());
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(SearchActivity.this, daLconnection.getGroupHeaderList(),lang_from,lang_to);
-            //attach the adapter to the list
+            listAdapter = new MyListAdapter(SearchActivity.this, list,lang_from,lang_to);
             myList.setAdapter(listAdapter);
         }
 
         if (lang_from.equals("Cambodia") && lang_to.equals("Thai") || lang_from.equals("กัมพูชา") && lang_to.equals("ไทย")) {
-            daLconnection = new DALconnection();
-            daLconnection.loadCambodiaToThai();
-
+            loadConversation.loadCambodiaToThai();
+            loadThing.loadCambodiaToThai();
+            loadEmergency.loadCambodiaToThai();
+            loadLogistic.loadCambodiaToThai();
+            loadPlace.loadCambodiaToThai();
+            ArrayList<GroupHeader> list= new ArrayList<GroupHeader>();
+            list.addAll(loadConversation.getGroupHeaderList());
+            list.addAll(loadThing.getGroupHeaderList());
+            list.addAll(loadEmergency.getGroupHeaderList());
+            list.addAll(loadLogistic.getGroupHeaderList());
+            list.addAll(loadPlace.getGroupHeaderList());
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(SearchActivity.this, daLconnection.getGroupHeaderList(),lang_from,lang_to);
-            //attach the adapter to the list
+            listAdapter = new MyListAdapter(SearchActivity.this, list,lang_from,lang_to);
             myList.setAdapter(listAdapter);
         }
 
         if (lang_from.equals("Cambodia") && lang_to.equals("Brunei") || lang_from.equals("กัมพูชา") && lang_to.equals("บรูไน")) {
-            daLconnection = new DALconnection();
-            daLconnection.loadCambodiaToBrunei();
-
+            loadConversation.loadCambodiaToBrunei();
+            loadThing.loadCambodiaToBrunei();
+            loadEmergency.loadCambodiaToBrunei();
+            loadLogistic.loadCambodiaToBrunei();
+            loadPlace.loadCambodiaToBrunei();
+            ArrayList<GroupHeader> list= new ArrayList<GroupHeader>();
+            list.addAll(loadConversation.getGroupHeaderList());
+            list.addAll(loadThing.getGroupHeaderList());
+            list.addAll(loadEmergency.getGroupHeaderList());
+            list.addAll(loadLogistic.getGroupHeaderList());
+            list.addAll(loadPlace.getGroupHeaderList());
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(SearchActivity.this, daLconnection.getGroupHeaderList(),lang_from,lang_to);
-            //attach the adapter to the list
+            listAdapter = new MyListAdapter(SearchActivity.this, list,lang_from,lang_to);
             myList.setAdapter(listAdapter);
         }
 
         if (lang_from.equals("Cambodia") && lang_to.equals("Cambodia") || lang_from.equals("กัมพูชา") && lang_to.equals("กัมพูชา")) {
-            daLconnection = new DALconnection();
-            daLconnection.loadCambodiaToCambodia();
-
+            loadConversation.loadCambodiaToCambodia();
+            loadThing.loadCambodiaToCambodia();
+            loadEmergency.loadCambodiaToCambodia();
+            loadLogistic.loadCambodiaToCambodia();
+            loadPlace.loadCambodiaToCambodia();
+            ArrayList<GroupHeader> list= new ArrayList<GroupHeader>();
+            list.addAll(loadConversation.getGroupHeaderList());
+            list.addAll(loadThing.getGroupHeaderList());
+            list.addAll(loadEmergency.getGroupHeaderList());
+            list.addAll(loadLogistic.getGroupHeaderList());
+            list.addAll(loadPlace.getGroupHeaderList());
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(SearchActivity.this, daLconnection.getGroupHeaderList(),lang_from,lang_to);
-            //attach the adapter to the list
+            listAdapter = new MyListAdapter(SearchActivity.this, list,lang_from,lang_to);
             myList.setAdapter(listAdapter);
         }
 
         if (lang_from.equals("Cambodia") && lang_to.equals("Indonesia") || lang_from.equals("กัมพูชา") && lang_to.equals("อินโดนีเซีย")) {
-            daLconnection = new DALconnection();
-            daLconnection.loadCambodiaToIndonesia();
-
+            loadConversation.loadCambodiaToIndonesia();
+            loadThing.loadCambodiaToIndonesia();
+            loadEmergency.loadCambodiaToIndonesia();
+            loadLogistic.loadCambodiaToIndonesia();
+            loadPlace.loadCambodiaToIndonesia();
+            ArrayList<GroupHeader> list= new ArrayList<GroupHeader>();
+            list.addAll(loadConversation.getGroupHeaderList());
+            list.addAll(loadThing.getGroupHeaderList());
+            list.addAll(loadEmergency.getGroupHeaderList());
+            list.addAll(loadLogistic.getGroupHeaderList());
+            list.addAll(loadPlace.getGroupHeaderList());
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(SearchActivity.this, daLconnection.getGroupHeaderList(),lang_from,lang_to);
-            //attach the adapter to the list
+            listAdapter = new MyListAdapter(SearchActivity.this, list,lang_from,lang_to);
             myList.setAdapter(listAdapter);
         }
 
-        if (lang_from.equals("Cambodia") && lang_to.equals("Indonesia") || lang_from.equals("กัมพูชา") && lang_to.equals("อินโดนีเซีย")) {
-            daLconnection = new DALconnection();
-            daLconnection.loadCambodiaToIndonesia();
-
-            myList = (ExpandableListView) findViewById(R.id.groupListview);
-            //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(SearchActivity.this, daLconnection.getGroupHeaderList(),lang_from,lang_to);
-            //attach the adapter to the list
-            myList.setAdapter(listAdapter);
-        }
 
         if (lang_from.equals("Cambodia") && lang_to.equals("Laos") || lang_from.equals("กัมพูชา") && lang_to.equals("ลาว")) {
-            daLconnection = new DALconnection();
-            daLconnection.loadCambodiaToLaos();
-
+            loadConversation.loadCambodiaToLaos();
+            loadThing.loadCambodiaToLaos();
+            loadEmergency.loadCambodiaToLaos();
+            loadLogistic.loadCambodiaToLaos();
+            loadPlace.loadCambodiaToLaos();
+            ArrayList<GroupHeader> list= new ArrayList<GroupHeader>();
+            list.addAll(loadConversation.getGroupHeaderList());
+            list.addAll(loadThing.getGroupHeaderList());
+            list.addAll(loadEmergency.getGroupHeaderList());
+            list.addAll(loadLogistic.getGroupHeaderList());
+            list.addAll(loadPlace.getGroupHeaderList());
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(SearchActivity.this, daLconnection.getGroupHeaderList(),lang_from,lang_to);
-            //attach the adapter to the list
+            listAdapter = new MyListAdapter(SearchActivity.this, list,lang_from,lang_to);
             myList.setAdapter(listAdapter);
         }
 
         if (lang_from.equals("Cambodia") && lang_to.equals("Malaysia") || lang_from.equals("กัมพูชา") && lang_to.equals("มาเลเซีย")) {
-            daLconnection = new DALconnection();
-            daLconnection.loadCambodiaToMalaysia();
-
+            loadConversation.loadCambodiaToMalaysia();
+            loadThing.loadCambodiaToMalaysia();
+            loadEmergency.loadCambodiaToMalaysia();
+            loadLogistic.loadCambodiaToMalaysia();
+            loadPlace.loadCambodiaToMalaysia();
+            ArrayList<GroupHeader> list= new ArrayList<GroupHeader>();
+            list.addAll(loadConversation.getGroupHeaderList());
+            list.addAll(loadThing.getGroupHeaderList());
+            list.addAll(loadEmergency.getGroupHeaderList());
+            list.addAll(loadLogistic.getGroupHeaderList());
+            list.addAll(loadPlace.getGroupHeaderList());
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(SearchActivity.this, daLconnection.getGroupHeaderList(),lang_from,lang_to);
-            //attach the adapter to the list
+            listAdapter = new MyListAdapter(SearchActivity.this, list,lang_from,lang_to);
             myList.setAdapter(listAdapter);
         }
 
         if (lang_from.equals("Cambodia") && lang_to.equals("Myanmar") || lang_from.equals("กัมพูชา") && lang_to.equals("พม่า")) {
-            daLconnection = new DALconnection();
-            daLconnection.loadCambodiaToMyanmar();
-
+            loadConversation.loadCambodiaToMyanmar();
+            loadThing.loadCambodiaToMyanmar();
+            loadEmergency.loadCambodiaToMyanmar();
+            loadLogistic.loadCambodiaToMyanmar();
+            loadPlace.loadCambodiaToMyanmar();
+            ArrayList<GroupHeader> list= new ArrayList<GroupHeader>();
+            list.addAll(loadConversation.getGroupHeaderList());
+            list.addAll(loadThing.getGroupHeaderList());
+            list.addAll(loadEmergency.getGroupHeaderList());
+            list.addAll(loadLogistic.getGroupHeaderList());
+            list.addAll(loadPlace.getGroupHeaderList());
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(SearchActivity.this, daLconnection.getGroupHeaderList(),lang_from,lang_to);
-            //attach the adapter to the list
+            listAdapter = new MyListAdapter(SearchActivity.this, list,lang_from,lang_to);
             myList.setAdapter(listAdapter);
         }
 
 
         if (lang_from.equals("Cambodia") && lang_to.equals("Philippines") || lang_from.equals("กัมพูชา") && lang_to.equals("ฟิลิปปินส์")) {
-            daLconnection = new DALconnection();
-            daLconnection.loadCambodiaToPhilippines();
-
+            loadConversation.loadCambodiaToPhilippines();
+            loadThing.loadCambodiaToPhilippines();
+            loadEmergency.loadCambodiaToPhilippines();
+            loadLogistic.loadCambodiaToPhilippines();
+            loadPlace.loadCambodiaToPhilippines();
+            ArrayList<GroupHeader> list= new ArrayList<GroupHeader>();
+            list.addAll(loadConversation.getGroupHeaderList());
+            list.addAll(loadThing.getGroupHeaderList());
+            list.addAll(loadEmergency.getGroupHeaderList());
+            list.addAll(loadLogistic.getGroupHeaderList());
+            list.addAll(loadPlace.getGroupHeaderList());
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(SearchActivity.this, daLconnection.getGroupHeaderList(),lang_from,lang_to);
-            //attach the adapter to the list
+            listAdapter = new MyListAdapter(SearchActivity.this, list,lang_from,lang_to);
             myList.setAdapter(listAdapter);
         }
 
         if (lang_from.equals("Cambodia") && lang_to.equals("Singapore") || lang_from.equals("กัมพูชา") && lang_to.equals("สิงคโปร์")) {
-            daLconnection = new DALconnection();
-            daLconnection.loadCambodiaToSingapore();
-
+            loadConversation.loadCambodiaToSingapore();
+            loadThing.loadCambodiaToSingapore();
+            loadEmergency.loadCambodiaToSingapore();
+            loadLogistic.loadCambodiaToSingapore();
+            loadPlace.loadCambodiaToSingapore();
+            ArrayList<GroupHeader> list= new ArrayList<GroupHeader>();
+            list.addAll(loadConversation.getGroupHeaderList());
+            list.addAll(loadThing.getGroupHeaderList());
+            list.addAll(loadEmergency.getGroupHeaderList());
+            list.addAll(loadLogistic.getGroupHeaderList());
+            list.addAll(loadPlace.getGroupHeaderList());
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(SearchActivity.this, daLconnection.getGroupHeaderList(),lang_from,lang_to);
-            //attach the adapter to the list
+            listAdapter = new MyListAdapter(SearchActivity.this, list,lang_from,lang_to);
             myList.setAdapter(listAdapter);
         }
 
         if (lang_from.equals("Cambodia") && lang_to.equals("Vietnam") || lang_from.equals("กัมพูชา") && lang_to.equals("เวียดนาม")) {
-            daLconnection = new DALconnection();
-            daLconnection.loadCambodiaToVietnam();
-
+            loadConversation.loadCambodiaToVietnam();
+            loadThing.loadCambodiaToVietnam();
+            loadEmergency.loadCambodiaToVietnam();
+            loadLogistic.loadCambodiaToVietnam();
+            loadPlace.loadCambodiaToVietnam();
+            ArrayList<GroupHeader> list= new ArrayList<GroupHeader>();
+            list.addAll(loadConversation.getGroupHeaderList());
+            list.addAll(loadThing.getGroupHeaderList());
+            list.addAll(loadEmergency.getGroupHeaderList());
+            list.addAll(loadLogistic.getGroupHeaderList());
+            list.addAll(loadPlace.getGroupHeaderList());
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(SearchActivity.this, daLconnection.getGroupHeaderList(),lang_from,lang_to);
-            //attach the adapter to the list
+            listAdapter = new MyListAdapter(SearchActivity.this, list,lang_from,lang_to);
             myList.setAdapter(listAdapter);
         }
 
         if (lang_from.equals("China") && lang_to.equals("China") || lang_from.equals("จีน") && lang_to.equals("จีน")) {
-            daLconnection = new DALconnection();
-            daLconnection.loadChinaToChina();
-
+            loadConversation.loadChinaToChina();
+            loadThing.loadChinaToChina();
+            loadEmergency.loadChinaToChina();
+            loadLogistic.loadChinaToChina();
+            loadPlace.loadChinaToChina();
+            ArrayList<GroupHeader> list= new ArrayList<GroupHeader>();
+            list.addAll(loadConversation.getGroupHeaderList());
+            list.addAll(loadThing.getGroupHeaderList());
+            list.addAll(loadEmergency.getGroupHeaderList());
+            list.addAll(loadLogistic.getGroupHeaderList());
+            list.addAll(loadPlace.getGroupHeaderList());
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(SearchActivity.this, daLconnection.getGroupHeaderList(),lang_from,lang_to);
-            //attach the adapter to the list
+            listAdapter = new MyListAdapter(SearchActivity.this, list,lang_from,lang_to);
             myList.setAdapter(listAdapter);
         }
 
         if (lang_from.equals("China") && lang_to.equals("Thai") || lang_from.equals("จีน") && lang_to.equals("ไทย")) {
-            daLconnection = new DALconnection();
-            daLconnection.loadChinaToThai();
-
+            loadConversation.loadChinaToThai();
+            loadThing.loadChinaToThai();
+            loadEmergency.loadChinaToThai();
+            loadLogistic.loadChinaToThai();
+            loadPlace.loadChinaToThai();
+            ArrayList<GroupHeader> list= new ArrayList<GroupHeader>();
+            list.addAll(loadConversation.getGroupHeaderList());
+            list.addAll(loadThing.getGroupHeaderList());
+            list.addAll(loadEmergency.getGroupHeaderList());
+            list.addAll(loadLogistic.getGroupHeaderList());
+            list.addAll(loadPlace.getGroupHeaderList());
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(SearchActivity.this, daLconnection.getGroupHeaderList(),lang_from,lang_to);
-            //attach the adapter to the list
+            listAdapter = new MyListAdapter(SearchActivity.this, list,lang_from,lang_to);
             myList.setAdapter(listAdapter);
         }
 
         if (lang_from.equals("China") && lang_to.equals("Brunei") || lang_from.equals("จีน") && lang_to.equals("บรูไน")) {
-            daLconnection = new DALconnection();
-            daLconnection.loadChinaToBrunei();
-
+            loadConversation.loadChinaToBrunei();
+            loadThing.loadChinaToBrunei();
+            loadEmergency.loadChinaToBrunei();
+            loadLogistic.loadChinaToBrunei();
+            loadPlace.loadChinaToBrunei();
+            ArrayList<GroupHeader> list= new ArrayList<GroupHeader>();
+            list.addAll(loadConversation.getGroupHeaderList());
+            list.addAll(loadThing.getGroupHeaderList());
+            list.addAll(loadEmergency.getGroupHeaderList());
+            list.addAll(loadLogistic.getGroupHeaderList());
+            list.addAll(loadPlace.getGroupHeaderList());
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(SearchActivity.this, daLconnection.getGroupHeaderList(),lang_from,lang_to);
-            //attach the adapter to the list
+            listAdapter = new MyListAdapter(SearchActivity.this, list,lang_from,lang_to);
             myList.setAdapter(listAdapter);
         }
 
         if (lang_from.equals("China") && lang_to.equals("Cambodia") || lang_from.equals("จีน") && lang_to.equals("กัมพูชา")) {
-            daLconnection = new DALconnection();
-            daLconnection.loadChinaToCambodia();
-
+            loadConversation.loadChinaToCambodia();
+            loadThing.loadChinaToCambodia();
+            loadEmergency.loadChinaToCambodia();
+            loadLogistic.loadChinaToCambodia();
+            loadPlace.loadChinaToCambodia();
+            ArrayList<GroupHeader> list= new ArrayList<GroupHeader>();
+            list.addAll(loadConversation.getGroupHeaderList());
+            list.addAll(loadThing.getGroupHeaderList());
+            list.addAll(loadEmergency.getGroupHeaderList());
+            list.addAll(loadLogistic.getGroupHeaderList());
+            list.addAll(loadPlace.getGroupHeaderList());
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(SearchActivity.this, daLconnection.getGroupHeaderList(),lang_from,lang_to);
-            //attach the adapter to the list
+            listAdapter = new MyListAdapter(SearchActivity.this, list,lang_from,lang_to);
             myList.setAdapter(listAdapter);
         }
 
         if (lang_from.equals("China") && lang_to.equals("Indonesia") || lang_from.equals("จีน") && lang_to.equals("อินโดเซีย")) {
-            daLconnection = new DALconnection();
-            daLconnection.loadChinaToIndonesia();
-
+            loadConversation.loadChinaToIndonesia();
+            loadThing.loadChinaToIndonesia();
+            loadEmergency.loadChinaToIndonesia();
+            loadLogistic.loadChinaToIndonesia();
+            loadPlace.loadChinaToIndonesia();
+            ArrayList<GroupHeader> list= new ArrayList<GroupHeader>();
+            list.addAll(loadConversation.getGroupHeaderList());
+            list.addAll(loadThing.getGroupHeaderList());
+            list.addAll(loadEmergency.getGroupHeaderList());
+            list.addAll(loadLogistic.getGroupHeaderList());
+            list.addAll(loadPlace.getGroupHeaderList());
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(SearchActivity.this, daLconnection.getGroupHeaderList(),lang_from,lang_to);
-            //attach the adapter to the list
+            listAdapter = new MyListAdapter(SearchActivity.this, list,lang_from,lang_to);
             myList.setAdapter(listAdapter);
         }
 
         if (lang_from.equals("China") && lang_to.equals("Laos") || lang_from.equals("จีน") && lang_to.equals("ลาว")) {
-            daLconnection = new DALconnection();
-            daLconnection.loadChinaToLaos();
-
+            loadConversation.loadChinaToLaos();
+            loadThing.loadChinaToLaos();
+            loadEmergency.loadChinaToLaos();
+            loadLogistic.loadChinaToLaos();
+            loadPlace.loadChinaToLaos();
+            ArrayList<GroupHeader> list= new ArrayList<GroupHeader>();
+            list.addAll(loadConversation.getGroupHeaderList());
+            list.addAll(loadThing.getGroupHeaderList());
+            list.addAll(loadEmergency.getGroupHeaderList());
+            list.addAll(loadLogistic.getGroupHeaderList());
+            list.addAll(loadPlace.getGroupHeaderList());
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(SearchActivity.this, daLconnection.getGroupHeaderList(),lang_from,lang_to);
-            //attach the adapter to the list
+            listAdapter = new MyListAdapter(SearchActivity.this, list,lang_from,lang_to);
             myList.setAdapter(listAdapter);
         }
 
         if (lang_from.equals("China") && lang_to.equals("Malaysia") || lang_from.equals("จีน") && lang_to.equals("มาเลเซีย")) {
-            daLconnection = new DALconnection();
-            daLconnection.loadChinaToMalaysia();
-
+            loadConversation.loadChinaToMalaysia();
+            loadThing.loadChinaToMalaysia();
+            loadEmergency.loadChinaToMalaysia();
+            loadLogistic.loadChinaToMalaysia();
+            loadPlace.loadChinaToMalaysia();
+            ArrayList<GroupHeader> list= new ArrayList<GroupHeader>();
+            list.addAll(loadConversation.getGroupHeaderList());
+            list.addAll(loadThing.getGroupHeaderList());
+            list.addAll(loadEmergency.getGroupHeaderList());
+            list.addAll(loadLogistic.getGroupHeaderList());
+            list.addAll(loadPlace.getGroupHeaderList());
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(SearchActivity.this, daLconnection.getGroupHeaderList(),lang_from,lang_to);
-            //attach the adapter to the list
+            listAdapter = new MyListAdapter(SearchActivity.this, list,lang_from,lang_to);
             myList.setAdapter(listAdapter);
         }
 
         if (lang_from.equals("China") && lang_to.equals("Myanmar") || lang_from.equals("จีน") && lang_to.equals("พม่า")) {
-            daLconnection = new DALconnection();
-            daLconnection.loadChinaToMyanmar();
-
+            loadConversation.loadChinaToMyanmar();
+            loadThing.loadChinaToMyanmar();
+            loadEmergency.loadChinaToMyanmar();
+            loadLogistic.loadChinaToMyanmar();
+            loadPlace.loadChinaToMyanmar();
+            ArrayList<GroupHeader> list= new ArrayList<GroupHeader>();
+            list.addAll(loadConversation.getGroupHeaderList());
+            list.addAll(loadThing.getGroupHeaderList());
+            list.addAll(loadEmergency.getGroupHeaderList());
+            list.addAll(loadLogistic.getGroupHeaderList());
+            list.addAll(loadPlace.getGroupHeaderList());
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(SearchActivity.this, daLconnection.getGroupHeaderList(),lang_from,lang_to);
-            //attach the adapter to the list
+            listAdapter = new MyListAdapter(SearchActivity.this, list,lang_from,lang_to);
             myList.setAdapter(listAdapter);
         }
 
         if (lang_from.equals("China") && lang_to.equals("Philippines") || lang_from.equals("จีน") && lang_to.equals("ฟิลิปปินส์")) {
-            daLconnection = new DALconnection();
-            daLconnection.loadChinaToPhilippines();
-
+            loadConversation.loadChinaToPhilippines();
+            loadThing.loadChinaToPhilippines();
+            loadEmergency.loadChinaToPhilippines();
+            loadLogistic.loadChinaToPhilippines();
+            loadPlace.loadChinaToPhilippines();
+            ArrayList<GroupHeader> list= new ArrayList<GroupHeader>();
+            list.addAll(loadConversation.getGroupHeaderList());
+            list.addAll(loadThing.getGroupHeaderList());
+            list.addAll(loadEmergency.getGroupHeaderList());
+            list.addAll(loadLogistic.getGroupHeaderList());
+            list.addAll(loadPlace.getGroupHeaderList());
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(SearchActivity.this, daLconnection.getGroupHeaderList(),lang_from,lang_to);
-            //attach the adapter to the list
+            listAdapter = new MyListAdapter(SearchActivity.this, list,lang_from,lang_to);
             myList.setAdapter(listAdapter);
         }
 
         if (lang_from.equals("China") && lang_to.equals("Singapore") || lang_from.equals("จีน") && lang_to.equals("สิงคโปร์")) {
-            daLconnection = new DALconnection();
-            daLconnection.loadChinaToSingapore();
-
+            loadConversation.loadChinaToSingapore();
+            loadThing.loadChinaToSingapore();
+            loadEmergency.loadChinaToSingapore();
+            loadLogistic.loadChinaToSingapore();
+            loadPlace.loadChinaToSingapore();
+            ArrayList<GroupHeader> list= new ArrayList<GroupHeader>();
+            list.addAll(loadConversation.getGroupHeaderList());
+            list.addAll(loadThing.getGroupHeaderList());
+            list.addAll(loadEmergency.getGroupHeaderList());
+            list.addAll(loadLogistic.getGroupHeaderList());
+            list.addAll(loadPlace.getGroupHeaderList());
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(SearchActivity.this, daLconnection.getGroupHeaderList(),lang_from,lang_to);
-            //attach the adapter to the list
+            listAdapter = new MyListAdapter(SearchActivity.this, list,lang_from,lang_to);
             myList.setAdapter(listAdapter);
         }
 
         if (lang_from.equals("China") && lang_to.equals("Vietnam") || lang_from.equals("จีน") && lang_to.equals("เวียดนาม")) {
-            daLconnection = new DALconnection();
-            daLconnection.loadChinaToVietnam();
-
+            loadConversation.loadChinaToVietnam();
+            loadThing.loadChinaToVietnam();
+            loadEmergency.loadChinaToVietnam();
+            loadLogistic.loadChinaToVietnam();
+            loadPlace.loadChinaToVietnam();
+            ArrayList<GroupHeader> list= new ArrayList<GroupHeader>();
+            list.addAll(loadConversation.getGroupHeaderList());
+            list.addAll(loadThing.getGroupHeaderList());
+            list.addAll(loadEmergency.getGroupHeaderList());
+            list.addAll(loadLogistic.getGroupHeaderList());
+            list.addAll(loadPlace.getGroupHeaderList());
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(SearchActivity.this, daLconnection.getGroupHeaderList(),lang_from,lang_to);
-            //attach the adapter to the list
+            listAdapter = new MyListAdapter(SearchActivity.this, list,lang_from,lang_to);
             myList.setAdapter(listAdapter);
         }
 
         if (lang_from.equals("Indonesia") && lang_to.equals("China") || lang_from.equals("อินโดนีเซีย") && lang_to.equals("จีน")) {
-            daLconnection = new DALconnection();
-            daLconnection.loadIndonesiaToChina();
-
+            loadConversation.loadIndonesiaToChina();
+            loadThing.loadIndonesiaToChina();
+            loadEmergency.loadIndonesiaToChina();
+            loadLogistic.loadIndonesiaToChina();
+            loadPlace.loadIndonesiaToChina();
+            ArrayList<GroupHeader> list= new ArrayList<GroupHeader>();
+            list.addAll(loadConversation.getGroupHeaderList());
+            list.addAll(loadThing.getGroupHeaderList());
+            list.addAll(loadEmergency.getGroupHeaderList());
+            list.addAll(loadLogistic.getGroupHeaderList());
+            list.addAll(loadPlace.getGroupHeaderList());
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(SearchActivity.this, daLconnection.getGroupHeaderList(),lang_from,lang_to);
-            //attach the adapter to the list
+            listAdapter = new MyListAdapter(SearchActivity.this, list,lang_from,lang_to);
             myList.setAdapter(listAdapter);
         }
 
 
 
         if (lang_from.equals("Indonesia") && lang_to.equals("Thai") || lang_from.equals("อินโดนีเซีย") && lang_to.equals("ไทย")) {
-            daLconnection = new DALconnection();
-            daLconnection.loadIndonesiaToThai();
-
+            loadConversation.loadIndonesiaToThai();
+            loadThing.loadIndonesiaToThai();
+            loadEmergency.loadIndonesiaToThai();
+            loadLogistic.loadIndonesiaToThai();
+            loadPlace.loadIndonesiaToThai();
+            ArrayList<GroupHeader> list= new ArrayList<GroupHeader>();
+            list.addAll(loadConversation.getGroupHeaderList());
+            list.addAll(loadThing.getGroupHeaderList());
+            list.addAll(loadEmergency.getGroupHeaderList());
+            list.addAll(loadLogistic.getGroupHeaderList());
+            list.addAll(loadPlace.getGroupHeaderList());
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(SearchActivity.this, daLconnection.getGroupHeaderList(),lang_from,lang_to);
-            //attach the adapter to the list
+            listAdapter = new MyListAdapter(SearchActivity.this, list,lang_from,lang_to);
             myList.setAdapter(listAdapter);
         }
 
         if (lang_from.equals("Indonesia") && lang_to.equals("Brunei") || lang_from.equals("อินโดนีเซีย") && lang_to.equals("บรูไน")) {
-            daLconnection = new DALconnection();
-            daLconnection.loadIndonesiaToBrunei();
-
+            loadConversation.loadIndonesiaToBrunei();
+            loadThing.loadIndonesiaToBrunei();
+            loadEmergency.loadIndonesiaToBrunei();
+            loadLogistic.loadIndonesiaToBrunei();
+            loadPlace.loadIndonesiaToBrunei();
+            ArrayList<GroupHeader> list= new ArrayList<GroupHeader>();
+            list.addAll(loadConversation.getGroupHeaderList());
+            list.addAll(loadThing.getGroupHeaderList());
+            list.addAll(loadEmergency.getGroupHeaderList());
+            list.addAll(loadLogistic.getGroupHeaderList());
+            list.addAll(loadPlace.getGroupHeaderList());
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(SearchActivity.this, daLconnection.getGroupHeaderList(),lang_from,lang_to);
-            //attach the adapter to the list
+            listAdapter = new MyListAdapter(SearchActivity.this, list,lang_from,lang_to);
             myList.setAdapter(listAdapter);
         }
 
         if (lang_from.equals("Indonesia") && lang_to.equals("Cambodia") || lang_from.equals("อินโดนีเซีย") && lang_to.equals("กัมพูชา")) {
-            daLconnection = new DALconnection();
-            daLconnection.loadIndonesiaToCambodia();
-
+            loadConversation.loadIndonesiaToCambodia();
+            loadThing.loadIndonesiaToCambodia();
+            loadEmergency.loadIndonesiaToCambodia();
+            loadLogistic.loadIndonesiaToCambodia();
+            loadPlace.loadIndonesiaToCambodia();
+            ArrayList<GroupHeader> list= new ArrayList<GroupHeader>();
+            list.addAll(loadConversation.getGroupHeaderList());
+            list.addAll(loadThing.getGroupHeaderList());
+            list.addAll(loadEmergency.getGroupHeaderList());
+            list.addAll(loadLogistic.getGroupHeaderList());
+            list.addAll(loadPlace.getGroupHeaderList());
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(SearchActivity.this, daLconnection.getGroupHeaderList(),lang_from,lang_to);
-            //attach the adapter to the list
+            listAdapter = new MyListAdapter(SearchActivity.this, list,lang_from,lang_to);
             myList.setAdapter(listAdapter);
         }
 
         if (lang_from.equals("Indonesia") && lang_to.equals("Indonesia") || lang_from.equals("อินโดนีเซีย") && lang_to.equals("อินโดนีเซีย")) {
-            daLconnection = new DALconnection();
-            daLconnection.loadIndonesiaToIndonesia();
-
+            loadConversation.loadIndonesiaToIndonesia();
+            loadThing.loadIndonesiaToIndonesia();
+            loadEmergency.loadIndonesiaToIndonesia();
+            loadLogistic.loadIndonesiaToIndonesia();
+            loadPlace.loadIndonesiaToIndonesia();
+            ArrayList<GroupHeader> list= new ArrayList<GroupHeader>();
+            list.addAll(loadConversation.getGroupHeaderList());
+            list.addAll(loadThing.getGroupHeaderList());
+            list.addAll(loadEmergency.getGroupHeaderList());
+            list.addAll(loadLogistic.getGroupHeaderList());
+            list.addAll(loadPlace.getGroupHeaderList());
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(SearchActivity.this, daLconnection.getGroupHeaderList(),lang_from,lang_to);
-            //attach the adapter to the list
+            listAdapter = new MyListAdapter(SearchActivity.this, list,lang_from,lang_to);
             myList.setAdapter(listAdapter);
         }
 
         if (lang_from.equals("Indonesia") && lang_to.equals("Laos") || lang_from.equals("อินโดนีเซีย") && lang_to.equals("ลาว")) {
-            daLconnection = new DALconnection();
-            daLconnection.loadIndonesiaToLaos();
-
+            loadConversation.loadIndonesiaToLaos();
+            loadThing.loadIndonesiaToLaos();
+            loadEmergency.loadIndonesiaToLaos();
+            loadLogistic.loadIndonesiaToLaos();
+            loadPlace.loadIndonesiaToLaos();
+            ArrayList<GroupHeader> list= new ArrayList<GroupHeader>();
+            list.addAll(loadConversation.getGroupHeaderList());
+            list.addAll(loadThing.getGroupHeaderList());
+            list.addAll(loadEmergency.getGroupHeaderList());
+            list.addAll(loadLogistic.getGroupHeaderList());
+            list.addAll(loadPlace.getGroupHeaderList());
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(SearchActivity.this, daLconnection.getGroupHeaderList(),lang_from,lang_to);
-            //attach the adapter to the list
+            listAdapter = new MyListAdapter(SearchActivity.this, list,lang_from,lang_to);
             myList.setAdapter(listAdapter);
         }
 
         if (lang_from.equals("Indonesia") && lang_to.equals("Malaysia") || lang_from.equals("อินโดนีเซีย") && lang_to.equals("มาเลเซีย")) {
-            daLconnection = new DALconnection();
-            daLconnection.loadIndonesiaToMalaysia();
-
+            loadConversation.loadIndonesiaToMalaysia();
+            loadThing.loadIndonesiaToMalaysia();
+            loadEmergency.loadIndonesiaToMalaysia();
+            loadLogistic.loadIndonesiaToMalaysia();
+            loadPlace.loadIndonesiaToMalaysia();
+            ArrayList<GroupHeader> list= new ArrayList<GroupHeader>();
+            list.addAll(loadConversation.getGroupHeaderList());
+            list.addAll(loadThing.getGroupHeaderList());
+            list.addAll(loadEmergency.getGroupHeaderList());
+            list.addAll(loadLogistic.getGroupHeaderList());
+            list.addAll(loadPlace.getGroupHeaderList());
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(SearchActivity.this, daLconnection.getGroupHeaderList(),lang_from,lang_to);
-            //attach the adapter to the list
+            listAdapter = new MyListAdapter(SearchActivity.this, list,lang_from,lang_to);
             myList.setAdapter(listAdapter);
         }
 
         if (lang_from.equals("Indonesia") && lang_to.equals("Myanmar") || lang_from.equals("อินโดนีเซีย") && lang_to.equals("พม่า")) {
-            daLconnection = new DALconnection();
-            daLconnection.loadIndonesiaToMyanmar();
-
+            loadConversation.loadIndonesiaToMyanmar();
+            loadThing.loadIndonesiaToMyanmar();
+            loadEmergency.loadIndonesiaToMyanmar();
+            loadLogistic.loadIndonesiaToMyanmar();
+            loadPlace.loadIndonesiaToMyanmar();
+            ArrayList<GroupHeader> list= new ArrayList<GroupHeader>();
+            list.addAll(loadConversation.getGroupHeaderList());
+            list.addAll(loadThing.getGroupHeaderList());
+            list.addAll(loadEmergency.getGroupHeaderList());
+            list.addAll(loadLogistic.getGroupHeaderList());
+            list.addAll(loadPlace.getGroupHeaderList());
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(SearchActivity.this, daLconnection.getGroupHeaderList(),lang_from,lang_to);
-            //attach the adapter to the list
+            listAdapter = new MyListAdapter(SearchActivity.this, list,lang_from,lang_to);
             myList.setAdapter(listAdapter);
         }
 
         if (lang_from.equals("Indonesia") && lang_to.equals("Philippines") || lang_from.equals("อินโดนีเซีย") && lang_to.equals("ฟิลิปปินส์")) {
-            daLconnection = new DALconnection();
-            daLconnection.loadIndonesiaToPhilippines();
-
+            loadConversation.loadIndonesiaToPhilippines();
+            loadThing.loadIndonesiaToPhilippines();
+            loadEmergency.loadIndonesiaToPhilippines();
+            loadLogistic.loadIndonesiaToPhilippines();
+            loadPlace.loadIndonesiaToPhilippines();
+            ArrayList<GroupHeader> list= new ArrayList<GroupHeader>();
+            list.addAll(loadConversation.getGroupHeaderList());
+            list.addAll(loadThing.getGroupHeaderList());
+            list.addAll(loadEmergency.getGroupHeaderList());
+            list.addAll(loadLogistic.getGroupHeaderList());
+            list.addAll(loadPlace.getGroupHeaderList());
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(SearchActivity.this, daLconnection.getGroupHeaderList(),lang_from,lang_to);
-            //attach the adapter to the list
+            listAdapter = new MyListAdapter(SearchActivity.this, list,lang_from,lang_to);
             myList.setAdapter(listAdapter);
         }
 
         if (lang_from.equals("Indonesia") && lang_to.equals("Singapore") || lang_from.equals("อินโดนีเซีย") && lang_to.equals("สิงคโปร")) {
-            daLconnection = new DALconnection();
-            daLconnection.loadIndonesiaToSingapore();
-
+            loadConversation.loadIndonesiaToSingapore();
+            loadThing.loadIndonesiaToSingapore();
+            loadEmergency.loadIndonesiaToSingapore();
+            loadLogistic.loadIndonesiaToSingapore();
+            loadPlace.loadIndonesiaToSingapore();
+            ArrayList<GroupHeader> list= new ArrayList<GroupHeader>();
+            list.addAll(loadConversation.getGroupHeaderList());
+            list.addAll(loadThing.getGroupHeaderList());
+            list.addAll(loadEmergency.getGroupHeaderList());
+            list.addAll(loadLogistic.getGroupHeaderList());
+            list.addAll(loadPlace.getGroupHeaderList());
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(SearchActivity.this, daLconnection.getGroupHeaderList(),lang_from,lang_to);
-            //attach the adapter to the list
+            listAdapter = new MyListAdapter(SearchActivity.this, list,lang_from,lang_to);
             myList.setAdapter(listAdapter);
         }
 
         if (lang_from.equals("Indonesia") && lang_to.equals("Vietnam") || lang_from.equals("อินโดนีเซีย") && lang_to.equals("เวียดนาม")) {
-            daLconnection = new DALconnection();
-            daLconnection.loadIndonesiaToVietnam();
-
+            loadConversation.loadIndonesiaToVietnam();
+            loadThing.loadIndonesiaToVietnam();
+            loadEmergency.loadIndonesiaToVietnam();
+            loadLogistic.loadIndonesiaToVietnam();
+            loadPlace.loadIndonesiaToVietnam();
+            ArrayList<GroupHeader> list= new ArrayList<GroupHeader>();
+            list.addAll(loadConversation.getGroupHeaderList());
+            list.addAll(loadThing.getGroupHeaderList());
+            list.addAll(loadEmergency.getGroupHeaderList());
+            list.addAll(loadLogistic.getGroupHeaderList());
+            list.addAll(loadPlace.getGroupHeaderList());
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(SearchActivity.this, daLconnection.getGroupHeaderList(),lang_from,lang_to);
-            //attach the adapter to the list
+            listAdapter = new MyListAdapter(SearchActivity.this, list,lang_from,lang_to);
             myList.setAdapter(listAdapter);
         }
 
         if (lang_from.equals("Laos") && lang_to.equals("China") || lang_from.equals("ลาว") && lang_to.equals("จีน")) {
-            daLconnection = new DALconnection();
-            daLconnection.loadLaosToChina();
-
+            loadConversation.loadLaosToChina();
+            loadThing.loadLaosToChina();
+            loadEmergency.loadLaosToChina();
+            loadLogistic.loadLaosToChina();
+            loadPlace.loadLaosToChina();
+            ArrayList<GroupHeader> list= new ArrayList<GroupHeader>();
+            list.addAll(loadConversation.getGroupHeaderList());
+            list.addAll(loadThing.getGroupHeaderList());
+            list.addAll(loadEmergency.getGroupHeaderList());
+            list.addAll(loadLogistic.getGroupHeaderList());
+            list.addAll(loadPlace.getGroupHeaderList());
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(SearchActivity.this, daLconnection.getGroupHeaderList(),lang_from,lang_to);
-            //attach the adapter to the list
+            listAdapter = new MyListAdapter(SearchActivity.this, list,lang_from,lang_to);
             myList.setAdapter(listAdapter);
         }
 
         if (lang_from.equals("Laos") && lang_to.equals("Thai") || lang_from.equals("ลาว") && lang_to.equals("ไทย")) {
-            daLconnection = new DALconnection();
-            daLconnection.loadLaosToThai();
-
+            loadConversation.loadLaosToThai();
+            loadThing.loadLaosToThai();
+            loadEmergency.loadLaosToThai();
+            loadLogistic.loadLaosToThai();
+            loadPlace.loadLaosToThai();
+            ArrayList<GroupHeader> list= new ArrayList<GroupHeader>();
+            list.addAll(loadConversation.getGroupHeaderList());
+            list.addAll(loadThing.getGroupHeaderList());
+            list.addAll(loadEmergency.getGroupHeaderList());
+            list.addAll(loadLogistic.getGroupHeaderList());
+            list.addAll(loadPlace.getGroupHeaderList());
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(SearchActivity.this, daLconnection.getGroupHeaderList(),lang_from,lang_to);
-            //attach the adapter to the list
+            listAdapter = new MyListAdapter(SearchActivity.this, list,lang_from,lang_to);
             myList.setAdapter(listAdapter);
         }
 
         if (lang_from.equals("Laos") && lang_to.equals("Brunei") || lang_from.equals("ลาว") && lang_to.equals("บรูไน")) {
-            daLconnection = new DALconnection();
-            daLconnection.loadLaosToBrunei();
-
+            loadConversation.loadLaosToBrunei();
+            loadThing.loadLaosToBrunei();
+            loadEmergency.loadLaosToBrunei();
+            loadLogistic.loadLaosToBrunei();
+            loadPlace.loadLaosToBrunei();
+            ArrayList<GroupHeader> list= new ArrayList<GroupHeader>();
+            list.addAll(loadConversation.getGroupHeaderList());
+            list.addAll(loadThing.getGroupHeaderList());
+            list.addAll(loadEmergency.getGroupHeaderList());
+            list.addAll(loadLogistic.getGroupHeaderList());
+            list.addAll(loadPlace.getGroupHeaderList());
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(SearchActivity.this, daLconnection.getGroupHeaderList(),lang_from,lang_to);
-            //attach the adapter to the list
+            listAdapter = new MyListAdapter(SearchActivity.this, list,lang_from,lang_to);
             myList.setAdapter(listAdapter);
         }
 
         if (lang_from.equals("Laos") && lang_to.equals("Cambodia") || lang_from.equals("ลาว") && lang_to.equals("กัมพูชา")) {
-            daLconnection = new DALconnection();
-            daLconnection.loadLaosToCambodia();
-
+            loadConversation.loadLaosToCambodia();
+            loadThing.loadLaosToCambodia();
+            loadEmergency.loadLaosToCambodia();
+            loadLogistic.loadLaosToCambodia();
+            loadPlace.loadLaosToCambodia();
+            ArrayList<GroupHeader> list= new ArrayList<GroupHeader>();
+            list.addAll(loadConversation.getGroupHeaderList());
+            list.addAll(loadThing.getGroupHeaderList());
+            list.addAll(loadEmergency.getGroupHeaderList());
+            list.addAll(loadLogistic.getGroupHeaderList());
+            list.addAll(loadPlace.getGroupHeaderList());
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(SearchActivity.this, daLconnection.getGroupHeaderList(),lang_from,lang_to);
-            //attach the adapter to the list
+            listAdapter = new MyListAdapter(SearchActivity.this, list,lang_from,lang_to);
             myList.setAdapter(listAdapter);
         }
 
         if (lang_from.equals("Laos") && lang_to.equals("Indonesia") || lang_from.equals("ลาว") && lang_to.equals("อินโดนีเซีย")) {
-            daLconnection = new DALconnection();
-            daLconnection.loadLaosToIndonesia();
-
+            loadConversation.loadLaosToIndonesia();
+            loadThing.loadLaosToIndonesia();
+            loadEmergency.loadLaosToIndonesia();
+            loadLogistic.loadLaosToIndonesia();
+            loadPlace.loadLaosToIndonesia();
+            ArrayList<GroupHeader> list= new ArrayList<GroupHeader>();
+            list.addAll(loadConversation.getGroupHeaderList());
+            list.addAll(loadThing.getGroupHeaderList());
+            list.addAll(loadEmergency.getGroupHeaderList());
+            list.addAll(loadLogistic.getGroupHeaderList());
+            list.addAll(loadPlace.getGroupHeaderList());
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(SearchActivity.this, daLconnection.getGroupHeaderList(),lang_from,lang_to);
-            //attach the adapter to the list
+            listAdapter = new MyListAdapter(SearchActivity.this, list,lang_from,lang_to);
             myList.setAdapter(listAdapter);
         }
 
         if (lang_from.equals("Laos") && lang_to.equals("Laos") || lang_from.equals("ลาว") && lang_to.equals("ลาว")) {
-            daLconnection = new DALconnection();
-            daLconnection.loadLaosToLaos();
-
+            loadConversation.loadLaosToLaos();
+            loadThing.loadLaosToLaos();
+            loadEmergency.loadLaosToLaos();
+            loadLogistic.loadLaosToLaos();
+            loadPlace.loadLaosToLaos();
+            ArrayList<GroupHeader> list= new ArrayList<GroupHeader>();
+            list.addAll(loadConversation.getGroupHeaderList());
+            list.addAll(loadThing.getGroupHeaderList());
+            list.addAll(loadEmergency.getGroupHeaderList());
+            list.addAll(loadLogistic.getGroupHeaderList());
+            list.addAll(loadPlace.getGroupHeaderList());
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(SearchActivity.this, daLconnection.getGroupHeaderList(),lang_from,lang_to);
-            //attach the adapter to the list
+            listAdapter = new MyListAdapter(SearchActivity.this, list,lang_from,lang_to);
             myList.setAdapter(listAdapter);
         }
 
         if (lang_from.equals("Laos") && lang_to.equals("Malaysia") || lang_from.equals("ลาว") && lang_to.equals("มาเลเซีย")) {
-            daLconnection = new DALconnection();
-            daLconnection.loadLaosToMalaysia();
-
+            loadConversation.loadLaosToMalaysia();
+            loadThing.loadLaosToMalaysia();
+            loadEmergency.loadLaosToMalaysia();
+            loadLogistic.loadLaosToMalaysia();
+            loadPlace.loadLaosToMalaysia();
+            ArrayList<GroupHeader> list= new ArrayList<GroupHeader>();
+            list.addAll(loadConversation.getGroupHeaderList());
+            list.addAll(loadThing.getGroupHeaderList());
+            list.addAll(loadEmergency.getGroupHeaderList());
+            list.addAll(loadLogistic.getGroupHeaderList());
+            list.addAll(loadPlace.getGroupHeaderList());
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(SearchActivity.this, daLconnection.getGroupHeaderList(),lang_from,lang_to);
-            //attach the adapter to the list
+            listAdapter = new MyListAdapter(SearchActivity.this, list,lang_from,lang_to);
             myList.setAdapter(listAdapter);
         }
 
         if (lang_from.equals("Laos") && lang_to.equals("Myanmar") || lang_from.equals("ลาว") && lang_to.equals("พม่า")) {
-            daLconnection = new DALconnection();
-            daLconnection.loadLaosToMyanmar();
-
+            loadConversation.loadLaosToMyanmar();
+            loadThing.loadLaosToMyanmar();
+            loadEmergency.loadLaosToMyanmar();
+            loadLogistic.loadLaosToMyanmar();
+            loadPlace.loadLaosToMyanmar();
+            ArrayList<GroupHeader> list= new ArrayList<GroupHeader>();
+            list.addAll(loadConversation.getGroupHeaderList());
+            list.addAll(loadThing.getGroupHeaderList());
+            list.addAll(loadEmergency.getGroupHeaderList());
+            list.addAll(loadLogistic.getGroupHeaderList());
+            list.addAll(loadPlace.getGroupHeaderList());
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(SearchActivity.this, daLconnection.getGroupHeaderList(),lang_from,lang_to);
-            //attach the adapter to the list
+            listAdapter = new MyListAdapter(SearchActivity.this, list,lang_from,lang_to);
             myList.setAdapter(listAdapter);
         }
 
 
         if (lang_from.equals("Laos") && lang_to.equals("Philippines") || lang_from.equals("ลาว") && lang_to.equals("ฟิลิปปินส์")) {
-            daLconnection = new DALconnection();
-            daLconnection.loadLaosToPhilippines();
-
+            loadConversation.loadLaosToPhilippines();
+            loadThing.loadLaosToPhilippines();
+            loadEmergency.loadLaosToPhilippines();
+            loadLogistic.loadLaosToPhilippines();
+            loadPlace.loadLaosToPhilippines();
+            ArrayList<GroupHeader> list= new ArrayList<GroupHeader>();
+            list.addAll(loadConversation.getGroupHeaderList());
+            list.addAll(loadThing.getGroupHeaderList());
+            list.addAll(loadEmergency.getGroupHeaderList());
+            list.addAll(loadLogistic.getGroupHeaderList());
+            list.addAll(loadPlace.getGroupHeaderList());
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(SearchActivity.this, daLconnection.getGroupHeaderList(),lang_from,lang_to);
-            //attach the adapter to the list
+            listAdapter = new MyListAdapter(SearchActivity.this, list,lang_from,lang_to);
             myList.setAdapter(listAdapter);
         }
 
         if (lang_from.equals("Laos") && lang_to.equals("Singapore") || lang_from.equals("ลาว") && lang_to.equals("สิงคโปร์")) {
-            daLconnection = new DALconnection();
-            daLconnection.loadLaosToSingapore();
-
+            loadConversation.loadLaosToSingapore();
+            loadThing.loadLaosToSingapore();
+            loadEmergency.loadLaosToSingapore();
+            loadLogistic.loadLaosToSingapore();
+            loadPlace.loadLaosToSingapore();
+            ArrayList<GroupHeader> list= new ArrayList<GroupHeader>();
+            list.addAll(loadConversation.getGroupHeaderList());
+            list.addAll(loadThing.getGroupHeaderList());
+            list.addAll(loadEmergency.getGroupHeaderList());
+            list.addAll(loadLogistic.getGroupHeaderList());
+            list.addAll(loadPlace.getGroupHeaderList());
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(SearchActivity.this, daLconnection.getGroupHeaderList(),lang_from,lang_to);
-            //attach the adapter to the list
+            listAdapter = new MyListAdapter(SearchActivity.this, list,lang_from,lang_to);
             myList.setAdapter(listAdapter);
         }
 
         if (lang_from.equals("Laos") && lang_to.equals("Vietnam") || lang_from.equals("ลาว") && lang_to.equals("เวียดนาม")) {
-            daLconnection = new DALconnection();
-            daLconnection.loadLaosToVietnam();
-
+            loadConversation.loadLaosToVietnam();
+            loadThing.loadLaosToVietnam();
+            loadEmergency.loadLaosToVietnam();
+            loadLogistic.loadLaosToVietnam();
+            loadPlace.loadLaosToVietnam();
+            ArrayList<GroupHeader> list= new ArrayList<GroupHeader>();
+            list.addAll(loadConversation.getGroupHeaderList());
+            list.addAll(loadThing.getGroupHeaderList());
+            list.addAll(loadEmergency.getGroupHeaderList());
+            list.addAll(loadLogistic.getGroupHeaderList());
+            list.addAll(loadPlace.getGroupHeaderList());
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(SearchActivity.this, daLconnection.getGroupHeaderList(),lang_from,lang_to);
-            //attach the adapter to the list
+            listAdapter = new MyListAdapter(SearchActivity.this, list,lang_from,lang_to);
             myList.setAdapter(listAdapter);
         }
 
         if (lang_from.equals("Malaysia") && lang_to.equals("China") || lang_from.equals("มาเลเซีย") && lang_to.equals("จีน")) {
-            daLconnection = new DALconnection();
-            daLconnection.loadMalaysiaToChina();
-
+            loadConversation.loadMalaysiaToChina();
+            loadThing.loadMalaysiaToChina();
+            loadEmergency.loadMalaysiaToChina();
+            loadLogistic.loadMalaysiaToChina();
+            loadPlace.loadMalaysiaToChina();
+            ArrayList<GroupHeader> list= new ArrayList<GroupHeader>();
+            list.addAll(loadConversation.getGroupHeaderList());
+            list.addAll(loadThing.getGroupHeaderList());
+            list.addAll(loadEmergency.getGroupHeaderList());
+            list.addAll(loadLogistic.getGroupHeaderList());
+            list.addAll(loadPlace.getGroupHeaderList());
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(SearchActivity.this, daLconnection.getGroupHeaderList(),lang_from,lang_to);
-            //attach the adapter to the list
+            listAdapter = new MyListAdapter(SearchActivity.this, list,lang_from,lang_to);
             myList.setAdapter(listAdapter);
         }
 
         if (lang_from.equals("Malaysia") && lang_to.equals("Thai") || lang_from.equals("มาเลเซีย") && lang_to.equals("ไทย")) {
-            daLconnection = new DALconnection();
-            daLconnection.loadMalaysiaToThai();
-
+            loadConversation.loadMalaysiaToThai();
+            loadThing.loadMalaysiaToThai();
+            loadEmergency.loadMalaysiaToThai();
+            loadLogistic.loadMalaysiaToThai();
+            loadPlace.loadMalaysiaToThai();
+            ArrayList<GroupHeader> list= new ArrayList<GroupHeader>();
+            list.addAll(loadConversation.getGroupHeaderList());
+            list.addAll(loadThing.getGroupHeaderList());
+            list.addAll(loadEmergency.getGroupHeaderList());
+            list.addAll(loadLogistic.getGroupHeaderList());
+            list.addAll(loadPlace.getGroupHeaderList());
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(SearchActivity.this, daLconnection.getGroupHeaderList(),lang_from,lang_to);
-            //attach the adapter to the list
+            listAdapter = new MyListAdapter(SearchActivity.this, list,lang_from,lang_to);
             myList.setAdapter(listAdapter);
         }
 
         if (lang_from.equals("Malaysia") && lang_to.equals("Brunei") || lang_from.equals("มาเลเซีย") && lang_to.equals("บรูไน")) {
-            daLconnection = new DALconnection();
-            daLconnection.loadMalaysiaToBrunei();
-
+            loadConversation.loadMalaysiaToBrunei();
+            loadThing.loadMalaysiaToBrunei();
+            loadEmergency.loadMalaysiaToBrunei();
+            loadLogistic.loadMalaysiaToBrunei();
+            loadPlace.loadMalaysiaToBrunei();
+            ArrayList<GroupHeader> list= new ArrayList<GroupHeader>();
+            list.addAll(loadConversation.getGroupHeaderList());
+            list.addAll(loadThing.getGroupHeaderList());
+            list.addAll(loadEmergency.getGroupHeaderList());
+            list.addAll(loadLogistic.getGroupHeaderList());
+            list.addAll(loadPlace.getGroupHeaderList());
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(SearchActivity.this, daLconnection.getGroupHeaderList(),lang_from,lang_to);
-            //attach the adapter to the list
+            listAdapter = new MyListAdapter(SearchActivity.this, list,lang_from,lang_to);
             myList.setAdapter(listAdapter);
         }
 
         if (lang_from.equals("Malaysia") && lang_to.equals("Cambodia") || lang_from.equals("มาเลเซีย") && lang_to.equals("กัมพูชา")) {
-            daLconnection = new DALconnection();
-            daLconnection.loadMalaysiaToCambodia();
-
+            loadConversation.loadMalaysiaToCambodia();
+            loadThing.loadMalaysiaToCambodia();
+            loadEmergency.loadMalaysiaToCambodia();
+            loadLogistic.loadMalaysiaToCambodia();
+            loadPlace.loadMalaysiaToCambodia();
+            ArrayList<GroupHeader> list= new ArrayList<GroupHeader>();
+            list.addAll(loadConversation.getGroupHeaderList());
+            list.addAll(loadThing.getGroupHeaderList());
+            list.addAll(loadEmergency.getGroupHeaderList());
+            list.addAll(loadLogistic.getGroupHeaderList());
+            list.addAll(loadPlace.getGroupHeaderList());
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(SearchActivity.this, daLconnection.getGroupHeaderList(),lang_from,lang_to);
-            //attach the adapter to the list
+            listAdapter = new MyListAdapter(SearchActivity.this, list,lang_from,lang_to);
             myList.setAdapter(listAdapter);
         }
 
         if (lang_from.equals("Malaysia") && lang_to.equals("Indonesia") || lang_from.equals("มาเลเซีย") && lang_to.equals("อินโดนีเซีย")) {
-            daLconnection = new DALconnection();
-            daLconnection.loadMalaysiaToIndonesia();
-
+            loadConversation.loadMalaysiaToIndonesia();
+            loadThing.loadMalaysiaToIndonesia();
+            loadEmergency.loadMalaysiaToIndonesia();
+            loadLogistic.loadMalaysiaToIndonesia();
+            loadPlace.loadMalaysiaToIndonesia();
+            ArrayList<GroupHeader> list= new ArrayList<GroupHeader>();
+            list.addAll(loadConversation.getGroupHeaderList());
+            list.addAll(loadThing.getGroupHeaderList());
+            list.addAll(loadEmergency.getGroupHeaderList());
+            list.addAll(loadLogistic.getGroupHeaderList());
+            list.addAll(loadPlace.getGroupHeaderList());
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(SearchActivity.this, daLconnection.getGroupHeaderList(),lang_from,lang_to);
-            //attach the adapter to the list
+            listAdapter = new MyListAdapter(SearchActivity.this, list,lang_from,lang_to);
             myList.setAdapter(listAdapter);
         }
 
         if (lang_from.equals("Malaysia") && lang_to.equals("Laos") || lang_from.equals("มาเลเซีย") && lang_to.equals("ลาว")) {
-            daLconnection = new DALconnection();
-            daLconnection.loadMalaysiaToLaos();
-
+            loadConversation.loadMalaysiaToLaos();
+            loadThing.loadMalaysiaToLaos();
+            loadEmergency.loadMalaysiaToLaos();
+            loadLogistic.loadMalaysiaToLaos();
+            loadPlace.loadMalaysiaToLaos();
+            ArrayList<GroupHeader> list= new ArrayList<GroupHeader>();
+            list.addAll(loadConversation.getGroupHeaderList());
+            list.addAll(loadThing.getGroupHeaderList());
+            list.addAll(loadEmergency.getGroupHeaderList());
+            list.addAll(loadLogistic.getGroupHeaderList());
+            list.addAll(loadPlace.getGroupHeaderList());
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(SearchActivity.this, daLconnection.getGroupHeaderList(),lang_from,lang_to);
-            //attach the adapter to the list
+            listAdapter = new MyListAdapter(SearchActivity.this, list,lang_from,lang_to);
             myList.setAdapter(listAdapter);
         }
 
         if (lang_from.equals("Malaysia") && lang_to.equals("Malaysia") || lang_from.equals("มาเลเซีย") && lang_to.equals("มาเลเซีย")) {
-            daLconnection = new DALconnection();
-            daLconnection.loadMalaysiaToMalaysia();
-
+            loadConversation.loadMalaysiaToMalaysia();
+            loadThing.loadMalaysiaToMalaysia();
+            loadEmergency.loadMalaysiaToMalaysia();
+            loadLogistic.loadMalaysiaToMalaysia();
+            loadPlace.loadMalaysiaToMalaysia();
+            ArrayList<GroupHeader> list= new ArrayList<GroupHeader>();
+            list.addAll(loadConversation.getGroupHeaderList());
+            list.addAll(loadThing.getGroupHeaderList());
+            list.addAll(loadEmergency.getGroupHeaderList());
+            list.addAll(loadLogistic.getGroupHeaderList());
+            list.addAll(loadPlace.getGroupHeaderList());
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(SearchActivity.this, daLconnection.getGroupHeaderList(),lang_from,lang_to);
-            //attach the adapter to the list
+            listAdapter = new MyListAdapter(SearchActivity.this, list,lang_from,lang_to);
             myList.setAdapter(listAdapter);
         }
 
         if (lang_from.equals("Malaysia") && lang_to.equals("Myanmar") || lang_from.equals("มาเลเซีย") && lang_to.equals("พม่า")) {
-            daLconnection = new DALconnection();
-            daLconnection.loadMalaysiaToMyanmar();
-
+            loadConversation.loadMalaysiaToMyanmar();
+            loadThing.loadMalaysiaToMyanmar();
+            loadEmergency.loadMalaysiaToMyanmar();
+            loadLogistic.loadMalaysiaToMyanmar();
+            loadPlace.loadMalaysiaToMyanmar();
+            ArrayList<GroupHeader> list= new ArrayList<GroupHeader>();
+            list.addAll(loadConversation.getGroupHeaderList());
+            list.addAll(loadThing.getGroupHeaderList());
+            list.addAll(loadEmergency.getGroupHeaderList());
+            list.addAll(loadLogistic.getGroupHeaderList());
+            list.addAll(loadPlace.getGroupHeaderList());
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(SearchActivity.this, daLconnection.getGroupHeaderList(),lang_from,lang_to);
-            //attach the adapter to the list
+            listAdapter = new MyListAdapter(SearchActivity.this, list,lang_from,lang_to);
             myList.setAdapter(listAdapter);
         }
 
         if (lang_from.equals("Malaysia") && lang_to.equals("Philippines") || lang_from.equals("มาเลเซีย") && lang_to.equals("ฟิลิปปินส์")) {
-            daLconnection = new DALconnection();
-            daLconnection.loadMalaysiaToPhilippines();
-
+            loadConversation.loadMalaysiaToPhilippines();
+            loadThing.loadMalaysiaToPhilippines();
+            loadEmergency.loadMalaysiaToPhilippines();
+            loadLogistic.loadMalaysiaToPhilippines();
+            loadPlace.loadMalaysiaToPhilippines();
+            ArrayList<GroupHeader> list= new ArrayList<GroupHeader>();
+            list.addAll(loadConversation.getGroupHeaderList());
+            list.addAll(loadThing.getGroupHeaderList());
+            list.addAll(loadEmergency.getGroupHeaderList());
+            list.addAll(loadLogistic.getGroupHeaderList());
+            list.addAll(loadPlace.getGroupHeaderList());
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(SearchActivity.this, daLconnection.getGroupHeaderList(),lang_from,lang_to);
-            //attach the adapter to the list
+            listAdapter = new MyListAdapter(SearchActivity.this, list,lang_from,lang_to);
             myList.setAdapter(listAdapter);
         }
 
         if (lang_from.equals("Malaysia") && lang_to.equals("Singapore") || lang_from.equals("มาเลเซีย") && lang_to.equals("สิงคโปร์")) {
-            daLconnection = new DALconnection();
-            daLconnection.loadMalaysiaToSingapore();
-
+            loadConversation.loadMalaysiaToSingapore();
+            loadThing.loadMalaysiaToSingapore();
+            loadEmergency.loadMalaysiaToSingapore();
+            loadLogistic.loadMalaysiaToSingapore();
+            loadPlace.loadMalaysiaToSingapore();
+            ArrayList<GroupHeader> list= new ArrayList<GroupHeader>();
+            list.addAll(loadConversation.getGroupHeaderList());
+            list.addAll(loadThing.getGroupHeaderList());
+            list.addAll(loadEmergency.getGroupHeaderList());
+            list.addAll(loadLogistic.getGroupHeaderList());
+            list.addAll(loadPlace.getGroupHeaderList());
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(SearchActivity.this, daLconnection.getGroupHeaderList(),lang_from,lang_to);
-            //attach the adapter to the list
+            listAdapter = new MyListAdapter(SearchActivity.this, list,lang_from,lang_to);
             myList.setAdapter(listAdapter);
         }
 
         if (lang_from.equals("Malaysia") && lang_to.equals("Vietnam") || lang_from.equals("มาเลเซีย") && lang_to.equals("เวียดนาม")) {
-            daLconnection = new DALconnection();
-            daLconnection.loadMalaysiaToVietnam();
-
+            loadConversation.loadMalaysiaToVietnam();
+            loadThing.loadMalaysiaToVietnam();
+            loadEmergency.loadMalaysiaToVietnam();
+            loadLogistic.loadMalaysiaToVietnam();
+            loadPlace.loadMalaysiaToVietnam();
+            ArrayList<GroupHeader> list= new ArrayList<GroupHeader>();
+            list.addAll(loadConversation.getGroupHeaderList());
+            list.addAll(loadThing.getGroupHeaderList());
+            list.addAll(loadEmergency.getGroupHeaderList());
+            list.addAll(loadLogistic.getGroupHeaderList());
+            list.addAll(loadPlace.getGroupHeaderList());
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(SearchActivity.this, daLconnection.getGroupHeaderList(),lang_from,lang_to);
-            //attach the adapter to the list
+            listAdapter = new MyListAdapter(SearchActivity.this, list,lang_from,lang_to);
             myList.setAdapter(listAdapter);
         }
 
         if (lang_from.equals("Myanmar") && lang_to.equals("China") || lang_from.equals("พม่า") && lang_to.equals("จีน")) {
-            daLconnection = new DALconnection();
-            daLconnection.loadMyanmarToChina();
-
+            loadConversation.loadMyanmarToChina();
+            loadThing.loadMyanmarToChina();
+            loadEmergency.loadMyanmarToChina();
+            loadLogistic.loadMyanmarToChina();
+            loadPlace.loadMyanmarToChina();
+            ArrayList<GroupHeader> list= new ArrayList<GroupHeader>();
+            list.addAll(loadConversation.getGroupHeaderList());
+            list.addAll(loadThing.getGroupHeaderList());
+            list.addAll(loadEmergency.getGroupHeaderList());
+            list.addAll(loadLogistic.getGroupHeaderList());
+            list.addAll(loadPlace.getGroupHeaderList());
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(SearchActivity.this, daLconnection.getGroupHeaderList(),lang_from,lang_to);
-            //attach the adapter to the list
+            listAdapter = new MyListAdapter(SearchActivity.this, list,lang_from,lang_to);
             myList.setAdapter(listAdapter);
         }
 
         if (lang_from.equals("Myanmar") && lang_to.equals("Thai") || lang_from.equals("พม่า") && lang_to.equals("ไทย")) {
-            daLconnection = new DALconnection();
-            daLconnection.loadMyanmarToThai();
-
+            loadConversation.loadMyanmarToThai();
+            loadThing.loadMyanmarToThai();
+            loadEmergency.loadMyanmarToThai();
+            loadLogistic.loadMyanmarToThai();
+            loadPlace.loadMyanmarToThai();
+            ArrayList<GroupHeader> list= new ArrayList<GroupHeader>();
+            list.addAll(loadConversation.getGroupHeaderList());
+            list.addAll(loadThing.getGroupHeaderList());
+            list.addAll(loadEmergency.getGroupHeaderList());
+            list.addAll(loadLogistic.getGroupHeaderList());
+            list.addAll(loadPlace.getGroupHeaderList());
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(SearchActivity.this, daLconnection.getGroupHeaderList(),lang_from,lang_to);
-            //attach the adapter to the list
+            listAdapter = new MyListAdapter(SearchActivity.this, list,lang_from,lang_to);
             myList.setAdapter(listAdapter);
         }
 
         if (lang_from.equals("Myanmar") && lang_to.equals("Brunei") || lang_from.equals("พม่า") && lang_to.equals("บรูไน")) {
-            daLconnection = new DALconnection();
-            daLconnection.loadMyanmarToBrunei();
-
+            loadConversation.loadMyanmarToBrunei();
+            loadThing.loadMyanmarToBrunei();
+            loadEmergency.loadMyanmarToBrunei();
+            loadLogistic.loadMyanmarToBrunei();
+            loadPlace.loadMyanmarToBrunei();
+            ArrayList<GroupHeader> list= new ArrayList<GroupHeader>();
+            list.addAll(loadConversation.getGroupHeaderList());
+            list.addAll(loadThing.getGroupHeaderList());
+            list.addAll(loadEmergency.getGroupHeaderList());
+            list.addAll(loadLogistic.getGroupHeaderList());
+            list.addAll(loadPlace.getGroupHeaderList());
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(SearchActivity.this, daLconnection.getGroupHeaderList(),lang_from,lang_to);
-            //attach the adapter to the list
+            listAdapter = new MyListAdapter(SearchActivity.this, list,lang_from,lang_to);
             myList.setAdapter(listAdapter);
         }
 
 
         if (lang_from.equals("Myanmar") && lang_to.equals("Cambodia") || lang_from.equals("พม่า") && lang_to.equals("กัมพูชา")) {
-            daLconnection = new DALconnection();
-            daLconnection.loadMyanmarToCambodia();
-
+            loadConversation.loadMyanmarToCambodia();
+            loadThing.loadMyanmarToCambodia();
+            loadEmergency.loadMyanmarToCambodia();
+            loadLogistic.loadMyanmarToCambodia();
+            loadPlace.loadMyanmarToCambodia();
+            ArrayList<GroupHeader> list= new ArrayList<GroupHeader>();
+            list.addAll(loadConversation.getGroupHeaderList());
+            list.addAll(loadThing.getGroupHeaderList());
+            list.addAll(loadEmergency.getGroupHeaderList());
+            list.addAll(loadLogistic.getGroupHeaderList());
+            list.addAll(loadPlace.getGroupHeaderList());
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(SearchActivity.this, daLconnection.getGroupHeaderList(),lang_from,lang_to);
-            //attach the adapter to the list
+            listAdapter = new MyListAdapter(SearchActivity.this, list,lang_from,lang_to);
             myList.setAdapter(listAdapter);
         }
 
 
         if (lang_from.equals("Myanmar") && lang_to.equals("Indonesia") || lang_from.equals("พม่า") && lang_to.equals("อินโดนีเซีย")) {
-            daLconnection = new DALconnection();
-            daLconnection.loadMyanmarToIndonesia();
-
+            loadConversation.loadMyanmarToIndonesia();
+            loadThing.loadMyanmarToIndonesia();
+            loadEmergency.loadMyanmarToIndonesia();
+            loadLogistic.loadMyanmarToIndonesia();
+            loadPlace.loadMyanmarToIndonesia();
+            ArrayList<GroupHeader> list= new ArrayList<GroupHeader>();
+            list.addAll(loadConversation.getGroupHeaderList());
+            list.addAll(loadThing.getGroupHeaderList());
+            list.addAll(loadEmergency.getGroupHeaderList());
+            list.addAll(loadLogistic.getGroupHeaderList());
+            list.addAll(loadPlace.getGroupHeaderList());
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(SearchActivity.this, daLconnection.getGroupHeaderList(),lang_from,lang_to);
-            //attach the adapter to the list
+            listAdapter = new MyListAdapter(SearchActivity.this, list,lang_from,lang_to);
             myList.setAdapter(listAdapter);
         }
 
         if (lang_from.equals("Myanmar") && lang_to.equals("Laos") || lang_from.equals("พม่า") && lang_to.equals("ลาว")) {
-            daLconnection = new DALconnection();
-            daLconnection.loadMyanmarToLaos();
-
+            loadConversation.loadMyanmarToLaos();
+            loadThing.loadMyanmarToLaos();
+            loadEmergency.loadMyanmarToLaos();
+            loadLogistic.loadMyanmarToLaos();
+            loadPlace.loadMyanmarToLaos();
+            ArrayList<GroupHeader> list= new ArrayList<GroupHeader>();
+            list.addAll(loadConversation.getGroupHeaderList());
+            list.addAll(loadThing.getGroupHeaderList());
+            list.addAll(loadEmergency.getGroupHeaderList());
+            list.addAll(loadLogistic.getGroupHeaderList());
+            list.addAll(loadPlace.getGroupHeaderList());
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(SearchActivity.this, daLconnection.getGroupHeaderList(),lang_from,lang_to);
-            //attach the adapter to the list
+            listAdapter = new MyListAdapter(SearchActivity.this, list,lang_from,lang_to);
             myList.setAdapter(listAdapter);
         }
 
         if (lang_from.equals("Myanmar") && lang_to.equals("Malaysia") || lang_from.equals("พม่า") && lang_to.equals("มาเลเซีย")) {
-            daLconnection = new DALconnection();
-            daLconnection.loadMyanmarToMalaysia();
-
+            loadConversation.loadMyanmarToMalaysia();
+            loadThing.loadMyanmarToMalaysia();
+            loadEmergency.loadMyanmarToMalaysia();
+            loadLogistic.loadMyanmarToMalaysia();
+            loadPlace.loadMyanmarToMalaysia();
+            ArrayList<GroupHeader> list= new ArrayList<GroupHeader>();
+            list.addAll(loadConversation.getGroupHeaderList());
+            list.addAll(loadThing.getGroupHeaderList());
+            list.addAll(loadEmergency.getGroupHeaderList());
+            list.addAll(loadLogistic.getGroupHeaderList());
+            list.addAll(loadPlace.getGroupHeaderList());
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(SearchActivity.this, daLconnection.getGroupHeaderList(),lang_from,lang_to);
-            //attach the adapter to the list
+            listAdapter = new MyListAdapter(SearchActivity.this, list,lang_from,lang_to);
             myList.setAdapter(listAdapter);
         }
 
         if (lang_from.equals("Myanmar") && lang_to.equals("Myanmar") || lang_from.equals("พม่า") && lang_to.equals("พม่า")) {
-            daLconnection = new DALconnection();
-            daLconnection.loadMyanmarToMyanmar();
-
+            loadConversation.loadMyanmarToMyanmar();
+            loadThing.loadMyanmarToMyanmar();
+            loadEmergency.loadMyanmarToMyanmar();
+            loadLogistic.loadMyanmarToMyanmar();
+            loadPlace.loadMyanmarToMyanmar();
+            ArrayList<GroupHeader> list= new ArrayList<GroupHeader>();
+            list.addAll(loadConversation.getGroupHeaderList());
+            list.addAll(loadThing.getGroupHeaderList());
+            list.addAll(loadEmergency.getGroupHeaderList());
+            list.addAll(loadLogistic.getGroupHeaderList());
+            list.addAll(loadPlace.getGroupHeaderList());
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(SearchActivity.this, daLconnection.getGroupHeaderList(),lang_from,lang_to);
-            //attach the adapter to the list
+            listAdapter = new MyListAdapter(SearchActivity.this, list,lang_from,lang_to);
             myList.setAdapter(listAdapter);
         }
 
         if (lang_from.equals("Myanmar") && lang_to.equals("Philippines") || lang_from.equals("พม่า") && lang_to.equals("ฟิลิปปินส์")) {
-            daLconnection = new DALconnection();
-            daLconnection.loadMyanmarToPhilippines();
-
+            loadConversation.loadMyanmarToPhilippines();
+            loadThing.loadMyanmarToPhilippines();
+            loadEmergency.loadMyanmarToPhilippines();
+            loadLogistic.loadMyanmarToPhilippines();
+            loadPlace.loadMyanmarToPhilippines();
+            ArrayList<GroupHeader> list= new ArrayList<GroupHeader>();
+            list.addAll(loadConversation.getGroupHeaderList());
+            list.addAll(loadThing.getGroupHeaderList());
+            list.addAll(loadEmergency.getGroupHeaderList());
+            list.addAll(loadLogistic.getGroupHeaderList());
+            list.addAll(loadPlace.getGroupHeaderList());
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(SearchActivity.this, daLconnection.getGroupHeaderList(),lang_from,lang_to);
-            //attach the adapter to the list
+            listAdapter = new MyListAdapter(SearchActivity.this, list,lang_from,lang_to);
             myList.setAdapter(listAdapter);
         }
 
 
         if (lang_from.equals("Myanmar") && lang_to.equals("Singapore") || lang_from.equals("พม่า") && lang_to.equals("สิงคโปร์")) {
-            daLconnection = new DALconnection();
-            daLconnection.loadMyanmarToSingapore();
-
+            loadConversation.loadMyanmarToSingapore();
+            loadThing.loadMyanmarToSingapore();
+            loadEmergency.loadMyanmarToSingapore();
+            loadLogistic.loadMyanmarToSingapore();
+            loadPlace.loadMyanmarToSingapore();
+            ArrayList<GroupHeader> list= new ArrayList<GroupHeader>();
+            list.addAll(loadConversation.getGroupHeaderList());
+            list.addAll(loadThing.getGroupHeaderList());
+            list.addAll(loadEmergency.getGroupHeaderList());
+            list.addAll(loadLogistic.getGroupHeaderList());
+            list.addAll(loadPlace.getGroupHeaderList());
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(SearchActivity.this, daLconnection.getGroupHeaderList(),lang_from,lang_to);
-            //attach the adapter to the list
+            listAdapter = new MyListAdapter(SearchActivity.this, list,lang_from,lang_to);
             myList.setAdapter(listAdapter);
         }
 
         if (lang_from.equals("Myanmar") && lang_to.equals("Vietnam") || lang_from.equals("พม่า") && lang_to.equals("เวียดนาม")) {
-            daLconnection = new DALconnection();
-            daLconnection.loadMyanmarToVietnam();
-
+            loadConversation.loadMyanmarToVietnam();
+            loadThing.loadMyanmarToVietnam();
+            loadEmergency.loadMyanmarToVietnam();
+            loadLogistic.loadMyanmarToVietnam();
+            loadPlace.loadMyanmarToVietnam();
+            ArrayList<GroupHeader> list= new ArrayList<GroupHeader>();
+            list.addAll(loadConversation.getGroupHeaderList());
+            list.addAll(loadThing.getGroupHeaderList());
+            list.addAll(loadEmergency.getGroupHeaderList());
+            list.addAll(loadLogistic.getGroupHeaderList());
+            list.addAll(loadPlace.getGroupHeaderList());
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(SearchActivity.this, daLconnection.getGroupHeaderList(),lang_from,lang_to);
-            //attach the adapter to the list
+            listAdapter = new MyListAdapter(SearchActivity.this, list,lang_from,lang_to);
             myList.setAdapter(listAdapter);
         }
 
         if (lang_from.equals("Philippines") && lang_to.equals("China") || lang_from.equals("ฟิลิปปินส์") && lang_to.equals("จีน")) {
-            daLconnection = new DALconnection();
-            daLconnection.loadPhilippinesToChina();
-
+            loadConversation.loadPhilippinesToChina();
+            loadThing.loadPhilippinesToChina();
+            loadEmergency.loadPhilippinesToChina();
+            loadLogistic.loadPhilippinesToChina();
+            loadPlace.loadPhilippinesToChina();
+            ArrayList<GroupHeader> list= new ArrayList<GroupHeader>();
+            list.addAll(loadConversation.getGroupHeaderList());
+            list.addAll(loadThing.getGroupHeaderList());
+            list.addAll(loadEmergency.getGroupHeaderList());
+            list.addAll(loadLogistic.getGroupHeaderList());
+            list.addAll(loadPlace.getGroupHeaderList());
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(SearchActivity.this, daLconnection.getGroupHeaderList(),lang_from,lang_to);
-            //attach the adapter to the list
+            listAdapter = new MyListAdapter(SearchActivity.this, list,lang_from,lang_to);
             myList.setAdapter(listAdapter);
         }
 
         if (lang_from.equals("Philippines") && lang_to.equals("Thai") || lang_from.equals("ฟิลิปปินส์") && lang_to.equals("ไทย")) {
-            daLconnection = new DALconnection();
-            daLconnection.loadPhilippinesToThai();
-
+            loadConversation.loadPhilippinesToThai();
+            loadThing.loadPhilippinesToThai();
+            loadEmergency.loadPhilippinesToThai();
+            loadLogistic.loadPhilippinesToThai();
+            loadPlace.loadPhilippinesToThai();
+            ArrayList<GroupHeader> list= new ArrayList<GroupHeader>();
+            list.addAll(loadConversation.getGroupHeaderList());
+            list.addAll(loadThing.getGroupHeaderList());
+            list.addAll(loadEmergency.getGroupHeaderList());
+            list.addAll(loadLogistic.getGroupHeaderList());
+            list.addAll(loadPlace.getGroupHeaderList());
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(SearchActivity.this, daLconnection.getGroupHeaderList(),lang_from,lang_to);
-            //attach the adapter to the list
+            listAdapter = new MyListAdapter(SearchActivity.this, list,lang_from,lang_to);
             myList.setAdapter(listAdapter);
         }
 
         if (lang_from.equals("Philippines") && lang_to.equals("Brunei") || lang_from.equals("ฟิลิปปินส์") && lang_to.equals("บรูไน")) {
-            daLconnection = new DALconnection();
-            daLconnection.loadPhilippinesToBrunei();
-
+            loadConversation.loadPhilippinesToBrunei();
+            loadThing.loadPhilippinesToBrunei();
+            loadEmergency.loadPhilippinesToBrunei();
+            loadLogistic.loadPhilippinesToBrunei();
+            loadPlace.loadPhilippinesToBrunei();
+            ArrayList<GroupHeader> list= new ArrayList<GroupHeader>();
+            list.addAll(loadConversation.getGroupHeaderList());
+            list.addAll(loadThing.getGroupHeaderList());
+            list.addAll(loadEmergency.getGroupHeaderList());
+            list.addAll(loadLogistic.getGroupHeaderList());
+            list.addAll(loadPlace.getGroupHeaderList());
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(SearchActivity.this, daLconnection.getGroupHeaderList(),lang_from,lang_to);
-            //attach the adapter to the list
+            listAdapter = new MyListAdapter(SearchActivity.this, list,lang_from,lang_to);
             myList.setAdapter(listAdapter);
         }
 
         if (lang_from.equals("Philippines") && lang_to.equals("Cambodia") || lang_from.equals("ฟิลิปปินส์") && lang_to.equals("กัมพูชา")) {
-            daLconnection = new DALconnection();
-            daLconnection.loadPhilippinesToCambodia();
-
+            loadConversation.loadPhilippinesToCambodia();
+            loadThing.loadPhilippinesToCambodia();
+            loadEmergency.loadPhilippinesToCambodia();
+            loadLogistic.loadPhilippinesToCambodia();
+            loadPlace.loadPhilippinesToCambodia();
+            ArrayList<GroupHeader> list= new ArrayList<GroupHeader>();
+            list.addAll(loadConversation.getGroupHeaderList());
+            list.addAll(loadThing.getGroupHeaderList());
+            list.addAll(loadEmergency.getGroupHeaderList());
+            list.addAll(loadLogistic.getGroupHeaderList());
+            list.addAll(loadPlace.getGroupHeaderList());
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(SearchActivity.this, daLconnection.getGroupHeaderList(),lang_from,lang_to);
-            //attach the adapter to the list
+            listAdapter = new MyListAdapter(SearchActivity.this, list,lang_from,lang_to);
             myList.setAdapter(listAdapter);
         }
 
         if (lang_from.equals("Philippines") && lang_to.equals("Indonesia") || lang_from.equals("ฟิลิปปินส์") && lang_to.equals("อินโดนีเซีย")) {
-            daLconnection = new DALconnection();
-            daLconnection.loadPhilippinesToIndonesia();
-
+            loadConversation.loadPhilippinesToIndonesia();
+            loadThing.loadPhilippinesToIndonesia();
+            loadEmergency.loadPhilippinesToIndonesia();
+            loadLogistic.loadPhilippinesToIndonesia();
+            loadPlace.loadPhilippinesToIndonesia();
+            ArrayList<GroupHeader> list= new ArrayList<GroupHeader>();
+            list.addAll(loadConversation.getGroupHeaderList());
+            list.addAll(loadThing.getGroupHeaderList());
+            list.addAll(loadEmergency.getGroupHeaderList());
+            list.addAll(loadLogistic.getGroupHeaderList());
+            list.addAll(loadPlace.getGroupHeaderList());
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(SearchActivity.this, daLconnection.getGroupHeaderList(),lang_from,lang_to);
-            //attach the adapter to the list
+            listAdapter = new MyListAdapter(SearchActivity.this, list,lang_from,lang_to);
             myList.setAdapter(listAdapter);
         }
 
         if (lang_from.equals("Philippines") && lang_to.equals("Laos") || lang_from.equals("ฟิลิปปินส์") && lang_to.equals("ลาว")) {
-            daLconnection = new DALconnection();
-            daLconnection.loadPhilippinesToLaos();
-
+            loadConversation.loadPhilippinesToLaos();
+            loadThing.loadPhilippinesToLaos();
+            loadEmergency.loadPhilippinesToLaos();
+            loadLogistic.loadPhilippinesToLaos();
+            loadPlace.loadPhilippinesToLaos();
+            ArrayList<GroupHeader> list= new ArrayList<GroupHeader>();
+            list.addAll(loadConversation.getGroupHeaderList());
+            list.addAll(loadThing.getGroupHeaderList());
+            list.addAll(loadEmergency.getGroupHeaderList());
+            list.addAll(loadLogistic.getGroupHeaderList());
+            list.addAll(loadPlace.getGroupHeaderList());
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(SearchActivity.this, daLconnection.getGroupHeaderList(),lang_from,lang_to);
-            //attach the adapter to the list
+            listAdapter = new MyListAdapter(SearchActivity.this, list,lang_from,lang_to);
             myList.setAdapter(listAdapter);
         }
 
         if (lang_from.equals("Philippines") && lang_to.equals("Malaysia") || lang_from.equals("ฟิลิปปินส์") && lang_to.equals("มาเลเซีย")) {
-            daLconnection = new DALconnection();
-            daLconnection.loadPhilippinesToMalaysia();
-
+            loadConversation.loadPhilippinesToMalaysia();
+            loadThing.loadPhilippinesToMalaysia();
+            loadEmergency.loadPhilippinesToMalaysia();
+            loadLogistic.loadPhilippinesToMalaysia();
+            loadPlace.loadPhilippinesToMalaysia();
+            ArrayList<GroupHeader> list= new ArrayList<GroupHeader>();
+            list.addAll(loadConversation.getGroupHeaderList());
+            list.addAll(loadThing.getGroupHeaderList());
+            list.addAll(loadEmergency.getGroupHeaderList());
+            list.addAll(loadLogistic.getGroupHeaderList());
+            list.addAll(loadPlace.getGroupHeaderList());
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(SearchActivity.this, daLconnection.getGroupHeaderList(),lang_from,lang_to);
-            //attach the adapter to the list
+            listAdapter = new MyListAdapter(SearchActivity.this, list,lang_from,lang_to);
             myList.setAdapter(listAdapter);
         }
 
         if (lang_from.equals("Philippines") && lang_to.equals("Myanmar") || lang_from.equals("ฟิลิปปินส์") && lang_to.equals("พม่า")) {
-            daLconnection = new DALconnection();
-            daLconnection.loadPhilippinesToMyanmar();
-
+            loadConversation.loadPhilippinesToMyanmar();
+            loadThing.loadPhilippinesToMyanmar();
+            loadEmergency.loadPhilippinesToMyanmar();
+            loadLogistic.loadPhilippinesToMyanmar();
+            loadPlace.loadPhilippinesToMyanmar();
+            ArrayList<GroupHeader> list= new ArrayList<GroupHeader>();
+            list.addAll(loadConversation.getGroupHeaderList());
+            list.addAll(loadThing.getGroupHeaderList());
+            list.addAll(loadEmergency.getGroupHeaderList());
+            list.addAll(loadLogistic.getGroupHeaderList());
+            list.addAll(loadPlace.getGroupHeaderList());
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(SearchActivity.this, daLconnection.getGroupHeaderList(),lang_from,lang_to);
-            //attach the adapter to the list
+            listAdapter = new MyListAdapter(SearchActivity.this, list,lang_from,lang_to);
             myList.setAdapter(listAdapter);
         }
 
         if (lang_from.equals("Philippines") && lang_to.equals("Philippines") || lang_from.equals("ฟิลิปปินส์") && lang_to.equals("ฟิลิปปินส์")) {
-            daLconnection = new DALconnection();
-            daLconnection.loadPhilippinesToPhilippines();
-
+            loadConversation.loadPhilippinesToPhilippines();
+            loadThing.loadPhilippinesToPhilippines();
+            loadEmergency.loadPhilippinesToPhilippines();
+            loadLogistic.loadPhilippinesToPhilippines();
+            loadPlace.loadPhilippinesToPhilippines();
+            ArrayList<GroupHeader> list= new ArrayList<GroupHeader>();
+            list.addAll(loadConversation.getGroupHeaderList());
+            list.addAll(loadThing.getGroupHeaderList());
+            list.addAll(loadEmergency.getGroupHeaderList());
+            list.addAll(loadLogistic.getGroupHeaderList());
+            list.addAll(loadPlace.getGroupHeaderList());
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(SearchActivity.this, daLconnection.getGroupHeaderList(),lang_from,lang_to);
-            //attach the adapter to the list
+            listAdapter = new MyListAdapter(SearchActivity.this, list,lang_from,lang_to);
             myList.setAdapter(listAdapter);
         }
 
         if (lang_from.equals("Philippines") && lang_to.equals("Singapore") || lang_from.equals("ฟิลิปปินส์") && lang_to.equals("สิงคโปร์")) {
-            daLconnection = new DALconnection();
-            daLconnection.loadPhilippinesToSingapore();
-
+            loadConversation.loadPhilippinesToSingapore();
+            loadThing.loadPhilippinesToSingapore();
+            loadEmergency.loadPhilippinesToSingapore();
+            loadLogistic.loadPhilippinesToSingapore();
+            loadPlace.loadPhilippinesToSingapore();
+            ArrayList<GroupHeader> list= new ArrayList<GroupHeader>();
+            list.addAll(loadConversation.getGroupHeaderList());
+            list.addAll(loadThing.getGroupHeaderList());
+            list.addAll(loadEmergency.getGroupHeaderList());
+            list.addAll(loadLogistic.getGroupHeaderList());
+            list.addAll(loadPlace.getGroupHeaderList());
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(SearchActivity.this, daLconnection.getGroupHeaderList(),lang_from,lang_to);
-            //attach the adapter to the list
+            listAdapter = new MyListAdapter(SearchActivity.this, list,lang_from,lang_to);
             myList.setAdapter(listAdapter);
         }
 
         if (lang_from.equals("Philippines") && lang_to.equals("Vietnam") || lang_from.equals("ฟิลิปปินส์") && lang_to.equals("เวียดนาม")) {
-            daLconnection = new DALconnection();
-            daLconnection.loadPhilippinesToVietnam();
-
+            loadConversation.loadPhilippinesToVietnam();
+            loadThing.loadPhilippinesToVietnam();
+            loadEmergency.loadPhilippinesToVietnam();
+            loadLogistic.loadPhilippinesToVietnam();
+            loadPlace.loadPhilippinesToVietnam();
+            ArrayList<GroupHeader> list= new ArrayList<GroupHeader>();
+            list.addAll(loadConversation.getGroupHeaderList());
+            list.addAll(loadThing.getGroupHeaderList());
+            list.addAll(loadEmergency.getGroupHeaderList());
+            list.addAll(loadLogistic.getGroupHeaderList());
+            list.addAll(loadPlace.getGroupHeaderList());
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(SearchActivity.this, daLconnection.getGroupHeaderList(),lang_from,lang_to);
-            //attach the adapter to the list
+            listAdapter = new MyListAdapter(SearchActivity.this, list,lang_from,lang_to);
             myList.setAdapter(listAdapter);
         }
 
         if (lang_from.equals("Singapore") && lang_to.equals("China") || lang_from.equals("สิงคโปร์") && lang_to.equals("จีน")) {
-            daLconnection = new DALconnection();
-            daLconnection.loadSingaporeToChina();
-
+            loadConversation.loadSingaporeToChina();
+            loadThing.loadSingaporeToChina();
+            loadEmergency.loadSingaporeToChina();
+            loadLogistic.loadSingaporeToChina();
+            loadPlace.loadSingaporeToChina();
+            ArrayList<GroupHeader> list= new ArrayList<GroupHeader>();
+            list.addAll(loadConversation.getGroupHeaderList());
+            list.addAll(loadThing.getGroupHeaderList());
+            list.addAll(loadEmergency.getGroupHeaderList());
+            list.addAll(loadLogistic.getGroupHeaderList());
+            list.addAll(loadPlace.getGroupHeaderList());
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(SearchActivity.this, daLconnection.getGroupHeaderList(),lang_from,lang_to);
-            //attach the adapter to the list
+            listAdapter = new MyListAdapter(SearchActivity.this, list,lang_from,lang_to);
             myList.setAdapter(listAdapter);
         }
 
 
         if (lang_from.equals("Singapore") && lang_to.equals("Thai") || lang_from.equals("สิงคโปร์") && lang_to.equals("ไทย")) {
-            daLconnection = new DALconnection();
-            daLconnection.loadSingaporeToThai();
-
+            loadConversation.loadSingaporeToThai();
+            loadThing.loadSingaporeToThai();
+            loadEmergency.loadSingaporeToThai();
+            loadLogistic.loadSingaporeToThai();
+            loadPlace.loadSingaporeToThai();
+            ArrayList<GroupHeader> list= new ArrayList<GroupHeader>();
+            list.addAll(loadConversation.getGroupHeaderList());
+            list.addAll(loadThing.getGroupHeaderList());
+            list.addAll(loadEmergency.getGroupHeaderList());
+            list.addAll(loadLogistic.getGroupHeaderList());
+            list.addAll(loadPlace.getGroupHeaderList());
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(SearchActivity.this, daLconnection.getGroupHeaderList(),lang_from,lang_to);
-            //attach the adapter to the list
+            listAdapter = new MyListAdapter(SearchActivity.this, list,lang_from,lang_to);
             myList.setAdapter(listAdapter);
         }
 
 
         if (lang_from.equals("Singapore") && lang_to.equals("Brunei") || lang_from.equals("สิงคโปร์") && lang_to.equals("บรูไน")) {
-            daLconnection = new DALconnection();
-            daLconnection.loadSingaporeToBrunei();
-
+            loadConversation.loadSingaporeToBrunei();
+            loadThing.loadSingaporeToBrunei();
+            loadEmergency.loadSingaporeToBrunei();
+            loadLogistic.loadSingaporeToBrunei();
+            loadPlace.loadSingaporeToBrunei();
+            ArrayList<GroupHeader> list= new ArrayList<GroupHeader>();
+            list.addAll(loadConversation.getGroupHeaderList());
+            list.addAll(loadThing.getGroupHeaderList());
+            list.addAll(loadEmergency.getGroupHeaderList());
+            list.addAll(loadLogistic.getGroupHeaderList());
+            list.addAll(loadPlace.getGroupHeaderList());
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(SearchActivity.this, daLconnection.getGroupHeaderList(),lang_from,lang_to);
-            //attach the adapter to the list
+            listAdapter = new MyListAdapter(SearchActivity.this, list,lang_from,lang_to);
             myList.setAdapter(listAdapter);
         }
 
         if (lang_from.equals("Singapore") && lang_to.equals("Cambodia") || lang_from.equals("สิงคโปร์") && lang_to.equals("กัมพูชา")) {
-            daLconnection = new DALconnection();
-            daLconnection.loadSingaporeToCambodia();
-
+            loadConversation.loadSingaporeToCambodia();
+            loadThing.loadSingaporeToCambodia();
+            loadEmergency.loadSingaporeToCambodia();
+            loadLogistic.loadSingaporeToCambodia();
+            loadPlace.loadSingaporeToCambodia();
+            ArrayList<GroupHeader> list= new ArrayList<GroupHeader>();
+            list.addAll(loadConversation.getGroupHeaderList());
+            list.addAll(loadThing.getGroupHeaderList());
+            list.addAll(loadEmergency.getGroupHeaderList());
+            list.addAll(loadLogistic.getGroupHeaderList());
+            list.addAll(loadPlace.getGroupHeaderList());
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(SearchActivity.this, daLconnection.getGroupHeaderList(),lang_from,lang_to);
-            //attach the adapter to the list
+            listAdapter = new MyListAdapter(SearchActivity.this, list,lang_from,lang_to);
             myList.setAdapter(listAdapter);
         }
 
         if (lang_from.equals("Singapore") && lang_to.equals("Indonesia") || lang_from.equals("สิงคโปร์") && lang_to.equals("อินโดนีเซีย")) {
-            daLconnection = new DALconnection();
-            daLconnection.loadSingaporeToIndonesia();
-
+            loadConversation.loadSingaporeToIndonesia();
+            loadThing.loadSingaporeToIndonesia();
+            loadEmergency.loadSingaporeToIndonesia();
+            loadLogistic.loadSingaporeToIndonesia();
+            loadPlace.loadSingaporeToIndonesia();
+            ArrayList<GroupHeader> list= new ArrayList<GroupHeader>();
+            list.addAll(loadConversation.getGroupHeaderList());
+            list.addAll(loadThing.getGroupHeaderList());
+            list.addAll(loadEmergency.getGroupHeaderList());
+            list.addAll(loadLogistic.getGroupHeaderList());
+            list.addAll(loadPlace.getGroupHeaderList());
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(SearchActivity.this, daLconnection.getGroupHeaderList(),lang_from,lang_to);
-            //attach the adapter to the list
+            listAdapter = new MyListAdapter(SearchActivity.this, list,lang_from,lang_to);
             myList.setAdapter(listAdapter);
         }
 
         if (lang_from.equals("Singapore") && lang_to.equals("Laos") || lang_from.equals("สิงคโปร์") && lang_to.equals("ลาว")) {
-            daLconnection = new DALconnection();
-            daLconnection.loadSingaporeToLaos();
-
+            loadConversation.loadSingaporeToLaos();
+            loadThing.loadSingaporeToLaos();
+            loadEmergency.loadSingaporeToLaos();
+            loadLogistic.loadSingaporeToLaos();
+            loadPlace.loadSingaporeToLaos();
+            ArrayList<GroupHeader> list= new ArrayList<GroupHeader>();
+            list.addAll(loadConversation.getGroupHeaderList());
+            list.addAll(loadThing.getGroupHeaderList());
+            list.addAll(loadEmergency.getGroupHeaderList());
+            list.addAll(loadLogistic.getGroupHeaderList());
+            list.addAll(loadPlace.getGroupHeaderList());
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(SearchActivity.this, daLconnection.getGroupHeaderList(),lang_from,lang_to);
-            //attach the adapter to the list
+            listAdapter = new MyListAdapter(SearchActivity.this, list,lang_from,lang_to);
             myList.setAdapter(listAdapter);
         }
 
         if (lang_from.equals("Singapore") && lang_to.equals("Malaysia") || lang_from.equals("สิงคโปร์") && lang_to.equals("มาเลเซีย")) {
-            daLconnection = new DALconnection();
-            daLconnection.loadSingaporeToMalaysia();
-
+            loadConversation.loadSingaporeToMalaysia();
+            loadThing.loadSingaporeToMalaysia();
+            loadEmergency.loadSingaporeToMalaysia();
+            loadLogistic.loadSingaporeToMalaysia();
+            loadPlace.loadSingaporeToMalaysia();
+            ArrayList<GroupHeader> list= new ArrayList<GroupHeader>();
+            list.addAll(loadConversation.getGroupHeaderList());
+            list.addAll(loadThing.getGroupHeaderList());
+            list.addAll(loadEmergency.getGroupHeaderList());
+            list.addAll(loadLogistic.getGroupHeaderList());
+            list.addAll(loadPlace.getGroupHeaderList());
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(SearchActivity.this, daLconnection.getGroupHeaderList(),lang_from,lang_to);
-            //attach the adapter to the list
+            listAdapter = new MyListAdapter(SearchActivity.this, list,lang_from,lang_to);
             myList.setAdapter(listAdapter);
         }
 
         if (lang_from.equals("Singapore") && lang_to.equals("Myanmar") || lang_from.equals("สิงคโปร์") && lang_to.equals("พม่า")) {
-            daLconnection = new DALconnection();
-            daLconnection.loadSingaporeToMyanmar();
-
+            loadConversation.loadSingaporeToMyanmar();
+            loadThing.loadSingaporeToMyanmar();
+            loadEmergency.loadSingaporeToMyanmar();
+            loadLogistic.loadSingaporeToMyanmar();
+            loadPlace.loadSingaporeToMyanmar();
+            ArrayList<GroupHeader> list= new ArrayList<GroupHeader>();
+            list.addAll(loadConversation.getGroupHeaderList());
+            list.addAll(loadThing.getGroupHeaderList());
+            list.addAll(loadEmergency.getGroupHeaderList());
+            list.addAll(loadLogistic.getGroupHeaderList());
+            list.addAll(loadPlace.getGroupHeaderList());
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(SearchActivity.this, daLconnection.getGroupHeaderList(),lang_from,lang_to);
-            //attach the adapter to the list
+            listAdapter = new MyListAdapter(SearchActivity.this, list,lang_from,lang_to);
             myList.setAdapter(listAdapter);
         }
 
         if (lang_from.equals("Singapore") && lang_to.equals("Philippines") || lang_from.equals("สิงคโปร์") && lang_to.equals("ฟิลิปปินส์")) {
-            daLconnection = new DALconnection();
-            daLconnection.loadSingaporeToPhilippines();
-
+            loadConversation.loadSingaporeToPhilippines();
+            loadThing.loadSingaporeToPhilippines();
+            loadEmergency.loadSingaporeToPhilippines();
+            loadLogistic.loadSingaporeToPhilippines();
+            loadPlace.loadSingaporeToPhilippines();
+            ArrayList<GroupHeader> list= new ArrayList<GroupHeader>();
+            list.addAll(loadConversation.getGroupHeaderList());
+            list.addAll(loadThing.getGroupHeaderList());
+            list.addAll(loadEmergency.getGroupHeaderList());
+            list.addAll(loadLogistic.getGroupHeaderList());
+            list.addAll(loadPlace.getGroupHeaderList());
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(SearchActivity.this, daLconnection.getGroupHeaderList(),lang_from,lang_to);
-            //attach the adapter to the list
+            listAdapter = new MyListAdapter(SearchActivity.this, list,lang_from,lang_to);
             myList.setAdapter(listAdapter);
         }
 
         if (lang_from.equals("Singapore") && lang_to.equals("Singapore") || lang_from.equals("สิงคโปร์") && lang_to.equals("สิงคโปร์")) {
-            daLconnection = new DALconnection();
-            daLconnection.loadSingaporeToSingapore();
-
+            loadConversation.loadSingaporeToSingapore();
+            loadThing.loadSingaporeToSingapore();
+            loadEmergency.loadSingaporeToSingapore();
+            loadLogistic.loadSingaporeToSingapore();
+            loadPlace.loadSingaporeToSingapore();
+            ArrayList<GroupHeader> list= new ArrayList<GroupHeader>();
+            list.addAll(loadConversation.getGroupHeaderList());
+            list.addAll(loadThing.getGroupHeaderList());
+            list.addAll(loadEmergency.getGroupHeaderList());
+            list.addAll(loadLogistic.getGroupHeaderList());
+            list.addAll(loadPlace.getGroupHeaderList());
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(SearchActivity.this, daLconnection.getGroupHeaderList(),lang_from,lang_to);
-            //attach the adapter to the list
+            listAdapter = new MyListAdapter(SearchActivity.this, list,lang_from,lang_to);
             myList.setAdapter(listAdapter);
+
         }
 
         if (lang_from.equals("Singapore") && lang_to.equals("Vietnam") || lang_from.equals("สิงคโปร์") && lang_to.equals("เวียดนาม")) {
-            daLconnection = new DALconnection();
-            daLconnection.loadSingaporeToVietnam();
-
+            loadConversation.loadSingaporeToVietnam();
+            loadThing.loadSingaporeToVietnam();
+            loadEmergency.loadSingaporeToVietnam();
+            loadLogistic.loadSingaporeToVietnam();
+            loadPlace.loadSingaporeToVietnam();
+            ArrayList<GroupHeader> list= new ArrayList<GroupHeader>();
+            list.addAll(loadConversation.getGroupHeaderList());
+            list.addAll(loadThing.getGroupHeaderList());
+            list.addAll(loadEmergency.getGroupHeaderList());
+            list.addAll(loadLogistic.getGroupHeaderList());
+            list.addAll(loadPlace.getGroupHeaderList());
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(SearchActivity.this, daLconnection.getGroupHeaderList(),lang_from,lang_to);
-            //attach the adapter to the list
+            listAdapter = new MyListAdapter(SearchActivity.this, list,lang_from,lang_to);
             myList.setAdapter(listAdapter);
         }
 
         if (lang_from.equals("Vietnam") && lang_to.equals("China") || lang_from.equals("เวียดนาม") && lang_to.equals("จีน")) {
-            daLconnection = new DALconnection();
-            daLconnection.loadVietnamToChina();
-
+            loadConversation.loadVietnamToChina();
+            loadThing.loadVietnamToChina();
+            loadEmergency.loadVietnamToChina();
+            loadLogistic.loadVietnamToChina();
+            loadPlace.loadVietnamToChina();
+            ArrayList<GroupHeader> list= new ArrayList<GroupHeader>();
+            list.addAll(loadConversation.getGroupHeaderList());
+            list.addAll(loadThing.getGroupHeaderList());
+            list.addAll(loadEmergency.getGroupHeaderList());
+            list.addAll(loadLogistic.getGroupHeaderList());
+            list.addAll(loadPlace.getGroupHeaderList());
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(SearchActivity.this, daLconnection.getGroupHeaderList(),lang_from,lang_to);
-            //attach the adapter to the list
+            listAdapter = new MyListAdapter(SearchActivity.this, list,lang_from,lang_to);
             myList.setAdapter(listAdapter);
         }
 
         if (lang_from.equals("Vietnam") && lang_to.equals("Thai") || lang_from.equals("เวียดนาม") && lang_to.equals("ไทย")) {
-            daLconnection = new DALconnection();
-            daLconnection.loadVietnamToThai();
-
+            loadConversation.loadVietnamToThai();
+            loadThing.loadVietnamToThai();
+            loadEmergency.loadVietnamToThai();
+            loadLogistic.loadVietnamToThai();
+            loadPlace.loadVietnamToThai();
+            ArrayList<GroupHeader> list= new ArrayList<GroupHeader>();
+            list.addAll(loadConversation.getGroupHeaderList());
+            list.addAll(loadThing.getGroupHeaderList());
+            list.addAll(loadEmergency.getGroupHeaderList());
+            list.addAll(loadLogistic.getGroupHeaderList());
+            list.addAll(loadPlace.getGroupHeaderList());
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(SearchActivity.this, daLconnection.getGroupHeaderList(),lang_from,lang_to);
-            //attach the adapter to the list
+            listAdapter = new MyListAdapter(SearchActivity.this, list,lang_from,lang_to);
             myList.setAdapter(listAdapter);
         }
 
         if (lang_from.equals("Vietnam") && lang_to.equals("Brunei") || lang_from.equals("เวียดนาม") && lang_to.equals("บรูไน")) {
-            daLconnection = new DALconnection();
-            daLconnection.loadVietnamToBrunei();
-
+            loadConversation.loadVietnamToBrunei();
+            loadThing.loadVietnamToBrunei();
+            loadEmergency.loadVietnamToBrunei();
+            loadLogistic.loadVietnamToBrunei();
+            loadPlace.loadVietnamToBrunei();
+            ArrayList<GroupHeader> list= new ArrayList<GroupHeader>();
+            list.addAll(loadConversation.getGroupHeaderList());
+            list.addAll(loadThing.getGroupHeaderList());
+            list.addAll(loadEmergency.getGroupHeaderList());
+            list.addAll(loadLogistic.getGroupHeaderList());
+            list.addAll(loadPlace.getGroupHeaderList());
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(SearchActivity.this, daLconnection.getGroupHeaderList(),lang_from,lang_to);
-            //attach the adapter to the list
+            listAdapter = new MyListAdapter(SearchActivity.this, list,lang_from,lang_to);
             myList.setAdapter(listAdapter);
         }
 
         if (lang_from.equals("Vietnam") && lang_to.equals("Cambodia") || lang_from.equals("เวียดนาม") && lang_to.equals("กัมพูชา")) {
-            daLconnection = new DALconnection();
-            daLconnection.loadVietnamToCambodia();
-
+            loadConversation.loadVietnamToCambodia();
+            loadThing.loadVietnamToCambodia();
+            loadEmergency.loadVietnamToCambodia();
+            loadLogistic.loadVietnamToCambodia();
+            loadPlace.loadVietnamToCambodia();
+            ArrayList<GroupHeader> list= new ArrayList<GroupHeader>();
+            list.addAll(loadConversation.getGroupHeaderList());
+            list.addAll(loadThing.getGroupHeaderList());
+            list.addAll(loadEmergency.getGroupHeaderList());
+            list.addAll(loadLogistic.getGroupHeaderList());
+            list.addAll(loadPlace.getGroupHeaderList());
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(SearchActivity.this, daLconnection.getGroupHeaderList(),lang_from,lang_to);
-            //attach the adapter to the list
+            listAdapter = new MyListAdapter(SearchActivity.this, list,lang_from,lang_to);
             myList.setAdapter(listAdapter);
         }
 
         if (lang_from.equals("Vietnam") && lang_to.equals("Indonesia") || lang_from.equals("เวียดนาม") && lang_to.equals("อินโดนีเซีย")) {
-            daLconnection = new DALconnection();
-            daLconnection.loadVietnamToIndonesia();
-
+            loadConversation.loadVietnamToIndonesia();
+            loadThing.loadVietnamToIndonesia();
+            loadEmergency.loadVietnamToIndonesia();
+            loadLogistic.loadVietnamToIndonesia();
+            loadPlace.loadVietnamToIndonesia();
+            ArrayList<GroupHeader> list= new ArrayList<GroupHeader>();
+            list.addAll(loadConversation.getGroupHeaderList());
+            list.addAll(loadThing.getGroupHeaderList());
+            list.addAll(loadEmergency.getGroupHeaderList());
+            list.addAll(loadLogistic.getGroupHeaderList());
+            list.addAll(loadPlace.getGroupHeaderList());
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(SearchActivity.this, daLconnection.getGroupHeaderList(),lang_from,lang_to);
-            //attach the adapter to the list
+            listAdapter = new MyListAdapter(SearchActivity.this, list,lang_from,lang_to);
             myList.setAdapter(listAdapter);
         }
 
 
         if (lang_from.equals("Vietnam") && lang_to.equals("Laos") || lang_from.equals("เวียดนาม") && lang_to.equals("ลาว")) {
-            daLconnection = new DALconnection();
-            daLconnection.loadVietnamToLaos();
-
+            loadConversation.loadVietnamToLaos();
+            loadThing.loadVietnamToLaos();
+            loadEmergency.loadVietnamToLaos();
+            loadLogistic.loadVietnamToLaos();
+            loadPlace.loadVietnamToLaos();
+            ArrayList<GroupHeader> list= new ArrayList<GroupHeader>();
+            list.addAll(loadConversation.getGroupHeaderList());
+            list.addAll(loadThing.getGroupHeaderList());
+            list.addAll(loadEmergency.getGroupHeaderList());
+            list.addAll(loadLogistic.getGroupHeaderList());
+            list.addAll(loadPlace.getGroupHeaderList());
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(SearchActivity.this, daLconnection.getGroupHeaderList(),lang_from,lang_to);
-            //attach the adapter to the list
+            listAdapter = new MyListAdapter(SearchActivity.this, list,lang_from,lang_to);
             myList.setAdapter(listAdapter);
         }
 
         if (lang_from.equals("Vietnam") && lang_to.equals("Malaysia") || lang_from.equals("เวียดนาม") && lang_to.equals("มาเลเซีย")) {
-            daLconnection = new DALconnection();
-            daLconnection.loadVietnamToMalaysia();
-
+            loadConversation.loadVietnamToMalaysia();
+            loadThing.loadVietnamToMalaysia();
+            loadEmergency.loadVietnamToMalaysia();
+            loadLogistic.loadVietnamToMalaysia();
+            loadPlace.loadVietnamToMalaysia();
+            ArrayList<GroupHeader> list= new ArrayList<GroupHeader>();
+            list.addAll(loadConversation.getGroupHeaderList());
+            list.addAll(loadThing.getGroupHeaderList());
+            list.addAll(loadEmergency.getGroupHeaderList());
+            list.addAll(loadLogistic.getGroupHeaderList());
+            list.addAll(loadPlace.getGroupHeaderList());
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(SearchActivity.this, daLconnection.getGroupHeaderList(),lang_from,lang_to);
-            //attach the adapter to the list
+            listAdapter = new MyListAdapter(SearchActivity.this, list,lang_from,lang_to);
             myList.setAdapter(listAdapter);
         }
 
         if (lang_from.equals("Vietnam") && lang_to.equals("Myanmar") || lang_from.equals("เวียดนาม") && lang_to.equals("พม่า")) {
-            daLconnection = new DALconnection();
-            daLconnection.loadVietnamToMyanmar();
-
+            loadConversation.loadVietnamToMyanmar();
+            loadThing.loadVietnamToMyanmar();
+            loadEmergency.loadVietnamToMyanmar();
+            loadLogistic.loadVietnamToMyanmar();
+            loadPlace.loadVietnamToMyanmar();
+            ArrayList<GroupHeader> list= new ArrayList<GroupHeader>();
+            list.addAll(loadConversation.getGroupHeaderList());
+            list.addAll(loadThing.getGroupHeaderList());
+            list.addAll(loadEmergency.getGroupHeaderList());
+            list.addAll(loadLogistic.getGroupHeaderList());
+            list.addAll(loadPlace.getGroupHeaderList());
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(SearchActivity.this, daLconnection.getGroupHeaderList(),lang_from,lang_to);
-            //attach the adapter to the list
+            listAdapter = new MyListAdapter(SearchActivity.this, list,lang_from,lang_to);
             myList.setAdapter(listAdapter);
         }
 
         if (lang_from.equals("Vietnam") && lang_to.equals("Philippines") || lang_from.equals("เวียดนาม") && lang_to.equals("ฟิลิปปินส์")) {
-            daLconnection = new DALconnection();
-            daLconnection.loadVietnamToPhilippines();
-
+            loadConversation.loadVietnamToPhilippines();
+            loadThing.loadVietnamToPhilippines();
+            loadEmergency.loadVietnamToPhilippines();
+            loadLogistic.loadVietnamToPhilippines();
+            loadPlace.loadVietnamToPhilippines();
+            ArrayList<GroupHeader> list= new ArrayList<GroupHeader>();
+            list.addAll(loadConversation.getGroupHeaderList());
+            list.addAll(loadThing.getGroupHeaderList());
+            list.addAll(loadEmergency.getGroupHeaderList());
+            list.addAll(loadLogistic.getGroupHeaderList());
+            list.addAll(loadPlace.getGroupHeaderList());
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(SearchActivity.this, daLconnection.getGroupHeaderList(),lang_from,lang_to);
-            //attach the adapter to the list
+            listAdapter = new MyListAdapter(SearchActivity.this, list,lang_from,lang_to);
             myList.setAdapter(listAdapter);
         }
 
         if (lang_from.equals("Vietnam") && lang_to.equals("Singapore") || lang_from.equals("เวียดนาม") && lang_to.equals("สิงคโปร์")) {
-            daLconnection = new DALconnection();
-            daLconnection.loadVietnamToSingapore();
-
+            loadConversation.loadVietnamToSingapore();
+            loadThing.loadVietnamToSingapore();
+            loadEmergency.loadVietnamToSingapore();
+            loadLogistic.loadVietnamToSingapore();
+            loadPlace.loadVietnamToSingapore();
+            ArrayList<GroupHeader> list= new ArrayList<GroupHeader>();
+            list.addAll(loadConversation.getGroupHeaderList());
+            list.addAll(loadThing.getGroupHeaderList());
+            list.addAll(loadEmergency.getGroupHeaderList());
+            list.addAll(loadLogistic.getGroupHeaderList());
+            list.addAll(loadPlace.getGroupHeaderList());
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(SearchActivity.this, daLconnection.getGroupHeaderList(),lang_from,lang_to);
-            //attach the adapter to the list
+            listAdapter = new MyListAdapter(SearchActivity.this, list,lang_from,lang_to);
             myList.setAdapter(listAdapter);
         }
 
         if (lang_from.equals("Vietnam") && lang_to.equals("Vietnam") || lang_from.equals("เวียดนาม") && lang_to.equals("เวียดนาม")) {
-            daLconnection = new DALconnection();
-            daLconnection.loadVietnamToVietnam();
-
+            loadConversation.loadVietnamToVietnam();
+            loadThing.loadVietnamToVietnam();
+            loadEmergency.loadVietnamToVietnam();
+            loadLogistic.loadVietnamToVietnam();
+            loadPlace.loadVietnamToVietnam();
+            ArrayList<GroupHeader> list= new ArrayList<GroupHeader>();
+            list.addAll(loadConversation.getGroupHeaderList());
+            list.addAll(loadThing.getGroupHeaderList());
+            list.addAll(loadEmergency.getGroupHeaderList());
+            list.addAll(loadLogistic.getGroupHeaderList());
+            list.addAll(loadPlace.getGroupHeaderList());
             myList = (ExpandableListView) findViewById(R.id.groupListview);
             //create the adapter by passing your ArrayList data
-            listAdapter = new MyListAdapter(SearchActivity.this, daLconnection.getGroupHeaderList(),lang_from,lang_to);
-            //attach the adapter to the list
+            listAdapter = new MyListAdapter(SearchActivity.this, list,lang_from,lang_to);
             myList.setAdapter(listAdapter);
         }
-        */
+
 
 
 
