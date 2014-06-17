@@ -1589,7 +1589,9 @@ public class HelpActivity extends Activity implements SearchView.OnQueryTextList
             case R.id.action_settings:
                 Intent i;
                 i = new Intent(getApplicationContext(), SettingActivity.class);
+               finish();
                 startActivity(i);
+
                 return true;
             //break;
             case R.id.action_search:
@@ -1600,7 +1602,9 @@ public class HelpActivity extends Activity implements SearchView.OnQueryTextList
                 saveValue(lang_from,lang_to);
                 intent.putExtra("strCountryFrom", lang_from);
                 intent.putExtra("strCountryTo", lang_to);
+                finish();
                 startActivity(intent);
+
 
                 return true;
             default:

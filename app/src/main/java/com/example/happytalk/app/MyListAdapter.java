@@ -318,7 +318,7 @@ public class MyListAdapter extends BaseExpandableListAdapter {
                 ArrayList<Child> groupHeaders = groupHeader.getChildList();
                 ArrayList<Child> newList = new ArrayList<Child>();
                 for(Child child : groupHeaders){
-                    if(child.getWordFrom().toLowerCase().contains(query) || child.getWordTo().toLowerCase().contains(query)){
+                    if(child.getWordFrom().toLowerCase().contains(query) || child.getWordTo().toLowerCase().contains(query) || child.getWordEN().toLowerCase().contains(query)){
                         newList.add(child);
                     }
                 }

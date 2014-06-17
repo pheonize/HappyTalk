@@ -17,7 +17,7 @@ import android.widget.SearchView;
 import android.widget.TextView;
 
 import com.example.happytalk.app.Database.ConversationDAL;
-import com.example.happytalk.app.Database.DALconnection;
+
 import com.example.happytalk.app.Database.EmergencyDAL;
 import com.example.happytalk.app.Database.LogisticDAL;
 import com.example.happytalk.app.Database.PlaceDAL;
@@ -31,12 +31,13 @@ import java.util.Locale;
  */
 public class SearchActivity extends Activity implements SearchView.OnQueryTextListener, SearchView.OnCloseListener {
 
-    private ConversationDAL loadConversation;
-    private ThingDAL loadThing;
-    private PlaceDAL loadPlace;
-    private EmergencyDAL loadEmergency;
-    private LogisticDAL loadLogistic;
-    private DALconnection daLconnection;
+    private ConversationDAL loadConversation = new ConversationDAL();
+    private ThingDAL loadThing = new ThingDAL();
+//    private PlaceDAL loadPlace;
+//    private EmergencyDAL loadEmergency;
+//    private LogisticDAL loadLogistic;
+    //private DALconnection daLconnection;
+
 
     private MyListAdapter listAdapter;
     private MyListAdapter listAdapter1;
@@ -109,7 +110,16 @@ public class SearchActivity extends Activity implements SearchView.OnQueryTextLi
     }
 
     public void initData(String lang_from, String lang_to) {
-
+        loadConversation.loadBruneiToLaos();
+        loadThing.loadBruneiToLaos();
+        ArrayList<GroupHeader> listgh = new ArrayList<GroupHeader>();
+        listgh.addAll(loadConversation.getGroupHeaderList());
+        listgh.addAll(loadThing.getGroupHeaderList());
+        myList = (ExpandableListView) findViewById(R.id.groupListview);
+        //create the adapter by passing your ArrayList data
+        listAdapter = new MyListAdapter(SearchActivity.this, listgh,lang_from,lang_to);
+        myList.setAdapter(listAdapter);
+        /*
         if (lang_from.equals("Thai") && lang_to.equals("Brunei") || lang_from.equals("ไทย") && lang_to.equals("บรูไน")) {
 
             //display the list
@@ -1468,7 +1478,7 @@ public class SearchActivity extends Activity implements SearchView.OnQueryTextLi
             //attach the adapter to the list
             myList.setAdapter(listAdapter);
         }
-
+        */
 
 
 
@@ -1544,6 +1554,7 @@ public class SearchActivity extends Activity implements SearchView.OnQueryTextLi
                 Intent i;
                 i = new Intent(getApplicationContext(), SettingActivity.class);
                 startActivity(i);
+                finish();
                 return true;
             //break;
             case R.id.action_search:

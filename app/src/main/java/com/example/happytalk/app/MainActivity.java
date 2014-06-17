@@ -7,6 +7,7 @@ import android.content.res.Configuration;
 import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Typeface;
 import android.media.MediaPlayer;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.util.Log;
@@ -100,187 +101,9 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_main);
-
-        //reload value from preference screen
-        PreferenceManager.setDefaultValues(this,R.xml.setting,false);
-        final SharedPreferences setting = PreferenceManager.getDefaultSharedPreferences(this);
-
-        String value = setting.getString("langPref","");
-
-
-        Locale locale = new Locale(value);
-        Locale.setDefault(locale);
-        Configuration config = new Configuration();
-        config.locale = locale;
-        getBaseContext().getResources().updateConfiguration(config,
-                getBaseContext().getResources().getDisplayMetrics());
-        this.setContentView(R.layout.activity_main);
-
-
-
-
-        //Test DB //
-        //Database
-       // Database db = new Database(this);
         FavoriteDAL db = new FavoriteDAL(this);
-        //db.getWritableDatabase();
 
-//        String fontPath = "fonts/mmrtext.otf";
-//        TextView txtText = (TextView) findViewById(R.id.country);
-//        Typeface tf = Typeface.createFromAsset(txtText.getContext().getAssets(),fontPath);
-//
-//        txtText.setTypeface(tf);
-
-
-        //Configuration configuration = new Configuration();
-
-
-        if (value.equals("English(United States)")||value.equals("ENG")) {
-           // getResources().updateConfiguration(config, null);
-            initWidget();
-            Spinner countryFrom = (Spinner) findViewById(R.id.spinner_show);
-            countryFrom.setAdapter(new MyCustomAdapter(MainActivity.this, R.layout.spinner_row, country_list1, img1));
-            countryFrom.setOnItemSelectedListener(new MyOnItemSelectedListener());
-
-            Spinner countryTo = (Spinner) findViewById(R.id.spinner2_show);
-            countryTo.setAdapter(new MyCustomAdapter2(MainActivity.this, R.layout.spinner_row, country_list2, img2));
-            countryTo.setOnItemSelectedListener(new MyOnItemSelectedListener());
-
-
-            //custom icon
-            int[] array_res = getImageArray(R.array.image_array
-                    , R.drawable.ic_launcher);
-            String[] array_string = getStringArray(R.array.string_array);
-            //
-
-            ListView listView = (ListView) findViewById(R.id.listView);
-            listView.setAdapter(new CustomListViewAdapter(getApplicationContext()
-                    , android.R.id.text1, array_string, array_res));
-            listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-                @Override
-                //arg2 =input value use to switchcase
-                public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
-                    Intent intent;
-                    switch (position) {
-                        case 0:
-                            intent = new Intent(getApplicationContext(), ConversationActivity.class);
-                            intent.putExtra("strCountryFrom", strCountryFrom);
-                            intent.putExtra("strCountryTo", strCountryTo);
-                            Log.d("countryFrom", strCountryFrom);
-                            Log.d("countryTo", strCountryTo);
-
-
-                            startActivity(intent);
-                            break;
-                        case 1:
-                            intent = new Intent(getApplicationContext(), ThingActivity.class);
-                            intent.putExtra("strCountryFrom", strCountryFrom);
-                            intent.putExtra("strCountryTo", strCountryTo);
-                            startActivity(intent);
-                            break;
-                        case 2:
-                            intent = new Intent(getApplicationContext(), PlaceActivity.class);
-                            intent.putExtra("strCountryFrom", strCountryFrom);
-                            intent.putExtra("strCountryTo", strCountryTo);
-                            startActivity(intent);
-                            break;
-                        case 3:
-                            intent = new Intent(getApplicationContext(), HelpActivity.class);
-                            intent.putExtra("strCountryFrom", strCountryFrom);
-                            intent.putExtra("strCountryTo", strCountryTo);
-                            startActivity(intent);
-                            break;
-                        case 4:
-                            intent = new Intent(getApplicationContext(), LogisticActivity.class);
-                            intent.putExtra("strCountryFrom", strCountryFrom);
-                            intent.putExtra("strCountryTo", strCountryTo);
-                            startActivity(intent);
-                            break;
-                        case 5:
-                            intent = new Intent(getApplicationContext(), FavoriteActivity.class);
-                            intent.putExtra("strCountryFrom", strCountryFrom);
-                            intent.putExtra("strCountryTo", strCountryTo);
-                            startActivity(intent);
-                            break;
-                    }
-                }
-
-
-            });
-        }else if(value.equals(("Thai"))) {
-            initWidgetTH();
-
-            Spinner countryFrom = (Spinner) findViewById(R.id.spinner_show);
-            countryFrom.setAdapter(new MyCustomAdapterTH(MainActivity.this, R.layout.spinner_row, country_list1TH, img1TH));
-            countryFrom.setOnItemSelectedListener(new MyOnItemSelectedListenerTH());
-
-            Spinner countryTo = (Spinner) findViewById(R.id.spinner2_show);
-            countryTo.setAdapter(new MyCustomAdapter2TH(MainActivity.this, R.layout.spinner_row, country_list2TH, img2TH));
-            countryTo.setOnItemSelectedListener(new MyOnItemSelectedListenerTH());
-
-
-            //custom icon
-            int[] array_res = getImageArray(R.array.image_array
-                    , R.drawable.ic_launcher);
-            String[] array_string = getStringArray(R.array.string_array);
-            //
-
-            ListView listView = (ListView) findViewById(R.id.listView);
-            listView.setAdapter(new CustomListViewAdapter(getApplicationContext()
-                    , android.R.id.text1, array_string, array_res));
-            listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-                @Override
-                //arg2 =input value use to switchcase
-                public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
-                    Intent intent;
-                    switch (position) {
-                        case 0:
-                            intent = new Intent(getApplicationContext(), ConversationActivity.class);
-                            intent.putExtra("strCountryFrom", strCountryFrom);
-                            intent.putExtra("strCountryTo", strCountryTo);
-                            Log.d("countryFrom", strCountryFrom);
-                            Log.d("countryTo", strCountryTo);
-
-
-                            startActivity(intent);
-                            break;
-                        case 1:
-                            intent = new Intent(getApplicationContext(), ThingActivity.class);
-                            intent.putExtra("strCountryFrom", strCountryFrom);
-                            intent.putExtra("strCountryTo", strCountryTo);
-                            startActivity(intent);
-                            break;
-                        case 2:
-                            intent = new Intent(getApplicationContext(), PlaceActivity.class);
-                            intent.putExtra("strCountryFrom", strCountryFrom);
-                            intent.putExtra("strCountryTo", strCountryTo);
-                            startActivity(intent);
-                            break;
-                        case 3:
-                            intent = new Intent(getApplicationContext(), HelpActivity.class);
-                            intent.putExtra("strCountryFrom", strCountryFrom);
-                            intent.putExtra("strCountryTo", strCountryTo);
-                            startActivity(intent);
-                            break;
-                        case 4:
-                            intent = new Intent(getApplicationContext(), LogisticActivity.class);
-                            intent.putExtra("strCountryFrom", strCountryFrom);
-                            intent.putExtra("strCountryTo", strCountryTo);
-                            startActivity(intent);
-                            break;
-                        case 5:
-                            intent = new Intent(getApplicationContext(), FavoriteActivity.class);
-                            startActivity(intent);
-                            break;
-                    }
-                }
-
-
-            });
-
-        }
     }
-
 
 
     private void initWidget() {
@@ -299,8 +122,6 @@ public class MainActivity extends Activity {
         countryTo = (Spinner) findViewById(R.id.spinner2_show);
         // btnSearch = (Button) findViewById(R.id.btn_go);
     }
-
-
 
 
     //spinner
@@ -528,8 +349,6 @@ public class MainActivity extends Activity {
     }
 
 
-
-
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
@@ -544,19 +363,229 @@ public class MainActivity extends Activity {
             case R.id.action_settings:
                 Intent i;
                 i = new Intent(getApplicationContext(), SettingActivity.class);
+                //finish();
                 startActivity(i);
+                // onRestart();
                 return true;
-                //break;
+            //break;
             case R.id.action_search:
                 Intent intent;
-                intent = new Intent(getApplicationContext(),SearchActivity.class);
+                intent = new Intent(getApplicationContext(), SearchActivity.class);
                 intent.putExtra("strCountryFrom", strCountryFrom);
                 intent.putExtra("strCountryTo", strCountryTo);
+                // finish();
                 startActivity(intent);
+                //onRestart();
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
         }
+    }
+
+    public void onResume() {
+        super.onResume();
+        //reload value from preference screen
+        PreferenceManager.setDefaultValues(this, R.xml.setting, false);
+        final SharedPreferences setting = PreferenceManager.getDefaultSharedPreferences(this);
+
+        String value = setting.getString("langPref", "");
+
+
+        Locale locale = new Locale(value);
+        Locale.setDefault(locale);
+        Configuration config = new Configuration();
+        config.locale = locale;
+        getBaseContext().getResources().updateConfiguration(config,
+                getBaseContext().getResources().getDisplayMetrics());
+        this.setContentView(R.layout.activity_main);
+
+
+        //Test DB //
+        //Database
+        // Database db = new Database(this);
+
+        //db.getWritableDatabase();
+
+//        String fontPath = "fonts/mmrtext.ttf";
+//        TextView txtText = (TextView) findViewById(R.id.country);
+//        Typeface tf = Typeface.createFromAsset(this.getAssets(),fontPath);
+//
+//        txtText.setTypeface(tf);
+
+
+        //Configuration configuration = new Configuration();
+
+
+        if (value.equals("English(United States)") || value.equals("ENG")) {
+            // getResources().updateConfiguration(config, null);
+            initWidget();
+            Spinner countryFrom = (Spinner) findViewById(R.id.spinner_show);
+            countryFrom.setAdapter(new MyCustomAdapter(MainActivity.this, R.layout.spinner_row, country_list1, img1));
+            countryFrom.setOnItemSelectedListener(new MyOnItemSelectedListener());
+
+            Spinner countryTo = (Spinner) findViewById(R.id.spinner2_show);
+            countryTo.setAdapter(new MyCustomAdapter2(MainActivity.this, R.layout.spinner_row, country_list2, img2));
+            countryTo.setOnItemSelectedListener(new MyOnItemSelectedListener());
+
+
+            //custom icon
+            int[] array_res = getImageArray(R.array.image_array
+                    , R.drawable.ic_launcher);
+            String[] array_string = getStringArray(R.array.string_array);
+            //
+
+            ListView listView = (ListView) findViewById(R.id.listView);
+            listView.setAdapter(new CustomListViewAdapter(getApplicationContext()
+                    , android.R.id.text1, array_string, array_res));
+            listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                @Override
+                //arg2 =input value use to switchcase
+                public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
+                    Intent intent;
+                    switch (position) {
+                        case 0:
+                            intent = new Intent(getApplicationContext(), ConversationActivity.class);
+                            intent.putExtra("strCountryFrom", strCountryFrom);
+                            intent.putExtra("strCountryTo", strCountryTo);
+                            Log.d("countryFrom", strCountryFrom);
+                            Log.d("countryTo", strCountryTo);
+
+                            finish();
+                            startActivity(intent);
+
+                            break;
+                        case 1:
+                            intent = new Intent(getApplicationContext(), ThingActivity.class);
+                            intent.putExtra("strCountryFrom", strCountryFrom);
+                            intent.putExtra("strCountryTo", strCountryTo);
+                            finish();
+                            startActivity(intent);
+
+                            break;
+                        case 2:
+                            intent = new Intent(getApplicationContext(), PlaceActivity.class);
+                            intent.putExtra("strCountryFrom", strCountryFrom);
+                            intent.putExtra("strCountryTo", strCountryTo);
+                            finish();
+                            startActivity(intent);
+
+                            break;
+
+                        case 3:
+                            intent = new Intent(getApplicationContext(), HelpActivity.class);
+                            intent.putExtra("strCountryFrom", strCountryFrom);
+                            intent.putExtra("strCountryTo", strCountryTo);
+                            finish();
+                            startActivity(intent);
+
+                            break;
+                        case 4:
+                            intent = new Intent(getApplicationContext(), LogisticActivity.class);
+                            intent.putExtra("strCountryFrom", strCountryFrom);
+                            intent.putExtra("strCountryTo", strCountryTo);
+
+                            finish();
+                            startActivity(intent);
+
+                            break;
+                        case 5:
+                            intent = new Intent(getApplicationContext(), FavoriteActivity.class);
+                            intent.putExtra("strCountryFrom", strCountryFrom);
+                            intent.putExtra("strCountryTo", strCountryTo);
+                            finish();
+                            startActivity(intent);
+
+                            break;
+                    }
+                }
+
+
+            });
+        } else if (value.equals(("Thai"))) {
+            initWidgetTH();
+
+            Spinner countryFrom = (Spinner) findViewById(R.id.spinner_show);
+            countryFrom.setAdapter(new MyCustomAdapterTH(MainActivity.this, R.layout.spinner_row, country_list1TH, img1TH));
+            countryFrom.setOnItemSelectedListener(new MyOnItemSelectedListenerTH());
+
+            Spinner countryTo = (Spinner) findViewById(R.id.spinner2_show);
+            countryTo.setAdapter(new MyCustomAdapter2TH(MainActivity.this, R.layout.spinner_row, country_list2TH, img2TH));
+            countryTo.setOnItemSelectedListener(new MyOnItemSelectedListenerTH());
+
+
+            //custom icon
+            int[] array_res = getImageArray(R.array.image_array
+                    , R.drawable.ic_launcher);
+            String[] array_string = getStringArray(R.array.string_array);
+            //
+
+            ListView listView = (ListView) findViewById(R.id.listView);
+            listView.setAdapter(new CustomListViewAdapter(getApplicationContext()
+                    , android.R.id.text1, array_string, array_res));
+            listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                @Override
+                //arg2 =input value use to switchcase
+                public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
+                    Intent intent;
+                    switch (position) {
+                        case 0:
+                            intent = new Intent(getApplicationContext(), ConversationActivity.class);
+                            intent.putExtra("strCountryFrom", strCountryFrom);
+                            intent.putExtra("strCountryTo", strCountryTo);
+                            Log.d("countryFrom", strCountryFrom);
+                            Log.d("countryTo", strCountryTo);
+
+                            finish();
+                            startActivity(intent);
+                            //onRestart();
+                            break;
+                        case 1:
+                            intent = new Intent(getApplicationContext(), ThingActivity.class);
+                            intent.putExtra("strCountryFrom", strCountryFrom);
+                            intent.putExtra("strCountryTo", strCountryTo);
+                            finish();
+                            startActivity(intent);
+                            //onRestart();
+                            break;
+                        case 2:
+                            intent = new Intent(getApplicationContext(), PlaceActivity.class);
+                            intent.putExtra("strCountryFrom", strCountryFrom);
+                            intent.putExtra("strCountryTo", strCountryTo);
+                            finish();
+                            startActivity(intent);
+                            // onRestart();
+                            break;
+                        case 3:
+                            intent = new Intent(getApplicationContext(), HelpActivity.class);
+                            intent.putExtra("strCountryFrom", strCountryFrom);
+                            intent.putExtra("strCountryTo", strCountryTo);
+                            startActivity(intent);
+                            onRestart();
+                            break;
+                        case 4:
+                            intent = new Intent(getApplicationContext(), LogisticActivity.class);
+                            intent.putExtra("strCountryFrom", strCountryFrom);
+                            intent.putExtra("strCountryTo", strCountryTo);
+                            finish();
+                            startActivity(intent);
+                            //onRestart();
+                            break;
+                        case 5:
+                            intent = new Intent(getApplicationContext(), FavoriteActivity.class);
+                            intent.putExtra("strCountryFrom", strCountryFrom);
+                            intent.putExtra("strCountryTo", strCountryTo);
+                            finish();
+                            startActivity(intent);
+                            //onRestart();
+                            break;
+                    }
+                }
+
+
+            });
+
+        }
+
     }
 }
 

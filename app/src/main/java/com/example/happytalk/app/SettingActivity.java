@@ -5,6 +5,7 @@ import android.content.SharedPreferences;
 import android.content.SharedPreferences.OnSharedPreferenceChangeListener;
 import android.content.res.Configuration;
 import android.content.res.Resources;
+import android.media.audiofx.AudioEffect;
 import android.os.Bundle;
 import android.preference.Preference;
 import android.preference.PreferenceActivity;
@@ -27,12 +28,7 @@ public class SettingActivity extends PreferenceActivity implements OnSharedPrefe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        addPreferencesFromResource(R.xml.setting);
-        SharedPreferences settings =
-                PreferenceManager.getDefaultSharedPreferences(this);
-        settings.registerOnSharedPreferenceChangeListener(this);
 
-        displayCurrentName(settings);
         //aboutSSS();
     }
 
@@ -57,8 +53,10 @@ public class SettingActivity extends PreferenceActivity implements OnSharedPrefe
     public boolean onOptionsItemSelected(MenuItem item) {
         switch(item.getItemId()){
             case R.id.action_settings:
-                Intent i = new Intent(this,SettingActivity.class);
-                startActivity(i);
+                //Intent i = new Intent(this,SettingActivity.class);
+                //finish();
+                //startActivity(i);
+                //onRestart();
                 return true;
 
 
@@ -76,8 +74,12 @@ public class SettingActivity extends PreferenceActivity implements OnSharedPrefe
         if (key.equals("langPref")) {
             //Display selected
             displayCurrentName(sharedPreferences);
-            Toast.makeText(this, "Language changed", Toast.LENGTH_SHORT).show();
-
+            //Toast.makeText(this, "Language changed", Toast.LENGTH_SHORT).show();
+            //Intent intent = new Intent(this,SettingActivity.class);
+            //finish();
+            //startActivity(intent);
+            //return;
+            recreate();
         }
     }
 
@@ -138,6 +140,8 @@ public class SettingActivity extends PreferenceActivity implements OnSharedPrefe
         langPref.setSummary(msg);
     }
 
+
+
 //    private void setConfig(String newConfig) {
 //        Locale newLocale = new Locale(newConfig);
 //        Resources res = getResources();
@@ -167,5 +171,13 @@ public class SettingActivity extends PreferenceActivity implements OnSharedPrefe
 //            Toast.makeText(this, "Th", Toast.LENGTH_SHORT).show();
 //        }
 //    }
+     public void onResume() {
+        super.onResume();
+         addPreferencesFromResource(R.xml.setting);
+         SharedPreferences settings =
+                 PreferenceManager.getDefaultSharedPreferences(this);
+         settings.registerOnSharedPreferenceChangeListener(this);
 
+         displayCurrentName(settings);
+    }
 }
