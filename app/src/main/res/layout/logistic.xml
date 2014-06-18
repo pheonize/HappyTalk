@@ -31,15 +31,17 @@
             android:layout_height="wrap_content"
             android:id="@+id/txtLangFrom"
             android:layout_weight="1"
-            android:layout_marginLeft="10dp"
+            android:layout_marginLeft="40dp"
+            android:textSize="20dp"
             android:drawSelectorOnTop="true"/>
-        <ImageView
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/to"
+            android:text=":"
+            android:textSize="20dp"
             android:id="@+id/to"
-            android:paddingTop="25dp"
-            android:src="@drawable/arrow"
+
+
             />
         <TextView
             android:layout_width="fill_parent"
@@ -47,7 +49,9 @@
             android:id="@+id/txtLangTo"
             android:layout_weight="1"
             android:drawSelectorOnTop="true"
-            android:layout_marginLeft="10dp" />
+            android:textSize="20dp"
+            android:layout_marginLeft="30dp" />
+
 
 
     </LinearLayout>
