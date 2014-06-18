@@ -42,7 +42,8 @@ public class MainActivity extends Activity {
 
     private Spinner countryFrom, countryTo;
 
-
+    int countryF , countryT,userChoiceFrom,userChoiceTo;
+    SharedPreferences sharedPref1 , sharedPref2;
     private String strCountryFrom, strCountryTo;
 
     SQLiteDatabase sqLiteDatabase;
@@ -126,6 +127,8 @@ public class MainActivity extends Activity {
 
         countryTo = (Spinner) findViewById(R.id.spinner2_show);
         // btnSearch = (Button) findViewById(R.id.btn_go);
+
+
     }
 
 
@@ -279,26 +282,30 @@ public class MainActivity extends Activity {
         public void onItemSelected(AdapterView<?> parent, View view, int pos, long id) {
 
 
+
             switch (parent.getId()) {
                 case R.id.spinner_show:
 
+
                     strCountryFrom = String.valueOf(countryFrom.getSelectedItem());
-
-
+                    saveSpinnerValue1();
                     break;
 
                 case R.id.spinner2_show:
+
                     strCountryTo = String.valueOf(countryTo.getSelectedItem());
+                    saveSpinnerValue2();
+
 
                     break;
 
                 default:
-//                strCountryFrom = String.valueOf(1);
-//                strCountryTo = String.valueOf(2);
+
                     break;
 
             }
-            //Log.d("country:",parent.getItemAtPosition(pos).toString());
+
+       // saveSpinnerValue();
 
         }
 
@@ -307,6 +314,27 @@ public class MainActivity extends Activity {
 
         }
 
+    }
+
+
+    private void saveSpinnerValue1() {
+        userChoiceFrom = countryFrom.getSelectedItemPosition();
+        sharedPref1 = getSharedPreferences("FileName1",MODE_PRIVATE);
+        SharedPreferences.Editor prefEditor1 = sharedPref1.edit();
+        prefEditor1.putInt("userChoiceSpinner1",userChoiceFrom);
+        prefEditor1.commit();
+
+
+
+
+
+    }
+    private void saveSpinnerValue2(){
+        userChoiceTo = countryTo.getSelectedItemPosition();
+        sharedPref2 = getSharedPreferences("FileName2",MODE_PRIVATE);
+        SharedPreferences.Editor prefEditor2 = sharedPref2.edit();
+        prefEditor2.putInt("userChoiceSpinner2",userChoiceTo);
+        prefEditor2.commit();
     }
 
     public class MyOnItemSelectedListenerTH implements OnItemSelectedListener {
@@ -318,14 +346,14 @@ public class MainActivity extends Activity {
                 case R.id.spinner_show:
 
                     strCountryFrom = String.valueOf(countryFrom.getSelectedItem());
-
+                    saveSpinnerValue1();
 
 
                     break;
 
                 case R.id.spinner2_show:
                     strCountryTo = String.valueOf(countryTo.getSelectedItem());
-
+                    saveSpinnerValue2();
                     break;
 
                 default:
@@ -422,13 +450,21 @@ public class MainActivity extends Activity {
         if (value.equals("English(United States)") || value.equals("ENG")) {
             // getResources().updateConfiguration(config, null);
             initWidget();
-            Spinner countryFrom = (Spinner) findViewById(R.id.spinner_show);
+
+
+
+            countryFrom = (Spinner) findViewById(R.id.spinner_show);
             countryFrom.setAdapter(new MyCustomAdapter(MainActivity.this, R.layout.spinner_row, country_list1, img1));
             countryFrom.setOnItemSelectedListener(new MyOnItemSelectedListener());
+            loadSpinnerValue1();
 
-            Spinner countryTo = (Spinner) findViewById(R.id.spinner2_show);
+
+            //loadSpinnerValue2();
+            countryTo = (Spinner) findViewById(R.id.spinner2_show);
             countryTo.setAdapter(new MyCustomAdapter2(MainActivity.this, R.layout.spinner_row, country_list2, img2));
             countryTo.setOnItemSelectedListener(new MyOnItemSelectedListener());
+            loadSpinnerValue2();
+
 
 
             //custom icon
@@ -510,10 +546,12 @@ public class MainActivity extends Activity {
             Spinner countryFrom = (Spinner) findViewById(R.id.spinner_show);
             countryFrom.setAdapter(new MyCustomAdapterTH(MainActivity.this, R.layout.spinner_row, country_list1TH, img1TH));
             countryFrom.setOnItemSelectedListener(new MyOnItemSelectedListenerTH());
+            loadSpinnerValue1();
 
             Spinner countryTo = (Spinner) findViewById(R.id.spinner2_show);
             countryTo.setAdapter(new MyCustomAdapter2TH(MainActivity.this, R.layout.spinner_row, country_list2TH, img2TH));
             countryTo.setOnItemSelectedListener(new MyOnItemSelectedListenerTH());
+            loadSpinnerValue2();
 
 
             //custom icon
@@ -589,6 +627,30 @@ public class MainActivity extends Activity {
 
         }
 
+    }
+
+
+
+
+
+    private void loadSpinnerValue1() {
+        sharedPref1 = getSharedPreferences("FileName1",MODE_PRIVATE);
+        countryF = sharedPref1.getInt("userChoiceSpinner1",-1);
+        if(countryF != -1) {
+            // set the value of the spinner
+            countryFrom.setSelection(countryF);
+        }
+
+
+
+    }
+    private void loadSpinnerValue2() {
+
+        sharedPref2 = getSharedPreferences("FileName2",MODE_PRIVATE);
+        countryT = sharedPref2.getInt("userChoiceSpinner2",-1);
+        if(countryT != -1){
+            countryTo.setSelection(countryT);
+        }
     }
 }
 

@@ -217,7 +217,7 @@ public class MyListAdapter extends BaseExpandableListAdapter {
                     magicSave++;
                     sqLiteDatabase.execSQL(delete);
                     btnFavorite.setBackgroundResource(R.drawable.fav_unshow);
-                    Toast.makeText(context, "Delete Favorite Success", Toast.LENGTH_SHORT).show();
+                //    Toast.makeText(context, "Delete Favorite Success", Toast.LENGTH_SHORT).show();
 
                 }
                 mCursor.moveToNext();
@@ -227,7 +227,7 @@ public class MyListAdapter extends BaseExpandableListAdapter {
             {
                 btnFavorite.setBackgroundResource(R.drawable.fav_show);
                 sqLiteDatabase.execSQL(insert);
-                Toast.makeText(context, "Add Favorite Success", Toast.LENGTH_SHORT).show();
+               // Toast.makeText(context, "Add Favorite Success", Toast.LENGTH_SHORT).show();
 
             }
         }
@@ -235,7 +235,7 @@ public class MyListAdapter extends BaseExpandableListAdapter {
             btnFavorite.setBackgroundResource(R.drawable.fav_show);
             sqLiteDatabase.execSQL(insert);
 
-            Toast.makeText(context, "Add Favorite Success", Toast.LENGTH_SHORT).show();
+           // Toast.makeText(context, "Add Favorite Success", Toast.LENGTH_SHORT).show();
         }
 
 

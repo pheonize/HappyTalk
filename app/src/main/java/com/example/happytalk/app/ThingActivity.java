@@ -563,7 +563,7 @@ public class ThingActivity extends Activity implements SearchView.OnQueryTextLis
             myList.setAdapter(listAdapter);
         }
 
-        if(lang_from.equals("China") && lang_to.equals("Indonesia") || lang_from.equals("จีน") && lang_to.equals("อินโดเซีย")){
+        if(lang_from.equals("China") && lang_to.equals("Indonesia") || lang_from.equals("จีน") && lang_to.equals("อินโดนีเซีย")){
             loadWording = new ThingDAL();
             loadWording.loadChinaToIndonesia();
 

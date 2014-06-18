@@ -1258,7 +1258,7 @@ public class ConversationDAL  {
         ArrayList<Child> childList = new ArrayList<Child>();
         childList = new ArrayList<Child>();
         child = new Child("gu-moos-tar","กุ-มุส-ตา","สวัสดี","Hello","Kumusta",null,null);
-        child.setSoundPath(R.raw.ml001_4);
+        child.setSoundPath(R.raw.hello_br);
         childList.add(child);
 
         groupHeader = new GroupHeader("สวัสดี", "Hello", childList);
@@ -3498,7 +3498,7 @@ public class ConversationDAL  {
     public void loadBruneiToMalaysia(){
         ArrayList<Child> childList = new ArrayList<Child>();
         Child child = new Child("gu-moos-tar","","Kumusta","Hello","Kumusta",null,null);
-        child.setSoundPath(R.raw.ml001_4);
+        child.setSoundPath(R.raw.hello_br);
         childList.add(child);
 
         GroupHeader groupHeader = new GroupHeader("Kumusta", "Hello", childList);
@@ -5731,7 +5731,7 @@ public class ConversationDAL  {
     public void loadCambodiaToMalaysia(){
         ArrayList<Child> childList = new ArrayList<Child>();
         Child child = new Child("gu-moos-tar","","ជ៓រាបសួរ","Hello","Kumusta",null,null);
-        child.setSoundPath(R.raw.ml001_4);
+        child.setSoundPath(R.raw.hello_br);
         childList.add(child);
 
         GroupHeader groupHeader = new GroupHeader("ជ៓រាបសួរ", "Hello", childList);
@@ -7964,7 +7964,7 @@ public class ConversationDAL  {
     public void loadChinaToMalaysia(){
         ArrayList<Child> childList = new ArrayList<Child>();
         Child child = new Child("gu-moos-tar","","你好","Hello","Kumusta",null,null);
-        child.setSoundPath(R.raw.ml001_4);
+        child.setSoundPath(R.raw.hello_br);
         childList.add(child);
 
         GroupHeader groupHeader = new GroupHeader("你好", "Hello", childList);
@@ -10200,7 +10200,7 @@ public class ConversationDAL  {
         ArrayList<Child> childList = new ArrayList<Child>();
         childList = new ArrayList<Child>();
         child = new Child("gu-moos-tar","","Halo","Hello","Kumusta",null,null);
-        child.setSoundPath(R.raw.ml001_4);
+        child.setSoundPath(R.raw.hello_br);
         childList.add(child);
 
         groupHeader = new GroupHeader("Halo", "Hello", childList);
@@ -12445,7 +12445,7 @@ public class ConversationDAL  {
         ArrayList<Child> childList = new ArrayList<Child>();
         childList = new ArrayList<Child>();
         child = new Child("gu-moos-tar",""," ສະບາຍດີ","Hello","Kumusta",null,null);
-        child.setSoundPath(R.raw.ml001_4);
+        child.setSoundPath(R.raw.hello_br);
         childList.add(child);
 
         groupHeader = new GroupHeader(" ສະບາຍດີ", "Hello", childList);
@@ -14689,7 +14689,7 @@ public class ConversationDAL  {
         ArrayList<Child> childList = new ArrayList<Child>();
         childList = new ArrayList<Child>();
         child = new Child("gu-moos-tar","","Kumusta","Hello","",null,null);
-        child.setSoundPath(R.raw.ml001_4);
+        child.setSoundPath(R.raw.hello_br);
         childList.add(child);
 
         groupHeader = new GroupHeader("Kumusta", "Hello", childList);
@@ -16729,7 +16729,7 @@ public class ConversationDAL  {
         ArrayList<Child> childList = new ArrayList<Child>();
         childList = new ArrayList<Child>();
         child = new Child("gu-moos-tar","","မဂ๎လာပါ။","Hello","Kumusta",null,null);
-        child.setSoundPath(R.raw.ml001_4);
+        child.setSoundPath(R.raw.hello_br);
         childList.add(child);
 
         groupHeader = new GroupHeader("မဂ๎လာပါ။", "Hello", childList);
@@ -18972,7 +18972,7 @@ public class ConversationDAL  {
         ArrayList<Child> childList = new ArrayList<Child>();
         childList = new ArrayList<Child>();
         child = new Child("gu-moos-tar","","Kumusta","Hello","Kumusta",null,null);
-        child.setSoundPath(R.raw.ml001_4);
+        child.setSoundPath(R.raw.hello_br);
         childList.add(child);
 
         groupHeader = new GroupHeader("Kumusta", "Hello", childList);
@@ -23461,7 +23461,7 @@ public class ConversationDAL  {
         ArrayList<Child> childList = new ArrayList<Child>();
         childList = new ArrayList<Child>();
         child = new Child("gu-moos-tar","","xin chào","Hello","Kumusta",null,null);
-        child.setSoundPath(R.raw.ml001_4);
+        child.setSoundPath(R.raw.hello_br);
         childList.add(child);
 
         groupHeader = new GroupHeader("xin chào", "Hello", childList);

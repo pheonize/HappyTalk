@@ -19,34 +19,37 @@
 
         android:id="@+id/linearLayoutSearch">
         <!--android:layout_below="@+id/searchLayout"-->
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/from"
-            android:id="@+id/from">
+        <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="@string/from"-->
+            <!--android:id="@+id/from">-->
 
-        </TextView>
+        <!--</TextView>-->
         <TextView
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:id="@+id/txtLangFrom"
             android:layout_weight="1"
-            android:layout_marginLeft="20dp"
+            android:layout_marginLeft="10dp"
+            android:textSize="20dp"
             android:drawSelectorOnTop="true"/>
-        <TextView
+        <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/to"
-            android:id="@+id/to">
-
-        </TextView>
+            android:id="@+id/to"
+            android:paddingTop="25dp"
+            android:src="@drawable/arrow"
+            />
         <TextView
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:id="@+id/txtLangTo"
             android:layout_weight="1"
             android:drawSelectorOnTop="true"
-            android:layout_marginLeft="20dp" />
+            android:textSize="20dp"
+            android:layout_marginLeft="10dp" />
 
 
     </LinearLayout>

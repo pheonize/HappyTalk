@@ -9,6 +9,7 @@ import android.app.SearchManager;
 import android.content.Context;
 import android.content.Intent;
 import android.content.res.Configuration;
+import android.content.res.TypedArray;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Typeface;
@@ -19,15 +20,19 @@ import android.app.Activity;
 import android.provider.SearchRecentSuggestions;
 import android.util.Log;
 import android.text.TextUtils;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ExpandableListView;
 
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.MediaController;
 import android.widget.SearchView;
 import android.widget.Spinner;
@@ -52,16 +57,7 @@ public class ConversationActivity extends Activity {
     Context context;
 
     String langTo, langFrom;
-    String[] country_list = {"Brunei", "Cambodia", "China", "Indonesia",
-            "Laos", "Malaysia", "Myanmar", "Philippines", "Singapore",
-            "Thai", "Vietnam"};
 
-    Integer[] img = {R.drawable.brunei_flag, R.drawable.cambodia_flag,
-            R.drawable.china_flag, R.drawable.indonesia_flag,
-            R.drawable.laos_flag, R.drawable.malaysia,
-            R.drawable.myanmar_flag, R.drawable.philippines_flag,
-            R.drawable.singapore_flag, R.drawable.thailand_flag,
-            R.drawable.vietnam_flag};
 
 
     String lang_from,lang_to;
@@ -100,7 +96,6 @@ public class ConversationActivity extends Activity {
 
         getResources().updateConfiguration(configuration, null);
 
-        initWidget();
 
 
         checkLanguage();
@@ -110,9 +105,7 @@ public class ConversationActivity extends Activity {
 
         //DB
 
-        //db = new Database(this);
-//        favoriteDAL = new FavoriteDAL(this);
-//        sqLiteDatabase = favoriteDAL.getWritableDatabase();
+
         favoriteDAL = new FavoriteDAL(this);
         sqLiteDatabase = favoriteDAL.getWritableDatabase();
 
@@ -136,7 +129,6 @@ public class ConversationActivity extends Activity {
             TextView langFrom = (TextView) findViewById(R.id.txtLangFrom);
             langFrom.setText(lang_from);
 
-
         }
 
         String lang_to = extras.getString("strCountryTo", "");
@@ -147,6 +139,7 @@ public class ConversationActivity extends Activity {
             langTo.setText(lang_to);
 
         }
+        onResume();
         displayList(lang_from, lang_to);
 
         saveValue(lang_from,lang_to);
@@ -160,6 +153,8 @@ public class ConversationActivity extends Activity {
         this.lang_to = lang_to;
 
     }
+
+
 
 
 
@@ -593,7 +588,7 @@ public class ConversationActivity extends Activity {
             myList.setAdapter(listAdapter);
         }
 
-        if (lang_from.equals("China") && lang_to.equals("Indonesia") || lang_from.equals("จีน") && lang_to.equals("อินโดเซีย")) {
+        if (lang_from.equals("China") && lang_to.equals("Indonesia") || lang_from.equals("จีน") && lang_to.equals("อินโดนีเซีย")) {
             loadWording = new ConversationDAL();
             loadWording.loadChinaToIndonesia();
 
@@ -1545,10 +1540,7 @@ public class ConversationActivity extends Activity {
             myList.setAdapter(listAdapter);
         }
 
-//        else{
-//            onOptionsItemSelected()
-//
-//        }
+
 
     }
 
@@ -1575,19 +1567,9 @@ public class ConversationActivity extends Activity {
     }
 
 
-    private void initWidget() {
-        countryFrom = (Spinner) findViewById(R.id.spinner_show);
 
-        countryTo = (Spinner) findViewById(R.id.spinner2_show);
 
-    }
 
-//    public void onPause() {
-//        super.onPause();
-//        db.close();
-//        sqLiteDatabase.close();
-//    }
-//
 
 
     @Override
@@ -1632,7 +1614,6 @@ public class ConversationActivity extends Activity {
     public void onResume(){
         super.onResume();
     }
-
 
 
 
