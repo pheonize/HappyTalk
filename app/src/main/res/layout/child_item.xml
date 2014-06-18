@@ -11,8 +11,8 @@
     <Button
         style="?android:attr/buttonStyleSmall"
         android:id="@+id/sounds"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
         android:layout_marginTop="10dp"
         android:contentDescription="@string/app_name"
         android:background="@drawable/sound"
@@ -24,8 +24,8 @@
     <Button
         style="?android:attr/buttonStyleSmall"
         android:id="@+id/favorite"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
         android:layout_marginTop="10dp"
         android:layout_below="@+id/sounds"
         android:contentDescription="@string/app_name"

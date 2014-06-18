@@ -113,7 +113,7 @@ public class ConversationActivity extends Activity {
         //db = new Database(this);
 //        favoriteDAL = new FavoriteDAL(this);
 //        sqLiteDatabase = favoriteDAL.getWritableDatabase();
-            favoriteDAL = new FavoriteDAL(this);
+        favoriteDAL = new FavoriteDAL(this);
         sqLiteDatabase = favoriteDAL.getWritableDatabase();
 
 

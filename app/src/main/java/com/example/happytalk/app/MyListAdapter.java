@@ -40,12 +40,13 @@ public class MyListAdapter extends BaseExpandableListAdapter {
     Button btnSound;
     Button btnFavorite;
 
+    ArrayList<Child> childList = new ArrayList<Child>();
 
-//    private String lang_from,lang_to ;
+    private ArrayList<GroupHeader> groupHeaderList = new ArrayList<GroupHeader>();
 
-    private ArrayList<GroupHeader> groupHeader = new ArrayList<GroupHeader>();
+    Child child;
+    GroupHeader groupHeader;
 
-    private Child child;
 
 
     FavoriteDAL favoriteDAL;
@@ -106,7 +107,9 @@ public class MyListAdapter extends BaseExpandableListAdapter {
 
 
         btnFavorite = (Button) view.findViewById(R.id.favorite);
+       // btnFavorite.setBackgroundResource(R.drawable.fav_unshow);
 
+        checkFavorite();
 
 
         btnSound.setOnClickListener(new View.OnClickListener() {
@@ -117,28 +120,6 @@ public class MyListAdapter extends BaseExpandableListAdapter {
                     loadSound(child.getSoundPath());
                 }
 
-                    //loadSound(child.getSoundPath());
-
-//                    if(flag==1){
-//
-//                        btnSound.setBackgroundResource(R.drawable.sound);
-//
-//                        flag=0;
-//
-//                    }
-//                    else if(flag ==0 ){
-//
-//                        if(child.getSoundPath() != -1) {
-//                            btnSound.setBackgroundResource(R.drawable.sound_push);
-//                            loadSound(child.getSoundPath());
-//                        }
-//                        flag =1;
-//                    }
-
-
-
-
-
             }
 
         });
@@ -147,8 +128,6 @@ public class MyListAdapter extends BaseExpandableListAdapter {
         btnFavorite.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                btnFavorite.setBackgroundResource(R.drawable.fav_show);
-
 
                Favorite();
 
@@ -157,11 +136,6 @@ public class MyListAdapter extends BaseExpandableListAdapter {
 
 
         });
-
-
-
-
-
 
         txtwordFrom.setText(child.getWordFrom().trim());
         txtwordEN.setText(child.getWordEN().trim());
@@ -172,8 +146,34 @@ public class MyListAdapter extends BaseExpandableListAdapter {
         return view;
     }
 
-    private void onRestore() {
-        btnSound.setBackgroundResource(R.drawable.sound);
+    private void checkFavorite() {
+        favoriteDAL = new FavoriteDAL(context);
+        sqLiteDatabase = favoriteDAL.getWritableDatabase();
+        // if (sqLiteDatabase != null) {
+        String wordFrom = child.getWordFrom().trim();
+        String wordTo = child.getWordTo().trim();
+
+
+        String select = " SELECT * FROM " + FavoriteDAL.TABLE_FAVORITE +" WHERE "
+                + FavoriteDAL.COLUMN_WORDFROM + "='" + wordFrom + "'"
+                + " AND " + FavoriteDAL.COLUMN_WORDTO + "='" + wordTo + "'";
+
+        Cursor mCursor = sqLiteDatabase.rawQuery(select, null);
+        if (mCursor .moveToFirst()) {
+            while (mCursor.isAfterLast() == false) {
+                if (mCursor.getString(4).equals(wordFrom) && mCursor.getString(5).equals(wordTo)) {
+                    btnFavorite.setBackgroundResource(R.drawable.fav_show);
+
+                    mCursor.moveToNext();
+                }
+
+            }
+
+
+        }
+        else{
+            btnFavorite.setBackgroundResource(R.drawable.fav_unshow);
+        }
 
     }
 
@@ -210,7 +210,7 @@ public class MyListAdapter extends BaseExpandableListAdapter {
             Cursor mCursor = sqLiteDatabase.rawQuery(select, null);
 
         int magicSave = 0;
-        if (mCursor .moveToFirst()) {
+        if (mCursor.moveToFirst()) {
             while (mCursor.isAfterLast() == false) {
 
                 if (mCursor.getString(4).equals(wordFrom) && mCursor.getString(5).equals(wordTo)) {
@@ -237,13 +237,7 @@ public class MyListAdapter extends BaseExpandableListAdapter {
 
             Toast.makeText(context, "Add Favorite Success", Toast.LENGTH_SHORT).show();
         }
-                //Toast.makeText(context, "Add Favorite Success", Toast.LENGTH_SHORT).show();
-         //   }
-//        else {
-//            sqLiteDatabase.execSQL(insert);
-//            Toast.makeText(context, "Add Favorite Success", Toast.LENGTH_SHORT).show();
-//
-//        }
+
 
     }
 
@@ -388,6 +382,8 @@ public class MyListAdapter extends BaseExpandableListAdapter {
 
 
     }
+
+
 
 
 

@@ -109,7 +109,10 @@ public class MainActivity extends Activity {
     }
 
 //    private void loadingFont() {
-//        thSarabun = Typeface.createFromAsset(context.getAssets(), "fonts/THSarabun.otf");
+//
+//        thSarabun = Typeface.createFromAsset(context.getAssets(), "fonts/THSarabunPSK");
+
+//
 //
 //
 //
