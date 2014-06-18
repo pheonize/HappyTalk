@@ -15,7 +15,7 @@ public class Splash extends Activity{
     Handler handler;
     Runnable runnable;
     long delay_time;
-    long time = 3000L;
+    long time = 2500L;
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

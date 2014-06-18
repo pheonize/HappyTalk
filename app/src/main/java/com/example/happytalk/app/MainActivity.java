@@ -93,6 +93,8 @@ public class MainActivity extends Activity {
             R.drawable.vietnam_flag};
     Context context;
 
+    private Typeface thSarabun;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -103,11 +105,20 @@ public class MainActivity extends Activity {
         setContentView(R.layout.activity_main);
         FavoriteDAL db = new FavoriteDAL(this);
 
+        //loadingFont();
     }
+
+//    private void loadingFont() {
+//        thSarabun = Typeface.createFromAsset(context.getAssets(), "fonts/THSarabun.otf");
+//
+//
+//
+//    }
 
 
     private void initWidget() {
         countryFrom = (Spinner) findViewById(R.id.spinner_show);
+
 
 
         countryTo = (Spinner) findViewById(R.id.spinner2_show);
@@ -306,6 +317,7 @@ public class MainActivity extends Activity {
                     strCountryFrom = String.valueOf(countryFrom.getSelectedItem());
 
 
+
                     break;
 
                 case R.id.spinner2_show:
@@ -353,6 +365,7 @@ public class MainActivity extends Activity {
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.activity_main_actions, menu);
+
         return true;
     }
 
@@ -400,20 +413,7 @@ public class MainActivity extends Activity {
         this.setContentView(R.layout.activity_main);
 
 
-        //Test DB //
-        //Database
-        // Database db = new Database(this);
 
-        //db.getWritableDatabase();
-
-//        String fontPath = "fonts/mmrtext.ttf";
-//        TextView txtText = (TextView) findViewById(R.id.country);
-//        Typeface tf = Typeface.createFromAsset(this.getAssets(),fontPath);
-//
-//        txtText.setTypeface(tf);
-
-
-        //Configuration configuration = new Configuration();
 
 
         if (value.equals("English(United States)") || value.equals("ENG")) {

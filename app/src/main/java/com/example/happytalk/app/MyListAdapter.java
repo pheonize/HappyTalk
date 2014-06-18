@@ -4,10 +4,12 @@ import android.app.Activity;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.graphics.drawable.Drawable;
 import android.media.Image;
 import android.media.MediaPlayer;
 import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseExpandableListAdapter;
@@ -54,6 +56,10 @@ public class MyListAdapter extends BaseExpandableListAdapter {
     Cursor mCursor;
     String lang_from,lang_to,wordEN,wordFrom,wordTo,karaokeTH,karaokeEN;
 
+    private int flag;
+
+    //Boolean flagT =false;
+
 
 
 
@@ -97,78 +103,61 @@ public class MyListAdapter extends BaseExpandableListAdapter {
 
 
         btnSound = (Button) view.findViewById(R.id.sounds);
+
+
         btnFavorite = (Button) view.findViewById(R.id.favorite);
-
-
 
 
 
         btnSound.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(child.getSoundPath() != -1)
-
+                if(child.getSoundPath() != -1) {
+                    btnSound.setBackgroundResource(R.drawable.sound_push);
                     loadSound(child.getSoundPath());
+                }
+
+                    //loadSound(child.getSoundPath());
+
+//                    if(flag==1){
+//
+//                        btnSound.setBackgroundResource(R.drawable.sound);
+//
+//                        flag=0;
+//
+//                    }
+//                    else if(flag ==0 ){
+//
+//                        if(child.getSoundPath() != -1) {
+//                            btnSound.setBackgroundResource(R.drawable.sound_push);
+//                            loadSound(child.getSoundPath());
+//                        }
+//                        flag =1;
+//                    }
+
+
+
+
 
             }
+
         });
+
 
         btnFavorite.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                btnFavorite.setBackgroundResource(R.drawable.fav_show);
 
 
                Favorite();
-                //db = new FavoriteDAL(context);
-                //sqLiteDatabase = db.getWritableDatabase();
-//                if(mCursor.getCount() ==0){
-//
-//
-//                    String insert = "INSERT INTO " + FavoriteDAL.TABLE_FAVORITE + " (" + FavoriteDAL.COLUMN_LANGFROM
-//                            + ", " + FavoriteDAL.COLUMN_LANGTO + ", " + FavoriteDAL.COLUMN_WORDEN + ", "
-//                            + FavoriteDAL.COLUMN_WORDFROM + ", " + FavoriteDAL.COLUMN_WORDTO + ", " + FavoriteDAL.COLUMN_KARAOKEEN +
-//                            ", " + FavoriteDAL.COLUMN_KARAOKETH + ") VALUES ('" +  lang_from + "', '" + lang_to +
-//                            "', '" + child.getWordEN() + "', '" + child.getWordFrom() + "', '" + child.getWordTo() + "', '"
-//                            + child.getKaraokeEN() + "', '" + child.getKaraokeTH() + "');";
-//
-//
-//                    sqLiteDatabase.execSQL(insert);
-//
-//                    Toast.makeText(context , "Add Favorite Success" ,Toast.LENGTH_SHORT).show();
-//                }
-//                else{
-//                    lang_from = mCursor.getString(mCursor.getColumnIndex(FavoriteDAL.COLUMN_LANGFROM));
-//                    lang_to = mCursor.getString(mCursor.getColumnIndex(FavoriteDAL.COLUMN_LANGTO));
-//                    wordEN = mCursor.getString(mCursor.getColumnIndex(FavoriteDAL.COLUMN_WORDEN));
-//                    wordFrom = mCursor.getString(mCursor.getColumnIndex(FavoriteDAL.COLUMN_WORDFROM));
-//                    wordTo = mCursor.getString(mCursor.getColumnIndex(FavoriteDAL.COLUMN_WORDTO));
-//                    karaokeEN = mCursor.getString(mCursor.getColumnIndex(FavoriteDAL.COLUMN_KARAOKEEN));
-//                    karaokeTH = mCursor.getString(mCursor.getColumnIndex(FavoriteDAL.COLUMN_KARAOKETH));
-//
-//                    String delete = "DELETE FROM " + FavoriteDAL.TABLE_FAVORITE + "WHERE "
-//                            + FavoriteDAL.COLUMN_LANGFROM + "='" + lang_from + "'"
-//                            + " AND " + FavoriteDAL.COLUMN_LANGTO + "='" + lang_to + "'"
-//                            + " AND " + FavoriteDAL.COLUMN_WORDEN + "='" + wordEN + "'"
-//                            + " AND " + FavoriteDAL.COLUMN_WORDFROM + "='" + wordFrom + "'"
-//                            + " AND " + FavoriteDAL.COLUMN_WORDTO + "='" + wordTo + "'"
-//                            + " AND " + FavoriteDAL.COLUMN_KARAOKEEN + "='" + karaokeEN + "'"
-//                            + " AND " + FavoriteDAL.COLUMN_KARAOKETH + "='" + karaokeTH + "';";
-//
-//                    sqLiteDatabase.execSQL(delete);
-//                    mCursor.requery();
-//
-//                    Toast.makeText(context,"Same data" ,Toast.LENGTH_SHORT).show();
-//                }
-//
-//
-//                db.close();
-//                sqLiteDatabase.close();
+
 
             }
 
 
         });
+
 
 
 
@@ -183,6 +172,10 @@ public class MyListAdapter extends BaseExpandableListAdapter {
         return view;
     }
 
+    private void onRestore() {
+        btnSound.setBackgroundResource(R.drawable.sound);
+
+    }
 
 
     private void Favorite() {
@@ -223,6 +216,7 @@ public class MyListAdapter extends BaseExpandableListAdapter {
                 if (mCursor.getString(4).equals(wordFrom) && mCursor.getString(5).equals(wordTo)) {
                     magicSave++;
                     sqLiteDatabase.execSQL(delete);
+                    btnFavorite.setBackgroundResource(R.drawable.fav_unshow);
                     Toast.makeText(context, "Delete Favorite Success", Toast.LENGTH_SHORT).show();
 
                 }
@@ -231,13 +225,16 @@ public class MyListAdapter extends BaseExpandableListAdapter {
 
             if(magicSave == 0)
             {
+                btnFavorite.setBackgroundResource(R.drawable.fav_show);
                 sqLiteDatabase.execSQL(insert);
                 Toast.makeText(context, "Add Favorite Success", Toast.LENGTH_SHORT).show();
 
             }
         }
         else{
+            btnFavorite.setBackgroundResource(R.drawable.fav_show);
             sqLiteDatabase.execSQL(insert);
+
             Toast.makeText(context, "Add Favorite Success", Toast.LENGTH_SHORT).show();
         }
                 //Toast.makeText(context, "Add Favorite Success", Toast.LENGTH_SHORT).show();
@@ -377,10 +374,22 @@ public class MyListAdapter extends BaseExpandableListAdapter {
 
 
     public void loadSound(int soundPath) {
-            MediaPlayer mp = MediaPlayer.create(context, soundPath);
-            mp.start();
+
+            mediaPlayer = MediaPlayer.create(context, soundPath);
+            mediaPlayer.start();
+
+        mediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+            @Override
+            public void onCompletion(MediaPlayer mp) {
+                  //Toast.makeText(context,"Finish",Toast.LENGTH_SHORT).show();
+                btnSound.setBackgroundResource(R.drawable.sound);
+            }
+        });
+
 
     }
+
+
 
 
 }

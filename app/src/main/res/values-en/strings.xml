@@ -28,15 +28,32 @@
     <string name="favorite">Favorite</string>
     <string name="aboutTH">About Thai Health</string>
     <string name="aboutSSS">About Thai Health</string>
-    <string name="about_sss">
-        Thai Health Promotion Foundation (Thai Health) is an independent state agency set up according to the Health Promotion Act 2001 and has Governing Board chaired by the Prime Minister with half of its members from independent social organizations. We work with wide range of multi-sectoral partners which aim to promote well-being in 4 dimensions: Physical, Mental, Spiritual and Social. Our mission is To promote initiative, enthusiasm, coordination and mobilization among individuals as well as various organizations in all sectors so that they have capability to form a society conducive to good health.</string>
+    <string name="about_sss1">
+        Thai Health Promotion Foundation (Thai Health) </string>
+    <string name="about_sss2">
+        is an independent state agency set up according to the Health Promotion Act 2001 and has Governing Board chaired by the Prime Minister with half of its members from independent social organizations.
+    </string>
+    <string name="about_sss3">
+         We work with wide range of multi-sectoral partners which aim to promote well-being in 4 dimensions: Physical, Mental, Spiritual and Social.
+
+    </string>
+    <string name="about_sss4">
+        Our mission is To promote initiative, enthusiasm, coordination and mobilization among individuals as well as various organizations in all sectors so that they have capability to form a society conducive to good health.
+    </string>
     <string name="about1">
-        Thai Federation on Logistics has been operate the Happy Workplace scheme which supported by Thai Health Promotion Foundation
-        under a project name “New dimensional of happy workplace to increase wellbeing for land logistics staffs”.
+        Thai Federation on Logistics has been operate the Happy Workplace scheme which supported by Thai Health Promotion Foundation under a project
+
         </string>
     <string name="about2">
-        As a result, we create an ASEAN language translation application for logistics industry which consist of 10 ASEAN Languages plus Chinese.
-        This application will be useful for logistics’ staffs and entrepreneurs who need to develop working skills and abilities.
+       name “New dimensional of happy workplace to increase wellbeing for land logistics staffs”.
+
+    </string>
+    <string name="about3">
+         As a result, we create an ASEAN language translation application for logistics industry which consist of 10 ASEAN Languages plus Chinese.
+
+    </string>
+    <string name="about4">
+         This application will be useful for logistics’ staffs and entrepreneurs who need to develop working skills and abilities.
         In order to, be more efficiency and prepared for the opening of ASEAN Economic Community (AEC).
     </string>
 
