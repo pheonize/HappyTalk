@@ -8,6 +8,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Typeface;
 import android.media.MediaPlayer;
 import android.graphics.Typeface;
+import android.net.Uri;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.util.Log;
@@ -20,6 +21,7 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.content.res.TypedArray;
@@ -97,6 +99,10 @@ public class MainActivity extends Activity {
     private Typeface thSarabun;
 
 
+    ImageView happy,sss,logis;
+
+    View view;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -106,7 +112,57 @@ public class MainActivity extends Activity {
         setContentView(R.layout.activity_main);
         FavoriteDAL db = new FavoriteDAL(this);
 
+
         //loadingFont();
+    }
+
+
+
+
+    public void footerLink() {
+        happy = (ImageView) findViewById(R.id.happytalk);
+
+        happy.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                String url = "http://www.thailog.org/happyworkplace";
+
+                Intent intent = new Intent();
+                intent.setAction(Intent.ACTION_VIEW);
+                intent.addCategory(Intent.CATEGORY_BROWSABLE);
+
+                //pass the url to intent data
+                intent.setData(Uri.parse(url));
+
+                startActivity(intent);
+
+            }
+        });
+        sss =(ImageView)findViewById(R.id.sososo);
+        sss.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent();
+                intent.setAction(Intent.ACTION_VIEW);
+                intent.addCategory(Intent.CATEGORY_BROWSABLE);
+                intent.setData(Uri.parse("http://www.thaihealth.or.th"));
+                startActivity(intent);
+            }
+        });
+        logis = (ImageView) findViewById(R.id.logistic);
+        logis.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent();
+                intent.setAction(Intent.ACTION_VIEW);
+                intent.addCategory(Intent.CATEGORY_BROWSABLE);
+                intent.setData(Uri.parse("http://www.thailog.org"));
+                startActivity(intent);
+            }
+        });
+
+
     }
 
 //    private void loadingFont() {
@@ -626,7 +682,7 @@ public class MainActivity extends Activity {
             });
 
         }
-
+        footerLink();
     }
 
 

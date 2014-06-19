@@ -134,24 +134,24 @@
             android:textSize="14dp"/>
 
     </LinearLayout>
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+    <!--<LinearLayout-->
+        <!--android:orientation="horizontal"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content">-->
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceSmall"
-            android:text="@string/about6"
-            android:textAlignment="center"
-            android:layout_marginLeft="10dp"
-            android:layout_below="@+id/textView4"
-            android:layout_marginRight="10dp"
-            android:id="@+id/textView6"
-            android:textSize="14dp"/>
+        <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:textAppearance="?android:attr/textAppearanceSmall"-->
+            <!--android:text="@string/about6"-->
+            <!--android:textAlignment="center"-->
+            <!--android:layout_marginLeft="10dp"-->
+            <!--android:layout_below="@+id/textView4"-->
+            <!--android:layout_marginRight="10dp"-->
+            <!--android:id="@+id/textView6"-->
+            <!--android:textSize="14dp"/>-->
 
-    </LinearLayout>
+    <!--</LinearLayout>-->
 
     <!--<LinearLayout-->
         <!--android:orientation="vertical"-->

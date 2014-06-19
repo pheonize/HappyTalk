@@ -67,7 +67,7 @@
 
         <ListView
             android:layout_width="fill_parent"
-            android:layout_height="350dp"
+            android:layout_height="250dp"
             android:layout_marginTop="20dp"
             android:id="@+id/listView"
             android:layout_weight="1"
@@ -76,13 +76,40 @@
     </LinearLayout>
 
     <LinearLayout
-        android:orientation="vertical"
+        android:orientation="horizontal"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/footer"
-        android:layout_alignParentEnd="false"
-        android:layout_alignParentBottom="true"
-        ></LinearLayout>
+        android:gravity="center"
+
+        android:layout_alignParentBottom="true" >
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/sososo"
+            android:background="@drawable/sss"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp"
+            android:tag="http://www.thaihealth.or.th"
+            />
+        <ImageView
+            android:layout_width="75dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/happytalk"
+            android:background="@drawable/happytalk"
+            android:clickable="true"
+            android:tag="http://www.thaihealth.or.th"
+
+            />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/logistic"
+            android:background="@drawable/logis"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:clickable="true"/>
+
+        </LinearLayout>
 
 
 </RelativeLayout>
